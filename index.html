@@ -17,6 +17,8 @@
     <button onclick="showPage('partikel',this)">Partikel</button>
     <button onclick="showPage('quiz',this)">Quiz</button>
     <button onclick="showPage('progress',this)">Progress</button>
+    <button onclick="showPage('buku',this)">Buku</button>
+    <button onclick="showPage('bunpou',this)">文法</button>
   </nav>
   <!-- burger button (mobile only) -->
   <button class="burger" id="burgerBtn" onclick="toggleMenu()" aria-label="Menu">
@@ -40,6 +42,12 @@
     </button>
     <button onclick="showPage('progress',this,true)">
       <span class="dnav-icon">📊</span>Progress
+    </button>
+    <button onclick="showPage('buku',this,true)">
+      <span class="dnav-icon">📚</span>Buku
+    </button>
+    <button onclick="showPage('bunpou',this,true)">
+      <span class="dnav-icon">文</span>文法
     </button>
   </nav>
 </div>
@@ -144,6 +152,32 @@
       <button class="clrbtn" onclick="clearProg()">Hapus Semua</button>
     </div>
     <div class="recent-list" id="recentList"></div>
+  </div>
+
+  <!-- BUKU -->
+  <div id="pageBuku" class="page">
+    <div class="sec-title">Buku</div>
+    <div class="sec-sub">Kosakata dari buku pelajaran, dikelompokkan per bab.</div>
+    <div class="cat-tabs" id="bukuTabs">
+      <button class="cat-btn active" onclick="switchBukuTab('bab1',this)">Bab 1</button>
+      <button class="cat-btn" onclick="switchBukuTab('bab2',this)">Bab 2</button>
+    </div>
+    <div id="bukuBab1"></div>
+    <div id="bukuBab2" style="display:none"></div>
+  </div>
+
+  <!-- BUNPOU -->
+  <div id="pageBunpou" class="page">
+    <div class="sec-title">文法 · Bunpou</div>
+    <div class="sec-sub">Pola kalimat dan tata bahasa, dikelompokkan per topik.</div>
+    <div class="cat-tabs" id="bunpouTabs">
+      <button class="cat-btn active" onclick="switchBunpouTab('tanya',this)">Kalimat Tanya</button>
+      <button class="cat-btn" onclick="switchBunpouTab('bab1',this)">Bab 1</button>
+      <button class="cat-btn" onclick="switchBunpouTab('bab2',this)">Bab 2</button>
+    </div>
+    <div id="bunpouTanya"></div>
+    <div id="bunpouBab1" style="display:none"></div>
+    <div id="bunpouBab2" style="display:none"></div>
   </div>
 
 </main>

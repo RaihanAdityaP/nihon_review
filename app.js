@@ -197,6 +197,8 @@ const QCATS = [
   { id: 'musim',       label: 'Musim',                 t: 'kotoba' },
   { id: 'kerja',       label: 'Kata Kerja',            t: 'kotoba' },
   { id: 'konsep',      label: 'Konsep Umum',           t: 'kotoba' },
+  { id: 'kotoba-n5',   label: 'Kotoba N5',             t: 'kotoba' },
+  { id: 'umur',        label: 'Umur',                  t: 'kotoba' },
   { id: 'angka',       label: 'Angka',                 t: 'kotoba' },
   { id: 'waktu',       label: 'Waktu',                 t: 'kotoba' },
   { id: 'durasi',      label: 'Durasi',                t: 'kotoba' },
@@ -298,7 +300,7 @@ function ktItems(cid) {
     hewan: 'Hewan', orang: 'Orang & Keluarga', tempat: 'Tempat', kdrn: 'Kendaraan',
     makan: 'Makanan & Minuman', benda: 'Benda', 'benda-kelas': 'Benda (di Kelas)',
     alam: 'Alam', sifat: 'Kata Sifat', musim: 'Musim', kerja: 'Kata Kerja',
-    konsep: 'Konsep Umum', angka: 'Angka', waktu: 'Waktu', durasi: 'Durasi',
+    konsep: 'Konsep Umum', 'kotoba-n5': 'Kotoba N5', umur: 'Umur', angka: 'Angka', waktu: 'Waktu', durasi: 'Durasi',
     hari: ['Hari dalam Seminggu', 'Keterangan Hari'],
     bulan: 'Keterangan Bulan & Tahun', masak: 'Peralatan Masak', alat: 'Alat Dapur',
     wadah: 'Wadah & Perabot', bumbu: 'Bumbu & Bahan',
@@ -537,6 +539,54 @@ function renderProg() {
 }
 
 // ─────────────────────────────────────────────────────
+// BUKU
+// ─────────────────────────────────────────────────────
+function switchBukuTab(tab, btn) {
+  document.querySelectorAll('#pageBuku > [id^="bukuBab"]').forEach(el => el.style.display = 'none');
+  document.getElementById('buku' + tab[0].toUpperCase() + tab.slice(1)).style.display = 'block';
+  document.querySelectorAll('#bukuTabs .cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function renderBukuBab(babKey, elId) {
+  const data = BUKU[babKey];
+  if (!data) return;
+  const el = document.getElementById(elId);
+  let html = '';
+  for (const [group, content] of Object.entries(data)) {
+    const id = 'buku_' + babKey + '_' + group.replace(/[^a-z0-9]/gi, '_');
+    const hasNote = content.rows.some(r => r.n);
+    // Pola Kalimat Tanya: render pakai kolom kana=pola, roma=romaji, arti=arti
+    html += `<div class="acc-item">
+      <div class="acc-head" onclick="togAcc('${id}',this)">
+        <div class="acc-left">
+          <span class="acc-title">${group}</span>
+          <span class="acc-cnt">${content.rows.length}</span>
+        </div>
+        <span class="acc-arrow">▶</span>
+      </div>
+      <div class="acc-body" id="${id}">
+        <div class="tbl-wrap"><table class="ktable">
+          <thead><tr>
+            <th style="min-width:140px">Kana / Pola</th>
+            <th style="min-width:160px">Romaji</th>
+            <th style="min-width:120px">Arti</th>
+            ${hasNote ? '<th>Penjelasan</th>' : ''}
+          </tr></thead>
+          <tbody>${content.rows.map(row => `<tr>
+            <td class="td-kana" style="font-size:.8rem">${row.k}</td>
+            <td class="td-roma">${row.r}</td>
+            <td class="td-arti">${row.a}</td>
+            ${hasNote ? `<td class="td-note">${row.n || ''}</td>` : ''}
+          </tr>`).join('')}</tbody>
+        </table></div>
+      </div>
+    </div>`;
+  }
+  el.innerHTML = html;
+}
+
+// ─────────────────────────────────────────────────────
 // INIT
 // ─────────────────────────────────────────────────────
 renderKanaAcc(H, 'matHiragana');
@@ -544,4 +594,6 @@ renderKanaAcc(K, 'matKatakana');
 renderKotobaAcc(KT, 'matKotoba');
 renderPartikel();
 renderPartikelAdv();
+renderBukuBab('bab1', 'bukuBab1');
+renderBukuBab('bab2', 'bukuBab2');
 initQSetup();

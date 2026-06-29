@@ -136,22 +136,27 @@ const KT={
 {k:"サンドイッチ",r:"sandoicchi",a:"sandwich",n:"Serapan 'sandwich'. 'ッチ' untuk bunyi konsonan ganda 'tch'."}
 ]},
 "Benda":{rows:[
-{k:"ほん",r:"hon",a:"buku",n:"Kanji: 本. Juga berarti 'asal/asli' (nihon = Jepang)."},
-{k:"じしょ",r:"jisho",a:"kamus",n:"Kanji: 辞書. Gabungan 辞 (kata) + 書 (tulisan)."},
-{k:"かみ",r:"kami",a:"kertas",n:"Kanji: 紙. Waspada homofon: 'kami' juga berarti 'rambut' (髪) dan 'dewa' (神)!"},
-{k:"ノート",r:"nooto",a:"buku catatan",n:"Serapan 'note'. Vokal panjang ditandai 'ー' dalam katakana."},
 {k:"かぎ",r:"kagi",a:"kunci",n:"Kanji: 鍵. 'Kagi kakko' = tanda kurung siku [ ]."},
 {k:"とけい",r:"tokei",a:"jam",n:"Kanji: 時計. Gabungan 時 (waktu) + 計 (mengukur)."},
 {k:"かさ",r:"kasa",a:"payung",n:"Kanji: 傘. Ada budaya 'kasa no wasuremono' (payung tertinggal) di stasiun."},
-{k:"つくえ",r:"tsukue",a:"meja belajar",n:"Kanji: 机. Khusus meja belajar/kerja. Meja makan = 'teburu' (テーブル)."},
 {k:"でんわ",r:"denwa",a:"telepon",n:"Kanji: 電話. Gabungan 電 (listrik) + 話 (bicara)."},
-{k:"いす",r:"isu",a:"kursi",n:"Kanji: 椅子. Kata asli Jepang untuk tempat duduk berkaki."},
 {k:"ベッド",r:"beddo",a:"tempat tidur",n:"Serapan 'bed'. Konsonan ganda 'dd' ditulis 'ッド'."},
 {k:"ふとん",r:"futon",a:"futon",n:"Kanji: 布団. Kasur lipat tradisional. Kata 'futon' sudah masuk kosakata Inggris!"},
 {k:"まくら",r:"makura",a:"bantal",n:"Kanji: 枕. Ada tradisi 'makura-gaeshi' dalam cerita hantu Jepang."},
 {k:"ドア",r:"doa",a:"pintu",n:"Serapan 'door'. Pintu geser tradisional disebut 'shoji' atau 'fusuma'."},
-{k:"まど",r:"mado",a:"jendela",n:"Kanji: 窓. 'Mado-guchi' (窓口) = loket/counter layanan."},
-{k:"きっぷ",r:"kippu",a:"tiket",n:"Kanji: 切符. Gabungan 切 (memotong) + 符 (tanda)."}
+{k:"きっぷ",r:"kippu",a:"tiket",n:"Kanji: 切符. Gabungan 切 (memotong) + 符 (tanda)."},
+{k:"くつ",r:"kutsu",a:"sepatu",n:"Kanji: 靴. Di Jepang ada sistem indoor shoes (uwabaki) — sepatu luar dilepas di pintu masuk."},
+{k:"かばん",r:"kaban",a:"tas",n:"Kanji: 鞄. Tas umum. Siswa SD Jepang pakai randoseru (ransel kaku khas Jepang)."},
+{k:"ふく",r:"fuku",a:"pakaian / baju",n:"Kanji: 服. Kata umum untuk pakaian. Seragam sekolah disebut seifuku (制服)."},
+{k:"めがね",r:"megane",a:"kacamata",n:"Kanji: 眼鏡. Me (mata) + Kane (logam). 'Logam untuk mata'."},
+{k:"とけい",r:"tokei",a:"jam tangan",n:"Kanji: 時計. Sama dengan jam dinding — konteks menentukan apakah jam tangan atau jam dinding."},
+{k:"さいふ",r:"saifu",a:"dompet",n:"Kanji: 財布. Sai (harta) + Fu (kain/wadah). Di Jepang dompet sering dijadikan hadiah karena dipercaya membawa keberuntungan finansial."},
+{k:"てがみ",r:"tegami",a:"surat",n:"Kanji: 手紙. Te (tangan) + Kami (kertas). 'Kertas yang ditulis tangan'. Budaya menulis surat tangan masih dihargai di Jepang."},
+{k:"しんぶん",r:"shinbun",a:"koran / surat kabar",n:"Kanji: 新聞. Shin (baru) + Bun (berita/tulisan). Jepang salah satu negara dengan tingkat baca koran tertinggi di dunia."},
+{k:"おかね",r:"okane",a:"uang",n:"Kanji: お金. Prefiks sopan 'o' + Kane (logam/uang). Mata uang Jepang adalah yen (円)."},
+{k:"はがき",r:"hagaki",a:"kartu pos",n:"Kanji: 葉書. Ha (daun) + Gaki (tulisan). Kartu pos sangat populer di Jepang, terutama untuk nengajou (kartu tahun baru)."},
+{k:"にもつ",r:"nimotsu",a:"barang bawaan / koper",n:"Kanji: 荷物. Ni (beban) + Motsu (membawa). Kata umum untuk barang bawaan atau bagasi."},
+{k:"プレゼント",r:"purezento",a:"hadiah",n:"Serapan 'present'. Memberi hadiah sangat penting dalam budaya Jepang — ada omiyage (oleh-oleh) dan ochugen/oseibo (hadiah musiman)."}
 ]},
 "Benda (di Kelas)":{rows:[
 {k:"エアコン",r:"eakon",a:"AC / pendingin ruangan",n:"Serapan 'air conditioner' disingkat. Di Jepang hampir semua kelas dan kantor punya eakon — musim panasnya sangat terik."},
@@ -247,6 +252,35 @@ const KT={
 {k:"ちしき",r:"chishiki",a:"pengetahuan",n:"Kanji: 知識. Gabungan 知 (mengetahui) + 識 (mengenali)."},
 {k:"けつえき",r:"ketsueki",a:"darah",n:"Kanji: 血液. Di Jepang ada kepercayaan golongan darah menentukan kepribadian."}
 ]},
+"Kotoba N5":{rows:[
+{k:"あめ",r:"ame",a:"hujan / permen",n:"Kanji: 雨 (hujan) / 飴 (permen). Beda kanji, beda makna! 'Ame ga futte iru' = sedang hujan."},
+{k:"そら",r:"sora",a:"langit",n:"Kanji: 空. Juga bisa berarti 'kosong' (kara). Langit biru disebut 'aoi sora' — tapi ingat, 'ao' mencakup biru dan hijau!"},
+{k:"やま",r:"yama",a:"gunung",n:"Kanji: 山. Fujisan (富士山) = Gunung Fuji, gunung paling terkenal di Jepang. Simbol nasional."},
+{k:"き",r:"ki",a:"pohon",n:"Kanji: 木. Juga berarti 'kayu'. Kanji ini menjadi dasar banyak kanji lain: 森 (hutan), 林 (kebun pohon)."},
+{k:"くに",r:"kuni",a:"negara / negeri",n:"Kanji: 国. 'Nihon no kuni' = negeri Jepang. Kata dasar yang sangat sering muncul."},
+{k:"まち",r:"machi",a:"kota kecil / kawasan",n:"Kanji: 町. Lebih kecil dari 'shi' (市 = kota besar). Seringkali merujuk pada kawasan atau distrik tertentu."},
+{k:"むら",r:"mura",a:"desa",n:"Kanji: 村. Satuan administratif terkecil di Jepang, lebih kecil dari machi."},
+{k:"ひ",r:"hi",a:"api / hari / matahari",n:"Kanji: 火 (api) / 日 (hari/matahari). Konteks menentukan! '火' dipakai untuk api, '日' untuk hari dan matahari."},
+{k:"かぜ",r:"kaze",a:"angin / pilek",n:"Kanji: 風 (angin) / 風邪 (pilek). 'Kaze ga fuiteiru' = angin berhembus. 'Kaze wo hiku' = kena pilek."},
+{k:"ゆき",r:"yuki",a:"salju",n:"Kanji: 雪. Salju di Jepang sangat lebat di bagian utara (Hokkaido). Nama perempuan populer di Jepang."},
+{k:"つき",r:"tsuki",a:"bulan",n:"Kanji: 月. Juga berarti 'bulan' dalam kalender (ichigatsu = Januari). Festival bulan purnama disebut 'Otsukimi'."},
+{k:"ほし",r:"hoshi",a:"bintang",n:"Kanji: 星. Festival Tanabata dirayakan tiap 7 Juli — legenda dua bintang yang hanya bisa bertemu setahun sekali."},
+{k:"にわ",r:"niwa",a:"halaman / taman",n:"Kanji: 庭. Taman gaya Jepang (nihon teien) terkenal karena keindahan dan filosofinya."},
+{k:"いけ",r:"ike",a:"kolam",n:"Kanji: 池. Kolam ikan mas (koi) adalah elemen klasik taman Jepang."},
+{k:"はし",r:"hashi",a:"jembatan / sumpit",n:"Kanji: 橋 (jembatan) / 箸 (sumpit). Homofon berbeda kanji! Konteks sangat penting."},
+{k:"みち",r:"michi",a:"jalan / jalur",n:"Kanji: 道. Juga berarti 'cara' atau 'jalan hidup'. Budo (武道) = jalan bela diri. Kado (華道) = jalan merangkai bunga."},
+{k:"ひろば",r:"hiroba",a:"lapangan / alun-alun",n:"Kanji: 広場. Hiro (luas) + Ba (tempat). Tempat terbuka yang luas untuk berkumpul."},
+{k:"こうじょう",r:"koujou",a:"pabrik",n:"Kanji: 工場. Kou (pekerjaan/manufaktur) + Jou (tempat). Jepang terkenal dengan industri manufaktur mobilnya."},
+{k:"えいが",r:"eiga",a:"film / bioskop",n:"Kanji: 映画. Ei (memantulkan cahaya) + Ga (gambar). 'Eiga wo miru' = menonton film. 'Eigakan' = bioskop."},
+{k:"おんがく",r:"ongaku",a:"musik",n:"Kanji: 音楽. On (suara) + Gaku (kesenangan/musik). 'Ongaku wo kiku' = mendengarkan musik."},
+{k:"スポーツ",r:"supootsu",a:"olahraga",n:"Serapan 'sports'. Olahraga populer di Jepang: yakyuu (野球/baseball), sakaa (サッカー/sepakbola), kendou, judou."},
+{k:"りょこう",r:"ryokou",a:"perjalanan / wisata",n:"Kanji: 旅行. Ryo (perjalanan) + Kou (pergi). 'Ryokou shimasu' = melakukan perjalanan. Wisata domestik sangat populer di Jepang."},
+{k:"しゃしん",r:"shashin",a:"foto / fotografi",n:"Kanji: 写真. Sha (menyalin) + Shin (kebenaran/kenyataan). 'Shashin wo toru' = mengambil foto."},
+{k:"てんき",r:"tenki",a:"cuaca",n:"Kanji: 天気. Ten (langit/surga) + Ki (energi/udara). 'Tenki wa dou desu ka?' = Bagaimana cuacanya?"},
+{k:"いろ",r:"iro",a:"warna",n:"Kanji: 色. Kata dasar untuk warna. 'Nani iro?' = Warna apa? Juga bisa berarti 'nuansa/corak' secara kiasan."},
+{k:"こえ",r:"koe",a:"suara / suara manusia",n:"Kanji: 声. Khusus untuk suara yang dihasilkan manusia/hewan. Suara benda pakai 'oto' (音)."},
+{k:"おと",r:"oto",a:"suara / bunyi (benda)",n:"Kanji: 音. Suara yang dihasilkan benda atau alam. Berbeda dari 'koe' yang khusus suara makhluk hidup."}
+]},
 "Angka":{rows:[
 {k:"いち",r:"ichi",a:"1",n:"Kanji: 一. Dasar sistem angka Jepang."},
 {k:"に",r:"ni",a:"2",n:"Kanji: 二. Juga partikel 'ni' (ke/di), tapi beda konteks."},
@@ -263,6 +297,33 @@ const KT={
 {k:"まん",r:"man",a:"10.000",n:"Kanji: 万. Sistem angka Jepang berkelompok per 10.000."},
 {k:"おく",r:"oku",a:"100.000.000",n:"Kanji: 億. Seratus juta."},
 {k:"ちょう",r:"chou",a:"1 triliun",n:"Kanji: 兆. Anggaran negara Jepang sering dinyatakan dalam satuan ini."}
+]},
+"Umur":{rows:[
+{k:"いっさい",r:"issai",a:"1 tahun",n:"Kanji: 一歳. Ichi + Sai → Issai (konsonan ganda). Ulang tahun pertama disebut 'tanjoubi' (誕生日)."},
+{k:"にさい",r:"nisai",a:"2 tahun",n:"Kanji: 二歳. に (2) + さい."},
+{k:"さんさい",r:"sansai",a:"3 tahun",n:"Kanji: 三歳. さん (3) + さい."},
+{k:"よんさい",r:"yonsai",a:"4 tahun",n:"Kanji: 四歳. よん (4) + さい. Hindari pakai し karena homofon 死 (mati)."},
+{k:"ごさい",r:"gosai",a:"5 tahun",n:"Kanji: 五歳. ご (5) + さい."},
+{k:"ろくさい",r:"rokusai",a:"6 tahun",n:"Kanji: 六歳. ろく (6) + さい."},
+{k:"ななさい",r:"nanasai",a:"7 tahun",n:"Kanji: 七歳. なな (7) + さい."},
+{k:"はっさい",r:"hassai",a:"8 tahun",n:"Kanji: 八歳. はち + さい → はっさい (konsonan ganda)."},
+{k:"きゅうさい",r:"kyuusai",a:"9 tahun",n:"Kanji: 九歳. きゅう (9) + さい."},
+{k:"じゅっさい",r:"jussai",a:"10 tahun",n:"Kanji: 十歳. じゅう + さい → じゅっさい (konsonan ganda)."},
+{k:"じゅうごさい",r:"juugosai",a:"15 tahun",n:"Kanji: 十五歳. じゅうご (15) + さい. Usia SMA kelas 1 di Jepang."},
+{k:"じゅうはっさい",r:"juuhassai",a:"18 tahun",n:"Kanji: 十八歳. Usia dewasa di Jepang sejak 2022 (sebelumnya 20)."},
+{k:"じゅうきゅうさい",r:"juukyuusai",a:"19 tahun",n:"Kanji: 十九歳. じゅうきゅう (19) + さい."},
+{k:"はたち",r:"hatachi",a:"20 tahun",n:"Kanji: 二十歳. Pengucapan KHUSUS — bukan 'nijussai'! Dulu usia dewasa resmi di Jepang. Perayaannya disebut Seijin-shiki (成人式)."},
+{k:"にじゅういっさい",r:"nijuuissai",a:"21 tahun",n:"Kanji: 二十一歳. Kembali ke pola biasa setelah はたち yang spesial."},
+{k:"にじゅうごさい",r:"nijuugosai",a:"25 tahun",n:"Kanji: 二十五歳. にじゅうご (25) + さい."},
+{k:"にじゅうはっさい",r:"nijuuhassai",a:"28 tahun",n:"Kanji: 二十八歳. にじゅうはち + さい → にじゅうはっさい."},
+{k:"さんじゅっさい",r:"sanjussai",a:"30 tahun",n:"Kanji: 三十歳. さんじゅう + さい → さんじゅっさい. Milestone penting — di Jepang usia 30 sering jadi tekanan sosial untuk menikah."},
+{k:"さんじゅうごさい",r:"sanjuugosai",a:"35 tahun",n:"Kanji: 三十五歳. さんじゅうご (35) + さい."},
+{k:"よんじゅっさい",r:"yonjussai",a:"40 tahun",n:"Kanji: 四十歳. よんじゅう + さい → よんじゅっさい."},
+{k:"ごじゅっさい",r:"gojussai",a:"50 tahun",n:"Kanji: 五十歳. ごじゅう + さい → ごじゅっさい."},
+{k:"ろくじゅっさい",r:"rokujussai",a:"60 tahun",n:"Kanji: 六十歳. ろくじゅう + さい → ろくじゅっさい. Usia pensiun umum di Jepang."},
+{k:"ななじゅっさい",r:"nanajussai",a:"70 tahun",n:"Kanji: 七十歳. ななじゅう + さい → ななじゅっさい."},
+{k:"なんさい",r:"nansai",a:"berapa tahun? (umur berapa?)",n:"なん (berapa) + さい. 'Nansai desu ka?' = Umurnya berapa? Untuk anak kecil bisa langsung, tapi untuk orang dewasa lebih sopan pakai 'おいくつ (oikutsu) desu ka?'."},
+{k:"おいくつ",r:"oikutsu",a:"berapa usia Anda? (sopan)",n:"Bentuk sopan dari 'nansai'. Prefiks hormat 'o' + 'ikutsu' (berapa). Dipakai saat menanyakan usia orang yang lebih tua atau atasan."}
 ]},
 "Waktu":{rows:[
 {k:"じ",r:"ji",a:"jam",n:"Kanji: 時. Penanda jam. ichiji = jam 1, niji = jam 2, dst."},
@@ -515,18 +576,24 @@ const KT={
 {k:"せんたくをします",r:"sentaku wo shimasu",a:"mencuci pakaian",n:"Sentaku (laundry) + shimasu."}
 ]},
 "Profesi & Pekerjaan":{rows:[
-{k:"いしゃ",r:"isha",a:"dokter",n:"Kanji: 医者. Disapa 'sensei'."},
-{k:"かんごし",r:"kangoshi",a:"perawat",n:"Kanji: 看護師."},
-{k:"きょうし / せんせい",r:"kyoushi / sensei",a:"guru / pengajar",n:"Kyoushi lebih formal; sensei untuk menyapa."},
-{k:"がくせい",r:"gakusei",a:"siswa / mahasiswa",n:"Kanji: 学生."},
-{k:"かいしゃいん",r:"kaishain",a:"karyawan perusahaan",n:"Kanji: 会社員."},
-{k:"こうむいん",r:"koumuin",a:"pegawai negeri",n:"Kanji: 公務員."},
-{k:"エンジニア",r:"enjinia",a:"insinyur / engineer",n:"Serapan 'engineer'."},
-{k:"けいさつかん",r:"keisatsukan",a:"polisi (petugas)",n:"Kanji: 警察官."},
-{k:"りょうりにん / コック",r:"ryourinin / kokku",a:"juru masak / chef",n:"Kanji: 料理人."},
-{k:"のうか",r:"nouka",a:"petani",n:"Kanji: 農家."},
-{k:"かしゅ",r:"kashu",a:"penyanyi",n:"Kanji: 歌手."},
-{k:"べんごし",r:"bengoshi",a:"pengacara",n:"Kanji: 弁護士."}
+{k:"いしゃ",r:"isha",a:"dokter",n:"Kanji: 医者. Disapa 'sensei' dalam percakapan, bukan 'isha-san'."},
+{k:"かんごし",r:"kangoshi",a:"perawat",n:"Kanji: 看護師. Kango (merawat) + Shi (profesional). Profesi sangat dihormati di Jepang."},
+{k:"せんせい",r:"sensei",a:"guru / sensei",n:"Kanji: 先生. Sen (sebelum/lebih dulu) + Sei (hidup). Dipakai juga untuk dokter, pengacara, atau siapapun yang ahli di bidangnya."},
+{k:"きょうし",r:"kyoushi",a:"guru (jabatan formal)",n:"Kanji: 教師. Kyou (mengajar) + Shi (ahli). Lebih formal dari sensei — dipakai dalam dokumen resmi, bukan untuk menyapa."},
+{k:"がくせい",r:"gakusei",a:"siswa / mahasiswa",n:"Kanji: 学生. Gaku (belajar) + Sei (orang). 'Daigakusei' = mahasiswa, 'koukosei' = siswa SMA."},
+{k:"かいしゃいん",r:"kaishain",a:"karyawan perusahaan",n:"Kanji: 会社員. Kaisha (perusahaan) + In (anggota). Profesi paling umum di Jepang. Sering disebut 'sarariman' (サラリーマン)."},
+{k:"しゃいん",r:"shain",a:"karyawan / staf perusahaan",n:"Kanji: 社員. Sha (perusahaan) + In (anggota). Lebih singkat dari kaishain, sama maknanya. Sering dipakai dalam percakapan sehari-hari."},
+{k:"てんいん",r:"ten'in",a:"pramuniaga / staf toko",n:"Kanji: 店員. Ten (toko) + In (anggota). Orang yang bekerja di toko. 'Irasshaimase!' adalah sapaan khas ten'in di Jepang."},
+{k:"さっか",r:"sakka",a:"pengarang / penulis",n:"Kanji: 作家. Saku (berkarya) + Ka (ahli). Penulis novel, cerpen, atau karya sastra. Berbeda dari 'raitaa' (ライター) yang lebih ke penulis artikel/konten."},
+{k:"こうむいん",r:"koumuin",a:"pegawai negeri",n:"Kanji: 公務員. Kou (publik) + Mu (tugas) + In (anggota). Pegawai pemerintah Jepang dikenal sangat disiplin dan stabil."},
+{k:"エンジニア",r:"enjinia",a:"insinyur / engineer",n:"Serapan 'engineer'. Profesi IT sangat berkembang di Jepang."},
+{k:"けいさつかん",r:"keisatsukan",a:"polisi (petugas)",n:"Kanji: 警察官. Keisatsu (polisi) + Kan (petugas). Polisi Jepang dikenal ramah dan ada pos kecil 'koban' di tiap sudut."},
+{k:"りょうりにん",r:"ryourinin",a:"juru masak / chef",n:"Kanji: 料理人. Ryouri (masakan) + Nin (orang). Chef restoran kelas atas disebut 'shefu' (シェフ)."},
+{k:"のうか",r:"nouka",a:"petani",n:"Kanji: 農家. Nou (pertanian) + Ka (keluarga/rumah). Jepang sangat menghargai petani — beras Jepang dianggap terbaik di dunia."},
+{k:"かしゅ",r:"kashu",a:"penyanyi",n:"Kanji: 歌手. Ka (lagu) + Shu (orang yang melakukan). Industri J-Pop sangat besar."},
+{k:"べんごし",r:"bengoshi",a:"pengacara",n:"Kanji: 弁護士. Ujian pengacara di Jepang sangat sulit — tingkat kelulusannya sangat rendah."},
+{k:"うんてんし",r:"untenshi",a:"pengemudi / sopir",n:"Kanji: 運転手. Unten (mengemudi) + Shi/Shu (orang). 'Takushii no untenshi' = sopir taksi."},
+{k:"かんごふ",r:"kangofu",a:"perawat (wanita, istilah lama)",n:"Kanji: 看護婦. Kini digantikan 'kangoshi' yang netral gender. Masih dipakai dalam percakapan informal."}
 ]},
 "Arah & Posisi":{rows:[
 {k:"みぎ",r:"migi",a:"kanan",n:"Kanji: 右."},
@@ -813,3 +880,531 @@ const PT_ADV = {
       {jp:"うたったり おどったり たのしんだ。",id:"Bernyanyi, menari, pokoknya bersenang-senang."}]}
   ]
 };
+
+// ─────────────────────────────────────────────────────
+// DATA: BUKU — kosakata per bab dari buku pelajaran
+// ─────────────────────────────────────────────────────
+const BUKU = {
+
+bab1: {
+  "Sapaan & Ekspresi Dasar": { rows: [
+    {k:"おはようございます",r:"ohayou gozaimasu",a:"Selamat pagi",n:"Dipakai saat pertama bertemu di pagi hari. Bentuk santai: おはよう (ohayou)."},
+    {k:"こんにちは",r:"konnichiwa",a:"Selamat siang / sore",n:"Dipakai sekitar jam 10 pagi–6 sore. は ditulis tapi dibaca 'wa'."},
+    {k:"こんばんは",r:"konbanwa",a:"Selamat malam",n:"Dipakai saat pertama bertemu di malam hari. は dibaca 'wa'."},
+    {k:"おやすみなさい",r:"oyasumi nasai",a:"Selamat tidur",n:"Dipakai saat berpisah di malam hari atau sebelum tidur. Santai: おやすみ."},
+    {k:"じゃ、また",r:"ja, mata",a:"Sampai jumpa lagi",n:"Ungkapan perpisahan santai. Juga bisa 'じゃあね' atau 'またね'."},
+    {k:"ありがとうございます",r:"arigatou gozaimasu",a:"Terima kasih",n:"Bentuk formal. Santai: ありがとう. Sangat formal: どうもありがとうございます."},
+    {k:"すみません",r:"sumimasen",a:"Maaf / Permisi",n:"Serbaguna — untuk meminta maaf ringan, memanggil orang, atau permisi melewati seseorang."},
+    {k:"よろしくおねがいします",r:"yoroshiku onegaishimasu",a:"Tolong / Mohon bantuannya",n:"Dipakai saat kenalan baru, meminta bantuan, atau menitipkan sesuatu. Tidak ada padanan langsung dalam bahasa Indonesia."},
+    {k:"おつかれさまです",r:"otsukaresama desu",a:"Terima kasih atas kerja kerasnya",n:"Salam di lingkungan kerja/sekolah saat bertemu rekan di tengah atau akhir hari. Bukan salam pertama pagi hari."},
+    {k:"おさきにしつれいします",r:"osakini shitsureishimasu",a:"Permisi, saya pulang duluan",n:"Wajib diucapkan saat pulang lebih awal dari rekan-rekan di lingkungan kerja Jepang."},
+    {k:"はじめまして",r:"hajimemashite",a:"Perkenalkan / Senang berkenalan",n:"Selalu diikuti よろしくおねがいします. Hanya dipakai saat bertemu pertama kali."},
+    {k:"あのう",r:"anou",a:"Anu... / Hmm...",n:"Kata pengisi (filler word) saat ragu atau mau mulai bicara. Setara 'um' atau 'err' dalam bahasa Inggris."},
+    {k:"こちらこそ",r:"kochira koso",a:"Sama-sama / Saya juga",n:"Respons untuk よろしく atau ありがとう. Menyatakan perasaan yang sama balik ke lawan bicara."},
+    {k:"そうですか",r:"sou desu ka",a:"Oh, begitu ya",n:"Respons saat menerima informasi baru. Intonasi naik = bertanya ulang, intonasi turun = 'oh begitu'."},
+    {k:"はい",r:"hai",a:"Ya",n:"Afirmasi formal. Dalam percakapan santai: うん (un)."},
+    {k:"いいえ",r:"iie",a:"Tidak / Bukan",n:"Negasi formal. Dalam percakapan santai: ううん (uun). Orang Jepang sering menghindari iie langsung karena dianggap kurang sopan."}
+  ]},
+  "Perkenalan Diri": { rows: [
+    {k:"わたし",r:"watashi",a:"Saya",n:"Kata ganti orang pertama paling netral. Pria di percakapan santai sering pakai ぼく (boku) atau おれ (ore)."},
+    {k:"なまえ",r:"namae",a:"Nama",n:"Kanji: 名前. 'Onamae wa?' = Siapa namamu? (bentuk sopan dengan prefiks 'o')."},
+    {k:"めいし",r:"meishi",a:"Kartu nama",n:"Kanji: 名刺. Bertukar kartu nama (meishi koukan) adalah ritual penting dalam budaya bisnis Jepang — ada tata cara khusus cara memberikan dan menerimanya."},
+    {k:"あくしゅ（します）",r:"akushu (shimasu)",a:"Berjabat tangan",n:"Kanji: 握手. Jabat tangan tidak sepopuler di Indonesia — orang Jepang lebih sering membungkuk (お辞儀 / ojigi)."},
+    {k:"〜じん",r:"~jin",a:"Orang ~ / Warga negara ~",n:"Kanji: 〜人. Ditambahkan setelah nama negara. にほんじん = orang Jepang, インドネシアじん = orang Indonesia."},
+    {k:"くに",r:"kuni",a:"Negara / Negeri",n:"Kanji: 国. 'Okuni wa dochira desu ka?' = Anda berasal dari negara mana?"},
+    {k:"どちら",r:"dochira",a:"Yang mana / Di mana (sopan)",n:"Kanji: 何方. Bentuk sopan dari どこ (doko). Dipakai untuk bertanya asal usul atau memilih di antara dua opsi."},
+    {k:"（お）しごと",r:"(o)shigoto",a:"Pekerjaan / Profesi",n:"Kanji: 仕事. Prefiks sopan 'o' ditambahkan saat bertanya pekerjaan orang lain: 'Oshigoto wa?' = Pekerjaannya apa?"}
+  ]},
+  "Negara & Bangsa": { rows: [
+    {k:"にほん",r:"nihon",a:"Jepang",n:"Kanji: 日本. Juga dibaca 'nippon' (lebih formal/nasionalis). Harfiah: 'asal matahari' atau 'negeri matahari terbit'."},
+    {k:"アメリカ",r:"Amerika",a:"Amerika Serikat",n:"Dari 'America'. Nama resmi: アメリカがっしゅうこく (Amerika Gasshukoku)."},
+    {k:"イタリア",r:"Itaria",a:"Italia",n:"Serapan 'Italia'. Dikenal di Jepang terutama karena mode dan masakan."},
+    {k:"オーストラリア",r:"Oosutoraria",a:"Australia",n:"Serapan 'Australia'. Negara tetangga yang populer sebagai tujuan study abroad orang Jepang."},
+    {k:"かんこく",r:"kankoku",a:"Korea Selatan",n:"Kanji: 韓国. Budaya Korea (K-pop, drama) sangat populer di Jepang, disebut Hallyu (韓流 / hanryuu)."},
+    {k:"ちゅうごく",r:"chuugoku",a:"China",n:"Kanji: 中国. Harfiah: 'negara tengah'. Hubungan sejarah dan budaya yang dalam dengan Jepang."},
+    {k:"タイ",r:"Tai",a:"Thailand",n:"Serapan 'Thai'. Populer sebagai tujuan wisata orang Jepang."},
+    {k:"ロシア",r:"Roshia",a:"Rusia",n:"Serapan 'Russia'. Berbatasan dekat dengan Jepang di bagian utara (Hokkaido)."},
+    {k:"ドイツ",r:"Doitsu",a:"Jerman",n:"Dari bahasa Belanda 'Duits'. Jepang dan Jerman punya hubungan historis kuat sejak abad 19."},
+    {k:"フランス",r:"Furansu",a:"Prancis",n:"Serapan 'France'. Mode Prancis sangat berpengaruh di Jepang — Paris dianggap pusat fashion dunia."},
+    {k:"インド",r:"Indo",a:"India",n:"Serapan 'India'. Kari India (カレー) sangat populer dan sudah diadaptasi menjadi kari gaya Jepang."},
+    {k:"インドネシア",r:"Indoneshia",a:"Indonesia",n:"Serapan 'Indonesia'. Negara dengan jumlah pelajar bahasa Jepang terbanyak di dunia!"}
+  ]},
+  "Profesi (Bab 1)": { rows: [
+    {k:"がくせい",r:"gakusei",a:"Siswa / Mahasiswa",n:"Kanji: 学生. Gaku (belajar) + Sei (orang). こうこうせい = siswa SMA, だいがくせい = mahasiswa."},
+    {k:"せんせい",r:"sensei",a:"Guru / Profesor / Dokter (panggilan)",n:"Kanji: 先生. Dipakai sebagai PANGGILAN untuk guru, dokter, pengacara — siapapun yang ahli di bidangnya. Jangan pakai untuk diri sendiri."},
+    {k:"きょうし",r:"kyoushi",a:"Guru (profesi/jabatan)",n:"Kanji: 教師. Lebih formal dari sensei — dipakai dalam dokumen resmi atau saat menyebut profesi. Tidak dipakai untuk menyapa."},
+    {k:"かいしゃいん",r:"kaishain",a:"Karyawan perusahaan",n:"Kanji: 会社員. Kaisha (perusahaan) + In (anggota). Profesi paling umum di Jepang."},
+    {k:"しゃいん",r:"shain",a:"Karyawan / Staf perusahaan",n:"Kanji: 社員. Lebih singkat dari かいしゃいん, makna sama. Lebih sering dipakai dalam percakapan sehari-hari."},
+    {k:"〜さん",r:"~san",a:"Sdr. / Sdri. / Pak / Bu (gelar sopan)",n:"Kanji: 〜さん. Ditambahkan setelah nama seseorang sebagai penghormatan. Tidak boleh dipakai untuk diri sendiri!"}
+  ]},
+  "Sekolah & Institusi": { rows: [
+    {k:"こうこう",r:"koukou",a:"SMA",n:"Kanji: 高校. Kependekan dari こうとうがっこう (koukou gakkou = sekolah menengah atas). Wajib belajar di Jepang sampai SMP, SMA tidak wajib tapi 98% melanjutkan."},
+    {k:"だいがく",r:"daigaku",a:"Universitas",n:"Kanji: 大学. Dai (besar) + Gaku (belajar). Ujian masuk universitas Jepang sangat kompetitif."},
+    {k:"にほんごがっこう",r:"nihongo gakkou",a:"Sekolah Bahasa Jepang",n:"Kanji: 日本語学校. Sekolah khusus bahasa Jepang untuk orang asing. Banyak tersebar di kota-kota besar Jepang."}
+  ]},
+  "Data Diri (Angka & Waktu)": { rows: [
+    {k:"〜さい",r:"~sai",a:"Umur ~ tahun",n:"Kanji: 〜歳. Ditambahkan setelah angka untuk menyatakan usia. Lihat sub-bab Umur untuk detail lengkap tiap angka."},
+    {k:"たんじょうび",r:"tanjoubi",a:"Hari ulang tahun",n:"Kanji: 誕生日. Tanjou (lahir) + Bi (hari). 'Otanjoubi omedetou!' = Selamat ulang tahun!"},
+    {k:"〜がつ",r:"~gatsu",a:"Bulan ~",n:"Kanji: 〜月. Ditambahkan setelah angka 1-12. いちがつ = Januari, にがつ = Februari, dst."},
+    {k:"〜にち",r:"~nichi",a:"Tanggal ~",n:"Kanji: 〜日. Tanggal 1-10 punya pengucapan khusus (ついたち、ふつか、dll). Lihat sub-bab Tanggal."},
+    {k:"いつ",r:"itsu",a:"Kapan",n:"Kanji: 何時. Kata tanya waktu. 'Itsu desu ka?' = Kapan?"}
+  ]},
+  "Hobi & Kegiatan": { rows: [
+    {k:"しゅみ",r:"shumi",a:"Hobi",n:"Kanji: 趣味. 'Oshumi wa nan desu ka?' = Apa hobimu? Pertanyaan umum saat kenalan di Jepang."},
+    {k:"スポーツ",r:"supootsu",a:"Olahraga",n:"Serapan 'sports'. Olahraga populer di Jepang: 野球 (yakyuu/baseball), サッカー (sakaa/sepakbola), 剣道 (kendou)."},
+    {k:"サッカー",r:"sakkaa",a:"Sepak bola",n:"Serapan 'soccer'. Tim nasional Jepang dijuluki 'Samurai Blue'."},
+    {k:"テニス",r:"tenisu",a:"Tenis",n:"Serapan 'tennis'. Salah satu olahraga paling populer di Jepang."},
+    {k:"すいえい",r:"suiei",a:"Renang",n:"Kanji: 水泳. Sui (air) + Ei (berenang). Pelajaran renang wajib di sekolah Jepang."},
+    {k:"えいが",r:"eiga",a:"Film",n:"Kanji: 映画. 'Eiga wo miru' = menonton film. Studio Ghibli adalah studio film animasi Jepang paling terkenal di dunia."},
+    {k:"おんがく",r:"ongaku",a:"Musik",n:"Kanji: 音楽. 'Ongaku wo kiku' = mendengarkan musik. J-Pop, J-Rock, dan City Pop sangat populer global."},
+    {k:"どくしょ",r:"dokusho",a:"Membaca buku",n:"Kanji: 読書. Doku (membaca) + Sho (tulisan/buku). Budaya membaca sangat tinggi di Jepang — manga dan novel ringan sangat populer."},
+    {k:"りょこう",r:"ryokou",a:"Wisata / Jalan-jalan",n:"Kanji: 旅行. Ryo (perjalanan) + Kou (pergi). Wisata domestik sangat populer — 'onsen ryokou' (wisata pemandian air panas) favorit orang Jepang."},
+    {k:"りょうり",r:"ryouri",a:"Masak / Masakan",n:"Kanji: 料理. 'Ryouri ga suki desu' = Saya suka memasak. Masakan Jepang (washoku) terdaftar sebagai warisan budaya tak benda UNESCO."},
+    {k:"なん",r:"nan",a:"Apa",n:"Kanji: 何. Bentuk pendek dari なに (nani). Dipakai sebelum です/の/か. 'Oshumi wa nan desu ka?' = Hobinya apa?"}
+  ]},
+},
+
+bab2: {
+  "Tempat & Fasilitas Umum": { rows: [
+    {k:"トイレ",r:"toire",a:"Toilet / Kamar kecil",n:"Serapan 'toilet'. Di Jepang toilet terkenal karena canggih — ada toilet pintar (washlet) dengan berbagai fitur. Selalu bersih dan tersedia di mana-mana."},
+    {k:"きつえんじょ",r:"kitsuenjo",a:"Area merokok",n:"Kanji: 喫煙所. Kitsu (menghisap) + En (asap) + Jo (tempat). Di Jepang merokok di luar area ini dilarang keras di banyak kota."},
+    {k:"きっさてん",r:"kissaten",a:"Kafe / Warung kopi",n:"Kanji: 喫茶店. Kedai kopi tradisional Jepang, beda dari kafe modern. Sering punya suasana jadul dan tenang."},
+    {k:"スーパー",r:"suupaa",a:"Supermarket / Pasar swalayan",n:"Serapan 'supermarket'. Di Jepang supermarket tutup cukup malam (22:00-23:00) dan punya area bento segar yang didiskon jelang tutup."},
+    {k:"１００えんしょっぷ",r:"hyaku en shoppu",a:"Toko serba 100 yen",n:"Toko dengan semua barang seharga 100 yen (±Rp 10.000). Daiso adalah yang paling terkenal. Kualitasnya lebih baik dari yang dibayangkan!"},
+    {k:"レストラン",r:"resutoran",a:"Restoran",n:"Serapan 'restaurant'. Di Jepang restoran sering punya mesin pemesan tiket (食券 shokken) di pintu masuk."},
+    {k:"ちか",r:"chika",a:"Bawah tanah / Basement",n:"Kanji: 地下. Chi (bumi/tanah) + Ka (bawah). Pusat perbelanjaan Jepang punya 'depachika' (デパ地下) — food hall basement yang sangat mewah."},
+    {k:"ビル",r:"biru",a:"Gedung",n:"Serapan 'building'. Gedung perkantoran dan perbelanjaan. Jangan tertukar dengan ビール (biiru = bir)!"},
+    {k:"インフォメーション",r:"infomeeshon",a:"Bagian informasi",n:"Serapan 'information'. Meja informasi biasanya ada di dekat pintu masuk gedung atau stasiun."},
+    {k:"エスカレーター",r:"esukareetaa",a:"Eskalator / Tangga berjalan",n:"Serapan 'escalator'. Di Jepang ada aturan tak tertulis: berdiri di sisi kiri (Osaka: kanan) agar orang yang buru-buru bisa lewat di sisi satunya."},
+    {k:"エレベーター",r:"erebeetaa",a:"Elevator / Lift",n:"Serapan 'elevator'. Di gedung-gedung Jepang, ada suara atau musik saat pintu terbuka/tertutup. Sangat bersih dan terawat."},
+    {k:"レジ",r:"reji",a:"Kasir",n:"Dari 'register' (mesin kasir). Area pembayaran di toko. Di Jepang kasir menaruh kembalian di nampan kecil, bukan langsung ke tangan."},
+    {k:"ATM（エーティーエム）",r:"eetiiemu",a:"Mesin ATM",n:"ATM di Jepang punya jam operasional (tidak 24 jam di semua tempat). ATM di 7-Eleven dan kantor pos paling mudah dipakai oleh orang asing."}
+  ]},
+  "Posisi di Gedung": { rows: [
+    {k:"ここ",r:"koko",a:"Di sini",n:"Dekat pembicara. Sistem Ko-So-A-Do: ここ (sini) → そこ (situ) → あそこ (sana)."},
+    {k:"そこ",r:"soko",a:"Di situ",n:"Dekat pendengar/lawan bicara."},
+    {k:"あそこ",r:"asoko",a:"Di sana",n:"Jauh dari kedua pihak."},
+    {k:"どこ",r:"doko",a:"Di mana",n:"Bentuk tanya dari sistem Ko-So-A-Do untuk tempat. 'Toire wa doko desu ka?' = Toilet di mana?"},
+    {k:"〜かい",r:"~kai",a:"Lantai ~",n:"Kanji: 〜階. いっかい = lantai 1, にかい = lantai 2, さんがい = lantai 3, ちか = basement. Perhatikan perubahan bunyi di lantai 3 (sangai, bukan sankai)."}
+  ]},
+  "Barang Belanjaan": { rows: [
+    {k:"ほん",r:"hon",a:"Buku",n:"Kanji: 本. Juga berarti 'asal/asli'. Toko buku (本屋 / honya) masih sangat populer di Jepang meski era digital."},
+    {k:"ケーキ",r:"keeki",a:"Kue",n:"Serapan 'cake'. Kue di Jepang terkenal halus dan tidak terlalu manis. Strawberry shortcake adalah kue natal tradisional Jepang."},
+    {k:"パン",r:"pan",a:"Roti",n:"Dari bahasa Portugis 'pão'. Toko roti (パン屋 / panya) ada di mana-mana. Roti melon (メロンパン) adalah roti khas Jepang."},
+    {k:"カメラ",r:"kamera",a:"Kamera",n:"Serapan 'camera'. Merek kamera Jepang (Canon, Nikon, Sony, Fujifilm) mendominasi pasar global."},
+    {k:"けいたいでんわ",r:"keitai denwa",a:"Ponsel / HP",n:"Kanji: 携帯電話. Harfiah: 'telepon yang dibawa-bawa'. Biasa disingkat けいたい (keitai). Di Jepang ekosistem smartphone dominan: iPhone sangat populer."},
+    {k:"でんしじしょ",r:"denshi jisho",a:"Kamus elektronik",n:"Kanji: 電子辞書. Denshi (elektronik) + Jisho (kamus). Sebelum era smartphone, alat ini wajib dimiliki pelajar bahasa Jepang."},
+    {k:"パソコン",r:"pasokon",a:"Laptop / PC",n:"Singkatan 'personal computer' dalam lafal Jepang. Lebih umum dari コンピュータ dalam percakapan sehari-hari."},
+    {k:"けしごむ",r:"keshigomu",a:"Karet penghapus",n:"Kanji: 消しゴム. Keshi (menghapus) + Gomu (dari Belanda 'gom' = karet). Di Jepang penghapus punya kualitas sangat baik — merek Mono sangat terkenal."},
+    {k:"ペン",r:"pen",a:"Pena",n:"Serapan 'pen'. Kata umum untuk pena. Untuk ballpoint: ボールペン (boorupen). Jepang terkenal dengan kualitas alat tulis yang sangat baik."},
+    {k:"トイレットペーパー",r:"toiretto peepaa",a:"Tisu toilet",n:"Serapan 'toilet paper'. Di Jepang tisu toilet berkualitas sangat tinggi dan hampir selalu tersedia di toilet umum."}
+  ]},
+  "Bahan Makanan": { rows: [
+    {k:"あぶら",r:"abura",a:"Minyak goreng",n:"Kanji: 油. Untuk minyak nabati/hewani. Minyak wijen (ごまあぶら / goma abura) sangat umum dalam masakan Jepang."},
+    {k:"こめ",r:"kome",a:"Beras (mentah)",n:"Kanji: 米. Khusus beras belum dimasak. Setelah dimasak jadi ごはん (gohan). Beras Jepang varietas Japonica — pendek, pulen, agak lengket."},
+    {k:"たまご",r:"tamago",a:"Telur",n:"Kanji: 卵. Bahan serbaguna dalam masakan Jepang. Telur mentah sering dimakan langsung di atas nasi (卵かけご飯 / tamago kake gohan = TKG)."},
+    {k:"みず",r:"mizu",a:"Air",n:"Kanji: 水. Air dingin/biasa. Air panas = おゆ (oyu). Air keran di Jepang bisa langsung diminum — standar kualitasnya sangat tinggi."},
+    {k:"にく",r:"niku",a:"Daging",n:"Kanji: 肉. Kata umum untuk daging. とりにく (tori niku) = daging ayam, ぎゅうにく (gyuu niku) = daging sapi, ぶたにく (buta niku) = daging babi."},
+    {k:"とりにく",r:"toriniku",a:"Daging ayam",n:"Kanji: 鶏肉. Tori (ayam) + Niku (daging). Sangat umum dalam masakan Jepang — yakiniku, karaage (唐揚げ), oyakodon, dll."},
+    {k:"ぎゅうにく",r:"gyuuniku",a:"Daging sapi",n:"Kanji: 牛肉. Gyuu (sapi) + Niku (daging). Wagyu (和牛) adalah daging sapi Jepang premium yang terkenal di seluruh dunia."},
+    {k:"ぶたにく",r:"butaniku",a:"Daging babi",n:"Kanji: 豚肉. Buta (babi) + Niku (daging). Sangat umum dalam masakan Jepang — ramen, tonkatsu, kakuni semuanya pakai babi."},
+    {k:"さかな",r:"sakana",a:"Ikan",n:"Kanji: 魚. Bahan utama masakan Jepang. Jepang adalah negara konsumen ikan terbesar di dunia per kapita."},
+    {k:"やさい",r:"yasai",a:"Sayur-sayuran",n:"Kanji: 野菜. Ya (ladang) + Sai (sayur). Sayuran segar Jepang terkenal berkualitas tinggi dan mahal."},
+    {k:"イチゴ",r:"ichigo",a:"Stroberi",n:"Dari bahasa Inggris. Stroberi Jepang terkenal sangat manis dan besar — bisa sangat mahal (1 buah bisa ribuan yen untuk yang premium)."},
+    {k:"リンゴ",r:"ringo",a:"Apel",n:"Kata asli Jepang (林檎). Apel Aomori (青森) terkenal sebagai yang terbaik di Jepang. Jadi oleh-oleh khas daerah tersebut."},
+    {k:"スープ",r:"suupu",a:"Sup",n:"Serapan 'soup'. Di Jepang sup miso (みそしる / miso shiru) adalah sup paling ikonik — hampir selalu ada dalam set makan tradisional Jepang."}
+  ]},
+  "Kata Tunjuk & Harga": { rows: [
+    {k:"これ",r:"kore",a:"Ini (dekat pembicara)",n:"Sistem Ko-So-A-Do untuk benda: これ (ini, dekat aku) → それ (itu, dekat kamu) → あれ (itu, jauh)."},
+    {k:"それ",r:"sore",a:"Itu (dekat lawan bicara)",n:"Benda yang lebih dekat ke pendengar daripada ke pembicara."},
+    {k:"あれ",r:"are",a:"Itu (jauh dari keduanya)",n:"Benda yang jauh dari kedua pihak. Juga ekspresi kaget/bingung: 'Eh? あれ?'"},
+    {k:"この〜",r:"kono ~",a:"Ini ~ (sebelum benda)",n:"Dipakai langsung sebelum kata benda. この本 (kono hon) = buku ini. Tidak bisa berdiri sendiri."},
+    {k:"その〜",r:"sono ~",a:"Itu ~ (dekat pendengar)",n:"その鞄 (sono kaban) = tas itu (yang di dekatmu)."},
+    {k:"あの〜",r:"ano ~",a:"Itu ~ (jauh, sebelum benda)",n:"あの人 (ano hito) = orang itu (yang jauh). Juga dipakai sebagai 'anu...' saat ragu."},
+    {k:"〜えん",r:"~en",a:"~ yen",n:"Kanji: 〜円. Satuan mata uang Jepang. ¥100 ≈ Rp 10.000. Uang koin ada: 1, 5, 10, 50, 100, 500 yen. Uang kertas: 1.000, 5.000, 10.000 yen."},
+    {k:"いくら",r:"ikura",a:"Berapa (harga)",n:"Kanji: 幾ら. Khusus untuk menanyakan harga. 'Ikura desu ka?' = Berapa harganya? Kata wajib saat belanja!"}
+  ]},
+  "Pakaian & Aksesoris": { rows: [
+    {k:"Ｔシャツ",r:"tii shatsu",a:"Kaos",n:"Serapan 'T-shirt'. Salah satu item fashion paling umum. Di Jepang kaos dengan karakter anime/manga sangat populer."},
+    {k:"〜や",r:"~ya",a:"Toko ~",n:"Kanji: 〜屋. Ditambahkan setelah jenis barang untuk menyebut tokonya. くつや (kutsuya) = toko sepatu, はなや (hanaya) = toko bunga, パンや (panya) = toko roti."},
+    {k:"くつや",r:"kutsuya",a:"Toko sepatu",n:"Kanji: 靴屋. Kutsu (sepatu) + Ya (toko). Di Jepang toko sepatu sering spesifik — ada yang khusus sepatu sekolah, olahraga, atau fashion."},
+    {k:"でんき",r:"denki",a:"Alat elektronik / Listrik",n:"Kanji: 電気. Denki juga berarti 'listrik'. Di sini konteksnya toko elektronik. Akihabara (秋葉原) di Tokyo adalah surga belanja elektronik."}
+  ]},
+  "Makanan & Minuman (Bab 2)": { rows: [
+    {k:"とんかつ",r:"tonkatsu",a:"Tonkatsu",n:"Dari ton (babi) + katsu (singkatan katsuretsu dari 'cutlet'). Potongan daging babi berlapis tepung roti yang digoreng. Menu populer di seluruh Jepang."},
+    {k:"ジュース",r:"juusu",a:"Jus",n:"Serapan 'juice'. Di Jepang ada berbagai jus buah dalam kemasan. 100% jus ditandai dengan '果汁100%' (kajuu hyaku paasento)."},
+    {k:"〜ご",r:"~go",a:"Bahasa ~",n:"Kanji: 〜語. Ditambahkan setelah nama negara/bangsa. にほんご = bahasa Jepang, えいご = bahasa Inggris, インドネシアご = bahasa Indonesia."},
+    {k:"えいご",r:"eigo",a:"Bahasa Inggris",n:"Kanji: 英語. Ei (Inggris/Eropa) + Go (bahasa). Pelajaran wajib di sekolah Jepang, tapi tingkat kemahiran orang Jepang rata-rata masih rendah karena kurang praktik."},
+    {k:"てんいん",r:"ten'in",a:"Karyawan / Pegawai toko",n:"Kanji: 店員. Ten (toko) + In (anggota). Terkenal karena pelayanan prima (おもてなし / omotenashi). 'Irasshaimase!' adalah sapaan wajib mereka."},
+    {k:"いらっしゃいませ",r:"irasshaimase",a:"Selamat datang (di toko/restoran)",n:"Ungkapan wajib staf toko saat pelanggan masuk. Tidak perlu direspons — cukup angguk atau senyum. Berasal dari kata kerja いらっしゃる (irassharu) = bentuk sangat sopan dari 'ada/datang/pergi'."}
+  ]}
+}
+
+}; // end BUKU
+
+// ─────────────────────────────────────────────────────
+// DATA: BUNPOU — pola kalimat & tata bahasa
+// Format tiap item: { pola, romaji, arti, catatan, contoh: [{jp, id}] }
+// ─────────────────────────────────────────────────────
+const BUNPOU = {
+
+tanya: [
+  {
+    judul: "Pola Dasar: 〜は〜ですか？",
+    sub: "Menanyakan identitas atau fakta tentang sesuatu/seseorang",
+    items: [
+      {
+        pola: "〜は　なんですか？",
+        romaji: "~ wa nan desu ka?",
+        arti: "~ itu apa?",
+        catatan: "Pola paling dasar untuk bertanya. Ganti ～ dengan topik yang ingin ditanyakan.",
+        contoh: [
+          {jp:"これは　なんですか？", id:"Ini apa?"},
+          {jp:"おしごとは　なんですか？", id:"Pekerjaannya apa?"},
+          {jp:"しゅみは　なんですか？", id:"Hobinya apa?"}
+        ]
+      },
+      {
+        pola: "〜は　だれですか？",
+        romaji: "~ wa dare desu ka?",
+        arti: "~ itu siapa?",
+        catatan: "Untuk menanyakan orang. Bentuk sopan: どなたですか (donata desu ka).",
+        contoh: [
+          {jp:"あのひとは　だれですか？", id:"Orang itu siapa?"},
+          {jp:"せんせいは　だれですか？", id:"Gurunya siapa?"}
+        ]
+      },
+      {
+        pola: "〜は　どこですか？",
+        romaji: "~ wa doko desu ka?",
+        arti: "~ di mana?",
+        catatan: "Untuk menanyakan lokasi benda/tempat. Bentuk sopan: どちらですか (dochira desu ka).",
+        contoh: [
+          {jp:"トイレは　どこですか？", id:"Toilet di mana?"},
+          {jp:"えきは　どこですか？", id:"Stasiunnya di mana?"},
+          {jp:"おくには　どちらですか？", id:"Negaranya di mana? (sopan)"}
+        ]
+      },
+      {
+        pola: "〜は　いつですか？",
+        romaji: "~ wa itsu desu ka?",
+        arti: "~ kapan?",
+        catatan: "Untuk menanyakan waktu kejadian suatu peristiwa atau jadwal.",
+        contoh: [
+          {jp:"テストは　いつですか？", id:"Ujiannya kapan?"},
+          {jp:"たんじょうびは　いつですか？", id:"Ulang tahunnya kapan?"},
+          {jp:"やすみは　いつですか？", id:"Liburnya kapan?"}
+        ]
+      },
+      {
+        pola: "〜は　どうですか？",
+        romaji: "~ wa dou desu ka?",
+        arti: "Bagaimana ~ nya?",
+        catatan: "Untuk meminta pendapat, kondisi, atau menawarkan sesuatu.",
+        contoh: [
+          {jp:"にほんごは　どうですか？", id:"Bagaimana (pelajaran) bahasa Jepangnya?"},
+          {jp:"おちゃは　どうですか？", id:"Bagaimana kalau minum teh?"},
+          {jp:"てんきは　どうですか？", id:"Bagaimana cuacanya?"}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "Menanyakan Identitas Diri",
+    sub: "Pola pertanyaan umum saat berkenalan atau memperkenalkan orang",
+    items: [
+      {
+        pola: "おなまえは？ / おなまえは　なんですか？",
+        romaji: "onamae wa? / onamae wa nan desu ka?",
+        arti: "Siapa namamu? / Namanya siapa?",
+        catatan: "Prefiks 'o' (お) menambahkan kesan sopan. Tanpa 'o': なまえは？ lebih santai. Jawab: ～です (〜 desu).",
+        contoh: [
+          {jp:"おなまえは　なんですか？", id:"Namanya siapa?"},
+          {jp:"わたしの　なまえは　レンディです。", id:"Nama saya Rendi."}
+        ]
+      },
+      {
+        pola: "おしごとは　なんですか？",
+        romaji: "oshigoto wa nan desu ka?",
+        arti: "Pekerjaannya apa?",
+        catatan: "Prefiks 'o' pada shigoto (仕事) menambahkan kesan sopan. Jawab dengan profesi + です.",
+        contoh: [
+          {jp:"おしごとは　なんですか？", id:"Pekerjaannya apa?"},
+          {jp:"わたしは　がくせいです。", id:"Saya (adalah) siswa."},
+          {jp:"かいしゃいんです。", id:"(Saya) karyawan perusahaan."}
+        ]
+      },
+      {
+        pola: "おいくつですか？",
+        romaji: "oikutsu desu ka?",
+        arti: "Berapa usia Anda? (sopan)",
+        catatan: "Bentuk sopan. Untuk teman sebaya cukup なんさいですか (nansai desu ka). Jawab: ～さいです.",
+        contoh: [
+          {jp:"おいくつですか？", id:"Berapa usia Anda?"},
+          {jp:"にじゅうさんさいです。", id:"(Saya) 23 tahun."},
+          {jp:"はたちです。", id:"(Saya) 20 tahun."}
+        ]
+      },
+      {
+        pola: "おくには　どちらですか？",
+        romaji: "okuni wa dochira desu ka?",
+        arti: "Anda berasal dari negara mana?",
+        catatan: "どちら = bentuk sopan dari どこ. Jawab: ～じんです (saya orang ~) atau ～からきました (saya dari ~).",
+        contoh: [
+          {jp:"おくには　どちらですか？", id:"Anda dari negara mana?"},
+          {jp:"インドネシアじんです。", id:"Saya orang Indonesia."},
+          {jp:"インドネシアから　きました。", id:"Saya datang dari Indonesia."}
+        ]
+      },
+      {
+        pola: "おすまいは　どちらですか？",
+        romaji: "osumai wa dochira desu ka?",
+        arti: "Tinggal di mana? (sopan)",
+        catatan: "Sumai (住まい) = tempat tinggal. Lebih sopan dari どこに　すんでいますか. Jawab: ～に　すんでいます.",
+        contoh: [
+          {jp:"おすまいは　どちらですか？", id:"Tinggal di mana?"},
+          {jp:"じゃかるたに　すんでいます。", id:"(Saya) tinggal di Jakarta."}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "Menanyakan Jumlah & Harga",
+    sub: "Pola untuk bertanya tentang angka, harga, dan waktu",
+    items: [
+      {
+        pola: "いくらですか？",
+        romaji: "ikura desu ka?",
+        arti: "Berapa harganya?",
+        catatan: "Kata wajib saat belanja. Jawab: ～えんです (~ en desu).",
+        contoh: [
+          {jp:"これは　いくらですか？", id:"Ini berapa harganya?"},
+          {jp:"ひゃくえんです。", id:"Seratus yen."},
+          {jp:"このTシャツは　いくらですか？", id:"Kaos ini berapa?"}
+        ]
+      },
+      {
+        pola: "なんさいですか？ / おいくつですか？",
+        romaji: "nansai desu ka? / oikutsu desu ka?",
+        arti: "Umurnya berapa?",
+        catatan: "なんさい = santai/netral. おいくつ = sopan (untuk orang lebih tua/atasan). Jawab: ～さいです.",
+        contoh: [
+          {jp:"なんさいですか？", id:"Umurnya berapa?"},
+          {jp:"じゅうはっさいです。", id:"(Saya) 18 tahun."}
+        ]
+      },
+      {
+        pola: "なんじですか？ / いまなんじですか？",
+        romaji: "nanji desu ka? / ima nanji desu ka?",
+        arti: "Jam berapa? / Sekarang jam berapa?",
+        catatan: "なんじ = jam berapa. いま = sekarang. Jawab: ～じ～ふんです.",
+        contoh: [
+          {jp:"いま　なんじですか？", id:"Sekarang jam berapa?"},
+          {jp:"ごじはんです。", id:"(Sekarang) jam setengah enam."},
+          {jp:"じゅうにじです。", id:"Jam dua belas."}
+        ]
+      },
+      {
+        pola: "なんにんですか？",
+        romaji: "nannin desu ka?",
+        arti: "Berapa orang?",
+        catatan: "Counter orang: ひとり (1), ふたり (2), さんにん (3), よにん (4)...",
+        contoh: [
+          {jp:"かぞくは　なんにんですか？", id:"Keluarganya berapa orang?"},
+          {jp:"よにんです。", id:"(Ada) empat orang."}
+        ]
+      }
+    ]
+  }
+],
+
+bab1: [
+  {
+    judul: "〜は　〜です (A adalah B)",
+    sub: "Pola kalimat nominatif dasar — menyatakan identitas atau fakta",
+    items: [
+      {
+        pola: "〜は　〜です。",
+        romaji: "~ wa ~ desu.",
+        arti: "~ adalah ~.",
+        catatan: "は (wa) = partikel topik. です (desu) = kopula sopan setara 'adalah'. Ini pola paling dasar dalam bahasa Jepang.",
+        contoh: [
+          {jp:"わたしは　がくせいです。", id:"Saya adalah siswa."},
+          {jp:"これは　ほんです。", id:"Ini adalah buku."},
+          {jp:"せんせいは　たなかさんです。", id:"Gurunya adalah Tanaka-san."}
+        ]
+      },
+      {
+        pola: "〜は　〜では　ありません。",
+        romaji: "~ wa ~ dewa arimasen.",
+        arti: "~ bukan ~.",
+        catatan: "Bentuk negatif dari です. Percakapan santai: じゃないです (ja nai desu).",
+        contoh: [
+          {jp:"わたしは　せんせいでは　ありません。", id:"Saya bukan guru."},
+          {jp:"これは　じしょじゃないです。", id:"Ini bukan kamus."}
+        ]
+      },
+      {
+        pola: "〜は　〜ですか？",
+        romaji: "~ wa ~ desu ka?",
+        arti: "Apakah ~ adalah ~?",
+        catatan: "Tambahkan か di akhir untuk membentuk kalimat tanya. Intonasi datar atau sedikit naik.",
+        contoh: [
+          {jp:"たなかさんは　がくせいですか？", id:"Apakah Tanaka-san siswa?"},
+          {jp:"これは　にほんごですか？", id:"Apakah ini bahasa Jepang?"}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "〜も　〜です (~ juga ~)",
+    sub: "Partikel も (mo) untuk menyatakan kesamaan",
+    items: [
+      {
+        pola: "〜も　〜です。",
+        romaji: "~ mo ~ desu.",
+        arti: "~ juga ~.",
+        catatan: "も menggantikan は. Dipakai saat topik baru punya sifat yang sama dengan yang sudah disebut.",
+        contoh: [
+          {jp:"わたしも　がくせいです。", id:"Saya juga siswa."},
+          {jp:"たなかさんも　にほんじんです。", id:"Tanaka-san juga orang Jepang."},
+          {jp:"これも　いいです。", id:"Ini juga bagus."}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "〜の〜 (kepemilikan / penghubung kata benda)",
+    sub: "Partikel の (no) menghubungkan dua kata benda",
+    items: [
+      {
+        pola: "〔名詞A〕の　〔名詞B〕",
+        romaji: "[meishi A] no [meishi B]",
+        arti: "B dari A / B milik A / B tentang A",
+        catatan: "の menghubungkan dua kata benda. A menerangkan B. Setara apostrophe-s ('s) dalam bahasa Inggris, tapi lebih luas fungsinya.",
+        contoh: [
+          {jp:"わたしの　なまえ", id:"nama saya"},
+          {jp:"にほんの　たべもの", id:"makanan Jepang"},
+          {jp:"がっこうの　せんせい", id:"guru (di) sekolah"},
+          {jp:"たなかさんの　めいし", id:"kartu nama Tanaka-san"}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "〜じん／〜ご (orang~ / bahasa~)",
+    sub: "Sufiks untuk kewarganegaraan dan bahasa",
+    items: [
+      {
+        pola: "〔国名〕＋　じん",
+        romaji: "[negara] + jin",
+        arti: "Orang ~ / Warga negara ~",
+        catatan: "じん (人) = orang. Ditambahkan langsung setelah nama negara.",
+        contoh: [
+          {jp:"にほんじん", id:"orang Jepang"},
+          {jp:"インドネシアじん", id:"orang Indonesia"},
+          {jp:"アメリカじん", id:"orang Amerika"}
+        ]
+      },
+      {
+        pola: "〔国名〕＋　ご",
+        romaji: "[negara] + go",
+        arti: "Bahasa ~",
+        catatan: "ご (語) = bahasa. Ditambahkan setelah nama negara/bangsa.",
+        contoh: [
+          {jp:"にほんご", id:"bahasa Jepang"},
+          {jp:"えいご", id:"bahasa Inggris"},
+          {jp:"インドネシアご", id:"bahasa Indonesia"}
+        ]
+      }
+    ]
+  }
+],
+
+bab2: [
+  {
+    judul: "これ／それ／あれ／どれ (Ko-So-A-Do untuk benda)",
+    sub: "Kata tunjuk untuk benda berdasarkan jarak dari pembicara dan pendengar",
+    items: [
+      {
+        pola: "これは　〜ですか？",
+        romaji: "kore wa ~ desu ka?",
+        arti: "Ini ~ (ya)?",
+        catatan: "これ = benda dekat pembicara. それ = dekat pendengar. あれ = jauh dari keduanya. どれ = yang mana?",
+        contoh: [
+          {jp:"これは　なんですか？", id:"Ini apa?"},
+          {jp:"それは　じしょです。", id:"Itu (adalah) kamus."},
+          {jp:"あれは　えきです。", id:"Itu (yang jauh) adalah stasiun."},
+          {jp:"どれが　たなかさんの　かばんですか？", id:"Yang mana tas milik Tanaka-san?"}
+        ]
+      },
+      {
+        pola: "この〜／その〜／あの〜／どの〜",
+        romaji: "kono~ / sono~ / ano~ / dono~",
+        arti: "~ ini / ~ itu (dekat) / ~ itu (jauh) / ~ yang mana",
+        catatan: "Berbeda dari これ/それ/あれ — この/その/あの/どの HARUS diikuti kata benda. Tidak bisa berdiri sendiri.",
+        contoh: [
+          {jp:"このほんは　いくらですか？", id:"Buku ini berapa harganya?"},
+          {jp:"そのかばんは　だれのですか？", id:"Tas itu punya siapa?"},
+          {jp:"あのひとは　だれですか？", id:"Orang itu siapa?"},
+          {jp:"どのTシャツが　いいですか？", id:"Kaos yang mana yang bagus?"}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "ここ／そこ／あそこ／どこ (Ko-So-A-Do untuk tempat)",
+    sub: "Kata tunjuk untuk lokasi/tempat",
+    items: [
+      {
+        pola: "〜は　どこですか？",
+        romaji: "~ wa doko desu ka?",
+        arti: "~ di mana?",
+        catatan: "ここ = di sini. そこ = di situ. あそこ = di sana. どこ = di mana? Sangat berguna saat berbelanja atau bepergian.",
+        contoh: [
+          {jp:"トイレは　どこですか？", id:"Toilet di mana?"},
+          {jp:"ここは　なんかいですか？", id:"Di sini lantai berapa?"},
+          {jp:"レジは　そこです。", id:"Kasirnya di situ."},
+          {jp:"エレベーターは　あそこです。", id:"Liftnya di sana."}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "〜は　〜えんです (harga)",
+    sub: "Menyatakan dan menanyakan harga",
+    items: [
+      {
+        pola: "〜は　〜えんです。",
+        romaji: "~ wa ~ en desu.",
+        arti: "~ (harganya) ~ yen.",
+        catatan: "Pola dasar menyatakan harga. Untuk menanya: いくらですか (ikura desu ka)?",
+        contoh: [
+          {jp:"このケーキは　ごひゃくえんです。", id:"Kue ini (harganya) 500 yen."},
+          {jp:"あのTシャツは　いくらですか？", id:"Kaos itu berapa?"},
+          {jp:"せんえんです。", id:"(Harganya) seribu yen."}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "〜は　なんかいですか？ (lantai berapa?)",
+    sub: "Menanyakan dan menyatakan posisi lantai gedung",
+    items: [
+      {
+        pola: "〜は　なんかいですか？",
+        romaji: "~ wa nankai desu ka?",
+        arti: "~ ada di lantai berapa?",
+        catatan: "〜かい (階) = lantai. Perhatikan: いっかい (1), にかい (2), さんがい (3), よんかい (4), ごかい (5). Lantai 3 bunyinya さんがい, bukan さんかい!",
+        contoh: [
+          {jp:"レストランは　なんかいですか？", id:"Restaurannya di lantai berapa?"},
+          {jp:"さんがいです。", id:"Di lantai tiga."},
+          {jp:"でんきは　ごかいです。", id:"(Toko) elektronik ada di lantai lima."},
+          {jp:"ちかいっかいに　スーパーが　あります。", id:"Di basement lantai 1 ada supermarket."}
+        ]
+      }
+    ]
+  }
+]
+
+}; // end BUNPOU
