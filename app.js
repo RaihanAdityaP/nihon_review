@@ -126,6 +126,13 @@ function togAcc(id, head) {
 // ─────────────────────────────────────────────────────
 // PARTIKEL
 // ─────────────────────────────────────────────────────
+function switchPartikelTab(tab, btn) {
+  document.getElementById('parDasar').style.display    = tab === 'dasar'    ? 'block' : 'none';
+  document.getElementById('parLanjutan').style.display = tab === 'lanjutan' ? 'block' : 'none';
+  document.querySelectorAll('#pagePartikel .cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
 function renderPartikel() {
   document.getElementById('particleGrid').innerHTML = PT.map(p => `
     <div class="pcard">
@@ -135,6 +142,36 @@ function renderPartikel() {
       <div class="p-desc">${p.desc}</div>
       <div class="p-exs">${p.ex.map(e => `<div class="p-ex"><div class="p-ex-jp">${e.jp}</div><div class="p-ex-id">${e.id}</div></div>`).join('')}</div>
     </div>`).join('');
+}
+
+function renderPartikelAdv() {
+  const el = document.getElementById('particleAdvGrid');
+  let html = '';
+  for (const [group, items] of Object.entries(PT_ADV)) {
+    const id = 'padv_' + group.replace(/[^a-z0-9]/gi, '_');
+    html += `<div class="acc-item" style="margin-bottom:.5rem">
+      <div class="acc-head" onclick="togAcc('` + id + `',this)">
+        <div class="acc-left">
+          <span class="acc-title">${group}</span>
+          <span class="acc-cnt">${items.length}</span>
+        </div>
+        <span class="acc-arrow">▶</span>
+      </div>
+      <div class="acc-body" id="` + id + `">
+        <div class="particle-grid">
+          ${items.map(p => `
+            <div class="pcard">
+              <div class="p-sym">${p.sym}</div>
+              <div class="p-rom">${p.r}</div>
+              <div style="font-family:'DM Mono',monospace;font-size:.55rem;color:var(--accent3);margin-bottom:.3rem;letter-spacing:.04em">${p.kind}</div>
+              <div class="p-desc">${p.desc}</div>
+              <div class="p-exs">${p.ex.map(e => `<div class="p-ex"><div class="p-ex-jp">${e.jp}</div><div class="p-ex-id">${e.id}</div></div>`).join('')}</div>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+  }
+  el.innerHTML = html;
 }
 
 // ─────────────────────────────────────────────────────
@@ -187,7 +224,7 @@ const QCATS = [
   { id: 'arah',        label: 'Arah & Posisi',         t: 'kotoba' },
   { id: 'kelas-ex',    label: 'Ekspresi di Kelas',     t: 'kotoba' },
   { id: 'counter',     label: 'Counter',               t: 'kotoba' },
-  { id: 'par-adv',     label: 'Partikel Lanjutan',     t: 'kotoba' },
+  { id: 'par-adv',     label: 'Partikel Lanjutan',     t: 'particle-adv' },
 ];
 
 let SC = new Set(), ST = new Set(['kana-to-romaji']), QN = 10;
@@ -270,7 +307,7 @@ function ktItems(cid) {
     warna: 'Warna', rasa: 'Rasa', tanya: 'Kata Tanya',
     kosoad: 'Kata Penunjuk (Ko-So-A-Do)', ket: 'Kata Keterangan Umum',
     rutin: 'Kegiatan Rutin', profesi: 'Profesi & Pekerjaan', arah: 'Arah & Posisi',
-    'kelas-ex': 'Ekspresi di Kelas', counter: 'Counter (Kata Bilangan)', 'par-adv': 'Partikel Lanjutan'
+    'kelas-ex': 'Ekspresi di Kelas', counter: 'Counter (Kata Bilangan)'
   };
   const keys = Array.isArray(m[cid]) ? m[cid] : [m[cid]];
   let out = [];
@@ -283,9 +320,10 @@ function getAllItems() {
   SC.forEach(id => {
     const qc = QCATS.find(c => c.id === id);
     if (!qc) return;
-    if      (qc.t === 'kana')     all = all.concat(kanaItems(id));
-    else if (qc.t === 'particle') PT.forEach(p => all.push({ kana: p.sym, romaji: p.r, arti: p.name, type: 'particle' }));
-    else                          all = all.concat(ktItems(id));
+    if      (qc.t === 'kana')         all = all.concat(kanaItems(id));
+    else if (qc.t === 'particle')     PT.forEach(p => all.push({ kana: p.sym, romaji: p.r, arti: p.name, type: 'particle' }));
+    else if (qc.t === 'particle-adv') Object.values(PT_ADV).flat().forEach(p => all.push({ kana: p.sym, romaji: p.r, arti: p.kind, type: 'particle-adv' }));
+    else                              all = all.concat(ktItems(id));
   });
   const seen = new Set();
   return all.filter(x => { const k = x.kana + '|' + x.romaji; if (seen.has(k)) return false; seen.add(k); return true; });
@@ -313,26 +351,73 @@ function validTypes(item) {
   });
 }
 
+// Skor kemiripan antara dua string (makin tinggi = makin mirip = distractor lebih susah)
+function similarityScore(a, b) {
+  if (!a || !b) return 0;
+  const sa = a.toLowerCase(), sb = b.toLowerCase();
+  let score = 0;
+  // prefix sama (1-2 karakter pertama sama)
+  if (sa[0] === sb[0]) score += 3;
+  if (sa.length > 1 && sb.length > 1 && sa[1] === sb[1]) score += 2;
+  // panjang mirip
+  const lenDiff = Math.abs(sa.length - sb.length);
+  if (lenDiff === 0) score += 2;
+  else if (lenDiff === 1) score += 1;
+  // akhiran sama
+  if (sa[sa.length - 1] === sb[sb.length - 1]) score += 1;
+  // berbagi substring 2 karakter
+  for (let i = 0; i < sa.length - 1; i++) {
+    if (sb.includes(sa.slice(i, i + 2))) score += 1;
+  }
+  return score;
+}
+
+// Track berapa kali setiap nilai muncul sebagai distractor dalam satu sesi quiz
+let distractorCount = {};
+
 function buildQ(item, pool) {
   const vt = validTypes(item);
   if (!vt.length) return null;
   const type = vt[Math.floor(Math.random() * vt.length)];
   let prompt, psub, ans, df, tag, isKA;
 
-  if      (type === 'kana-to-romaji') { prompt = item.kana;   psub = null;       ans = item.romaji; df = 'romaji'; tag = 'Kana → Romaji';         isKA = false; }
-  else if (type === 'romaji-to-kana') { prompt = item.romaji; psub = null;       ans = item.kana;   df = 'kana';   tag = 'Romaji → Kana';         isKA = true;  }
-  else if (type === 'jp-to-id')       { prompt = item.kana;   psub = item.romaji;ans = item.arti;   df = 'arti';   tag = 'Jepang → Indonesia';    isKA = false; }
-  else                                { prompt = item.arti;   psub = null;       ans = item.kana;   df = 'kana';   tag = 'Indonesia → Jepang';    isKA = true;  }
+  if      (type === 'kana-to-romaji') { prompt = item.kana;   psub = null;       ans = item.romaji; df = 'romaji'; tag = 'Kana → Romaji';      isKA = false; }
+  else if (type === 'romaji-to-kana') { prompt = item.romaji; psub = null;       ans = item.kana;   df = 'kana';   tag = 'Romaji → Kana';      isKA = true;  }
+  else if (type === 'jp-to-id')       { prompt = item.kana;   psub = item.romaji;ans = item.arti;   df = 'arti';   tag = 'Jepang → Indonesia'; isKA = false; }
+  else                                { prompt = item.arti;   psub = null;       ans = item.kana;   df = 'kana';   tag = 'Indonesia → Jepang'; isKA = true;  }
 
-  const samePool = pool.filter(x => x !== item && x.type === item.type && x[df] && x[df] !== ans);
-  const dists = [];
+  // Kumpulkan kandidat distractor dari tipe yang sama
+  const candidates = pool.filter(x => x !== item && x.type === item.type && x[df] && x[df] !== ans);
+
+  // Beri skor setiap kandidat: kemiripan tinggi = lebih susah; kemunculan berlebihan = penalti
+  const scored = candidates.map(x => {
+    const val = x[df];
+    const sim = similarityScore(ans, val);                    // kemiripan dengan jawaban benar
+    const overuse = distractorCount[val] || 0;               // penalti kalau sering muncul
+    return { val, score: sim - overuse * 2 };
+  });
+
+  // Urutkan dari skor tertinggi, lalu ambil 3 teratas dengan sedikit shuffle pada skor yang sama
+  scored.sort((a, b) => b.score - a.score || Math.random() - 0.5);
+
   const used = new Set([ans]);
-  shuf(samePool).forEach(d => { if (dists.length < 3 && !used.has(d[df])) { dists.push(d[df]); used.add(d[df]); } });
+  const dists = [];
+  for (const s of scored) {
+    if (dists.length >= 3) break;
+    if (!used.has(s.val)) { dists.push(s.val); used.add(s.val); }
+  }
+
+  // Fallback kalau masih kurang (pool kecil)
   if (dists.length < 3) {
-    pool.filter(x => x !== item && x[df] && !used.has(x[df])).forEach(d => {
-      if (dists.length < 3) { dists.push(d[df]); used.add(d[df]); }
+    shuf(pool).forEach(x => {
+      if (dists.length >= 3) return;
+      if (x[df] && !used.has(x[df])) { dists.push(x[df]); used.add(x[df]); }
     });
   }
+
+  // Update tracker kemunculan
+  dists.forEach(v => { distractorCount[v] = (distractorCount[v] || 0) + 1; });
+
   const choices = shuf([ans, ...dists.slice(0, 3)]);
   return { prompt, psub, tag, ans, choices, isKA };
 }
@@ -343,7 +428,7 @@ function startQuiz() {
   const picked = shuf(all).slice(0, QN === 999 ? all.length : Math.min(QN, all.length));
   QS = picked.map(x => buildQ(x, all)).filter(Boolean);
   if (!QS.length) return;
-  CQ = 0; CC = 0; CW = 0;
+  CQ = 0; CC = 0; CW = 0; distractorCount = {};
   document.getElementById('quizSetup').style.display  = 'none';
   document.getElementById('quizResult').style.display = 'none';
   document.getElementById('quizActive').style.display = 'block';
@@ -458,4 +543,5 @@ renderKanaAcc(H, 'matHiragana');
 renderKanaAcc(K, 'matKatakana');
 renderKotobaAcc(KT, 'matKotoba');
 renderPartikel();
+renderPartikelAdv();
 initQSetup();

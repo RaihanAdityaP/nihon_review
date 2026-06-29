@@ -64,7 +64,16 @@
   <div id="pagePartikel" class="page">
     <div class="sec-title">Partikel</div>
     <div class="sec-sub">Kata bantu yang menentukan fungsi kata dalam kalimat.</div>
-    <div class="particle-grid" id="particleGrid"></div>
+    <div class="cat-tabs">
+      <button class="cat-btn active" onclick="switchPartikelTab('dasar',this)">Partikel Dasar</button>
+      <button class="cat-btn" onclick="switchPartikelTab('lanjutan',this)">Partikel Lanjutan &amp; Pola</button>
+    </div>
+    <div id="parDasar">
+      <div class="particle-grid" id="particleGrid"></div>
+    </div>
+    <div id="parLanjutan" style="display:none">
+      <div id="particleAdvGrid"></div>
+    </div>
   </div>
 
   <!-- QUIZ -->

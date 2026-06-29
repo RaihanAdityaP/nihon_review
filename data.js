@@ -571,18 +571,7 @@ const KT={
 {k:"〜かい",r:"~kai",a:"kali / lantai",n:"(1) berapa kali (回), (2) lantai gedung (階). 1=ikkai."},
 {k:"〜えん",r:"~en",a:"yen (mata uang)",n:"Counter untuk uang Jepang."}
 ]},
-"Partikel Lanjutan":{rows:[
-{k:"だけ",r:"dake",a:"hanya / saja",n:"Membatasi pada satu hal saja. 'Kore dake' = hanya ini."},
-{k:"しか",r:"shika",a:"hanya (dengan negatif, bernada kekurangan)",n:"Selalu diikuti bentuk negatif."},
-{k:"でも",r:"demo",a:"tapi / meskipun / bahkan",n:"Serbaguna: tapi, bahkan, atau."},
-{k:"とか",r:"toka",a:"dan lain-lain / misalnya",n:"Menyebutkan contoh dari daftar tidak lengkap."},
-{k:"し",r:"shi",a:"dan juga / lagipula (alasan berganda)",n:"Menggabungkan beberapa alasan."},
-{k:"ので",r:"node",a:"karena / sehingga (formal)",n:"Menyatakan alasan dengan nada sopan/objektif."},
-{k:"のに",r:"noni",a:"padahal / walaupun (bernada kecewa)",n:"Menyatakan kontras dengan nada kecewa."},
-{k:"ながら",r:"nagara",a:"sambil (dua aksi bersamaan)",n:"Dua aksi dilakukan bersamaan oleh subjek yang sama."},
-{k:"てから",r:"te kara",a:"setelah ~ baru ~",n:"Urutan: aksi A selesai dulu, baru aksi B."},
-{k:"たり〜たり",r:"tari ~ tari",a:"kadang ~ kadang ~ (aktivitas bergantian)",n:"Menyebutkan beberapa contoh aktivitas bergantian."}
-]},
+
 "Peralatan Masak":{rows:[
 {k:"なべ",r:"nabe",a:"panci",n:"Kata asli Jepang kuno (鍋). Juga nama hidangan hot pot populer."},
 {k:"フライパン",r:"furaipan",a:"wajan datar",n:"Fry + Pan."},
@@ -752,3 +741,75 @@ ex:[
 {jp:"くじ<b class='ph'>まで</b>はたらきます。",id:"Bekerja sampai jam 9."},
 {jp:"ここ<b class='ph'>まで</b>でいいです。",id:"Sampai sini saja cukup."}]}
 ];
+
+// ─── DATA: PARTIKEL LANJUTAN & POLA GRAMATIKAL ───
+// Dipisah dari PT (partikel dasar) dan KT (kotoba)
+// karena statusnya berbeda: ada yg murni partikel, ada konjungsi, ada pola tata bahasa.
+const PT_ADV = {
+  "Partikel (助詞)": [
+    {sym:"だけ",r:"dake",kind:"Partikel (助詞 / joshi)",
+    desc:"Membatasi pada satu hal saja. Tidak ada nuansa kekurangan seperti しか.",
+    ex:[
+      {jp:"これ<b class='ph'>だけ</b>ください。",id:"Tolong berikan ini saja."},
+      {jp:"すこし<b class='ph'>だけ</b>たべた。",id:"Makan sedikit saja."},
+      {jp:"かれ<b class='ph'>だけ</b>がしっている。",id:"Hanya dia yang tahu."}]},
+    {sym:"しか",r:"shika",kind:"Partikel (係助詞 / kakarijoshi)",
+    desc:"Hanya... (dengan nuansa kekurangan). Selalu diikuti bentuk negatif.",
+    ex:[
+      {jp:"ひゃくえん<b class='ph'>しか</b>ない。",id:"Cuma punya 100 yen (kurang)."},
+      {jp:"かれ<b class='ph'>しか</b>こなかった。",id:"Yang datang hanya dia."},
+      {jp:"これ<b class='ph'>しか</b>できない。",id:"Ini satu-satunya yang bisa kulakukan."}]},
+    {sym:"でも",r:"demo",kind:"Partikel (係助詞)",
+    desc:"Multi-fungsi: (1) tapi/namun di awal kalimat, (2) bahkan ~pun, (3) atau semacamnya.",
+    ex:[
+      {jp:"こども<b class='ph'>でも</b>わかる。",id:"Bahkan anak kecil pun mengerti."},
+      {jp:"おちゃ<b class='ph'>でも</b>のみますか？",id:"Mau minum teh atau apa gitu?"},
+      {jp:"<b class='ph'>でも</b>、むずかしいです。",id:"Tapi, itu sulit."}]},
+    {sym:"とか",r:"toka",kind:"Partikel (並立助詞 / heiretsu joshi)",
+    desc:"Menyebutkan contoh dari daftar tidak lengkap. Lebih santai dari や.",
+    ex:[
+      {jp:"ねこ<b class='ph'>とか</b>いぬ<b class='ph'>とか</b>がすきです。",id:"Suka kucing, anjing, dan lain-lain."},
+      {jp:"えいが<b class='ph'>とか</b>みたい。",id:"Pengen nonton film atau semacamnya."},
+      {jp:"パン<b class='ph'>とか</b>かいてきて。",id:"Beliin roti atau apa gitu ya."}]},
+    {sym:"し",r:"shi",kind:"Partikel (接続助詞 / setsuzoku joshi)",
+    desc:"Menggabungkan beberapa alasan/fakta. Menyiratkan masih ada alasan lain yang tidak disebutkan.",
+    ex:[
+      {jp:"やすい<b class='ph'>し</b>、おいしい<b class='ph'>し</b>、いいです。",id:"Murah, enak, pokoknya bagus."},
+      {jp:"あめだ<b class='ph'>し</b>、さむい<b class='ph'>し</b>、いきたくない。",id:"Hujan, dingin, pokoknya nggak mau pergi."},
+      {jp:"かれはやさしい<b class='ph'>し</b>、かっこいい。",id:"Dia baik hati, lagipula tampan."}]}
+  ],
+  "Konjungsi Gramatikal (接続助詞)": [
+    {sym:"ので",r:"node",kind:"Konjungsi gramatikal (接続助詞)",
+    desc:"Menyatakan alasan dengan nada sopan/objektif. Lebih halus dari から.",
+    ex:[
+      {jp:"あめな<b class='ph'>ので</b>、いきません。",id:"Karena hujan, saya tidak pergi."},
+      {jp:"びょうき<b class='ph'>ので</b>、やすみます。",id:"Karena sakit, saya absen."},
+      {jp:"じかんがない<b class='ph'>ので</b>、はやくして。",id:"Karena tidak ada waktu, tolong cepat."}]},
+    {sym:"のに",r:"noni",kind:"Konjungsi gramatikal (接続助詞)",
+    desc:"Menyatakan kontras dengan nuansa kecewa atau tidak terduga. 'Padahal...'",
+    ex:[
+      {jp:"べんきょうした<b class='ph'>のに</b>、おちた。",id:"Padahal sudah belajar, tetap gagal."},
+      {jp:"たかい<b class='ph'>のに</b>、まずい。",id:"Padahal mahal, tapi tidak enak."},
+      {jp:"はやくきた<b class='ph'>のに</b>、もうおわった。",id:"Padahal datang lebih awal, sudah selesai."}]},
+    {sym:"ながら",r:"nagara",kind:"Partikel penghubung (接続助詞)",
+    desc:"Dua aksi berlangsung bersamaan oleh subjek yang sama. 'Sambil ~'",
+    ex:[
+      {jp:"おんがくをきき<b class='ph'>ながら</b>、べんきょうする。",id:"Belajar sambil mendengarkan musik."},
+      {jp:"あるき<b class='ph'>ながら</b>、はなす。",id:"Berbicara sambil berjalan."},
+      {jp:"テレビをみ<b class='ph'>ながら</b>、たべる。",id:"Makan sambil nonton TV."}]}
+  ],
+  "Pola Tata Bahasa (文型)": [
+    {sym:"てから",r:"te kara",kind:"Pola tata bahasa (文型)",
+    desc:"Gabungan bentuk て + から. Aksi A selesai dulu, baru aksi B. Bukan partikel tunggal.",
+    ex:[
+      {jp:"しゅくだいを し<b class='ph'>てから</b>、あそぶ。",id:"Setelah mengerjakan PR, baru bermain."},
+      {jp:"てをあらっ<b class='ph'>てから</b>、たべる。",id:"Setelah cuci tangan, baru makan."},
+      {jp:"そつぎょうし<b class='ph'>てから</b>、はたらく。",id:"Setelah lulus, baru bekerja."}]},
+    {sym:"～たり～たり",r:"~tari ~tari",kind:"Pola tata bahasa (文型)",
+    desc:"Partikel たり dipakai dua kali untuk memberi contoh aktivitas bergantian/tidak berurutan.",
+    ex:[
+      {jp:"よんだり かいたり した。",id:"Melakukan hal seperti membaca dan menulis."},
+      {jp:"あめがふったり やんだり している。",id:"Hujan kadang turun, kadang berhenti."},
+      {jp:"うたったり おどったり たのしんだ。",id:"Bernyanyi, menari, pokoknya bersenang-senang."}]}
+  ]
+};
