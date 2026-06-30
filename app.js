@@ -600,6 +600,49 @@ function renderBukuBab(babKey, elId) {
 }
 
 // ─────────────────────────────────────────────────────
+// BUNPOU
+// ─────────────────────────────────────────────────────
+function switchBunpouTab(tab, btn) {
+  document.querySelectorAll('#pageBunpou > [id^="bunpou"]').forEach(el => el.style.display = 'none');
+  document.getElementById('bunpou' + tab[0].toUpperCase() + tab.slice(1)).style.display = 'block';
+  document.querySelectorAll('#bunpouTabs .cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function renderBunpouSection(key, elId) {
+  const groups = BUNPOU[key];
+  if (!groups) return;
+  const el = document.getElementById(elId);
+  let html = '';
+  groups.forEach((group, gi) => {
+    const id = 'bunpou_' + key + '_' + gi;
+    html += `<div class="acc-item">
+      <div class="acc-head" onclick="togAcc('${id}',this)">
+        <div class="acc-left">
+          <span class="acc-title">${group.judul}</span>
+          <span class="acc-cnt">${group.items.length}</span>
+        </div>
+        <span class="acc-arrow">▶</span>
+      </div>
+      <div class="acc-body" id="${id}">
+        ${group.sub ? `<div style="font-size:.75rem;color:var(--text3);font-style:italic;margin-bottom:.8rem">${group.sub}</div>` : ''}
+        <div class="particle-grid">
+          ${group.items.map(it => `
+            <div class="pcard">
+              <div class="p-sym" style="font-size:1.1rem;font-family:'Noto Serif JP',serif">${it.pola}</div>
+              <div class="p-rom">${it.romaji}</div>
+              <div class="p-name">${it.arti}</div>
+              ${it.catatan ? `<div class="p-desc">${it.catatan}</div>` : ''}
+              <div class="p-exs">${(it.contoh || []).map(e => `<div class="p-ex"><div class="p-ex-jp">${e.jp}</div><div class="p-ex-id">${e.id}</div></div>`).join('')}</div>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+  });
+  el.innerHTML = html;
+}
+
+// ─────────────────────────────────────────────────────
 // INIT
 // ─────────────────────────────────────────────────────
 renderKanaAcc(H, 'matHiragana');
@@ -609,4 +652,7 @@ renderPartikel();
 renderPartikelAdv();
 renderBukuBab('bab1', 'bukuBab1');
 renderBukuBab('bab2', 'bukuBab2');
+renderBunpouSection('tanya', 'bunpouTanya');
+renderBunpouSection('bab1', 'bunpouBab1');
+renderBunpouSection('bab2', 'bunpouBab2');
 initQSetup();

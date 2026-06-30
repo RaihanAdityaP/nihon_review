@@ -1322,6 +1322,238 @@ bab1: [
         ]
       }
     ]
+  },
+  {
+    judul: "〜は　〜じんです (Menyatakan kewarganegaraan)",
+    sub: "Pola lengkap memakai 〜じん dalam kalimat 〜は〜です — fokus pada LABEL kewarganegaraan",
+    items: [
+      {
+        pola: "（わたしは）　〜じんです。",
+        romaji: "(watashi wa) ~jin desu.",
+        arti: "(Saya) orang ~. (pernyataan)",
+        catatan: "Gabungan partikel は + 〜じん + です. Dipakai untuk memperkenalkan asal kewarganegaraan diri sendiri atau orang lain — menyebutkan LABEL/identitas negaranya langsung.",
+        contoh: [
+          {jp:"わたしは　インドネシアじんです。", id:"Saya orang Indonesia."},
+          {jp:"たなかさんは　にほんじんです。", id:"Tanaka-san orang Jepang."},
+          {jp:"わたしは　アメリカじんです。", id:"Saya orang Amerika."}
+        ]
+      },
+      {
+        pola: "〜は　なにじんですか？",
+        romaji: "~ wa nani jin desu ka?",
+        arti: "~ orang mana? (pertanyaan, langsung)",
+        catatan: "Bentuk tanya langsung dari pola di atas. Jawab dengan 〜じんです. Lebih to-the-point dibanding おくにはどちらですか di bawah — cocok untuk teman sebaya/situasi santai.",
+        contoh: [
+          {jp:"〜さんは　なにじんですか？", id:"~ orang mana?"},
+          {jp:"あのひとは　なにじんですか？", id:"Orang itu orang mana?"}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "おくには　どちらですか？ (Menanyakan asal negara — sopan)",
+    sub: "Versi lebih halus/sopan dari なにじんですか — menanyakan asal negara, bukan langsung melabeli kewarganegaraan",
+    items: [
+      {
+        pola: "おくには　どちらですか？",
+        romaji: "okuni wa dochira desu ka?",
+        arti: "Negara Anda yang mana? / Anda berasal dari negara mana? (pertanyaan, sopan)",
+        catatan: "Beda dengan なにじんですか yang langsung menanyakan LABEL kewarganegaraan, pola ini menanyakan ASAL secara lebih halus — harfiah 'negara Anda yang mana?'. Prefiks お (hormat) + くに (negara) + どちら (bentuk sopan dari どこ). Lebih cocok dipakai saat baru kenalan atau ke orang yang lebih tua/dihormati.",
+        contoh: [
+          {jp:"すみません、おくには　どちらですか？", id:"Permisi, Anda berasal dari negara mana?"},
+          {jp:"〜さんは　おくには　どちらですか？", id:"~ berasal dari negara mana?"}
+        ]
+      },
+      {
+        pola: "（わたしの　くには）　〜です。",
+        romaji: "(watashi no kuni wa) ~ desu.",
+        arti: "(Negara saya) adalah ~. (pernyataan, jawaban formal)",
+        catatan: "Jawaban yang sejalan dengan pertanyaan おくにはどちらですか — menyebutkan nama negara, bukan bentuk 〜じん. Bisa juga dijawab pakai 〜じんです biasa, keduanya diterima.",
+        contoh: [
+          {jp:"わたしの　くには　インドネシアです。", id:"Negara saya adalah Indonesia."},
+          {jp:"くには　にほんです。", id:"Negaranya Jepang."}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "〜は　（お）しごとは　〜です (Menyatakan pekerjaan)",
+    sub: "Pola menyebutkan profesi/pekerjaan diri sendiri atau orang lain",
+    items: [
+      {
+        pola: "（わたしの）　しごとは　〜です。",
+        romaji: "(watashi no) shigoto wa ~ desu.",
+        arti: "Pekerjaan (saya) adalah ~. (pernyataan)",
+        catatan: "Bisa juga langsung pakai 〜は〜です tanpa kata しごと: わたしは　がくせいです (saya siswa).",
+        contoh: [
+          {jp:"わたしの　しごとは　かいしゃいんです。", id:"Pekerjaan saya karyawan perusahaan."},
+          {jp:"わたしは　がくせいです。", id:"Saya (adalah) siswa."},
+          {jp:"たなかさんは　せんせいです。", id:"Tanaka-san adalah guru."}
+        ]
+      },
+      {
+        pola: "おしごとは　なんですか？",
+        romaji: "oshigoto wa nan desu ka?",
+        arti: "Pekerjaannya apa? (pertanyaan)",
+        catatan: "Bentuk tanya yang sopan, dengan prefiks お. Jawab dengan 〜は〜です atau しごとは〜です.",
+        contoh: [
+          {jp:"〜さんの　おしごとは　なんですか？", id:"Pekerjaan ~ apa? (sopan)"},
+          {jp:"おしごとは　なんですか？", id:"Pekerjaannya apa?"}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "〜は　〜じゃありません (Negatif santai)",
+    sub: "Variasi bentuk negatif yang lebih santai dari 〜では　ありません",
+    items: [
+      {
+        pola: "〜は　〜じゃありません。",
+        romaji: "~ wa ~ja arimasen.",
+        arti: "~ bukan ~. (pernyataan negatif)",
+        catatan: "じゃ adalah kontraksi santai dari では. Lebih sering dipakai dalam percakapan sehari-hari dibanding では　ありません yang lebih formal.",
+        contoh: [
+          {jp:"わたしは　せんせいじゃありません。", id:"Saya bukan guru."},
+          {jp:"これは　ペンじゃありません。", id:"Ini bukan pena."},
+          {jp:"たなかさんは　がくせいじゃありません。かいしゃいんです。", id:"Tanaka-san bukan siswa. (Dia) karyawan perusahaan."}
+        ]
+      },
+      {
+        pola: "〜は　〜じゃありませんか？",
+        romaji: "~ wa ~ja arimasen ka?",
+        arti: "Bukankah ~ itu ~? (pertanyaan negatif/konfirmasi)",
+        catatan: "Menambahkan か mengubahnya jadi pertanyaan konfirmasi — menyiratkan pembicara cukup yakin tapi ingin memastikan.",
+        contoh: [
+          {jp:"これは　じしょじゃありませんか？", id:"Bukankah ini kamus?"},
+          {jp:"〜さんは　がくせいじゃありませんか？", id:"Bukankah ~ siswa?"}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "〜は　〜さいです (Menyatakan umur)",
+    sub: "Pola menyebutkan usia memakai counter 〜さい",
+    items: [
+      {
+        pola: "（わたしは）　〜さいです。",
+        romaji: "(watashi wa) ~sai desu.",
+        arti: "(Saya) berumur ~ tahun. (pernyataan)",
+        catatan: "〜さい (歳) ditambahkan setelah angka. Perhatikan pengucapan khusus: よんさい (4), はっさい (8), じゅっさい (10), はたち (20, BUKAN にじゅっさい!).",
+        contoh: [
+          {jp:"わたしは　にじゅっさいです。", id:"Saya berumur 20 tahun."},
+          {jp:"たなかさんは　じゅうはっさいです。", id:"Tanaka-san berumur 18 tahun."},
+          {jp:"おとうとは　じゅっさいです。", id:"Adik laki-laki (saya) berumur 10 tahun."}
+        ]
+      },
+      {
+        pola: "〜は　なんさいですか？ / おいくつですか？",
+        romaji: "~ wa nansai desu ka? / oikutsu desu ka?",
+        arti: "~ umur berapa? (pertanyaan)",
+        catatan: "なんさい = santai/netral. おいくつ = sopan, dipakai untuk orang lebih tua atau atasan.",
+        contoh: [
+          {jp:"〜さんは　なんさいですか？", id:"~ umur berapa?"},
+          {jp:"〜さんは　おいくつですか？", id:"~ umur berapa? (sopan)"}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "〜は　〜です (Menyatakan & menanyakan waktu)",
+    sub: "Pola menyatakan dan menanyakan kapan suatu peristiwa terjadi",
+    items: [
+      {
+        pola: "〜は　〜です。",
+        romaji: "~ wa ~ desu.",
+        arti: "~ adalah (pada) ~. (pernyataan waktu)",
+        catatan: "Pola pernyataan waktu memakai です langsung setelah keterangan waktu (tanggal/bulan).",
+        contoh: [
+          {jp:"たんじょうびは　はちがつ　むいかです。", id:"Ulang tahun (saya) tanggal 6 Agustus."},
+          {jp:"テストは　らいしゅうです。", id:"Ujiannya minggu depan."},
+          {jp:"やすみは　にちようびです。", id:"Liburnya hari Minggu."}
+        ]
+      },
+      {
+        pola: "〜は　いつですか？",
+        romaji: "~ wa itsu desu ka?",
+        arti: "~ kapan? (pertanyaan)",
+        catatan: "いつ = kata tanya 'kapan'. Sering dipakai untuk ulang tahun, jadwal, atau acara.",
+        contoh: [
+          {jp:"たんじょうびは　いつですか？", id:"Ulang tahunnya kapan?"},
+          {jp:"テストは　いつですか？", id:"Ujiannya kapan?"}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "しゅみは　〜です (Menyatakan & menanyakan hobi)",
+    sub: "Pola memperkenalkan hobi, termasuk variasi の untuk merinci jenis hobi",
+    items: [
+      {
+        pola: "しゅみは　〜です。",
+        romaji: "shumi wa ~ desu.",
+        arti: "Hobi (saya) adalah ~. (pernyataan)",
+        catatan: "Pola pernyataan dasar untuk memperkenalkan hobi sendiri.",
+        contoh: [
+          {jp:"しゅみは　どくしょです。", id:"Hobi (saya) adalah membaca buku."},
+          {jp:"しゅみは　りょこうです。", id:"Hobi (saya) adalah jalan-jalan."},
+          {jp:"しゅみは　サッカーです。", id:"Hobi (saya) adalah sepak bola."}
+        ]
+      },
+      {
+        pola: "〜の　しゅみは　〜です。",
+        romaji: "~ no shumi wa ~ desu.",
+        arti: "Hobi (milik) ~ adalah ~. (pernyataan, orang lain)",
+        catatan: "の menghubungkan pemilik hobi dengan kata しゅみ. Dipakai saat menyebut hobi orang lain secara spesifik.",
+        contoh: [
+          {jp:"たなかさんの　しゅみは　サッカーです。", id:"Hobi Tanaka-san adalah sepak bola."},
+          {jp:"わたしの　しゅみは　おんがくです。", id:"Hobi saya adalah musik."}
+        ]
+      },
+      {
+        pola: "しゅみは　なんですか？",
+        romaji: "shumi wa nan desu ka?",
+        arti: "Hobinya apa? (pertanyaan)",
+        catatan: "Pertanyaan standar saat berkenalan di Jepang. Jawab dengan しゅみは〜です.",
+        contoh: [
+          {jp:"しゅみは　なんですか？", id:"Hobinya apa?"},
+          {jp:"〜さんの　しゅみは　なんですか？", id:"Hobi ~ apa?"}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "〜と　〜 (dan, menggabungkan kata benda)",
+    sub: "Partikel と menghubungkan dua kata benda — beda dari し yang menggabungkan alasan/kalimat",
+    items: [
+      {
+        pola: "〔名詞A〕と　〔名詞B〕",
+        romaji: "[meishi A] to [meishi B]",
+        arti: "A dan B",
+        catatan: "と menghubungkan dua kata benda secara langsung, setara 'and' dalam bahasa Inggris untuk daftar barang/orang.",
+        contoh: [
+          {jp:"テニスと　すいえいが　すきです。", id:"(Saya) suka tenis dan renang."},
+          {jp:"がくせいと　せんせい", id:"siswa dan guru"},
+          {jp:"にほんと　インドネシア", id:"Jepang dan Indonesia"}
+        ]
+      }
+    ]
+  },
+  {
+    judul: "〜も　〜も (~ pun juga ~ pun)",
+    sub: "Mengulang partikel も pada dua kata benda berurutan",
+    items: [
+      {
+        pola: "〔名詞A〕も　〔名詞B〕も　〜",
+        romaji: "[meishi A] mo [meishi B] mo ~",
+        arti: "Baik A maupun B sama-sama ~",
+        catatan: "Pola penekanan: も dipakai dua kali untuk menyebutkan dua hal yang sama-sama berlaku, beda dari と yang sekadar menggabungkan.",
+        contoh: [
+          {jp:"わたしも　たなかさんも　がくせいです。", id:"Saya maupun Tanaka-san sama-sama siswa."},
+          {jp:"テニスも　すいえいも　すきです。", id:"Tenis maupun renang, sama-sama suka."},
+          {jp:"これも　それも　いいです。", id:"Ini maupun itu, sama-sama bagus."}
+        ]
+      }
+    ]
   }
 ],
 
