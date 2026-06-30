@@ -227,6 +227,8 @@ const QCATS = [
   { id: 'kelas-ex',    label: 'Ekspresi di Kelas',     t: 'kotoba' },
   { id: 'counter',     label: 'Counter',               t: 'kotoba' },
   { id: 'par-adv',     label: 'Partikel Lanjutan',     t: 'particle-adv' },
+  { id: 'buku-bab1',   label: 'Buku — Bab 1',          t: 'buku' },
+  { id: 'buku-bab2',   label: 'Buku — Bab 2',          t: 'buku' },
 ];
 
 let SC = new Set(), ST = new Set(['kana-to-romaji']), QN = 10;
@@ -317,6 +319,16 @@ function ktItems(cid) {
   return out;
 }
 
+function bukuItems(cid) {
+  const babKey = cid === 'buku-bab1' ? 'bab1' : cid === 'buku-bab2' ? 'bab2' : null;
+  if (!babKey || !BUKU[babKey]) return [];
+  let out = [];
+  Object.values(BUKU[babKey]).forEach(group => {
+    group.rows.forEach(r => out.push({ kana: r.k, romaji: r.r, arti: r.a, type: 'buku' }));
+  });
+  return out;
+}
+
 function getAllItems() {
   let all = [];
   SC.forEach(id => {
@@ -325,6 +337,7 @@ function getAllItems() {
     if      (qc.t === 'kana')         all = all.concat(kanaItems(id));
     else if (qc.t === 'particle')     PT.forEach(p => all.push({ kana: p.sym, romaji: p.r, arti: p.name, type: 'particle' }));
     else if (qc.t === 'particle-adv') Object.values(PT_ADV).flat().forEach(p => all.push({ kana: p.sym, romaji: p.r, arti: p.kind, type: 'particle-adv' }));
+    else if (qc.t === 'buku')         all = all.concat(bukuItems(id));
     else                              all = all.concat(ktItems(id));
   });
   const seen = new Set();

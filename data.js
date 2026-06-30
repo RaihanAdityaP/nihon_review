@@ -593,7 +593,8 @@ const KT={
 {k:"かしゅ",r:"kashu",a:"penyanyi",n:"Kanji: 歌手. Ka (lagu) + Shu (orang yang melakukan). Industri J-Pop sangat besar."},
 {k:"べんごし",r:"bengoshi",a:"pengacara",n:"Kanji: 弁護士. Ujian pengacara di Jepang sangat sulit — tingkat kelulusannya sangat rendah."},
 {k:"うんてんし",r:"untenshi",a:"pengemudi / sopir",n:"Kanji: 運転手. Unten (mengemudi) + Shi/Shu (orang). 'Takushii no untenshi' = sopir taksi."},
-{k:"かんごふ",r:"kangofu",a:"perawat (wanita, istilah lama)",n:"Kanji: 看護婦. Kini digantikan 'kangoshi' yang netral gender. Masih dipakai dalam percakapan informal."}
+{k:"かんごふ",r:"kangofu",a:"perawat (wanita, istilah lama)",n:"Kanji: 看護婦. Kini digantikan 'kangoshi' yang netral gender. Masih dipakai dalam percakapan informal."},
+{k:"〜さん",r:"~san",a:"Sdr. / Sdri. / Pak / Bu (gelar sopan)",n:"Kanji: 〜さん. Ditambahkan setelah nama seseorang sebagai penghormatan, atau setelah profesi (てんいんさん, isha-san dll. dalam percakapan santai). Tidak boleh dipakai untuk diri sendiri!"}
 ]},
 "Arah & Posisi":{rows:[
 {k:"みぎ",r:"migi",a:"kanan",n:"Kanji: 右."},
@@ -913,7 +914,9 @@ bab1: {
     {k:"〜じん",r:"~jin",a:"Orang ~ / Warga negara ~",n:"Kanji: 〜人. Ditambahkan setelah nama negara. にほんじん = orang Jepang, インドネシアじん = orang Indonesia."},
     {k:"くに",r:"kuni",a:"Negara / Negeri",n:"Kanji: 国. 'Okuni wa dochira desu ka?' = Anda berasal dari negara mana?"},
     {k:"どちら",r:"dochira",a:"Yang mana / Di mana (sopan)",n:"Kanji: 何方. Bentuk sopan dari どこ (doko). Dipakai untuk bertanya asal usul atau memilih di antara dua opsi."},
-    {k:"（お）しごと",r:"(o)shigoto",a:"Pekerjaan / Profesi",n:"Kanji: 仕事. Prefiks sopan 'o' ditambahkan saat bertanya pekerjaan orang lain: 'Oshigoto wa?' = Pekerjaannya apa?"}
+    {k:"おくにはどちらですか。",r:"okuni wa dochira desu ka?",a:"Anda berasal dari negara mana?",n:"Pola kalimat lengkap. Lihat juga Bunpou → Bab 1 → Pola Tanya Identitas untuk pola serupa lainnya."},
+    {k:"（お）しごと",r:"(o)shigoto",a:"Pekerjaan / Profesi",n:"Kanji: 仕事. Prefiks sopan 'o' ditambahkan saat bertanya pekerjaan orang lain: 'Oshigoto wa?' = Pekerjaannya apa?"},
+    {k:"こちらこそよろしくおねがいします",r:"kochira koso yoroshiku onegaishimasu",a:"Saya juga mohon bantuannya",n:"Gabungan こちらこそ (sama-sama) + よろしくおねがいします. Respons lengkap dan sopan saat seseorang mengucapkan よろしくおねがいします duluan."}
   ]},
   "Negara & Bangsa": { rows: [
     {k:"にほん",r:"nihon",a:"Jepang",n:"Kanji: 日本. Juga dibaca 'nippon' (lebih formal/nasionalis). Harfiah: 'asal matahari' atau 'negeri matahari terbit'."},
@@ -999,7 +1002,7 @@ bab2: {
     {k:"ペン",r:"pen",a:"Pena",n:"Serapan 'pen'. Kata umum untuk pena. Untuk ballpoint: ボールペン (boorupen). Jepang terkenal dengan kualitas alat tulis yang sangat baik."},
     {k:"トイレットペーパー",r:"toiretto peepaa",a:"Tisu toilet",n:"Serapan 'toilet paper'. Di Jepang tisu toilet berkualitas sangat tinggi dan hampir selalu tersedia di toilet umum."}
   ]},
-  "Bahan Makanan": { rows: [
+  "Bahan & Makanan": { rows: [
     {k:"あぶら",r:"abura",a:"Minyak goreng",n:"Kanji: 油. Untuk minyak nabati/hewani. Minyak wijen (ごまあぶら / goma abura) sangat umum dalam masakan Jepang."},
     {k:"こめ",r:"kome",a:"Beras (mentah)",n:"Kanji: 米. Khusus beras belum dimasak. Setelah dimasak jadi ごはん (gohan). Beras Jepang varietas Japonica — pendek, pulen, agak lengket."},
     {k:"たまご",r:"tamago",a:"Telur",n:"Kanji: 卵. Bahan serbaguna dalam masakan Jepang. Telur mentah sering dimakan langsung di atas nasi (卵かけご飯 / tamago kake gohan = TKG)."},
@@ -1012,7 +1015,9 @@ bab2: {
     {k:"やさい",r:"yasai",a:"Sayur-sayuran",n:"Kanji: 野菜. Ya (ladang) + Sai (sayur). Sayuran segar Jepang terkenal berkualitas tinggi dan mahal."},
     {k:"イチゴ",r:"ichigo",a:"Stroberi",n:"Dari bahasa Inggris. Stroberi Jepang terkenal sangat manis dan besar — bisa sangat mahal (1 buah bisa ribuan yen untuk yang premium)."},
     {k:"リンゴ",r:"ringo",a:"Apel",n:"Kata asli Jepang (林檎). Apel Aomori (青森) terkenal sebagai yang terbaik di Jepang. Jadi oleh-oleh khas daerah tersebut."},
-    {k:"スープ",r:"suupu",a:"Sup",n:"Serapan 'soup'. Di Jepang sup miso (みそしる / miso shiru) adalah sup paling ikonik — hampir selalu ada dalam set makan tradisional Jepang."}
+    {k:"スープ",r:"suupu",a:"Sup",n:"Serapan 'soup'. Di Jepang sup miso (みそしる / miso shiru) adalah sup paling ikonik — hampir selalu ada dalam set makan tradisional Jepang."},
+    {k:"とんかつ",r:"tonkatsu",a:"Tonkatsu",n:"Dari ton (babi) + katsu (singkatan katsuretsu dari 'cutlet'). Potongan daging babi berlapis tepung roti yang digoreng. Menu populer di seluruh Jepang."},
+    {k:"ジュース",r:"juusu",a:"Jus",n:"Serapan 'juice'. Di Jepang ada berbagai jus buah dalam kemasan. 100% jus ditandai dengan '果汁100%' (kajuu hyaku paasento)."}
   ]},
   "Kata Tunjuk & Harga": { rows: [
     {k:"これ",r:"kore",a:"Ini (dekat pembicara)",n:"Sistem Ko-So-A-Do untuk benda: これ (ini, dekat aku) → それ (itu, dekat kamu) → あれ (itu, jauh)."},
@@ -1030,13 +1035,12 @@ bab2: {
     {k:"くつや",r:"kutsuya",a:"Toko sepatu",n:"Kanji: 靴屋. Kutsu (sepatu) + Ya (toko). Di Jepang toko sepatu sering spesifik — ada yang khusus sepatu sekolah, olahraga, atau fashion."},
     {k:"でんき",r:"denki",a:"Alat elektronik / Listrik",n:"Kanji: 電気. Denki juga berarti 'listrik'. Di sini konteksnya toko elektronik. Akihabara (秋葉原) di Tokyo adalah surga belanja elektronik."}
   ]},
-  "Makanan & Minuman (Bab 2)": { rows: [
-    {k:"とんかつ",r:"tonkatsu",a:"Tonkatsu",n:"Dari ton (babi) + katsu (singkatan katsuretsu dari 'cutlet'). Potongan daging babi berlapis tepung roti yang digoreng. Menu populer di seluruh Jepang."},
-    {k:"ジュース",r:"juusu",a:"Jus",n:"Serapan 'juice'. Di Jepang ada berbagai jus buah dalam kemasan. 100% jus ditandai dengan '果汁100%' (kajuu hyaku paasento)."},
+  "Bahasa & Sapaan Toko": { rows: [
     {k:"〜ご",r:"~go",a:"Bahasa ~",n:"Kanji: 〜語. Ditambahkan setelah nama negara/bangsa. にほんご = bahasa Jepang, えいご = bahasa Inggris, インドネシアご = bahasa Indonesia."},
     {k:"えいご",r:"eigo",a:"Bahasa Inggris",n:"Kanji: 英語. Ei (Inggris/Eropa) + Go (bahasa). Pelajaran wajib di sekolah Jepang, tapi tingkat kemahiran orang Jepang rata-rata masih rendah karena kurang praktik."},
-    {k:"てんいん",r:"ten'in",a:"Karyawan / Pegawai toko",n:"Kanji: 店員. Ten (toko) + In (anggota). Terkenal karena pelayanan prima (おもてなし / omotenashi). 'Irasshaimase!' adalah sapaan wajib mereka."},
-    {k:"いらっしゃいませ",r:"irasshaimase",a:"Selamat datang (di toko/restoran)",n:"Ungkapan wajib staf toko saat pelanggan masuk. Tidak perlu direspons — cukup angguk atau senyum. Berasal dari kata kerja いらっしゃる (irassharu) = bentuk sangat sopan dari 'ada/datang/pergi'."}
+    {k:"てんいん",r:"ten'in",a:"Karyawan / Pegawai toko",n:"Kanji: 店員. Ten (toko) + In (anggota). Sudah ada juga di Materi → Kotoba → Profesi & Pekerjaan. Terkenal karena pelayanan prima (おもてなし / omotenashi)."},
+    {k:"いらっしゃいませ",r:"irasshaimase",a:"Selamat datang (di toko/restoran)",n:"Ungkapan wajib staf toko saat pelanggan masuk. Tidak perlu direspons — cukup angguk atau senyum. Berasal dari kata kerja いらっしゃる (irassharu) = bentuk sangat sopan dari 'ada/datang/pergi'."},
+    {k:"（どうも）ありがとうございます",r:"(doumo) arigatou gozaimasu",a:"Terima kasih (banyak)",n:"どうも menambahkan penekanan 'sangat/banyak'. Sering diucapkan staf toko/restoran saat pelanggan membayar atau keluar."}
   ]}
 }
 
