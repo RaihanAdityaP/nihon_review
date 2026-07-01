@@ -229,6 +229,9 @@ const QCATS = [
   { id: 'par-adv',     label: 'Partikel Lanjutan',     t: 'particle-adv' },
   { id: 'buku-bab1',   label: 'Buku — Bab 1',          t: 'buku' },
   { id: 'buku-bab2',   label: 'Buku — Bab 2',          t: 'buku' },
+  { id: 'bunpou-tanya',label: 'Bunpou — Kalimat Tanya',t: 'bunpou' },
+  { id: 'bunpou-bab1', label: 'Bunpou — Bab 1',        t: 'bunpou' },
+  { id: 'bunpou-bab2', label: 'Bunpou — Bab 2',        t: 'bunpou' },
 ];
 
 let SC = new Set(), ST = new Set(['kana-to-romaji']), QN = 10;
@@ -329,6 +332,16 @@ function bukuItems(cid) {
   return out;
 }
 
+function bunpouItems(cid) {
+  const key = cid === 'bunpou-tanya' ? 'tanya' : cid === 'bunpou-bab1' ? 'bab1' : cid === 'bunpou-bab2' ? 'bab2' : null;
+  if (!key || !BUNPOU[key]) return [];
+  let out = [];
+  BUNPOU[key].forEach(group => {
+    group.items.forEach(it => out.push({ kana: it.pola, romaji: it.romaji, arti: it.arti, type: 'bunpou' }));
+  });
+  return out;
+}
+
 function getAllItems() {
   let all = [];
   SC.forEach(id => {
@@ -338,6 +351,7 @@ function getAllItems() {
     else if (qc.t === 'particle')     PT.forEach(p => all.push({ kana: p.sym, romaji: p.r, arti: p.name, type: 'particle' }));
     else if (qc.t === 'particle-adv') Object.values(PT_ADV).flat().forEach(p => all.push({ kana: p.sym, romaji: p.r, arti: p.kind, type: 'particle-adv' }));
     else if (qc.t === 'buku')         all = all.concat(bukuItems(id));
+    else if (qc.t === 'bunpou')       all = all.concat(bunpouItems(id));
     else                              all = all.concat(ktItems(id));
   });
   const seen = new Set();
@@ -361,6 +375,8 @@ function shuf(a) {
 function validTypes(item) {
   const hasArti = item.type !== 'kana' && !!item.arti;
   return [...ST].filter(t => {
+    // Pola bunpou terlalu panjang untuk mode kana<->romaji, cukup jp-to-id / id-to-jp
+    if (item.type === 'bunpou') return (t === 'jp-to-id' || t === 'id-to-jp') && hasArti;
     if (t === 'kana-to-romaji' || t === 'romaji-to-kana') return true;
     return hasArti;
   });
@@ -603,7 +619,7 @@ function renderBukuBab(babKey, elId) {
 // BUNPOU
 // ─────────────────────────────────────────────────────
 function switchBunpouTab(tab, btn) {
-  document.querySelectorAll('#pageBunpou > [id^="bunpou"]').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('#pageBunpou > [id^="bunpou"]:not(#bunpouTabs)').forEach(el => el.style.display = 'none');
   document.getElementById('bunpou' + tab[0].toUpperCase() + tab.slice(1)).style.display = 'block';
   document.querySelectorAll('#bunpouTabs .cat-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
