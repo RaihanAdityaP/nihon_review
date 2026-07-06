@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本語復習 · Nihongo Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Spectral:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Terapkan tema tersimpan sebelum render, biar tidak ada "flash" warna salah
+  (function(){
+    var saved = localStorage.getItem('nihongo_theme');
+    var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body>
+<header>
+  <div class="logo">日本語復習<small>· review</small></div>
+  <!-- desktop nav -->
+  <nav id="desktopNav">
+    <button class="active" onclick="showPage('materi',this)">Materi</button>
+    <button onclick="showPage('partikel',this)">Partikel</button>
+    <button onclick="showPage('buku',this)">Buku</button>
+    <button onclick="showPage('bunpou',this)">文法</button>
+    <button onclick="showPage('menulis',this)">Menulis</button>
+    <button onclick="showPage('quiz',this)">Quiz</button>
+    <button onclick="showPage('latihanai',this)">Latihan AI</button>
+    <button onclick="showPage('progress',this)">Progress</button>
+  </nav>
+  <!-- theme toggle (desktop) -->
+  <button class="theme-toggle" id="themeToggleDesktop" onclick="toggleTheme()" aria-label="Ganti tema">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+  </button>
+  <!-- burger button (mobile only) -->
+  <button class="burger" id="burgerBtn" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- mobile drawer -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeMenu()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-logo">日本語復習<small>· review</small></div>
+  <nav class="drawer-nav">
+    <button class="active" onclick="showPage('materi',this,true)">Materi</button>
+    <button onclick="showPage('partikel',this,true)">Partikel</button>
+    <button onclick="showPage('buku',this,true)">Buku</button>
+    <button onclick="showPage('bunpou',this,true)">文法</button>
+    <button onclick="showPage('menulis',this,true)">Menulis</button>
+    <button onclick="showPage('quiz',this,true)">Quiz</button>
+    <button onclick="showPage('latihanai',this,true)">Latihan AI</button>
+    <button onclick="showPage('progress',this,true)">Progress</button>
+  </nav>
+  <div class="drawer-theme-row">
+    <button class="drawer-theme-btn" onclick="toggleTheme()">
+      <svg id="drawerThemeIconSun" class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+      <svg id="drawerThemeIconMoon" class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <span id="drawerThemeLabel">Mode Gelap</span>
+    </button>
+  </div>
+</div>
+
+<main>
+
+  <!-- MATERI -->
+  <div id="pageMateri" class="page active">
+    <div class="sec-title">Materi</div>
+    <div class="sec-sub">Klik sub-bab untuk membuka daftar kata.</div>
+    <div class="cat-tabs">
+      <button class="cat-btn active" onclick="switchCat('hiragana',this)">Hiragana</button>
+      <button class="cat-btn" onclick="switchCat('katakana',this)">Katakana</button>
+      <button class="cat-btn" onclick="switchCat('kotoba',this)">Kotoba</button>
+      <button class="cat-btn" onclick="switchCat('counter',this)">Kata Bantu Bilangan</button>
+    </div>
+    <div id="matHiragana"></div>
+    <div id="matKatakana" style="display:none"></div>
+    <div id="matKotoba" style="display:none"></div>
+    <div id="matCounter" style="display:none"></div>
+  </div>
+
+  <!-- PARTIKEL -->
+  <div id="pagePartikel" class="page">
+    <div class="sec-title">Partikel</div>
+    <div class="sec-sub">Kata bantu yang menentukan fungsi kata dalam kalimat.</div>
+    <div class="cat-tabs">
+      <button class="cat-btn active" onclick="switchPartikelTab('dasar',this)">Partikel Dasar</button>
+      <button class="cat-btn" onclick="switchPartikelTab('lanjutan',this)">Partikel Lanjutan &amp; Pola</button>
+    </div>
+    <div id="parDasar">
+      <div class="particle-grid" id="particleGrid"></div>
+    </div>
+    <div id="parLanjutan" style="display:none">
+      <div id="particleAdvGrid"></div>
+    </div>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="pageQuiz" class="page">
+    <div class="sec-title">Quiz</div>
+    <div class="sec-sub">Pilih materi dan tipe soal, lalu mulai.</div>
+
+    <div class="qsetup" id="quizSetup">
+      <div class="qlabel">Pilih Materi</div>
+      <div class="smrow">
+        <button class="smbtn" onclick="selAll(true)">Pilih Semua</button>
+        <button class="smbtn" onclick="selAll(false)">Hapus Semua</button>
+      </div>
+      <div class="qog" id="qog"></div>
+      <div class="qwarn" id="qwarn">Pilih minimal satu kategori (butuh 4+ item).</div>
+
+      <div class="qlabel">Tipe Quiz <small>(bisa pilih lebih dari satu)</small></div>
+      <div class="trow" id="typeRow">
+        <button class="tbtn sel" data-t="kana-to-romaji" onclick="toggleType(this)">Kana → Romaji</button>
+        <button class="tbtn" data-t="romaji-to-kana" onclick="toggleType(this)">Romaji → Kana</button>
+        <button class="tbtn" data-t="jp-to-id" onclick="toggleType(this)">Jepang → Indo</button>
+        <button class="tbtn" data-t="id-to-jp" onclick="toggleType(this)">Indo → Jepang</button>
+      </div>
+
+      <div class="qlabel">Jumlah Soal</div>
+      <div class="trow" id="cntRow">
+        <button class="tbtn sel" data-c="10" onclick="setCount(this)">10</button>
+        <button class="tbtn" data-c="20" onclick="setCount(this)">20</button>
+        <button class="tbtn" data-c="30" onclick="setCount(this)">30</button>
+        <button class="tbtn" data-c="999" onclick="setCount(this)">Semua</button>
+        <input type="number" id="qCntCustom" class="input-ai" min="1" max="500" placeholder="Custom..." style="width:110px;flex:0 0 auto" oninput="setQCountCustom(this)">
+      </div>
+      <button class="start-btn" id="startBtn" onclick="startQuiz()" disabled>Mulai Quiz</button>
+    </div>
+
+    <div id="quizActive">
+      <div class="qpb"><div class="qpf" id="qpf"></div></div>
+      <div class="qmeta"><span id="qctr">1 / 10</span><span id="qsc">✓ 0  ✗ 0</span></div>
+      <div class="qcard">
+        <div class="qtag" id="qtag"></div>
+        <div class="qprompt" id="qprompt"></div>
+        <div class="qsub" id="qsub"></div>
+      </div>
+      <div class="choices" id="choicesEl"></div>
+      <div class="qfb" id="qfb"></div>
+      <button class="nxtbtn" id="nxtBtn" onclick="nextQ()">Lanjut →</button>
+    </div>
+
+    <div id="quizResult">
+      <div class="sec-title" style="text-align:center">Selesai！</div>
+      <div class="rscore" id="rScore"></div>
+      <div class="rsub" id="rSub"></div>
+      <div class="rgrid">
+        <div class="rstat"><div class="rv g" id="rC"></div><div class="rl">Benar</div></div>
+        <div class="rstat"><div class="rv r" id="rW"></div><div class="rl">Salah</div></div>
+      </div>
+      <button class="rbtn" onclick="retryQuiz()">Ulangi</button>
+      <button class="rbtn" onclick="backSetup()">Pengaturan</button>
+    </div>
+  </div>
+
+  <!-- LATIHAN AI -->
+  <div id="pageLatihanai" class="page">
+    <div class="sec-title">Latihan AI</div>
+    <div class="sec-sub">Soal isian (bukan pilihan ganda) dibuat oleh AI dari materi yang kamu pilih — kamu ketik sendiri jawabannya.</div>
+
+    <div class="qsetup" id="aiSetup">
+      <div class="qlabel">Provider AI</div>
+      <div class="trow" id="aiProviderRow">
+        <button class="tbtn sel" data-p="groq" onclick="setAIProvider(this)">Groq</button>
+        <button class="tbtn" data-p="openai" onclick="setAIProvider(this)">OpenAI</button>
+        <button class="tbtn" data-p="openrouter" onclick="setAIProvider(this)">OpenRouter</button>
+      </div>
+
+      <div class="qlabel">Model <small>(kosongkan untuk pakai default)</small></div>
+      <input type="text" id="aiModelInput" class="input-ai" placeholder="contoh: openai/gpt-4o-mini, anthropic/claude-3.5-haiku, dst" autocomplete="off" oninput="saveAIModel(this)">
+      <div class="qwarn" id="aiModelStatus" style="display:block;color:var(--text3);font-style:italic"></div>
+
+      <div class="qlabel">API Key <small>(tersimpan lokal di browser ini saja, tidak pernah diunggah)</small></div>
+      <input type="text" id="aiKeyInput" class="input-ai ai-key-mask" placeholder="Tempel API key di sini..." autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" data-lpignore="true" data-1p-ignore>
+      <div class="smrow" style="margin-top:.5rem">
+        <button class="smbtn" onclick="saveAIKey()">Simpan Key</button>
+        <button class="smbtn" onclick="clearAIKey()">Hapus Key</button>
+      </div>
+      <div class="qwarn" id="aiKeyStatus" style="display:block;color:var(--text3);font-style:italic">Belum ada key tersimpan.</div>
+
+      <div class="qlabel">Mode Latihan</div>
+      <div class="trow" id="aiModeRow">
+        <button class="tbtn sel" data-m="vocab" onclick="setAIMode(this)">Latihan Kata (isian)</button>
+        <button class="tbtn" data-m="bunpou" onclick="setAIMode(this)">Latihan Kalimat (Bunpou)</button>
+      </div>
+
+      <div class="qlabel">Pilih Materi</div>
+      <div class="smrow">
+        <button class="smbtn" onclick="aiSelAll(true)">Pilih Semua</button>
+        <button class="smbtn" onclick="aiSelAll(false)">Hapus Semua</button>
+      </div>
+      <div class="qog" id="aiQog"></div>
+      <div class="qwarn" id="aiWarn">Pilih minimal satu kategori.</div>
+
+      <div class="qlabel" id="aiTypeLabel">Tipe Soal <small>(bisa pilih lebih dari satu)</small></div>
+      <div class="trow" id="aiTypeRow">
+        <button class="tbtn sel" data-t="jp-to-id" onclick="toggleAIType(this)">Jepang → Indo (ketik arti)</button>
+        <button class="tbtn sel" data-t="id-to-jp" onclick="toggleAIType(this)">Indo → Jepang (ketik hiragana/katakana/kanji)</button>
+      </div>
+
+      <div class="qlabel">Jumlah Soal</div>
+      <div class="trow" id="aiCntRow">
+        <button class="tbtn sel" data-c="5" onclick="setAICount(this)">5</button>
+        <button class="tbtn" data-c="10" onclick="setAICount(this)">10</button>
+        <button class="tbtn" data-c="15" onclick="setAICount(this)">15</button>
+        <button class="tbtn" data-c="20" onclick="setAICount(this)">20</button>
+        <button class="tbtn" data-c="999" onclick="setAICount(this)">Semua</button>
+        <input type="number" id="aiCntCustom" class="input-ai" min="1" max="50" placeholder="Custom..." style="width:110px;flex:0 0 auto" oninput="setAICountCustom(this)">
+      </div>
+      <button class="start-btn" id="aiStartBtn" onclick="startAILatihan()" disabled>Buat Soal</button>
+    </div>
+
+    <div id="aiLoading" style="display:none;text-align:center;padding:3rem 1rem">
+      <div class="qlabel" style="margin-bottom:.8rem">Sedang membuat soal...</div>
+      <div class="qpb"><div class="qpf" id="aiLoadPf" style="width:100%;animation:aiPulse 1.2s ease-in-out infinite"></div></div>
+    </div>
+
+    <div id="aiActive" style="display:none;max-width:640px;margin:0 auto">
+      <div class="qpb"><div class="qpf" id="aiPf"></div></div>
+      <div class="qmeta"><span id="aiCtr">1 / 5</span><span id="aiSc">✓ 0  ✗ 0</span></div>
+      <div class="qcard">
+        <div class="qtag" id="aiTag"></div>
+        <div class="qprompt" id="aiPrompt"></div>
+        <div class="qsub" id="aiSub"></div>
+        <div class="qsub" id="aiExample" style="display:none;margin-top:.6rem;font-style:italic"></div>
+      </div>
+      <input type="text" id="aiAnswerInput" class="input-ai" placeholder="Ketik jawabanmu di sini..." autocomplete="off" onkeydown="if(event.key==='Enter')submitAIAnswer()">
+      <button class="start-btn" id="aiSubmitBtn" onclick="submitAIAnswer()" style="margin-top:.7rem">Kirim Jawaban</button>
+      <div class="qfb" id="aiFb"></div>
+      <button class="nxtbtn" id="aiNxtBtn" onclick="nextAIQuestion()">Lanjut →</button>
+    </div>
+
+    <div id="aiResult" style="display:none;max-width:480px;margin:0 auto;text-align:center">
+      <div class="sec-title" style="text-align:center">Selesai！</div>
+      <div class="rscore" id="aiRScore"></div>
+      <div class="rsub" id="aiRSub"></div>
+      <div class="rgrid">
+        <div class="rstat"><div class="rv g" id="aiRC"></div><div class="rl">Benar</div></div>
+        <div class="rstat"><div class="rv r" id="aiRW"></div><div class="rl">Salah</div></div>
+      </div>
+      <button class="rbtn" onclick="backAISetup()">Pengaturan</button>
+    </div>
+
+    <div id="aiErrorBox" class="qwarn" style="display:none;text-align:center;padding:1rem;max-width:640px;margin:1rem auto"></div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div id="pageProgress" class="page">
+    <div class="sec-title">Progress</div>
+    <div class="sec-sub">Riwayat quiz tersimpan di perangkat ini.</div>
+    <div class="pov-grid" id="povGrid"></div>
+    <div class="prog-hdr">
+      <div class="qlabel" style="margin:0">Riwayat Terakhir</div>
+      <button class="clrbtn" onclick="clearProg()">Hapus Semua</button>
+    </div>
+    <div class="recent-list" id="recentList"></div>
+  </div>
+
+  <!-- BUKU -->
+  <div id="pageBuku" class="page">
+    <div class="sec-title">Buku</div>
+    <div class="sec-sub">Kosakata dari buku pelajaran, dikelompokkan per bab.</div>
+    <div class="cat-tabs" id="bukuTabs">
+      <button class="cat-btn active" onclick="switchBukuTab('bab1',this)">Bab 1</button>
+      <button class="cat-btn" onclick="switchBukuTab('bab2',this)">Bab 2</button>
+      <button class="cat-btn" onclick="switchBukuTab('bab3',this)">Bab 3</button>
+    </div>
+    <div id="bukuBab1"></div>
+    <div id="bukuBab2" style="display:none"></div>
+    <div id="bukuBab3" style="display:none"></div>
+  </div>
+
+  <!-- BUNPOU -->
+  <div id="pageBunpou" class="page">
+    <div class="sec-title">文法 · Bunpou</div>
+    <div class="sec-sub">Pola kalimat dan tata bahasa, dikelompokkan per tema.</div>
+    <div id="bunpouContent"></div>
+  </div>
+
+  <!-- MENULIS -->
+  <div id="pageMenulis" class="page">
+    <div class="sec-title">書き取り · Menulis</div>
+    <div class="sec-sub">Karakter panduan muncul transparan di kanvas — timpa langsung di atasnya untuk latihan menulis tangan. Hasil coretanmu dicek otomatis oleh AI.</div>
+
+    <div class="qsetup" id="wSetup">
+      <div class="qlabel">Pilih Kategori</div>
+      <div class="qog" id="wog"></div>
+      <div class="qwarn" id="wWarn">Pilih minimal satu kategori.</div>
+
+      <div class="qlabel">Urutan Soal</div>
+      <div class="trow" id="wOrderRow">
+        <button class="tbtn sel" data-o="acak" onclick="setWOrder(this)">Acak</button>
+        <button class="tbtn" data-o="urut" onclick="setWOrder(this)">Berurutan</button>
+      </div>
+
+      <div class="qwarn" id="wAINote" style="display:block;color:var(--text3);font-style:italic">Coretanmu di kanvas dicek otomatis oleh AI — pakai API key &amp; provider yang sama dengan tab Latihan AI (butuh model yang mendukung input gambar, mis. gpt-4o-mini, gpt-4o, atau model vision di Groq/OpenRouter).</div>
+
+      <div class="qlabel">Jumlah Soal</div>
+      <div class="trow" id="wCntRow">
+        <button class="tbtn" data-c="10" onclick="setWCount(this)">10</button>
+        <button class="tbtn sel" data-c="20" onclick="setWCount(this)">20</button>
+        <button class="tbtn" data-c="40" onclick="setWCount(this)">40</button>
+        <button class="tbtn" data-c="999" onclick="setWCount(this)">Semua</button>
+        <input type="number" id="wCntCustom" class="input-ai" min="1" max="500" placeholder="Custom..." style="width:110px;flex:0 0 auto" oninput="setWCountCustom(this)">
+      </div>
+      <button class="start-btn" id="wStartBtn" onclick="startWriting()" disabled>Mulai Menulis</button>
+    </div>
+
+    <div id="wActive" style="display:none;max-width:520px;margin:0 auto">
+      <div class="qpb"><div class="qpf" id="wPf"></div></div>
+      <div class="qmeta"><span id="wCtr">1 / 20</span><span id="wSc">✓ 0  ✗ 0</span></div>
+      <div class="qcard" style="padding:1.4rem 1.2rem">
+        <div class="qtag" id="wTag"></div>
+        <div class="qprompt md" id="wPrompt"></div>
+        <div class="qsub" id="wSub"></div>
+      </div>
+
+      <div class="wcanvas-wrap" id="wCanvasWrap">
+        <canvas id="wGuideCanvas" class="w-canvas w-guide-canvas"></canvas>
+        <canvas id="wInkCanvas" class="w-canvas w-ink-canvas"></canvas>
+      </div>
+
+      <div class="smrow" style="justify-content:center;margin-top:.7rem">
+        <button class="smbtn" id="wGuideToggleBtn" onclick="wToggleGuide()">Sembunyikan Panduan</button>
+        <button class="smbtn" onclick="wClearInk()">Hapus Coretan</button>
+      </div>
+
+      <div class="qsub" id="wNote" style="display:none;text-align:center;margin-top:.7rem"></div>
+      <button class="smbtn" id="wNoteToggleBtn" onclick="wToggleNote()" style="display:none;margin:.6rem auto 0;display:flex">Lihat Catatan</button>
+
+      <button class="start-btn" id="wAICheckBtn" onclick="wCheckWithAI()" style="display:none;margin-top:1.1rem">Cek dengan AI</button>
+      <div class="qfb" id="wAIFb"></div>
+      <button class="nxtbtn" id="wAINxtBtn" onclick="wAdvance()">Lanjut →</button>
+
+      <div class="wcheck-row" id="wCheckRow">
+        <button class="wbtn wbtn-ng" onclick="wMark(false)">✗ Perlu Diulang</button>
+        <button class="wbtn wbtn-ok" onclick="wMark(true)">✓ Sudah Bisa</button>
+      </div>
+    </div>
+
+    <div id="wResult" style="display:none;max-width:480px;margin:0 auto;text-align:center">
+      <div class="sec-title" style="text-align:center">Selesai！</div>
+      <div class="rscore" id="wRScore"></div>
+      <div class="rsub" id="wRSub"></div>
+      <div class="rgrid">
+        <div class="rstat"><div class="rv g" id="wRC"></div><div class="rl">Sudah Bisa</div></div>
+        <div class="rstat"><div class="rv r" id="wRW"></div><div class="rl">Perlu Diulang</div></div>
+      </div>
+      <button class="rbtn" id="wRetryWrongBtn" onclick="wRetryWrong()">Ulangi yang Perlu Diulang</button>
+      <button class="rbtn" onclick="backWSetup()">Pengaturan</button>
+    </div>
+  </div>
+
+</main>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
