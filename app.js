@@ -58,6 +58,7 @@ function showPage(name, btn, fromDrawer) {
   });
   if (fromDrawer) closeMenu();
   if (name === 'progress') renderProg();
+  if (name === 'menulis') initWSetup();
 }
 
 function toggleMenu() {
@@ -256,6 +257,8 @@ const QCATS = [
   { id: 'buku-bab1',   label: 'Buku — Bab 1',          t: 'buku' },
   { id: 'buku-bab2',   label: 'Buku — Bab 2',          t: 'buku' },
   { id: 'buku-bab3',   label: 'Buku — Bab 3',          t: 'buku' },
+  { id: 'buku-bab4',   label: 'Buku — Bab 4',          t: 'buku' },
+  { id: 'buku-bab5',   label: 'Buku — Bab 5',          t: 'buku' },
   { id: 'bunpou-dasar',   label: 'Bunpou — Kalimat Dasar',       t: 'bunpou' },
   { id: 'bunpou-kosoado', label: 'Bunpou — Ko-So-A-Do',          t: 'bunpou' },
   { id: 'bunpou-id',      label: 'Bunpou — Identitas Diri',      t: 'bunpou' },
@@ -265,6 +268,11 @@ const QCATS = [
   { id: 'bunpou-objek',   label: 'Bunpou — Partikel Objek & Tempat (を・で)', t: 'bunpou' },
   { id: 'bunpou-arah',    label: 'Bunpou — Partikel Arah & Waktu (へ・に)',   t: 'bunpou' },
   { id: 'bunpou-negasi',  label: 'Bunpou — Negasi & Kata Ganti Tak Tentu',   t: 'bunpou' },
+  { id: 'bunpou-arimasu',    label: 'Bunpou — Arah, Lokasi & Keberadaan',       t: 'bunpou' },
+  { id: 'bunpou-kendaraan',  label: 'Bunpou — Kendaraan, Durasi & どのぐらい',    t: 'bunpou' },
+  { id: 'bunpou-sifattempat',label: 'Bunpou — Kata Sifat: Menjelaskan Tempat', t: 'bunpou' },
+  { id: 'bunpou-cuaca',      label: 'Bunpou — Kadar & Cuaca',                   t: 'bunpou' },
+  { id: 'bunpou-rasa',       label: 'Bunpou — Sifat Rasa & Suhu Benda',         t: 'bunpou' },
 ];
 
 let SC = new Set(), ST = new Set(['kana-to-romaji']), QN = 10;
@@ -375,7 +383,7 @@ function counterItems(cid) {
 }
 
 function bukuItems(cid) {
-  const babKey = cid === 'buku-bab1' ? 'bab1' : cid === 'buku-bab2' ? 'bab2' : cid === 'buku-bab3' ? 'bab3' : null;
+  const babKey = cid === 'buku-bab1' ? 'bab1' : cid === 'buku-bab2' ? 'bab2' : cid === 'buku-bab3' ? 'bab3' : cid === 'buku-bab4' ? 'bab4' : cid === 'buku-bab5' ? 'bab5' : null;
   if (!babKey || !BUKU[babKey]) return [];
   let out = [];
   Object.values(BUKU[babKey]).forEach(group => {
@@ -394,7 +402,12 @@ function bunpouItems(cid) {
     'bunpou-jenis':    'Menanyakan Jenis & Kepemilikan',
     'bunpou-objek':    'Partikel Objek & Tempat (を・で)',
     'bunpou-arah':     'Partikel Arah & Waktu (へ・に)',
-    'bunpou-negasi':   'Negasi & Kata Ganti Tak Tentu'
+    'bunpou-negasi':   'Negasi & Kata Ganti Tak Tentu',
+    'bunpou-arimasu':    'Arah, Lokasi & Keberadaan (あります)',
+    'bunpou-kendaraan':  'Kendaraan, Durasi & どのぐらい',
+    'bunpou-sifattempat':'Kata Sifat: Menjelaskan Tempat (い／な＋そして)',
+    'bunpou-cuaca':      'Kadar & Cuaca (とても・あまり・天気)',
+    'bunpou-rasa':       'Sifat Rasa & Suhu Benda (vs Cuaca)'
   };
   const tema = temaMap[cid];
   if (!tema || !Array.isArray(BUNPOU)) return [];
@@ -779,6 +792,17 @@ function renderBunpou() {
 const AI_KEY_STORE = 'nihongo_ai_key';
 const AI_PROVIDER_STORE = 'nihongo_ai_provider';
 const AI_MODEL_STORE = 'nihongo_ai_model';
+const AI_VISION_MODEL_STORE = 'nihongo_ai_vision_model';
+
+// Default model teks (AI_ENDPOINTS di atas) BELUM TENTU mendukung gambar.
+// Groq misalnya default-nya openai/gpt-oss-120b — model teks-only, akan gagal (error 400)
+// kalau dipaksa terima gambar. Ini daftar model vision-capable yang aman dipakai
+// khusus untuk fitur Menulis (cek tulisan tangan), dipakai kalau user belum isi custom vision model sendiri.
+const AI_VISION_DEFAULTS = {
+  groq:       'meta-llama/llama-4-scout-17b-16e-instruct',
+  openai:     'gpt-4o-mini',
+  openrouter: 'openai/gpt-4o-mini'
+};
 
 let AI_SC = new Set();      // kategori materi terpilih (terpisah dari SC milik Quiz)
 let AI_ST = new Set(['jp-to-id', 'id-to-jp']);
@@ -796,7 +820,12 @@ function bunpouFullItems(cidSet) {
     'bunpou-jenis':    'Menanyakan Jenis & Kepemilikan',
     'bunpou-objek':    'Partikel Objek & Tempat (を・で)',
     'bunpou-arah':     'Partikel Arah & Waktu (へ・に)',
-    'bunpou-negasi':   'Negasi & Kata Ganti Tak Tentu'
+    'bunpou-negasi':   'Negasi & Kata Ganti Tak Tentu',
+    'bunpou-arimasu':    'Arah, Lokasi & Keberadaan (あります)',
+    'bunpou-kendaraan':  'Kendaraan, Durasi & どのぐらい',
+    'bunpou-sifattempat':'Kata Sifat: Menjelaskan Tempat (い／な＋そして)',
+    'bunpou-cuaca':      'Kadar & Cuaca (とても・あまり・天気)',
+    'bunpou-rasa':       'Sifat Rasa & Suhu Benda (vs Cuaca)'
   };
   const temas = [...cidSet].map(id => temaMap[id]).filter(Boolean);
   if (!temas.length || !Array.isArray(BUNPOU)) return [];
@@ -946,11 +975,11 @@ function checkAIReady() {
   else                { warn.style.display = 'none'; }
 }
 
-async function callAI(messages) {
+async function callAI(messages, modelOverride) {
   const ep = AI_ENDPOINTS[AI_PROVIDER];
   const key = localStorage.getItem(AI_KEY_STORE + '_' + AI_PROVIDER);
   const customModel = localStorage.getItem(AI_MODEL_STORE + '_' + AI_PROVIDER);
-  const model = customModel || ep.model;
+  const model = modelOverride || customModel || ep.model;
   const headers = { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + key };
   if (AI_PROVIDER === 'openrouter') {
     headers['HTTP-Referer'] = location.origin;
@@ -1171,7 +1200,7 @@ function wKanjiPool() {
   });
   Object.values(KT).forEach(g => scanRows(g.rows));
   Object.values(COUNTER).forEach(g => scanRows(g.rows));
-  ['bab1', 'bab2', 'bab3'].forEach(b => { if (BUKU[b]) Object.values(BUKU[b]).forEach(g => scanRows(g.rows)); });
+  ['bab1', 'bab2', 'bab3', 'bab4', 'bab5'].forEach(b => { if (BUKU[b]) Object.values(BUKU[b]).forEach(g => scanRows(g.rows)); });
   const seen = new Set();
   return out.filter(x => { if (seen.has(x.char)) return false; seen.add(x.char); return true; });
 }
@@ -1192,7 +1221,17 @@ function initWSetup() {
       <div class="qcb">${WC.has(c.id) ? '✓' : ''}</div>
       <span class="qol">${c.label}</span>
     </div>`).join('');
+  const savedVisionModel = localStorage.getItem(AI_VISION_MODEL_STORE + '_' + AI_PROVIDER);
+  document.getElementById('wModelInput').value = savedVisionModel || '';
+  document.getElementById('wModelStatus').textContent = 'Model vision aktif: ' + (savedVisionModel || AI_VISION_DEFAULTS[AI_PROVIDER] || AI_ENDPOINTS[AI_PROVIDER].model) + (savedVisionModel ? '' : ' (default)');
   wCheckReady();
+}
+
+function wSaveVisionModel(input) {
+  const val = input.value.trim();
+  if (val) localStorage.setItem(AI_VISION_MODEL_STORE + '_' + AI_PROVIDER, val);
+  else      localStorage.removeItem(AI_VISION_MODEL_STORE + '_' + AI_PROVIDER);
+  document.getElementById('wModelStatus').textContent = 'Model vision aktif: ' + (val || AI_VISION_DEFAULTS[AI_PROVIDER] || AI_ENDPOINTS[AI_PROVIDER].model) + (val ? '' : ' (default)');
 }
 
 function wTogCat(id, el) {
@@ -1281,8 +1320,15 @@ function wSetupCanvases(char) {
   const guide = document.getElementById('wGuideCanvas');
   const ink = document.getElementById('wInkCanvas');
   const dpr = window.devicePixelRatio || 1;
-  const size = wrap.clientWidth;
-  [guide, ink].forEach(cv => { cv.width = size * dpr; cv.height = size * dpr; });
+
+  const len = [...char].length;
+  // Kanvas melebar otomatis untuk kata yang lebih dari 2 karakter, biar tiap karakter
+  // tetap kebagian ruang yang cukup (mis. じゃがいも = 5 karakter butuh kanvas lebar).
+  const ratio = Math.min(3, Math.max(1, len / 2));
+  wrap.style.aspectRatio = ratio + ' / 1';
+
+  const w = wrap.clientWidth, h = wrap.clientHeight;
+  [guide, ink].forEach(cv => { cv.width = w * dpr; cv.height = h * dpr; });
 
   const textColor = getComputedStyle(document.documentElement).getPropertyValue('--text').trim() || '#e8e4dc';
   const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent2').trim() || '#8b6fcb';
@@ -1291,15 +1337,15 @@ function wSetupCanvases(char) {
 
   const gctx = guide.getContext('2d');
   gctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  gctx.clearRect(0, 0, size, size);
+  gctx.clearRect(0, 0, w, h);
 
   // Garis bantu berbentuk "+" (seperti kertas latihan kanji) — digambar dulu di belakang karakter
   gctx.strokeStyle = gridColor;
   gctx.globalAlpha = 0.9;
   gctx.setLineDash([5, 6]);
-  gctx.lineWidth = Math.max(1, size * 0.0035);
-  gctx.beginPath(); gctx.moveTo(size / 2, 3); gctx.lineTo(size / 2, size - 3); gctx.stroke();
-  gctx.beginPath(); gctx.moveTo(3, size / 2); gctx.lineTo(size - 3, size / 2); gctx.stroke();
+  gctx.lineWidth = Math.max(1, Math.min(w, h) * 0.0035);
+  gctx.beginPath(); gctx.moveTo(w / 2, 3); gctx.lineTo(w / 2, h - 3); gctx.stroke();
+  gctx.beginPath(); gctx.moveTo(3, h / 2); gctx.lineTo(w - 3, h / 2); gctx.stroke();
   gctx.setLineDash([]); gctx.globalAlpha = 1;
 
   // Karakter panduan transparan di atas grid
@@ -1307,16 +1353,18 @@ function wSetupCanvases(char) {
   gctx.globalAlpha = 0.32;
   gctx.textAlign = 'center';
   gctx.textBaseline = 'middle';
-  const len = [...char].length;
-  const fontSize = size * Math.max(0.16, 0.62 - (len - 1) * 0.09);
+  // fontSize dibatasi dari DUA arah: tidak boleh lebih tinggi dari kanvas (h*0.62),
+  // dan tidak boleh lebih lebar dari kanvas kalau semua karakter dijejer (w*0.88/len).
+  // Ini yang memastikan kata panjang (jagaimo, dll) tidak kepotong di tepi kanvas.
+  const fontSize = Math.min(h * 0.62, (w * 0.88) / len);
   gctx.font = `400 ${fontSize}px 'Noto Serif JP', serif`;
-  gctx.fillText(char, size / 2, size / 2 + fontSize * 0.04);
+  gctx.fillText(char, w / 2, h / 2 + fontSize * 0.04);
   gctx.globalAlpha = 1;
 
   const ictx = ink.getContext('2d');
   ictx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  ictx.clearRect(0, 0, size, size);
-  ictx.lineWidth = Math.max(4, size * 0.028);
+  ictx.clearRect(0, 0, w, h);
+  ictx.lineWidth = Math.max(4, Math.min(w, h) * 0.028);
   ictx.lineCap = 'round';
   ictx.lineJoin = 'round';
   ictx.strokeStyle = accentColor;
@@ -1412,11 +1460,14 @@ async function wCheckWithAI() {
     { type: 'image_url', image_url: { url: imgData } }
   ];
 
+  const visionCustom = localStorage.getItem(AI_VISION_MODEL_STORE + '_' + AI_PROVIDER);
+  const visionModel = visionCustom || AI_VISION_DEFAULTS[AI_PROVIDER] || AI_ENDPOINTS[AI_PROVIDER].model;
+
   try {
     const raw = await callAI([
       { role: 'system', content: sysPrompt },
       { role: 'user', content: userContent }
-    ]);
+    ], visionModel);
     const cleaned = raw.replace(/```json|```/g, '').trim();
     const parsed = JSON.parse(cleaned);
     const ok = !!parsed.correct;
@@ -1428,9 +1479,12 @@ async function wCheckWithAI() {
     btn.style.display = 'none';
     document.getElementById('wAINxtBtn').style.display = 'block';
   } catch (err) {
+    const msg = /content must be a string|invalid_request_error|does not support image|image.*not supported/i.test(err.message)
+      ? `Model "${visionModel}" sepertinya tidak mendukung input gambar. Isi kolom "Model vision khusus" di setup dengan model vision lain (mis. meta-llama/llama-4-scout-17b-16e-instruct untuk Groq, atau gpt-4o-mini untuk OpenAI/OpenRouter).`
+      : err.message;
     fb.style.display = 'block';
     fb.className = 'qfb ng';
-    fb.textContent = '⚠ Gagal mengecek: ' + err.message + ' — kamu bisa nilai manual di bawah.';
+    fb.textContent = '⚠ Gagal mengecek: ' + msg + ' — kamu bisa nilai manual di bawah.';
     document.getElementById('wCheckRow').style.display = 'grid';
     btn.disabled = false; btn.textContent = 'Cek dengan AI';
   }
@@ -1472,6 +1526,8 @@ renderPartikelAdv();
 renderBukuBab('bab1', 'bukuBab1');
 renderBukuBab('bab2', 'bukuBab2');
 renderBukuBab('bab3', 'bukuBab3');
+renderBukuBab('bab4', 'bukuBab4');
+renderBukuBab('bab5', 'bukuBab5');
 renderBunpou();
 initQSetup();
 initAISetup();

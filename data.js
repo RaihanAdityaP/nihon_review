@@ -138,7 +138,12 @@ const KT={
 {k:"ふじさん",r:"fujisan",a:"Gunung Fuji",kj:"富士山",n:"Gunung tertinggi dan paling ikonik di Jepang (3.776 m), terdaftar sebagai Situs Warisan Dunia UNESCO."},
 {k:"ほっかいどう",r:"hokkaidou",a:"Hokkaido",kj:"北海道",n:"Pulau paling utara Jepang, terkenal dengan salju, ski, dan hasil laut segar."},
 {k:"コンビニ",r:"konbini",a:"mini market",n:"Singkatan dari 'convenience store'. Buka 24 jam — bisa bayar tagihan, ambil ATM, beli tiket, sampai print dokumen."},
-{k:"デパート",r:"depaato",a:"department store / departemen",n:"Serapan 'department store'. Berbeda dari suupaa (supermarket) — depaato lebih mewah, biasanya multi-lantai, banyak butik dan restoran."}
+{k:"デパート",r:"depaato",a:"department store / departemen",n:"Serapan 'department store'. Berbeda dari suupaa (supermarket) — depaato lebih mewah, biasanya multi-lantai, banyak butik dan restoran."},
+{k:"（お）てら",r:"(o)tera",a:"wihara / kuil Buddha",kj:"（お）寺",n:"Tempat ibadah agama Buddha. Beda dari じんじゃ (kuil Shinto) — biasanya punya pagoda dan patung Buddha."},
+{k:"きょうかい",r:"kyoukai",a:"gereja",kj:"教会",n:"Kyou (mengajar/ajaran) + Kai (pertemuan). Tempat ibadah Kristen — jumlahnya relatif sedikit di Jepang."},
+{k:"じんじゃ",r:"jinja",a:"kuil Shinto",kj:"神社",n:"Jin (dewa) + Sha (kuil). Ciri khasnya gerbang torii merah di depan pintu masuk."},
+{k:"おんせん",r:"onsen",a:"pemandian air panas alami",kj:"温泉",n:"On (hangat) + Sen (mata air). Budaya mandi air panas alami khas Jepang, banyak ditemukan di daerah pegunungan."},
+{k:"ところ",r:"tokoro",a:"tempat",n:"Kata umum untuk 'tempat', lebih abstrak dari basho (場所) yang lebih spesifik."}
 ]},
 "Hobi & Olahraga":{rows:[
 {k:"しゅみ",r:"shumi",a:"hobi",kj:"趣味",n:"'Oshumi wa nan desu ka?' = Apa hobimu? Pertanyaan umum saat kenalan."},
@@ -163,7 +168,10 @@ const KT={
 {k:"ひこうき",r:"hikouki",a:"pesawat",kj:"飛行機",n:"Gabungan 飛 (terbang) + 行 (pergi) + 機 (mesin)."},
 {k:"くるま",r:"kuruma",a:"mobil",kj:"車",n:"Kata yang sama untuk 'kendaraan beroda' secara umum."},
 {k:"じてんしゃ",r:"jitensha",a:"sepeda",kj:"自転車",n:"Gabungan 自 (sendiri) + 転 (berputar) + 車 (roda)."},
-{k:"のりもの",r:"norimono",a:"kendaraan",kj:"乗り物",n:"Gabungan 乗り (naik) + 物 (benda). Harfiah: 'benda yang dinaiki'."}
+{k:"のりもの",r:"norimono",a:"kendaraan",kj:"乗り物",n:"Gabungan 乗り (naik) + 物 (benda). Harfiah: 'benda yang dinaiki'."},
+{k:"しんかんせん",r:"shinkansen",a:"kereta peluru",kj:"新幹線",n:"Shin (baru) + Kan (utama) + Sen (jalur). Kereta cepat ikonik Jepang, bisa sampai 320 km/jam."},
+{k:"バイク",r:"baiku",a:"sepeda motor",n:"Serapan 'bike/motorbike'. Beda dari jitensha (sepeda kayuh) — baiku pakai mesin."},
+{k:"あるいて",r:"aruite",a:"dengan berjalan kaki",kj:"歩いて",n:"Bentuk te dari 'aruku' (berjalan). Beda dari kendaraan lain: TIDAK pakai partikel で, langsung diikuti keterangan waktu/kegiatan."}
 ]},
 "Makanan & Minuman":{rows:[
 {k:"たまご",r:"tamago",a:"telur",kj:"卵",n:"Dari kata kuno 'tama' (bulat) + 'ko' (anak). Artinya 'anak berbentuk bulat'."},
@@ -298,7 +306,18 @@ const KT={
 {k:"おおきな",r:"ookina",a:"besar",kj:"大きな",n:"Bentuk na-adjective. Ada juga 'ookii' (大きい) sebagai i-adjective."},
 {k:"ちいさい",r:"chiisai",a:"kecil",kj:"小さい",n:"Vokal panjang 'ちい'. Lawan kata dari 'ookii'."},
 {k:"うれしい",r:"ureshii",a:"senang",kj:"嬉しい",n:"Senang karena sesuatu terjadi. Beda dengan 'tanoshii' (menyenangkan)."},
-{k:"かなしい",r:"kanashii",a:"sedih",kj:"悲しい",n:"Banyak muncul dalam lagu dan puisi Jepang."}
+{k:"かなしい",r:"kanashii",a:"sedih",kj:"悲しい",n:"Banyak muncul dalam lagu dan puisi Jepang."},
+{k:"あたらしい",r:"atarashii",a:"baru",kj:"新しい",n:"Lawan kata dari 'furui'. Dipakai untuk barang, bangunan, atau hal yang belum lama ada."},
+{k:"ふるい",r:"furui",a:"tua / lama / kuno",kj:"古い",n:"Dipakai untuk barang/bangunan (bukan usia orang!). Untuk usia orang pakai 'toshi wo totta' atau konteks lain."},
+{k:"おおきい",r:"ookii",a:"besar",kj:"大きい",n:"Bentuk i-adjective. Ada juga 'ookina' (大きな) sebagai bentuk yang selalu langsung nempel di depan kata benda."},
+{k:"ひくい",r:"hikui",a:"rendah",kj:"低い",n:"Lawan kata dari 'takai' (tinggi). Dipakai untuk gedung, gunung, suara, dsb."},
+{k:"おおい",r:"ooi",a:"banyak",kj:"多い",n:"Khusus dipakai sebagai predikat (〜が おおいです), bukan langsung di depan kata benda seperti 'takusan'."},
+{k:"すくない",r:"sukunai",a:"sedikit",kj:"少ない",n:"Lawan kata dari 'ooi'. Juga predikat, bukan langsung di depan kata benda."},
+{k:"しずか",r:"shizuka",a:"sunyi / sepi / tenang",kj:"静か",n:"Na-adjective — kalau di depan kata benda jadi 'shizuka na machi', tapi kalau jadi predikat cukup 'shizuka desu' (な hilang)."},
+{k:"にぎやか",r:"nigiyaka",a:"ramai",n:"Na-adjective. Lawan kata dari 'shizuka'. Dipakai untuk tempat yang rame orang/kegiatan."},
+{k:"きれい",r:"kirei",a:"cantik / indah / bersih",n:"Na-adjective, walau berakhiran い — jangan tertukar sebagai i-adjective! Bisa berarti 'cantik' ATAU 'bersih' tergantung konteks."},
+{k:"ゆうめい",r:"yuumei",a:"terkenal",kj:"有名",n:"Na-adjective. Yuu (punya) + Mei (nama) — harfiah 'punya nama (yang dikenal)'."},
+{k:"いい",r:"ii",a:"bagus / baik",n:"I-adjective TIDAK BERATURAN. Bentuk negatifnya BUKAN 'iikunai' tapi 'yokunai' (dari bentuk lama 'yoi'). Penting dihafal karena sering dipakai."}
 ]},
 "Musim":{rows:[
 {k:"はる",r:"haru",a:"musim semi",kj:"春",n:"Musim sakura. Tahun ajaran/kerja Jepang dimulai April."},
@@ -309,6 +328,20 @@ const KT={
 {k:"ゴールデンウィーク",r:"goorudenwiiku",a:"Golden week",n:"Serapan 'golden week'. Rangkaian hari libur nasional akhir April-awal Mei, salah satu musim liburan terpanjang di Jepang."},
 {k:"さくら",r:"sakura",a:"sakura",kj:"桜",n:"Bunga sakura (cherry blossom), simbol nasional Jepang yang mekar singkat di musim semi."},
 {k:"（お）べんとう",r:"(o)bentou",a:"bekal makanan",kj:"（お）弁当",n:"Kotak bekal makanan khas Jepang, biasa dibawa ke sekolah/kantor atau dibeli di konbini/stasiun."}
+]},
+"Cuaca & Suhu":{rows:[
+{k:"あつい",r:"atsui",a:"panas (cuaca)",kj:"暑い",n:"Khusus untuk suhu UDARA/CUACA. Beda kanji dari 'atsui' (熱い) yang berarti panas untuk BENDA (makanan/minuman) — bunyinya sama tapi konteksnya beda!"},
+{k:"さむい",r:"samui",a:"dingin (cuaca)",kj:"寒い",n:"Khusus untuk suhu UDARA/CUACA. Beda kata (bukan cuma beda kanji) dari 'tsumetai' (冷たい) yang dipakai untuk BENDA."},
+{k:"あたたかい",r:"atatakai",a:"hangat (cuaca)",kj:"暖かい",n:"Khusus untuk suhu UDARA/CUACA. Beda kanji dari 'atatakai' (温かい) yang berarti hangat untuk BENDA — bunyinya sama, kanji & konteks beda."},
+{k:"すずしい",r:"suzushii",a:"sejuk",kj:"涼しい",n:"Suhu sejuk, biasanya dipakai untuk cuaca musim gugur/pagi hari."},
+{k:"あたたかい",r:"atatakai",a:"hangat (benda)",kj:"温かい",n:"Khusus untuk suhu BENDA (makanan/minuman/air). Beda kanji dari 'atatakai' (暖かい) yang dipakai untuk cuaca — bunyi sama, kanji beda!"},
+{k:"あつい",r:"atsui",a:"panas (benda)",kj:"熱い",n:"Khusus untuk suhu BENDA (makanan/minuman panas). Beda kanji dari 'atsui' (暑い) yang dipakai untuk cuaca — bunyi sama, kanji beda!"},
+{k:"つめたい",r:"tsumetai",a:"dingin (benda)",kj:"冷たい",n:"Khusus untuk suhu BENDA (air/makanan/minuman dingin). Beda KATA (bukan cuma beda kanji) dari 'samui' (寒い) yang dipakai untuk cuaca."},
+{k:"てんきがいい",r:"tenki ga ii",a:"cuacanya bagus",kj:"天気がいい",n:"Ungkapan tetap untuk menyatakan cuaca cerah/bagus secara umum."},
+{k:"てんきがわるい",r:"tenki ga warui",a:"cuacanya buruk",kj:"天気が悪い",n:"Lawan kata dari てんきがいい. Dipakai saat cuaca mendung, hujan, dsb."},
+{k:"いちねんじゅう",r:"ichinenjuu",a:"sepanjang tahun",kj:"一年中",n:"Ichinen (satu tahun) + juu (sepanjang/seluruh). Dipakai untuk cuaca/kondisi yang tidak berubah tiap musim, mis. daerah tropis."},
+{k:"ゆき",r:"yuki",a:"salju",kj:"雪",n:"Turun terutama di daerah utara Jepang (Hokkaido, Tohoku) saat musim dingin."},
+{k:"あめ",r:"ame",a:"hujan",kj:"雨",n:"'Ame ga furimasu' = hujan turun. Musim hujan (梅雨/tsuyu) di Jepang biasanya bulan Juni."}
 ]},
 "Kata Kerja":{rows:[
 {k:"いきます",r:"ikimasu",a:"pergi",kj:"行きます",n:"Dari 'iku'. Partikel 'ni' atau 'e' menunjukkan tujuan."},
@@ -466,6 +499,8 @@ const KT={
 {k:"なん",r:"nan",a:"apa (bentuk pendek)",kj:"何",n:"Bentuk pendek dari なに (nani). Dipakai sebelum です/の/か. 'Oshumi wa nan desu ka?' = Hobinya apa?"}
 ]},
 "Durasi":{rows:[
+{k:"どのぐらい",r:"dono gurai",a:"berapa lama",kj:"どの位",n:"Pola tanya standar untuk menanyakan durasi. 'Densha de dono gurai kakarimasu ka?' = Naik kereta, berapa lama?"},
+{k:"くらい／ぐらい",r:"kurai / gurai",a:"kira-kira, sekitar",n:"Ditambahkan setelah angka waktu/jumlah untuk memberi perkiraan, bukan angka pasti. Jadi 'gurai' kalau nempel setelah kata bervokal/nasal."},
 {k:"いちじかん",r:"ichi jikan",a:"selama 1 jam",kj:"一時間",n:"Ichi (1) + Ji (jam) + Kan (interval/selama). Pola: angka + じかん untuk durasi jam."},
 {k:"にじかん",r:"ni jikan",a:"selama 2 jam",kj:"二時間",n:"に (2) + じかん."},
 {k:"さんじかん",r:"san jikan",a:"selama 3 jam",kj:"三時間",n:"さん (3) + じかん."},
@@ -691,7 +726,8 @@ const KT={
 {k:"まえからうしろまで",r:"mae kara ushiro made",a:"dari depan sampai belakang",kj:"前から後ろまで",n:"Pola 〜から〜まで (dari〜sampai〜) dipakai untuk menyatakan rentang. Mae (depan) kara (dari) ushiro (belakang) made (sampai)."},
 {k:"うえからしたまで",r:"ue kara shita made",a:"dari atas ke bawah",kj:"上から下まで",n:"Pola 〜から〜まで untuk rentang arah vertikal. Ue (atas) kara (dari) shita (bawah) made (sampai)."},
 {k:"さいしょからさいごまで",r:"saisho kara saigo made",a:"dari awal sampai akhir",kj:"最初から最後まで",n:"Pola 〜から〜まで untuk rentang waktu/urutan. Saisho (awal) kara (dari) saigo (akhir) made (sampai)."},
-{k:"はんぶん",r:"hanbun",a:"setengah (untuk cairan/benda)",kj:"半分",n:"Dipakai untuk menyatakan setengah bagian, misalnya setengah gelas cairan. 'Hanbun kudasai' = tolong setengah saja."}
+{k:"はんぶん",r:"hanbun",a:"setengah (untuk cairan/benda)",kj:"半分",n:"Dipakai untuk menyatakan setengah bagian, misalnya setengah gelas cairan. 'Hanbun kudasai' = tolong setengah saja."},
+{k:"そして",r:"soshite",a:"dan, lalu",n:"Menyambung DUA KALIMAT terpisah jadi satu cerita berlanjut — beda dari と yang cuma menyambung kata benda dalam satu kalimat. Contoh: 'Furui desu. Soshite, shizuka desu.' = Kuno. Dan lagi, sunyi."}
 ]},
 "Kegiatan Rutin":{rows:[
 {k:"おきます",r:"okimasu",a:"bangun tidur",kj:"起きます",n:"Dari 'okiru'. Lawan dari 'nemasu'."},
@@ -753,7 +789,9 @@ const KT={
 {k:"インドネシア",r:"indoneshia",a:"Indonesia",n:"Serapan 'Indonesia'. Negara dengan jumlah pelajar bahasa Jepang terbanyak di dunia!"},
 {k:"〜じん",r:"~jin",a:"orang ~ / warga negara ~",kj:"〜人",n:"Ditambahkan setelah nama negara. にほんじん = orang Jepang, インドネシアじん = orang Indonesia."},
 {k:"〜ご",r:"~go",a:"bahasa ~",kj:"〜語",n:"Ditambahkan setelah nama negara/bangsa. にほんご = bahasa Jepang, えいご = bahasa Inggris."},
-{k:"えいご",r:"eigo",a:"bahasa Inggris",kj:"英語",n:"Ei (Inggris/Eropa) + Go (bahasa). Pelajaran wajib di sekolah Jepang."}
+{k:"えいご",r:"eigo",a:"bahasa Inggris",kj:"英語",n:"Ei (Inggris/Eropa) + Go (bahasa). Pelajaran wajib di sekolah Jepang."},
+{k:"ペキン",r:"pekin",a:"Beijing (ibu kota China)",n:"Serapan nama kota 'Peking/Beijing'. Ibu kota Republik Rakyat China."},
+{k:"プサン",r:"pusan",a:"Busan (kota di Korea Selatan)",n:"Serapan nama kota 'Busan'. Kota pelabuhan terbesar kedua di Korea Selatan setelah Seoul."}
 ]},
 "Perkenalan Diri":{rows:[
 {k:"なまえ",r:"namae",a:"nama",kj:"名前",n:"'Onamae wa?' = Siapa namamu? (bentuk sopan dengan prefiks 'o')."},
@@ -776,7 +814,8 @@ const KT={
 {k:"ひがし",r:"higashi",a:"timur",kj:"東",n:"Arah mata angin timur. Tokyo, ibu kota Jepang, terletak di bagian timur negara ini."},
 {k:"にし",r:"nishi",a:"barat",kj:"西",n:"Arah mata angin barat. Osaka dan Kyoto, kota-kota bersejarah Jepang, terletak di bagian barat."},
 {k:"みなみ",r:"minami",a:"selatan",kj:"南",n:"Arah mata angin selatan. Okinawa, provinsi paling selatan Jepang, dikenal dengan iklim tropisnya."},
-{k:"きた",r:"kita",a:"utara",kj:"北",n:"Arah mata angin utara. Hokkaido, pulau paling utara Jepang, terkenal dengan salju dan ski."}
+{k:"きた",r:"kita",a:"utara",kj:"北",n:"Arah mata angin utara. Hokkaido, pulau paling utara Jepang, terkenal dengan salju dan ski."},
+{k:"まんなか",r:"mannaka",a:"tengah-tengah",kj:"真ん中",n:"Ma (benar-benar) + n + naka (dalam/tengah). Dipakai untuk posisi persis di tengah, bukan cuma 'dalam' seperti 'naka' biasa."}
 ]},
 "Ekspresi di Kelas":{rows:[
 {k:"わかりました",r:"wakarimashita",a:"saya mengerti",kj:"分かりました",n:"Bentuk lampau sopan dari 'wakaru'."},
@@ -874,6 +913,7 @@ const KT={
 {k:"あのう",r:"anou",a:"anu... / hmm...",n:"Kata pengisi (filler word) saat ragu atau mau mulai bicara. Setara 'um' dalam bahasa Inggris."},
 {k:"こちらこそ",r:"kochira koso",a:"sama-sama / saya juga",n:"Respons untuk よろしく atau ありがとう. Menyatakan perasaan yang sama balik ke lawan bicara."},
 {k:"そうですか",r:"sou desu ka",a:"oh, begitu ya",n:"Respons saat menerima informasi baru. Intonasi naik = bertanya ulang, intonasi turun = 'oh begitu'."},
+{k:"そうですね",r:"sou desu ne",a:"iya, ya / begitu ya (setuju)",n:"Beda dari そうですか (menerima info baru): そうですね dipakai untuk SETUJU/mengiyakan sesuatu, atau saat berpikir sebelum menjawab."},
 {k:"はい",r:"hai",a:"ya",n:"Afirmasi formal. Dalam percakapan santai: うん (un)."},
 {k:"いいえ",r:"iie",a:"tidak / bukan",n:"Negasi formal. Dalam percakapan santai: ううん (uun)."},
 {k:"いらっしゃいませ",r:"irasshaimase",a:"selamat datang (di toko/restoran)",n:"Ungkapan wajib staf toko saat pelanggan masuk. Tidak perlu direspons — cukup angguk atau senyum."},
@@ -1578,6 +1618,163 @@ bab3: {
     {k:"ディーブイディー",r:"diibuidii",a:"DVD",n:"Singkatan 'digital video disc' dilafalkan huruf Inggris ala Jepang."},
     {k:"はたらきます",r:"hatarakimasu",a:"Bekerja"},
     {k:"どこ（へ）も",r:"doko (e) mo",a:"Ke mana pun",n:"Doko (mana) + e (partikel arah) + mo (pun). SELALU diikuti bentuk negatif."}
+  ]}
+},
+
+bab4: {
+  "Arah Mata Angin & Durasi": { rows: [
+    {k:"きた",r:"kita",a:"Utara",kj:"北"},
+    {k:"みなみ",r:"minami",a:"Selatan",kj:"南"},
+    {k:"ひがし",r:"higashi",a:"Timur",kj:"東"},
+    {k:"にし",r:"nishi",a:"Barat",kj:"西"},
+    {k:"まんなか",r:"mannaka",a:"Tengah-tengah",kj:"真ん中"},
+    {k:"どのぐらい",r:"dono gurai",a:"Berapa lama"},
+    {k:"〜じかん",r:"~jikan",a:"~jam",kj:"〜時間"},
+    {k:"くらい",r:"kurai",a:"Kira-kira, sekitar"}
+  ]},
+  "Transportasi & Kota": { rows: [
+    {k:"くるま",r:"kuruma",a:"Mobil",kj:"車"},
+    {k:"しんかんせん",r:"shinkansen",a:"Kereta peluru, Shinkansen",kj:"新幹線"},
+    {k:"でんしゃ",r:"densha",a:"Kereta listrik",kj:"電車"},
+    {k:"ひこうき",r:"hikouki",a:"Pesawat",kj:"飛行機"},
+    {k:"じてんしゃ",r:"jitensha",a:"Sepeda",kj:"自転車"},
+    {k:"バイク",r:"baiku",a:"Sepeda motor",n:"Serapan 'bike' (khusus sepeda motor, bukan sepeda kayuh)."},
+    {k:"えき",r:"eki",a:"Stasiun",kj:"駅"},
+    {k:"まち",r:"machi",a:"Kota",kj:"町"},
+    {k:"あるいて",r:"aruite",a:"Dengan berjalan kaki",kj:"歩いて"}
+  ]},
+  "Alam & Tempat Ibadah": { rows: [
+    {k:"（お）てら",r:"(o)tera",a:"Wihara, kuil Buddha",kj:"（お）寺"},
+    {k:"かわ",r:"kawa",a:"Sungai",kj:"川"},
+    {k:"ひと",r:"hito",a:"Orang",kj:"人"},
+    {k:"みどり",r:"midori",a:"Pepohonan, hijau",kj:"緑"},
+    {k:"やま",r:"yama",a:"Gunung",kj:"山"},
+    {k:"きょうかい",r:"kyoukai",a:"Gereja",kj:"教会"},
+    {k:"（お）しろ",r:"(o)shiro",a:"Istana, kastil",kj:"（お）城"},
+    {k:"じんじゃ",r:"jinja",a:"Kuil Shinto",kj:"神社"},
+    {k:"ところ",r:"tokoro",a:"Tempat"},
+    {k:"おんせん",r:"onsen",a:"Pemandian air panas alami",kj:"温泉"}
+  ]},
+  "Kata Sifat: Ukuran & Sifat Tempat": { rows: [
+    {k:"あたらしい",r:"atarashii",a:"Baru",kj:"新しい"},
+    {k:"ふるい",r:"furui",a:"Tua, lama, kuno",kj:"古い"},
+    {k:"おおきい",r:"ookii",a:"Besar",kj:"大きい"},
+    {k:"ちいさい",r:"chiisai",a:"Kecil",kj:"小さい"},
+    {k:"たかい",r:"takai",a:"Tinggi, mahal",kj:"高い"},
+    {k:"ひくい",r:"hikui",a:"Rendah",kj:"低い"},
+    {k:"おおい",r:"ooi",a:"Banyak",kj:"多い"},
+    {k:"すくない",r:"sukunai",a:"Sedikit",kj:"少ない"},
+    {k:"しずか【な】",r:"shizuka (na)",a:"Sunyi, sepi",kj:"静か【な】",n:"Kata sifat-na (keiyoudoushi)."},
+    {k:"にぎやか【な】",r:"nigiyaka (na)",a:"Ramai",n:"Kata sifat-na (keiyoudoushi)."},
+    {k:"きれい【な】",r:"kirei (na)",a:"Cantik, indah, bersih",n:"Meski berakhiran い ini termasuk kata sifat-na, bukan keiyoushi biasa."},
+    {k:"ゆうめい【な】",r:"yuumei (na)",a:"Terkenal",kj:"有名【な】",n:"Kata sifat-na (keiyoudoushi)."},
+    {k:"いい",r:"ii",a:"Bagus, baik"},
+    {k:"あります",r:"arimasu",a:"Ada, punya (benda mati)"},
+    {k:"そして",r:"soshite",a:"Dan, lalu"}
+  ]},
+  "Cuaca & Musim": { rows: [
+    {k:"あつい",r:"atsui",a:"Panas (cuaca, suhu)",kj:"暑い"},
+    {k:"さむい",r:"samui",a:"Dingin (cuaca, suhu)",kj:"寒い"},
+    {k:"あたたかい",r:"atatakai",a:"Hangat (cuaca, suhu)",kj:"暖かい"},
+    {k:"すずしい",r:"suzushii",a:"Sejuk",kj:"涼しい"},
+    {k:"てんきがいい",r:"tenki ga ii",a:"Cuacanya bagus",kj:"天気がいい"},
+    {k:"てんきがわるい",r:"tenki ga warui",a:"Cuacanya buruk",kj:"天気が悪い"},
+    {k:"いちねんじゅう",r:"ichinenjuu",a:"Sepanjang tahun",kj:"一年中"},
+    {k:"ゆき",r:"yuki",a:"Salju",kj:"雪"},
+    {k:"あめ",r:"ame",a:"Hujan",kj:"雨"},
+    {k:"そうですね",r:"sou desu ne",a:"Iya, ya"}
+  ]},
+  "Kota Lain & Kadar": { rows: [
+    {k:"ペキン",r:"pekin",a:"Beijing (China)"},
+    {k:"とても",r:"totemo",a:"Sangat"},
+    {k:"すこし",r:"sukoshi",a:"Agak, sedikit",kj:"少し"},
+    {k:"あまり",r:"amari",a:"Tidak terlalu, tidak begitu"},
+    {k:"プサン",r:"pusan",a:"Busan (Korea Selatan)"},
+    {k:"どう",r:"dou",a:"Bagaimana"}
+  ]},
+  "Rasa & Suhu Benda": { rows: [
+    {k:"あたたかい",r:"atatakai",a:"Hangat (benda)",kj:"温かい",n:"Beda kanji dengan 暖かい (hangat cuaca), tapi cara baca sama."},
+    {k:"あつい",r:"atsui",a:"Panas (benda)",kj:"熱い",n:"Beda kanji dengan 暑い (panas cuaca), tapi cara baca sama."},
+    {k:"つめたい",r:"tsumetai",a:"Dingin (benda)",kj:"冷たい"},
+    {k:"おいしい",r:"oishii",a:"Enak, lezat"},
+    {k:"あまい",r:"amai",a:"Manis",kj:"甘い"},
+    {k:"からい",r:"karai",a:"Pedas",kj:"辛い"},
+    {k:"にがい",r:"nigai",a:"Pahit",kj:"苦い"},
+    {k:"すっぱい",r:"suppai",a:"Asam, kecut",kj:"酸っぱい"},
+    {k:"ひ",r:"hi",a:"Hari",kj:"日"},
+    {k:"サムゲタン",r:"samugetan",a:"Samgyetang (makanan Korea)"}
+  ]}
+},
+
+bab5: {
+  "Kata Kerja Aktivitas Harian": { rows: [
+    {k:"あいます",r:"aimasu",a:"Bertemu",kj:"会います",n:"Kata kerja golongan I."},
+    {k:"かいものします",r:"kaimono shimasu",a:"Berbelanja",kj:"買い物します",n:"Kata kerja golongan III."},
+    {k:"せんたくします",r:"sentaku shimasu",a:"Mencuci baju",kj:"洗濯します",n:"Kata kerja golongan III."},
+    {k:"そうじします",r:"souji shimasu",a:"Bebersih, membersihkan",kj:"掃除します",n:"Kata kerja golongan III."},
+    {k:"つくります",r:"tsukurimasu",a:"Membuat",kj:"作ります",n:"Kata kerja golongan I."},
+    {k:"しょくじします",r:"shokuji shimasu",a:"Makan",kj:"食事します",n:"Kata kerja golongan III."},
+    {k:"のぼります",r:"noborimasu",a:"Mendaki, naik",kj:"登ります",n:"Kata kerja golongan I."},
+    {k:"はいります",r:"hairimasu",a:"Masuk",kj:"入ります",n:"Kata kerja golongan I."},
+    {k:"とります",r:"torimasu",a:"Memotret, mengambil (foto)",kj:"撮ります",n:"Kata kerja golongan I."},
+    {k:"かります",r:"karimasu",a:"Meminjam",kj:"借ります",n:"Kata kerja golongan II."}
+  ]},
+  "Tempat & Orang": { rows: [
+    {k:"うち／いえ",r:"uchi / ie",a:"Rumah",kj:"家"},
+    {k:"へや",r:"heya",a:"Kamar, ruangan",kj:"部屋"},
+    {k:"デパート",r:"depaato",a:"Departmen Store, mall",n:"Singkatan dari 'department store'."},
+    {k:"ともだち",r:"tomodachi",a:"Teman",kj:"友達"},
+    {k:"どこか",r:"dokoka",a:"Suatu tempat"},
+    {k:"びじゅつかん",r:"bijutsukan",a:"Gedung kesenian",kj:"美術館"},
+    {k:"かぞく",r:"kazoku",a:"Keluarga",kj:"家族"},
+    {k:"こいびと",r:"koibito",a:"Pacar, kekasih",kj:"恋人"},
+    {k:"ルームメイト",r:"ruumumeito",a:"Teman sekamar",n:"Serapan 'roommate'."},
+    {k:"ひとりで",r:"hitori de",a:"Sendirian",kj:"一人で"},
+    {k:"しんじゅく",r:"shinjuku",a:"Shinjuku",kj:"新宿",n:"Nama distrik terkenal di Tokyo."}
+  ]},
+  "Waktu (Hari, Minggu, Bulan, Tahun)": { rows: [
+    {k:"きのう",r:"kinou",a:"Kemarin",kj:"昨日"},
+    {k:"しゅうまつ",r:"shuumatsu",a:"Akhir pekan",kj:"週末"},
+    {k:"きょう",r:"kyou",a:"Hari ini",kj:"今日"},
+    {k:"あした",r:"ashita",a:"Besok",kj:"明日"},
+    {k:"あさって",r:"asatte",a:"Lusa"},
+    {k:"せんしゅう",r:"senshuu",a:"Minggu lalu",kj:"先週"},
+    {k:"おととい",r:"ototoi",a:"Kemarin lusa"},
+    {k:"それから",r:"sorekara",a:"Kemudian"},
+    {k:"けさ",r:"kesa",a:"Tadi pagi",kj:"今朝"},
+    {k:"せんげつ",r:"sengetsu",a:"Bulan lalu",kj:"先月"},
+    {k:"きょねん",r:"kyonen",a:"Tahun lalu",kj:"去年"},
+    {k:"こんど",r:"kondo",a:"Kali ini, lain kali",kj:"今度"},
+    {k:"こんばん",r:"konban",a:"Malam ini",kj:"今晩"},
+    {k:"ことし",r:"kotoshi",a:"Tahun ini",kj:"今年"},
+    {k:"らいねん",r:"rainen",a:"Tahun depan",kj:"来年"}
+  ]},
+  "Kata Sifat: Perasaan & Kesulitan": { rows: [
+    {k:"たかい",r:"takai",a:"Mahal",kj:"高い"},
+    {k:"やすい",r:"yasui",a:"Murah",kj:"安い"},
+    {k:"きもちがいい",r:"kimochi ga ii",a:"Enak (perasaan)",kj:"気持ちがいい"},
+    {k:"たのしい",r:"tanoshii",a:"Menyenangkan",kj:"楽しい"},
+    {k:"ひま【な】",r:"hima (na)",a:"Luang, senggang",n:"Kata sifat-na (keiyoudoushi)."},
+    {k:"いそがしい",r:"isogashii",a:"Sibuk",kj:"忙しい"},
+    {k:"むずかしい",r:"muzukashii",a:"Susah, sukar, sulit",kj:"難しい"},
+    {k:"たいへん【な】",r:"taihen (na)",a:"Susah, berat",kj:"大変【な】",n:"Kata sifat-na (keiyoudoushi)."},
+    {k:"かんたん【な】",r:"kantan (na)",a:"Mudah",kj:"簡単【な】",n:"Kata sifat-na (keiyoudoushi)."}
+  ]},
+  "Hobi, Perasaan & Benda Lain": { rows: [
+    {k:"ゲーム",r:"geemu",a:"Gim, permainan",n:"Serapan 'game'."},
+    {k:"てんき",r:"tenki",a:"Cuaca",kj:"天気"},
+    {k:"ふく",r:"fuku",a:"Pakaian, baju",kj:"服"},
+    {k:"ばんごはん",r:"bangohan",a:"Makan malam",kj:"晩ご飯"},
+    {k:"どうして",r:"doushite",a:"Mengapa"},
+    {k:"〜から",r:"~kara",a:"Karena~"},
+    {k:"じてんしゃ",r:"jitensha",a:"Sepeda",kj:"自転車"},
+    {k:"ほしい",r:"hoshii",a:"Ingin"},
+    {k:"すき【な】",r:"suki (na)",a:"Suka",kj:"好き【な】",n:"Kata sifat-na (keiyoudoushi)."},
+    {k:"きらい【な】",r:"kirai (na)",a:"Benci",kj:"嫌い【な】",n:"Kata sifat-na (keiyoudoushi)."},
+    {k:"アニメ",r:"anime",a:"Anime, animasi Jepang"},
+    {k:"けしき",r:"keshiki",a:"Pemandangan",kj:"景色"},
+    {k:"しゃしん",r:"shashin",a:"Foto",kj:"写真"},
+    {k:"え",r:"e",a:"Gambar, lukisan",kj:"絵"}
   ]}
 }
 
@@ -2580,7 +2777,7 @@ const BUNPOU = [
         pola: "〜から〜までです。",
         romaji: "~ kara ~ made desu.",
         arti: "Dari ~ sampai ~.",
-        catatan: "から menandai titik awal, まで menandai titik akhir — bisa dipakai untuk waktu maupun tempat. Selalu berpasangan.",
+        catatan: "から menandai titik awal, まで menandai titik akhir — bisa dipakai untuk waktu maupun tempat. BOLEH digabung seperti ini, tapi から dan まで juga bisa dipakai SENDIRI-SENDIRI (lihat grup berikutnya) kalau cuma mau nyebutin salah satu titiknya aja.",
         contoh: [
           {jp:"じゅぎょうは　くじから　じゅうにじまでです。", id:"Pelajaran dari jam 9 sampai jam 12."},
           {jp:"デパートは　じゅうじから　にじゅういちじまでです。", id:"Departmen store buka dari jam 10 sampai jam 21."},
@@ -2605,6 +2802,89 @@ const BUNPOU = [
         contoh: [
           {jp:"しちじに　がっこうへ　いきます。", id:"Jam 7 pergi ke sekolah."},
           {jp:"ごじに　うちへ　かえります。", id:"Jam 5 pulang ke rumah."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Partikel Arah & Waktu (へ・に)",
+    judul: "〜から〜 ／ 〜まで〜 (Dipakai sendiri-sendiri)",
+    sub: "から dan まで TIDAK harus selalu berpasangan — masing-masing bisa berdiri sendiri kalau cuma mau menyebutkan salah satu titiknya saja (cuma titik AWAL, atau cuma titik AKHIR).",
+    items: [
+      {
+        pola: "〔titik awal〕からです。",
+        romaji: "~ kara desu.",
+        arti: "Mulai dari ~.",
+        catatan: "PERNYATAAN. から dipakai sendiri (tanpa まで) kalau cuma mau nyebutin TITIK AWAL-nya doang, ditutup です. Contoh paling umum: nyebutin jam BUKA sesuatu tanpa perlu nyebutin jam tutupnya.",
+        contoh: [
+          {jp:"じゅぎょうは　くじからです。", id:"Pelajaran mulai dari jam 9."},
+          {jp:"セールは　あしたからです。", id:"Sale mulai dari besok."},
+          {jp:"としょかんは　くじからです。", id:"Perpustakaan buka mulai jam 9."}
+        ]
+      },
+      {
+        pola: "〔titik awal〕から　〔動詞ます〕。",
+        romaji: "~ kara [doushi-masu].",
+        arti: "Mulai dari ~, [kata kerja].",
+        catatan: "PERNYATAAN. から juga bisa langsung diikuti kata kerja (bukan cuma です) buat nunjukin sejak kapan/dari mana suatu kegiatan dimulai.",
+        contoh: [
+          {jp:"くじから　べんきょうします。", id:"Belajar mulai jam 9."},
+          {jp:"えきから　あるきます。", id:"Berjalan kaki mulai dari stasiun."}
+        ]
+      },
+      {
+        pola: "〔topik〕は　いつから／どこから　ですか？",
+        romaji: "~ wa itsu kara / doko kara desu ka?",
+        arti: "~ mulai dari kapan/mana?",
+        catatan: "PERTANYAAN. いつから (sejak kapan) atau どこから (dari mana) dipakai buat nanya TITIK AWAL doang, tanpa perlu nyebutin titik akhirnya. Cocok banget buat nanya jam buka suatu tempat.",
+        contoh: [
+          {jp:"じゅぎょうは　いつからですか？", id:"Pelajaran mulai dari kapan?"},
+          {jp:"セールは　いつからですか？", id:"Sale mulai kapan?"},
+          {jp:"このでんしゃは　どこからですか？", id:"Kereta ini dari mana (asalnya)?"},
+          {jp:"としょかんは　なんじからですか？", id:"Perpustakaan mulai buka jam berapa?"}
+        ]
+      },
+      {
+        pola: "〔titik akhir〕までです。",
+        romaji: "~ made desu.",
+        arti: "Sampai ~.",
+        catatan: "PERNYATAAN. まで dipakai sendiri (tanpa から) kalau cuma mau nyebutin TITIK AKHIR-nya doang, ditutup です. Contoh paling umum: nyebutin jam TUTUP sesuatu (=buka SAMPAI jam segitu) tanpa perlu nyebutin jam bukanya.",
+        contoh: [
+          {jp:"じゅぎょうは　じゅうにじまでです。", id:"Pelajaran sampai jam 12."},
+          {jp:"セールは　あしたまでです。", id:"Sale sampai besok."},
+          {jp:"ぎんこうは　さんじまでです。", id:"Bank tutup jam 3. (buka sampai jam 3)"}
+        ]
+      },
+      {
+        pola: "〔titik akhir〕まで　〔動詞ます〕。",
+        romaji: "~ made [doushi-masu].",
+        arti: "[Kata kerja] sampai ~.",
+        catatan: "PERNYATAAN. まで juga bisa langsung diikuti kata kerja buat nunjukin sampai kapan/mana suatu kegiatan berlangsung.",
+        contoh: [
+          {jp:"じゅうにじまで　べんきょうします。", id:"Belajar sampai jam 12."},
+          {jp:"がっこうまで　あるきます。", id:"Berjalan kaki sampai sekolah."}
+        ]
+      },
+      {
+        pola: "〔topik〕は　いつまで／どこまで　ですか？",
+        romaji: "~ wa itsu made / doko made desu ka?",
+        arti: "~ sampai kapan/mana?",
+        catatan: "PERTANYAAN. いつまで (sampai kapan) atau どこまで (sampai mana) dipakai buat nanya TITIK AKHIR doang, tanpa perlu nyebutin titik awalnya. Cocok banget buat nanya jam tutup suatu tempat.",
+        contoh: [
+          {jp:"じゅぎょうは　いつまでですか？", id:"Pelajaran sampai kapan?"},
+          {jp:"このでんしゃは　どこまでですか？", id:"Kereta ini sampai mana?"},
+          {jp:"ぎんこうは　なんじまでですか？", id:"Bank tutup jam berapa?"}
+        ]
+      },
+      {
+        pola: "Perbandingan：から〜まで (gabungan) vs から／まで (sendiri-sendiri)",
+        romaji: "kara~made (gabungan) vs kara / made (sendiri)",
+        arti: "Kapan digabung, kapan dipisah.",
+        catatan: "Digabung (から〜まで) kalau kamu tau/mau nyebutin DUA-DUANYA (titik awal DAN akhir). Dipakai sendiri-sendiri kalau cuma tau/mau nyebutin SALAH SATU titiknya aja — dua-duanya sama-sama valid, tinggal sesuai konteks.",
+        contoh: [
+          {jp:"くじから　じゅうにじまでです。", id:"Dari jam 9 sampai jam 12. (gabungan, dua titik)"},
+          {jp:"くじからです。", id:"Mulai dari jam 9. (cuma titik awal)"},
+          {jp:"じゅうにじまでです。", id:"Sampai jam 12. (cuma titik akhir)"}
         ]
       }
     ]
@@ -2740,11 +3020,32 @@ const BUNPOU = [
         pola: "どこへも　〔動詞ません〕。",
         romaji: "doko e mo [doushi-masen].",
         arti: "Tidak pergi ke mana pun.",
-        catatan: "Beda dari なにも: partikel へ (atau に) TIDAK dihilangkan — も ditambahkan SETELAH へ／に, bukan menggantikannya. Jadi 'どこへも', bukan 'どこも' saja.",
+        catatan: "PERNYATAAN. Beda dari なにも: partikel へ (atau に) TIDAK dihilangkan — も ditambahkan SETELAH へ／に, bukan menggantikannya. Jadi 'どこへも', bukan 'どこも' saja.",
         contoh: [
           {jp:"どこへも　いきません。", id:"Tidak pergi ke mana-mana."},
           {jp:"きょうは　どこへも　いきません。", id:"Hari ini tidak pergi ke mana-mana."},
           {jp:"どこにも　いません。", id:"Tidak ada di mana pun. (に+も, untuk keberadaan)"}
+        ]
+      },
+      {
+        pola: "きのう　どこへも　いきませんでした。",
+        romaji: "kinou doko e mo ikimasen deshita.",
+        arti: "Kemarin tidak pergi ke mana-mana.",
+        catatan: "PERNYATAAN (bentuk lampau). ～ませんでした = bentuk negatif lampau dari ～ます. Dipakai kalau nyeritain kejadian yang SUDAH lewat.",
+        contoh: [
+          {jp:"きのう　どこへも　いきませんでした。", id:"Kemarin tidak pergi ke mana-mana."},
+          {jp:"せんしゅう　どこへも　いきませんでした。", id:"Minggu lalu tidak pergi ke mana-mana."}
+        ]
+      },
+      {
+        pola: "どこか　いきましたか？　→　いいえ、どこへも　いきませんでした。",
+        romaji: "dokoka ikimashita ka? → iie, doko e mo ikimasen deshita.",
+        arti: "Pergi ke suatu tempat? → Tidak, tidak pergi ke mana-mana.",
+        catatan: "PERTANYAAN + jawabannya. どこへも sendiri TIDAK dipakai buat nanya (gak ada 'どこへもですか？') — kalimat tanyanya pakai どこか (ke suatu tempat, entah mana) dulu, baru dijawab pakai どこへも kalau jawabannya negatif.",
+        contoh: [
+          {jp:"きょう　どこか　いきますか？", id:"Hari ini mau pergi ke suatu tempat?"},
+          {jp:"いいえ、どこへも　いきません。", id:"Tidak, saya tidak pergi ke mana-mana."},
+          {jp:"はい、がっこうへ　いきます。", id:"Ya, saya pergi ke sekolah. (jawaban positif, gak pakai どこへも)"}
         ]
       },
       {

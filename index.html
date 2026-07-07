@@ -268,10 +268,14 @@
       <button class="cat-btn active" onclick="switchBukuTab('bab1',this)">Bab 1</button>
       <button class="cat-btn" onclick="switchBukuTab('bab2',this)">Bab 2</button>
       <button class="cat-btn" onclick="switchBukuTab('bab3',this)">Bab 3</button>
+      <button class="cat-btn" onclick="switchBukuTab('bab4',this)">Bab 4</button>
+      <button class="cat-btn" onclick="switchBukuTab('bab5',this)">Bab 5</button>
     </div>
     <div id="bukuBab1"></div>
     <div id="bukuBab2" style="display:none"></div>
     <div id="bukuBab3" style="display:none"></div>
+    <div id="bukuBab4" style="display:none"></div>
+    <div id="bukuBab5" style="display:none"></div>
   </div>
 
   <!-- BUNPOU -->
@@ -297,7 +301,9 @@
         <button class="tbtn" data-o="urut" onclick="setWOrder(this)">Berurutan</button>
       </div>
 
-      <div class="qwarn" id="wAINote" style="display:block;color:var(--text3);font-style:italic">Coretanmu di kanvas dicek otomatis oleh AI — pakai API key &amp; provider yang sama dengan tab Latihan AI (butuh model yang mendukung input gambar, mis. gpt-4o-mini, gpt-4o, atau model vision di Groq/OpenRouter).</div>
+      <div class="qwarn" id="wAINote" style="display:block;color:var(--text3);font-style:italic">Coretanmu di kanvas dicek otomatis oleh AI — pakai API key yang sama dengan tab Latihan AI. Fitur ini WAJIB model yang mendukung input gambar (vision) — model teks biasa (mis. default Groq) akan gagal.</div>
+      <input type="text" id="wModelInput" class="input-ai" placeholder="Model vision khusus (opsional, kosongkan utk pakai default)" autocomplete="off" oninput="wSaveVisionModel(this)">
+      <div class="qwarn" id="wModelStatus" style="display:block;color:var(--text3);font-size:.75rem"></div>
 
       <div class="qlabel">Jumlah Soal</div>
       <div class="trow" id="wCntRow">
