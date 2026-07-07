@@ -259,20 +259,15 @@ const QCATS = [
   { id: 'buku-bab3',   label: 'Buku — Bab 3',          t: 'buku' },
   { id: 'buku-bab4',   label: 'Buku — Bab 4',          t: 'buku' },
   { id: 'buku-bab5',   label: 'Buku — Bab 5',          t: 'buku' },
-  { id: 'bunpou-dasar',   label: 'Bunpou — Kalimat Dasar',       t: 'bunpou' },
-  { id: 'bunpou-kosoado', label: 'Bunpou — Ko-So-A-Do',          t: 'bunpou' },
-  { id: 'bunpou-id',      label: 'Bunpou — Identitas Diri',      t: 'bunpou' },
-  { id: 'bunpou-waktu',   label: 'Bunpou — Waktu, Jumlah, Harga',t: 'bunpou' },
-  { id: 'bunpou-minta',   label: 'Bunpou — Meminta & Permintaan',t: 'bunpou' },
-  { id: 'bunpou-jenis',   label: 'Bunpou — Jenis & Kepemilikan', t: 'bunpou' },
-  { id: 'bunpou-objek',   label: 'Bunpou — Partikel Objek & Tempat (を・で)', t: 'bunpou' },
-  { id: 'bunpou-arah',    label: 'Bunpou — Partikel Arah & Waktu (へ・に)',   t: 'bunpou' },
-  { id: 'bunpou-negasi',  label: 'Bunpou — Negasi & Kata Ganti Tak Tentu',   t: 'bunpou' },
-  { id: 'bunpou-arimasu',    label: 'Bunpou — Arah, Lokasi & Keberadaan',       t: 'bunpou' },
-  { id: 'bunpou-kendaraan',  label: 'Bunpou — Kendaraan, Durasi & どのぐらい',    t: 'bunpou' },
-  { id: 'bunpou-sifattempat',label: 'Bunpou — Kata Sifat: Menjelaskan Tempat', t: 'bunpou' },
-  { id: 'bunpou-cuaca',      label: 'Bunpou — Kadar & Cuaca',                   t: 'bunpou' },
-  { id: 'bunpou-rasa',       label: 'Bunpou — Sifat Rasa & Suhu Benda',         t: 'bunpou' },
+  { id: 'bunpou-hari1',   label: 'Bunpou — Hari 1',            t: 'bunpou' },
+  { id: 'bunpou-hari2',   label: 'Bunpou — Hari 2',            t: 'bunpou' },
+  { id: 'bunpou-hari3',   label: 'Bunpou — Hari 3',            t: 'bunpou' },
+  { id: 'bunpou-hari4',   label: 'Bunpou — Hari 4',            t: 'bunpou' },
+  { id: 'bunpou-hari5',   label: 'Bunpou — Hari 5',            t: 'bunpou' },
+  { id: 'bunpou-hari6',   label: 'Bunpou — Hari 6',            t: 'bunpou' },
+  { id: 'bunpou-hari7',   label: 'Bunpou — Hari 7',            t: 'bunpou' },
+  { id: 'bunpou-hari8',   label: 'Bunpou — Hari 8',            t: 'bunpou' },
+  { id: 'bunpou-tambahan',label: 'Bunpou — Materi Tambahan',   t: 'bunpou' },
 ];
 
 let SC = new Set(), ST = new Set(['kana-to-romaji']), QN = 10;
@@ -394,20 +389,15 @@ function bukuItems(cid) {
 
 function bunpouItems(cid) {
   const temaMap = {
-    'bunpou-dasar':    'Kalimat Dasar',
-    'bunpou-kosoado':  'Ko-So-A-Do',
-    'bunpou-id':       'Identitas Diri',
-    'bunpou-waktu':    'Waktu, Jumlah & Harga',
-    'bunpou-minta':    'Meminta & Permintaan',
-    'bunpou-jenis':    'Menanyakan Jenis & Kepemilikan',
-    'bunpou-objek':    'Partikel Objek & Tempat (を・で)',
-    'bunpou-arah':     'Partikel Arah & Waktu (へ・に)',
-    'bunpou-negasi':   'Negasi & Kata Ganti Tak Tentu',
-    'bunpou-arimasu':    'Arah, Lokasi & Keberadaan (あります)',
-    'bunpou-kendaraan':  'Kendaraan, Durasi & どのぐらい',
-    'bunpou-sifattempat':'Kata Sifat: Menjelaskan Tempat (い／な＋そして)',
-    'bunpou-cuaca':      'Kadar & Cuaca (とても・あまり・天気)',
-    'bunpou-rasa':       'Sifat Rasa & Suhu Benda (vs Cuaca)'
+    'bunpou-hari1':    'Hari 1',
+    'bunpou-hari2':    'Hari 2',
+    'bunpou-hari3':    'Hari 3',
+    'bunpou-hari4':    'Hari 4',
+    'bunpou-hari5':    'Hari 5',
+    'bunpou-hari6':    'Hari 6',
+    'bunpou-hari7':    'Hari 7',
+    'bunpou-hari8':    'Hari 8',
+    'bunpou-tambahan': 'Materi Tambahan',
   };
   const tema = temaMap[cid];
   if (!tema || !Array.isArray(BUNPOU)) return [];
@@ -812,20 +802,15 @@ let AI_MODE = 'vocab';      // 'vocab' (isian kata) atau 'bunpou' (bikin kalimat
 
 function bunpouFullItems(cidSet) {
   const temaMap = {
-    'bunpou-dasar':    'Kalimat Dasar',
-    'bunpou-kosoado':  'Ko-So-A-Do',
-    'bunpou-id':       'Identitas Diri',
-    'bunpou-waktu':    'Waktu, Jumlah & Harga',
-    'bunpou-minta':    'Meminta & Permintaan',
-    'bunpou-jenis':    'Menanyakan Jenis & Kepemilikan',
-    'bunpou-objek':    'Partikel Objek & Tempat (を・で)',
-    'bunpou-arah':     'Partikel Arah & Waktu (へ・に)',
-    'bunpou-negasi':   'Negasi & Kata Ganti Tak Tentu',
-    'bunpou-arimasu':    'Arah, Lokasi & Keberadaan (あります)',
-    'bunpou-kendaraan':  'Kendaraan, Durasi & どのぐらい',
-    'bunpou-sifattempat':'Kata Sifat: Menjelaskan Tempat (い／な＋そして)',
-    'bunpou-cuaca':      'Kadar & Cuaca (とても・あまり・天気)',
-    'bunpou-rasa':       'Sifat Rasa & Suhu Benda (vs Cuaca)'
+    'bunpou-hari1':    'Hari 1',
+    'bunpou-hari2':    'Hari 2',
+    'bunpou-hari3':    'Hari 3',
+    'bunpou-hari4':    'Hari 4',
+    'bunpou-hari5':    'Hari 5',
+    'bunpou-hari6':    'Hari 6',
+    'bunpou-hari7':    'Hari 7',
+    'bunpou-hari8':    'Hari 8',
+    'bunpou-tambahan': 'Materi Tambahan',
   };
   const temas = [...cidSet].map(id => temaMap[id]).filter(Boolean);
   if (!temas.length || !Array.isArray(BUNPOU)) return [];

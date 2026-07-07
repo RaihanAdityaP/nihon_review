@@ -1787,12 +1787,12 @@ bab5: {
 const BUNPOU = [
 
   // ═══════════════════════════════════════════════
-  // KALIMAT DASAR
+  // HARI 1
   // ═══════════════════════════════════════════════
   {
-    tema: "Kalimat Dasar",
+    tema: "Hari 1",
     judul: "〜は　〜です (A adalah B)",
-    sub: "Pola kalimat nominatif paling dasar — menyatakan identitas atau fakta. は menandai topik, です menyambungkan ke predikat.",
+    sub: "Pola nominatif paling dasar — menyatakan identitas atau fakta, plus bentuk tanyanya.",
     items: [
       {
         pola: "〜は　〜です。",
@@ -1805,6 +1805,86 @@ const BUNPOU = [
           {jp:"せんせいは　たなかさんです。", id:"Gurunya adalah Tanaka-san."}
         ]
       },
+      {
+        pola: "〜は　〜ですか？",
+        romaji: "~ wa ~ desu ka?",
+        arti: "Apakah ~ adalah ~? (pertanyaan)",
+        catatan: "Tambahkan か di akhir untuk membentuk kalimat tanya. Intonasi datar atau sedikit naik.",
+        contoh: [
+          {jp:"たなかさんは　がくせいですか？", id:"Apakah Tanaka-san siswa?"},
+          {jp:"これは　にほんごですか？", id:"Apakah ini bahasa Jepang?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 1",
+    judul: "〜じん (Menyatakan & menanyakan kewarganegaraan)",
+    sub: "〜じん melabeli kewarganegaraan secara langsung — beda dari おくにはどちらですか yang menanyakan asal secara lebih halus.",
+    items: [
+      {
+        pola: "〔国名〕＋　じん",
+        romaji: "[negara] + jin",
+        arti: "Orang ~ / Warga negara ~",
+        catatan: "じん (人) = orang. Ditambahkan langsung setelah nama negara.",
+        contoh: [
+          {jp:"にほんじん", id:"orang Jepang"},
+          {jp:"インドネシアじん", id:"orang Indonesia"}
+        ]
+      },
+      {
+        pola: "（わたしは）　〜じんです。",
+        romaji: "(watashi wa) ~jin desu.",
+        arti: "(Saya) orang ~. (pernyataan)",
+        catatan: "Gabungan partikel は + 〜じん + です. Menyebutkan LABEL/identitas negaranya langsung.",
+        contoh: [
+          {jp:"わたしは　インドネシアじんです。", id:"Saya orang Indonesia."},
+          {jp:"たなかさんは　にほんじんです。", id:"Tanaka-san orang Jepang."}
+        ]
+      },
+      {
+        pola: "〜は　なにじんですか？",
+        romaji: "~ wa nani jin desu ka?",
+        arti: "~ orang mana? (pertanyaan, langsung)",
+        catatan: "Bentuk tanya langsung. Jawab dengan 〜じんです. Lebih to-the-point dibanding おくにはどちらですか — cocok untuk teman sebaya/situasi santai.",
+        contoh: [
+          {jp:"〜さんは　なにじんですか？", id:"~ orang mana?"},
+          {jp:"あのひとは　なにじんですか？", id:"Orang itu orang mana?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 1",
+    judul: "おしごとは？ (Menyatakan & menanyakan pekerjaan)",
+    sub: "Pola menyebutkan profesi/pekerjaan diri sendiri atau orang lain.",
+    items: [
+      {
+        pola: "（わたしの）　しごとは　〜です。",
+        romaji: "(watashi no) shigoto wa ~ desu.",
+        arti: "Pekerjaan (saya) adalah ~. (pernyataan)",
+        catatan: "Bisa juga langsung pakai 〜は〜です tanpa kata しごと: わたしは　がくせいです (saya siswa).",
+        contoh: [
+          {jp:"わたしの　しごとは　かいしゃいんです。", id:"Pekerjaan saya karyawan perusahaan."},
+          {jp:"わたしは　がくせいです。", id:"Saya (adalah) siswa."}
+        ]
+      },
+      {
+        pola: "おしごとは　なんですか？",
+        romaji: "oshigoto wa nan desu ka?",
+        arti: "Pekerjaannya apa? (pertanyaan)",
+        catatan: "Bentuk tanya yang sopan, dengan prefiks お.",
+        contoh: [
+          {jp:"〜さんの　おしごとは　なんですか？", id:"Pekerjaan ~ apa? (sopan)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 1",
+    judul: "〜は　〜じゃありません (Bentuk negatif)",
+    sub: "Bentuk negatif dari 〜は〜です — formal (では ありません) dan santai (じゃありません), termasuk bentuk tanyanya.",
+    items: [
       {
         pola: "〜は　〜では　ありません。",
         romaji: "~ wa ~ dewa arimasen.",
@@ -1826,16 +1906,6 @@ const BUNPOU = [
         ]
       },
       {
-        pola: "〜は　〜ですか？",
-        romaji: "~ wa ~ desu ka?",
-        arti: "Apakah ~ adalah ~? (pertanyaan)",
-        catatan: "Tambahkan か di akhir untuk membentuk kalimat tanya. Intonasi datar atau sedikit naik.",
-        contoh: [
-          {jp:"たなかさんは　がくせいですか？", id:"Apakah Tanaka-san siswa?"},
-          {jp:"これは　にほんごですか？", id:"Apakah ini bahasa Jepang?"}
-        ]
-      },
-      {
         pola: "〜は　〜じゃありませんか？",
         romaji: "~ wa ~ja arimasen ka?",
         arti: "Bukankah ~ itu ~? (pertanyaan konfirmasi negatif)",
@@ -1848,7 +1918,134 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Kalimat Dasar",
+    tema: "Hari 1",
+    judul: "〜の〜 (kepemilikan / penghubung kata benda)",
+    sub: "Partikel の menghubungkan dua kata benda, setara apostrophe-s ('s) dalam bahasa Inggris tapi lebih luas fungsinya.",
+    items: [
+      {
+        pola: "〔名詞A〕の　〔名詞B〕",
+        romaji: "[meishi A] no [meishi B]",
+        arti: "B dari A / B milik A / B tentang A",
+        catatan: "の menghubungkan dua kata benda. A menerangkan B.",
+        contoh: [
+          {jp:"わたしの　ほん", id:"buku saya"},
+          {jp:"にほんの　たべもの", id:"makanan Jepang"},
+          {jp:"がっこうの　せんせい", id:"guru (di) sekolah"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 1",
+    judul: "〜さいです (Menyatakan & menanyakan umur)",
+    sub: "Pola menyebutkan usia memakai counter 〜さい.",
+    items: [
+      {
+        pola: "（わたしは）　〜さいです。",
+        romaji: "(watashi wa) ~sai desu.",
+        arti: "(Saya) berumur ~ tahun. (pernyataan)",
+        catatan: "〜さい (歳) ditambahkan setelah angka. Perhatikan pengucapan khusus: よんさい (4), はっさい (8), じゅっさい (10), はたち (20, BUKAN にじゅっさい!).",
+        contoh: [
+          {jp:"わたしは　にじゅっさいです。", id:"Saya berumur 20 tahun."},
+          {jp:"おとうとは　じゅっさいです。", id:"Adik laki-laki (saya) berumur 10 tahun."}
+        ]
+      },
+      {
+        pola: "〜は　なんさいですか？ / おいくつですか？",
+        romaji: "~ wa nansai desu ka? / oikutsu desu ka?",
+        arti: "~ umur berapa? (pertanyaan)",
+        catatan: "なんさい = santai/netral. おいくつ = sopan, dipakai untuk orang lebih tua atau atasan.",
+        contoh: [
+          {jp:"〜さんは　なんさいですか？", id:"~ umur berapa?"},
+          {jp:"〜さんは　おいくつですか？", id:"~ umur berapa? (sopan)"}
+        ]
+      }
+    ]
+  },
+  // ═══════════════════════════════════════════════
+  // HARI 2
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 2",
+    judul: "〜はいつですか？ (Menyatakan & menanyakan waktu)",
+    sub: "Pola menyatakan dan menanyakan kapan suatu peristiwa terjadi.",
+    items: [
+      {
+        pola: "〜は　〜です。",
+        romaji: "~ wa ~ desu.",
+        arti: "~ adalah (pada) ~. (pernyataan waktu)",
+        catatan: "Pola pernyataan waktu memakai です langsung setelah keterangan waktu (tanggal/bulan/hari).",
+        contoh: [
+          {jp:"たんじょうびは　はちがつ　むいかです。", id:"Ulang tahun (saya) tanggal 6 Agustus."},
+          {jp:"テストは　らいしゅうです。", id:"Ujiannya minggu depan."}
+        ]
+      },
+      {
+        pola: "〜は　いつですか？",
+        romaji: "~ wa itsu desu ka?",
+        arti: "~ kapan? (pertanyaan)",
+        catatan: "いつ = kata tanya 'kapan'. Sering dipakai untuk ulang tahun, jadwal, atau acara.",
+        contoh: [
+          {jp:"たんじょうびは　いつですか？", id:"Ulang tahunnya kapan?"},
+          {jp:"テストは　いつですか？", id:"Ujiannya kapan?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 2",
+    judul: "しゅみは？ (Menyatakan & menanyakan hobi)",
+    sub: "Pola memperkenalkan hobi, termasuk variasi の untuk merinci jenis hobi orang lain.",
+    items: [
+      {
+        pola: "しゅみは　〜です。",
+        romaji: "shumi wa ~ desu.",
+        arti: "Hobi (saya) adalah ~. (pernyataan)",
+        catatan: "Pola pernyataan dasar untuk memperkenalkan hobi sendiri.",
+        contoh: [
+          {jp:"しゅみは　どくしょです。", id:"Hobi (saya) adalah membaca buku."},
+          {jp:"しゅみは　サッカーです。", id:"Hobi (saya) adalah sepak bola."}
+        ]
+      },
+      {
+        pola: "〜の　しゅみは　〜です。",
+        romaji: "~ no shumi wa ~ desu.",
+        arti: "Hobi (milik) ~ adalah ~. (orang lain)",
+        catatan: "の menghubungkan pemilik hobi dengan kata しゅみ. Dipakai saat menyebut hobi orang lain secara spesifik.",
+        contoh: [
+          {jp:"たなかさんの　しゅみは　サッカーです。", id:"Hobi Tanaka-san adalah sepak bola."}
+        ]
+      },
+      {
+        pola: "しゅみは　なんですか？",
+        romaji: "shumi wa nan desu ka?",
+        arti: "Hobinya apa? (pertanyaan)",
+        catatan: "Pertanyaan standar saat berkenalan di Jepang. Jawab dengan しゅみは〜です.",
+        contoh: [
+          {jp:"しゅみは　なんですか？", id:"Hobinya apa?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 2",
+    judul: "〜と　〜 (dan, menggabungkan kata benda)",
+    sub: "Partikel と menghubungkan dua kata benda — beda dari し yang menggabungkan alasan/kalimat.",
+    items: [
+      {
+        pola: "〔名詞A〕と　〔名詞B〕",
+        romaji: "[meishi A] to [meishi B]",
+        arti: "A dan B",
+        catatan: "と menghubungkan dua kata benda secara langsung, setara 'and' dalam bahasa Inggris untuk daftar barang/orang.",
+        contoh: [
+          {jp:"テニスと　すいえいが　すきです。", id:"(Saya) suka tenis dan renang."},
+          {jp:"がくせいと　せんせい", id:"siswa dan guru"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 2",
     judul: "〜も　〜です (~ juga ~)",
     sub: "Partikel も (mo) menggantikan は untuk menyatakan kesamaan dengan topik sebelumnya.",
     items: [
@@ -1874,74 +2071,53 @@ const BUNPOU = [
       }
     ]
   },
+  // ═══════════════════════════════════════════════
+  // HARI 3
+  // ═══════════════════════════════════════════════
   {
-    tema: "Kalimat Dasar",
-    judul: "〜の〜 (kepemilikan / penghubung kata benda)",
-    sub: "Partikel の menghubungkan dua kata benda, setara apostrophe-s ('s) dalam bahasa Inggris tapi lebih luas fungsinya.",
+    tema: "Hari 3",
+    judul: "おくにはどちらですか？ (Menanyakan asal negara — sopan)",
+    sub: "Versi lebih halus/sopan dari なにじんですか — menanyakan asal negara, bukan langsung melabeli kewarganegaraan.",
     items: [
       {
-        pola: "〔名詞A〕の　〔名詞B〕",
-        romaji: "[meishi A] no [meishi B]",
-        arti: "B dari A / B milik A / B tentang A",
-        catatan: "の menghubungkan dua kata benda. A menerangkan B.",
+        pola: "おくには　どちらですか？",
+        romaji: "okuni wa dochira desu ka?",
+        arti: "Negara Anda yang mana? / Anda berasal dari negara mana? (sopan)",
+        catatan: "Beda dengan なにじんですか yang langsung menanyakan LABEL kewarganegaraan, pola ini menanyakan ASAL secara lebih halus. Lebih cocok saat baru kenalan atau ke orang yang lebih dihormati.",
         contoh: [
-          {jp:"わたしの　ほん", id:"buku saya"},
-          {jp:"にほんの　たべもの", id:"makanan Jepang"},
-          {jp:"がっこうの　せんせい", id:"guru (di) sekolah"}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Kalimat Dasar",
-    judul: "〜と　〜 (dan, menggabungkan kata benda)",
-    sub: "Partikel と menghubungkan dua kata benda — beda dari し yang menggabungkan alasan/kalimat.",
-    items: [
-      {
-        pola: "〔名詞A〕と　〔名詞B〕",
-        romaji: "[meishi A] to [meishi B]",
-        arti: "A dan B",
-        catatan: "と menghubungkan dua kata benda secara langsung, setara 'and' dalam bahasa Inggris untuk daftar barang/orang.",
-        contoh: [
-          {jp:"テニスと　すいえいが　すきです。", id:"(Saya) suka tenis dan renang."},
-          {jp:"がくせいと　せんせい", id:"siswa dan guru"}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Kalimat Dasar",
-    judul: "〜や〜など (menyebutkan sebagian, tidak lengkap)",
-    sub: "や menggabungkan beberapa kata benda sebagai CONTOH SEBAGIAN (tidak menyebutkan semuanya), biasanya ditutup dengan など (dan lain-lain). Beda dari と yang menyebutkan SEMUA item secara lengkap/pasti.",
-    items: [
-      {
-        pola: "〔名詞A〕や　〔名詞B〕など",
-        romaji: "[meishi A] ya [meishi B] nado",
-        arti: "A, B, dan lain-lain (sebagian contoh saja)",
-        catatan: "や dipakai kalau yang disebutkan cuma SEBAGIAN CONTOH dari sesuatu yang lebih banyak — biasanya ditutup dengan など (dsb) di akhir daftar.",
-        contoh: [
-          {jp:"つくえのうえに　ほんや　ノートなどが　あります。", id:"Di atas meja ada buku, buku catatan, dan lain-lain."},
-          {jp:"パンや　たまごなどを　かいます。", id:"Membeli roti, telur, dan lain-lain."}
+          {jp:"すみません、おくには　どちらですか？", id:"Permisi, Anda berasal dari negara mana?"}
         ]
       },
       {
-        pola: "Perbandingan：と (lengkap) vs や〜など (sebagian)",
-        romaji: "to (lengkap) vs ya ~ nado (sebagian)",
-        arti: "Perbedaan makna と dan や〜など saat menggabungkan kata benda.",
-        catatan: "と = daftar itu PASTI LENGKAP, hanya item yang disebutkan itu saja, tidak ada yang lain. や〜など = daftar itu CONTOH SAJA, masih ada barang lain yang tidak disebutkan satu-satu.",
+        pola: "（わたしの　くには）　〜です。",
+        romaji: "(watashi no kuni wa) ~ desu.",
+        arti: "(Negara saya) adalah ~. (jawaban formal)",
+        catatan: "Jawaban yang sejalan dengan pertanyaan おくにはどちらですか — menyebutkan nama negara, bukan bentuk 〜じん. Bisa juga dijawab pakai 〜じんです biasa.",
         contoh: [
-          {jp:"つくえのうえに　ほんと　ノートが　あります。", id:"Di atas meja ada buku dan buku catatan. (cuma dua itu, lengkap)"},
-          {jp:"つくえのうえに　ほんや　ノートなどが　あります。", id:"Di atas meja ada buku, buku catatan, dan lain-lain. (masih ada barang lain)"}
+          {jp:"わたしの　くには　インドネシアです。", id:"Negara saya adalah Indonesia."}
         ]
       }
     ]
   },
-
-  // ═══════════════════════════════════════════════
-  // KO-SO-A-DO (kata tunjuk)
-  // ═══════════════════════════════════════════════
   {
-    tema: "Ko-So-A-Do",
+    tema: "Hari 3",
+    judul: "おすまいはどちらですか？ (Menanyakan tempat tinggal — sopan)",
+    sub: "Pola sopan untuk bertanya tempat tinggal seseorang.",
+    items: [
+      {
+        pola: "おすまいは　どちらですか？",
+        romaji: "osumai wa dochira desu ka?",
+        arti: "Tinggal di mana? (sopan)",
+        catatan: "'O' (hormat) + sumai (tempat tinggal) + wa + dochira. Lebih sopan dari どこにすんでいますか. Dipakai dalam konteks formal atau kepada orang yang baru dikenal.",
+        contoh: [
+          {jp:"おすまいは　どちらですか？", id:"Tinggal di mana?"},
+          {jp:"じゃかるたに　すんでいます。", id:"(Saya) tinggal di Jakarta."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 3",
     judul: "これ／それ／あれ／どれ — untuk BENDA, berdiri sendiri",
     sub: "Menunjuk BENDA sebagai pengganti kata benda — BISA berdiri sendiri tanpa perlu diikuti kata benda lain. Beda dari この/その/あの/どの yang WAJIB diikuti kata benda.",
     items: [
@@ -1992,7 +2168,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Ko-So-A-Do",
+    tema: "Hari 3",
     judul: "この／その／あの／どの — untuk MENERANGKAN benda",
     sub: "WAJIB diikuti kata benda — tidak bisa berdiri sendiri! Beda dari これ/それ/あれ/どれ yang menggantikan kata benda, kelompok ini menerangkan/menempel pada kata benda. この本 (benar) vs この (salah, harus ada kata bendanya).",
     items: [
@@ -2043,7 +2219,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Ko-So-A-Do",
+    tema: "Hari 3",
     judul: "ここ／そこ／あそこ／どこ — untuk TEMPAT",
     sub: "Menunjuk LOKASI/tempat secara langsung — bisa berdiri sendiri tanpa kata benda setelahnya. こ=dekat pembicara, そ=dekat pendengar, あ=jauh dari keduanya, ど=bentuk tanya.",
     items: [
@@ -2123,7 +2299,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Ko-So-A-Do",
+    tema: "Hari 3",
     judul: "こちら／そちら／あちら／どちら — bentuk SOPAN",
     sub: "Versi lebih sopan/formal, serbaguna — bisa menggantikan ここ (tempat), これ (benda), bahkan menyapa orang secara halus. Sering dipakai di telepon, ke tamu, atau situasi resmi.",
     items: [
@@ -2173,244 +2349,8 @@ const BUNPOU = [
       }
     ]
   },
-
-  // ═══════════════════════════════════════════════
-  // IDENTITAS DIRI
-  // ═══════════════════════════════════════════════
   {
-    tema: "Identitas Diri",
-    judul: "おなまえは？ (Menanyakan & menyatakan nama)",
-    sub: "Pola dasar berkenalan — menanyakan dan menyebutkan nama.",
-    items: [
-      {
-        pola: "おなまえは？ / おなまえは　なんですか？",
-        romaji: "onamae wa? / onamae wa nan desu ka?",
-        arti: "Siapa namamu? / Namanya siapa?",
-        catatan: "Prefiks 'o' (お) menambahkan kesan sopan. Tanpa 'o': なまえは？ lebih santai. Jawab: ～です.",
-        contoh: [
-          {jp:"おなまえは　なんですか？", id:"Namanya siapa?"},
-          {jp:"わたしの　なまえは　レンディです。", id:"Nama saya Rendi."}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Identitas Diri",
-    judul: "〜じん (Menyatakan & menanyakan kewarganegaraan)",
-    sub: "〜じん melabeli kewarganegaraan secara langsung — beda dari おくにはどちらですか yang menanyakan asal secara lebih halus.",
-    items: [
-      {
-        pola: "〔国名〕＋　じん",
-        romaji: "[negara] + jin",
-        arti: "Orang ~ / Warga negara ~",
-        catatan: "じん (人) = orang. Ditambahkan langsung setelah nama negara.",
-        contoh: [
-          {jp:"にほんじん", id:"orang Jepang"},
-          {jp:"インドネシアじん", id:"orang Indonesia"}
-        ]
-      },
-      {
-        pola: "（わたしは）　〜じんです。",
-        romaji: "(watashi wa) ~jin desu.",
-        arti: "(Saya) orang ~. (pernyataan)",
-        catatan: "Gabungan partikel は + 〜じん + です. Menyebutkan LABEL/identitas negaranya langsung.",
-        contoh: [
-          {jp:"わたしは　インドネシアじんです。", id:"Saya orang Indonesia."},
-          {jp:"たなかさんは　にほんじんです。", id:"Tanaka-san orang Jepang."}
-        ]
-      },
-      {
-        pola: "〜は　なにじんですか？",
-        romaji: "~ wa nani jin desu ka?",
-        arti: "~ orang mana? (pertanyaan, langsung)",
-        catatan: "Bentuk tanya langsung. Jawab dengan 〜じんです. Lebih to-the-point dibanding おくにはどちらですか — cocok untuk teman sebaya/situasi santai.",
-        contoh: [
-          {jp:"〜さんは　なにじんですか？", id:"~ orang mana?"},
-          {jp:"あのひとは　なにじんですか？", id:"Orang itu orang mana?"}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Identitas Diri",
-    judul: "おくにはどちらですか？ (Menanyakan asal negara — sopan)",
-    sub: "Versi lebih halus/sopan dari なにじんですか — menanyakan asal negara, bukan langsung melabeli kewarganegaraan.",
-    items: [
-      {
-        pola: "おくには　どちらですか？",
-        romaji: "okuni wa dochira desu ka?",
-        arti: "Negara Anda yang mana? / Anda berasal dari negara mana? (sopan)",
-        catatan: "Beda dengan なにじんですか yang langsung menanyakan LABEL kewarganegaraan, pola ini menanyakan ASAL secara lebih halus. Lebih cocok saat baru kenalan atau ke orang yang lebih dihormati.",
-        contoh: [
-          {jp:"すみません、おくには　どちらですか？", id:"Permisi, Anda berasal dari negara mana?"}
-        ]
-      },
-      {
-        pola: "（わたしの　くには）　〜です。",
-        romaji: "(watashi no kuni wa) ~ desu.",
-        arti: "(Negara saya) adalah ~. (jawaban formal)",
-        catatan: "Jawaban yang sejalan dengan pertanyaan おくにはどちらですか — menyebutkan nama negara, bukan bentuk 〜じん. Bisa juga dijawab pakai 〜じんです biasa.",
-        contoh: [
-          {jp:"わたしの　くには　インドネシアです。", id:"Negara saya adalah Indonesia."}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Identitas Diri",
-    judul: "おしごとは？ (Menyatakan & menanyakan pekerjaan)",
-    sub: "Pola menyebutkan profesi/pekerjaan diri sendiri atau orang lain.",
-    items: [
-      {
-        pola: "（わたしの）　しごとは　〜です。",
-        romaji: "(watashi no) shigoto wa ~ desu.",
-        arti: "Pekerjaan (saya) adalah ~. (pernyataan)",
-        catatan: "Bisa juga langsung pakai 〜は〜です tanpa kata しごと: わたしは　がくせいです (saya siswa).",
-        contoh: [
-          {jp:"わたしの　しごとは　かいしゃいんです。", id:"Pekerjaan saya karyawan perusahaan."},
-          {jp:"わたしは　がくせいです。", id:"Saya (adalah) siswa."}
-        ]
-      },
-      {
-        pola: "おしごとは　なんですか？",
-        romaji: "oshigoto wa nan desu ka?",
-        arti: "Pekerjaannya apa? (pertanyaan)",
-        catatan: "Bentuk tanya yang sopan, dengan prefiks お.",
-        contoh: [
-          {jp:"〜さんの　おしごとは　なんですか？", id:"Pekerjaan ~ apa? (sopan)"}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Identitas Diri",
-    judul: "〜さいです (Menyatakan & menanyakan umur)",
-    sub: "Pola menyebutkan usia memakai counter 〜さい.",
-    items: [
-      {
-        pola: "（わたしは）　〜さいです。",
-        romaji: "(watashi wa) ~sai desu.",
-        arti: "(Saya) berumur ~ tahun. (pernyataan)",
-        catatan: "〜さい (歳) ditambahkan setelah angka. Perhatikan pengucapan khusus: よんさい (4), はっさい (8), じゅっさい (10), はたち (20, BUKAN にじゅっさい!).",
-        contoh: [
-          {jp:"わたしは　にじゅっさいです。", id:"Saya berumur 20 tahun."},
-          {jp:"おとうとは　じゅっさいです。", id:"Adik laki-laki (saya) berumur 10 tahun."}
-        ]
-      },
-      {
-        pola: "〜は　なんさいですか？ / おいくつですか？",
-        romaji: "~ wa nansai desu ka? / oikutsu desu ka?",
-        arti: "~ umur berapa? (pertanyaan)",
-        catatan: "なんさい = santai/netral. おいくつ = sopan, dipakai untuk orang lebih tua atau atasan.",
-        contoh: [
-          {jp:"〜さんは　なんさいですか？", id:"~ umur berapa?"},
-          {jp:"〜さんは　おいくつですか？", id:"~ umur berapa? (sopan)"}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Identitas Diri",
-    judul: "しゅみは？ (Menyatakan & menanyakan hobi)",
-    sub: "Pola memperkenalkan hobi, termasuk variasi の untuk merinci jenis hobi orang lain.",
-    items: [
-      {
-        pola: "しゅみは　〜です。",
-        romaji: "shumi wa ~ desu.",
-        arti: "Hobi (saya) adalah ~. (pernyataan)",
-        catatan: "Pola pernyataan dasar untuk memperkenalkan hobi sendiri.",
-        contoh: [
-          {jp:"しゅみは　どくしょです。", id:"Hobi (saya) adalah membaca buku."},
-          {jp:"しゅみは　サッカーです。", id:"Hobi (saya) adalah sepak bola."}
-        ]
-      },
-      {
-        pola: "〜の　しゅみは　〜です。",
-        romaji: "~ no shumi wa ~ desu.",
-        arti: "Hobi (milik) ~ adalah ~. (orang lain)",
-        catatan: "の menghubungkan pemilik hobi dengan kata しゅみ. Dipakai saat menyebut hobi orang lain secara spesifik.",
-        contoh: [
-          {jp:"たなかさんの　しゅみは　サッカーです。", id:"Hobi Tanaka-san adalah sepak bola."}
-        ]
-      },
-      {
-        pola: "しゅみは　なんですか？",
-        romaji: "shumi wa nan desu ka?",
-        arti: "Hobinya apa? (pertanyaan)",
-        catatan: "Pertanyaan standar saat berkenalan di Jepang. Jawab dengan しゅみは〜です.",
-        contoh: [
-          {jp:"しゅみは　なんですか？", id:"Hobinya apa?"}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Identitas Diri",
-    judul: "おすまいはどちらですか？ (Menanyakan tempat tinggal — sopan)",
-    sub: "Pola sopan untuk bertanya tempat tinggal seseorang.",
-    items: [
-      {
-        pola: "おすまいは　どちらですか？",
-        romaji: "osumai wa dochira desu ka?",
-        arti: "Tinggal di mana? (sopan)",
-        catatan: "'O' (hormat) + sumai (tempat tinggal) + wa + dochira. Lebih sopan dari どこにすんでいますか. Dipakai dalam konteks formal atau kepada orang yang baru dikenal.",
-        contoh: [
-          {jp:"おすまいは　どちらですか？", id:"Tinggal di mana?"},
-          {jp:"じゃかるたに　すんでいます。", id:"(Saya) tinggal di Jakarta."}
-        ]
-      }
-    ]
-  },
-
-  // ═══════════════════════════════════════════════
-  // WAKTU, JUMLAH & HARGA
-  // ═══════════════════════════════════════════════
-  {
-    tema: "Waktu, Jumlah & Harga",
-    judul: "〜はいつですか？ (Menyatakan & menanyakan waktu)",
-    sub: "Pola menyatakan dan menanyakan kapan suatu peristiwa terjadi.",
-    items: [
-      {
-        pola: "〜は　〜です。",
-        romaji: "~ wa ~ desu.",
-        arti: "~ adalah (pada) ~. (pernyataan waktu)",
-        catatan: "Pola pernyataan waktu memakai です langsung setelah keterangan waktu (tanggal/bulan/hari).",
-        contoh: [
-          {jp:"たんじょうびは　はちがつ　むいかです。", id:"Ulang tahun (saya) tanggal 6 Agustus."},
-          {jp:"テストは　らいしゅうです。", id:"Ujiannya minggu depan."}
-        ]
-      },
-      {
-        pola: "〜は　いつですか？",
-        romaji: "~ wa itsu desu ka?",
-        arti: "~ kapan? (pertanyaan)",
-        catatan: "いつ = kata tanya 'kapan'. Sering dipakai untuk ulang tahun, jadwal, atau acara.",
-        contoh: [
-          {jp:"たんじょうびは　いつですか？", id:"Ulang tahunnya kapan?"},
-          {jp:"テストは　いつですか？", id:"Ujiannya kapan?"}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Waktu, Jumlah & Harga",
-    judul: "なんじですか？ (Menanyakan jam)",
-    sub: "Pola menanyakan waktu dalam jam.",
-    items: [
-      {
-        pola: "なんじですか？ / いまなんじですか？",
-        romaji: "nanji desu ka? / ima nanji desu ka?",
-        arti: "Jam berapa? / Sekarang jam berapa?",
-        catatan: "なんじ = jam berapa. いま = sekarang. Jawab: ～じ～ふんです.",
-        contoh: [
-          {jp:"いま　なんじですか？", id:"Sekarang jam berapa?"},
-          {jp:"ごじはんです。", id:"(Sekarang) jam setengah enam."}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Waktu, Jumlah & Harga",
+    tema: "Hari 3",
     judul: "いくらですか？ (Menanyakan harga)",
     sub: "Pola wajib saat berbelanja.",
     items: [
@@ -2436,47 +2376,11 @@ const BUNPOU = [
       }
     ]
   },
-  {
-    tema: "Waktu, Jumlah & Harga",
-    judul: "なんにんですか？ (Menanyakan jumlah orang)",
-    sub: "Pola menanyakan jumlah orang menggunakan counter khusus.",
-    items: [
-      {
-        pola: "なんにんですか？",
-        romaji: "nannin desu ka?",
-        arti: "Berapa orang?",
-        catatan: "Counter orang: ひとり (1), ふたり (2), さんにん (3), よにん (4)...",
-        contoh: [
-          {jp:"かぞくは　なんにんですか？", id:"Keluarganya berapa orang?"},
-          {jp:"よにんです。", id:"(Ada) empat orang."}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Waktu, Jumlah & Harga",
-    judul: "なんかいですか？ (Menanyakan lantai)",
-    sub: "Pola menanyakan dan menyatakan posisi lantai gedung.",
-    items: [
-      {
-        pola: "〜は　なんかいですか？",
-        romaji: "~ wa nankai desu ka?",
-        arti: "~ ada di lantai berapa?",
-        catatan: "〜かい (階) = lantai. Perhatikan: いっかい (1), にかい (2), さんがい (3, PENGECUALIAN — bukan さんかい!), よんかい (4), ごかい (5).",
-        contoh: [
-          {jp:"レストランは　なんかいですか？", id:"Restorannya di lantai berapa?"},
-          {jp:"さんがいです。", id:"Di lantai tiga."},
-          {jp:"ちかいっかいに　スーパーが　あります。", id:"Di basement lantai 1 ada supermarket."}
-        ]
-      }
-    ]
-  },
-
   // ═══════════════════════════════════════════════
-  // MEMINTA / PERMINTAAN
+  // HARI 4
   // ═══════════════════════════════════════════════
   {
-    tema: "Meminta & Permintaan",
+    tema: "Hari 4",
     judul: "〜を　ください (Meminta satu benda)",
     sub: "Pola paling dasar untuk meminta sesuatu — cocok dipakai bersama semua kata tunjuk Ko-So-A-Do (これ/それ/あれ/どれ). Ganti 〜 dengan benda atau kata tunjuk yang dimaksud.",
     items: [
@@ -2511,10 +2415,10 @@ const BUNPOU = [
         ]
       },
       {
-        pola: "どれを　ください／どれが　いいですか？",
-        romaji: "dore wo kudasai / dore ga ii desu ka?",
-        arti: "Tolong berikan yang mana? / Yang mana yang bagus?",
-        catatan: "どれ dipakai saat masih memilih di antara 3+ opsi — biasanya berbentuk pertanyaan dulu, bukan langsung 'kudasai'.",
+        pola: "どれが　いいですか？／どれに　しますか？",
+        romaji: "dore ga ii desu ka? / dore ni shimasu ka?",
+        arti: "Yang mana yang bagus? / Mau pilih yang mana?",
+        catatan: "どれ dipakai saat masih memilih di antara 3+ opsi — biasanya berbentuk pertanyaan dulu (どれが〜／どれに〜), baru dijawab pakai これ／それ／あれを　ください, bukan langsung 'どれを　ください' karena どれ itu sendiri masih berupa pertanyaan pilihan.",
         contoh: [
           {jp:"どれが　いいですか？", id:"Yang mana yang bagus?"},
           {jp:"どれに　しますか？　－　これを　ください。", id:"Mau pilih yang mana? — Tolong berikan yang ini."}
@@ -2523,40 +2427,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Meminta & Permintaan",
-    judul: "〜を　〜ください (Meminta dengan jumlah/detail)",
-    sub: "Variasi 〜をください dengan menambahkan jumlah (counter) atau detail lain sebelum ください.",
-    items: [
-      {
-        pola: "〔名詞〕を　〔数量〕　ください。",
-        romaji: "[meishi] wo [suuryou] kudasai.",
-        arti: "Tolong berikan [benda] sebanyak [jumlah].",
-        catatan: "Sisipkan kata benda + partikel を, lalu jumlah/counter, baru ください di akhir. Urutan ini penting dan baku dalam bahasa Jepang.",
-        contoh: [
-          {jp:"りんごを　みっつ　ください。", id:"Tolong berikan apel tiga buah."},
-          {jp:"みずを　いっぱい　ください。", id:"Tolong berikan air satu gelas."},
-          {jp:"きっぷを　にまい　ください。", id:"Tolong berikan tiket dua lembar."}
-        ]
-      },
-      {
-        pola: "この〜を　〔数量〕　ください。",
-        romaji: "kono ~ wo [suuryou] kudasai.",
-        arti: "Tolong berikan [benda] ini sebanyak [jumlah].",
-        catatan: "Gabungan この (menerangkan benda) + objek + jumlah + ください. Berguna saat menunjuk barang spesifik sambil memesan jumlahnya.",
-        contoh: [
-          {jp:"この　ケーキを　ひとつ　ください。", id:"Tolong berikan kue ini satu."},
-          {jp:"その　ペンを　にほん　ください。", id:"Tolong berikan pena itu dua batang."},
-          {jp:"あの　シャツを　いちまい　ください。", id:"Tolong berikan kemeja itu satu lembar."}
-        ]
-      }
-    ]
-  },
-
-  // ═══════════════════════════════════════════════
-  // MENANYAKAN JENIS & KEPEMILIKAN
-  // ═══════════════════════════════════════════════
-  {
-    tema: "Menanyakan Jenis & Kepemilikan",
+    tema: "Hari 4",
     judul: "なんの〜ですか？ (Menanyakan jenis suatu benda)",
     sub: "Pola menanyakan jenis/kategori spesifik dari suatu benda, memakai なん (apa) + の (penghubung) + kata benda.",
     items: [
@@ -2584,7 +2455,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Menanyakan Jenis & Kepemilikan",
+    tema: "Hari 4",
     judul: "どこの〜ですか？ (Menanyakan asal/negara pembuat)",
     sub: "Pola menanyakan asal geografis suatu benda — beda dari どこですか yang menanyakan lokasi benda itu sendiri.",
     items: [
@@ -2611,8 +2482,40 @@ const BUNPOU = [
       }
     ]
   },
+  // ═══════════════════════════════════════════════
+  // HARI 5
+  // ═══════════════════════════════════════════════
   {
-    tema: "Menanyakan Jenis & Kepemilikan",
+    tema: "Hari 5",
+    judul: "〜を　〜ください (Meminta dengan jumlah/detail)",
+    sub: "Variasi 〜をください dengan menambahkan jumlah (counter) atau detail lain sebelum ください.",
+    items: [
+      {
+        pola: "〔名詞〕を　〔数量〕　ください。",
+        romaji: "[meishi] wo [suuryou] kudasai.",
+        arti: "Tolong berikan [benda] sebanyak [jumlah].",
+        catatan: "Sisipkan kata benda + partikel を, lalu jumlah/counter, baru ください di akhir. Urutan ini penting dan baku dalam bahasa Jepang.",
+        contoh: [
+          {jp:"りんごを　みっつ　ください。", id:"Tolong berikan apel tiga buah."},
+          {jp:"みずを　いっぱい　ください。", id:"Tolong berikan air satu gelas."},
+          {jp:"きっぷを　にまい　ください。", id:"Tolong berikan tiket dua lembar."}
+        ]
+      },
+      {
+        pola: "この／その／あの　〜を　〔数量〕　ください。",
+        romaji: "kono / sono / ano ~ wo [suuryou] kudasai.",
+        arti: "Tolong berikan [benda] ini/itu sebanyak [jumlah].",
+        catatan: "Gabungan この／その／あの (menerangkan benda) + objek + jumlah + ください. Berguna saat menunjuk barang spesifik sambil memesan jumlahnya.",
+        contoh: [
+          {jp:"この　ケーキを　ひとつ　ください。", id:"Tolong berikan kue ini satu."},
+          {jp:"その　ペンを　にほん　ください。", id:"Tolong berikan pena itu dua batang."},
+          {jp:"あの　シャツを　いちまい　ください。", id:"Tolong berikan kemeja itu satu lembar."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 5",
     judul: "だれの〜ですか？ (Menanyakan kepemilikan)",
     sub: "Pola menanyakan siapa pemilik suatu benda, memakai だれ (siapa) + の (kepemilikan).",
     items: [
@@ -2639,12 +2542,46 @@ const BUNPOU = [
       }
     ]
   },
-
   // ═══════════════════════════════════════════════
-  // PARTIKEL OBJEK & TEMPAT (を・で)
+  // HARI 6
   // ═══════════════════════════════════════════════
   {
-    tema: "Partikel Objek & Tempat (を・で)",
+    tema: "Hari 6",
+    judul: "なんじですか？ (Menanyakan jam)",
+    sub: "Pola menanyakan waktu dalam jam.",
+    items: [
+      {
+        pola: "なんじですか？ / いまなんじですか？",
+        romaji: "nanji desu ka? / ima nanji desu ka?",
+        arti: "Jam berapa? / Sekarang jam berapa?",
+        catatan: "なんじ = jam berapa. いま = sekarang. Jawab: ～じ～ふんです.",
+        contoh: [
+          {jp:"いま　なんじですか？", id:"Sekarang jam berapa?"},
+          {jp:"ごじはんです。", id:"(Sekarang) jam setengah enam."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 6",
+    judul: "〜から〜までです (Pola gabungan lengkap)",
+    sub: "から (titik awal) dan まで (titik akhir) dipakai BERSAMAAN dalam satu kalimat untuk menyebutkan rentang waktu/tempat secara lengkap.",
+    items: [
+      {
+        pola: "〔titik awal〕から　〔titik akhir〕までです。",
+        romaji: "~ kara ~ made desu.",
+        arti: "Dari ~ sampai ~.",
+        catatan: "から menandai titik awal, まで menandai titik akhir — dipakai berbarengan kalau mau menyebutkan rentang lengkap dari awal sampai akhir dalam satu kalimat.",
+        contoh: [
+          {jp:"じゅぎょうは　くじから　じゅうにじまでです。", id:"Pelajaran dari jam 9 sampai jam 12."},
+          {jp:"デパートは　じゅうじから　にじゅういちじまでです。", id:"Departmen store buka dari jam 10 sampai jam 21."},
+          {jp:"ぎんこうは　げつようびから　きんようびまでです。", id:"Bank buka dari hari Senin sampai Jumat."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 6",
     judul: "〜を〜 (Partikel penanda objek)",
     sub: "を (dibaca 'o') menandai objek langsung dari kata kerja transitif — benda yang menerima tindakan/aksi.",
     items: [
@@ -2693,7 +2630,88 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Partikel Objek & Tempat (を・で)",
+    tema: "Hari 6",
+    judul: "〜へ〜 (Partikel penanda arah)",
+    sub: "へ (ditulis へ, dibaca 'e') menandai arah tujuan suatu gerakan. Untuk kata kerja gerak (iku/kuru/kaeru), に juga boleh dipakai menggantikan へ.",
+    items: [
+      {
+        pola: "〔場所〕へ　〔動詞〕。",
+        romaji: "[basho] e [doushi].",
+        arti: "Pergi/datang/pulang ke [tempat].",
+        catatan: "へ ditulis dengan huruf へ tapi dibaca 'e', bukan 'he'. Selalu diikuti kata kerja gerak (iku, kuru, kaeru).",
+        contoh: [
+          {jp:"がっこうへ　いきます。", id:"Pergi ke sekolah."},
+          {jp:"うちへ　かえります。", id:"Pulang ke rumah."},
+          {jp:"にほんへ　きます。", id:"Datang ke Jepang."}
+        ]
+      },
+      {
+        pola: "どこへ　〔動詞〕か？",
+        romaji: "doko e [doushi] ka?",
+        arti: "Pergi/datang/pulang ke mana?",
+        catatan: "Pola tanya untuk menanyakan tujuan tempat dari suatu gerakan. どこ (mana) + へ (partikel arah) + kata kerja gerak + か.",
+        contoh: [
+          {jp:"どこへ　いきますか？", id:"Pergi ke mana?"},
+          {jp:"らいしゅう　どこへ　いきますか？", id:"Minggu depan pergi ke mana?"}
+        ]
+      },
+      {
+        pola: "〔場所〕へ／に　〔動詞〕。 (へ dan に bisa saling gantikan)",
+        romaji: "[basho] e/ni [doushi].",
+        arti: "Pergi/datang/pulang ke [tempat]. (dua-duanya boleh)",
+        catatan: "CATATAN PENTING: untuk kata kerja gerak, partikel に bisa menggantikan へ tanpa mengubah arti secara signifikan. に sedikit lebih menekankan TITIK tujuan yang spesifik, へ lebih menekankan ARAH/proses menuju ke sana — tapi dalam percakapan sehari-hari, keduanya sering dianggap sama saja dan bisa saling tukar.",
+        contoh: [
+          {jp:"がっこうへ　いきます。／がっこうに　いきます。", id:"Pergi ke sekolah. (dua-duanya benar)"},
+          {jp:"うちへ　かえります。／うちに　かえります。", id:"Pulang ke rumah. (dua-duanya benar)"}
+        ]
+      }
+    ]
+  },
+  // ═══════════════════════════════════════════════
+  // HARI 7
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 7",
+    judul: "〜ません (Bentuk negatif kata kerja ~ます)",
+    sub: "Kalau kata benda, bentuk negatifnya pakai 〜じゃありません／では　ありません. Kalau kata kerja yang berakhiran 〜ます, cukup ganti akhiran ます jadi ません — partikelnya (を、へ、で、dst) tidak berubah sama sekali.",
+    items: [
+      {
+        pola: "名詞：〜じゃありません／動詞：ます→ません",
+        romaji: "meishi: ~ja arimasen / doushi: ~masu → ~masen",
+        arti: "Perbandingan bentuk negatif kata benda vs kata kerja.",
+        catatan: "Kata benda dan kata kerja punya bentuk negatif yang berbeda: kata benda tambahkan じゃありません (atau では　ありません) setelah kata bendanya, sedangkan kata kerja ~ます tinggal diganti langsung jadi ~ません tanpa tambahan kata lain.",
+        contoh: [
+          {jp:"がくせいじゃありません。", id:"Bukan siswa. (kata benda, negatif)"},
+          {jp:"たべます　→　たべません", id:"makan → tidak makan (kata kerja, negatif)"},
+          {jp:"のみます　→　のみません", id:"minum → tidak minum (kata kerja, negatif)"}
+        ]
+      },
+      {
+        pola: "〔名詞〕を　〔動詞ません〕。",
+        romaji: "[meishi] wo [doushi-masen].",
+        arti: "Tidak [kata kerja] [benda].",
+        catatan: "Partikel を tetap dipakai persis seperti kalimat positif — yang berubah hanya akhiran kata kerjanya, dari ~ます jadi ~ません.",
+        contoh: [
+          {jp:"ごはんを　たべません。", id:"Tidak makan nasi."},
+          {jp:"みずを　のみません。", id:"Tidak minum air."},
+          {jp:"ほんを　よみません。", id:"Tidak membaca buku."}
+        ]
+      },
+      {
+        pola: "〔場所〕へ　〔動詞ません〕。",
+        romaji: "[basho] e [doushi-masen].",
+        arti: "Tidak pergi/datang/pulang ke [tempat].",
+        catatan: "Partikel へ juga tetap sama di kalimat negatif — cuma kata kerjanya yang diubah ke bentuk ~ません, sama seperti pola を di atas.",
+        contoh: [
+          {jp:"がっこうへ　いきません。", id:"Tidak pergi ke sekolah."},
+          {jp:"うちへ　かえりません。", id:"Tidak pulang ke rumah."},
+          {jp:"にほんへ　きません。", id:"Tidak datang ke Jepang."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 7",
     judul: "〜で〜 (Partikel penanda tempat kegiatan)",
     sub: "で menandai tempat BERLANGSUNGNYA suatu kegiatan/aksi — beda dari へ／に yang menandai arah/tujuan dan に yang menandai tempat keberadaan (ada/tidak ada, dengan あります／います).",
     items: [
@@ -2754,61 +2772,86 @@ const BUNPOU = [
       }
     ]
   },
-
-  // ═══════════════════════════════════════════════
-  // PARTIKEL ARAH & WAKTU (へ・に)
-  // ═══════════════════════════════════════════════
   {
-    tema: "Partikel Arah & Waktu (へ・に)",
-    judul: "なんじですか？ (Lengkap dengan から〜まで, と, へ)",
-    sub: "Pola なんじですか digabung dengan partikel lain — から (dari), まで (sampai), と (dan), へ (ke) — untuk kalimat waktu yang lebih lengkap.",
+    tema: "Hari 7",
+    judul: "〜や〜など (menyebutkan sebagian, tidak lengkap)",
+    sub: "や menggabungkan beberapa kata benda sebagai CONTOH SEBAGIAN (tidak menyebutkan semuanya), biasanya ditutup dengan など (dan lain-lain). Beda dari と yang menyebutkan SEMUA item secara lengkap/pasti.",
     items: [
       {
-        pola: "なんじですか？",
-        romaji: "nanji desu ka?",
-        arti: "Jam berapa?",
-        catatan: "Pola dasar menanyakan waktu. Jawab: ～じです / ～じ～ふんです.",
+        pola: "〔名詞A〕や　〔名詞B〕など",
+        romaji: "[meishi A] ya [meishi B] nado",
+        arti: "A, B, dan lain-lain (sebagian contoh saja)",
+        catatan: "や dipakai kalau yang disebutkan cuma SEBAGIAN CONTOH dari sesuatu yang lebih banyak — biasanya ditutup dengan など (dsb) di akhir daftar.",
         contoh: [
-          {jp:"いま　なんじですか？", id:"Sekarang jam berapa?"},
-          {jp:"ごじです。", id:"Jam lima."}
+          {jp:"つくえのうえに　ほんや　ノートなどが　あります。", id:"Di atas meja ada buku, buku catatan, dan lain-lain."},
+          {jp:"パンや　たまごなどを　かいます。", id:"Membeli roti, telur, dan lain-lain."}
         ]
       },
       {
-        pola: "〜から〜までです。",
-        romaji: "~ kara ~ made desu.",
-        arti: "Dari ~ sampai ~.",
-        catatan: "から menandai titik awal, まで menandai titik akhir — bisa dipakai untuk waktu maupun tempat. BOLEH digabung seperti ini, tapi から dan まで juga bisa dipakai SENDIRI-SENDIRI (lihat grup berikutnya) kalau cuma mau nyebutin salah satu titiknya aja.",
+        pola: "Perbandingan：と (lengkap) vs や〜など (sebagian)",
+        romaji: "to (lengkap) vs ya ~ nado (sebagian)",
+        arti: "Perbedaan makna と dan や〜など saat menggabungkan kata benda.",
+        catatan: "と = daftar itu PASTI LENGKAP, hanya item yang disebutkan itu saja, tidak ada yang lain. や〜など = daftar itu CONTOH SAJA, masih ada barang lain yang tidak disebutkan satu-satu.",
         contoh: [
-          {jp:"じゅぎょうは　くじから　じゅうにじまでです。", id:"Pelajaran dari jam 9 sampai jam 12."},
-          {jp:"デパートは　じゅうじから　にじゅういちじまでです。", id:"Departmen store buka dari jam 10 sampai jam 21."},
-          {jp:"えきから　がっこうまで　あるきます。", id:"Berjalan kaki dari stasiun sampai sekolah."}
-        ]
-      },
-      {
-        pola: "〜と〜（じ）",
-        romaji: "~ to ~ (ji)",
-        arti: "~ dan ~ (jam)",
-        catatan: "と menggabungkan dua keterangan waktu atau kegiatan sekaligus dalam satu kalimat.",
-        contoh: [
-          {jp:"げつようびと　すいようびに　じゅぎょうが　あります。", id:"Ada pelajaran hari Senin dan Rabu."},
-          {jp:"くじと　じゅうじに　テストが　あります。", id:"Ada tes jam 9 dan jam 10."}
-        ]
-      },
-      {
-        pola: "〜じに〜へ　いきます。",
-        romaji: "~ ji ni ~ e ikimasu.",
-        arti: "Jam ~ pergi ke ~.",
-        catatan: "Gabungan partikel に (menandai titik waktu) + へ (menandai arah tujuan) dalam satu kalimat lengkap.",
-        contoh: [
-          {jp:"しちじに　がっこうへ　いきます。", id:"Jam 7 pergi ke sekolah."},
-          {jp:"ごじに　うちへ　かえります。", id:"Jam 5 pulang ke rumah."}
+          {jp:"つくえのうえに　ほんと　ノートが　あります。", id:"Di atas meja ada buku dan buku catatan. (cuma dua itu, lengkap)"},
+          {jp:"つくえのうえに　ほんや　ノートなどが　あります。", id:"Di atas meja ada buku, buku catatan, dan lain-lain. (masih ada barang lain)"}
         ]
       }
     ]
   },
   {
-    tema: "Partikel Arah & Waktu (へ・に)",
-    judul: "〜から〜 ／ 〜まで〜 (Dipakai sendiri-sendiri)",
+    tema: "Hari 7",
+    judul: "なにも　＋　ません (Negasi total — objek)",
+    sub: "なにも menggantikan partikel を／が saat menyatakan 'tidak apa-apa'.",
+    items: [
+      {
+        pola: "なにも　〔動詞ません〕。",
+        romaji: "nanimo [doushi-masen].",
+        arti: "Tidak [kata kerja] apa pun.",
+        catatan: "も di sini MENGGANTIKAN partikel を sepenuhnya — bukan 'なにをも', tapi langsung 'なにも'. Selalu diikuti kata kerja bentuk ~ません.",
+        contoh: [
+          {jp:"なにも　たべません。", id:"Tidak makan apa-apa."},
+          {jp:"なにも　のみません。", id:"Tidak minum apa-apa."},
+          {jp:"なにも　かいません。", id:"Tidak membeli apa-apa."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 7",
+    judul: "〔時間〕に　〔動詞〕 (Kata benda waktu + に)",
+    sub: "に menandai TITIK WAKTU SPESIFIK (jam, hari, tanggal) tempat suatu kegiatan dilakukan. Kata waktu RELATIF (きょう, あした, きのう, dsb) TIDAK memakai に.",
+    items: [
+      {
+        pola: "〔時刻／曜日／日付〕に　〔動詞〕。",
+        romaji: "[jikoku/youbi/hizuke] ni [doushi].",
+        arti: "Melakukan [kata kerja] pada [waktu spesifik].",
+        catatan: "に dipakai setelah kata waktu yang SPESIFIK dan bisa ditunjuk pasti: jam (しちじ), hari dalam seminggu (げつようび), tanggal, bulan+tahun, dsb.",
+        contoh: [
+          {jp:"しちじに　おきます。", id:"Bangun jam 7."},
+          {jp:"げつようびに　がっこうへ　いきます。", id:"Pergi ke sekolah hari Senin."},
+          {jp:"じゅうじに　ねます。", id:"Tidur jam 10."}
+        ]
+      },
+      {
+        pola: "❌ 〔きょう／あした／きのう〕に　〜",
+        romaji: "❌ kyou/ashita/kinou ni ~ (SALAH)",
+        arti: "Kata waktu relatif TIDAK memakai に.",
+        catatan: "Kata waktu RELATIF terhadap 'sekarang' (きょう=hari ini, あした=besok, きのう=kemarin, こんしゅう=minggu ini, らいげつ=bulan depan, dsb) TIDAK memakai に sama sekali — langsung diikuti kata kerja atau diletakkan di awal kalimat sebagai keterangan.",
+        contoh: [
+          {jp:"きょう　がっこうへ　いきます。", id:"Hari ini pergi ke sekolah. (tanpa に)"},
+          {jp:"あした　テストが　あります。", id:"Besok ada tes. (tanpa に)"},
+          {jp:"きのう　うちで　べんきょうしました。", id:"Kemarin belajar di rumah. (tanpa に)"}
+        ]
+      }
+    ]
+  },
+  // ═══════════════════════════════════════════════
+  // HARI 8
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 8",
+    judul: "〜から／〜まで (Dipakai sendiri-sendiri)",
     sub: "から dan まで TIDAK harus selalu berpasangan — masing-masing bisa berdiri sendiri kalau cuma mau menyebutkan salah satu titiknya saja (cuma titik AWAL, atau cuma titik AKHIR).",
     items: [
       {
@@ -2890,132 +2933,10 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Partikel Arah & Waktu (へ・に)",
-    judul: "〜へ〜 (Partikel penanda arah)",
-    sub: "へ (ditulis へ, dibaca 'e') menandai arah tujuan suatu gerakan. Untuk kata kerja gerak (iku/kuru/kaeru), に juga boleh dipakai menggantikan へ.",
+    tema: "Hari 8",
+    judul: "どこへも／だれも　＋　ません (Negasi total — tempat & orang)",
+    sub: "どこへも menggantikan partikel へ／に saat menyatakan 'tidak pergi ke mana-mana', だれも untuk 'tidak ada siapa-siapa'.",
     items: [
-      {
-        pola: "〔場所〕へ　〔動詞〕。",
-        romaji: "[basho] e [doushi].",
-        arti: "Pergi/datang/pulang ke [tempat].",
-        catatan: "へ ditulis dengan huruf へ tapi dibaca 'e', bukan 'he'. Selalu diikuti kata kerja gerak (iku, kuru, kaeru).",
-        contoh: [
-          {jp:"がっこうへ　いきます。", id:"Pergi ke sekolah."},
-          {jp:"うちへ　かえります。", id:"Pulang ke rumah."},
-          {jp:"にほんへ　きます。", id:"Datang ke Jepang."}
-        ]
-      },
-      {
-        pola: "どこへ　〔動詞〕か？",
-        romaji: "doko e [doushi] ka?",
-        arti: "Pergi/datang/pulang ke mana?",
-        catatan: "Pola tanya untuk menanyakan tujuan tempat dari suatu gerakan. どこ (mana) + へ (partikel arah) + kata kerja gerak + か.",
-        contoh: [
-          {jp:"どこへ　いきますか？", id:"Pergi ke mana?"},
-          {jp:"らいしゅう　どこへ　いきますか？", id:"Minggu depan pergi ke mana?"}
-        ]
-      },
-      {
-        pola: "〔場所〕へ／に　〔動詞〕。 (へ dan に bisa saling gantikan)",
-        romaji: "[basho] e/ni [doushi].",
-        arti: "Pergi/datang/pulang ke [tempat]. (dua-duanya boleh)",
-        catatan: "CATATAN PENTING: untuk kata kerja gerak, partikel に bisa menggantikan へ tanpa mengubah arti secara signifikan. に sedikit lebih menekankan TITIK tujuan yang spesifik, へ lebih menekankan ARAH/proses menuju ke sana — tapi dalam percakapan sehari-hari, keduanya sering dianggap sama saja dan bisa saling tukar.",
-        contoh: [
-          {jp:"がっこうへ　いきます。／がっこうに　いきます。", id:"Pergi ke sekolah. (dua-duanya benar)"},
-          {jp:"うちへ　かえります。／うちに　かえります。", id:"Pulang ke rumah. (dua-duanya benar)"}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Partikel Arah & Waktu (へ・に)",
-    judul: "〔時間〕に　〔動詞〕 (Kata benda waktu + に)",
-    sub: "に menandai TITIK WAKTU SPESIFIK (jam, hari, tanggal) tempat suatu kegiatan dilakukan. Kata waktu RELATIF (きょう, あした, きのう, dsb) TIDAK memakai に.",
-    items: [
-      {
-        pola: "〔時刻／曜日／日付〕に　〔動詞〕。",
-        romaji: "[jikoku/youbi/hizuke] ni [doushi].",
-        arti: "Melakukan [kata kerja] pada [waktu spesifik].",
-        catatan: "に dipakai setelah kata waktu yang SPESIFIK dan bisa ditunjuk pasti: jam (しちじ), hari dalam seminggu (げつようび), tanggal, bulan+tahun, dsb.",
-        contoh: [
-          {jp:"しちじに　おきます。", id:"Bangun jam 7."},
-          {jp:"げつようびに　がっこうへ　いきます。", id:"Pergi ke sekolah hari Senin."},
-          {jp:"じゅうじに　ねます。", id:"Tidur jam 10."}
-        ]
-      },
-      {
-        pola: "❌ 〔きょう／あした／きのう〕に　〜",
-        romaji: "❌ kyou/ashita/kinou ni ~ (SALAH)",
-        arti: "Kata waktu relatif TIDAK memakai に.",
-        catatan: "Kata waktu RELATIF terhadap 'sekarang' (きょう=hari ini, あした=besok, きのう=kemarin, こんしゅう=minggu ini, らいげつ=bulan depan, dsb) TIDAK memakai に sama sekali — langsung diikuti kata kerja atau diletakkan di awal kalimat sebagai keterangan.",
-        contoh: [
-          {jp:"きょう　がっこうへ　いきます。", id:"Hari ini pergi ke sekolah. (tanpa に)"},
-          {jp:"あした　テストが　あります。", id:"Besok ada tes. (tanpa に)"},
-          {jp:"きのう　うちで　べんきょうしました。", id:"Kemarin belajar di rumah. (tanpa に)"}
-        ]
-      }
-    ]
-  },
-
-  // ═══════════════════════════════════════════════
-  // NEGASI & KATA GANTI TAK TENTU
-  // ═══════════════════════════════════════════════
-  {
-    tema: "Negasi & Kata Ganti Tak Tentu",
-    judul: "〜ません (Bentuk negatif kata kerja ~ます)",
-    sub: "Kalau kata benda, bentuk negatifnya pakai 〜じゃありません／では　ありません. Kalau kata kerja yang berakhiran 〜ます, cukup ganti akhiran ます jadi ません — partikelnya (を、へ、で、dst) tidak berubah sama sekali.",
-    items: [
-      {
-        pola: "名詞：〜じゃありません／動詞：ます→ません",
-        romaji: "meishi: ~ja arimasen / doushi: ~masu → ~masen",
-        arti: "Perbandingan bentuk negatif kata benda vs kata kerja.",
-        catatan: "Kata benda dan kata kerja punya bentuk negatif yang berbeda: kata benda tambahkan じゃありません (atau では　ありません) setelah kata bendanya, sedangkan kata kerja ~ます tinggal diganti langsung jadi ~ません tanpa tambahan kata lain.",
-        contoh: [
-          {jp:"がくせいじゃありません。", id:"Bukan siswa. (kata benda, negatif)"},
-          {jp:"たべます　→　たべません", id:"makan → tidak makan (kata kerja, negatif)"},
-          {jp:"のみます　→　のみません", id:"minum → tidak minum (kata kerja, negatif)"}
-        ]
-      },
-      {
-        pola: "〔名詞〕を　〔動詞ません〕。",
-        romaji: "[meishi] wo [doushi-masen].",
-        arti: "Tidak [kata kerja] [benda].",
-        catatan: "Partikel を tetap dipakai persis seperti kalimat positif — yang berubah hanya akhiran kata kerjanya, dari ~ます jadi ~ません.",
-        contoh: [
-          {jp:"ごはんを　たべません。", id:"Tidak makan nasi."},
-          {jp:"みずを　のみません。", id:"Tidak minum air."},
-          {jp:"ほんを　よみません。", id:"Tidak membaca buku."}
-        ]
-      },
-      {
-        pola: "〔場所〕へ　〔動詞ません〕。",
-        romaji: "[basho] e [doushi-masen].",
-        arti: "Tidak pergi/datang/pulang ke [tempat].",
-        catatan: "Partikel へ juga tetap sama di kalimat negatif — cuma kata kerjanya yang diubah ke bentuk ~ません, sama seperti pola を di atas.",
-        contoh: [
-          {jp:"がっこうへ　いきません。", id:"Tidak pergi ke sekolah."},
-          {jp:"うちへ　かえりません。", id:"Tidak pulang ke rumah."},
-          {jp:"にほんへ　きません。", id:"Tidak datang ke Jepang."}
-        ]
-      }
-    ]
-  },
-  {
-    tema: "Negasi & Kata Ganti Tak Tentu",
-    judul: "なにも／だれも／どこへも　＋　ません (Negasi total)",
-    sub: "Menggabungkan kata tanya (なに、だれ、どこ) dengan も untuk menyatakan 'tidak ... sama sekali/apa pun'. Selalu dipasangkan dengan kata kerja bentuk negatif (〜ません).",
-    items: [
-      {
-        pola: "なにも　〔動詞ません〕。",
-        romaji: "nanimo [doushi-masen].",
-        arti: "Tidak [kata kerja] apa pun.",
-        catatan: "も di sini MENGGANTIKAN partikel を sepenuhnya — bukan 'なにをも', tapi langsung 'なにも'. Selalu diikuti kata kerja bentuk ~ません.",
-        contoh: [
-          {jp:"なにも　たべません。", id:"Tidak makan apa-apa."},
-          {jp:"なにも　のみません。", id:"Tidak minum apa-apa."},
-          {jp:"なにも　かいません。", id:"Tidak membeli apa-apa."}
-        ]
-      },
       {
         pola: "どこへも　〔動詞ません〕。",
         romaji: "doko e mo [doushi-masen].",
@@ -3078,6 +2999,61 @@ const BUNPOU = [
           {jp:"がっこうで　ほんや　ノートなどを　よみます。", id:"Di sekolah membaca buku, buku catatan, dan lain-lain. (で=tempat, や〜など=sebagian, を=objek)"},
           {jp:"きょうは　どこへも　いきません。", id:"Hari ini tidak pergi ke mana-mana. (waktu relatif tanpa に, どこへも+ません)"},
           {jp:"うちで　なにも　たべません。", id:"Di rumah tidak makan apa-apa. (で=tempat, なにも+ません)"}
+        ]
+      }
+    ]
+  },
+  // ═══════════════════════════════════════════════
+  // MATERI TAMBAHAN
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Materi Tambahan",
+    judul: "おなまえは？ (Menanyakan & menyatakan nama)",
+    sub: "Pola dasar berkenalan — menanyakan dan menyebutkan nama.",
+    items: [
+      {
+        pola: "おなまえは？ / おなまえは　なんですか？",
+        romaji: "onamae wa? / onamae wa nan desu ka?",
+        arti: "Siapa namamu? / Namanya siapa?",
+        catatan: "Prefiks 'o' (お) menambahkan kesan sopan. Tanpa 'o': なまえは？ lebih santai. Jawab: ～です.",
+        contoh: [
+          {jp:"おなまえは　なんですか？", id:"Namanya siapa?"},
+          {jp:"わたしの　なまえは　レンディです。", id:"Nama saya Rendi."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Materi Tambahan",
+    judul: "なんにんですか？ (Menanyakan jumlah orang)",
+    sub: "Pola menanyakan jumlah orang menggunakan counter khusus.",
+    items: [
+      {
+        pola: "なんにんですか？",
+        romaji: "nannin desu ka?",
+        arti: "Berapa orang?",
+        catatan: "Counter orang: ひとり (1), ふたり (2), さんにん (3), よにん (4)...",
+        contoh: [
+          {jp:"かぞくは　なんにんですか？", id:"Keluarganya berapa orang?"},
+          {jp:"よにんです。", id:"(Ada) empat orang."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Materi Tambahan",
+    judul: "なんかいですか？ (Menanyakan lantai)",
+    sub: "Pola menanyakan dan menyatakan posisi lantai gedung.",
+    items: [
+      {
+        pola: "〜は　なんかいですか？",
+        romaji: "~ wa nankai desu ka?",
+        arti: "~ ada di lantai berapa?",
+        catatan: "〜かい (階) = lantai. Perhatikan: いっかい (1), にかい (2), さんがい (3, PENGECUALIAN — bukan さんかい!), よんかい (4), ごかい (5).",
+        contoh: [
+          {jp:"レストランは　なんかいですか？", id:"Restorannya di lantai berapa?"},
+          {jp:"さんがいです。", id:"Di lantai tiga."},
+          {jp:"ちかいっかいに　スーパーが　あります。", id:"Di basement lantai 1 ada supermarket."}
         ]
       }
     ]
