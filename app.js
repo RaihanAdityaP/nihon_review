@@ -267,6 +267,7 @@ const QCATS = [
   { id: 'bunpou-hari6',   label: 'Bunpou — Hari 6',            t: 'bunpou' },
   { id: 'bunpou-hari7',   label: 'Bunpou — Hari 7',            t: 'bunpou' },
   { id: 'bunpou-hari8',   label: 'Bunpou — Hari 8',            t: 'bunpou' },
+  { id: 'bunpou-hari9',   label: 'Bunpou — Hari 9',            t: 'bunpou' },
   { id: 'bunpou-tambahan',label: 'Bunpou — Materi Tambahan',   t: 'bunpou' },
 ];
 
@@ -397,6 +398,7 @@ function bunpouItems(cid) {
     'bunpou-hari6':    'Hari 6',
     'bunpou-hari7':    'Hari 7',
     'bunpou-hari8':    'Hari 8',
+    'bunpou-hari9':    'Hari 9',
     'bunpou-tambahan': 'Materi Tambahan',
   };
   const tema = temaMap[cid];
@@ -810,6 +812,7 @@ function bunpouFullItems(cidSet) {
     'bunpou-hari6':    'Hari 6',
     'bunpou-hari7':    'Hari 7',
     'bunpou-hari8':    'Hari 8',
+    'bunpou-hari9':    'Hari 9',
     'bunpou-tambahan': 'Materi Tambahan',
   };
   const temas = [...cidSet].map(id => temaMap[id]).filter(Boolean);

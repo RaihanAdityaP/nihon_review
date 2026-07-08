@@ -3004,6 +3004,140 @@ const BUNPOU = [
     ]
   },
   // ═══════════════════════════════════════════════
+  // HARI 9
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 9",
+    judul: "〔tempat1〕は　〔tempat2〕の　〔keterangan lokasi〕〔方角〕です (Menyatakan letak suatu tempat relatif ke tempat lain)",
+    sub: "Pola 〜の〜 dari Hari 1 (penghubung kata benda) dipakai lagi di sini buat nunjukin posisi tempat1 relatif terhadap tempat2, digabung sama kosakata keterangan lokasi/arah mata angin (きた=utara／ひがし=timur／なか=tengah／みなみ=selatan／にし=barat, dsb) dari Bab 4.",
+    items: [
+      {
+        pola: "〔tempat1〕は　〔tempat2〕の　〔keterangan lokasi〕〔方角〕です。",
+        romaji: "[tempat1] wa [tempat2] no [keterangan lokasi/houkou] desu.",
+        arti: "[tempat1] ada di [keterangan lokasi/arah] dari [tempat2].",
+        catatan: "Struktur: 'tempat1 itu, tempat2-nya keterangan lokasi'. Jadi kalau mau bilang 'stasiun ada di utara sekolah', urutannya えきは　がっこうの　きたです (bukan がっこうは　えきの...). 〜の〜 di sini fungsinya sama kayak Hari 1 (menghubungkan 2 kata benda), cuma sekarang kata benda keduanya berupa keterangan lokasi/arah.",
+        contoh: [
+          {jp:"えきは　がっこうの　きたです。", id:"Stasiun ada di utara sekolah."},
+          {jp:"こうえんは　としょかんの　みなみです。", id:"Taman ada di selatan perpustakaan."},
+          {jp:"かわは　うちの　ひがしです。", id:"Sungai ada di timur rumah."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 9",
+    judul: "〜から〜まで　どのぐらいですか？ (Menanyakan jarak/durasi)",
+    sub: "Gabungan から〜まで (Hari 6 & 8) dengan どのぐらい (Bab 4) — dipakai buat nanya seberapa jauh atau seberapa lama dari satu titik ke titik lain.",
+    items: [
+      {
+        pola: "〔A〕から　〔B〕まで　どのぐらいですか？",
+        romaji: "[A] kara [B] made dono gurai desu ka?",
+        arti: "Dari [A] sampai [B] kira-kira berapa lama/jauh?",
+        catatan: "から menandai titik awal, まで menandai titik akhir (persis kayak Hari 6 & 8) — cuma sekarang diikuti どのぐらい buat nanya jaraknya/lamanya, bukan cuma titik awal-akhirnya doang.",
+        contoh: [
+          {jp:"うちから　がっこうまで　どのぐらいですか？", id:"Dari rumah sampai sekolah kira-kira berapa lama?"},
+          {jp:"えきから　こうえんまで　どのぐらいですか？", id:"Dari stasiun sampai taman kira-kira berapa jauh?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 9",
+    judul: "〔のりもの〕で　〔動詞〕 (Naik apa — partikel で cara/alat)",
+    sub: "Partikel で di sini beda fungsi sama で di Hari 7 (yang buat nunjukin TEMPAT kegiatan). Di sini で dipakai buat nunjukin CARA/ALAT — naik kendaraan apa buat pergi.",
+    items: [
+      {
+        pola: "〔のりもの〕で　〔動詞〕。",
+        romaji: "[norimono] de [doushi].",
+        arti: "Pergi/dst dengan naik [kendaraan].",
+        catatan: "で = partikel cara/alat (beda dari で Hari 7 yang berarti 'tempat kegiatan'). へ (arah, Hari 6) sering muncul bareng で di kalimat yang sama. Perkecualian: あるいて (jalan kaki) TIDAK pakai で — langsung あるいて　いきます, bukan あるいてで　いきます.",
+        contoh: [
+          {jp:"でんしゃで　がっこうへ　いきます。", id:"Pergi ke sekolah naik kereta. (で=alat, へ=arah)"},
+          {jp:"くるまで　かいしゃへ　いきます。", id:"Pergi ke kantor naik mobil."},
+          {jp:"あるいて　うちへ　かえります。", id:"Pulang ke rumah dengan jalan kaki. (あるいて tanpa で)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 9",
+    judul: "〔じかん〕くらいです (Menjawab durasi)",
+    sub: "Jawaban buat pertanyaan どのぐらいですか di atas — pakai 〜じかん (Bab 4) + くらい (Bab 4, 'kira-kira/sekitar').",
+    items: [
+      {
+        pola: "〔すうじ〕じかんくらいです。",
+        romaji: "[suuji] jikan kurai desu.",
+        arti: "Kira-kira [angka] jam.",
+        catatan: "くらい = kira-kira/sekitar, dipasang setelah durasi buat nunjukin itu perkiraan (bukan waktu pasti). Bisa juga dipakai buat satuan lain, bukan cuma じかん — contohnya ～ふんくらい (sekitar ~menit). Bisa digabung sama で (alat/cara, dari pola 〔のりもの〕で〔動詞〕 di atas) buat jawab lengkap 'naik apa DAN berapa lama' dalam satu kalimat: 〔のりもの〕で　〔じかん〕くらいです。 Perkecualian: あるいて (jalan kaki) tetap TIDAK pakai で, sama kayak di pola sebelumnya.",
+        contoh: [
+          {jp:"うちから　がっこうまで　どのぐらいですか？　－　いちじかんくらいです。", id:"Dari rumah sampai sekolah berapa lama? — Sekitar 1 jam."},
+          {jp:"でんしゃで　にじかんくらいです。", id:"Naik kereta sekitar 2 jam. (で=alat dari pola sebelumnya)"},
+          {jp:"バスで　さんじゅっぷんくらいです。", id:"Naik bus sekitar 30 menit. (で=alat, sama pola)"},
+          {jp:"あるいて　じゅっぷんくらいです。", id:"Jalan kaki sekitar 10 menit. (あるいて tetap tanpa で, sama kayak pengecualian di pola sebelumnya)"},
+          {jp:"うちから　がっこうまで　でんしゃで　いちじかんくらいです。", id:"Dari rumah sampai sekolah naik kereta sekitar 1 jam. (gabungan から〜まで + で + くらいです sekaligus dalam satu kalimat)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 9",
+    judul: "〔kata benda〕は　〔kata sifat〕です (Kata sifat sebagai predikat — beda い vs な)",
+    sub: "い-keiyoushi (kata sifat-い, contoh: たかい) dan な-keiyoushi (kata sifat-な, contoh: しずか) sama-sama langsung diikuti です kalau posisinya jadi predikat (kata benda は 〜です). Bedanya ada di bentuk NEGATIF: い-keiyoushi buang い lalu tambah くないです, sedangkan な-keiyoushi negatifnya SAMA PERSIS kayak kata benda di Hari 1 (〜じゃありません／ではありません) — な-nya sendiri TIDAK dipakai di sini.",
+    items: [
+      {
+        pola: "〔KB〕は　〔い形容詞〕です。／〜くないです。／〜ですか？",
+        romaji: "[KB] wa [i-keiyoushi] desu. / ~kunai desu. / ~ desu ka?",
+        arti: "[Benda] itu [sifat]. / [Benda] itu tidak [sifat]. / Apakah [benda] itu [sifat]?",
+        catatan: "い-keiyoushi SELALU berakhiran い. Bentuk negatif: buang い di akhir, ganti くないです (たかい → たかくないです). Pengecualian: いい (bagus) negatifnya tidak beraturan, jadi よくないです, bukan いくないです.",
+        contoh: [
+          {jp:"あの　やまは　たかいです。", id:"Gunung itu tinggi. (positif)"},
+          {jp:"あの　やまは　たかくないです。", id:"Gunung itu tidak tinggi. (negatif)"},
+          {jp:"あの　やまは　たかいですか？", id:"Apakah gunung itu tinggi? (tanya)"}
+        ]
+      },
+      {
+        pola: "〔KB〕は　〔な形容詞〕です。／〜じゃありません。／〜ですか？",
+        romaji: "[KB] wa [na-keiyoushi] desu. / ~ja arimasen. / ~ desu ka?",
+        arti: "[Benda] itu [sifat]. / [Benda] itu tidak [sifat]. / Apakah [benda] itu [sifat]?",
+        catatan: "な-keiyoushi kalau jadi predikat (posisi ini), な-nya HILANG — langsung 〜です, persis kayak kata benda biasa. Makanya bentuk negatifnya juga sama kayak kata benda di Hari 1: 〜じゃありません／ではありません, BUKAN 〜くないです (itu cuma buat い-keiyoushi).",
+        contoh: [
+          {jp:"この　まちは　にぎやかです。", id:"Kota ini ramai. (positif)"},
+          {jp:"この　まちは　にぎやかじゃありません。", id:"Kota ini tidak ramai. (negatif, sama pola kayak Hari 1)"},
+          {jp:"この　まちは　にぎやかですか？", id:"Apakah kota ini ramai? (tanya)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 9",
+    judul: "〔kata sifat〕＋〔kata benda〕です (Kata sifat menerangkan kata benda langsung — beda い vs な)",
+    sub: "Beda sama pola sebelumnya (kata sifat jadi predikat), di sini kata sifat NEMPEL langsung di depan kata benda buat nerangin. い-keiyoushi nempel langsung (かっこいい　ひと), tapi な-keiyoushi WAJIB pake な di antaranya (しずかな　ところ) — な-nya justru MUNCUL di sini, kebalikan dari pola predikatif di atas.",
+    items: [
+      {
+        pola: "〔い形容詞〕　〔KB〕です。／〜じゃありません。／〜ですか？",
+        romaji: "[i-keiyoushi] [KB] desu. / ~ja arimasen. / ~ desu ka?",
+        arti: "[Benda] yang [sifat]. (negasi & tanya menyasar keseluruhan frasanya, bukan sifat sendiri)",
+        catatan: "い-keiyoushi langsung nempel di depan kata benda, tanpa tambahan apa pun (beda dari な-keiyoushi di item berikutnya). Karena '〔sifat〕〔KB〕' di sini jadi satu frasa benda utuh, negatif & tanyanya ikut pola kata benda biasa (〜じゃありません／ですか) yang nempel di です paling belakang, BUKAN くないです di tengah frasa.",
+        contoh: [
+          {jp:"あの　ひとは　かっこいい　ひとです。", id:"Orang itu orang yang keren. (positif)"},
+          {jp:"あの　ひとは　かっこいい　ひとじゃありません。", id:"Orang itu bukan orang yang keren. (negatif)"},
+          {jp:"あの　ひとは　かっこいい　ひとですか？", id:"Apakah orang itu orang yang keren? (tanya)"}
+        ]
+      },
+      {
+        pola: "〔な形容詞〕な　〔KB〕です。／〜じゃありません。／〜ですか？",
+        romaji: "[na-keiyoushi] na [KB] desu. / ~ja arimasen. / ~ desu ka?",
+        arti: "[Benda] yang [sifat].",
+        catatan: "な-keiyoushi WAJIB tambah な sebelum kata benda yang diterangkan (しずか + な + ところ) — kalau なnya dihilangkan di sini, kalimatnya jadi salah. Ini kebalikan dari pola predikatif sebelumnya, di mana な justru hilang.",
+        contoh: [
+          {jp:"としょかんは　しずかな　ところです。", id:"Perpustakaan adalah tempat yang sunyi. (positif)"},
+          {jp:"としょかんは　しずかな　ところじゃありません。", id:"Perpustakaan bukan tempat yang sunyi. (negatif)"},
+          {jp:"としょかんは　しずかな　ところですか？", id:"Apakah perpustakaan tempat yang sunyi? (tanya)"}
+        ]
+      }
+    ]
+  },
+  // ═══════════════════════════════════════════════
   // MATERI TAMBAHAN
   // ═══════════════════════════════════════════════
   {
