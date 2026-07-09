@@ -81,7 +81,7 @@ function closeMenu() {
 // MATERI
 // ─────────────────────────────────────────────────────
 function switchCat(cat, btn) {
-  document.querySelectorAll('#matHiragana,#matKatakana,#matKotoba,#matCounter').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('#matHiragana,#matKatakana,#matKotoba,#matCounter,#matSifat,#matKerja').forEach(el => el.style.display = 'none');
   document.getElementById('mat' + cat[0].toUpperCase() + cat.slice(1)).style.display = 'block';
   document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -215,9 +215,7 @@ const QCATS = [
   { id: 'benda',       label: 'Benda',                 t: 'kotoba' },
   { id: 'benda-kelas', label: 'Benda (di Kelas)',      t: 'kotoba' },
   { id: 'alam',        label: 'Alam',                  t: 'kotoba' },
-  { id: 'sifat',       label: 'Kata Sifat',            t: 'kotoba' },
   { id: 'musim',       label: 'Musim',                 t: 'kotoba' },
-  { id: 'kerja',       label: 'Kata Kerja',            t: 'kotoba' },
   { id: 'konsep',      label: 'Konsep Umum',           t: 'kotoba' },
   { id: 'kotoba-n5',   label: 'Kotoba N5',             t: 'kotoba' },
   { id: 'umur',        label: 'Umur',                  t: 'kotoba' },
@@ -253,6 +251,11 @@ const QCATS = [
   { id: 'kelas-ex',    label: 'Ekspresi di Kelas',     t: 'kotoba' },
   { id: 'sampah',      label: 'Sampah & Lingkungan',   t: 'kotoba' },
   { id: 'counter',     label: 'Kata Bantu Bilangan',   t: 'counter' },
+  { id: 'sifat-i',     label: 'Kata Sifat - い',        t: 'sifat' },
+  { id: 'sifat-na',    label: 'Kata Sifat - な',        t: 'sifat' },
+  { id: 'kerja-1',     label: 'Kata Kerja - Kelompok I',  t: 'kerja' },
+  { id: 'kerja-2',     label: 'Kata Kerja - Kelompok II', t: 'kerja' },
+  { id: 'kerja-3',     label: 'Kata Kerja - Kelompok III',t: 'kerja' },
   { id: 'par-adv',     label: 'Partikel Lanjutan',     t: 'particle-adv' },
   { id: 'buku-bab1',   label: 'Buku — Bab 1',          t: 'buku' },
   { id: 'buku-bab2',   label: 'Buku — Bab 2',          t: 'buku' },
@@ -268,6 +271,7 @@ const QCATS = [
   { id: 'bunpou-hari7',   label: 'Bunpou — Hari 7',            t: 'bunpou' },
   { id: 'bunpou-hari8',   label: 'Bunpou — Hari 8',            t: 'bunpou' },
   { id: 'bunpou-hari9',   label: 'Bunpou — Hari 9',            t: 'bunpou' },
+  { id: 'bunpou-hari10',  label: 'Bunpou — Hari 10',           t: 'bunpou' },
   { id: 'bunpou-tambahan',label: 'Bunpou — Materi Tambahan',   t: 'bunpou' },
 ];
 
@@ -349,7 +353,7 @@ function ktItems(cid) {
   const m = {
     hewan: 'Hewan', orang: 'Orang & Keluarga', tempat: 'Tempat', kdrn: 'Kendaraan',
     makan: 'Makanan & Minuman', benda: 'Benda', 'benda-kelas': 'Benda (di Kelas)',
-    alam: 'Alam', sifat: 'Kata Sifat', musim: 'Musim', kerja: 'Kata Kerja',
+    alam: 'Alam', musim: 'Musim',
     konsep: 'Konsep Umum', 'kotoba-n5': 'Kotoba N5', umur: 'Umur', lantai: 'Lantai',
     angka: 'Angka', waktu: 'Waktu', durasi: 'Durasi',
     hari: ['Hari dalam Seminggu', 'Keterangan Hari'],
@@ -378,6 +382,27 @@ function counterItems(cid) {
   return out;
 }
 
+function sifatItems(cid) {
+  const m = {
+    'sifat-i':  'Kata Sifat - い (i-keiyoushi)',
+    'sifat-na': 'Kata Sifat - な (na-keiyoushi)'
+  };
+  const k = m[cid];
+  if (!k || !KATA_SIFAT[k]) return [];
+  return KATA_SIFAT[k].rows.map(r => ({ kana: r.k, romaji: r.r, arti: r.a, type: 'sifat' }));
+}
+
+function kerjaItems(cid) {
+  const m = {
+    'kerja-1':  'Kata Kerja - Kelompok I',
+    'kerja-2':  'Kata Kerja - Kelompok II',
+    'kerja-3':  'Kata Kerja - Kelompok III'
+  };
+  const k = m[cid];
+  if (!k || !KATA_KERJA[k]) return [];
+  return KATA_KERJA[k].rows.map(r => ({ kana: r.k, romaji: r.r, arti: r.a, type: 'kerja' }));
+}
+
 function bukuItems(cid) {
   const babKey = cid === 'buku-bab1' ? 'bab1' : cid === 'buku-bab2' ? 'bab2' : cid === 'buku-bab3' ? 'bab3' : cid === 'buku-bab4' ? 'bab4' : cid === 'buku-bab5' ? 'bab5' : null;
   if (!babKey || !BUKU[babKey]) return [];
@@ -399,6 +424,7 @@ function bunpouItems(cid) {
     'bunpou-hari7':    'Hari 7',
     'bunpou-hari8':    'Hari 8',
     'bunpou-hari9':    'Hari 9',
+    'bunpou-hari10':   'Hari 10',
     'bunpou-tambahan': 'Materi Tambahan',
   };
   const tema = temaMap[cid];
@@ -428,6 +454,8 @@ function getAllItems(catSet) {
     else if (qc.t === 'buku')         all = all.concat(bukuItems(id));
     else if (qc.t === 'bunpou')       all = all.concat(bunpouItems(id));
     else if (qc.t === 'counter')      all = all.concat(counterItems(id));
+    else if (qc.t === 'sifat')        all = all.concat(sifatItems(id));
+    else if (qc.t === 'kerja')        all = all.concat(kerjaItems(id));
     else                              all = all.concat(ktItems(id));
   });
   all = all.map(x => ({ ...x, kana: cleanKana(x.kana) }));
@@ -656,8 +684,8 @@ function switchBukuTab(tab, btn) {
 
 // ─────────────────────────────────────────────────────
 // SHARED NOTES LOOKUP
-// Satu sumber kebenaran untuk penjelasan kata: dicari dari Materi (KT)
-// dan Kata Bantu Bilangan (COUNTER). Dipakai bareng oleh Materi & Buku,
+// Satu sumber kebenaran untuk penjelasan kata: dicari dari Materi (KT),
+// Kata Bantu Bilangan (COUNTER), Kata Sifat (KATA_SIFAT), dan Kata Kerja (KATA_KERJA). Dipakai bareng oleh Materi & Buku,
 // supaya kalau diupdate di satu tempat otomatis ikut sinkron di semua menu.
 // ─────────────────────────────────────────────────────
 let _kotobaIndex = null;
@@ -665,7 +693,7 @@ let _kotobaIndex = null;
 function buildKotobaIndex() {
   if (_kotobaIndex) return _kotobaIndex;
   _kotobaIndex = new Map();
-  const sources = [KT, COUNTER];
+  const sources = [KT, COUNTER, KATA_SIFAT, KATA_KERJA];
   sources.forEach(src => {
     Object.values(src).forEach(group => {
       group.rows.forEach(r => {
@@ -813,6 +841,7 @@ function bunpouFullItems(cidSet) {
     'bunpou-hari7':    'Hari 7',
     'bunpou-hari8':    'Hari 8',
     'bunpou-hari9':    'Hari 9',
+    'bunpou-hari10':   'Hari 10',
     'bunpou-tambahan': 'Materi Tambahan',
   };
   const temas = [...cidSet].map(id => temaMap[id]).filter(Boolean);
@@ -1188,6 +1217,8 @@ function wKanjiPool() {
   });
   Object.values(KT).forEach(g => scanRows(g.rows));
   Object.values(COUNTER).forEach(g => scanRows(g.rows));
+  Object.values(KATA_SIFAT).forEach(g => scanRows(g.rows));
+  Object.values(KATA_KERJA).forEach(g => scanRows(g.rows));
   ['bab1', 'bab2', 'bab3', 'bab4', 'bab5'].forEach(b => { if (BUKU[b]) Object.values(BUKU[b]).forEach(g => scanRows(g.rows)); });
   const seen = new Set();
   return out.filter(x => { if (seen.has(x.char)) return false; seen.add(x.char); return true; });
@@ -1509,6 +1540,8 @@ renderKanaAcc(H, 'matHiragana');
 renderKanaAcc(K, 'matKatakana');
 renderKotobaAcc(KT, 'matKotoba');
 renderKotobaAcc(COUNTER, 'matCounter');
+renderKotobaAcc(KATA_SIFAT, 'matSifat');
+renderKotobaAcc(KATA_KERJA, 'matKerja');
 renderPartikel();
 renderPartikelAdv();
 renderBukuBab('bab1', 'bukuBab1');

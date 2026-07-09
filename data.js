@@ -299,26 +299,6 @@ const KT={
 {k:"つち",r:"tsuchi",a:"tanah",kj:"土",n:"Tanah/bumi dalam konteks fisik, beda dari 'chikyuu' (地球) yang berarti planet Bumi."},
 {k:"は",r:"ha (daun)",a:"daun",kj:"葉",n:"Homofon dengan は (歯) = gigi! Konteks kalimat sangat penting. Momiji (紅葉) = daun yang berubah warna di musim gugur."}
 ]},
-"Kata Sifat":{rows:[
-{k:"たかい",r:"takai",a:"mahal / tinggi",kj:"高い",n:"Dua arti berbeda, satu kata! Konteks menentukan makna."},
-{k:"はやい",r:"hayai",a:"cepat",kj:"速い",n:"Ada 'hayai' (早い) yang berarti 'pagi/lebih awal'. Beda kanji, beda makna."},
-{k:"おそい",r:"osoi",a:"lambat",kj:"遅い",n:"Lawan kata dari 'hayai'. Juga berarti 'terlambat'."},
-{k:"おおきな",r:"ookina",a:"besar",kj:"大きな",n:"Bentuk na-adjective. Ada juga 'ookii' (大きい) sebagai i-adjective."},
-{k:"ちいさい",r:"chiisai",a:"kecil",kj:"小さい",n:"Vokal panjang 'ちい'. Lawan kata dari 'ookii'."},
-{k:"うれしい",r:"ureshii",a:"senang",kj:"嬉しい",n:"Senang karena sesuatu terjadi. Beda dengan 'tanoshii' (menyenangkan)."},
-{k:"かなしい",r:"kanashii",a:"sedih",kj:"悲しい",n:"Banyak muncul dalam lagu dan puisi Jepang."},
-{k:"あたらしい",r:"atarashii",a:"baru",kj:"新しい",n:"Lawan kata dari 'furui'. Dipakai untuk barang, bangunan, atau hal yang belum lama ada."},
-{k:"ふるい",r:"furui",a:"tua / lama / kuno",kj:"古い",n:"Dipakai untuk barang/bangunan (bukan usia orang!). Untuk usia orang pakai 'toshi wo totta' atau konteks lain."},
-{k:"おおきい",r:"ookii",a:"besar",kj:"大きい",n:"Bentuk i-adjective. Ada juga 'ookina' (大きな) sebagai bentuk yang selalu langsung nempel di depan kata benda."},
-{k:"ひくい",r:"hikui",a:"rendah",kj:"低い",n:"Lawan kata dari 'takai' (tinggi). Dipakai untuk gedung, gunung, suara, dsb."},
-{k:"おおい",r:"ooi",a:"banyak",kj:"多い",n:"Khusus dipakai sebagai predikat (〜が おおいです), bukan langsung di depan kata benda seperti 'takusan'."},
-{k:"すくない",r:"sukunai",a:"sedikit",kj:"少ない",n:"Lawan kata dari 'ooi'. Juga predikat, bukan langsung di depan kata benda."},
-{k:"しずか",r:"shizuka",a:"sunyi / sepi / tenang",kj:"静か",n:"Na-adjective — kalau di depan kata benda jadi 'shizuka na machi', tapi kalau jadi predikat cukup 'shizuka desu' (な hilang)."},
-{k:"にぎやか",r:"nigiyaka",a:"ramai",n:"Na-adjective. Lawan kata dari 'shizuka'. Dipakai untuk tempat yang rame orang/kegiatan."},
-{k:"きれい",r:"kirei",a:"cantik / indah / bersih",n:"Na-adjective, walau berakhiran い — jangan tertukar sebagai i-adjective! Bisa berarti 'cantik' ATAU 'bersih' tergantung konteks."},
-{k:"ゆうめい",r:"yuumei",a:"terkenal",kj:"有名",n:"Na-adjective. Yuu (punya) + Mei (nama) — harfiah 'punya nama (yang dikenal)'."},
-{k:"いい",r:"ii",a:"bagus / baik",n:"I-adjective TIDAK BERATURAN. Bentuk negatifnya BUKAN 'iikunai' tapi 'yokunai' (dari bentuk lama 'yoi'). Penting dihafal karena sering dipakai."}
-]},
 "Musim":{rows:[
 {k:"はる",r:"haru",a:"musim semi",kj:"春",n:"Musim sakura. Tahun ajaran/kerja Jepang dimulai April."},
 {k:"なつ",r:"natsu",a:"musim panas",kj:"夏",n:"Musim festival (matsuri) dan kembang api (hanabi)."},
@@ -342,32 +322,6 @@ const KT={
 {k:"いちねんじゅう",r:"ichinenjuu",a:"sepanjang tahun",kj:"一年中",n:"Ichinen (satu tahun) + juu (sepanjang/seluruh). Dipakai untuk cuaca/kondisi yang tidak berubah tiap musim, mis. daerah tropis."},
 {k:"ゆき",r:"yuki",a:"salju",kj:"雪",n:"Turun terutama di daerah utara Jepang (Hokkaido, Tohoku) saat musim dingin."},
 {k:"あめ",r:"ame",a:"hujan",kj:"雨",n:"'Ame ga furimasu' = hujan turun. Musim hujan (梅雨/tsuyu) di Jepang biasanya bulan Juni."}
-]},
-"Kata Kerja":{rows:[
-{k:"いきます",r:"ikimasu",a:"pergi",kj:"行きます",n:"Dari 'iku'. Partikel 'ni' atau 'e' menunjukkan tujuan."},
-{k:"きます",r:"kimasu",a:"datang",kj:"来ます",n:"Dari 'kuru' (tidak beraturan). Arah menuju pembicara."},
-{k:"かえります",r:"kaerimasu",a:"pulang",kj:"帰ります",n:"Dari 'kaeru'. Khusus pulang ke rumah/tempat asal."},
-{k:"でます",r:"demasu",a:"keluar",kj:"出ます",n:"Dari 'deru'. Juga berarti 'muncul' atau 'berangkat' (kereta)."},
-{k:"はいります",r:"hairimasu",a:"masuk",kj:"入ります",n:"Dari 'hairu'. Partikel 'ni' dipakai untuk tempat yang dimasuki."},
-{k:"たべます",r:"tabemasu",a:"makan",kj:"食べます",n:"Dari 'taberu'. Diikuti objek dengan partikel 'wo'."},
-{k:"のみます",r:"nomimasu",a:"minum",kj:"飲みます",n:"Dari 'nomu'. Minum obat juga pakai kata ini."},
-{k:"みます",r:"mimasu",a:"melihat / menonton",kj:"見ます",n:"Dari 'miru'. Menonton film = eiga wo mimasu."},
-{k:"ききます",r:"kikimasu",a:"mendengar",kj:"聞きます",n:"Dari 'kiku'. Juga berarti 'bertanya' (sensei ni kikimasu)."},
-{k:"はなします",r:"hanashimasu",a:"berbicara",kj:"話します",n:"Dari 'hanasu'. 'Hanashi' = cerita/pembicaraan."},
-{k:"よみます",r:"yomimasu",a:"membaca",kj:"読みます",n:"Dari 'yomu'. Hon wo yomimasu = membaca buku."},
-{k:"かきます",r:"kakimasu",a:"menulis",kj:"書きます",n:"Dari 'kaku'. Juga berarti 'menggambar' atau 'melukis'."},
-{k:"およぎます",r:"oyogimasu",a:"berenang",kj:"泳ぎます",n:"Dari 'oyogu'. Kata kerja baris G."},
-{k:"あそびます",r:"asobimasu",a:"bermain",kj:"遊びます",n:"Dari 'asobu'. Orang dewasa juga pakai kata ini untuk bersenang-senang."},
-{k:"すわります",r:"suwarimasu",a:"duduk",n:"Dari 'suwaru'."},
-{k:"たちます",r:"tachimasu",a:"berdiri",kj:"立ちます",n:"Dari 'tatsu'. Juga berarti 'muncul' secara kiasan."},
-{k:"しています",r:"shiteimasu",a:"sedang melakukan",n:"Bentuk 'te-iru' menyatakan aksi sedang berlangsung."},
-{k:"あります",r:"arimasu",a:"ada (benda mati)",kj:"有ります",n:"Dari 'aru'. Khusus benda mati/tidak bergerak. Sering ditulis hiragana saja dalam praktik sehari-hari."},
-{k:"います",r:"imasu",a:"ada (makhluk hidup)",kj:"居ます",n:"Dari 'iru'. Untuk manusia dan hewan. Sering ditulis hiragana saja dalam praktik sehari-hari."},
-{k:"します",r:"shimasu",a:"melakukan, mengerjakan",n:"Kata kerja golongan III (tidak beraturan). Kata kerja paling serbaguna — sering digabung kata benda + shimasu untuk membentuk kata kerja baru (benkyou shimasu, dll)."},
-{k:"べんきょうします",r:"benkyoushimasu",a:"belajar (akademis)",kj:"勉強します",n:"Belajar dalam konteks akademis/sekolah, misalnya belajar pelajaran atau bahasa untuk ujian."},
-{k:"ならいます",r:"naraimasu",a:"belajar (keahlian/kemahiran)",kj:"習います",n:"Dari 'narau'. Belajar suatu keahlian/kemahiran dari orang lain (les musik, memasak, bela diri, dll), biasanya dengan guru/instruktur."},
-{k:"まなびます",r:"manabimasu",a:"mempelajari (secara umum/mendalam)",kj:"学びます",n:"Dari 'manabu'. Mempelajari sesuatu secara lebih luas/mendalam tanpa harus terlalu 'ngoyo', bisa dari pengalaman atau observasi, bukan cuma dari buku."},
-{k:"やります",r:"yarimasu",a:"melakukan, mengerjakan (santai)",kj:"やります",n:"Dari 'yaru'. Versi lebih santai/informal dari 'shimasu'. Sering dipakai untuk menawarkan diri mengerjakan sesuatu, contoh: 'watashi ga yarimasu' = saya (lah) yang akan melakukannya."}
 ]},
 "Konsep Umum":{rows:[
 {k:"やすみ",r:"yasumi",a:"libur / istirahat",kj:"休み",n:"'O-yasumi nasai' = selamat malam (harfiah: istirahatlah)."},
@@ -930,7 +884,287 @@ const KT={
 ]}
 };
 
-// ─── DATA: PARTIKEL ───
+// ─── DATA: KATA SIFAT — tab tersendiri sejajar Hiragana/Katakana/Kotoba/Kata Bantu Bilangan ───
+
+const KATA_SIFAT = {
+"Kata Sifat - い (i-keiyoushi)":{rows:[
+{k:"たのしい",r:"tanoshii",a:"menyenangkan",kj:"楽しい"},
+{k:"おおきい",r:"ookii",a:"besar",kj:"大きい",n:"Bentuk i-adjective. Ada juga 'ookina' (大きな) sebagai bentuk yang selalu langsung nempel di depan kata benda."},
+{k:"ちいさい",r:"chiisai",a:"kecil",kj:"小さい",n:"Vokal panjang 'ちい'. Lawan kata dari 'ookii'."},
+{k:"あたらしい",r:"atarashii",a:"baru",kj:"新しい",n:"Lawan kata dari 'furui'. Dipakai untuk barang, bangunan, atau hal yang belum lama ada."},
+{k:"ふるい",r:"furui",a:"tua / lama / kuno",kj:"古い",n:"Dipakai untuk barang/bangunan (bukan usia orang!). Untuk usia orang pakai 'toshi wo totta' atau konteks lain."},
+{k:"いい",r:"ii",a:"bagus / baik",n:"I-adjective TIDAK BERATURAN. Bentuk negatifnya BUKAN 'iikunai' tapi 'yokunai' (dari bentuk lama 'yoi'). Penting dihafal karena sering dipakai."},
+{k:"わるい",r:"warui",a:"tidak bagus, tidak baik",kj:"悪い"},
+{k:"あつい",r:"atsui",a:"panas",kj:"暑い",n:"Ada 3 kanji berbunyi sama 'atsui': 暑い (panas cuaca), 熱い (panas benda), dan 厚い (tebal) — beda kanji, beda arti, jangan ketuker!"},
+{k:"さむい",r:"samui",a:"dingin (hawa)",kj:"寒い"},
+{k:"つめたい",r:"tsumetai",a:"dingin (benda)",kj:"冷たい"},
+{k:"やさしい",r:"yasashii",a:"ramah, mudah",kj:"優しい・易しい"},
+{k:"むずかしい",r:"muzukashii",a:"sulit, sukar",kj:"難しい"},
+{k:"たかい",r:"takai",a:"mahal / tinggi",kj:"高い",n:"Dua arti berbeda, satu kata! Konteks menentukan makna."},
+{k:"ひくい",r:"hikui",a:"rendah",kj:"低い",n:"Lawan kata dari 'takai' (tinggi). Dipakai untuk gedung, gunung, suara, dsb."},
+{k:"やすい",r:"yasui",a:"murah",kj:"安い"},
+{k:"おもしろい",r:"omoshiroi",a:"menarik, menyenangkan",kj:"面白い"},
+{k:"つまらない",r:"tsumaranai",a:"membosankan"},
+{k:"おいしい",r:"oishii",a:"enak",kj:"美味しい"},
+{k:"まずい",r:"mazui",a:"tidak enak"},
+{k:"まぎらわしい",r:"magirawashii",a:"sulit dibedakan",kj:"紛らわしい"},
+{k:"しろい",r:"shiroi",a:"putih",kj:"白い"},
+{k:"くろい",r:"kuroi",a:"hitam",kj:"黒い"},
+{k:"あかい",r:"akai",a:"merah",kj:"赤い"},
+{k:"あおい",r:"aoi",a:"biru",kj:"青い"},
+{k:"おもい",r:"omoi",a:"berat",kj:"重い"},
+{k:"かるい",r:"karui",a:"ringan",kj:"軽い"},
+{k:"ちかい",r:"chikai",a:"dekat",kj:"近い"},
+{k:"とおい",r:"tooi",a:"jauh",kj:"遠い"},
+{k:"はやい",r:"hayai",a:"cepat",kj:"速い",n:"Ada 'hayai' (早い) yang berarti 'pagi/lebih awal'. Beda kanji, beda makna."},
+{k:"おそい",r:"osoi",a:"lambat",kj:"遅い",n:"Lawan kata dari 'hayai'. Juga berarti 'terlambat'."},
+{k:"おおい",r:"ooi",a:"banyak",kj:"多い",n:"Khusus dipakai sebagai predikat (〜が おおいです), bukan langsung di depan kata benda seperti 'takusan'."},
+{k:"すくない",r:"sukunai",a:"sedikit",kj:"少ない",n:"Lawan kata dari 'ooi'. Juga predikat, bukan langsung di depan kata benda."},
+{k:"あたたかい",r:"atatakai",a:"Hangat",kj:"暖かい"},
+{k:"すずしい",r:"suzushii",a:"sejuk",kj:"涼しい"},
+{k:"ながい",r:"nagai",a:"panjang",kj:"長い"},
+{k:"みじかい",r:"mijikai",a:"pendek",kj:"短い"},
+{k:"あまい",r:"amai",a:"manis",kj:"甘い"},
+{k:"からい",r:"karai",a:"pedas",kj:"辛い"},
+{k:"いそがしい",r:"isogashii",a:"sibuk",kj:"忙しい"},
+{k:"わかい",r:"wakai",a:"muda",kj:"若い"},
+{k:"ほしい",r:"hoshii",a:"ingin",kj:"欲しい"},
+{k:"あかるい",r:"akarui",a:"terang",kj:"明るい"},
+{k:"くらい",r:"kurai",a:"gelap",kj:"暗い"},
+{k:"ひろい",r:"hiroi",a:"luas",kj:"広い"},
+{k:"せまい",r:"semai",a:"sempit",kj:"狭い"},
+{k:"せがたかい",r:"segatakai",a:"Tinggi(badan)",kj:"背が高い"},
+{k:"せがひくい",r:"segahikui",a:"rendah (badan)",kj:"背が低い"},
+{k:"あぶない",r:"abunai",a:"berbahaya",kj:"危ない"},
+{k:"うれしい",r:"ureshii",a:"senang",kj:"嬉しい",n:"Senang karena sesuatu terjadi. Beda dengan 'tanoshii' (menyenangkan)."},
+{k:"かなしい",r:"kanashii",a:"sedih",kj:"悲しい",n:"Banyak muncul dalam lagu dan puisi Jepang."},
+{k:"さびしい",r:"sabishii",a:"sepi",kj:"寂しい"},
+{k:"ねむい",r:"nemui",a:"mengantuk",kj:"眠い"},
+{k:"あさい",r:"asai",a:"dangkal",kj:"浅い"},
+{k:"ふかい",r:"fukai",a:"dalam",kj:"深い"},
+{k:"あつい",r:"atsui",a:"tebal",kj:"厚い",n:"Bunyinya sama kayak 暑い (panas cuaca) dan 熱い (panas benda), tapi ini kanji ketiga: 厚い = tebal (buku, kain, dsb)."},
+{k:"くわしい",r:"kuwashii",a:"detail, teliti",kj:"詳しい"},
+{k:"やわらかい",r:"yawarakai",a:"Lunak, lembut",kj:"柔らかい"},
+{k:"かたい",r:"katai",a:"keras",kj:"硬い"},
+{k:"にがい",r:"nigai",a:"pahit",kj:"苦い"},
+{k:"しおからい",r:"shiokarai",a:"asin",kj:"塩辛い"},
+{k:"きたない",r:"kitanai",a:"kotor",kj:"汚い"},
+{k:"かわいい",r:"kawaii",a:"cantik, lucu",kj:"可愛い"},
+{k:"こわい",r:"kowai",a:"menakutkan",kj:"怖い"},
+{k:"うるさい",r:"urusai",a:"berisik",kj:"煩い"},
+{k:"うつくしい",r:"utsukushii",a:"Cantik, indah",kj:"美しい"},
+{k:"しぶい",r:"shibui",a:"sepat",kj:"渋い"},
+{k:"すっぱい",r:"suppai",a:"asam",kj:"酸っぱい"},
+{k:"くるしい",r:"kurushii",a:"sukar,susah hati, payah, menderita",kj:"苦しい"},
+{k:"あらい",r:"arai",a:"kasar, galak, ganas",kj:"荒い"},
+{k:"いたい",r:"itai",a:"sakit",kj:"痛い"},
+{k:"にぶい",r:"nibui",a:"tumpul, lambat, lamban",kj:"鈍い"},
+{k:"よわい",r:"yowai",a:"lemah",kj:"弱い"},
+{k:"つよい",r:"tsuyoi",a:"kuat",kj:"強い"},
+{k:"ふとい",r:"futoi",a:"tebal, gemuk, besar",kj:"太い"},
+{k:"ほそい",r:"hosoi",a:"tipis, kurus, kecil",kj:"細い"},
+{k:"かっこいい",r:"kakkoii",a:"keren, ganteng"},
+{k:"みにくい",r:"minikui",a:"jelek",kj:"醜い"},
+{k:"するどい",r:"surudoi",a:"tajam",kj:"鋭い"}
+]},
+"Kata Sifat - な (na-keiyoushi)":{rows:[
+{k:"きれい",r:"kirei",a:"cantik / indah / bersih",n:"Na-adjective, walau berakhiran い — jangan tertukar sebagai i-adjective! Bisa berarti 'cantik' ATAU 'bersih' tergantung konteks."},
+{k:"いけめん",r:"ikemen",a:"ganteng"},
+{k:"ハンサム",r:"hansamu",a:"ganteng"},
+{k:"げんき",r:"genki",a:"sehat, ceria, aktif",kj:"元気"},
+{k:"きんべん",r:"kinben",a:"rajin",kj:"勤勉"},
+{k:"ばか",r:"baka",a:"bodoh",kj:"馬鹿"},
+{k:"しんせつ",r:"shinsetsu",a:"ramah",kj:"親切"},
+{k:"びんぼう",r:"binbou",a:"miskin",kj:"貧乏"},
+{k:"ひま",r:"hima",a:"senggang",kj:"暇"},
+{k:"すてき",r:"suteki",a:"indah, bagus",kj:"素敵"},
+{k:"じゅうよう",r:"juuyou",a:"penting",kj:"重要"},
+{k:"すき",r:"suki",a:"suka",kj:"好き"},
+{k:"ひつよう",r:"hitsuyou",a:"keperluan, penting",kj:"必要"},
+{k:"しょうじき",r:"shoujiki",a:"jujur",kj:"正直"},
+{k:"じょうず",r:"jouzu",a:"pintar, pandai, mahir",kj:"上手"},
+{k:"へた",r:"heta",a:"tidak mahir, tidak pandai",kj:"下手"},
+{k:"たいせつ",r:"taisetsu",a:"penting",kj:"大切"},
+{k:"ぶれい",r:"burei",a:"tidak sopan",kj:"無礼"},
+{k:"しつれい",r:"shitsurei",a:"tidak sopan, permisi",kj:"失礼"},
+{k:"ていねい",r:"teinei",a:"sopan",kj:"丁寧"},
+{k:"きらい",r:"kirai",a:"tidak suka, benci",kj:"嫌い"},
+{k:"りっぱ",r:"rippa",a:"hebat, bagus, jempol",kj:"立派"},
+{k:"じょうぶ",r:"joubu",a:"sehat, kuat, kokoh",kj:"丈夫"},
+{k:"なまいき",r:"namaiki",a:"sombong, angkuh, congkak",kj:"生意気"},
+{k:"にぎやか",r:"nigiyaka",a:"ramai",n:"Na-adjective. Lawan kata dari 'shizuka'. Dipakai untuk tempat yang rame orang/kegiatan."},
+{k:"さいわい",r:"saiwai",a:"bahagia, beruntung, mujur",kj:"幸い"},
+{k:"ふくざつ",r:"fukuzatsu",a:"sulit, sukar",kj:"複雑"},
+{k:"あいまい",r:"aimai",a:"kabur, tidak jelas",kj:"曖昧"},
+{k:"ゆうめい",r:"yuumei",a:"terkenal",kj:"有名",n:"Na-adjective. Yuu (punya) + Mei (nama) — harfiah 'punya nama (yang dikenal)'."},
+{k:"まじめ",r:"majime",a:"rajin",kj:"真面目"},
+{k:"べんり",r:"benri",a:"praktis",kj:"便利"},
+{k:"ふべん",r:"fuben",a:"tidak praktis",kj:"不便"},
+{k:"たいくつ",r:"taikutsu",a:"membosankan",kj:"退屈"},
+{k:"しずか",r:"shizuka",a:"sunyi / sepi / tenang",kj:"静か",n:"Na-adjective — kalau di depan kata benda jadi 'shizuka na machi', tapi kalau jadi predikat cukup 'shizuka desu' (な hilang)."},
+{k:"ふあん",r:"fuan",a:"cemas, gelisah, bimbang",kj:"不安"},
+{k:"ぞんざい",r:"zonzai",a:"Kasar, kurang ajar"},
+{k:"むだ",r:"muda",a:"Mubazir, sia-sia",kj:"無駄"},
+{k:"だいじょうぶ",r:"daijoubu",a:"Tidak apa-apa",kj:"大丈夫"},
+{k:"たいへん",r:"taihen",a:"Sulit, sukar",kj:"大変"},
+{k:"へん",r:"hen",a:"Aneh",kj:"変"},
+{k:"かいてき",r:"kaiteki",a:"Nyaman, nikmat, menyenangkan",kj:"快適"},
+{k:"きよう",r:"kiyou",a:"Kecekatan tangan, cekatan",kj:"起用"},
+{k:"ざんこく",r:"zankoku",a:"Kejam",kj:"残酷"},
+{k:"かんたん",r:"kantan",a:"mudah",kj:"簡単"},
+{k:"おおきな",r:"ookina",a:"besar",kj:"大きな",n:"Bentuk khusus (rentaikei) — cuma bisa nempel langsung di depan kata benda (おおきな いえ), TIDAK BISA jadi predikat (salah kalau bilang 'いえは おおきなです'). Beda dari おおきい (i-adjective biasa) yang bisa dua-duanya."}
+]}
+};
+
+// ─── DATA: KATA KERJA — tab tersendiri sejajar Hiragana/Katakana/Kotoba/Kata Bantu Bilangan ───
+
+const KATA_KERJA = {
+"Kata Kerja - Kelompok I":{rows:[
+{k:"あいます",r:"aimasu",a:"bertemu, berjumpa",kj:"会います"},
+{k:"あそびます",r:"asobimasu",a:"bermain",kj:"遊びます",n:"Dari 'asobu'. Orang dewasa juga pakai kata ini untuk bersenang-senang."},
+{k:"あらいます",r:"araimasu",a:"mencuci (tangan)",kj:"洗います"},
+{k:"あります",r:"arimasu",a:"ada (benda mati)",kj:"有ります",n:"Dari 'aru'. Khusus benda mati/tidak bergerak. Sering ditulis hiragana saja dalam praktik sehari-hari."},
+{k:"あるきます",r:"arukimasu",a:"berjalan kaki",kj:"歩きます"},
+{k:"いいます",r:"iimasu",a:"berkata, mengatakan",kj:"言います"},
+{k:"いきます",r:"ikimasu",a:"pergi",kj:"行きます",n:"Dari 'iku'. Partikel 'ni' atau 'e' menunjukkan tujuan."},
+{k:"いそぎます",r:"isogimasu",a:"terburu-buru, tergesa-gesa",kj:"急ぎます"},
+{k:"いります",r:"irimasu",a:"memerlukan",kj:"要ります"},
+{k:"うごきます",r:"ugokimasu",a:"bergerak, berputar",kj:"動きます"},
+{k:"うたいます",r:"utaimasu",a:"menyanyi",kj:"歌います"},
+{k:"うります",r:"urimasu",a:"menjual",kj:"売ります"},
+{k:"おきます",r:"okimasu",a:"meletakkan",kj:"置きます"},
+{k:"おくります",r:"okurimasu",a:"mengirim, mengantar",kj:"送ります"},
+{k:"おします",r:"oshimasu",a:"menekan, mendorong",kj:"押します"},
+{k:"おもいます",r:"omoimasu",a:"mengira, merasa",kj:"思います"},
+{k:"おもいだします",r:"omoida shimasu",a:"teringat",kj:"思い出します"},
+{k:"およぎます",r:"oyogimasu",a:"berenang",kj:"泳ぎます",n:"Dari 'oyogu'. Kata kerja baris G."},
+{k:"おわります",r:"owarimasu",a:"habis, selesai",kj:"終わります"},
+{k:"かいます",r:"kaimasu",a:"membeli",kj:"買います"},
+{k:"かえします",r:"kae shimasu",a:"mengembalikan",kj:"返します"},
+{k:"かえります",r:"kaerimasu",a:"pulang",kj:"帰ります",n:"Dari 'kaeru'. Khusus pulang ke rumah/tempat asal."},
+{k:"かかります",r:"kakarimasu",a:"memerlukan, memakan (waktu,uang)",kj:"掛かります"},
+{k:"かきます",r:"kakimasu",a:"menulis",kj:"書きます",n:"Dari 'kaku'. Juga berarti 'menggambar' atau 'melukis'."},
+{k:"かします",r:"kashimasu",a:"meminjamkan",kj:"貸します"},
+{k:"かちます",r:"kachimasu",a:"menang",kj:"勝ちます"},
+{k:"かぶります",r:"kaburimasu",a:"memakai (topi,dll)",kj:"被ります"},
+{k:"ききます",r:"kikimasu",a:"mendengar",kj:"聞きます",n:"Dari 'kiku'. Juga berarti 'bertanya' (sensei ni kikimasu)."},
+{k:"きります",r:"kirimasu",a:"memotong, menggunting",kj:"切ります"},
+{k:"けします",r:"keshimasu",a:"mematikan, memadamkan",kj:"消します"},
+{k:"さわります",r:"sawarimasu",a:"menyentuh, memegang",kj:"触ります"},
+{k:"しります",r:"shirimasu",a:"tahu, mengetahui",kj:"知ります"},
+{k:"すいます",r:"suimasu",a:"merokok, menghisap",kj:"吸います"},
+{k:"すみます",r:"sumimasu",a:"tinggal, bermukim",kj:"住みます"},
+{k:"すわります",r:"suwarimasu",a:"duduk",n:"Dari 'suwaru'."},
+{k:"たちます",r:"tachimasu",a:"berdiri",kj:"立ちます",n:"Dari 'tatsu'. Juga berarti 'muncul' secara kiasan."},
+{k:"だします",r:"dashimasu",a:"mengeluarkan, mengirim (surat), menyerahkan (laporan)",kj:"出します"},
+{k:"つかいます",r:"tsukaimasu",a:"memakai, menggunakan",kj:"使います"},
+{k:"つきます",r:"tsukimasu",a:"tiba, sampai",kj:"着きます"},
+{k:"つくります",r:"tsukurimasu",a:"membuat, memproduksi",kj:"作ります"},
+{k:"つれていきます",r:"tsureteikimasu",a:"pergi mengantar (orang lain)",kj:"連れていきます"},
+{k:"てつだいます",r:"tetsudaimasu",a:"membantu",kj:"手伝います"},
+{k:"とまります",r:"tomarimasu",a:"menginap, bermalam",kj:"止まります"},
+{k:"とります",r:"torimasu",a:"mengambil, memotret, menjadi tua",kj:"取ります"},
+{k:"なおします",r:"nao shimasu",a:"memperbaiki, membetulkan",kj:"直します"},
+{k:"なくします",r:"naku shimasu",a:"hilang, kehilangan",kj:"亡くします"},
+{k:"ならいます",r:"naraimasu",a:"belajar (keahlian/kemahiran)",kj:"習います",n:"Dari 'narau'. Belajar suatu keahlian/kemahiran dari orang lain (les musik, memasak, bela diri, dll), biasanya dengan guru/instruktur."},
+{k:"なります",r:"narimasu",a:"menjadi"},
+{k:"ぬぎます",r:"nugimasu",a:"membuka, melepaskan",kj:"脱ぎます"},
+{k:"のぼります",r:"noborimasu",a:"mendaki",kj:"上ります"},
+{k:"のみます",r:"nomimasu",a:"minum",kj:"飲みます",n:"Dari 'nomu'. Minum obat juga pakai kata ini."},
+{k:"のります",r:"norimasu",a:"naik",kj:"乗ります"},
+{k:"はいります",r:"hairimasu",a:"masuk",kj:"入ります",n:"Dari 'hairu'. Partikel 'ni' dipakai untuk tempat yang dimasuki."},
+{k:"はきます",r:"hakimasu",a:"memakai (sepatu, celana, dll)",kj:"吐きます"},
+{k:"はたらきます",r:"hatarakimasu",a:"bekerja",kj:"働きます"},
+{k:"ひきます",r:"hikimasu",a:"menarik",kj:"引きます"},
+{k:"ふります",r:"furimasu",a:"turun (hujan, salju)",kj:"降ります"},
+{k:"はらいます",r:"haraimasu",a:"membayar",kj:"払います"},
+{k:"はなします",r:"hanashimasu",a:"berbicara",kj:"話します",n:"Dari 'hanasu'. 'Hanashi' = cerita/pembicaraan."},
+{k:"まがります",r:"magarimasu",a:"belok (kiri, kanan)",kj:"曲がります"},
+{k:"まちます",r:"machimasu",a:"menunggu",kj:"待ちます"},
+{k:"まわします",r:"mawa shimasu",a:"memutar",kj:"回します"},
+{k:"もちます",r:"mochimasu",a:"memegang, membawa, memiliki",kj:"持ちます"},
+{k:"もっていきます",r:"motteikimasu",a:"pergi membawa",kj:"持っていきます"},
+{k:"もらいます",r:"moraimasu",a:"menerima",kj:"貰います"},
+{k:"やくにたちます",r:"yakunitachimasu",a:"berguna, berfaedah, bermanfaat",kj:"役に立ちます"},
+{k:"やすみます",r:"yasumimasu",a:"beristirahat",kj:"休みます"},
+{k:"よびます",r:"yobimasu",a:"memanggil",kj:"呼びます"},
+{k:"よみます",r:"yomimasu",a:"membaca",kj:"読みます",n:"Dari 'yomu'. Hon wo yomimasu = membaca buku."},
+{k:"わかります",r:"wakarimasu",a:"mengerti",kj:"分かります"},
+{k:"わたります",r:"watarimasu",a:"menyeberang",kj:"渡ります"},
+{k:"まなびます",r:"manabimasu",a:"mempelajari (secara umum/mendalam)",kj:"学びます",n:"Dari 'manabu'. Mempelajari sesuatu secara lebih luas/mendalam tanpa harus terlalu 'ngoyo', bisa dari pengalaman atau observasi, bukan cuma dari buku."},
+{k:"やります",r:"yarimasu",a:"melakukan, mengerjakan (santai)",kj:"やります",n:"Dari 'yaru'. Versi lebih santai/informal dari 'shimasu'. Sering dipakai untuk menawarkan diri mengerjakan sesuatu, contoh: 'watashi ga yarimasu' = saya (lah) yang akan melakukannya."}
+]},
+"Kata Kerja - Kelompok II":{rows:[
+{k:"あけます",r:"akemasu",a:"membuka",kj:"開けます"},
+{k:"あげます",r:"agemasu",a:"memberikan",kj:"挙げます"},
+{k:"あつめます",r:"atsumemasu",a:"mengumpulkan",kj:"集めます"},
+{k:"あびます",r:"abimasu",a:"mandi",kj:"浴びます"},
+{k:"います",r:"imasu",a:"ada (makhluk hidup)",kj:"居ます",n:"Dari 'iru'. Untuk manusia dan hewan. Sering ditulis hiragana saja dalam praktik sehari-hari."},
+{k:"いれます",r:"iremasu",a:"memasukkan",kj:"入れます"},
+{k:"うまれます",r:"umaremasu",a:"lahir, dilahirkan",kj:"生まれます"},
+{k:"おきます",r:"okimasu",a:"bangun",kj:"起きます"},
+{k:"おしえます",r:"oshiemasu",a:"mengajar, memberitahukan (alamat)",kj:"教えます"},
+{k:"おぼえます",r:"oboemasu",a:"mengingat, menghafal",kj:"覚えます"},
+{k:"おります",r:"orimasu",a:"turun",kj:"降ります"},
+{k:"かえます",r:"kaemasu",a:"mengganti, menukar, mengubah",kj:"変えます"},
+{k:"かけます",r:"kakemasu",a:"menelepon, memakai",kj:"掛けます"},
+{k:"かんがえます",r:"kangaemasu",a:"memikirkan",kj:"考えます"},
+{k:"きをつけます",r:"kiwotsukemasu",a:"berhati-hati",kj:"気を付けます"},
+{k:"きます",r:"kimasu",a:"datang",kj:"来ます",n:"Dari 'kuru' (tidak beraturan). Arah menuju pembicara."},
+{k:"くれます",r:"kuremasu",a:"(kepada saya)",kj:"memberi"},
+{k:"しめます",r:"shimemasu",a:"menutup",kj:"閉めます"},
+{k:"しらべます",r:"shirabemasu",a:"memeriksa, menyelidiki",kj:"調べます"},
+{k:"すてます",r:"sutemasu",a:"membuang",kj:"捨てます"},
+{k:"たべます",r:"tabemasu",a:"makan",kj:"食べます",n:"Dari 'taberu'. Diikuti objek dengan partikel 'wo'."},
+{k:"たります",r:"tarimasu",a:"cukup, mencukupi",kj:"足ります"},
+{k:"つかれます",r:"tsukaremasu",a:"capek, lelah",kj:"疲れます"},
+{k:"つけます",r:"tsukemasu",a:"menyalakan"},
+{k:"でかけます",r:"dekakemasu",a:"pergi keluar, berangkat keluar",kj:"出かけます"},
+{k:"できます",r:"dekimasu",a:"dapat, bisa, mampu",kj:"出来ます"},
+{k:"でます",r:"demasu",a:"keluar",kj:"出ます",n:"Dari 'deru'. Juga berarti 'muncul' atau 'berangkat' (kereta)."},
+{k:"とめます",r:"tomemasu",a:"menghentikan",kj:"止めます"},
+{k:"ねます",r:"nemasu",a:"tidur",kj:"寝ます"},
+{k:"のりかえます",r:"norikaemasu",a:"ganti kendaraan, pindah kendaraan",kj:"乗り換えます"},
+{k:"はじめます",r:"hajimemasu",a:"memulai",kj:"始めます"},
+{k:"まけます",r:"makemasu",a:"kalah",kj:"負けます"},
+{k:"みせます",r:"misemasu",a:"memperlihatkan",kj:"見せます"},
+{k:"みます",r:"mimasu",a:"melihat / menonton",kj:"見ます",n:"Dari 'miru'. Menonton film = eiga wo mimasu."},
+{k:"むかえます",r:"mukaemasu",a:"menjemput",kj:"迎えます"},
+{k:"やめます",r:"yamemasu",a:"berhenti, meninggalkan (perusahaan)",kj:"辞めます"},
+{k:"わすれます",r:"wasuremasu",a:"lupa",kj:"忘れます"},
+{k:"しています",r:"shiteimasu",a:"sedang melakukan",n:"Bentuk 'te-iru' menyatakan aksi sedang berlangsung."}
+]},
+"Kata Kerja - Kelompok III":{rows:[
+{k:"あんないします",r:"annai shimasu",a:"mengantarkan untuk melihat-lihat",kj:"案内します"},
+{k:"うんてんします",r:"unten shimasu",a:"mengemudikan, menjalankan",kj:"運転します"},
+{k:"かいものします",r:"kaimono shimasu",a:"berbelanja",kj:"買い物します"},
+{k:"きます",r:"kimasu",a:"datang",kj:"来ます",n:"Dari 'kuru' (tidak beraturan). Arah menuju pembicara."},
+{k:"けっこんします",r:"kekkon shimasu",a:"menikah",kj:"結婚します"},
+{k:"けんがくします",r:"kengaku shimasu",a:"meninjau",kj:"見学します"},
+{k:"けんきゅうします",r:"kenkyuu shimasu",a:"meneliti",kj:"研究します"},
+{k:"コピーします",r:"kopii shimasu",a:"mengkopi"},
+{k:"さんぽします",r:"sanpo shimasu",a:"berjalan-jalan (di taman)",kj:"散歩します"},
+{k:"ざんぎょうします",r:"zangyou shimasu",a:"lembur (kerja)",kj:"残業します"},
+{k:"します",r:"shimasu",a:"melakukan, mengerjakan",n:"Kata kerja golongan III (tidak beraturan). Kata kerja paling serbaguna — sering digabung kata benda + shimasu untuk membentuk kata kerja baru (benkyou shimasu, dll)."},
+{k:"しゅうりします",r:"shuuri shimasu",a:"memperbaiki",kj:"修理します"},
+{k:"しゅっちょうします",r:"shutchou shimasu",a:"dinas keluar kota",kj:"出張します"},
+{k:"しょうかいします",r:"shoukai shimasu",a:"memperkenalkan",kj:"紹介します"},
+{k:"しょくじします",r:"shokuji shimasu",a:"makan",kj:"食事します"},
+{k:"しんぱいします",r:"shinpai shimasu",a:"khawatir, cemas",kj:"心配します"},
+{k:"せつめいします",r:"setsumei shimasu",a:"menjelaskan, menerangkan",kj:"説明します"},
+{k:"せんたくします",r:"sentaku shimasu",a:"mencuci (pakaian)",kj:"洗濯します"},
+{k:"そうじします",r:"souji shimasu",a:"membersihkan (kamar)",kj:"掃除します"},
+{k:"つれてきます",r:"tsuretekimasu",a:"membawa, datang mangantar (orang)",kj:"連れてきます"},
+{k:"でんわします",r:"denwa shimasu",a:"menelepon",kj:"電話します"},
+{k:"ひっこしします",r:"hikkoshi shimasu",a:"pindah rumah",kj:"引っ越しします"},
+{k:"べんきょうします",r:"benkyoushimasu",a:"belajar (akademis)",kj:"勉強します",n:"Belajar dalam konteks akademis/sekolah, misalnya belajar pelajaran atau bahasa untuk ujian."},
+{k:"もってきます",r:"mottekimasu",a:"membawa, datang membawa",kj:"持ってきます"},
+{k:"よやくします",r:"yoyaku shimasu",a:"memesan",kj:"予約します"},
+{k:"りゅうがくします",r:"ryuugaku shimasu",a:"belajar di luar negeri",kj:"留学します"},
+{k:"れんしゅうします",r:"renshuu shimasu",a:"berlatih",kj:"練習します"}
+]}
+};
+
 // ─── DATA: KATA BANTU BILANGAN (助数詞) — tab tersendiri sejajar Hiragana/Katakana/Kotoba ───
 const COUNTER = {
 
@@ -1190,6 +1424,7 @@ const COUNTER = {
 
 };
 
+// ─── DATA: PARTIKEL ───
 const PT=[
 {sym:"は",r:"wa",name:"Topik (topic marker)",
 desc:"Menandai topik kalimat. Ditulis 'ha' tapi dibaca 'wa'.",
@@ -3008,18 +3243,18 @@ const BUNPOU = [
   // ═══════════════════════════════════════════════
   {
     tema: "Hari 9",
-    judul: "〔tempat1〕は　〔tempat2〕の　〔keterangan lokasi〕〔方角〕です (Menyatakan letak suatu tempat relatif ke tempat lain)",
-    sub: "Pola 〜の〜 dari Hari 1 (penghubung kata benda) dipakai lagi di sini buat nunjukin posisi tempat1 relatif terhadap tempat2, digabung sama kosakata keterangan lokasi/arah mata angin (きた=utara／ひがし=timur／なか=tengah／みなみ=selatan／にし=barat, dsb) dari Bab 4.",
+    judul: "〔tempat1〕の　〔tempat2〕は　〔方角〕です (Menyatakan letak/arah relatif)",
+    sub: "Pola 〜の〜 dari Hari 1 (penghubung kata benda) dipakai lagi di sini, tapi sekarang buat nunjukin posisi suatu tempat relatif terhadap tempat lain, digabung sama kosakata arah mata angin (きた／みなみ／ひがし／にし) dari Bab 4.",
     items: [
       {
-        pola: "〔tempat1〕は　〔tempat2〕の　〔keterangan lokasi〕〔方角〕です。",
-        romaji: "[tempat1] wa [tempat2] no [keterangan lokasi/houkou] desu.",
-        arti: "[tempat1] ada di [keterangan lokasi/arah] dari [tempat2].",
-        catatan: "Struktur: 'tempat1 itu, tempat2-nya keterangan lokasi'. Jadi kalau mau bilang 'stasiun ada di utara sekolah', urutannya えきは　がっこうの　きたです (bukan がっこうは　えきの...). 〜の〜 di sini fungsinya sama kayak Hari 1 (menghubungkan 2 kata benda), cuma sekarang kata benda keduanya berupa keterangan lokasi/arah.",
+        pola: "〔tempat1〕の　〔tempat2〕は　〔方角〕です。",
+        romaji: "[tempat1] no [tempat2] wa [houkou] desu.",
+        arti: "[Arah dari tempat1] adalah [tempat2].",
+        catatan: "Struktur: 'tempat2-nya tempat1 itu arah'. Jadi kalau mau bilang 'utara sekolah adalah stasiun', urutannya がっこうの　きたは　えきです (bukan きたの　がっこうは...). 〜の〜 di sini fungsinya sama kayak Hari 1 (menghubungkan 2 kata benda), cuma sekarang kata benda keduanya berupa arah.",
         contoh: [
-          {jp:"えきは　がっこうの　きたです。", id:"Stasiun ada di utara sekolah."},
-          {jp:"こうえんは　としょかんの　みなみです。", id:"Taman ada di selatan perpustakaan."},
-          {jp:"かわは　うちの　ひがしです。", id:"Sungai ada di timur rumah."}
+          {jp:"がっこうの　きたは　えきです。", id:"Utara sekolah adalah stasiun."},
+          {jp:"としょかんの　みなみは　こうえんです。", id:"Selatan perpustakaan adalah taman."},
+          {jp:"うちの　ひがしは　かわです。", id:"Timur rumah adalah sungai."}
         ]
       }
     ]
@@ -3068,13 +3303,10 @@ const BUNPOU = [
         pola: "〔すうじ〕じかんくらいです。",
         romaji: "[suuji] jikan kurai desu.",
         arti: "Kira-kira [angka] jam.",
-        catatan: "くらい = kira-kira/sekitar, dipasang setelah durasi buat nunjukin itu perkiraan (bukan waktu pasti). Bisa juga dipakai buat satuan lain, bukan cuma じかん — contohnya ～ふんくらい (sekitar ~menit). Bisa digabung sama で (alat/cara, dari pola 〔のりもの〕で〔動詞〕 di atas) buat jawab lengkap 'naik apa DAN berapa lama' dalam satu kalimat: 〔のりもの〕で　〔じかん〕くらいです。 Perkecualian: あるいて (jalan kaki) tetap TIDAK pakai で, sama kayak di pola sebelumnya.",
+        catatan: "くらい = kira-kira/sekitar, dipasang setelah durasi buat nunjukin itu perkiraan (bukan waktu pasti). Bisa juga dipakai buat satuan lain, bukan cuma じかん — contohnya ～ふんくらい (sekitar ~menit).",
         contoh: [
           {jp:"うちから　がっこうまで　どのぐらいですか？　－　いちじかんくらいです。", id:"Dari rumah sampai sekolah berapa lama? — Sekitar 1 jam."},
-          {jp:"でんしゃで　にじかんくらいです。", id:"Naik kereta sekitar 2 jam. (で=alat dari pola sebelumnya)"},
-          {jp:"バスで　さんじゅっぷんくらいです。", id:"Naik bus sekitar 30 menit. (で=alat, sama pola)"},
-          {jp:"あるいて　じゅっぷんくらいです。", id:"Jalan kaki sekitar 10 menit. (あるいて tetap tanpa で, sama kayak pengecualian di pola sebelumnya)"},
-          {jp:"うちから　がっこうまで　でんしゃで　いちじかんくらいです。", id:"Dari rumah sampai sekolah naik kereta sekitar 1 jam. (gabungan から〜まで + で + くらいです sekaligus dalam satu kalimat)"}
+          {jp:"でんしゃで　にじかんくらいです。", id:"Naik kereta sekitar 2 jam. (で=alat dari pola sebelumnya)"}
         ]
       }
     ]
@@ -3133,6 +3365,144 @@ const BUNPOU = [
           {jp:"としょかんは　しずかな　ところです。", id:"Perpustakaan adalah tempat yang sunyi. (positif)"},
           {jp:"としょかんは　しずかな　ところじゃありません。", id:"Perpustakaan bukan tempat yang sunyi. (negatif)"},
           {jp:"としょかんは　しずかな　ところですか？", id:"Apakah perpustakaan tempat yang sunyi? (tanya)"}
+        ]
+      }
+    ]
+  },
+  // ═══════════════════════════════════════════════
+  // HARI 10
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 10",
+    judul: "〜か (Partikel tanya di akhir kalimat)",
+    sub: "か bisa ditempel di akhir kalimat APA PUN (kata kerja, kata sifat, kata benda) untuk mengubahnya jadi pertanyaan — bukan cuma 〜ですか seperti di Hari 1, tapi bentuk umumnya.",
+    items: [
+      {
+        pola: "〔kalimat〕＋　か。",
+        romaji: "~ ka.",
+        arti: "Apakah ~? (pertanyaan umum)",
+        catatan: "か = partikel akhir kalimat yang menandai pertanyaan. Ditempel di akhir kalimat lengkap, apa pun jenis predikatnya (kata kerja, kata sifat-い, kata sifat-な, atau kata benda + です).",
+        contoh: [
+          {jp:"あした　がっこうに　いきますか。", id:"Apakah besok pergi ke sekolah?"},
+          {jp:"この　ほんは　おもしろいですか。", id:"Apakah buku ini menarik?"},
+          {jp:"つくえの　うえに　ねこが　いますか。", id:"Apakah ada kucing di atas meja?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 10",
+    judul: "〜ね (Partikel akhir: mengajak setuju / jeda saat menjawab)",
+    sub: "ね ditempel di akhir kalimat untuk mengajak lawan bicara mengiyakan/menyetujui sesuatu yang pembicara sudah cukup yakin — beda dari か yang menanyakan info baru. Bentuk そうですね juga dipakai berdiri sendiri sebagai jeda sebelum menjawab.",
+    items: [
+      {
+        pola: "〔kalimat〕＋　ね。",
+        romaji: "~ ne.",
+        arti: "~ ya? / ~ kan? (mengajak setuju)",
+        catatan: "ね dipakai saat pembicara mengira lawan bicara akan setuju, mengajak konfirmasi kesamaan pendapat. か menanyakan info yang belum diketahui, ね mengonfirmasi apa yang sudah dirasa sama-sama.",
+        contoh: [
+          {jp:"きょうは　あついですね。", id:"Hari ini panas, ya."},
+          {jp:"この　まちは　にぎやかですね。", id:"Kota ini ramai, ya."},
+          {jp:"あの　やまは　たかいですね。", id:"Gunung itu tinggi, ya."}
+        ]
+      },
+      {
+        pola: "そうですね…",
+        romaji: "sou desu ne...",
+        arti: "Hmm, ya... / Begitu ya... (jeda sebelum menjawab)",
+        catatan: "そうですね dipakai berdiri sendiri sebagai jeda saat berpikir sebelum menjawab, mirip 'hmm, gimana ya' dalam bahasa Indonesia. Beda dari そうですか yang dipakai untuk menerima/menanggapi info baru dari lawan bicara.",
+        contoh: [
+          {jp:"しゅみは　なんですか？　－　そうですね…　どくしょです。", id:"Hobinya apa? — Hmm, ya... membaca buku."},
+          {jp:"どんな　ひとですか？　－　そうですね…　しんせつな　ひとです。", id:"Orangnya seperti apa? — Hmm, ya... orang yang baik hati."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 10",
+    judul: "〜が〜 (tapi — menggabungkan dua kalimat yang berlawanan)",
+    sub: "が sebagai penghubung antar-kalimat (bukan partikel subjek) berarti 'tapi', menggabungkan dua kalimat berkonteks berlawanan jadi satu kalimat. でも adalah versi santai/informalnya, ditulis terpisah di awal kalimat baru.",
+    items: [
+      {
+        pola: "〔kalimat１〕が、〔kalimat２〕。",
+        romaji: "~ga, ~.",
+        arti: "~, tapi ~.",
+        catatan: "が di sini menggabungkan dua kalimat penuh jadi satu, dengan isi kalimat kedua berlawanan/kontras dari kalimat pertama. Lebih formal, sering dipakai dalam kalimat tertulis atau sopan.",
+        contoh: [
+          {jp:"この　まちは　にぎやかですが、しずかな　ところも　あります。", id:"Kota ini ramai, tapi ada juga tempat yang sunyi."},
+          {jp:"あの　やまは　たかいですが、きれいです。", id:"Gunung itu tinggi, tapi indah."}
+        ]
+      },
+      {
+        pola: "〔kalimat１〕。でも、〔kalimat２〕。",
+        romaji: "~. Demo, ~.",
+        arti: "~. Tapi, ~. (santai/informal)",
+        catatan: "でも adalah versi santai dari 〜が〜, tapi ditulis sebagai kalimat BARU yang terpisah (setelah titik), bukan disambung di kalimat yang sama. Lebih sering dipakai dalam percakapan sehari-hari.",
+        contoh: [
+          {jp:"あの　ひとは　かっこいいです。でも、しんせつじゃありません。", id:"Orang itu keren. Tapi, tidak baik hati."},
+          {jp:"テストは　むずかしいです。でも、おもしろいです。", id:"Ujiannya sulit. Tapi, menarik."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 10",
+    judul: "〜そして〜 (dan lalu — menggabungkan dua kalimat yang selaras)",
+    sub: "そして menyambung dua kalimat terpisah jadi satu cerita berlanjut dengan konteks yang SAMA/senada — kebalikan dari が／でも yang menghubungkan hal berlawanan.",
+    items: [
+      {
+        pola: "〔kalimat１〕。そして、〔kalimat２〕。",
+        romaji: "~. Soshite, ~.",
+        arti: "~. Dan lagi, ~. (kalimat kedua selaras/senada dengan yang pertama)",
+        catatan: "そして ditulis di awal kalimat baru yang terpisah (setelah titik), untuk melanjutkan informasi yang searah/senada dengan kalimat sebelumnya — bukan berlawanan seperti が／でも.",
+        contoh: [
+          {jp:"としょかんは　しずかです。そして、きれいです。", id:"Perpustakaan itu sunyi. Dan lagi, bersih."},
+          {jp:"わたしは　がくせいです。そして、にほんごを　べんきょうしています。", id:"Saya siswa. Dan lagi, sedang belajar bahasa Jepang."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 10",
+    judul: "〜が　あります (Menyatakan keberadaan & kepemilikan benda)",
+    sub: "〜が　あります menyatakan ada suatu benda MATI di suatu tempat (keberadaan), atau bisa juga dipakai tanpa keterangan tempat untuk menyatakan kepemilikan benda oleh seseorang. Ingat: あります khusus benda mati, kalau makhluk hidup pakai います (Hari sebelumnya).",
+    items: [
+      {
+        pola: "〔tempat〕に　〔KB〕が　あります。",
+        romaji: "[tempat] ni [KB] ga arimasu.",
+        arti: "Di [tempat] ada [benda]. (keberadaan)",
+        catatan: "に menandai lokasi, が menandai benda yang keberadaannya dinyatakan, あります menyatakan 'ada' untuk benda mati/tak bergerak.",
+        contoh: [
+          {jp:"つくえの　うえに　ほんが　あります。", id:"Di atas meja ada buku."},
+          {jp:"がっこうの　なかに　としょかんが　あります。", id:"Di dalam sekolah ada perpustakaan."}
+        ]
+      },
+      {
+        pola: "〔orang〕は　〔KB〕が　あります。",
+        romaji: "[orang] wa [KB] ga arimasu.",
+        arti: "~ punya ~. (kepemilikan)",
+        catatan: "Pola sama, tapi tanpa keterangan tempat (に): は menandai orang si pemilik, が menandai benda yang dimiliki. Konteks kalimat yang membedakan makna 'keberadaan' vs 'kepemilikan'.",
+        contoh: [
+          {jp:"わたしは　じしょが　あります。", id:"Saya punya kamus."},
+          {jp:"たなかさんは　くるまが　あります。", id:"Tanaka-san punya mobil."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 10",
+    judul: "どんな　〔KB〕ですか？ (Menanyakan keadaan/sifat suatu hal)",
+    sub: "どんな + kata benda + ですか menanyakan seperti apa/bagaimana sifat suatu benda, orang, tempat, atau kejadian. Jawabannya biasanya kata sifat yang menerangkan kata benda tersebut (lihat pola い/な-keiyoushi + KB di Hari 9).",
+    items: [
+      {
+        pola: "どんな　〔KB〕ですか？",
+        romaji: "donna [KB] desu ka?",
+        arti: "[Benda] itu (seperti) apa/bagaimana?",
+        catatan: "どんな selalu langsung nempel di depan kata benda (tanpa な terpisah seperti な-keiyoushi), lalu ditutup dengan ですか. Jawabannya biasanya pakai pola 〔kata sifat〕〔KB〕です dari Hari 9.",
+        contoh: [
+          {jp:"あの　やまは　どんな　やまですか？　－　たかい　やまです。", id:"Gunung itu gunung yang seperti apa? — Gunung yang tinggi."},
+          {jp:"せんせいは　どんな　ひとですか？　－　しんせつな　ひとです。", id:"Gurunya orang yang seperti apa? — Orang yang baik hati."},
+          {jp:"としょかんは　どんな　ところですか？　－　しずかな　ところです。", id:"Perpustakaan itu tempat yang seperti apa? — Tempat yang sunyi."}
         ]
       }
     ]
