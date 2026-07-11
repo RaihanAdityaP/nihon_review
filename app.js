@@ -199,7 +199,7 @@ function renderPartikelAdv() {
 // ─────────────────────────────────────────────────────
 // QUIZ CATEGORIES
 // ─────────────────────────────────────────────────────
-const QCATS = [
+const QCATS_STATIC = [
   { id: 'hi-basic',    label: 'Hiragana Dasar',       t: 'kana' },
   { id: 'hi-dak',      label: 'Hiragana Dakuten',      t: 'kana' },
   { id: 'hi-combo',    label: 'Hiragana Combo',        t: 'kana' },
@@ -262,18 +262,33 @@ const QCATS = [
   { id: 'buku-bab3',   label: 'Buku — Bab 3',          t: 'buku' },
   { id: 'buku-bab4',   label: 'Buku — Bab 4',          t: 'buku' },
   { id: 'buku-bab5',   label: 'Buku — Bab 5',          t: 'buku' },
-  { id: 'bunpou-hari1',   label: 'Bunpou — Hari 1',            t: 'bunpou' },
-  { id: 'bunpou-hari2',   label: 'Bunpou — Hari 2',            t: 'bunpou' },
-  { id: 'bunpou-hari3',   label: 'Bunpou — Hari 3',            t: 'bunpou' },
-  { id: 'bunpou-hari4',   label: 'Bunpou — Hari 4',            t: 'bunpou' },
-  { id: 'bunpou-hari5',   label: 'Bunpou — Hari 5',            t: 'bunpou' },
-  { id: 'bunpou-hari6',   label: 'Bunpou — Hari 6',            t: 'bunpou' },
-  { id: 'bunpou-hari7',   label: 'Bunpou — Hari 7',            t: 'bunpou' },
-  { id: 'bunpou-hari8',   label: 'Bunpou — Hari 8',            t: 'bunpou' },
-  { id: 'bunpou-hari9',   label: 'Bunpou — Hari 9',            t: 'bunpou' },
-  { id: 'bunpou-hari10',  label: 'Bunpou — Hari 10',           t: 'bunpou' },
-  { id: 'bunpou-tambahan',label: 'Bunpou — Materi Tambahan',   t: 'bunpou' },
 ];
+
+// Kategori Bunpou TIDAK di-hardcode di sini — otomatis di-generate dari
+// field `tema` di array BUNPOU (data.js). Nambah "Hari 11" dkk di data.js
+// otomatis muncul di quiz & latihan AI tanpa perlu edit app.js sama sekali.
+function slugifyTema(tema) {
+  const t = String(tema).trim();
+  const mHari = /^Hari\s+(\d+)$/i.exec(t);
+  if (mHari) return 'hari' + mHari[1];
+  if (/^Materi Tambahan$/i.test(t)) return 'tambahan';
+  const s = t.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '');
+  return s || 'x';
+}
+
+function buildBunpouCats() {
+  if (!Array.isArray(BUNPOU)) return [];
+  const temaOrder = [];
+  BUNPOU.forEach(g => { if (g.tema && !temaOrder.includes(g.tema)) temaOrder.push(g.tema); });
+  return temaOrder.map(tema => ({
+    id: 'bunpou-' + slugifyTema(tema),
+    label: 'Bunpou — ' + tema,
+    t: 'bunpou',
+    tema        // disimpan langsung di sini biar bunpouItems/bunpouFullItems ga perlu temaMap terpisah
+  }));
+}
+
+const QCATS = QCATS_STATIC.concat(buildBunpouCats());
 
 let SC = new Set(), ST = new Set(['kana-to-romaji']), QN = 10;
 
@@ -414,20 +429,7 @@ function bukuItems(cid) {
 }
 
 function bunpouItems(cid) {
-  const temaMap = {
-    'bunpou-hari1':    'Hari 1',
-    'bunpou-hari2':    'Hari 2',
-    'bunpou-hari3':    'Hari 3',
-    'bunpou-hari4':    'Hari 4',
-    'bunpou-hari5':    'Hari 5',
-    'bunpou-hari6':    'Hari 6',
-    'bunpou-hari7':    'Hari 7',
-    'bunpou-hari8':    'Hari 8',
-    'bunpou-hari9':    'Hari 9',
-    'bunpou-hari10':   'Hari 10',
-    'bunpou-tambahan': 'Materi Tambahan',
-  };
-  const tema = temaMap[cid];
+  const tema = QCATS.find(c => c.id === cid && c.t === 'bunpou')?.tema;
   if (!tema || !Array.isArray(BUNPOU)) return [];
   let out = [];
   BUNPOU.filter(g => g.tema === tema).forEach(group => {
@@ -831,20 +833,9 @@ let AI_PROVIDER = 'groq';
 let AI_MODE = 'vocab';      // 'vocab' (isian kata) atau 'bunpou' (bikin kalimat pakai pola)
 
 function bunpouFullItems(cidSet) {
-  const temaMap = {
-    'bunpou-hari1':    'Hari 1',
-    'bunpou-hari2':    'Hari 2',
-    'bunpou-hari3':    'Hari 3',
-    'bunpou-hari4':    'Hari 4',
-    'bunpou-hari5':    'Hari 5',
-    'bunpou-hari6':    'Hari 6',
-    'bunpou-hari7':    'Hari 7',
-    'bunpou-hari8':    'Hari 8',
-    'bunpou-hari9':    'Hari 9',
-    'bunpou-hari10':   'Hari 10',
-    'bunpou-tambahan': 'Materi Tambahan',
-  };
-  const temas = [...cidSet].map(id => temaMap[id]).filter(Boolean);
+  const temas = [...cidSet]
+    .map(id => QCATS.find(c => c.id === id && c.t === 'bunpou')?.tema)
+    .filter(Boolean);
   if (!temas.length || !Array.isArray(BUNPOU)) return [];
   let out = [];
   BUNPOU.filter(g => temas.includes(g.tema)).forEach(group => {
