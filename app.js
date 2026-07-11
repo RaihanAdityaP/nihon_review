@@ -81,7 +81,7 @@ function closeMenu() {
 // MATERI
 // ─────────────────────────────────────────────────────
 function switchCat(cat, btn) {
-  document.querySelectorAll('#matHiragana,#matKatakana,#matKotoba,#matCounter,#matSifat,#matKerja').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('#matHiragana,#matKatakana,#matKotoba,#matKanji,#matCounter,#matSifat,#matKerja').forEach(el => el.style.display = 'none');
   document.getElementById('mat' + cat[0].toUpperCase() + cat.slice(1)).style.display = 'block';
   document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -143,6 +143,54 @@ function togAcc(id, head) {
   const open = body.classList.contains('open');
   body.classList.toggle('open', !open);
   head.classList.toggle('open', !open);
+}
+
+function renderKanjiAcc(data, cid) {
+  const el = document.getElementById(cid);
+  if (!el || !Array.isArray(data)) return;
+  const byTema = {};
+  const temaOrder = [];
+  data.forEach(k => {
+    const t = k.tema || 'Lainnya';
+    if (!byTema[t]) { byTema[t] = []; temaOrder.push(t); }
+    byTema[t].push(k);
+  });
+
+  let html = '';
+  temaOrder.forEach(tema => {
+    html += `<div class="sec-header-bunpou">${tema}</div>`;
+    byTema[tema].forEach((k, ki) => {
+      const id = 'a_' + cid + '_' + tema.replace(/[^a-z0-9]/gi, '_') + '_' + ki;
+      html += `<div class="acc-item">
+        <div class="acc-head" onclick="togAcc('${id}',this)">
+          <div class="acc-left">
+            <span class="acc-title" style="font-family:'Noto Serif JP',serif;font-size:1.3rem">${k.char}</span>
+            <span class="acc-cnt">${k.arti}</span>
+          </div>
+          <span class="acc-arrow">▶</span>
+        </div>
+        <div class="acc-body" id="${id}">
+          ${k.n ? `<div style="font-size:.8rem;color:var(--text3);font-style:italic;margin-bottom:.9rem;line-height:1.6">${k.n}</div>` : ''}
+          <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem">
+            <div><div class="p-name" style="margin-bottom:.3rem">Onyomi (音読み)</div><div class="p-rom">${(k.onyomi || []).join('、') || '—'}</div></div>
+            <div><div class="p-name" style="margin-bottom:.3rem">Kunyomi (訓読み)</div><div class="p-rom">${(k.kunyomi || []).join('、') || '—'}</div></div>
+          </div>
+          <div class="tbl-wrap"><table class="ktable">
+            <thead><tr>
+              <th style="width:90px">Kotoba</th>
+              <th style="width:100px">Furigana</th>
+              <th>Arti</th>
+            </tr></thead>
+            <tbody>${(k.kotoba || []).map(w => `<tr>
+              <td class="td-kanji">${w.w}</td>
+              <td class="td-kana">${w.furi}</td>
+              <td class="td-arti">${w.a}${w.n ? `<div class="p-desc" style="margin-top:.2rem">${w.n}</div>` : ''}</td>
+            </tr>`).join('')}</tbody>
+          </table></div>
+        </div></div>`;
+    });
+  });
+  el.innerHTML = html;
 }
 
 // ─────────────────────────────────────────────────────
@@ -968,7 +1016,7 @@ function setAICountCustom(input) {
   const v = parseInt(input.value);
   if (!v || v < 1) return;
   document.querySelectorAll('#aiCntRow .tbtn').forEach(b => b.classList.remove('sel'));
-  AI_N = Math.min(v, 100);
+  AI_N = Math.min(v, 500);
 }
 
 function checkAIReady() {
@@ -1021,7 +1069,7 @@ async function startAILatihan() {
     const pool = bunpouFullItems(AI_SC);
     if (!pool.length) return;
     const shuffled = [...pool].sort(() => Math.random() - 0.5);
-    const sample = shuffled.slice(0, Math.min(AI_N, pool.length, 50));
+    const sample = shuffled.slice(0, Math.min(AI_N, pool.length));
     AI_QUEUE = sample.map(it => ({
       tag: 'bunpou-kalimat',
       prompt: `Buat 1 kalimat menggunakan pola: ${it.pola}`,
@@ -1044,7 +1092,7 @@ async function startAILatihan() {
 
   // Ambil sample acak dari pool sebanyak AI_N (atau semua kalau pool lebih kecil)
   const shuffled = [...pool].sort(() => Math.random() - 0.5);
-  const sample = shuffled.slice(0, Math.min(AI_N, pool.length, 50));
+  const sample = shuffled.slice(0, Math.min(AI_N, pool.length));
   const types = [...AI_ST];
 
   const materialList = sample.map((it, i) => {
@@ -1215,10 +1263,22 @@ function wKanjiPool() {
   return out.filter(x => { if (seen.has(x.char)) return false; seen.add(x.char); return true; });
 }
 
+function wKanjiMateriPool() {
+  if (!Array.isArray(KANJI)) return [];
+  return KANJI.map(k => ({
+    char: k.char,
+    romaji: [...(k.onyomi || []), ...(k.kunyomi || [])].join(' / '),
+    arti: k.arti,
+    note: (k.kotoba || []).map(w => `${w.w}（${w.furi}）— ${w.a}`).join(' · '),
+    type: 'kanji-materi'
+  }));
+}
+
 const WCATS = [
-  { id: 'hiragana', label: 'Hiragana', pool: wHiraganaPool },
-  { id: 'katakana', label: 'Katakana', pool: wKatakanaPool },
-  { id: 'kanji',    label: 'Kanji (dari Kosakata)', pool: wKanjiPool }
+  { id: 'hiragana',     label: 'Hiragana',              pool: wHiraganaPool },
+  { id: 'katakana',     label: 'Katakana',               pool: wKatakanaPool },
+  { id: 'kanji',        label: 'Kanji (dari Kosakata)',  pool: wKanjiPool },
+  { id: 'kanji-materi', label: 'Kanji (Materi Kanji)',   pool: wKanjiMateriPool }
 ];
 
 let WC = new Set(['hiragana']), WORDER = 'acak', WN = 20;
@@ -1303,7 +1363,7 @@ function renderWQuestion() {
   document.getElementById('wPf').style.width = Math.round((WCQ / WQ.length) * 100) + '%';
   document.getElementById('wCtr').textContent = (WCQ + 1) + ' / ' + WQ.length;
   document.getElementById('wSc').textContent = '✓ ' + WOK + '  ✗ ' + WNGCOUNT;
-  const tagMap = { hiragana: 'Hiragana', katakana: 'Katakana', kanji: 'Kanji' };
+  const tagMap = { hiragana: 'Hiragana', katakana: 'Katakana', kanji: 'Kanji', 'kanji-materi': 'Kanji (Materi)' };
   document.getElementById('wTag').textContent = tagMap[item.type] || item.type;
   document.getElementById('wPrompt').textContent = item.romaji || '';
   document.getElementById('wSub').textContent = item.arti ? item.arti : 'Tulis karakternya di kanvas di bawah';
@@ -1530,6 +1590,7 @@ function backWSetup() {
 renderKanaAcc(H, 'matHiragana');
 renderKanaAcc(K, 'matKatakana');
 renderKotobaAcc(KT, 'matKotoba');
+renderKanjiAcc(KANJI, 'matKanji');
 renderKotobaAcc(COUNTER, 'matCounter');
 renderKotobaAcc(KATA_SIFAT, 'matSifat');
 renderKotobaAcc(KATA_KERJA, 'matKerja');

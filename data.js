@@ -2016,6 +2016,188 @@ bab5: {
 }; // end BUKU
 
 // ─────────────────────────────────────────────────────
+// DATA: KANJI — kanji yang dipelajari, terpisah dari kanji yang
+// numpang lewat di Kotoba/Buku (yang cuma field `kj` di kata).
+// Format tiap item:
+// { tema, char, onyomi:[...], kunyomi:[...], arti, kotoba:[{w,furi,a,n?}], n? }
+// - onyomi/kunyomi array karena kanji bisa punya lebih dari 1 cara baca.
+// - kunyomi ditulis apa adanya (termasuk titik okurigana kalau ada, mis. "あ.げる").
+// - n (opsional) = catatan tambahan di level kanji (misal bacaan khusus/irregular).
+// ─────────────────────────────────────────────────────
+const KANJI = [
+  // ═══════════════════════════════════════════════
+  // HARI 1
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 1", char: "一", onyomi: ["いち", "いつ"], kunyomi: ["ひと", "ひと.つ"], arti: "satu",
+    kotoba: [
+      { w: "一つ", furi: "ひとつ", a: "satu (buah/benda)" },
+      { w: "一人", furi: "ひとり", a: "satu orang / sendirian" },
+      { w: "一日", furi: "ついたち", a: "tanggal 1", n: "Bisa juga dibaca いちにち kalau artinya 'satu hari' (durasi), bukan tanggal." },
+      { w: "一月", furi: "いちがつ", a: "bulan Januari" }
+    ]
+  },
+  {
+    tema: "Hari 1", char: "二", onyomi: ["に"], kunyomi: ["ふた", "ふた.つ"], arti: "dua",
+    kotoba: [
+      { w: "二つ", furi: "ふたつ", a: "dua (buah/benda)" },
+      { w: "二人", furi: "ふたり", a: "dua orang" },
+      { w: "二日", furi: "ふつか", a: "tanggal 2 / dua hari" },
+      { w: "二月", furi: "にがつ", a: "bulan Februari" }
+    ]
+  },
+  {
+    tema: "Hari 1", char: "三", onyomi: ["さん"], kunyomi: ["み", "み.つ", "みっ.つ"], arti: "tiga",
+    kotoba: [
+      { w: "三つ", furi: "みっつ", a: "tiga (buah/benda)" },
+      { w: "三人", furi: "さんにん", a: "tiga orang" },
+      { w: "三日", furi: "みっか", a: "tanggal 3 / tiga hari" },
+      { w: "三月", furi: "さんがつ", a: "bulan Maret" }
+    ]
+  },
+  {
+    tema: "Hari 1", char: "山", onyomi: ["さん"], kunyomi: ["やま"], arti: "gunung",
+    kotoba: [
+      { w: "山", furi: "やま", a: "gunung" },
+      { w: "山田", furi: "やまだ", a: "Yamada (nama orang)" },
+      { w: "富士山", furi: "ふじさん", a: "Gunung Fuji" }
+    ]
+  },
+  {
+    tema: "Hari 1", char: "川", onyomi: ["せん"], kunyomi: ["かわ"], arti: "sungai",
+    kotoba: [
+      { w: "川", furi: "かわ", a: "sungai" },
+      { w: "山川", furi: "やまかわ", a: "Yamakawa (nama orang) / gunung dan sungai" }
+    ]
+  },
+  {
+    tema: "Hari 1", char: "目", onyomi: ["もく", "ぼく"], kunyomi: ["め"], arti: "mata",
+    kotoba: [
+      { w: "目", furi: "め", a: "mata" },
+      { w: "一つ目", furi: "ひとつめ", a: "yang pertama / ke-1" },
+      { w: "目的", furi: "もくてき", a: "tujuan" }
+    ]
+  },
+  {
+    tema: "Hari 1", char: "口", onyomi: ["こう", "く"], kunyomi: ["くち"], arti: "mulut",
+    kotoba: [
+      { w: "口", furi: "くち", a: "mulut" },
+      { w: "入口", furi: "いりぐち", a: "pintu masuk" },
+      { w: "出口", furi: "でぐち", a: "pintu keluar" }
+    ]
+  },
+  {
+    tema: "Hari 1", char: "人", onyomi: ["じん", "にん"], kunyomi: ["ひと"], arti: "orang",
+    kotoba: [
+      { w: "人", furi: "ひと", a: "orang" },
+      { w: "人口", furi: "じんこう", a: "populasi/jumlah penduduk" },
+      { w: "日本人", furi: "にほんじん", a: "orang Jepang" }
+    ]
+  },
+  {
+    tema: "Hari 1", char: "木", onyomi: ["もく", "ぼく"], kunyomi: ["き", "こ"], arti: "pohon / kayu",
+    kotoba: [
+      { w: "木曜日", furi: "もくようび", a: "hari Kamis" },
+      { w: "木", furi: "き", a: "pohon / kayu" }
+    ]
+  },
+  {
+    tema: "Hari 1", char: "休", onyomi: ["きゅう"], kunyomi: ["やす.む", "やす.まる", "やす.める"], arti: "istirahat / libur",
+    kotoba: [
+      { w: "休みます", furi: "やすみます", a: "istirahat (bentuk sopan/ます)" },
+      { w: "休む", furi: "やすむ", a: "istirahat (bentuk kamus)" },
+      { w: "休日", furi: "きゅうじつ", a: "hari libur" }
+    ]
+  },
+
+  // ═══════════════════════════════════════════════
+  // HARI 2
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 2", char: "本", onyomi: ["ほん"], kunyomi: ["もと"], arti: "buku / asal",
+    kotoba: [
+      { w: "本", furi: "ほん", a: "buku" },
+      { w: "本当", furi: "ほんとう", a: "sungguh / benar" },
+      { w: "日本", furi: "にほん", a: "Jepang" }
+    ]
+  },
+  {
+    tema: "Hari 2", char: "体", onyomi: ["たい", "てい"], kunyomi: ["からだ"], arti: "tubuh / badan",
+    kotoba: [
+      { w: "体", furi: "からだ", a: "tubuh" },
+      { w: "体育館", furi: "たいいくかん", a: "gedung olahraga" }
+    ]
+  },
+  {
+    tema: "Hari 2", char: "田", onyomi: ["でん"], kunyomi: ["た"], arti: "sawah",
+    kotoba: [
+      { w: "山田", furi: "やまだ", a: "Yamada (nama orang)" },
+      { w: "田んぼ", furi: "たんぼ", a: "sawah" }
+    ]
+  },
+  {
+    tema: "Hari 2", char: "力", onyomi: ["りょく", "りき"], kunyomi: ["ちから"], arti: "tenaga / kekuatan",
+    kotoba: [
+      { w: "力", furi: "ちから", a: "tenaga / kekuatan" },
+      { w: "体力", furi: "たいりょく", a: "stamina / kekuatan fisik" }
+    ]
+  },
+  {
+    tema: "Hari 2", char: "安", onyomi: ["あん"], kunyomi: ["やす.い"], arti: "murah / tenang",
+    kotoba: [
+      { w: "安い", furi: "やすい", a: "murah" },
+      { w: "安全", furi: "あんぜん", a: "aman" },
+      { w: "安心", furi: "あんしん", a: "tenang / lega" }
+    ]
+  },
+  {
+    tema: "Hari 2", char: "中", onyomi: ["ちゅう"], kunyomi: ["なか"], arti: "dalam / tengah",
+    kotoba: [
+      { w: "中", furi: "なか", a: "dalam / tengah" },
+      { w: "田中", furi: "たなか", a: "Tanaka (nama orang)" },
+      { w: "一年中", furi: "いちねんじゅう", a: "sepanjang tahun", n: "Bacaan じゅう di sini bacaan khusus (irregular), bukan ちゅう biasa." }
+    ]
+  },
+  {
+    tema: "Hari 2", char: "男", onyomi: ["だん", "なん"], kunyomi: ["おとこ"], arti: "laki-laki",
+    kotoba: [
+      { w: "男", furi: "おとこ", a: "laki-laki" },
+      { w: "男性", furi: "だんせい", a: "pria (dewasa)" },
+      { w: "長男", furi: "ちょうなん", a: "anak laki-laki sulung" }
+    ]
+  },
+  {
+    tema: "Hari 2", char: "女", onyomi: ["じょ", "にょ"], kunyomi: ["おんな"], arti: "perempuan",
+    kotoba: [
+      { w: "女", furi: "おんな", a: "perempuan" },
+      { w: "女性", furi: "じょせい", a: "wanita (dewasa)" },
+      { w: "長女", furi: "ちょうじょ", a: "anak perempuan sulung" }
+    ]
+  },
+  {
+    tema: "Hari 2", char: "上", onyomi: ["じょう"], kunyomi: ["うえ", "うわ", "かみ", "あ.げる", "のぼ.る"], arti: "atas / naik",
+    n: "Kunyomi ditulis sesuai yang dikasih sensei (うあ dianggap うわ — cek ulang ke sensei kalau ragu).",
+    kotoba: [
+      { w: "上", furi: "うえ", a: "atas" },
+      { w: "上げる", furi: "あげる", a: "menaikkan / memberi" },
+      { w: "上る", furi: "のぼる", a: "naik / mendaki" },
+      { w: "上手", furi: "じょうず", a: "pintar / mahir", n: "Bacaan jukujikun (bacaan khusus gabungan), bukan sekadar onyomi+kunyomi biasa." },
+      { w: "上がる", furi: "あがる", a: "naik / terangkat" }
+    ]
+  },
+  {
+    tema: "Hari 2", char: "下", onyomi: ["か", "げ"], kunyomi: ["した", "さ.げる", "くだ.さい", "お.りる"], arti: "bawah / turun",
+    kotoba: [
+      { w: "下", furi: "した", a: "bawah" },
+      { w: "下さい", furi: "ください", a: "tolong / mohon" },
+      { w: "下手", furi: "へた", a: "tidak mahir / kurang pandai", n: "Bacaan jukujikun (bacaan khusus gabungan), sama seperti 上手." },
+      { w: "下げる", furi: "さげる", a: "menurunkan" },
+      { w: "下りる", furi: "おりる", a: "turun" }
+    ]
+  }
+]; // end KANJI
+
+// ─────────────────────────────────────────────────────
 // DATA: BUNPOU — pola kalimat & tata bahasa
 // Format tiap item: { pola, romaji, arti, catatan, contoh: [{jp, id}] }
 // ─────────────────────────────────────────────────────
@@ -3503,6 +3685,124 @@ const BUNPOU = [
           {jp:"あの　やまは　どんな　やまですか？　－　たかい　やまです。", id:"Gunung itu gunung yang seperti apa? — Gunung yang tinggi."},
           {jp:"せんせいは　どんな　ひとですか？　－　しんせつな　ひとです。", id:"Gurunya orang yang seperti apa? — Orang yang baik hati."},
           {jp:"としょかんは　どんな　ところですか？　－　しずかな　ところです。", id:"Perpustakaan itu tempat yang seperti apa? — Tempat yang sunyi."}
+        ]
+      }
+    ]
+  },
+  // ═══════════════════════════════════════════════
+  // HARI 11
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 11",
+    judul: "とても／すこし／あまり〜ない (Keterangan derajat dasar)",
+    sub: "Ditempel SEBELUM kata sifat untuk menyatakan tingkat/intensitasnya. あまり WAJIB diikuti bentuk negatif kata sifat.",
+    items: [
+      {
+        pola: "とても　＋　KS　です。",
+        romaji: "totemo ~ desu.",
+        arti: "sangat ~",
+        catatan: "とても menyatakan tingkat yang tinggi/kuat. Ditaruh langsung sebelum kata sifat.",
+        contoh: [
+          {jp:"としょかんは　とても　ひろいです。", id:"Perpustakaan itu sangat luas."},
+          {jp:"この　レストランは　とても　たかいです。", id:"Restoran ini sangat mahal."}
+        ]
+      },
+      {
+        pola: "すこし　＋　KS　です。",
+        romaji: "sukoshi ~ desu.",
+        arti: "agak ~ / sedikit ~",
+        catatan: "すこし menyatakan tingkat yang ringan/tipis. Versi santainya ちょっと (sering dipakai di percakapan sehari-hari).",
+        contoh: [
+          {jp:"この　まちは　すこし　たいくつです。", id:"Kota ini agak membosankan."},
+          {jp:"きょうは　ちょっと　さむいです。", id:"Hari ini agak dingin. (versi santai)"}
+        ]
+      },
+      {
+        pola: "あまり　＋　KS（bentuk negatif）。",
+        romaji: "amari ~ (negatif).",
+        arti: "tidak terlalu ~",
+        catatan: "あまり WAJIB diikuti bentuk negatif — tidak bisa berdiri dengan kata sifat bentuk positif. Kalau lupa negatifin predikatnya, kalimatnya jadi salah.",
+        contoh: [
+          {jp:"この　たべものは　あまり　からくないです。", id:"Makanan ini tidak terlalu pedas."},
+          {jp:"この　レストランは　あまり　ゆうめいじゃありません。", id:"Restoran ini tidak terlalu terkenal."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 11",
+    judul: "めっちゃ／ちょう／すごく／ほんとうに (Versi santai keterangan derajat)",
+    sub: "Versi informal dari とても, dipakai di percakapan santai sehari-hari. めっちゃ dan くっちゃ lebih ke gaya anak muda; ちょう dan すごく lebih umum dipakai banyak kalangan; ほんとうに menekankan keyakinan ('beneran'), bukan cuma derajat.",
+    items: [
+      {
+        pola: "めっちゃ／ちょう／すごく　＋　KS。",
+        romaji: "meccha / chou / sugoku ~",
+        arti: "~ banget (santai/gaul)",
+        catatan: "Ganti とても di suasana santai/informal. Jangan dipakai di kalimat formal atau ke orang yang lebih tua/dihormati.",
+        contoh: [
+          {jp:"この　レストラン　めっちゃ　たかい！", id:"Restoran ini mahal banget!"},
+          {jp:"きょうは　すごく　さむい。", id:"Hari ini dingin banget."}
+        ]
+      },
+      {
+        pola: "ほんとうに　＋　KS／KK。",
+        romaji: "hontou ni ~",
+        arti: "beneran ~ / sungguhan ~",
+        catatan: "Menekankan keyakinan pembicara, bukan sekadar tingkat/derajat — mirip 'beneran' atau 'sumpah' dalam bahasa Indonesia santai.",
+        contoh: [
+          {jp:"これは　ほんとうに　おいしいです。", id:"Ini beneran enak."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 11",
+    judul: "ぜんぜん〜いつも (Keterangan frekuensi)",
+    sub: "Ditempel sebelum kata kerja untuk menyatakan seberapa sering sesuatu terjadi, urut dari paling jarang ke paling sering: ぜんぜん（tidak sama sekali, wajib negatif）→ たまに（sesekali）→ ときどき（kadang-kadang）→ よく（sering）→ いつも（selalu）。",
+    items: [
+      {
+        pola: "〔keterangan frekuensi〕　＋　KK。",
+        romaji: "~ + kata kerja.",
+        arti: "seberapa sering suatu hal terjadi",
+        catatan: "ぜんぜん (dan あまり) WAJIB diikuti bentuk negatif kata kerja, sama seperti aturannya di kata sifat. たまに, ときどき, よく, いつも bebas dipakai dengan bentuk positif atau negatif tergantung konteks.",
+        contoh: [
+          {jp:"わたしは　ぜんぜん　としょかんに　いきません。", id:"Saya sama sekali tidak pergi ke perpustakaan."},
+          {jp:"わたしは　ときどき　ほんを　よみます。", id:"Saya kadang-kadang baca buku."},
+          {jp:"わたしは　いつも　ほんを　よみます。", id:"Saya selalu baca buku."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 11",
+    judul: "ぜんぜん／すこし／あまり／けっこう／とても (Keterangan derajat lengkap)",
+    sub: "Skala lengkap keterangan derajat sebelum kata sifat, dari yang paling rendah ke paling tinggi — mirip poin sebelumnya tapi ditambah ぜんぜん (di ujung negatif total) dan けっこう (lumayan, di tengah-tengah).",
+    items: [
+      {
+        pola: "ぜんぜん（negatif） ／ すこし ／ あまり（negatif） ／ けっこう ／ とても　＋　KS。",
+        romaji: "zenzen / sukoshi / amari / kekkou / totemo ~",
+        arti: "sama sekali tidak ~ → agak ~ → tidak terlalu ~ → lumayan ~ → sangat ~",
+        catatan: "けっこう berarti 'lumayan', posisinya di antara すこし dan とても — dipakai kalau tingkatnya cukup tinggi tapi belum sampai 'sangat'.",
+        contoh: [
+          {jp:"この　テストは　ぜんぜん　むずかしくないです。", id:"Ujian ini sama sekali tidak sulit."},
+          {jp:"この　みせは　けっこう　やすいです。", id:"Toko ini lumayan murah."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 11",
+    judul: "〜は　どうですか (Menanyakan kesan/pendapat)",
+    sub: "Dipakai untuk menanyakan kesan atau pendapat seseorang tentang suatu benda/tempat berdasarkan karakteristiknya. Jawabannya sering menggabungkan beberapa kesan sekaligus pakai が (tapi, kalau berlawanan) atau そして (dan lagi, kalau senada) dari Hari 10.",
+    items: [
+      {
+        pola: "〔KB〕は　どうですか。",
+        romaji: "[KB] wa dou desu ka?",
+        arti: "[Benda/tempat] itu bagaimana/gimana menurutmu?",
+        catatan: "どう menanyakan kesan secara umum (beda dari どんな di Hari 10 yang lebih ke sifat objektif suatu benda). Jawabannya bebas berupa satu atau beberapa kata sifat yang digabung.",
+        contoh: [
+          {jp:"この　レストランの　たべものの　あじは　どうですか。－　とても　たかいですが、おいしいです。とても　やすいです。そして　あじも　あまり　からくないです。", id:"Bagaimana rasa makanan restoran ini? — Sangat mahal tapi enak. Sangat murah. Dan lagi, rasanya juga tidak terlalu pedas."},
+          {jp:"この　まちは　どうですか。－　とても　ゆうめいですが、たいくつです。", id:"Bagaimana kota ini? — Sangat terkenal, tapi membosankan."}
         ]
       }
     ]

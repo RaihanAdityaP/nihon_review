@@ -74,6 +74,7 @@
       <button class="cat-btn active" onclick="switchCat('hiragana',this)">Hiragana</button>
       <button class="cat-btn" onclick="switchCat('katakana',this)">Katakana</button>
       <button class="cat-btn" onclick="switchCat('kotoba',this)">Kotoba</button>
+      <button class="cat-btn" onclick="switchCat('kanji',this)">Kanji</button>
       <button class="cat-btn" onclick="switchCat('counter',this)">Kata Bantu Bilangan</button>
       <button class="cat-btn" onclick="switchCat('sifat',this)">Kata Sifat</button>
       <button class="cat-btn" onclick="switchCat('kerja',this)">Kata Kerja</button>
@@ -81,6 +82,7 @@
     <div id="matHiragana"></div>
     <div id="matKatakana" style="display:none"></div>
     <div id="matKotoba" style="display:none"></div>
+    <div id="matKanji" style="display:none"></div>
     <div id="matCounter" style="display:none"></div>
     <div id="matSifat" style="display:none"></div>
     <div id="matKerja" style="display:none"></div>
@@ -213,7 +215,7 @@
         <button class="tbtn" data-c="15" onclick="setAICount(this)">15</button>
         <button class="tbtn" data-c="20" onclick="setAICount(this)">20</button>
         <button class="tbtn" data-c="999" onclick="setAICount(this)">Semua</button>
-        <input type="number" id="aiCntCustom" class="input-ai" min="1" max="50" placeholder="Custom..." style="width:110px;flex:0 0 auto" oninput="setAICountCustom(this)">
+        <input type="number" id="aiCntCustom" class="input-ai" min="1" max="500" placeholder="Custom..." style="width:110px;flex:0 0 auto" oninput="setAICountCustom(this)">
       </div>
       <button class="start-btn" id="aiStartBtn" onclick="startAILatihan()" disabled>Buat Soal</button>
     </div>
