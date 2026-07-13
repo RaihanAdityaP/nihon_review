@@ -293,7 +293,8 @@ const QCATS_STATIC = [
   { id: 'tanya',       label: 'Kata Tanya',            t: 'kotoba' },
   { id: 'kosoad',      label: 'Ko-So-A-Do',            t: 'kotoba' },
   { id: 'ket',         label: 'Kata Keterangan',       t: 'kotoba' },
-  { id: 'rutin',       label: 'Kegiatan Rutin',        t: 'kotoba' },
+  { id: 'ket-drjt',    label: 'Kata Keterangan Derajat & Frekuensi', t: 'kotoba' },
+  { id: 'penghubung',  label: 'Kata Penghubung',       t: 'kotoba' },
   { id: 'profesi',     label: 'Profesi',               t: 'kotoba' },
   { id: 'arah',        label: 'Arah & Posisi',         t: 'kotoba' },
   { id: 'kelas-ex',    label: 'Ekspresi di Kelas',     t: 'kotoba' },
@@ -426,7 +427,9 @@ function ktItems(cid) {
     tubuh: 'Bagian Tubuh', pelengkap: 'Bahan Pelengkap', sapaan: 'Sapaan & Ekspresi',
     warna: 'Warna', rasa: 'Rasa', tanya: 'Kata Tanya',
     kosoad: 'Kata Penunjuk (Ko-So-A-Do)', ket: 'Kata Keterangan Umum',
-    rutin: 'Kegiatan Rutin', profesi: 'Profesi & Pekerjaan',
+    'ket-drjt': 'Kata Keterangan Derajat & Frekuensi (Perasaan)',
+    penghubung: 'Kata Penghubung (Setsuzokushi)',
+    profesi: 'Profesi & Pekerjaan',
     negara: 'Negara & Bangsa', perkenalan: 'Perkenalan Diri', hobi: 'Hobi & Olahraga',
     arah: 'Arah & Posisi', 'kelas-ex': 'Ekspresi di Kelas', sampah: 'Sampah & Lingkungan'
   };
