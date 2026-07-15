@@ -311,6 +311,7 @@ const QCATS_STATIC = [
   { id: 'buku-bab3',   label: 'Buku — Bab 3',          t: 'buku' },
   { id: 'buku-bab4',   label: 'Buku — Bab 4',          t: 'buku' },
   { id: 'buku-bab5',   label: 'Buku — Bab 5',          t: 'buku' },
+  { id: 'buku-bab6',   label: 'Buku — Bab 6',          t: 'buku' },
 ];
 
 // Kategori Bunpou TIDAK di-hardcode di sini — otomatis di-generate dari
@@ -337,7 +338,21 @@ function buildBunpouCats() {
   }));
 }
 
-const QCATS = QCATS_STATIC.concat(buildBunpouCats());
+// Kategori Kanji (Materi Kanji) juga otomatis di-generate dari field `tema`
+// di array KANJI (data.js), pola sama persis kayak buildBunpouCats().
+function buildKanjiCats() {
+  if (!Array.isArray(KANJI)) return [];
+  const temaOrder = [];
+  KANJI.forEach(k => { if (k.tema && !temaOrder.includes(k.tema)) temaOrder.push(k.tema); });
+  return temaOrder.map(tema => ({
+    id: 'kanji-' + slugifyTema(tema),
+    label: 'Kanji — ' + tema,
+    t: 'kanji',
+    tema
+  }));
+}
+
+const QCATS = QCATS_STATIC.concat(buildBunpouCats()).concat(buildKanjiCats());
 
 let SC = new Set(), ST = new Set(['kana-to-romaji']), QN = 10;
 
@@ -470,7 +485,7 @@ function kerjaItems(cid) {
 }
 
 function bukuItems(cid) {
-  const babKey = cid === 'buku-bab1' ? 'bab1' : cid === 'buku-bab2' ? 'bab2' : cid === 'buku-bab3' ? 'bab3' : cid === 'buku-bab4' ? 'bab4' : cid === 'buku-bab5' ? 'bab5' : null;
+  const babKey = cid === 'buku-bab1' ? 'bab1' : cid === 'buku-bab2' ? 'bab2' : cid === 'buku-bab3' ? 'bab3' : cid === 'buku-bab4' ? 'bab4' : cid === 'buku-bab5' ? 'bab5' : cid === 'buku-bab6' ? 'bab6' : null;
   if (!babKey || !BUKU[babKey]) return [];
   let out = [];
   Object.values(BUKU[babKey]).forEach(group => {
@@ -485,6 +500,19 @@ function bunpouItems(cid) {
   let out = [];
   BUNPOU.filter(g => g.tema === tema).forEach(group => {
     group.items.forEach(it => out.push({ kana: it.pola, romaji: it.romaji, arti: it.arti, type: 'bunpou' }));
+  });
+  return out;
+}
+
+// Item quiz Kanji materi: prompt-nya bentuk kanji si kotoba (mis. "一つ"),
+// subtitle furigana-nya (mis. "ひとつ"), jawaban artinya — atau kebalik
+// kalau tipe soalnya id-to-jp (harus ngetik kana/kanji dari artinya).
+function kanjiItems(cid) {
+  const tema = QCATS.find(c => c.id === cid && c.t === 'kanji')?.tema;
+  if (!tema || !Array.isArray(KANJI)) return [];
+  let out = [];
+  KANJI.filter(k => k.tema === tema).forEach(k => {
+    (k.kotoba || []).forEach(w => out.push({ kana: w.w, romaji: w.furi, arti: w.a, type: 'kanji' }));
   });
   return out;
 }
@@ -506,6 +534,7 @@ function getAllItems(catSet) {
     else if (qc.t === 'particle-adv') Object.values(PT_ADV).flat().forEach(p => all.push({ kana: p.sym, romaji: p.r, arti: p.kind, type: 'particle-adv' }));
     else if (qc.t === 'buku')         all = all.concat(bukuItems(id));
     else if (qc.t === 'bunpou')       all = all.concat(bunpouItems(id));
+    else if (qc.t === 'kanji')        all = all.concat(kanjiItems(id));
     else if (qc.t === 'counter')      all = all.concat(counterItems(id));
     else if (qc.t === 'sifat')        all = all.concat(sifatItems(id));
     else if (qc.t === 'kerja')        all = all.concat(kerjaItems(id));

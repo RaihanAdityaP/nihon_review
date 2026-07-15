@@ -186,6 +186,7 @@ const KT={
 {k:"でんしゃ",r:"densha",a:"kereta",kj:"電車",n:"Gabungan 電 (listrik) + 車 (kendaraan). Kereta listrik, bukan uap."},
 {k:"ひこうき",r:"hikouki",a:"pesawat",kj:"飛行機",n:"Gabungan 飛 (terbang) + 行 (pergi) + 機 (mesin)."},
 {k:"くるま",r:"kuruma",a:"mobil",kj:"車",n:"Kata yang sama untuk 'kendaraan beroda' secara umum."},
+{k:"じどうしゃ",r:"jidousha",a:"mobil penumpang",kj:"自動車",n:"Istilah formal/resmi buat mobil (sering dipakai di konteks bisnis, dokumen, statistik). くるま lebih santai/sehari-hari, artinya sama."},
 {k:"じてんしゃ",r:"jitensha",a:"sepeda",kj:"自転車",n:"Gabungan 自 (sendiri) + 転 (berputar) + 車 (roda)."},
 {k:"のりもの",r:"norimono",a:"kendaraan",kj:"乗り物",n:"Gabungan 乗り (naik) + 物 (benda). Harfiah: 'benda yang dinaiki'."},
 {k:"しんかんせん",r:"shinkansen",a:"kereta peluru",kj:"新幹線",n:"Shin (baru) + Kan (utama) + Sen (jalur). Kereta cepat ikonik Jepang, bisa sampai 320 km/jam."},
@@ -334,6 +335,7 @@ const KT={
 {k:"あつい",r:"atsui",a:"panas (benda)",kj:"熱い",n:"Khusus untuk suhu BENDA (makanan/minuman panas) — beda kanji dari 'atsui' (暑い, panas cuaca) yang sudah ada di Kata Sifat - い. Bunyi sama, kanji beda!"},
 {k:"てんきがいい",r:"tenki ga ii",a:"cuacanya bagus",kj:"天気がいい",n:"Ungkapan tetap untuk menyatakan cuaca cerah/bagus secara umum."},
 {k:"てんきがわるい",r:"tenki ga warui",a:"cuacanya buruk",kj:"天気が悪い",n:"Lawan kata dari てんきがいい. Dipakai saat cuaca mendung, hujan, dsb."},
+{k:"くもり",r:"kumori",a:"mendung, berawan",kj:"曇り",n:"Kata benda buat kondisi cuaca mendung. 'Kyou wa kumori desu' = hari ini mendung."},
 {k:"いちねんじゅう",r:"ichinenjuu",a:"sepanjang tahun",kj:"一年中",n:"Ichinen (satu tahun) + juu (sepanjang/seluruh). Dipakai untuk cuaca/kondisi yang tidak berubah tiap musim, mis. daerah tropis."}
 ]},
 "Konsep Umum":{rows:[
@@ -361,7 +363,12 @@ const KT={
 {k:"じんこう",r:"jinkou",a:"populasi, jumlah penduduk",kj:"人口",n:"Jin (orang) + Kou (mulut, dulu dipakai untuk menghitung 'jiwa')."},
 {k:"ちから",r:"chikara",a:"tenaga, kekuatan",kj:"力",n:"Dipakai baik untuk kekuatan fisik maupun kekuatan dalam arti luas (mis. kekuatan tekad)."},
 {k:"たいりょく",r:"tairyoku",a:"stamina, kekuatan fisik",kj:"体力",n:"Tai (tubuh) + Ryoku (tenaga). Daya tahan fisik, beda dari 'chikara' yang lebih ke kekuatan sesaat."},
-{k:"ほんとう",r:"hontou",a:"benar, sungguh(an)",kj:"本当",n:"Bentuk dasar (kata benda/na-keiyoushi) dari 'hontou ni' (sungguh-sungguh). 'Hontou desu ka?' = benarkah?"}
+{k:"ほんとう",r:"hontou",a:"benar, sungguh(an)",kj:"本当",n:"Bentuk dasar (kata benda/na-keiyoushi) dari 'hontou ni' (sungguh-sungguh). 'Hontou desu ka?' = benarkah?"},
+{k:"びょうき",r:"byouki",a:"sakit, penyakit",kj:"病気",n:"Kata benda buat 'kondisi sakit' secara umum (bukan rasa nyeri — itu いたい). 'Byouki desu' = (dia) sedang sakit."},
+{k:"ねだん",r:"nedan",a:"harga",kj:"値段",n:"Kata benda buat 'harga' itu sendiri. Beda dari いくら yang dipakai buat nanya harganya berapa."},
+{k:"だんじき",r:"danjiki",a:"puasa",kj:"断食",n:"Dan (memutus) + Jiki (makan). Istilah umum buat puasa (menahan makan/minum), termasuk konteks agama."},
+{k:"おすすめ",r:"osusume",a:"rekomendasi",kj:"お勧め",n:"Prefiks sopan お + susume (dari 'susumeru' = menganjurkan). 'Osusume wa nan desu ka?' = apa rekomendasinya?"},
+{k:"うんめい",r:"unmei",a:"takdir, nasib",kj:"運命",n:"Un (keberuntungan) + Mei (perintah/nasib). Sering dipakai dalam konteks drama/romantis, mis. 'unmei no hito' = orang yang ditakdirkan (jodoh)."}
 ]},
 "Kotoba N5":{rows:[
 {k:"あめ",r:"ame",a:"hujan / permen",n:"Kanji: 雨 (hujan) / 飴 (permen). Beda kanji, beda makna! 'Ame ga futte iru' = sedang hujan."},
@@ -462,6 +469,7 @@ const KT={
 {k:"ごぜん",r:"gozen",a:"AM",kj:"午前",n:"Sebelum tengah hari."},
 {k:"ごご",r:"gogo",a:"PM",kj:"午後",n:"Setelah tengah hari."},
 {k:"いま",r:"ima",a:"sekarang",kj:"今",n:"'Ima nanji?' = Sekarang jam berapa?"},
+{k:"じてん",r:"jiten",a:"titik waktu, waktu spesifik",kj:"時点",n:"Menunjuk satu titik waktu tertentu (mis. 'pada saat itu', 'di titik ini') — beda dari きかん yang merujuk rentang, じてん cuma satu momen spesifik."},
 {k:"はん",r:"han",a:"setengah (jam)",n:"ichiji han = jam 1:30."},
 {k:"〜じはん",r:"~ji han",a:"jam~lebih 30 menit",kj:"〜時半",n:"Han (半) = setengah. 'Ichiji han' = jam 1:30."},
 {k:"あさ",r:"asa",a:"pagi",kj:"朝",n:"Dipakai juga dalam 朝ご飯 (asagohan = sarapan) dan 毎朝 (maiasa = setiap pagi)."},
@@ -469,6 +477,7 @@ const KT={
 {k:"ゆうがた",r:"yuugata",a:"sore",kj:"夕方",n:"Sore menjelang malam (~17-18:00)."},
 {k:"よる",r:"yoru",a:"malam",kj:"夜",n:"Dipakai juga dalam 夜中 (yonaka = tengah malam) dan 今夜 (kon'ya = malam ini)."},
 {k:"ばん",r:"ban",a:"malam (santai)",kj:"晩",n:"'Konban wa' = Selamat malam."},
+{k:"ゆうべ",r:"yuube",a:"tadi malam",kj:"昨夜",n:"Merujuk khusus ke malam yang baru lewat (semalam), bukan 'malam' secara umum kayak よる."},
 {k:"よなか",r:"yonaka",a:"tengah malam",kj:"夜中",n:"Gabungan 夜 (malam) + 中 (tengah). Lebih larut dari 'yoru' biasa, sekitar tengah malam ke atas."},
 {k:"しんや",r:"shinya",a:"larut malam",kj:"深夜",n:"Lebih larut dari 'yonaka'."},
 {k:"たんじょうび",r:"tanjoubi",a:"hari ulang tahun",kj:"誕生日",n:"Tanjou (lahir) + Bi (hari). 'Otanjoubi omedetou!' = Selamat ulang tahun!"},
@@ -483,6 +492,7 @@ const KT={
 {k:"ひるやすみ",r:"hiruyasumi",a:"istirahat siang",kj:"昼休み",n:"Hiru (siang) + Yasumi (istirahat). Jam istirahat makan siang di sekolah maupun kantor."}
 ]},
 "Durasi":{rows:[
+{k:"きかん",r:"kikan",a:"durasi, jangka waktu",kj:"期間",n:"Istilah umum buat 'rentang/jangka waktu' (mis. periode ujian, masa berlaku). Beda dari どのぐらい yang nanya durasinya, きかん adalah kata bendanya sendiri."},
 {k:"どのぐらい",r:"dono gurai",a:"berapa lama",kj:"どの位",n:"Pola tanya standar untuk menanyakan durasi. 'Densha de dono gurai kakarimasu ka?' = Naik kereta, berapa lama?"},
 {k:"くらい／ぐらい",r:"kurai / gurai",a:"kira-kira, sekitar",n:"Ditambahkan setelah angka waktu/jumlah untuk memberi perkiraan, bukan angka pasti. Jadi 'gurai' kalau nempel setelah kata bervokal/nasal."},
 {k:"いちじかん",r:"ichi jikan",a:"selama 1 jam",kj:"一時間",n:"Ichi (1) + Ji (jam) + Kan (interval/selama). Pola: angka + じかん untuk durasi jam."},
@@ -704,7 +714,8 @@ const KT={
 {k:"たぶん",r:"tabun",a:"mungkin / sepertinya",n:"Kemungkinan ~70-80%."},
 {k:"もちろん",r:"mochiron",a:"tentu saja / sudah pasti",n:"Keyakinan 100%."},
 {k:"ほんとうに",r:"hontouni",a:"sungguh / benar-benar",n:"'Hontou ni?' = Sungguh?"},
-{k:"ただ",r:"tada",a:"hanya, cuma, sekadar",n:"Menekankan 'tidak lebih dari itu'. Beda kata dengan 'tada' yang berarti 'gratis' (無料), walau ditulis sama."}
+{k:"ただ",r:"tada",a:"hanya, cuma, sekadar",n:"Menekankan 'tidak lebih dari itu'. Beda kata dengan 'tada' yang berarti 'gratis' (無料), walau ditulis sama."},
+{k:"いっしょけんめい",r:"isshoukenmei",a:"bersungguh-sungguh, sekuat tenaga",kj:"一生懸命",n:"Harfiah 'mempertaruhkan seumur hidup'. Dipakai buat ngejelasin cara ngelakuin sesuatu, biasanya nempel di depan kata kerja. 'Isshoukenmei benkyou shimasu' = belajar sungguh-sungguh."}
 ]},
 "Kata Penghubung (Setsuzokushi)":{rows:[
 {k:"そして",r:"soshite",a:"dan, lalu",n:"Menyambung DUA KALIMAT terpisah jadi satu cerita berlanjut — beda dari と yang cuma menyambung kata benda dalam satu kalimat. Contoh: 'Furui desu. Soshite, shizuka desu.' = Kuno. Dan lagi, sunyi."},
@@ -2053,6 +2064,88 @@ bab5: {
     {k:"けしき",r:"keshiki",a:"Pemandangan",kj:"景色"},
     {k:"しゃしん",r:"shashin",a:"Foto",kj:"写真"},
     {k:"え",r:"e",a:"Gambar, lukisan",kj:"絵"}
+  ]}
+},
+
+bab6: {
+  "Waktu (Minggu & Bulan)": { rows: [
+    {k:"こんしゅう",r:"konshuu",a:"Minggu ini",kj:"今週"},
+    {k:"らいしゅう",r:"raishuu",a:"Minggu depan",kj:"来週"},
+    {k:"こんげつ",r:"kongetsu",a:"Bulan ini",kj:"今月"},
+    {k:"らいげつ",r:"raigetsu",a:"Bulan depan",kj:"来月"}
+  ]},
+  "Hiburan & Ajakan": { rows: [
+    {k:"カラオケ",r:"karaoke",a:"Karaoke"},
+    {k:"コンサート",r:"konsaato",a:"Konser"},
+    {k:"あります",r:"arimasu",a:"Ada (benda mati)"},
+    {k:"いっしょに",r:"issho ni",a:"Bersama-sama",kj:"一緒に"},
+    {k:"ああ",r:"aa",a:"Oh"},
+    {k:"またこんど",r:"mata kondo",a:"Lain kali lagi",kj:"また今度"},
+    {k:"ちょっと",r:"chotto",a:"Sebentar, agak, maaf"},
+    {k:"やくそく",r:"yakusoku",a:"Janji",kj:"約束"},
+    {k:"ようじ",r:"youji",a:"Urusan",kj:"用事"},
+    {k:"ざんねん【な】",r:"zannen (na)",a:"Disayangkan",kj:"残念【な】",n:"Kata sifat-na (keiyoudoushi)."},
+    {k:"アルバイト",r:"arubaito",a:"Kerja paruh waktu"},
+    {k:"テスト",r:"tesuto",a:"Tes"}
+  ]},
+  "Aktivitas & Acara": { rows: [
+    {k:"りょこう",r:"ryokou",a:"Wisata, perjalanan",kj:"旅行"},
+    {k:"まつり",r:"matsuri",a:"Festival",kj:"祭り"},
+    {k:"しあい",r:"shiai",a:"Pertandingan",kj:"試合"},
+    {k:"やきゅう",r:"yakyuu",a:"Bisbol",kj:"野球"},
+    {k:"セール",r:"seeru",a:"Obral"},
+    {k:"チケット",r:"chiketto",a:"Tiket"},
+    {k:"〜まい",r:"~mai",a:"~lembar",kj:"〜枚"},
+    {k:"ちず",r:"chizu",a:"Peta",kj:"地図"},
+    {k:"みずぎ",r:"mizugi",a:"Baju renang",kj:"水着"}
+  ]},
+  "Makanan & Minuman Umum": { rows: [
+    {k:"たべもの",r:"tabemono",a:"Makanan",kj:"食べ物"},
+    {k:"のみもの",r:"nomimono",a:"Minuman",kj:"飲み物"},
+    {k:"いざかや",r:"izakaya",a:"Pub, bar",kj:"居酒屋"},
+    {k:"ぜんぶ",r:"zenbu",a:"Semuanya (benda)",kj:"全部"}
+  ]},
+  "Musik & Hiburan": { rows: [
+    {k:"ジャズ",r:"jazu",a:"Jazz"},
+    {k:"かしゅ",r:"kashu",a:"Penyanyi",kj:"歌手"},
+    {k:"きせつ",r:"kisetsu",a:"Musim",kj:"季節"},
+    {k:"コメディー",r:"komedii",a:"Komedi"},
+    {k:"いちばん",r:"ichiban",a:"Paling"},
+    {k:"えいがかん",r:"eigakan",a:"Bioskop",kj:"映画館"},
+    {k:"ちかてつ",r:"chikatetsu",a:"Kereta bawah tanah",kj:"地下鉄"},
+    {k:"たべほうだい",r:"tabehoudai",a:"Makan sepuasnya",kj:"食べ放題"}
+  ]},
+  "Pilihan & Wisata": { rows: [
+    {k:"どちら",r:"dochira",a:"Yang mana (di antara 2 pilihan)"},
+    {k:"どちらも",r:"dochira mo",a:"Yang mana saja"},
+    {k:"ツアー",r:"tsuaa",a:"Tur"},
+    {k:"ちかい",r:"chikai",a:"Dekat",kj:"近い"},
+    {k:"とおい",r:"tooi",a:"Jauh",kj:"遠い"},
+    {k:"はやい",r:"hayai",a:"Cepat (kecepatan)",kj:"速い"},
+    {k:"ひろい",r:"hiroi",a:"Luas",kj:"広い"},
+    {k:"コース",r:"koosu",a:"Rute"},
+    {k:"とうきょうたわあ",r:"toukyou tawaa",a:"Tower Tokyo",kj:"東京タワー"},
+    {k:"スカイツリー",r:"sukaitsurii",a:"Sky Tree"}
+  ]},
+  "Ungkapan & Kata Kerja": { rows: [
+    {k:"まだ",r:"mada",a:"Belum, masih"},
+    {k:"もう",r:"mou",a:"Sudah, lagi"},
+    {k:"そうしましょう",r:"sou shimashou",a:"Ayo!"},
+    {k:"あそびます",r:"asobimasu",a:"Bermain",kj:"遊びます",n:"Kata kerja golongan I."}
+  ]},
+  "Makanan Khas Jepang": { rows: [
+    {k:"おこのみやき",r:"okonomiyaki",a:"Okonomiyaki",kj:"お好み焼き"},
+    {k:"ステーキ",r:"suteeki",a:"Steak, bistik"},
+    {k:"すきやき",r:"sukiyaki",a:"Sukiyaki"}
+  ]},
+  "Tanya & Janjian": { rows: [
+    {k:"なまえ",r:"namae",a:"Nama",kj:"名前"},
+    {k:"えき",r:"eki",a:"Stasiun",kj:"駅"},
+    {k:"どこ",r:"doko",a:"Di mana, ke mana"},
+    {k:"なんじ",r:"nanji",a:"Jam berapa",kj:"何時"},
+    {k:"どうですか",r:"dou desu ka",a:"Bagaimana"},
+    {k:"〜ごろ",r:"~goro",a:"Sekitar jam~"},
+    {k:"わかります",r:"wakarimasu",a:"Paham, mengerti"}
   ]}
 }
 
@@ -3949,6 +4042,109 @@ const BUNPOU = [
           {jp:"としょかんは　しずかでした。", id:"Perpustakaan itu sunyi (waktu itu)."},
           {jp:"きのうは　やすみでした。", id:"Kemarin libur."},
           {jp:"パーティーは　にぎやかでした。", id:"Pestanya ramai (waktu itu)."}
+        ]
+      }
+    ]
+  },
+  // ═══════════════════════════════════════════════
+  // HARI 13
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 13",
+    judul: "Kata sifat & kata benda bentuk negatif lampau",
+    sub: "Gabungan dari bentuk negatif (Hari 9) dan bentuk lampau (Hari 12) — dipakai buat nyatain sesuatu yang DULU tidak/bukan begitu.",
+    items: [
+      {
+        pola: "KS（い）：〜い　→　〜くない　→　〜くなかった（です）。",
+        romaji: "~ku nakatta (desu).",
+        arti: "dulu tidak ~ (i-keiyoushi negatif lampau)",
+        catatan: "Buang い di akhir, tambahin くない buat negatif sekarang, lalu ganti ない jadi なかった buat negatif lampau. PENGECUALIAN: いい → よくない → よくなかった (bukan いくなかった).",
+        contoh: [
+          {jp:"きのうの　テストは　むずかしくなかったです。", id:"Ujian kemarin tidak sulit."},
+          {jp:"このレストランは　やすくなかったです。でも、おいしかったです。", id:"Restoran ini tidak murah. Tapi, enak."},
+          {jp:"きのうの　えいがは　よくなかったです。", id:"Film kemarin tidak bagus."}
+        ]
+      },
+      {
+        pola: "KS（な）／KB：です　→　じゃありません　→　じゃありませんでした。",
+        romaji: "~ja arimasen deshita.",
+        arti: "dulu bukan/tidak ~ (na-keiyoushi/kata benda negatif lampau)",
+        catatan: "です→じゃありません (negatif sekarang) →じゃありませんでした (negatif lampau). Bisa juga pakai じゃなかったです, lebih santai buat percakapan sehari-hari.",
+        contoh: [
+          {jp:"としょかんは　しずかじゃありませんでした。", id:"Perpustakaan itu tidak sunyi (waktu itu)."},
+          {jp:"きのうは　やすみじゃありませんでした。", id:"Kemarin bukan hari libur."},
+          {jp:"あのパーティーは　にぎやかじゃありませんでした。", id:"Pesta itu tidak ramai (waktu itu)."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 13",
+    judul: "〜どうでしたか (Menanyakan kesan di masa lalu)",
+    sub: "Bentuk lampau dari どうですか (Hari 9) — dipakai buat nanya kesan/pendapat terhadap sesuatu yang udah terjadi.",
+    items: [
+      {
+        pola: "〔hal〕は　どうでしたか。",
+        romaji: "~ wa dou deshita ka?",
+        arti: "Bagaimana kesan kamu tentang ~ (waktu itu)?",
+        catatan: "Jawabannya biasanya pakai kata sifat lampau (Hari 12) atau negatifnya (poin 1 di atas).",
+        contoh: [
+          {jp:"りょこうは　どうでしたか。－　たのしかったです。", id:"Bagaimana perjalanannya? — Menyenangkan."},
+          {jp:"テストは　どうでしたか。－　あまり　むずかしくなかったです。", id:"Bagaimana ujiannya? — Tidak terlalu sulit."},
+          {jp:"あのレストランは　どうでしたか。－　しずかでした。そして、りょうりも　おいしかったです。", id:"Bagaimana restoran itu? — Sunyi. Dan, masakannya juga enak."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 13",
+    judul: "Kalimat akibat + kalimat alasan (tanpa penghubung)",
+    sub: "Pola sederhana: sebut dulu akibat/kondisinya, baru alasannya di kalimat berikutnya — tanpa kata sambung apapun (belum pakai から). Wajar kedengaran agak kaku/dipaksain, tapi ini pola transisi sebelum belajar から secara resmi (poin 4 di bawah).",
+    items: [
+      {
+        pola: "〔kalimat akibat〕。〔kalimat alasan〕。",
+        romaji: "~. ~.",
+        arti: "~. (karena) ~.",
+        catatan: "Dua kalimat pendek berdiri sendiri-sendiri, alasannya ditaruh setelah akibat, tanpa kata sambung sebab-akibat apapun.",
+        contoh: [
+          {jp:"つかれました。たくさん　あるきました。", id:"Saya capek. (Karena) saya banyak jalan kaki."},
+          {jp:"テストは　むずかしくなかったです。せんせいと　いっしょに　べんきょうしました。", id:"Ujiannya tidak sulit. (Karena) saya belajar bareng guru."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 13",
+    judul: "どうして〜 (kenapa) ／ 〜から (karena)",
+    sub: "どうして dipakai buat nanya alasan, jawabannya pakai 〜から di akhir kalimat. Keduanya bisa dipasangin bentuk です／ます biasa atau bentuk lampau (でした／ました).",
+    items: [
+      {
+        pola: "どうして〜ですか／ますか。－　〜から（です）。",
+        romaji: "doushite ~ ka? — ~kara (desu).",
+        arti: "kenapa ~? — karena ~.",
+        catatan: "どうして ditaruh di depan kalimat tanya. Buat jawab, alasannya ditaruh sebelum から, dan bisa nambahin です di belakang biar lebih tegas/sopan (〜からです). Polanya jalan juga buat masa lampau: でしたから／ましたから.",
+        contoh: [
+          {jp:"どうして　がっこうを　やすみましたか。－　びょうきでしたから。", id:"Kenapa kamu izin sekolah? — Karena sakit."},
+          {jp:"どうして　その　みせへ　いきますか。－　やすいからです。", id:"Kenapa kamu pergi ke toko itu? — Karena murah."},
+          {jp:"どうして　テストは　むずかしくなかったですか。－　せんせいと　べんきょうしましたから。", id:"Kenapa ujiannya tidak sulit? — Karena saya belajar bareng guru."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 13",
+    judul: "ほしい (Ingin/menginginkan sesuatu)",
+    sub: "Dipakai buat nyatain keinginan terhadap suatu benda (bukan aktivitas — beda dari 〜たい buat kata kerja, belum diajarin).",
+    items: [
+      {
+        pola: "〔KB〕が　ほしいです。／　何が　ほしいですか。",
+        romaji: "[KB] ga hoshii desu. / nani ga hoshii desu ka?",
+        arti: "saya ingin [KB]. / kamu ingin apa?",
+        catatan: "Partikel yang dipakai が, bukan を — karena ほしい itu kata sifat (i-keiyoushi), bukan kata kerja, jadi benda yang diinginkan ditandain が, sama kayak pola あります/います.",
+        contoh: [
+          {jp:"あたらしい　じてんしゃが　ほしいです。", id:"Saya ingin sepeda baru."},
+          {jp:"たんじょうびに　何が　ほしいですか。－　とけいが　ほしいです。", id:"Kamu ingin apa buat ulang tahun? — Saya ingin jam tangan."},
+          {jp:"どうして　あたらしい　パソコンが　ほしいですか。－　いまのは　ふるいからです。", id:"Kenapa kamu ingin laptop baru? — Karena yang sekarang udah tua/lama."}
         ]
       }
     ]
