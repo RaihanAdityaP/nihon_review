@@ -2330,6 +2330,93 @@ const KANJI = [
       { w: "下げる", furi: "さげる", a: "menurunkan" },
       { w: "下りる", furi: "おりる", a: "turun" }
     ]
+  },
+
+  // ═══════════════════════════════════════════════
+  // HARI 3
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 3", char: "大", onyomi: ["だい", "たい"], kunyomi: ["おお", "おお.きい"], arti: "besar",
+    kotoba: [
+      { w: "大きい", furi: "おおきい", a: "besar" },
+      { w: "大学", furi: "だいがく", a: "universitas" },
+      { w: "大切", furi: "たいせつ", a: "penting", n: "Kata sifat な (大切な〜)." }
+    ]
+  },
+  {
+    tema: "Hari 3", char: "太", onyomi: ["たい"], kunyomi: ["ふと.い", "ふと.る"], arti: "gemuk / tebal",
+    kotoba: [
+      { w: "太い", furi: "ふとい", a: "gemuk, tebal (cth. garis)" },
+      { w: "太る", furi: "ふとる", a: "menjadi gemuk" },
+      { w: "太陽", furi: "たいよう", a: "matahari" }
+    ]
+  },
+  {
+    tema: "Hari 3", char: "小", onyomi: ["こ", "しょう"], kunyomi: ["ちい.さい", "ちい.さな"], arti: "kecil",
+    kotoba: [
+      { w: "小さい", furi: "ちいさい", a: "kecil" },
+      { w: "小鳥", furi: "ことり", a: "anak burung" },
+      { w: "小学校", furi: "しょうがっこう", a: "SD" },
+      { w: "小学生", furi: "しょうがくせい", a: "siswa SD" }
+    ]
+  },
+  {
+    tema: "Hari 3", char: "少", onyomi: ["しょう"], kunyomi: ["すく.ない", "すこ.し"], arti: "sedikit",
+    kotoba: [
+      { w: "少ない", furi: "すくない", a: "sedikit" },
+      { w: "少し", furi: "すこし", a: "sedikit, agak" },
+      { w: "少女", furi: "しょうじょ", a: "gadis" }
+    ]
+  },
+  {
+    tema: "Hari 3", char: "入", onyomi: ["にゅう"], kunyomi: ["はい.る", "い.れる"], arti: "masuk",
+    kotoba: [
+      { w: "入る", furi: "はいる", a: "masuk" },
+      { w: "入れる", furi: "いれる", a: "memasukkan" },
+      { w: "入学", furi: "にゅうがく", a: "masuk sekolah" }
+    ]
+  },
+  {
+    tema: "Hari 3", char: "出", onyomi: ["しゅつ"], kunyomi: ["で.る", "だ.す"], arti: "keluar",
+    kotoba: [
+      { w: "出る", furi: "でる", a: "keluar" },
+      { w: "出す", furi: "だす", a: "mengeluarkan" },
+      { w: "外出する", furi: "がいしゅつする", a: "bepergian, keluar" }
+    ]
+  },
+  {
+    tema: "Hari 3", char: "子", onyomi: ["し"], kunyomi: ["こ"], arti: "anak",
+    kotoba: [
+      { w: "子供", furi: "こども", a: "anak-anak" },
+      { w: "女の子", furi: "おんなのこ", a: "anak perempuan" },
+      { w: "帽子", furi: "ぼうし", a: "topi" }
+    ]
+  },
+  {
+    tema: "Hari 3", char: "学", onyomi: ["がく", "がっ"], kunyomi: ["まな.ぶ"], arti: "ilmu / pelajaran",
+    kotoba: [
+      { w: "学ぶ", furi: "まなぶ", a: "belajar" },
+      { w: "学生", furi: "がくせい", a: "pelajar" },
+      { w: "数学", furi: "すうがく", a: "matematika" },
+      { w: "学校", furi: "がっこう", a: "sekolah" }
+    ]
+  },
+  {
+    tema: "Hari 3", char: "四", onyomi: ["し"], kunyomi: ["よん", "よ", "よっ.つ"], arti: "empat",
+    kotoba: [
+      { w: "四", furi: "よん", a: "empat" },
+      { w: "四月", furi: "しがつ", a: "bulan April" },
+      { w: "四つ", furi: "よっつ", a: "empat (buah/benda)" },
+      { w: "四日", furi: "よっか", a: "tanggal 4" }
+    ]
+  },
+  {
+    tema: "Hari 3", char: "五", onyomi: ["ご"], kunyomi: ["いつ.つ"], arti: "lima",
+    kotoba: [
+      { w: "五", furi: "ご", a: "lima" },
+      { w: "五つ", furi: "いつつ", a: "lima (buah/benda)" },
+      { w: "五日", furi: "いつか", a: "tanggal 5" }
+    ]
   }
 ]; // end KANJI
 
@@ -4145,6 +4232,114 @@ const BUNPOU = [
           {jp:"あたらしい　じてんしゃが　ほしいです。", id:"Saya ingin sepeda baru."},
           {jp:"たんじょうびに　何が　ほしいですか。－　とけいが　ほしいです。", id:"Kamu ingin apa buat ulang tahun? — Saya ingin jam tangan."},
           {jp:"どうして　あたらしい　パソコンが　ほしいですか。－　いまのは　ふるいからです。", id:"Kenapa kamu ingin laptop baru? — Karena yang sekarang udah tua/lama."}
+        ]
+      }
+    ]
+  },
+  // ═══════════════════════════════════════════════
+  // HARI 14
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 14",
+    judul: "〜が　すきです／きらいです (Menunjukkan hal yang disukai/dibenci)",
+    sub: "すき (suka) dan きらい (benci/tidak suka) adalah kata sifat な (na-keiyoushi), jadi negatifnya pakai じゃありません seperti です biasa, bukan くない seperti ほしい (Hari 13) yang i-keiyoushi.",
+    items: [
+      {
+        pola: "〔KB〕が　すきです。",
+        romaji: "[KB] ga suki desu.",
+        arti: "(saya) suka [KB].",
+        catatan: "Partikel が menandai objek yang disukai — sama seperti が ほしいです (Hari 13). Bisa ditambah とても di depan buat nekanin: とても すきです (suka banget).",
+        contoh: [
+          {jp:"わたしは　スポーツが　すきです。", id:"Saya suka olahraga."},
+          {jp:"すずきさんは　ねこが　とても　すきです。", id:"Suzuki-san sangat suka kucing."},
+          {jp:"どうして　にほんごが　すきですか。－　おもしろいからです。", id:"Kenapa kamu suka bahasa Jepang? — Karena menarik."}
+        ]
+      },
+      {
+        pola: "〔KB〕が　すきじゃありません。",
+        romaji: "[KB] ga suki ja arimasen.",
+        arti: "(saya) tidak suka [KB].",
+        catatan: "Negatif dari すきです, ikutin pola KS(な)／KB persis kayak Hari 13 (です→じゃありません). Bisa juga じゃないです, lebih santai.",
+        contoh: [
+          {jp:"わたしは　やさいが　あまり　すきじゃありません。", id:"Saya kurang begitu suka sayur."},
+          {jp:"かれは　べんきょうが　すきじゃありません。ですから、テストは　いつも　むずかしいです。", id:"Dia tidak suka belajar. Makanya, ujiannya selalu sulit baginya."}
+        ]
+      },
+      {
+        pola: "〔KB〕が　きらいです。",
+        romaji: "[KB] ga kirai desu.",
+        arti: "(saya) benci/tidak suka [KB].",
+        catatan: "きらい lebih tegas dibanding すきじゃありません — nunjukkin rasa tidak suka yang jelas, bukan cuma netral. Konjugasinya sama kayak すき karena sama-sama な-keiyoushi (きらいです→きらいじゃありません→きらいでした).",
+        contoh: [
+          {jp:"むすこは　やさいが　きらいです。", id:"Anak laki-laki saya benci sayur."},
+          {jp:"わたしは　くもの　えいがが　きらいです。それから、へびも　きらいです。", id:"Saya benci film laba-laba. Terus, ular juga saya benci."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 14",
+    judul: "動詞ます→たい (Ingin melakukan sesuatu)",
+    sub: "Ganti ～ます jadi ～たい buat nyatain keinginan ngelakuin suatu aktivitas (beda dari ほしい di Hari 13 yang buat benda). たい berubah jadi i-keiyoushi, jadi konjugasi negatif/lampaunya ngikutin pola kata sifat い (Hari 12-13).",
+    items: [
+      {
+        pola: "動詞ます-stem　＋　たいです。",
+        romaji: "[V-stem] + tai desu.",
+        arti: "(saya) ingin [V].",
+        catatan: "Buang ます, tambahin たい. Karena たい jadi i-keiyoushi, partikel objeknya kadang berubah dari を jadi が (terutama kalau fokus ke bendanya), tapi を tetap sering dipakai juga dalam percakapan sehari-hari.",
+        contoh: [
+          {jp:"のどが　かわきました。みずが　のみたいです。", id:"Saya haus. Saya ingin minum air."},
+          {jp:"なつやすみに　にほんへ　りょこうしたいです。", id:"Waktu liburan musim panas, saya ingin jalan-jalan ke Jepang."},
+          {jp:"何が　たべたいですか。－　すしが　たべたいです。", id:"Kamu ingin makan apa? — Saya ingin makan sushi."}
+        ]
+      },
+      {
+        pola: "動詞ます-stem　＋　たくないです。",
+        romaji: "[V-stem] + takunai desu.",
+        arti: "(saya) tidak ingin [V].",
+        catatan: "Sama kayak i-keiyoushi biasa: buang い di akhir たい, tambahin くない. たい → たく → たくない.",
+        contoh: [
+          {jp:"きょうは　つかれましたから、どこも　いきたくないです。", id:"Hari ini saya capek, jadi tidak ingin pergi ke mana-mana."},
+          {jp:"あの　レストランは　たかいですから、たべたくないです。", id:"Restoran itu mahal, jadi saya tidak ingin makan di sana."}
+        ]
+      },
+      {
+        pola: "動詞ます-stem　＋　たかったです／たくなかったです。",
+        romaji: "[V-stem] + takatta desu / takunakatta desu.",
+        arti: "(dulu) ingin/tidak ingin [V].",
+        catatan: "Bentuk lampau ngikutin pola i-keiyoushi lampau di Hari 13: たい→たかった (positif), たくない→たくなかった (negatif).",
+        contoh: [
+          {jp:"こどものとき、パイロットに　なりたかったです。", id:"Waktu kecil, saya ingin jadi pilot."},
+          {jp:"あめでしたから、そとに　でたくなかったです。", id:"Karena hujan, saya tidak ingin keluar rumah."},
+          {jp:"どうして　パーティーに　いきたくなかったですか。－　しごとで　つかれましたから。", id:"Kenapa dulu kamu tidak ingin pergi ke pesta itu? — Karena capek kerja."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 14",
+    judul: "〔場所〕へ　〔物〕を　〔動詞ます-stem〕に　行きます (Pergi ke suatu tempat untuk melakukan sesuatu)",
+    sub: "Gabungan tiga partikel sekaligus: へ buat arah/tujuan tempat, を buat objek, dan に (setelah ます-stem kata kerja) buat nyatain tujuan aktivitasnya. Diakhiri dengan 行きます／来ます／帰ります.",
+    items: [
+      {
+        pola: "〔場所〕へ　〔物〕を　〔動詞ます-stem〕に　行きます。",
+        romaji: "[tempat] e [benda] o [V-stem] ni ikimasu.",
+        arti: "Pergi ke [tempat] untuk [V] [benda].",
+        catatan: "Urutannya tetap: tempat＋へ dulu, baru benda＋を, baru ます-stem kata kerja ＋に, ditutup dengan いきます (atau きます/かえります kalau arahnya ke sini/pulang). に di sini nunjukkin TUJUAN pergi, beda dari に buat waktu/tempat statis yang udah dipelajari sebelumnya.",
+        contoh: [
+          {jp:"としょかんへ　ほんを　かりに　いきます。", id:"Pergi ke perpustakaan untuk meminjam buku."},
+          {jp:"スーパーへ　やさいや　くだものを　かいに　いきます。", id:"Pergi ke supermarket untuk membeli sayur, buah, dan lain-lain."},
+          {jp:"らいしゅう、ともだちの　いえへ　バースデーケーキを　つくりに　いきます。", id:"Minggu depan, saya pergi ke rumah teman untuk membuat kue ulang tahun."}
+        ]
+      },
+      {
+        pola: "〔場所〕へ　〔動詞ます-stem〕に　行きます。（物を省略）",
+        romaji: "[tempat] e [V-stem] ni ikimasu.",
+        arti: "Pergi ke [tempat] untuk [V]. (tanpa objek)",
+        catatan: "Kalau kata kerjanya nggak butuh objek benda (contoh: あそびます, およぎます), bagian 〜を bisa dilewatin — langsung 場所へ＋V-stemに＋いきます.",
+        contoh: [
+          {jp:"うみへ　およぎに　いきます。", id:"Pergi ke laut untuk berenang."},
+          {jp:"こうえんへ　ともだちと　あそびに　いきます。それから、いっしょに　ばんごはんを　たべます。", id:"Pergi ke taman untuk main bareng teman. Terus, makan malam bareng."}
         ]
       }
     ]

@@ -1306,11 +1306,23 @@ function wKanjiMateriPool() {
   }));
 }
 
+function wKotobaMateriPool() {
+  if (!Array.isArray(KANJI)) return [];
+  let out = [];
+  KANJI.forEach(k => (k.kotoba || []).forEach(w => {
+    if (!/[一-龯]/.test(w.w)) return; // lewati kotoba yang nggak punya kanji sama sekali
+    out.push({ char: w.w, romaji: w.furi, arti: w.a, note: w.n || null, type: 'kotoba-materi' });
+  }));
+  const seen = new Set();
+  return out.filter(x => { if (seen.has(x.char)) return false; seen.add(x.char); return true; });
+}
+
 const WCATS = [
-  { id: 'hiragana',     label: 'Hiragana',              pool: wHiraganaPool },
-  { id: 'katakana',     label: 'Katakana',               pool: wKatakanaPool },
-  { id: 'kanji',        label: 'Kanji (dari Kosakata)',  pool: wKanjiPool },
-  { id: 'kanji-materi', label: 'Kanji (Materi Kanji)',   pool: wKanjiMateriPool }
+  { id: 'hiragana',      label: 'Hiragana',               pool: wHiraganaPool },
+  { id: 'katakana',      label: 'Katakana',                pool: wKatakanaPool },
+  { id: 'kanji',         label: 'Kanji (dari Kosakata)',   pool: wKanjiPool },
+  { id: 'kanji-materi',  label: 'Kanji (Materi Kanji)',    pool: wKanjiMateriPool },
+  { id: 'kotoba-materi', label: 'Kotoba (Materi Kanji)',   pool: wKotobaMateriPool }
 ];
 
 let WC = new Set(['hiragana']), WORDER = 'acak', WN = 20;
@@ -1395,7 +1407,7 @@ function renderWQuestion() {
   document.getElementById('wPf').style.width = Math.round((WCQ / WQ.length) * 100) + '%';
   document.getElementById('wCtr').textContent = (WCQ + 1) + ' / ' + WQ.length;
   document.getElementById('wSc').textContent = '✓ ' + WOK + '  ✗ ' + WNGCOUNT;
-  const tagMap = { hiragana: 'Hiragana', katakana: 'Katakana', kanji: 'Kanji', 'kanji-materi': 'Kanji (Materi)' };
+  const tagMap = { hiragana: 'Hiragana', katakana: 'Katakana', kanji: 'Kanji', 'kanji-materi': 'Kanji (Materi)', 'kotoba-materi': 'Kotoba (Materi)' };
   document.getElementById('wTag').textContent = tagMap[item.type] || item.type;
   document.getElementById('wPrompt').textContent = item.romaji || '';
   document.getElementById('wSub').textContent = item.arti ? item.arti : 'Tulis karakternya di kanvas di bawah';
