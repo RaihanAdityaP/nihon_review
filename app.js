@@ -1290,7 +1290,7 @@ function wKanjiPool() {
   Object.values(COUNTER).forEach(g => scanRows(g.rows));
   Object.values(KATA_SIFAT).forEach(g => scanRows(g.rows));
   Object.values(KATA_KERJA).forEach(g => scanRows(g.rows));
-  ['bab1', 'bab2', 'bab3', 'bab4', 'bab5'].forEach(b => { if (BUKU[b]) Object.values(BUKU[b]).forEach(g => scanRows(g.rows)); });
+  ['bab1', 'bab2', 'bab3', 'bab4', 'bab5', 'bab6'].forEach(b => { if (BUKU[b]) Object.values(BUKU[b]).forEach(g => scanRows(g.rows)); });
   const seen = new Set();
   return out.filter(x => { if (seen.has(x.char)) return false; seen.add(x.char); return true; });
 }
@@ -1645,6 +1645,7 @@ renderBukuBab('bab2', 'bukuBab2');
 renderBukuBab('bab3', 'bukuBab3');
 renderBukuBab('bab4', 'bukuBab4');
 renderBukuBab('bab5', 'bukuBab5');
+renderBukuBab('bab6', 'bukuBab6');
 renderBunpou();
 initQSetup();
 initAISetup();

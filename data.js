@@ -161,7 +161,8 @@ const KT={
 {k:"みせ",r:"mise",a:"toko",kj:"店",n:"Kata umum untuk toko/kedai, sering jadi akhiran nama toko (mis. hon'ya = toko buku, dari 'ya' bentuk lain dari 'mise')."},
 {k:"たんぼ",r:"tanbo",a:"sawah",kj:"田んぼ",n:"Pemandangan khas pedesaan Jepang, terutama saat musim tanam padi."},
 {k:"いりぐち",r:"iriguchi",a:"pintu masuk",kj:"入口",n:"Iri (masuk) + Guchi (mulut/lubang, dari 'kuchi' yang berubah bunyi jadi 'guchi')."},
-{k:"でぐち",r:"deguchi",a:"pintu keluar",kj:"出口",n:"De (keluar) + Guchi (mulut/lubang). Pasangan kata dari 'iriguchi'."}
+{k:"でぐち",r:"deguchi",a:"pintu keluar",kj:"出口",n:"De (keluar) + Guchi (mulut/lubang). Pasangan kata dari 'iriguchi'."},
+{k:"かいがん",r:"kaigan",a:"pantai",kj:"海岸",n:"Kai (laut) + Gan (pinggir/tepi). Merujuk pada garis pantai secara umum."}
 ]},
 "Hobi & Olahraga":{rows:[
 {k:"しゅみ",r:"shumi",a:"hobi",kj:"趣味",n:"'Oshumi wa nan desu ka?' = Apa hobimu? Pertanyaan umum saat kenalan."},
@@ -191,7 +192,8 @@ const KT={
 {k:"のりもの",r:"norimono",a:"kendaraan",kj:"乗り物",n:"Gabungan 乗り (naik) + 物 (benda). Harfiah: 'benda yang dinaiki'."},
 {k:"しんかんせん",r:"shinkansen",a:"kereta peluru",kj:"新幹線",n:"Shin (baru) + Kan (utama) + Sen (jalur). Kereta cepat ikonik Jepang, bisa sampai 320 km/jam."},
 {k:"バイク",r:"baiku",a:"sepeda motor",n:"Serapan 'bike/motorbike'. Beda dari jitensha (sepeda kayuh) — baiku pakai mesin."},
-{k:"あるいて",r:"aruite",a:"dengan berjalan kaki",kj:"歩いて",n:"Bentuk te dari 'aruku' (berjalan). Beda dari kendaraan lain: TIDAK pakai partikel で, langsung diikuti keterangan waktu/kegiatan."}
+{k:"あるいて",r:"aruite",a:"dengan berjalan kaki",kj:"歩いて",n:"Bentuk te dari 'aruku' (berjalan). Beda dari kendaraan lain: TIDAK pakai partikel で, langsung diikuti keterangan waktu/kegiatan."},
+{k:"ちかてつ",r:"chikatetsu",a:"kereta bawah tanah",kj:"地下鉄",n:"Chika (bawah tanah) + Tetsu (besi/rel). Sistem subway, umum di kota besar seperti Tokyo dan Osaka."}
 ]},
 "Makanan & Minuman":{rows:[
 {k:"たまご",r:"tamago",a:"telur",kj:"卵",n:"Dari kata kuno 'tama' (bulat) + 'ko' (anak). Artinya 'anak berbentuk bulat'."},
@@ -219,7 +221,13 @@ const KT={
 {k:"イチゴ",r:"ichigo",a:"stroberi",n:"Dari bahasa Inggris. Stroberi Jepang terkenal sangat manis dan besar — bisa sangat mahal untuk yang premium."},
 {k:"スープ",r:"suupu",a:"sup",n:"Serapan 'soup'. Sup miso (みそしる) adalah sup paling ikonik — hampir selalu ada dalam set makan tradisional Jepang."},
 {k:"とんかつ",r:"tonkatsu",a:"tonkatsu",n:"Dari ton (babi) + katsu (dari 'cutlet'). Potongan daging babi berlapis tepung roti yang digoreng. Menu populer di seluruh Jepang."},
-{k:"（お）かし",r:"(o)kashi",a:"camilan, kue, permen",kj:"（お）菓子",n:"Kata umum untuk makanan ringan/manis — bisa kue, permen, snack, dll. 'Okashi wo tabemasu' = makan camilan."}
+{k:"（お）かし",r:"(o)kashi",a:"camilan, kue, permen",kj:"（お）菓子",n:"Kata umum untuk makanan ringan/manis — bisa kue, permen, snack, dll. 'Okashi wo tabemasu' = makan camilan."},
+{k:"のみもの",r:"nomimono",a:"minuman",kj:"飲み物",n:"Nomi (dari 'nomu', minum) + mono (benda). Lawan kata dari たべもの (makanan)."},
+{k:"いざかや",r:"izakaya",a:"pub, bar khas Jepang",kj:"居酒屋",n:"I (tinggal/duduk) + Saka (sake/arak) + Ya (toko). Tempat makan-minum santai ala Jepang setelah kerja."},
+{k:"おこのみやき",r:"okonomiyaki",a:"okonomiyaki",kj:"お好み焼き",n:"O-konomi (sesuka hati) + yaki (panggang). Pancake gurih khas Jepang isi campur (sayur, daging, seafood)."},
+{k:"ステーキ",r:"suteeki",a:"steak, bistik",n:"Serapan 'steak'."},
+{k:"すきやき",r:"sukiyaki",a:"sukiyaki",kj:"すき焼き",n:"Hidangan hot pot daging sapi tipis dimasak dengan kecap manis, sering dicelup telur mentah."},
+{k:"たべほうだい",r:"tabehoudai",a:"makan sepuasnya, all-you-can-eat",kj:"食べ放題",n:"Tabe (dari 'taberu', makan) + houdai (sepuasnya/tanpa batas)."}
 ]},
 "Benda":{rows:[
 {k:"かぎ",r:"kagi",a:"kunci",kj:"鍵",n:"'Kagi kakko' = tanda kurung siku [ ]."},
@@ -263,7 +271,10 @@ const KT={
 {k:"かいしゃ",r:"kaisha",a:"perusahaan",kj:"会社",n:"Kai (pertemuan/organisasi) + Sha (perusahaan). Dasar dari kata かいしゃいん (karyawan perusahaan)."},
 {k:"テレビ",r:"terebi",a:"televisi, TV",n:"Singkatan dari 'terebijon' (television). Kata sehari-hari untuk TV."},
 {k:"ディーブイディー",r:"diibuidii",a:"DVD",n:"Singkatan 'digital video disc' dilafalkan huruf Inggris ala Jepang."},
-{k:"どこ（へ）も",r:"doko (e) mo",a:"ke mana pun",kj:"何処（へ）も",n:"Doko (mana) + e (partikel arah, opsional) + mo (pun). SELALU diikuti bentuk negatif: 'doko e mo ikimasen' = tidak pergi ke mana pun."}
+{k:"どこ（へ）も",r:"doko (e) mo",a:"ke mana pun",kj:"何処（へ）も",n:"Doko (mana) + e (partikel arah, opsional) + mo (pun). SELALU diikuti bentuk negatif: 'doko e mo ikimasen' = tidak pergi ke mana pun."},
+{k:"チケット",r:"chiketto",a:"tiket",n:"Serapan 'ticket'."},
+{k:"〜まい",r:"~mai",a:"~lembar (counter untuk benda tipis/pipih)",kj:"〜枚",n:"Counter untuk kertas, tiket, baju, piring, dll: ichimai, nimai, sanmai..."},
+{k:"みずぎ",r:"mizugi",a:"baju renang",kj:"水着",n:"Mizu (air) + gi (pakaian)."}
 ]},
 "Benda (di Kelas)":{rows:[
 {k:"エアコン",r:"eakon",a:"AC / pendingin ruangan",n:"Serapan 'air conditioner' disingkat. Di Jepang hampir semua kelas dan kantor punya eakon — musim panasnya sangat terik."},
@@ -328,7 +339,8 @@ const KT={
 {k:"〜やすみ",r:"~yasumi",a:"libur~",kj:"〜休み",n:"Ditambahkan setelah kata untuk menyebut jenis libur: natsuyasumi (libur musim panas), fuyuyasumi (libur musim dingin)."},
 {k:"ゴールデンウィーク",r:"goorudenwiiku",a:"Golden week",n:"Serapan 'golden week'. Rangkaian hari libur nasional akhir April-awal Mei, salah satu musim liburan terpanjang di Jepang."},
 {k:"さくら",r:"sakura",a:"sakura",kj:"桜",n:"Bunga sakura (cherry blossom), simbol nasional Jepang yang mekar singkat di musim semi."},
-{k:"（お）べんとう",r:"(o)bentou",a:"bekal makanan",kj:"（お）弁当",n:"Kotak bekal makanan khas Jepang, biasa dibawa ke sekolah/kantor atau dibeli di konbini/stasiun."}
+{k:"（お）べんとう",r:"(o)bentou",a:"bekal makanan",kj:"（お）弁当",n:"Kotak bekal makanan khas Jepang, biasa dibawa ke sekolah/kantor atau dibeli di konbini/stasiun."},
+{k:"きせつ",r:"kisetsu",a:"musim",kj:"季節",n:"Kata umum untuk 'musim' sebagai konsep — beda dari nama musim spesifik (haru/natsu/aki/fuyu)."}
 ]},
 "Cuaca & Suhu":{rows:[
 {k:"あたたかい",r:"atatakai",a:"hangat (benda)",kj:"温かい",n:"Khusus untuk suhu BENDA (makanan/minuman/air) — beda kanji dari 'atatakai' (暖かい, hangat cuaca) yang sudah ada di Kata Sifat - い. Bunyi sama, kanji & konteks beda!"},
@@ -368,7 +380,11 @@ const KT={
 {k:"ねだん",r:"nedan",a:"harga",kj:"値段",n:"Kata benda buat 'harga' itu sendiri. Beda dari いくら yang dipakai buat nanya harganya berapa."},
 {k:"だんじき",r:"danjiki",a:"puasa",kj:"断食",n:"Dan (memutus) + Jiki (makan). Istilah umum buat puasa (menahan makan/minum), termasuk konteks agama."},
 {k:"おすすめ",r:"osusume",a:"rekomendasi",kj:"お勧め",n:"Prefiks sopan お + susume (dari 'susumeru' = menganjurkan). 'Osusume wa nan desu ka?' = apa rekomendasinya?"},
-{k:"うんめい",r:"unmei",a:"takdir, nasib",kj:"運命",n:"Un (keberuntungan) + Mei (perintah/nasib). Sering dipakai dalam konteks drama/romantis, mis. 'unmei no hito' = orang yang ditakdirkan (jodoh)."}
+{k:"うんめい",r:"unmei",a:"takdir, nasib",kj:"運命",n:"Un (keberuntungan) + Mei (perintah/nasib). Sering dipakai dalam konteks drama/romantis, mis. 'unmei no hito' = orang yang ditakdirkan (jodoh)."},
+{k:"あります",r:"arimasu",a:"ada (benda mati/tidak bergerak)",n:"Bentuk masu dari 'aru'. Lawan: ありません. Khusus benda mati — untuk makhluk hidup pakai います."},
+{k:"いっしょに",r:"issho ni",a:"bersama-sama",kj:"一緒に",n:"'Issho ni ikimasen ka?' = mau pergi bareng nggak? Ungkapan umum buat ngajak."},
+{k:"あそびます",r:"asobimasu",a:"bermain",kj:"遊びます",n:"Bentuk masu dari 'asobu'. Dipakai luas: main game, main bareng teman, jalan-jalan santai."},
+{k:"わかります",r:"wakarimasu",a:"paham, mengerti",n:"Bentuk masu dari 'wakaru'. 'Wakarimashita' = mengerti (sudah paham)."}
 ]},
 "Kotoba N5":{rows:[
 {k:"あめ",r:"ame",a:"hujan / permen",n:"Kanji: 雨 (hujan) / 飴 (permen). Beda kanji, beda makna! 'Ame ga futte iru' = sedang hujan."},
@@ -489,7 +505,8 @@ const KT={
 {k:"まいにち",r:"mainichi",a:"setiap hari",kj:"毎日",n:"Mai (setiap) + Nichi (hari). Pola まい〜 dipakai untuk menyatakan pengulangan."},
 {k:"まいあさ",r:"maiasa",a:"setiap pagi",kj:"毎朝",n:"Mai (setiap) + Asa (pagi). 'Maiasa hashirimasu' = berlari setiap pagi."},
 {k:"まいばん",r:"maiban",a:"setiap malam",kj:"毎晩",n:"Mai (setiap) + Ban (malam). 'Maiban benkyou shimasu' = belajar setiap malam."},
-{k:"ひるやすみ",r:"hiruyasumi",a:"istirahat siang",kj:"昼休み",n:"Hiru (siang) + Yasumi (istirahat). Jam istirahat makan siang di sekolah maupun kantor."}
+{k:"ひるやすみ",r:"hiruyasumi",a:"istirahat siang",kj:"昼休み",n:"Hiru (siang) + Yasumi (istirahat). Jam istirahat makan siang di sekolah maupun kantor."},
+{k:"〜ごろ",r:"~goro",a:"sekitar jam~",n:"Ditambahkan setelah waktu spesifik: 'shichiji goro' = sekitar jam 7. Beda dari 'gurai/kurai' yang untuk durasi, bukan titik waktu."}
 ]},
 "Durasi":{rows:[
 {k:"きかん",r:"kikan",a:"durasi, jangka waktu",kj:"期間",n:"Istilah umum buat 'rentang/jangka waktu' (mis. periode ujian, masa berlaku). Beda dari どのぐらい yang nanya durasinya, きかん adalah kata bendanya sendiri."},
@@ -686,7 +703,9 @@ const KT={
 {k:"なんにち",r:"nan nichi",a:"tanggal berapa",kj:"何日",n:"Menanyakan tanggal. 'Kyou wa nan nichi desu ka?' = hari ini tanggal berapa?"},
 {k:"なんぷん",r:"nan pun",a:"menit berapa",kj:"何分",n:"Menanyakan menit pada jam. 'Ima nan pun desu ka?' = sekarang menit berapa?"},
 {k:"どこでもいい",r:"doko demo ii",a:"di mana saja boleh / bebas (tempat)",n:"どこ (di mana) + でも (pun/saja) + いい (bagus/boleh). Dipakai saat tidak punya preferensi tempat tertentu — 'terserah, di mana saja oke'."},
-{k:"なんでもいい",r:"nan demo ii",a:"apa saja boleh / bebas (pilihan)",n:"なん (apa) + でも (pun/saja) + いい (bagus/boleh). Pola sama seperti どこでもいい tapi untuk pilihan benda/hal, bukan tempat."}
+{k:"なんでもいい",r:"nan demo ii",a:"apa saja boleh / bebas (pilihan)",n:"なん (apa) + でも (pun/saja) + いい (bagus/boleh). Pola sama seperti どこでもいい tapi untuk pilihan benda/hal, bukan tempat."},
+{k:"どちらも",r:"dochira mo",a:"yang mana saja / keduanya",n:"Dochira (yang mana, dari dua pilihan) + mo (pun/juga). 'Dochira mo ii desu' = yang mana saja bagus / dua-duanya oke."},
+{k:"どうですか",r:"dou desu ka",a:"bagaimana?",n:"Dipakai buat nanya kesan/pendapat/tawaran. 'Kore wa dou desu ka?' = ini gimana menurutmu?"}
 ]},
 "Kata Penunjuk (Ko-So-A-Do)":{rows:[
 {k:"これ",r:"kore",a:"ini (dekat pembicara)",n:"Pola KO-SO-A-DO: ko=dekat aku, so=dekat kamu, a=jauh, do=tanya."},
@@ -715,7 +734,12 @@ const KT={
 {k:"もちろん",r:"mochiron",a:"tentu saja / sudah pasti",n:"Keyakinan 100%."},
 {k:"ほんとうに",r:"hontouni",a:"sungguh / benar-benar",n:"'Hontou ni?' = Sungguh?"},
 {k:"ただ",r:"tada",a:"hanya, cuma, sekadar",n:"Menekankan 'tidak lebih dari itu'. Beda kata dengan 'tada' yang berarti 'gratis' (無料), walau ditulis sama."},
-{k:"いっしょけんめい",r:"isshoukenmei",a:"bersungguh-sungguh, sekuat tenaga",kj:"一生懸命",n:"Harfiah 'mempertaruhkan seumur hidup'. Dipakai buat ngejelasin cara ngelakuin sesuatu, biasanya nempel di depan kata kerja. 'Isshoukenmei benkyou shimasu' = belajar sungguh-sungguh."}
+{k:"いっしょけんめい",r:"isshoukenmei",a:"bersungguh-sungguh, sekuat tenaga",kj:"一生懸命",n:"Harfiah 'mempertaruhkan seumur hidup'. Dipakai buat ngejelasin cara ngelakuin sesuatu, biasanya nempel di depan kata kerja. 'Isshoukenmei benkyou shimasu' = belajar sungguh-sungguh."},
+{k:"まだ",r:"mada",a:"masih / belum",n:"Positif: 'masih' (mada imasu = masih ada). Dengan negatif: 'belum' (mada tabemasen = belum makan)."},
+{k:"もう",r:"mou",a:"sudah / lagi",n:"Positif: 'sudah' (mou tabemashita = sudah makan). Dengan negatif: 'tidak lagi' (mou tabemasen = tidak makan lagi)."},
+{k:"ちょっと",r:"chotto",a:"sebentar, agak, maaf",n:"Sangat serbaguna: 'chotto matte' (tunggu sebentar), 'chotto takai' (agak mahal), atau buat menolak halus 'chotto...' (maaf, agak...)."},
+{k:"ぜんぶ",r:"zenbu",a:"semuanya",kj:"全部",n:"Zen (seluruh) + Bu (bagian). Dipakai untuk benda/hal, mis. 'zenbu tabemashita' = makan semuanya."},
+{k:"いちばん",r:"ichiban",a:"paling, nomor satu",n:"Ichi (satu) + Ban (urutan). Dipakai di depan kata sifat buat superlatif: 'ichiban suki' = paling suka."}
 ]},
 "Kata Penghubung (Setsuzokushi)":{rows:[
 {k:"そして",r:"soshite",a:"dan, lalu",n:"Menyambung DUA KALIMAT terpisah jadi satu cerita berlanjut — beda dari と yang cuma menyambung kata benda dalam satu kalimat. Contoh: 'Furui desu. Soshite, shizuka desu.' = Kuno. Dan lagi, sunyi."},
@@ -798,7 +822,11 @@ const KT={
 {k:"きた",r:"kita",a:"utara",kj:"北",n:"Arah mata angin utara. Hokkaido, pulau paling utara Jepang, terkenal dengan salju dan ski."},
 {k:"まんなか",r:"mannaka",a:"tengah-tengah",kj:"真ん中",n:"Ma (benar-benar) + n + naka (dalam/tengah). Dipakai untuk posisi persis di tengah, bukan cuma 'dalam' seperti 'naka' biasa."},
 {k:"まえからうしろまで",r:"mae kara ushiro made",a:"dari depan sampai belakang",kj:"前から後ろまで",n:"Pola 〜から〜まで (dari〜sampai〜) dipakai untuk menyatakan rentang. Mae (depan) kara (dari) ushiro (belakang) made (sampai)."},
-{k:"うえからしたまで",r:"ue kara shita made",a:"dari atas ke bawah",kj:"上から下まで",n:"Pola 〜から〜まで untuk rentang arah vertikal. Ue (atas) kara (dari) shita (bawah) made (sampai)."}
+{k:"うえからしたまで",r:"ue kara shita made",a:"dari atas ke bawah",kj:"上から下まで",n:"Pola 〜から〜まで untuk rentang arah vertikal. Ue (atas) kara (dari) shita (bawah) made (sampai)."},
+{k:"ちかい",r:"chikai",a:"dekat",kj:"近い",n:"i-keiyoushi. Lawan kata: とおい (jauh)."},
+{k:"とおい",r:"tooi",a:"jauh",kj:"遠い",n:"i-keiyoushi. Lawan kata: ちかい (dekat)."},
+{k:"はやい",r:"hayai",a:"cepat (kecepatan)",kj:"速い",n:"i-keiyoushi. Beda kanji dari 'hayai' (早い) yang berarti 'cepat/awal' dalam konteks waktu."},
+{k:"ひろい",r:"hiroi",a:"luas",kj:"広い",n:"i-keiyoushi. Lawan kata: せまい (sempit)."}
 ]},
 "Ekspresi di Kelas":{rows:[
 {k:"わかりました",r:"wakarimashita",a:"saya mengerti",kj:"分かりました",n:"Bentuk lampau sopan dari 'wakaru'."},
@@ -821,7 +849,8 @@ const KT={
 {k:"トースター",r:"toosutaa",a:"pemanggang roti",n:"Serapan 'toaster'."},
 {k:"ミキサー",r:"mikisaa",a:"blender",n:"Dari 'mixer'. Di Jepang maknanya bergeser jadi blender."},
 {k:"すいはんき",r:"suihanki",a:"rice cooker",kj:"炊飯器",n:"'Mesin penanak nasi'."},
-{k:"コンロ",r:"konro",a:"kompor",n:"Kata asli Jepang (焜炉). 'Tungku api'."}
+{k:"コンロ",r:"konro",a:"kompor",n:"Kata asli Jepang (焜炉). 'Tungku api'."},
+{k:"レンジフード",r:"renji fuudo",a:"penghisap asap dapur (range hood)",n:"Serapan 'range hood'. Alat di atas kompor buat nyedot asap & bau masakan."}
 ]},
 "Alat Dapur":{rows:[
 {k:"ほうちょう",r:"houchou",a:"pisau dapur",kj:"包丁",n:"Dari nama koki legendaris Cina kuno."},
@@ -835,7 +864,8 @@ const KT={
 {k:"フォーク",r:"fooku",a:"garpu",n:"Serapan 'fork'."},
 {k:"はし",r:"hashi",a:"sumpit",kj:"箸",n:"'Jembatan' antara makanan dan mulut."},
 {k:"ざる",r:"zaru",a:"saringan bambu",n:"Keranjang anyaman bambu berlubang."},
-{k:"おろしがね",r:"oroshigane",a:"parutan",kj:"おろし金",n:"Untuk memarut jahe, lobak, dsb."}
+{k:"おろしがね",r:"oroshigane",a:"parutan",kj:"おろし金",n:"Untuk memarut jahe, lobak, dsb."},
+{k:"あわだてき",r:"awadateki",a:"pengocok telur (whisk)",kj:"泡立て器",n:"Awa (buih/busa) + Dateru (membangkitkan) + Ki (alat). Buat ngocok telur/krim sampai berbusa."}
 ]},
 "Wadah & Perabot":{rows:[
 {k:"ボウル",r:"booru",a:"mangkuk besar",n:"Serapan 'bowl'."},
@@ -904,7 +934,31 @@ const KT={
 {k:"いらっしゃいませ",r:"irasshaimase",a:"selamat datang (di toko/restoran)",n:"Ungkapan wajib staf toko saat pelanggan masuk. Tidak perlu direspons — cukup angguk atau senyum."},
 {k:"（どうも）ありがとうございます",r:"(doumo) arigatou gozaimasu",a:"terima kasih (banyak)",n:"どうも menambahkan penekanan 'sangat/banyak'. Sering diucapkan staf toko/restoran saat pelanggan membayar atau keluar."},
 {k:"こころをこめて",r:"kokoro wo komete",a:"dengan sepenuh hati",kj:"心を込めて",n:"Kokoro (hati) + wo (partikel objek) + komete (dari 'komeru' = memasukkan/menuangkan). Dipakai untuk menyatakan sesuatu dilakukan dengan penuh perasaan/ketulusan, misal saat memasak atau memberi hadiah."},
-{k:"（お）ひさしぶり",r:"(o)hisashiburi",a:"sudah lama tidak bertemu",kj:"（お）久しぶり",n:"Sapaan saat bertemu seseorang setelah lama tidak jumpa. Bentuk sopan lengkapnya: 'Ohisashiburi desu ne'."}
+{k:"（お）ひさしぶり",r:"(o)hisashiburi",a:"sudah lama tidak bertemu",kj:"（お）久しぶり",n:"Sapaan saat bertemu seseorang setelah lama tidak jumpa. Bentuk sopan lengkapnya: 'Ohisashiburi desu ne'."},
+{k:"ああ",r:"aa",a:"oh",n:"Interjeksi buat nunjukin nyadar/paham tiba-tiba, mirip 'oh' atau 'ah' dalam bahasa Indonesia."},
+{k:"そうしましょう",r:"sou shimashou",a:"ayo (begitu saja)!",n:"Ajakan setuju buat ngelakuin sesuatu yang baru diusulkan. 'A: Eiga wo mimasen ka? B: Sou shimashou!' = 'Nonton film yuk? — Ayo!'"},
+{k:"またこんど",r:"mata kondo",a:"lain kali lagi",kj:"また今度",n:"Dipakai buat nolak halus ajakan sambil ninggalin peluang buat lain waktu."},
+{k:"やくそく",r:"yakusoku",a:"janji",kj:"約束",n:"'Yakusoku shimasu' = berjanji. 'Yakusoku ga arimasu' = ada janji (temu)."},
+{k:"ようじ",r:"youji",a:"urusan, keperluan",kj:"用事",n:"'Youji ga arimasu' = ada urusan/keperluan. Sering dipakai buat nolak ajakan dengan sopan."},
+{k:"ざんねん【な】",r:"zannen (na)",a:"disayangkan, sayang sekali",kj:"残念【な】",n:"na-keiyoushi. 'Zannen desu ne' = sayang banget ya (nunjukin kecewa halus)."}
+]},
+"Hiburan & Acara":{rows:[
+{k:"カラオケ",r:"karaoke",a:"karaoke",n:"Serapan dari 'kara' (kosong) + 'oke' (dari orchestra). Kegiatan hiburan populer di Jepang, biasa disewa per ruangan (bukan panggung umum)."},
+{k:"コンサート",r:"konsaato",a:"konser",n:"Serapan 'concert'."},
+{k:"まつり",r:"matsuri",a:"festival",kj:"祭り",n:"Festival tradisional Jepang, sering diadakan musim panas dengan yukata, kembang api, dan stand makanan."},
+{k:"しあい",r:"shiai",a:"pertandingan",kj:"試合",n:"Dipakai untuk pertandingan olahraga apa pun."},
+{k:"やきゅう",r:"yakyuu",a:"bisbol",kj:"野球",n:"Ya (liar/lapangan) + Kyuu (bola). Olahraga paling populer di Jepang."},
+{k:"セール",r:"seeru",a:"obral, diskon",n:"Serapan 'sale'."},
+{k:"ツアー",r:"tsuaa",a:"tur",n:"Serapan 'tour'."},
+{k:"コース",r:"koosu",a:"rute, paket (menu/wisata)",n:"Serapan 'course'. Bisa berarti rute perjalanan maupun paket menu makan (course meal)."},
+{k:"とうきょうたわあ",r:"toukyou tawaa",a:"Tokyo Tower",kj:"東京タワー",n:"Menara ikonik Tokyo berwarna oranye-putih, terinspirasi Eiffel Tower."},
+{k:"スカイツリー",r:"sukaitsurii",a:"Tokyo Skytree",n:"Menara tertinggi di Jepang (634m), lebih baru dari Tokyo Tower."},
+{k:"えいがかん",r:"eigakan",a:"bioskop",kj:"映画館",n:"Eiga (film) + Kan (gedung)."},
+{k:"ジャズ",r:"jazu",a:"jazz",n:"Serapan 'jazz'."},
+{k:"コメディー",r:"komedii",a:"komedi",n:"Serapan 'comedy'. Sering dipakai buat genre film/acara."},
+{k:"ホラー",r:"horaa",a:"horor",n:"Serapan 'horror'. Genre film: eiga no janru."},
+{k:"おばけ",r:"obake",a:"hantu",kj:"お化け",n:"O (prefiks) + bake (dari 'bakeru' = berubah wujud). Istilah umum untuk sosok hantu/makhluk gaib dalam cerita horor Jepang."},
+{k:"フリーマーケット",r:"furii maaketto",a:"pasar loak, bazar barang bekas",n:"Serapan 'flea market'. Sering disingkat フリマ (furima) dalam percakapan sehari-hari."}
 ]},
 "Sampah & Lingkungan":{rows:[
 {k:"ごみ",r:"gomi",a:"sampah",kj:"ゴミ",n:"Kata umum untuk sampah/limbah rumah tangga."},
@@ -1486,41 +1540,42 @@ ex:[
 {jp:"わたし<b class='ph'>は</b>がくせいです。",id:"Saya adalah siswa."},
 {jp:"これ<b class='ph'>は</b>ほんです。",id:"Ini adalah buku."},
 {jp:"きょう<b class='ph'>は</b>さむいです。",id:"Hari ini dingin."}]},
-{sym:"が",r:"ga",name:"Subjek (subject marker)",
-desc:"Menandai subjek gramatikal. Dipakai saat subjek baru, menekankan siapa yang melakukan, atau kalimat eksistensial.",
+{sym:"が",r:"ga",name:"Subjek / Objek Perasaan / Keberadaan / Tapi",
+desc:"Multi-fungsi: (1) subjek gramatikal (siapa/apa yang melakukan), (2) objek dari kata sifat perasaan seperti すき／きらい／ほしい／たい, (3) penanda benda dalam kalimat keberadaan あります／います, (4) penghubung 'tapi' antar dua kalimat (fungsi ini beda total dari yang lain — bukan penanda subjek).",
 ex:[
-{jp:"ねこ<b class='ph'>が</b>います。",id:"Ada kucing."},
-{jp:"だれ<b class='ph'>が</b>きましたか？",id:"Siapa yang datang?"},
-{jp:"わたし<b class='ph'>が</b>やります。",id:"Saya (lah) yang akan melakukannya."}]},
+{jp:"ねこ<b class='ph'>が</b>います。",id:"Ada kucing. (keberadaan)"},
+{jp:"わたしはコーヒー<b class='ph'>が</b>すきです。",id:"Saya suka kopi. (objek perasaan)"},
+{jp:"たかいです<b class='ph'>が</b>、おいしいです。",id:"Mahal, tapi enak. (penghubung 'tapi')"}]},
 {sym:"を",r:"wo/o",name:"Objek (object marker)",
 desc:"Menandai objek langsung dari kata kerja transitif.",
 ex:[
 {jp:"ほん<b class='ph'>を</b>よみます。",id:"Membaca buku."},
 {jp:"おちゃ<b class='ph'>を</b>のみます。",id:"Minum teh."},
 {jp:"えき<b class='ph'>を</b>でます。",id:"Keluar dari stasiun."}]},
-{sym:"に",r:"ni",name:"Tujuan / Lokasi / Waktu",
-desc:"Serba guna: tujuan gerakan, lokasi keberadaan, titik waktu, atau penerima aksi.",
+{sym:"に",r:"ni",name:"Tujuan / Lokasi Keberadaan / Waktu",
+desc:"Serba guna: (1) tujuan gerakan (ke mana), (2) lokasi KEBERADAAN yang statis — benda/orang 'ada' di situ, dipasangan sama あります／います, (3) titik waktu spesifik, (4) penerima aksi. PENTING: に beda dari で — に buat benda/orang yang menetap diam di suatu tempat, で buat tempat berlangsungnya suatu AKSI/kegiatan (lihat partikel で).",
 ex:[
-{jp:"がっこう<b class='ph'>に</b>いきます。",id:"Pergi ke sekolah."},
-{jp:"つくえのうえ<b class='ph'>に</b>あります。",id:"Ada di atas meja."},
-{jp:"さんじ<b class='ph'>に</b>あいましょう。",id:"Mari bertemu jam 3."}]},
-{sym:"で",r:"de",name:"Tempat Aksi / Cara / Alat",
-desc:"Tempat suatu aksi berlangsung, alat/cara yang digunakan.",
+{jp:"がっこう<b class='ph'>に</b>いきます。",id:"Pergi ke sekolah. (tujuan)"},
+{jp:"つくえのうえ<b class='ph'>に</b>あります。",id:"Ada di atas meja. (keberadaan, statis)"},
+{jp:"さんじ<b class='ph'>に</b>あいましょう。",id:"Mari bertemu jam 3. (waktu)"}]},
+{sym:"で",r:"de",name:"Tempat Aksi / Cara-Alat / Event / Cakupan",
+desc:"Partikel paling banyak fungsinya: (1) tempat suatu AKSI/kegiatan berlangsung (beda dari に yang statis — lihat partikel に), (2) alat/cara yang dipakai, (3) tempat & waktu berlangsungnya EVENT/acara (bukan benda menetap), (4) cakupan/ruang lingkup saat membandingkan ('di antara ~').",
 ex:[
-{jp:"こうえん<b class='ph'>で</b>あそびます。",id:"Bermain di taman."},
-{jp:"でんしゃ<b class='ph'>で</b>いきます。",id:"Pergi dengan kereta."},
-{jp:"にほんご<b class='ph'>で</b>はなします。",id:"Berbicara dalam bahasa Jepang."}]},
+{jp:"こうえん<b class='ph'>で</b>あそびます。",id:"Bermain di taman. (tempat aksi)"},
+{jp:"でんしゃ<b class='ph'>で</b>いきます。",id:"Pergi dengan kereta. (alat/cara)"},
+{jp:"がっこう<b class='ph'>で</b>テストがあります。",id:"Ada tes di sekolah. (event)"},
+{jp:"かぞく<b class='ph'>で</b>ちちがいちばんせがたかいです。",id:"Di antara keluarga, ayah paling tinggi. (cakupan)"}]},
 {sym:"へ",r:"e",name:"Arah (direction marker)",
 desc:"Menunjukkan arah gerakan. Ditulis 'he' tapi dibaca 'e'.",
 ex:[
 {jp:"とうきょう<b class='ph'>へ</b>いきます。",id:"Pergi menuju Tokyo."},
 {jp:"うち<b class='ph'>へ</b>かえります。",id:"Pulang ke rumah."},
 {jp:"みぎ<b class='ph'>へ</b>まがります。",id:"Belok ke kanan."}]},
-{sym:"の",r:"no",name:"Kepemilikan / Penghubung",
-desc:"Seperti apostrophe-s (') dalam bahasa Inggris. Menghubungkan dua kata benda.",
+{sym:"の",r:"no",name:"Kepemilikan / Penghubung / Bagian Lokasi",
+desc:"Seperti apostrophe-s (') dalam bahasa Inggris. Menghubungkan dua kata benda — termasuk buat nunjukkin BAGIAN/ARAH dari suatu tempat (KB besar + の + arah/bagian).",
 ex:[
 {jp:"わたし<b class='ph'>の</b>ほん",id:"buku saya"},
-{jp:"にほん<b class='ph'>の</b>たべもの",id:"makanan Jepang"},
+{jp:"にほん<b class='ph'>の</b>きた",id:"utaranya Jepang / bagian utara Jepang"},
 {jp:"がっこう<b class='ph'>の</b>せんせい",id:"guru sekolah"}]},
 {sym:"と",r:"to",name:"Dan / Bersama",
 desc:"Menghubungkan dua kata benda (dan), atau menyatakan menemani (bersama).",
@@ -4344,11 +4399,8 @@ const BUNPOU = [
       }
     ]
   },
-  // ═══════════════════════════════════════════════
-  // MATERI TAMBAHAN
-  // ═══════════════════════════════════════════════
   {
-    tema: "Materi Tambahan",
+    tema: "Hari 1",
     judul: "おなまえは？ (Menanyakan & menyatakan nama)",
     sub: "Pola dasar berkenalan — menanyakan dan menyebutkan nama.",
     items: [
@@ -4365,7 +4417,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Materi Tambahan",
+    tema: "Hari 1",
     judul: "なんにんですか？ (Menanyakan jumlah orang)",
     sub: "Pola menanyakan jumlah orang menggunakan counter khusus.",
     items: [
@@ -4381,6 +4433,167 @@ const BUNPOU = [
       }
     ]
   },
+  // ═══════════════════════════════════════════════
+  // HARI 15
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 15",
+    judul: "動詞ます-stem＋ませんか (Mengajak secara sopan)",
+    sub: "Pola ini, 動詞ましょう (poin berikutnya), dan 〔KB〕がありますから (poin setelahnya) saling nyambung — satu rangkaian percakapan ajak-menerima/menolak. Diikuti terus biar keliatan alurnya.",
+    items: [
+      {
+        pola: "動詞ます-stem＋ませんか。",
+        romaji: "[V-stem] + masen ka?",
+        arti: "Maukah [V]? / Bagaimana kalau [V]?",
+        catatan: "Walaupun bentuknya negatif (ません), maknanya BUKAN nanya 'tidak mau melakukan?' — ini pola ajakan sopan, terjemahan alaminya 'maukah/bagaimana kalau kita [V]?'. Lebih sopan dibanding ましょうか.",
+        contoh: [
+          {jp:"しゅうまつ、いっしょに　えいがを　みに　いきませんか。", id:"Akhir minggu ini, maukah pergi nonton film bareng?"},
+          {jp:"こんばん、わたしのいえで　ばんごはんを　たべませんか。", id:"Malam ini, maukah makan malam di rumah saya?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 15",
+    judul: "動詞ます-stem＋ましょう (Mengajak langsung / menerima ajakan)",
+    sub: "ましょう bisa dipakai buat DUA fungsi: (1) ngajak duluan secara langsung, tanpa nanya dulu kayak 〜ませんか, dan (2) nerima/nge-iyain ajakan orang lain. Bedanya sama ませんか: ませんか lebih sopan & 'membuka pilihan' (nanya mau apa nggak dulu), sedangkan ましょう lebih langsung/pasti — cocok kalau situasinya udah santai atau kamu yang mau ambil inisiatif.",
+    items: [
+      {
+        pola: "動詞ます-stem＋ましょう。（ngajak langsung）",
+        romaji: "[V-stem] + mashou.",
+        arti: "Ayo [V]! / Mari [V].",
+        catatan: "Dipakai buat mulai ngajak dari awal, gak perlu nanya pake ませんか dulu — langsung ngajak & ngasumsiin lawan bicara setuju. Lebih pasti/kurang formal dibanding ませんか.",
+        contoh: [
+          {jp:"つかれましたね。すこし　やすみましょう。", id:"Capek ya. Ayo istirahat sebentar."},
+          {jp:"あめですね。タクシーで　いきましょう。", id:"Hujan ya. Ayo naik taksi aja."}
+        ]
+      },
+      {
+        pola: "動詞ます-stem＋ましょう。（menerima ajakan）",
+        romaji: "[V-stem] + mashou.",
+        arti: "Ayo [V]! (sebagai jawaban setuju)",
+        catatan: "Jawaban positif dari 〜ませんか di poin sebelumnya — nunjukkin persetujuan sekaligus ngajak balik buat langsung ngelakuinnya bareng. Beda dari たいです (Hari 14) yang cuma nyatain keinginan pribadi, ましょう udah ngajak orang lain ikut serta.",
+        contoh: [
+          {jp:"A：しゅうまつ、いっしょに　えいがを　みに　いきませんか。\nB：いいですね。いきましょう。", id:"A: Akhir minggu ini, maukah pergi nonton film bareng? — B: Boleh juga. Ayo pergi!"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 15",
+    judul: "〔KB〕が　ありますから (Menyertakan alasan sebagai penolakan)",
+    sub: "Jawaban negatif dari 〜ませんか — menolak ajakan dengan alasan sopan. から di sini sama fungsinya kayak Hari 13 (menyatakan alasan/sebab), cuma sekarang dipasangin khusus buat nolak ajakan.",
+    items: [
+      {
+        pola: "すみません、〔KB〕が　ありますから、ちょっと…。",
+        romaji: "Sumimasen, [KB] ga arimasu kara, chotto....",
+        arti: "Maaf, karena ada [KB], agak... (susah/tidak bisa).",
+        catatan: "ちょっと… di akhir kalimat SENGAJA digantung tanpa disambung kata sifat/kata kerja penutup — ini cara halus orang Jepang buat nolak tanpa bilang 'tidak bisa' secara langsung. Lawan bicara udah otomatis ngerti itu artinya penolakan sopan, jadi jangan dipaksa disambung jadi kalimat lengkap.",
+        contoh: [
+          {jp:"A：しゅうまつ、いっしょに　えいがを　みに　いきませんか。\nB：すみません、しゅうまつは　しごとが　ありますから、ちょっと…。", id:"A: Akhir minggu ini, maukah pergi nonton film bareng? — B: Maaf, akhir minggu ini karena ada kerjaan, agak... (susah)."},
+          {jp:"A：こんばん、のみに　いきませんか。\nB：じつは　ようじが　ありますから、ちょっと…。", id:"A: Malam ini, maukah pergi minum-minum? — B: Sebenarnya karena ada urusan, agak... (susah)."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 15",
+    judul: "〔場所〕で　〔KB〕が　あります (Keberadaan acara/event pada tempat & waktu tertentu)",
+    sub: "Beda dari partikel に yang dipakai buat keberadaan benda/orang secara TETAP di suatu tempat (misal: こうえんに　いぬが　います), partikel で di sini dipakai khusus buat ACARA/EVENT yang berlangsung di tempat itu pada waktu tertentu — karena acara itu sifatnya 'terjadi', bukan 'menetap'.",
+    items: [
+      {
+        pola: "〔場所〕で　〔KB〕が　あります。",
+        romaji: "[tempat] de [KB] ga arimasu.",
+        arti: "Ada [KB, acara] di [tempat].",
+        catatan: "Aturan sederhananya: kalau yang 'ada' itu BENDA/ORANG yang menetap → pakai に. Kalau yang 'ada' itu ACARA/KEJADIAN yang berlangsung → pakai で. Contoh kontras: にわに　はなが　あります (di taman ADA bunga — menetap, pakai に) vs こうえんで　まつりが　あります (di taman ADA festival — event, pakai で).",
+        contoh: [
+          {jp:"らいしゅう、がっこうで　テストが　あります。", id:"Minggu depan, ada tes di sekolah."},
+          {jp:"こんど、うちの　ちかくで　まつりが　あります。", id:"Nanti, ada festival di dekat rumah saya."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 15",
+    judul: "〔KB〕が　〔jumlah〕　あります／います (Menyatakan jumlah benda/makhluk hidup)",
+    sub: "Gabungan pola あります／います (benda mati vs makhluk hidup) dengan angka/counter. Lokasinya bisa disebutin juga di depan pakai に (kalau menetap) atau で (kalau event) tergantung konteksnya — sama aturannya kayak poin sebelumnya.",
+    items: [
+      {
+        pola: "〔KB〕が　〔jumlah〕　あります。（benda mati）",
+        romaji: "[KB] ga [jumlah] arimasu.",
+        arti: "Ada [jumlah] [KB].",
+        catatan: "あります khusus benda mati/tidak bergerak. Urutannya: KB dulu, baru が, baru jumlah/counter-nya, baru あります di akhir.",
+        contoh: [
+          {jp:"つくえの　うえに　ほんが　さんさつ　あります。", id:"Di atas meja ada tiga buah buku. (に=lokasi tetap)"},
+          {jp:"きょう、がっこうで　じゅぎょうが　よっつ　あります。", id:"Hari ini, ada empat pelajaran di sekolah. (で=event/jadwal)"}
+        ]
+      },
+      {
+        pola: "〔KB〕が　〔jumlah〕　います。（makhluk hidup）",
+        romaji: "[KB] ga [jumlah] imasu.",
+        arti: "Ada [jumlah] [KB, makhluk hidup].",
+        catatan: "います khusus makhluk hidup (orang/hewan) — bukan あります. Lokasinya biasanya pakai に karena makhluk hidup pun kalau posisinya lagi 'berada di suatu tempat' dianggap menetap sementara di situ.",
+        contoh: [
+          {jp:"にわに　ねこが　にひき　います。", id:"Di halaman ada dua ekor kucing."},
+          {jp:"わたしの　クラスに　がくせいが　にじゅうにん　います。", id:"Di kelas saya ada dua puluh siswa."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 15",
+    judul: "〔KB〕が　いちばん　〔keterangan〕 (Menyatakan superlatif — paling)",
+    sub: "いちばん (paling) dipasang sebelum kata sifat buat nunjukkin sesuatu paling unggul dalam suatu kelompok/cakupan.",
+    items: [
+      {
+        pola: "〔グループ〕で　〔KB〕が　いちばん　〔KS〕です。",
+        romaji: "[grup] de [KB] ga ichiban [KS] desu.",
+        arti: "Di antara [grup], [KB] paling [KS].",
+        catatan: "PENTING: で di sini fungsinya beda LAGI dari で-で sebelumnya (cara/alat di Hari 10, tempat kegiatan di Hari 7, event di poin 4 hari ini) — sekarang で menandai CAKUPAN/RUANG LINGKUP perbandingan ('di antara/dalam grup ini'). Jadi で punya banyak fungsi tergantung konteks kalimatnya.",
+        contoh: [
+          {jp:"かぞくで　ちちが　いちばん　せが　たかいです。", id:"Di antara keluarga, ayah yang paling tinggi."},
+          {jp:"この　レストランで　これが　いちばん　おいしいです。", id:"Di restoran ini, ini yang paling enak."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 15",
+    judul: "〔KB1〕と　〔KB2〕、どちら〜／〜のほうが〜／どちらも〜 (Membandingkan dua hal)",
+    sub: "Tiga pola buat bandingin dua pilihan: nanya mana yang lebih X, jawab salah satu lebih X, atau jawab dua-duanya sama-sama X.",
+    items: [
+      {
+        pola: "〔KB1〕と　〔KB2〕、どちらが　〔KS〕ですか。",
+        romaji: "[KB1] to [KB2], dochira ga [KS] desu ka?",
+        arti: "[KB1] dan [KB2], mana yang lebih [KS]?",
+        catatan: "どちら khusus buat MEMBANDINGKAN DUA hal (beda dari どれ/どの yang buat milih dari banyak pilihan).",
+        contoh: [
+          {jp:"にほんと　インドネシア、どちらが　あついですか。", id:"Jepang dan Indonesia, mana yang lebih panas?"}
+        ]
+      },
+      {
+        pola: "〔KB〕の　ほうが　〔KS〕です。",
+        romaji: "[KB] no hou ga [KS] desu.",
+        arti: "[KB] yang lebih [KS].",
+        catatan: "ほう (arah/pihak) + が menunjukkin PIHAK yang menang dalam perbandingan. Dipasang setelah KB yang menang, bukan yang kalah.",
+        contoh: [
+          {jp:"インドネシアの　ほうが　あついです。", id:"Indonesia yang lebih panas."}
+        ]
+      },
+      {
+        pola: "どちらも　〔KS〕です。",
+        romaji: "Dochira mo [KS] desu.",
+        arti: "Dua-duanya sama-sama [KS].",
+        catatan: "Dipakai kalau dua pilihan itu levelnya setara/gak ada yang lebih unggul — も di sini fungsinya sama kayak Hari 2 (juga/pun), cuma nempel ke どちら.",
+        contoh: [
+          {jp:"にほんと　インドネシア、どちらも　あついです。", id:"Jepang dan Indonesia, dua-duanya sama-sama panas."}
+        ]
+      }
+    ]
+  },
+  // ═══════════════════════════════════════════════
+  // MATERI TAMBAHAN
+  // ═══════════════════════════════════════════════
   {
     tema: "Materi Tambahan",
     judul: "なんかいですか？ (Menanyakan lantai)",
