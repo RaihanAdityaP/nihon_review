@@ -1076,17 +1076,26 @@ async function callAI(messages, modelOverride) {
     headers['HTTP-Referer'] = location.origin;
     headers['X-Title'] = 'Nihongo Review';
   }
+  const body = { model, messages, temperature: 0.7 };
+  // Model reasoning (mis. qwen/qwen3.6-27b di Groq) nulis proses mikir dalam <think>...</think>
+  // sebelum jawaban asli. Karena kita butuh output JSON bersih, matikan mode thinking-nya
+  // kalau providernya Groq (parameter ini di-ignore aman sama model lain yang gak kenal opsi ini).
+  if (AI_PROVIDER === 'groq') body.reasoning_effort = 'none';
   const res = await fetch(ep.url, {
     method: 'POST',
     headers,
-    body: JSON.stringify({ model, messages, temperature: 0.7 })
+    body: JSON.stringify(body)
   });
   if (!res.ok) {
     const errText = await res.text().catch(() => '');
     throw new Error('API error ' + res.status + ': ' + errText.slice(0, 200));
   }
   const data = await res.json();
-  return data.choices?.[0]?.message?.content || '';
+  let content = data.choices?.[0]?.message?.content || '';
+  // Jaga-jaga: kalau model tetap nyelipin blok <think>...</think> (walau udah diminta 'none'),
+  // buang blok itu biar sisanya bisa di-JSON.parse dengan aman.
+  content = content.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+  return content;
 }
 
 function showAIError(msg) {
