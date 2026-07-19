@@ -2202,6 +2202,98 @@ bab6: {
     {k:"〜ごろ",r:"~goro",a:"Sekitar jam~"},
     {k:"わかります",r:"wakarimasu",a:"Paham, mengerti"}
   ]}
+},
+
+bab7: {
+  "Arah & Posisi (di Sekitar)": { rows: [
+    {k:"こうばん",r:"kouban",a:"Pos polisi",kj:"交番"},
+    {k:"ばすてい",r:"basutei",a:"Halte bus",kj:"バス停"},
+    {k:"となり",r:"tonari",a:"Sebelah",kj:"隣"},
+    {k:"なか",r:"naka",a:"Dalam",kj:"中"},
+    {k:"そと",r:"soto",a:"Luar",kj:"外"},
+    {k:"まえ",r:"mae",a:"Depan",kj:"前"},
+    {k:"うしろ",r:"ushiro",a:"Belakang",kj:"後ろ"},
+    {k:"よこ",r:"yoko",a:"Samping, sebelah (horizontal)",kj:"横"},
+    {k:"うえ",r:"ue",a:"Atas",kj:"上"},
+    {k:"した",r:"shita",a:"Bawah",kj:"下"},
+    {k:"あいだ",r:"aida",a:"Antara",kj:"間"},
+    {k:"ちかく",r:"chikaku",a:"Terdekat, sekitar",kj:"近く"}
+  ]},
+  "Benda & Perabot": { rows: [
+    {k:"き",r:"ki",a:"Pohon, kayu",kj:"木"},
+    {k:"テーブル",r:"teeburu",a:"Meja makan"},
+    {k:"はなや",r:"hanaya",a:"Florist, toko bunga",kj:"花屋"},
+    {k:"じどうはんばいき",r:"jidouhanbaiki",a:"Mesin penjual otomatis",kj:"自動販売機"},
+    {k:"ポスト",r:"posuto",a:"Kotak pos"},
+    {k:"しお",r:"shio",a:"Garam",kj:"塩"},
+    {k:"（お）さら",r:"(o)sara",a:"Piring",kj:"（お）皿"},
+    {k:"れいぞうこ",r:"reizouko",a:"Kulkas",kj:"冷蔵庫"},
+    {k:"コップ",r:"koppu",a:"Cangkir"},
+    {k:"いす",r:"isu",a:"Kursi"},
+    {k:"かみ",r:"kami",a:"Kertas",kj:"紙"},
+    {k:"はさみ",r:"hasami",a:"Gunting"},
+    {k:"て",r:"te",a:"Tangan",kj:"手"},
+    {k:"でんしれんじ",r:"denshi renji",a:"Microwave",kj:"電子レンジ"},
+    {k:"かんじ",r:"kanji",a:"Kanji",kj:"漢字"}
+  ]},
+  "Kata Kerja I: Aktivitas": { rows: [
+    {k:"てつだいます",r:"tetsudaimasu",a:"Membantu",kj:"手伝います"},
+    {k:"あらいます",r:"araimasu",a:"Mencuci",kj:"洗います"},
+    {k:"かきます",r:"kakimasu",a:"Menulis",kj:"書きます"},
+    {k:"いれます",r:"iremasu",a:"Memasukkan",kj:"入れます"},
+    {k:"だします",r:"dashimasu",a:"Mengeluarkan",kj:"出します"},
+    {k:"かします",r:"kashimasu",a:"Meminjamkan",kj:"貸します"},
+    {k:"とります",r:"torimasu",a:"Mengambil",kj:"取ります"},
+    {k:"おきます",r:"okimasu",a:"Meletakkan, menaruh",kj:"置きます"},
+    {k:"つかいます",r:"tsukaimasu",a:"Memakai",kj:"使います"},
+    {k:"もっていきます",r:"motte ikimasu",a:"Membawa pergi",kj:"持って行きます"},
+    {k:"しにます",r:"shinimasu",a:"Mati",kj:"死にます"}
+  ]},
+  "Alat Makan": { rows: [
+    {k:"スプーン",r:"supuun",a:"Sendok"},
+    {k:"ナイフ",r:"naifu",a:"Pisau"},
+    {k:"フォーク",r:"fooku",a:"Garpu"},
+    {k:"はし",r:"hashi",a:"Sumpit"},
+    {k:"きります",r:"kirimasu",a:"Memotong",kj:"切ります"}
+  ]},
+  "Komunikasi & Kata Penunjuk": { rows: [
+    {k:"います",r:"imasu",a:"Ada (benda hidup)"},
+    {k:"もしもし",r:"moshi moshi",a:"Halo (di telepon)"},
+    {k:"ききます",r:"kikimasu",a:"Mendengarkan",kj:"聞きます"},
+    {k:"おしえます",r:"oshiemasu",a:"Memberitahu, mengajarkan",kj:"教えます"},
+    {k:"すみませんが",r:"sumimasen ga",a:"Permisi, mohon maaf"},
+    {k:"どの",r:"dono",a:"~yang mana"},
+    {k:"どれ",r:"dore",a:"Yang mana (pilihan lebih dari 2)"},
+    {k:"はなします",r:"hanashimasu",a:"Berbicara, membicarakan",kj:"話します"}
+  ]},
+  "Bumbu, Minuman & Dapur": { rows: [
+    {k:"しょうゆ",r:"shouyu",a:"Kecap asin",kj:"醤油"},
+    {k:"さとう",r:"satou",a:"Gula",kj:"砂糖"},
+    {k:"ボトル",r:"botoru",a:"Botol"},
+    {k:"（お）ちゃ",r:"(o)cha",a:"Teh Jepang",kj:"（お）茶"},
+    {k:"だいどころ",r:"daidokoro",a:"Dapur",kj:"台所"},
+    {k:"たばこ",r:"tabako",a:"Rokok"}
+  ]},
+  "Kata Kerja II: Musik & Rumah": { rows: [
+    {k:"すいます",r:"suimasu",a:"Menghisap",kj:"吸います"},
+    {k:"うたいます",r:"utaimasu",a:"Menyanyikan",kj:"歌います"},
+    {k:"ひきます",r:"hikimasu",a:"Memainkan (alat musik)",kj:"弾きます"},
+    {k:"でんわをかけます",r:"denwa wo kakemasu",a:"Menelepon",kj:"電話をかけます"},
+    {k:"うた",r:"uta",a:"Lagu",kj:"歌"},
+    {k:"ギター",r:"gitaa",a:"Gitar"},
+    {k:"ソファー",r:"sofaa",a:"Sofa"},
+    {k:"まど",r:"mado",a:"Jendela",kj:"窓"},
+    {k:"あけます",r:"akemasu",a:"Membuka",kj:"開けます"},
+    {k:"しめます",r:"shimemasu",a:"Menutup",kj:"閉めます"},
+    {k:"もちます",r:"mochimasu",a:"Membawa",kj:"持ちます"},
+    {k:"もってきます",r:"motte kimasu",a:"Membawa datang",kj:"持ってきます"}
+  ]},
+  "Lainnya": { rows: [
+    {k:"ビザ",r:"biza",a:"Visa"},
+    {k:"まだ",r:"mada",a:"Masih, belum"},
+    {k:"たくさん",r:"takusan",a:"Banyak"},
+    {k:"すこし",r:"sukoshi",a:"Sedikit",kj:"少し"}
+  ]}
 }
 
 }; // end BUKU
