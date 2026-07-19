@@ -901,8 +901,10 @@ const AI_VISION_MODEL_STORE = 'nihongo_ai_vision_model';
 // Groq misalnya default-nya openai/gpt-oss-120b — model teks-only, akan gagal (error 400)
 // kalau dipaksa terima gambar. Ini daftar model vision-capable yang aman dipakai
 // khusus untuk fitur Menulis (cek tulisan tangan), dipakai kalau user belum isi custom vision model sendiri.
+// CATATAN: Groq deprecate meta-llama/llama-4-scout-17b-16e-instruct per 17 Juni 2026.
+// Diganti ke qwen/qwen3.6-27b (model vision resmi pengganti versi Groq saat ini).
 const AI_VISION_DEFAULTS = {
-  groq:       'meta-llama/llama-4-scout-17b-16e-instruct',
+  groq:       'qwen/qwen3.6-27b',
   openai:     'gpt-4o-mini',
   openrouter: 'openai/gpt-4o-mini'
 };
@@ -1595,7 +1597,7 @@ async function wCheckWithAI() {
     document.getElementById('wAINxtBtn').style.display = 'block';
   } catch (err) {
     const msg = /content must be a string|invalid_request_error|does not support image|image.*not supported/i.test(err.message)
-      ? `Model "${visionModel}" sepertinya tidak mendukung input gambar. Isi kolom "Model vision khusus" di setup dengan model vision lain (mis. meta-llama/llama-4-scout-17b-16e-instruct untuk Groq, atau gpt-4o-mini untuk OpenAI/OpenRouter).`
+      ? `Model "${visionModel}" sepertinya tidak mendukung input gambar. Isi kolom "Model vision khusus" di setup dengan model vision lain (mis. qwen/qwen3.6-27b untuk Groq, atau gpt-4o-mini untuk OpenAI/OpenRouter).`
       : err.message;
     fb.style.display = 'block';
     fb.className = 'qfb ng';
