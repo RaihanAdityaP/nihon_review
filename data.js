@@ -368,6 +368,7 @@ const KT={
 {k:"いちねん",r:"ichinen",a:"satu tahun",kj:"一年",n:"Ichi (satu) + Nen (tahun). Dipakai untuk durasi maupun tingkatan ('kelas satu')."},
 {k:"けんせつ",r:"kensetsu",a:"konstruksi, pembangunan",kj:"建設",n:"Sering dipakai sebagai kata kerja majemuk 'kensetsu suru' = membangun (gedung/infrastruktur)."},
 {k:"こたえ",r:"kotae",a:"jawaban",kj:"答え",n:"'Kotae wa nan desu ka?' = apa jawabannya? Kata kerjanya: kotaemasu (menjawab)."},
+{k:"いみ",r:"imi",a:"arti, makna",kj:"意味",n:"'Kono kotoba no imi wa nan desu ka?' = apa arti kata ini? Kata kerja majemuknya: imi shimasu (berarti)."},
 {k:"むり",r:"muri",a:"tidak mungkin, mustahil",kj:"無理",n:"Bisa juga berarti 'memaksakan diri'. 'Muri desu' = ungkapan umum untuk menolak sesuatu dengan sopan ('gak mungkin/gak bisa')."},
 {k:"あしぶみ",r:"ashibumi",a:"jalan di tempat; (kiasan) stagnan/tidak ada kemajuan",kj:"足踏み",n:"Ashi (kaki) + fumi (menginjak). Secara harfiah gerakan jalan di tempat, tapi sering dipakai kiasan untuk keadaan yang tidak maju-maju."},
 {k:"けいけん",r:"keiken",a:"pengalaman",kj:"経験",n:"'Keiken ga arimasu' = punya pengalaman. Sering dipakai dalam konteks kerja/belajar."},
@@ -4679,6 +4680,71 @@ const BUNPOU = [
         catatan: "Dipakai kalau dua pilihan itu levelnya setara/gak ada yang lebih unggul — も di sini fungsinya sama kayak Hari 2 (juga/pun), cuma nempel ke どちら.",
         contoh: [
           {jp:"にほんと　インドネシア、どちらも　あついです。", id:"Jepang dan Indonesia, dua-duanya sama-sama panas."}
+        ]
+      }
+    ]
+  },
+  // ═══════════════════════════════════════════════
+  // HARI 16
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 16",
+    judul: "〔KB1〕は　〔KB2〕より　〔KS〕 (Membandingkan dua hal secara langsung)",
+    sub: "より menandai 'titik pembanding' (daripada/dibanding). Beda dari Hari 15 (どちらが〜／〜のほうが〜) yang biasanya diawali PERTANYAAN dulu (nanya mana yang lebih X), pola より ini langsung PERNYATAAN tanpa perlu nanya duluan — dipakai kalau kamu udah pasti mau bandingin dua hal dari awal.",
+    items: [
+      {
+        pola: "〔KB1〕は　〔KB2〕より　〔KS〕です。",
+        romaji: "[KB1] wa [KB2] yori [KS] desu.",
+        arti: "[KB1] lebih [KS] dibanding [KB2].",
+        catatan: "Urutannya penting: KB1 (yang dibandingin/dinilai) + は, KB2 (patokan pembanding) + より, baru kata sifatnya. Fungsinya sama kayak Aのほうが (Hari 15), cuma より lebih langsung nyebutin dua-duanya sekaligus dalam satu kalimat tanpa perlu didahului pertanyaan どちらが.",
+        contoh: [
+          {jp:"にほんは　インドネシアより　さむいです。", id:"Jepang lebih dingin dibanding Indonesia."},
+          {jp:"でんしゃは　バスより　はやいです。", id:"Kereta lebih cepat dibanding bus."},
+          {jp:"この　まちは　あの　まちより　にぎやかです。", id:"Kota ini lebih ramai dibanding kota itu."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 16",
+    judul: "もう　〔動詞ました〕 (Menyatakan aktivitas yang sudah selesai)",
+    sub: "もう (Hari 15 — vocab 'sudah') dipasangin sama ~ました buat NEKANIN kalau sesuatu udah SELESAI/BERES dikerjakan — beda dari ~ました polos yang cuma nyeritain sesuatu udah kejadian di masa lalu (netral, gak nekanin status selesai/belum).",
+    items: [
+      {
+        pola: "もう　〔動詞ました〕。",
+        romaji: "Mou [V-mashita].",
+        arti: "Sudah [V]. (dengan penekanan 'sudah beres/selesai')",
+        catatan: "Bedanya sama ~ました biasa: 'きのう　ばんごはんを　たべました' (Hari 12) cuma netral nyeritain 'kemarin saya makan malam' — gak ada nuansa 'udah kelar apa belom'. Tapi 'もう　たべました' nekanin STATUS-nya SEKARANG: 'saya SUDAH makan' (jawaban buat pertanyaan apa udah makan apa belum). Kalau ditanya balik pake か (もう〜ましたか), jawaban negatifnya BUKAN ~ませんでした, tapi 'まだです' (belum) — pola ini agak beda dari negasi biasa.",
+        contoh: [
+          {jp:"A：しゅくだいを　もう　しましたか。\nB：はい、もう　しました。／いいえ、まだです。", id:"A: PR-nya udah dikerjain belum? — B: Iya, udah. / Belum nih."},
+          {jp:"かれは　もう　かえりました。", id:"Dia udah pulang."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 16",
+    judul: "partikel よ ＋ 〜はどうですか (Menegaskan info baru & mengajukan usulan)",
+    sub: "Dua hal berbeda yang sering dipakai bareng: よ buat kasih tau info yang lawan bicara BELUM tau, dan どうですか versi 'ngusulin pilihan' — beda dari どうですか di Hari 11 (yang buat nanya kesan/pendapat soal sesuatu yang UDAH ada/diketahui).",
+    items: [
+      {
+        pola: "〔kalimat〕＋よ。",
+        romaji: "[kalimat] + yo.",
+        arti: "[kalimat], lho! / [kalimat], tau gak!",
+        catatan: "よ ditempel di akhir kalimat buat NEKANIN kamu ngasih tau sesuatu yang lawan bicara belum tau — beda dari ね (Partikel Dasar) yang dipake buat NGONFIRMASI sesuatu yang KEDUANYA udah sama-sama tau/rasain (kayak minta persetujuan 'iya kan?'). よ = 'aku kasih tau kamu', ね = 'kita samaan pendapat kan?'.",
+        contoh: [
+          {jp:"あの　レストランは　とても　おいしいですよ。", id:"Restoran itu enak banget lho! (ngasih tau info baru)"},
+          {jp:"あめですよ。かさを　もって行きましょう。", id:"Hujan lho! Ayo bawa payung."}
+        ]
+      },
+      {
+        pola: "〔KB〕は　どうですか。（mengajukan usulan/pilihan）",
+        romaji: "[KB] wa dou desu ka?",
+        arti: "Bagaimana kalau [KB]? / Gimana kalau pilih [KB]?",
+        catatan: "PENTING beda sama Hari 11: di Hari 11, どうですか nanya KESAN/PENDAPAT soal sesuatu yang UDAH ada di depan mata (misal nanya rasa makanan yang lagi dimakan). Di sini, どうですか dipake buat NGUSULIN suatu PILIHAN/OPSI yang BELUM terjadi — mirip fungsinya kayak ませんか (Hari 15) buat ngajak, tapi どうですか lebih fleksibel karena bisa langsung nempel ke KATA BENDA aja (gak wajib pake kata kerja).",
+        contoh: [
+          {jp:"A：しゅうまつ、どこかへ　いきませんか。\nB：こうえんは　どうですか。", id:"A: Akhir minggu ini, maukah pergi ke suatu tempat? — B: Gimana kalau taman? (ngusulin pilihan)"},
+          {jp:"のみものは　おちゃは　どうですか。", id:"Untuk minumannya, gimana kalau teh? (ngusulin pilihan)"}
         ]
       }
     ]
