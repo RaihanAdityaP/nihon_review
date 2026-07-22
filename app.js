@@ -313,6 +313,7 @@ const QCATS_STATIC = [
   { id: 'buku-bab5',   label: 'Buku — Bab 5',          t: 'buku' },
   { id: 'buku-bab6',   label: 'Buku — Bab 6',          t: 'buku' },
   { id: 'buku-bab7',   label: 'Buku — Bab 7',          t: 'buku' },
+  { id: 'buku-bab8',   label: 'Buku — Bab 8',          t: 'buku' },
 ];
 
 // Kategori Bunpou TIDAK di-hardcode di sini — otomatis di-generate dari
@@ -486,7 +487,7 @@ function kerjaItems(cid) {
 }
 
 function bukuItems(cid) {
-  const babKey = cid === 'buku-bab1' ? 'bab1' : cid === 'buku-bab2' ? 'bab2' : cid === 'buku-bab3' ? 'bab3' : cid === 'buku-bab4' ? 'bab4' : cid === 'buku-bab5' ? 'bab5' : cid === 'buku-bab6' ? 'bab6' : cid === 'buku-bab7' ? 'bab7' : null;
+  const babKey = cid === 'buku-bab1' ? 'bab1' : cid === 'buku-bab2' ? 'bab2' : cid === 'buku-bab3' ? 'bab3' : cid === 'buku-bab4' ? 'bab4' : cid === 'buku-bab5' ? 'bab5' : cid === 'buku-bab6' ? 'bab6' : cid === 'buku-bab7' ? 'bab7' : cid === 'buku-bab8' ? 'bab8' : null;
   if (!babKey || !BUKU[babKey]) return [];
   let out = [];
   Object.values(BUKU[babKey]).forEach(group => {
@@ -1302,7 +1303,7 @@ function wKanjiPool() {
   Object.values(COUNTER).forEach(g => scanRows(g.rows));
   Object.values(KATA_SIFAT).forEach(g => scanRows(g.rows));
   Object.values(KATA_KERJA).forEach(g => scanRows(g.rows));
-  ['bab1', 'bab2', 'bab3', 'bab4', 'bab5', 'bab6', 'bab7'].forEach(b => { if (BUKU[b]) Object.values(BUKU[b]).forEach(g => scanRows(g.rows)); });
+  ['bab1', 'bab2', 'bab3', 'bab4', 'bab5', 'bab6', 'bab7', 'bab8'].forEach(b => { if (BUKU[b]) Object.values(BUKU[b]).forEach(g => scanRows(g.rows)); });
   const seen = new Set();
   return out.filter(x => { if (seen.has(x.char)) return false; seen.add(x.char); return true; });
 }
@@ -1659,6 +1660,7 @@ renderBukuBab('bab4', 'bukuBab4');
 renderBukuBab('bab5', 'bukuBab5');
 renderBukuBab('bab6', 'bukuBab6');
 renderBukuBab('bab7', 'bukuBab7');
+renderBukuBab('bab8', 'bukuBab8');
 renderBunpou();
 initQSetup();
 initAISetup();
