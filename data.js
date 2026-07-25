@@ -82,7 +82,10 @@ const KT={
 {k:"どうぶつ",r:"doubutsu",a:"hewan",kj:"動物",n:"Kata umum/payung buat semua hewan. 'Doubutsuen' (動物園) = kebun binatang."},
 {k:"ねずみ",r:"nezumi",a:"tikus",kj:"鼠",n:"Simbol shio pertama dalam zodiak Jepang (nezumi-doshi). Juga jadi kata dasar 'mausu' (mouse komputer) di beberapa konteks lama."},
 {k:"ペット",r:"petto",a:"hewan peliharaan",n:"Serapan 'pet'."},
-{k:"うさぎ",r:"usagi",a:"kelinci",kj:"兎",n:"Konon di bulan Jepang ada kelinci yang lagi numbuk mochi (bukan 'man in the moon' kayak versi barat)."}
+{k:"うさぎ",r:"usagi",a:"kelinci",kj:"兎",n:"Konon di bulan Jepang ada kelinci yang lagi numbuk mochi (bukan 'man in the moon' kayak versi barat)."},
+{k:"ゴキブリ",r:"gokiburi",a:"kecoa",n:"Kata asli Jepang meski ditulis katakana. Salah satu serangga paling dibenci di Jepang, sering muncul di iklan obat serangga."},
+{k:"とり",r:"tori",a:"burung",kj:"鳥",n:"Kata umum/payung untuk semua jenis burung. Beda dari にわとり (ayam) yang lebih spesifik — にわとり secara harfiah artinya 'burung halaman rumah'."},
+{k:"さめ",r:"same",a:"hiu",kj:"鮫",n:"Hiu jarang jadi topik sehari-hari di Jepang, tapi sering muncul di anime/manga sebagai karakter (mis. maskot Fuji TV, Same-chan)."}
 ]},
 "Orang & Keluarga":{rows:[
 {k:"わたし",r:"watashi",a:"saya",kj:"私",n:"Kata ganti orang pertama paling netral/formal."},
@@ -135,13 +138,16 @@ const KT={
 {k:"こうこうせい",r:"koukousei",a:"pelajar SMA",kj:"高校生",n:"Koukou (SMA) + Sei (pelajar/murid)."},
 {k:"だいがくせい",r:"daigakusei",a:"mahasiswa",kj:"大学生",n:"Daigaku (universitas) + Sei (pelajar/murid)."},
 {k:"こいびと",r:"koibito",a:"pacar, kekasih",kj:"恋人",n:"Koi (cinta romantis) + Hito (orang). Lebih puitis/formal dibanding 'kareshi/kanojo' (pacar laki-laki/perempuan)."},
+{k:"どくしん",r:"dokushin",a:"lajang, belum menikah",kj:"独身",n:"Doku (sendiri) + Shin (diri/badan). Netral, biasa dipakai buat status pernikahan di formulir atau obrolan santai."},
 {k:"ルームメイト",r:"ruumumeito",a:"teman sekamar",n:"Serapan 'roommate'."}
 ]},
 "Tempat":{rows:[
 {k:"いえ",r:"ie",a:"rumah",kj:"家",n:"Merujuk pada bangunan fisik rumah secara umum."},
 {k:"うち",r:"uchi",a:"rumah (sendiri)",kj:"家",n:"Lebih personal dari 'ie'. Juga bisa berarti 'dalam kelompok'."},
+{k:"げしゅく",r:"geshuku",a:"kos, indekos",kj:"下宿",n:"Ge (bawah) + Shuku (menginap). Tempat tinggal sewa jangka panjang, biasa buat pelajar/mahasiswa yang tinggal jauh dari rumah."},
 {k:"えき",r:"eki",a:"stasiun",kj:"駅",n:"Stasiun kereta sangat penting; menjadi pusat komunitas kota."},
 {k:"こうえん",r:"kouen",a:"taman",kj:"公園",n:"Tempat hanami (melihat bunga sakura) di musim semi."},
+{k:"どうぶつえん",r:"doubutsuen",a:"kebun binatang",kj:"動物園",n:"Doubutsu (hewan) + En (taman/kebun). Sudah disebut di catatan kata 'zou' (gajah) dan 'doubutsu' (hewan) di kategori Hewan."},
 {k:"プール",r:"puuru",a:"kolam renang",n:"Serapan 'pool'. Sekolah di Jepang sering punya プール sendiri buat pelajaran olahraga renang di musim panas."},
 {k:"がっこう",r:"gakkou",a:"sekolah",kj:"学校",n:"Gabungan 学 (belajar) + 校 (lembaga)."},
 {k:"だいがく",r:"daigaku",a:"universitas",kj:"大学",n:"Gabungan 大 (besar) + 学 (belajar)."},
@@ -151,6 +157,8 @@ const KT={
 {k:"うみ",r:"umi",a:"laut",kj:"海",n:"Jepang negara kepulauan; laut sangat penting dalam budayanya."},
 {k:"かわ",r:"kawa",a:"sungai",kj:"川",n:"Juga dibaca 'gawa' saat digabung (contoh: Sumida-gawa)."},
 {k:"こうこう",r:"koukou",a:"SMA",kj:"高校",n:"Kependekan dari こうとうがっこう. Wajib belajar di Jepang sampai SMP, SMA tidak wajib tapi 98% melanjutkan."},
+{k:"こうりつこうこう",r:"kouritsu koukou",a:"SMA negeri",kj:"公立高校",n:"Kouritsu (negeri/publik) + koukou (SMA). Lawan katanya しりつ (swasta)."},
+{k:"しりつちゅうがっこう",r:"shiritsu chuugakkou",a:"SMP swasta",kj:"私立中学校",n:"Shiritsu (swasta) + chuugakkou (SMP). しりつ dan しりつ (私立/市立) sama bunyinya, jadi kadang しりつ (swasta) diucapkan 'watakushi ritsu' biar gak ketuker sama 市立 (negeri kota)."},
 {k:"にほんごがっこう",r:"nihongo gakkou",a:"sekolah bahasa Jepang",kj:"日本語学校",n:"Sekolah khusus bahasa Jepang untuk orang asing."},
 {k:"としょかん",r:"toshokan",a:"perpustakaan",kj:"図書館",n:"Tosho (buku) + Kan (gedung). Perpustakaan umum di Jepang biasanya gratis dan buka sampai malam."},
 {k:"オフィス／じむしょ",r:"ofisu / jimusho",a:"kantor",n:"オフィス = serapan 'office' (santai). じむしょ (事務所) = istilah asli Jepang, lebih formal."},
@@ -199,6 +207,7 @@ const KT={
 {k:"サッカー",r:"sakkaa",a:"sepak bola",n:"Serapan 'soccer'. Tim nasional Jepang dijuluki 'Samurai Blue'."},
 {k:"テニス",r:"tenisu",a:"tenis",n:"Serapan 'tennis'. Salah satu olahraga paling populer di Jepang."},
 {k:"すいえい",r:"suiei",a:"renang",kj:"水泳",n:"Sui (air) + Ei (berenang). Pelajaran wajib di sekolah Jepang."},
+{k:"うんどう",r:"undou",a:"olahraga, gerak badan",kj:"運動",n:"Kata umum/payung utk semua jenis olahraga & gerak badan, beda dari cabang olahraga spesifik (サッカー、テニス, dll). Sering digabung します: 'undou shimasu' = berolahraga."},
 {k:"どくしょ",r:"dokusho",a:"membaca buku",kj:"読書",n:"Doku (membaca) + Sho (tulisan/buku). Budaya membaca sangat tinggi di Jepang."},
 {k:"りょうり",r:"ryouri",a:"masak / masakan",kj:"料理",n:"'Ryouri ga suki desu' = Saya suka memasak."},
 {k:"たべあるき",r:"tabearuki",a:"wisata kuliner jalan kaki",kj:"食べ歩き",n:"Tabe (makan) + Aruki (berjalan). Berkeliling sambil mencicipi jajanan — populer di kawasan wisata Jepang."},
@@ -219,6 +228,7 @@ const KT={
 "Kendaraan":{rows:[
 {k:"でんしゃ",r:"densha",a:"kereta",kj:"電車",n:"Gabungan 電 (listrik) + 車 (kendaraan). Kereta listrik, bukan uap."},
 {k:"ひこうき",r:"hikouki",a:"pesawat",kj:"飛行機",n:"Gabungan 飛 (terbang) + 行 (pergi) + 機 (mesin)."},
+{k:"ひこう",r:"hikou",a:"penerbangan",kj:"飛行",n:"Versi abstrak dari ひこうき — merujuk pada AKTIVITAS terbang/penerbangannya, bukan benda pesawatnya. 'Hikou jikan' = waktu tempuh penerbangan."},
 {k:"くるま",r:"kuruma",a:"mobil",kj:"車",n:"Kata yang sama untuk 'kendaraan beroda' secara umum."},
 {k:"じどうしゃ",r:"jidousha",a:"mobil penumpang",kj:"自動車",n:"Istilah formal/resmi buat mobil (sering dipakai di konteks bisnis, dokumen, statistik). くるま lebih santai/sehari-hari, artinya sama."},
 {k:"じてんしゃ",r:"jitensha",a:"sepeda",kj:"自転車",n:"Gabungan 自 (sendiri) + 転 (berputar) + 車 (roda)."},
@@ -413,11 +423,13 @@ const KT={
 {k:"てんきがいい",r:"tenki ga ii",a:"cuacanya bagus",kj:"天気がいい",n:"Ungkapan tetap untuk menyatakan cuaca cerah/bagus secara umum."},
 {k:"てんきがわるい",r:"tenki ga warui",a:"cuacanya buruk",kj:"天気が悪い",n:"Lawan kata dari てんきがいい. Dipakai saat cuaca mendung, hujan, dsb."},
 {k:"くもり",r:"kumori",a:"mendung, berawan",kj:"曇り",n:"Kata benda buat kondisi cuaca mendung. 'Kyou wa kumori desu' = hari ini mendung."},
+{k:"はれ",r:"hare",a:"cerah",kj:"晴れ",n:"Kata benda buat kondisi cuaca cerah, pasangan dari くもり (mendung) dan あめ (hujan). 'Ashita wa hare desu' = besok cerah."},
 {k:"いちねんじゅう",r:"ichinenjuu",a:"sepanjang tahun",kj:"一年中",n:"Ichinen (satu tahun) + juu (sepanjang/seluruh). Dipakai untuk cuaca/kondisi yang tidak berubah tiap musim, mis. daerah tropis."}
 ]},
 "Konsep Umum":{rows:[
 {k:"やすみ",r:"yasumi",a:"libur / istirahat",kj:"休み",n:"'O-yasumi nasai' = selamat malam (harfiah: istirahatlah)."},
 {k:"けいかく",r:"keikaku",a:"rencana",kj:"計画",n:"Gabungan 計 (mengukur) + 画 (rencana)."},
+{k:"かいぎ",r:"kaigi",a:"rapat",kj:"会議",n:"'Kaigi ga arimasu' = ada rapat. 'Kaigishitsu' (会議室) = ruang rapat."},
 {k:"せいかつ",r:"seikatsu",a:"kehidupan",kj:"生活",n:"Gabungan 生 (hidup) + 活 (aktif). Kehidupan sehari-hari."},
 {k:"せかい",r:"sekai",a:"dunia",kj:"世界",n:"Sering muncul dalam judul anime!"},
 {k:"ちしき",r:"chishiki",a:"pengetahuan",kj:"知識",n:"Gabungan 知 (mengetahui) + 識 (mengenali)."},
@@ -427,6 +439,7 @@ const KT={
 {k:"テスト",r:"tesuto",a:"tes, ulangan",n:"Serapan 'test'. Kata umum untuk ujian atau kuis di sekolah."},
 {k:"しけん",r:"shiken",a:"ujian (formal)",kj:"試験",n:"Lebih formal dari 'tesuto'. Dipakai untuk ujian besar/resmi, misalnya ujian masuk sekolah (nyuugaku shiken) atau ujian sertifikasi (JLPT = nouryoku shiken)."},
 {k:"じかん",r:"jikan",a:"jam, waktu",kj:"時間",n:"Ji (waktu) + Kan (interval). Berbeda dari 〜じ yang menunjuk jam spesifik — 'jikan' merujuk pada durasi/rentang waktu."},
+{k:"とき",r:"toki",a:"waktu, ketika",kj:"時",n:"Beda dari じかん (durasi/rentang waktu) — とき dipakai buat nunjuk SAAT/MOMEN tertentu, sering dipakai dalam pola 〜とき〜 ('saat/ketika ~'), mis. 'hima na toki' = saat senggang."},
 {k:"スケジュール",r:"sukejuuru",a:"jadwal",n:"Serapan 'schedule'. Dipakai baik untuk jadwal sekolah, kerja, maupun acara pribadi."},
 {k:"パーティー",r:"paatii",a:"pesta",n:"Serapan 'party'. Dipakai untuk berbagai jenis perayaan, dari ulang tahun sampai acara kantor."},
 {k:"りゅうがくせい",r:"ryuugakusei",a:"pelajar asing",kj:"留学生",n:"Ryuu (tinggal) + Gaku (belajar) + Sei (orang). Merujuk pada pelajar yang belajar di luar negeri."},
@@ -453,7 +466,9 @@ const KT={
 {k:"あそびます",r:"asobimasu",a:"bermain",kj:"遊びます",n:"Bentuk masu dari 'asobu'. Dipakai luas: main game, main bareng teman, jalan-jalan santai."},
 {k:"わかります",r:"wakarimasu",a:"paham, mengerti",n:"Bentuk masu dari 'wakaru'. 'Wakarimashita' = mengerti (sudah paham)."},
 {k:"こみます",r:"komimasu",a:"menjadi padat, ramai, macet (tempat/kendaraan)",kj:"込みます",n:"Sering dipakai bentuk てform+います: 'konde imasu' = sedang ramai/penuh. Bisa buat tempat (toko, jalan) maupun kendaraan umum."},
-{k:"こころ",r:"kokoro",a:"hati, batin, jiwa",kj:"心",n:"Beda dari 'karada' (tubuh fisik) — 'kokoro' merujuk sisi emosional/batin seseorang."}
+{k:"こころ",r:"kokoro",a:"hati, batin, jiwa",kj:"心",n:"Beda dari 'karada' (tubuh fisik) — 'kokoro' merujuk sisi emosional/batin seseorang."},
+{k:"もの",r:"mono",a:"barang",kj:"物",n:"Kata umum/payung untuk 'barang' atau 'benda' apa pun, lebih abstrak dibanding kata benda spesifik seperti かばん, ほん, dll."},
+{k:"しゅくだい",r:"shukudai",a:"PR, pekerjaan rumah",kj:"宿題",n:"Shuku (menginap/tinggal) + Dai (soal/topik). Sudah muncul di beberapa contoh kalimat Bunpou (Hari 16, 18) — sekarang jadi kosakata tersendiri."}
 ]},
 "Kotoba N5":{rows:[
 {k:"あめ",r:"ame",a:"hujan / permen",n:"Kanji: 雨 (hujan) / 飴 (permen). Beda kanji, beda makna! 'Ame ga futte iru' = sedang hujan."},
@@ -715,6 +730,8 @@ const KT={
 {k:"かお",r:"kao",a:"wajah",kj:"顔",n:"Kanji ini menggambarkan seluruh bagian depan kepala, dari dahi sampai dagu."},
 {k:"あたま",r:"atama",a:"kepala",kj:"頭",n:"Juga dipakai secara kiasan: 'atama ga ii' = pintar (harfiah: kepalanya bagus)."},
 {k:"かみ / かみのけ",r:"kami / kami no ke",a:"rambut",kj:"髪",n:"Homofon dengan 'kami' = kertas (紙) dan dewa (神)!"},
+{k:"ちぢれげ",r:"chijirege",a:"rambut keriting",kj:"縮れ毛",n:"Chijire (mengerut/keriting) + ge (rambut). Rambut yang bentuknya keriting/ikal."},
+{k:"くせげ",r:"kusege",a:"rambut kribo, rambut bergelombang alami",kj:"癖毛",n:"Kuse (kebiasaan/sifat khas) + ge (rambut). Beda dari ちぢれげ — くせげ lebih ke tekstur rambut yang gak lurus/bandel secara alami (bisa bergelombang ringan sampai kribo), bukan keriting rapi."},
 {k:"め",r:"me",a:"mata",kj:"目",n:"Salah satu kanji paling sederhana dalam bahasa Jepang, menyerupai bentuk mata itu sendiri."},
 {k:"はな",r:"hana (hidung)",a:"hidung",kj:"鼻",n:"Homofon dengan はな (花) = bunga!"},
 {k:"みみ",r:"mimi",a:"telinga",kj:"耳",n:"Bentuk kanji ini secara visual menyerupai telinga dilihat dari samping."},
@@ -862,10 +879,13 @@ const KT={
 {k:"かしゅ",r:"kashu",a:"penyanyi",kj:"歌手",n:"Ka (lagu) + Shu (orang yang melakukan). Industri J-Pop sangat besar."},
 {k:"べんごし",r:"bengoshi",a:"pengacara",kj:"弁護士",n:"Ujian pengacara di Jepang sangat sulit — tingkat kelulusannya sangat rendah."},
 {k:"うんてんし",r:"untenshi",a:"pengemudi / sopir",kj:"運転手",n:"Unten (mengemudi) + Shi/Shu (orang). 'Takushii no untenshi' = sopir taksi."},
+{k:"はいたついん",r:"haitatsuin",a:"kurir",kj:"配達員",n:"Haitatsu (mengantar) + In (anggota). Kurir paket/makanan, mis. 'takuhaibin no haitatsuin' = kurir paket."},
 {k:"かんごふ",r:"kangofu",a:"perawat (wanita, istilah lama)",kj:"看護婦",n:"Kini digantikan 'kangoshi' yang netral gender. Masih dipakai dalam percakapan informal."},
 {k:"〜さん",r:"~san",a:"Sdr. / Sdri. / Pak / Bu (gelar sopan)",kj:"〜さん",n:"Ditambahkan setelah nama seseorang sebagai penghormatan, atau setelah profesi (てんいんさん, isha-san dll. dalam percakapan santai). Tidak boleh dipakai untuk diri sendiri!"}
 ]},
 "Negara & Bangsa":{rows:[
+{k:"はた",r:"hata",a:"bendera",kj:"旗",n:"Kata umum untuk bendera apa pun (bendera negara, bendera acara, dll)."},
+{k:"こっき",r:"kokki",a:"bendera negara",kj:"国旗",n:"Koku (negara) + Ki (bendera) — versi spesifik dari はた, khusus bendera resmi suatu negara."},
 {k:"にほん",r:"nihon",a:"Jepang",kj:"日本",n:"Juga dibaca 'nippon' (lebih formal/nasionalis). Harfiah: 'asal matahari' atau 'negeri matahari terbit'."},
 {k:"アメリカ",r:"amerika",a:"Amerika Serikat",n:"Dari 'America'. Nama resmi: アメリカがっしゅうこく (Amerika Gasshukoku)."},
 {k:"イタリア",r:"itaria",a:"Italia",n:"Serapan 'Italia'. Dikenal di Jepang terutama karena mode dan masakan."},
@@ -896,6 +916,7 @@ const KT={
 {k:"まっすぐ",r:"massugu",a:"lurus",kj:"真っ直ぐ",n:"'Massugu itte kudasai' = tolong jalan lurus."},
 {k:"まえ",r:"mae",a:"depan / sebelum",kj:"前",n:"Selain arah 'depan', juga dipakai untuk 'sebelum' dalam konteks waktu: 'shokuji no mae' = sebelum makan."},
 {k:"うしろ",r:"ushiro",a:"belakang",kj:"後ろ",n:"Arah belakang secara fisik. Untuk 'setelah' dalam waktu, dipakai kata 'ato' (後), bukan 'ushiro'."},
+{k:"そば",r:"soba",a:"dekat, di samping",kj:"側",n:"'Ie no soba ni' = di dekat rumah. Mirip 'chikaku' (dekat) tapi そば lebih ke 'di samping/sebelah', jaraknya lebih dekat lagi."},
 {k:"うえ",r:"ue",a:"atas / di atas",kj:"上",n:"Selain arah atas, dipakai juga dalam kata majemuk seperti 'jouzu' (上手) = terampil, harfiah 'tangan atas'."},
 {k:"した",r:"shita",a:"bawah / di bawah",kj:"下",n:"Selain arah bawah, dipakai juga dalam kata majemuk seperti 'heta' (下手) = tidak terampil."},
 {k:"なか",r:"naka",a:"dalam / di dalam",kj:"中",n:"Selain 'dalam', bisa berarti 'tengah' atau 'selama' — misalnya 'ichinichi juu' = sepanjang hari."},
@@ -1173,6 +1194,7 @@ const KATA_SIFAT = {
 {k:"ひつよう",r:"hitsuyou",a:"keperluan, penting",kj:"必要"},
 {k:"しょうじき",r:"shoujiki",a:"jujur",kj:"正直"},
 {k:"じょうず",r:"jouzu",a:"pintar, pandai, mahir",kj:"上手"},
+{k:"とくい",r:"tokui",a:"mahir, jago (dalam hal yang disukai)",kj:"得意",n:"Sinonim じょうず, tapi とくい lebih personal — nunjukin hal yang MEMANG kamu jago & senang lakuin, sedangkan じょうず lebih netral/objektif (bisa dipakai buat nilai orang lain juga tanpa nuansa suka/gak suka)."},
 {k:"へた",r:"heta",a:"tidak mahir, tidak pandai",kj:"下手"},
 {k:"たいせつ",r:"taisetsu",a:"penting",kj:"大切"},
 {k:"ぶれい",r:"burei",a:"tidak sopan",kj:"無礼"},
@@ -1191,6 +1213,7 @@ const KATA_SIFAT = {
 {k:"べんり",r:"benri",a:"praktis",kj:"便利"},
 {k:"ふべん",r:"fuben",a:"tidak praktis",kj:"不便"},
 {k:"たいくつ",r:"taikutsu",a:"membosankan",kj:"退屈"},
+{k:"まあまあ",r:"maa maa",a:"biasa aja, lumayan, so-so",n:"Dipakai buat jawaban netral yang gak terlalu bagus/gak terlalu jelek. 'Genki desu ka?' - 'Maa maa desu' = 'Gimana kabarnya?' - 'Biasa aja.'"},
 {k:"しずか",r:"shizuka",a:"sunyi / sepi / tenang",kj:"静か",n:"Na-adjective — kalau di depan kata benda jadi 'shizuka na machi', tapi kalau jadi predikat cukup 'shizuka desu' (な hilang)."},
 {k:"ふあん",r:"fuan",a:"cemas, gelisah, bimbang",kj:"不安"},
 {k:"ぞんざい",r:"zonzai",a:"Kasar, kurang ajar"},
@@ -1228,6 +1251,7 @@ const KATA_KERJA = {
 {k:"うります",r:"urimasu",a:"menjual",kj:"売ります"},
 {k:"えらびます",r:"erabimasu",a:"memilih",kj:"選びます",n:"Dari 'erabu'. 'Hitotsu erande kudasai' = tolong pilih satu."},
 {k:"おきます",r:"okimasu",a:"meletakkan",kj:"置きます"},
+{k:"おこります",r:"okorimasu",a:"marah",kj:"怒ります",n:"Dari 'okoru'. 'Sensei ga okorimashita' = gurunya marah."},
 {k:"おくります",r:"okurimasu",a:"mengirim, mengantar",kj:"送ります"},
 {k:"おします",r:"oshimasu",a:"menekan, mendorong",kj:"押します"},
 {k:"おもいます",r:"omoimasu",a:"mengira, merasa",kj:"思います"},
@@ -1235,12 +1259,14 @@ const KATA_KERJA = {
 {k:"およぎます",r:"oyogimasu",a:"berenang",kj:"泳ぎます",n:"Dari 'oyogu'. Kata kerja baris G."},
 {k:"おわります",r:"owarimasu",a:"habis, selesai",kj:"終わります"},
 {k:"かいます",r:"kaimasu",a:"membeli",kj:"買います"},
+{k:"かいます",r:"kaimasu",a:"memelihara (hewan)",kj:"飼います",n:"Homofon dengan 買います (membeli) di atas — bunyinya sama persis, tapi kanji beda! 'Neko wo katte imasu' = sedang memelihara kucing."},
 {k:"かえします",r:"kae shimasu",a:"mengembalikan",kj:"返します"},
 {k:"かえります",r:"kaerimasu",a:"pulang",kj:"帰ります",n:"Dari 'kaeru'. Khusus pulang ke rumah/tempat asal."},
 {k:"かかります",r:"kakarimasu",a:"memerlukan, memakan (waktu,uang)",kj:"掛かります"},
 {k:"かきます",r:"kakimasu",a:"menulis",kj:"書きます",n:"Dari 'kaku'. Juga berarti 'menggambar' atau 'melukis'."},
 {k:"かします",r:"kashimasu",a:"meminjamkan",kj:"貸します"},
 {k:"かちます",r:"kachimasu",a:"menang",kj:"勝ちます"},
+{k:"かせぎます",r:"kasegimasu",a:"mencari nafkah, menghasilkan/mengumpulkan (uang)",kj:"稼ぎます",n:"'Okane wo kasegimasu' = mencari/menghasilkan uang. Beda dari あつめます (mengumpulkan barang/benda secara umum) — かせぎます khusus konteks kerja demi uang."},
 {k:"かぶります",r:"kaburimasu",a:"memakai (topi,dll)",kj:"被ります"},
 {k:"ききます",r:"kikimasu",a:"mendengar",kj:"聞きます",n:"Dari 'kiku'. Juga berarti 'bertanya' (sensei ni kikimasu)."},
 {k:"きります",r:"kirimasu",a:"memotong, menggunting",kj:"切ります"},
@@ -1260,8 +1286,10 @@ const KATA_KERJA = {
 {k:"とまります",r:"tomarimasu",a:"menginap, bermalam",kj:"止まります"},
 {k:"とります",r:"torimasu",a:"mengambil, memotret, menjadi tua",kj:"取ります"},
 {k:"とりのぞきます",r:"torinozokimasu",a:"menghilangkan, menyingkirkan (sengaja)",kj:"取り除きます",n:"Tori (mengambil) + nozoku (menyingkirkan). Dilakukan dengan sengaja, misal 'shimi wo torinozokimasu' = menghilangkan noda. Beda dari 'なくします' yang berarti hilang/kehilangan tanpa sengaja."},
+{k:"とびます",r:"tobimasu",a:"terbang, melompat",kj:"飛びます",n:"Dari 'tobu'. 'Tori ga tobimasu' = burung terbang. Juga bisa berarti melompat, tergantung konteks."},
 {k:"なおします",r:"nao shimasu",a:"memperbaiki, membetulkan",kj:"直します"},
 {k:"なくします",r:"naku shimasu",a:"hilang, kehilangan",kj:"亡くします / 無くします",n:"Dua kanji beda arti! 亡くします = kehilangan orang (meninggal), contoh: 'sofu wo nakushimashita' = kakek saya meninggal. 無くします = kehilangan barang tanpa sengaja, contoh: 'saifu wo nakushimashita' = dompet saya hilang."},
+{k:"なくなります",r:"nakunarimasu",a:"meninggal dunia (orang) / habis, hilang (benda mati)",kj:"亡くなります / 無くなります",n:"Pasangan INTRANSITIF dari なくします di atas — なくなります fokus ke KEJADIANNYA (subjeknya sendiri yang jadi tidak ada), sedangkan なくします fokus ke ORANG yang kehilangan/menghilangkan. 亡くなります = meninggal (versi lebih halus/sopan dari しにます), contoh: 'sofu ga nakunarimashita' = kakek saya meninggal. 無くなります = habis/hilang (barang/persediaan), contoh: 'sato ga nakunarimashita' = gulanya habis."},
 {k:"ならいます",r:"naraimasu",a:"belajar (keahlian/kemahiran)",kj:"習います",n:"Dari 'narau'. Belajar suatu keahlian/kemahiran dari orang lain (les musik, memasak, bela diri, dll), biasanya dengan guru/instruktur."},
 {k:"なります",r:"narimasu",a:"menjadi"},
 {k:"ぬぎます",r:"nugimasu",a:"membuka, melepaskan",kj:"脱ぎます"},
@@ -1316,6 +1344,7 @@ const KATA_KERJA = {
 {k:"くれます",r:"kuremasu",a:"memberi (kepada saya)",kj:"呉れます"},
 {k:"しめます",r:"shimemasu",a:"menutup",kj:"閉めます"},
 {k:"しらべます",r:"shirabemasu",a:"memeriksa, menyelidiki",kj:"調べます"},
+{k:"しんじます",r:"shinjimasu",a:"percaya",kj:"信じます",n:"Dari 'shinjiru'. 'Kare wo shinjimasu' = saya percaya padanya."},
 {k:"すてます",r:"sutemasu",a:"membuang",kj:"捨てます"},
 {k:"たべます",r:"tabemasu",a:"makan",kj:"食べます",n:"Dari 'taberu'. Diikuti objek dengan partikel 'wo'."},
 {k:"たります",r:"tarimasu",a:"cukup, mencukupi",kj:"足ります"},
@@ -1346,6 +1375,7 @@ const KATA_KERJA = {
 {k:"かいものします",r:"kaimono shimasu",a:"berbelanja",kj:"買い物します"},
 {k:"きます",r:"kimasu",a:"datang",kj:"来ます",n:"Dari 'kuru' (tidak beraturan). Arah menuju pembicara."},
 {k:"けっこんします",r:"kekkon shimasu",a:"menikah",kj:"結婚します"},
+{k:"けっこんしています",r:"kekkon shite imasu",a:"sudah menikah",kj:"結婚しています",n:"Bentuk てform+います (Hari 18) dari けっこんします, dipakai buat nyatain STATUS sekarang, bukan aksinya lagi berlangsung. 'Kekkon shimashita' (sudah menikah, ~ました) juga bisa dipakai tapi lebih fokus ke KEJADIAN menikahnya, sedangkan けっこんしています fokus ke STATUS yang berlaku sampai sekarang."},
 {k:"けんがくします",r:"kengaku shimasu",a:"meninjau",kj:"見学します"},
 {k:"けんきゅうします",r:"kenkyuu shimasu",a:"meneliti",kj:"研究します"},
 {k:"コピーします",r:"kopii shimasu",a:"mengkopi"},
@@ -1358,6 +1388,8 @@ const KATA_KERJA = {
 {k:"しょくじします",r:"shokuji shimasu",a:"makan",kj:"食事します"},
 {k:"しんぱいします",r:"shinpai shimasu",a:"khawatir, cemas",kj:"心配します"},
 {k:"せつめいします",r:"setsumei shimasu",a:"menjelaskan, menerangkan",kj:"説明します"},
+{k:"せっちします",r:"secchi shimasu",a:"memasang, menginstal",kj:"設置します",n:"Dipakai untuk memasang alat/perangkat (kamera, AC, mesin, dll), beda konteks dari にゅうりょくします (menginput data)."},
+{k:"しゅっせきします",r:"shusseki shimasu",a:"menghadiri",kj:"出席します",n:"Shusseki (hadir) + shimasu. 'Kekkonshiki ni shusseki shimasu' = menghadiri upacara pernikahan."},
 {k:"せんたくします",r:"sentaku shimasu",a:"mencuci (pakaian)",kj:"洗濯します"},
 {k:"そうじします",r:"souji shimasu",a:"membersihkan (kamar)",kj:"掃除します"},
 {k:"つれてきます",r:"tsuretekimasu",a:"membawa, datang mangantar (orang)",kj:"連れてきます"},
@@ -2853,6 +2885,93 @@ const KANJI = [
       { w: "円高", furi: "えんだか", a: "yen menguat" },
       { w: "円安", furi: "えんやす", a: "yen melemah" }
     ]
+  },
+
+  // ═══════════════════════════════════════════════
+  // HARI 5
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 5", char: "日", onyomi: ["にち", "にっ", "に", "じつ"], kunyomi: ["ひ", "び", "か"], arti: "hari / matahari",
+    kotoba: [
+      { w: "十四日", furi: "じゅうよっか", a: "tanggal 14", n: "Bacaan khusus (bukan じゅうよんにち) — pola よっか (Hari 4) tetap dipakai walau digabung angka belasan." },
+      { w: "日記", furi: "にっき", a: "buku harian" },
+      { w: "日曜日", furi: "にちようび", a: "hari Minggu" },
+      { w: "休日", furi: "きゅうじつ", a: "hari libur" }
+    ]
+  },
+  {
+    tema: "Hari 5", char: "月", onyomi: ["がつ", "げつ"], kunyomi: ["つき"], arti: "bulan",
+    kotoba: [
+      { w: "月", furi: "つき", a: "bulan" },
+      { w: "四月", furi: "しがつ", a: "bulan April" },
+      { w: "先月", furi: "せんげつ", a: "bulan lalu" },
+      { w: "来月", furi: "らいげつ", a: "bulan depan" }
+    ]
+  },
+  {
+    tema: "Hari 5", char: "明", onyomi: ["めい"], kunyomi: ["あか.るい"], arti: "cerah / terang",
+    kotoba: [
+      { w: "明るい", furi: "あかるい", a: "cerah, terang" },
+      { w: "説明", furi: "せつめい", a: "penjelasan" },
+      { w: "明日", furi: "あした", a: "besok" }
+    ]
+  },
+  {
+    tema: "Hari 5", char: "立", onyomi: ["りつ", "りっ"], kunyomi: ["た.つ", "た.てる"], arti: "berdiri",
+    kotoba: [
+      { w: "立つ", furi: "たつ", a: "berdiri" },
+      { w: "立てる", furi: "たてる", a: "mendirikan" },
+      { w: "独立", furi: "どくりつ", a: "merdeka" },
+      { w: "立派", furi: "りっぱ", a: "mewah, megah" }
+    ]
+  },
+  {
+    tema: "Hari 5", char: "音", onyomi: ["おん"], kunyomi: ["おと"], arti: "bunyi / suara",
+    kotoba: [
+      { w: "音", furi: "おと", a: "bunyi" },
+      { w: "音楽", furi: "おんがく", a: "musik" },
+      { w: "発音", furi: "はつおん", a: "pelafalan" }
+    ]
+  },
+  {
+    tema: "Hari 5", char: "暗", onyomi: ["あん"], kunyomi: ["くら.い"], arti: "gelap",
+    kotoba: [
+      { w: "暗い", furi: "くらい", a: "gelap" },
+      { w: "暗室", furi: "あんしつ", a: "ruang gelap" }
+    ]
+  },
+  {
+    tema: "Hari 5", char: "火", onyomi: ["か"], kunyomi: ["ひ", "び"], arti: "api",
+    kotoba: [
+      { w: "火", furi: "ひ", a: "api" },
+      { w: "火曜日", furi: "かようび", a: "hari Selasa" },
+      { w: "花火", furi: "はなび", a: "kembang api" }
+    ]
+  },
+  {
+    tema: "Hari 5", char: "水", onyomi: ["すい"], kunyomi: ["みず"], arti: "air",
+    kotoba: [
+      { w: "水", furi: "みず", a: "air" },
+      { w: "水曜日", furi: "すいようび", a: "hari Rabu" },
+      { w: "水泳", furi: "すいえい", a: "renang" }
+    ]
+  },
+  {
+    tema: "Hari 5", char: "土", onyomi: ["ど", "と"], kunyomi: ["つち"], arti: "tanah",
+    kotoba: [
+      { w: "土", furi: "つち", a: "tanah" },
+      { w: "土曜日", furi: "どようび", a: "hari Sabtu" },
+      { w: "土地", furi: "とち", a: "tanah, wilayah" },
+      { w: "土木", furi: "どぼく", a: "teknik sipil" }
+    ]
+  },
+  {
+    tema: "Hari 5", char: "国", onyomi: ["こく", "こっ"], kunyomi: ["くに"], arti: "negara",
+    kotoba: [
+      { w: "国", furi: "くに", a: "negara" },
+      { w: "外国", furi: "がいこく", a: "asing, luar negeri" },
+      { w: "国旗", furi: "こっき", a: "bendera negara" }
+    ]
   }
 ]; // end KANJI
 
@@ -2866,7 +2985,7 @@ const BUNPOU = [
   // HARI 1
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 1",
+    tema: "Hari 1 (Bab 1)",
     judul: "〜は　〜です (A adalah B)",
     sub: "Pola nominatif paling dasar — menyatakan identitas atau fakta, plus bentuk tanyanya.",
     items: [
@@ -2894,7 +3013,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 1",
+    tema: "Hari 1 (Bab 1)",
     judul: "〜じん (Menyatakan & menanyakan kewarganegaraan)",
     sub: "〜じん melabeli kewarganegaraan secara langsung — beda dari おくにはどちらですか yang menanyakan asal secara lebih halus.",
     items: [
@@ -2931,7 +3050,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 1",
+    tema: "Hari 1 (Bab 1)",
     judul: "おしごとは？ (Menyatakan & menanyakan pekerjaan)",
     sub: "Pola menyebutkan profesi/pekerjaan diri sendiri atau orang lain.",
     items: [
@@ -2957,7 +3076,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 1",
+    tema: "Hari 1 (Bab 1)",
     judul: "〜は　〜じゃありません (Bentuk negatif)",
     sub: "Bentuk negatif dari 〜は〜です — formal (では ありません) dan santai (じゃありません), termasuk bentuk tanyanya.",
     items: [
@@ -2994,7 +3113,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 1",
+    tema: "Hari 1 (Bab 1)",
     judul: "〜の〜 (kepemilikan / penghubung kata benda)",
     sub: "Partikel の menghubungkan dua kata benda, setara apostrophe-s ('s) dalam bahasa Inggris tapi lebih luas fungsinya.",
     items: [
@@ -3012,7 +3131,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 1",
+    tema: "Hari 1 (Bab 1)",
     judul: "〜さいです (Menyatakan & menanyakan umur)",
     sub: "Pola menyebutkan usia memakai counter 〜さい.",
     items: [
@@ -3042,7 +3161,7 @@ const BUNPOU = [
   // HARI 2
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 2",
+    tema: "Hari 2 (Bab 1)",
     judul: "〜はいつですか？ (Menyatakan & menanyakan waktu)",
     sub: "Pola menyatakan dan menanyakan kapan suatu peristiwa terjadi.",
     items: [
@@ -3069,7 +3188,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 2",
+    tema: "Hari 2 (Bab 1)",
     judul: "しゅみは？ (Menyatakan & menanyakan hobi)",
     sub: "Pola memperkenalkan hobi, termasuk variasi の untuk merinci jenis hobi orang lain.",
     items: [
@@ -3104,7 +3223,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 2",
+    tema: "Hari 2 (Bab 1)",
     judul: "〜と　〜 (dan, menggabungkan kata benda)",
     sub: "Partikel と menghubungkan dua kata benda — beda dari し yang menggabungkan alasan/kalimat.",
     items: [
@@ -3121,7 +3240,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 2",
+    tema: "Hari 2 (Bab 1)",
     judul: "〜も　〜です (~ juga ~)",
     sub: "Partikel も (mo) menggantikan は untuk menyatakan kesamaan dengan topik sebelumnya.",
     items: [
@@ -3151,7 +3270,7 @@ const BUNPOU = [
   // HARI 3
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 3",
+    tema: "Hari 3 (Bab 2)",
     judul: "おくにはどちらですか？ (Menanyakan asal negara — sopan)",
     sub: "Versi lebih halus/sopan dari なにじんですか — menanyakan asal negara, bukan langsung melabeli kewarganegaraan.",
     items: [
@@ -3176,7 +3295,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 3",
+    tema: "Hari 3 (Bab 2)",
     judul: "おすまいはどちらですか？ (Menanyakan tempat tinggal — sopan)",
     sub: "Pola sopan untuk bertanya tempat tinggal seseorang.",
     items: [
@@ -3193,7 +3312,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 3",
+    tema: "Hari 3 (Bab 2)",
     judul: "これ／それ／あれ／どれ — untuk BENDA, berdiri sendiri",
     sub: "Menunjuk BENDA sebagai pengganti kata benda — BISA berdiri sendiri tanpa perlu diikuti kata benda lain. Beda dari この/その/あの/どの yang WAJIB diikuti kata benda.",
     items: [
@@ -3244,7 +3363,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 3",
+    tema: "Hari 3 (Bab 2)",
     judul: "この／その／あの／どの — untuk MENERANGKAN benda",
     sub: "WAJIB diikuti kata benda — tidak bisa berdiri sendiri! Beda dari これ/それ/あれ/どれ yang menggantikan kata benda, kelompok ini menerangkan/menempel pada kata benda. この本 (benar) vs この (salah, harus ada kata bendanya).",
     items: [
@@ -3295,7 +3414,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 3",
+    tema: "Hari 3 (Bab 2)",
     judul: "ここ／そこ／あそこ／どこ — untuk TEMPAT",
     sub: "Menunjuk LOKASI/tempat secara langsung — bisa berdiri sendiri tanpa kata benda setelahnya. こ=dekat pembicara, そ=dekat pendengar, あ=jauh dari keduanya, ど=bentuk tanya.",
     items: [
@@ -3375,7 +3494,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 3",
+    tema: "Hari 3 (Bab 2)",
     judul: "こちら／そちら／あちら／どちら — bentuk SOPAN",
     sub: "Versi lebih sopan/formal, serbaguna — bisa menggantikan ここ (tempat), これ (benda), bahkan menyapa orang secara halus. Sering dipakai di telepon, ke tamu, atau situasi resmi.",
     items: [
@@ -3426,7 +3545,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 3",
+    tema: "Hari 3 (Bab 2)",
     judul: "いくらですか？ (Menanyakan harga)",
     sub: "Pola wajib saat berbelanja.",
     items: [
@@ -3456,7 +3575,7 @@ const BUNPOU = [
   // HARI 4
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 4",
+    tema: "Hari 4 (Bab 2)",
     judul: "〜を　ください (Meminta satu benda)",
     sub: "Pola paling dasar untuk meminta sesuatu — cocok dipakai bersama semua kata tunjuk Ko-So-A-Do (これ/それ/あれ/どれ). Ganti 〜 dengan benda atau kata tunjuk yang dimaksud.",
     items: [
@@ -3503,7 +3622,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 4",
+    tema: "Hari 4 (Bab 2)",
     judul: "なんの〜ですか？ (Menanyakan jenis suatu benda)",
     sub: "Pola menanyakan jenis/kategori spesifik dari suatu benda, memakai なん (apa) + の (penghubung) + kata benda.",
     items: [
@@ -3531,7 +3650,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 4",
+    tema: "Hari 4 (Bab 2)",
     judul: "どこの〜ですか？ (Menanyakan asal/negara pembuat)",
     sub: "Pola menanyakan asal geografis suatu benda — beda dari どこですか yang menanyakan lokasi benda itu sendiri.",
     items: [
@@ -3562,7 +3681,7 @@ const BUNPOU = [
   // HARI 5
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 5",
+    tema: "Hari 5 (Bab 2)",
     judul: "〜を　〜ください (Meminta dengan jumlah/detail)",
     sub: "Variasi 〜をください dengan menambahkan jumlah (counter) atau detail lain sebelum ください.",
     items: [
@@ -3591,7 +3710,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 5",
+    tema: "Hari 5 (Bab 2)",
     judul: "だれの〜ですか？ (Menanyakan kepemilikan)",
     sub: "Pola menanyakan siapa pemilik suatu benda, memakai だれ (siapa) + の (kepemilikan).",
     items: [
@@ -3622,7 +3741,7 @@ const BUNPOU = [
   // HARI 6
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 6",
+    tema: "Hari 6 (Bab 3)",
     judul: "なんじですか？ (Menanyakan jam)",
     sub: "Pola menanyakan waktu dalam jam.",
     items: [
@@ -3639,7 +3758,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 6",
+    tema: "Hari 6 (Bab 3)",
     judul: "〜から〜までです (Pola gabungan lengkap)",
     sub: "から (titik awal) dan まで (titik akhir) dipakai BERSAMAAN dalam satu kalimat untuk menyebutkan rentang waktu/tempat secara lengkap.",
     items: [
@@ -3657,7 +3776,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 6",
+    tema: "Hari 6 (Bab 3)",
     judul: "〜を〜 (Partikel penanda objek)",
     sub: "を (dibaca 'o') menandai objek langsung dari kata kerja transitif — benda yang menerima tindakan/aksi.",
     items: [
@@ -3706,7 +3825,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 6",
+    tema: "Hari 6 (Bab 3)",
     judul: "〜へ〜 (Partikel penanda arah)",
     sub: "へ (ditulis へ, dibaca 'e') menandai arah tujuan suatu gerakan. Untuk kata kerja gerak (iku/kuru/kaeru), に juga boleh dipakai menggantikan へ.",
     items: [
@@ -3747,7 +3866,7 @@ const BUNPOU = [
   // HARI 7
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 7",
+    tema: "Hari 7 (Bab 3)",
     judul: "〜ません (Bentuk negatif kata kerja ~ます)",
     sub: "Kalau kata benda, bentuk negatifnya pakai 〜じゃありません／では　ありません. Kalau kata kerja yang berakhiran 〜ます, cukup ganti akhiran ます jadi ません — partikelnya (を、へ、で、dst) tidak berubah sama sekali.",
     items: [
@@ -3787,7 +3906,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 7",
+    tema: "Hari 7 (Bab 3)",
     judul: "〜で〜 (Partikel penanda tempat kegiatan)",
     sub: "で menandai tempat BERLANGSUNGNYA suatu kegiatan/aksi — beda dari へ／に yang menandai arah/tujuan dan に yang menandai tempat keberadaan (ada/tidak ada, dengan あります／います).",
     items: [
@@ -3849,7 +3968,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 7",
+    tema: "Hari 7 (Bab 3)",
     judul: "〜や〜など (menyebutkan sebagian, tidak lengkap)",
     sub: "や menggabungkan beberapa kata benda sebagai CONTOH SEBAGIAN (tidak menyebutkan semuanya), biasanya ditutup dengan など (dan lain-lain). Beda dari と yang menyebutkan SEMUA item secara lengkap/pasti.",
     items: [
@@ -3876,7 +3995,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 7",
+    tema: "Hari 7 (Bab 3)",
     judul: "なにも　＋　ません (Negasi total — objek)",
     sub: "なにも menggantikan partikel を／が saat menyatakan 'tidak apa-apa'.",
     items: [
@@ -3894,7 +4013,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 7",
+    tema: "Hari 7 (Bab 3)",
     judul: "〔時間〕に　〔動詞〕 (Kata benda waktu + に)",
     sub: "に menandai TITIK WAKTU SPESIFIK (jam, hari, tanggal) tempat suatu kegiatan dilakukan. Kata waktu RELATIF (きょう, あした, きのう, dsb) TIDAK memakai に.",
     items: [
@@ -3926,7 +4045,7 @@ const BUNPOU = [
   // HARI 8
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 8",
+    tema: "Hari 8 (Bab 3)",
     judul: "〜から／〜まで (Dipakai sendiri-sendiri)",
     sub: "から dan まで TIDAK harus selalu berpasangan — masing-masing bisa berdiri sendiri kalau cuma mau menyebutkan salah satu titiknya saja (cuma titik AWAL, atau cuma titik AKHIR).",
     items: [
@@ -4009,7 +4128,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 8",
+    tema: "Hari 8 (Bab 3)",
     judul: "どこへも／だれも　＋　ません (Negasi total — tempat & orang)",
     sub: "どこへも menggantikan partikel へ／に saat menyatakan 'tidak pergi ke mana-mana', だれも untuk 'tidak ada siapa-siapa'.",
     items: [
@@ -4083,7 +4202,7 @@ const BUNPOU = [
   // HARI 9
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 9",
+    tema: "Hari 9 (Bab 4)",
     judul: "〔tempat1〕の　〔tempat2〕は　〔方角〕です (Menyatakan letak/arah relatif)",
     sub: "Pola 〜の〜 dari Hari 1 (penghubung kata benda) dipakai lagi di sini, tapi sekarang buat nunjukin posisi suatu tempat relatif terhadap tempat lain, digabung sama kosakata arah mata angin (きた／みなみ／ひがし／にし) dari Bab 4.",
     items: [
@@ -4101,7 +4220,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 9",
+    tema: "Hari 9 (Bab 4)",
     judul: "〜から〜まで　どのぐらいですか？ (Menanyakan jarak/durasi)",
     sub: "Gabungan から〜まで (Hari 6 & 8) dengan どのぐらい (Bab 4) — dipakai buat nanya seberapa jauh atau seberapa lama dari satu titik ke titik lain.",
     items: [
@@ -4118,7 +4237,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 9",
+    tema: "Hari 9 (Bab 4)",
     judul: "〔のりもの〕で　〔動詞〕 (Naik apa — partikel で cara/alat)",
     sub: "Partikel で di sini beda fungsi sama で di Hari 7 (yang buat nunjukin TEMPAT kegiatan). Di sini で dipakai buat nunjukin CARA/ALAT — naik kendaraan apa buat pergi.",
     items: [
@@ -4136,7 +4255,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 9",
+    tema: "Hari 9 (Bab 4)",
     judul: "〔じかん〕くらいです (Menjawab durasi)",
     sub: "Jawaban buat pertanyaan どのぐらいですか di atas — pakai 〜じかん (Bab 4) + くらい (Bab 4, 'kira-kira/sekitar').",
     items: [
@@ -4153,7 +4272,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 9",
+    tema: "Hari 9 (Bab 4)",
     judul: "〔kata benda〕は　〔kata sifat〕です (Kata sifat sebagai predikat — beda い vs な)",
     sub: "い-keiyoushi (kata sifat-い, contoh: たかい) dan な-keiyoushi (kata sifat-な, contoh: しずか) sama-sama langsung diikuti です kalau posisinya jadi predikat (kata benda は 〜です). Bedanya ada di bentuk NEGATIF: い-keiyoushi buang い lalu tambah くないです, sedangkan な-keiyoushi negatifnya SAMA PERSIS kayak kata benda di Hari 1 (〜じゃありません／ではありません) — な-nya sendiri TIDAK dipakai di sini.",
     items: [
@@ -4182,7 +4301,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 9",
+    tema: "Hari 9 (Bab 4)",
     judul: "〔kata sifat〕＋〔kata benda〕です (Kata sifat menerangkan kata benda langsung — beda い vs な)",
     sub: "Beda sama pola sebelumnya (kata sifat jadi predikat), di sini kata sifat NEMPEL langsung di depan kata benda buat nerangin. い-keiyoushi nempel langsung (かっこいい　ひと), tapi な-keiyoushi WAJIB pake な di antaranya (しずかな　ところ) — な-nya justru MUNCUL di sini, kebalikan dari pola predikatif di atas.",
     items: [
@@ -4214,7 +4333,7 @@ const BUNPOU = [
   // HARI 10
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 10",
+    tema: "Hari 10 (Bab 4)",
     judul: "〜か (Partikel tanya di akhir kalimat)",
     sub: "か bisa ditempel di akhir kalimat APA PUN (kata kerja, kata sifat, kata benda) untuk mengubahnya jadi pertanyaan — bukan cuma 〜ですか seperti di Hari 1, tapi bentuk umumnya.",
     items: [
@@ -4232,7 +4351,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 10",
+    tema: "Hari 10 (Bab 4)",
     judul: "〜ね (Partikel akhir: mengajak setuju / jeda saat menjawab)",
     sub: "ね ditempel di akhir kalimat untuk mengajak lawan bicara mengiyakan/menyetujui sesuatu yang pembicara sudah cukup yakin — beda dari か yang menanyakan info baru. Bentuk そうですね juga dipakai berdiri sendiri sebagai jeda sebelum menjawab.",
     items: [
@@ -4260,7 +4379,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 10",
+    tema: "Hari 10 (Bab 4)",
     judul: "〜が〜 (tapi — menggabungkan dua kalimat yang berlawanan)",
     sub: "が sebagai penghubung antar-kalimat (bukan partikel subjek) berarti 'tapi', menggabungkan dua kalimat berkonteks berlawanan jadi satu kalimat. でも adalah versi santai/informalnya, ditulis terpisah di awal kalimat baru.",
     items: [
@@ -4287,7 +4406,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 10",
+    tema: "Hari 10 (Bab 4)",
     judul: "〜そして〜 (dan lalu — menggabungkan dua kalimat yang selaras)",
     sub: "そして menyambung dua kalimat terpisah jadi satu cerita berlanjut dengan konteks yang SAMA/senada — kebalikan dari が／でも yang menghubungkan hal berlawanan.",
     items: [
@@ -4304,7 +4423,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 10",
+    tema: "Hari 10 (Bab 4)",
     judul: "〜が　あります (Menyatakan keberadaan & kepemilikan benda)",
     sub: "〜が　あります menyatakan ada suatu benda MATI di suatu tempat (keberadaan), atau bisa juga dipakai tanpa keterangan tempat untuk menyatakan kepemilikan benda oleh seseorang. Ingat: あります khusus benda mati, kalau makhluk hidup pakai います (Hari sebelumnya).",
     items: [
@@ -4331,7 +4450,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 10",
+    tema: "Hari 10 (Bab 4)",
     judul: "どんな　〔KB〕ですか？ (Menanyakan keadaan/sifat suatu hal)",
     sub: "どんな + kata benda + ですか menanyakan seperti apa/bagaimana sifat suatu benda, orang, tempat, atau kejadian. Jawabannya biasanya kata sifat yang menerangkan kata benda tersebut (lihat pola い/な-keiyoushi + KB di Hari 9).",
     items: [
@@ -4352,7 +4471,7 @@ const BUNPOU = [
   // HARI 11
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 11",
+    tema: "Hari 11 (Bab 4)",
     judul: "とても／すこし／あまり〜ない (Keterangan derajat dasar)",
     sub: "Ditempel SEBELUM kata sifat untuk menyatakan tingkat/intensitasnya. あまり WAJIB diikuti bentuk negatif kata sifat.",
     items: [
@@ -4389,7 +4508,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 11",
+    tema: "Hari 11 (Bab 4)",
     judul: "めっちゃ／ちょう／すごく／ほんとうに (Versi santai keterangan derajat)",
     sub: "Versi informal dari とても, dipakai di percakapan santai sehari-hari. めっちゃ dan くっちゃ lebih ke gaya anak muda; ちょう dan すごく lebih umum dipakai banyak kalangan; ほんとうに menekankan keyakinan ('beneran'), bukan cuma derajat.",
     items: [
@@ -4415,7 +4534,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 11",
+    tema: "Hari 11 (Bab 4)",
     judul: "ぜんぜん〜いつも (Keterangan frekuensi)",
     sub: "Ditempel sebelum kata kerja untuk menyatakan seberapa sering sesuatu terjadi, urut dari paling jarang ke paling sering: ぜんぜん（tidak sama sekali, wajib negatif）→ たまに（sesekali）→ ときどき（kadang-kadang）→ よく（sering）→ いつも（selalu）。",
     items: [
@@ -4433,7 +4552,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 11",
+    tema: "Hari 11 (Bab 4)",
     judul: "ぜんぜん／すこし／あまり／けっこう／とても (Keterangan derajat lengkap)",
     sub: "Skala lengkap keterangan derajat sebelum kata sifat, dari yang paling rendah ke paling tinggi — mirip poin sebelumnya tapi ditambah ぜんぜん (di ujung negatif total) dan けっこう (lumayan, di tengah-tengah).",
     items: [
@@ -4450,7 +4569,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 11",
+    tema: "Hari 11 (Bab 4)",
     judul: "〜は　どうですか (Menanyakan kesan/pendapat)",
     sub: "Dipakai untuk menanyakan kesan atau pendapat seseorang tentang suatu benda/tempat berdasarkan karakteristiknya. Jawabannya sering menggabungkan beberapa kesan sekaligus pakai が (tapi, kalau berlawanan) atau そして (dan lagi, kalau senada) dari Hari 10.",
     items: [
@@ -4470,7 +4589,7 @@ const BUNPOU = [
   // HARI 12
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 12",
+    tema: "Hari 12 (Bab 5)",
     judul: "〜ました (Penanda kata kerja bentuk lampau)",
     sub: "Bentuk ます diubah jadi ました untuk menyatakan kejadian di masa lalu. Positif: 〜ました. Tanya: 〜ましたか. Negatif: 〜ませんでした (bukan 〜ましたじゃない atau bentuk lain).",
     items: [
@@ -4488,7 +4607,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 12",
+    tema: "Hari 12 (Bab 5)",
     judul: "どこかへ (Menanyakan/menyatakan tempat tanpa spesifik)",
     sub: "どこか berarti 'suatu tempat (entah dimana)' — dipakai kalau tempatnya tidak diketahui atau tidak perlu disebut. Beda dengan どこ yang menanyakan tempat secara spesifik.",
     items: [
@@ -4505,7 +4624,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 12",
+    tema: "Hari 12 (Bab 5)",
     judul: "〔ひと〕と　〔aktivitas〕 (Melakukan sesuatu bersama seseorang)",
     sub: "と disini menandai orang yang menemani suatu aktivitas, artinya 'dengan/bersama'. Beda dari と yang menyambung dua kata benda (KB1とKB2 = 'dan').",
     items: [
@@ -4523,7 +4642,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 12",
+    tema: "Hari 12 (Bab 5)",
     judul: "それから (Menyebutkan urutan/kronologi aktivitas)",
     sub: "それから menyambung dua kalimat yang terjadi berurutan dalam waktu, artinya 'lalu/setelah itu'. Ini beda dengan そして (Hari 10): そして dipakai untuk menggabungkan sifat/kesan yang senada dalam satu deskripsi (mis. enak DAN murah), sedangkan それから menekankan urutan waktu antar-aktivitas (mis. makan dulu, SETELAH ITU nonton film). Kalau isinya jawaban dari 'terus abis itu ngapain', pakai それから; kalau nambahin sifat yang searah, pakai そして.",
     items: [
@@ -4540,7 +4659,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 12",
+    tema: "Hari 12 (Bab 5)",
     judul: "Kata sifat bentuk lampau (い-keiyoushi ／ な-keiyoushi)",
     sub: "Kata sifat juga punya bentuk lampau sendiri, terpisah dari ました yang khusus buat kata kerja.",
     items: [
@@ -4573,7 +4692,7 @@ const BUNPOU = [
   // HARI 13
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 13",
+    tema: "Hari 13 (Bab 5)",
     judul: "Kata sifat & kata benda bentuk negatif lampau",
     sub: "Gabungan dari bentuk negatif (Hari 9) dan bentuk lampau (Hari 12) — dipakai buat nyatain sesuatu yang DULU tidak/bukan begitu.",
     items: [
@@ -4602,7 +4721,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 13",
+    tema: "Hari 13 (Bab 5)",
     judul: "〜どうでしたか (Menanyakan kesan di masa lalu)",
     sub: "Bentuk lampau dari どうですか (Hari 9) — dipakai buat nanya kesan/pendapat terhadap sesuatu yang udah terjadi.",
     items: [
@@ -4620,7 +4739,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 13",
+    tema: "Hari 13 (Bab 5)",
     judul: "Kalimat akibat + kalimat alasan (tanpa penghubung)",
     sub: "Pola sederhana: sebut dulu akibat/kondisinya, baru alasannya di kalimat berikutnya — tanpa kata sambung apapun (belum pakai から). Wajar kedengaran agak kaku/dipaksain, tapi ini pola transisi sebelum belajar から secara resmi (poin 4 di bawah).",
     items: [
@@ -4637,7 +4756,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 13",
+    tema: "Hari 13 (Bab 5)",
     judul: "どうして〜 (kenapa) ／ 〜から (karena)",
     sub: "どうして dipakai buat nanya alasan, jawabannya pakai 〜から di akhir kalimat. Keduanya bisa dipasangin bentuk です／ます biasa atau bentuk lampau (でした／ました).",
     items: [
@@ -4655,7 +4774,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 13",
+    tema: "Hari 13 (Bab 5)",
     judul: "ほしい (Ingin/menginginkan sesuatu)",
     sub: "Dipakai buat nyatain keinginan terhadap suatu benda (bukan aktivitas — beda dari 〜たい buat kata kerja, belum diajarin).",
     items: [
@@ -4676,7 +4795,7 @@ const BUNPOU = [
   // HARI 14
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 14",
+    tema: "Hari 14 (Bab 5)",
     judul: "〜が　すきです／きらいです (Menunjukkan hal yang disukai/dibenci)",
     sub: "すき (suka) dan きらい (benci/tidak suka) adalah kata sifat な (na-keiyoushi), jadi negatifnya pakai じゃありません seperti です biasa, bukan くない seperti ほしい (Hari 13) yang i-keiyoushi.",
     items: [
@@ -4714,7 +4833,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 14",
+    tema: "Hari 14 (Bab 5)",
     judul: "動詞ます→たい (Ingin melakukan sesuatu)",
     sub: "Ganti ～ます jadi ～たい buat nyatain keinginan ngelakuin suatu aktivitas (beda dari ほしい di Hari 13 yang buat benda). たい berubah jadi i-keiyoushi, jadi konjugasi negatif/lampaunya ngikutin pola kata sifat い (Hari 12-13).",
     items: [
@@ -4753,7 +4872,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 14",
+    tema: "Hari 14 (Bab 5)",
     judul: "〔場所〕へ　〔物〕を　〔動詞ます-stem〕に　行きます (Pergi ke suatu tempat untuk melakukan sesuatu)",
     sub: "Gabungan tiga partikel sekaligus: へ buat arah/tujuan tempat, を buat objek, dan に (setelah ます-stem kata kerja) buat nyatain tujuan aktivitasnya. Diakhiri dengan 行きます／来ます／帰ります.",
     items: [
@@ -4781,7 +4900,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 1",
+    tema: "Hari 1 (Bab 1)",
     judul: "おなまえは？ (Menanyakan & menyatakan nama)",
     sub: "Pola dasar berkenalan — menanyakan dan menyebutkan nama.",
     items: [
@@ -4798,7 +4917,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 1",
+    tema: "Hari 1 (Bab 1)",
     judul: "なんにんですか？ (Menanyakan jumlah orang)",
     sub: "Pola menanyakan jumlah orang menggunakan counter khusus.",
     items: [
@@ -4818,7 +4937,7 @@ const BUNPOU = [
   // HARI 15
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 15",
+    tema: "Hari 15 (Bab 6)",
     judul: "動詞ます-stem＋ませんか (Mengajak secara sopan)",
     sub: "Pola ini, 動詞ましょう (poin berikutnya), dan 〔KB〕がありますから (poin setelahnya) saling nyambung — satu rangkaian percakapan ajak-menerima/menolak. Diikuti terus biar keliatan alurnya.",
     items: [
@@ -4835,7 +4954,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 15",
+    tema: "Hari 15 (Bab 6)",
     judul: "動詞ます-stem＋ましょう (Mengajak langsung / menerima ajakan)",
     sub: "ましょう bisa dipakai buat DUA fungsi: (1) ngajak duluan secara langsung, tanpa nanya dulu kayak 〜ませんか, dan (2) nerima/nge-iyain ajakan orang lain. Bedanya sama ませんか: ませんか lebih sopan & 'membuka pilihan' (nanya mau apa nggak dulu), sedangkan ましょう lebih langsung/pasti — cocok kalau situasinya udah santai atau kamu yang mau ambil inisiatif.",
     items: [
@@ -4861,7 +4980,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 15",
+    tema: "Hari 15 (Bab 6)",
     judul: "〔KB〕が　ありますから (Menyertakan alasan sebagai penolakan)",
     sub: "Jawaban negatif dari 〜ませんか — menolak ajakan dengan alasan sopan. から di sini sama fungsinya kayak Hari 13 (menyatakan alasan/sebab), cuma sekarang dipasangin khusus buat nolak ajakan.",
     items: [
@@ -4878,7 +4997,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 15",
+    tema: "Hari 15 (Bab 6)",
     judul: "〔場所〕で　〔KB〕が　あります (Keberadaan acara/event pada tempat & waktu tertentu)",
     sub: "Beda dari partikel に yang dipakai buat keberadaan benda/orang secara TETAP di suatu tempat (misal: こうえんに　いぬが　います), partikel で di sini dipakai khusus buat ACARA/EVENT yang berlangsung di tempat itu pada waktu tertentu — karena acara itu sifatnya 'terjadi', bukan 'menetap'.",
     items: [
@@ -4895,7 +5014,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 15",
+    tema: "Hari 15 (Bab 6)",
     judul: "〔KB〕が　〔jumlah〕　あります／います (Menyatakan jumlah benda/makhluk hidup)",
     sub: "Gabungan pola あります／います (benda mati vs makhluk hidup) dengan angka/counter. Lokasinya bisa disebutin juga di depan pakai に (kalau menetap) atau で (kalau event) tergantung konteksnya — sama aturannya kayak poin sebelumnya.",
     items: [
@@ -4922,7 +5041,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 15",
+    tema: "Hari 15 (Bab 6)",
     judul: "〔KB〕が　いちばん　〔keterangan〕 (Menyatakan superlatif — paling)",
     sub: "いちばん (paling) dipasang sebelum kata sifat buat nunjukkin sesuatu paling unggul dalam suatu kelompok/cakupan.",
     items: [
@@ -4939,7 +5058,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 15",
+    tema: "Hari 15 (Bab 6)",
     judul: "〔KB1〕と　〔KB2〕、どちら〜／〜のほうが〜／どちらも〜 (Membandingkan dua hal)",
     sub: "Tiga pola buat bandingin dua pilihan: nanya mana yang lebih X, jawab salah satu lebih X, atau jawab dua-duanya sama-sama X.",
     items: [
@@ -4976,7 +5095,7 @@ const BUNPOU = [
   // HARI 16
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 16",
+    tema: "Hari 16 (Bab 6)",
     judul: "〔KB1〕は　〔KB2〕より　〔KS〕 (Membandingkan dua hal secara langsung)",
     sub: "より menandai 'titik pembanding' (daripada/dibanding). Beda dari Hari 15 (どちらが〜／〜のほうが〜) yang biasanya diawali PERTANYAAN dulu (nanya mana yang lebih X), pola より ini langsung PERNYATAAN tanpa perlu nanya duluan — dipakai kalau kamu udah pasti mau bandingin dua hal dari awal.",
     items: [
@@ -4994,7 +5113,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 16",
+    tema: "Hari 16 (Bab 6)",
     judul: "もう　〔動詞ました〕 (Menyatakan aktivitas yang sudah selesai)",
     sub: "もう (Hari 15 — vocab 'sudah') dipasangin sama ~ました buat NEKANIN kalau sesuatu udah SELESAI/BERES dikerjakan — beda dari ~ました polos yang cuma nyeritain sesuatu udah kejadian di masa lalu (netral, gak nekanin status selesai/belum).",
     items: [
@@ -5011,7 +5130,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 16",
+    tema: "Hari 16 (Bab 6)",
     judul: "partikel よ ＋ 〜はどうですか (Menegaskan info baru & mengajukan usulan)",
     sub: "Dua hal berbeda yang sering dipakai bareng: よ buat kasih tau info yang lawan bicara BELUM tau, dan どうですか versi 'ngusulin pilihan' — beda dari どうですか di Hari 11 (yang buat nanya kesan/pendapat soal sesuatu yang UDAH ada/diketahui).",
     items: [
@@ -5041,7 +5160,7 @@ const BUNPOU = [
   // HARI 17
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 17",
+    tema: "Hari 17 (Bab 7)",
     judul: "〔もの〕は〔場所〕に　あります (Menyatakan posisi suatu benda)",
     sub: "Beda penekanan dari Hari 15 (yang fokus JUMLAH benda pakai が): di sini KB (benda) jadi TOPIK pakai は, dipakai buat jawab pertanyaan 'X ada di mana?' — bukan 'apa yang ada di situ?'.",
     items: [
@@ -5058,7 +5177,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 17",
+    tema: "Hari 17 (Bab 7)",
     judul: "〔ひと・どうぶつ〕は　〔場所〕に　います (Menyatakan posisi orang/hewan)",
     sub: "Pasangan dari poin sebelumnya, khusus makhluk hidup.",
     items: [
@@ -5075,7 +5194,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 17",
+    tema: "Hari 17 (Bab 7)",
     judul: "〔場所〕に　〔もの・ひと〕が　あります／います (Memberitahu ada sesuatu di suatu tempat)",
     sub: "Kebalikan urutan dari 2 poin sebelumnya. Di sini TEMPAT jadi topik/patokan (に), dan yang 'ada'-nya pakai が — dipakai buat jawab 'apa/siapa yang ada di situ?', atau ngasih tau lawan bicara soal sesuatu yang dia belum tau ada di sekitarnya.",
     items: [
@@ -5093,7 +5212,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 17",
+    tema: "Hari 17 (Bab 7)",
     judul: "てけい (Bentuk-te — cara mengubah kata kerja)",
     sub: "てけい (te-form) itu 'sambungan' kata kerja buat macem-macem pola lanjutan (kayak ~てください di poin berikutnya). Cara ubahnya beda-beda tergantung kelompok kata kerja (I, II, III — udah dikenalin sejak Hari 3).",
     items: [
@@ -5128,7 +5247,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 17",
+    tema: "Hari 17 (Bab 7)",
     judul: "動詞（て）＋　ください (Perintah/permintaan sopan)",
     sub: "てform + ください = cara paling umum buat minta/nyuruh orang lain ngelakuin sesuatu secara sopan.",
     items: [
@@ -5147,7 +5266,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 17",
+    tema: "Hari 17 (Bab 7)",
     judul: "〔道具・方法〕で　〔動詞〕 (Menyatakan alat/metode)",
     sub: "Formalisasi salah satu fungsi partikel で yang udah disinggung sejak awal (lihat menu Partikel) — で buat nunjukkin ALAT/CARA ngelakuin sesuatu.",
     items: [
@@ -5168,7 +5287,7 @@ const BUNPOU = [
   // HARI 18
   // ═══════════════════════════════════════════════
   {
-    tema: "Hari 18",
+    tema: "Hari 18 (Bab 7)",
     judul: "動詞（て）＋　います (Menyatakan kegiatan yang sedang berlangsung)",
     sub: "Pakai てけい dari Hari 17 buat nunjukkin aksi yang LAGI terjadi sekarang — kayak '-ing' di bahasa Inggris.",
     items: [
@@ -5186,7 +5305,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 18",
+    tema: "Hari 18 (Bab 7)",
     judul: "〔動詞（ます）〕＋　方（かた） (Menyatakan cara melakukan sesuatu)",
     sub: "Buang ます dari kata kerja, tempel 方（かた） buat bikin kata benda baru yang artinya 'cara [kata kerja]'.",
     items: [
@@ -5203,7 +5322,7 @@ const BUNPOU = [
     ]
   },
   {
-    tema: "Hari 18",
+    tema: "Hari 18 (Bab 7)",
     judul: "どれですか／どの〔KB〕ですか (Menanyakan 'yang mana')",
     sub: "Dua cara nanya 'yang mana', beda tergantung ada kata bendanya atau nggak.",
     items: [
@@ -5224,6 +5343,233 @@ const BUNPOU = [
         contoh: [
           {jp:"どの　ひとが　せんせいですか。", id:"Orang yang mana yang jadi gurunya?"},
           {jp:"どの　かばんが　あなたのですか。", id:"Tas yang mana yang punya kamu?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 19 (Bab 8)",
+    judul: "〜ましょうか (Mengajak atau Menawarkan Bantuan)",
+    sub: "ましょうか itu gabungan nuansa dari ませんか dan ましょう (Hari 15), tapi punya DUA fungsi tergantung konteks: ngajak dengan lebih halus, atau nawarin bantuan. Cara bedainnya: lihat siapa yang bakal ngelakuin aksinya dan siapa yang diuntungin.",
+    items: [
+      {
+        pola: "動詞（ます-けい）＋ましょうか。 (aksi dilakuin BARENG-BARENG)",
+        romaji: "[V-masu] + mashou ka?",
+        arti: "Gimana kalau kita [V] bareng?",
+        catatan: "Kalau aksinya dinikmati/dilakuin berdua (nonton bareng, makan bareng, jalan bareng), ini fungsinya ngajak — tapi lebih halus/optimis dibanding ませんか. Bedanya: ませんか (Hari 15) = 'Maukah kamu...?' (netral, masih bener-bener nanya mau apa nggak, bisa aja ditolak), ましょうか = 'Gimana kalau kita...?' (lebih dianggap bakal disetujui, kesannya udah pengen ngajak eksekusi), ましょう (jawaban Hari 15) = 'Ayo!' (murni ajakan langsung / jawaban setuju, gak nanya lagi sama sekali).",
+        contoh: [
+          {jp:"いっしょに　えいがを　みましょうか。", id:"Gimana kalau kita nonton film bareng?"},
+          {jp:"そろそろ　かえりましょうか。", id:"Gimana kalau kita pulang sekarang?"}
+        ]
+      },
+      {
+        pola: "動詞（ます-けい）＋ましょうか。 (aksi dilakuin SENDIRI oleh pembicara, buat kepentingan lawan bicara)",
+        romaji: "[V-masu] + mashou ka?",
+        arti: "Mau saya [V]-kan?",
+        catatan: "Kalau kata kerjanya adalah aksi yang cuma MENGUNTUNGKAN lawan bicara dan yang bakal ngerjain cuma pembicara sendirian (bukan bareng-bareng), ましょうか berubah makna jadi TAWARAN BANTUAN. Konteksnya beda total sama poin di atas: kalau aksinya dinikmati berdua = ajakan; kalau aksinya cuma buat bantuin lawan bicara (bawain barang, bukain pintu/jendela) = tawaran bantuan. Gak ada rumus kata per kata yang bedain, murni dari KONTEKS kalimat & situasi.",
+        contoh: [
+          {jp:"にもつを　もちましょうか。", id:"Mau saya bawakan barangnya?"},
+          {jp:"まどを　あけましょうか。", id:"Mau saya bukain jendelanya?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 19 (Bab 8)",
+    judul: "Subjek + が (Penegas Subjek, beda dengan は)",
+    sub: "が dan は emang sering keliatan bisa saling gantiin, tapi fungsinya beda. は nandain TOPIK (hal yang lagi dibahas/udah sama-sama diketahui), sedangkan が nandain SUBJEK secara spesifik/tegas — biasanya dipakai kalau infonya masih baru, belum ada kesamaan pemahaman, atau lagi ditegasin/dibedain dari yang lain.",
+    items: [
+      {
+        pola: "だれ／なに／どこ　が　〜か。",
+        romaji: "Dare/nani/doko + ga + ~ ka?",
+        arti: "SIAPA/APA/DI MANA yang [V]?",
+        catatan: "Kalau subjek kalimatnya kata tanya (だれ、なに、どこ, dst), WAJIB pakai が, gak bisa は. Soalnya は cuma bisa nempel di hal yang udah jelas/disepakati, sedangkan kata tanya itu justru nanyain hal yang BELUM diketahui — jadi otomatis pakai が. Jawabannya juga ikutan pakai が buat negesin siapa/apa persisnya.",
+        contoh: [
+          {jp:"だれが　きますか。", id:"Siapa yang datang?"},
+          {jp:"たなかさんが　きます。", id:"Tanaka yang datang."}
+        ]
+      },
+      {
+        pola: "〔hal/tokoh baru〕が　〜。",
+        romaji: "[hal baru] + ga + ~",
+        arti: "memperkenalkan sesuatu yang belum disebut sebelumnya",
+        catatan: "が dipakai kalau informasinya baru pertama kali disebut dan lawan bicara belum tau soal itu. Begitu topiknya udah disepakati/diulang lagi di kalimat berikutnya, baru ganti pakai は. Ini nyempurnain pemahaman kamu yang bilang 'salah satu pembicara gak tau/gak setuju soal topiknya' — lebih tepatnya: が dipakai selama topiknya BELUM ada kesamaan pemahaman antara pembicara & lawan bicara (baik karena emang baru disebut, atau karena mau ditegasin/dibedain siapa/apa persisnya), bukan soal 'setuju atau nggak'.",
+        contoh: [
+          {jp:"むかし、おじいさんが　いました。", id:"Dahulu kala, ada seorang kakek. (mengenalkan tokoh baru di cerita)"}
+        ]
+      },
+      {
+        pola: "〔KB〕が　〜。 (menegaskan/mengoreksi, beda dari yang lain)",
+        romaji: "[KB] + ga + ~",
+        arti: "KHUSUS [KB] ini yang..., bukan yang lain",
+        catatan: "が juga dipakai buat NEGESIN atau MENGOREKSI — nunjukkin 'khusus ini, bukan yang lain'. Sering muncul kalau lagi ngebenerin kesalahpahaman lawan bicara tentang siapa/apa yang dimaksud.",
+        contoh: [
+          {jp:"A: たなかさんは　がくせいですか。 B: いいえ、やまださんが　がくせいです。", id:"A: Apakah Tanaka murid? B: Bukan, Yamada yang murid. (mengoreksi: yang murid itu Yamada, bukan Tanaka)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 19 (Bab 8)",
+    judul: "まだ／もう ＋ Kata Kerja (Belum, Sedang, Sudah, Sudah Tidak Lagi)",
+    sub: "Empat kombinasi まだ／もう dengan bentuk kata kerja yang beda-beda, gampang ketuker karena keliatan mirip. まだ condong ke 'masih/belum' (arah masa depan yang masih terbuka), もう condong ke 'sudah' (statusnya udah kelar/berakhir) — tapi makna persisnya berubah tergantung bentuk kata kerja di belakangnya.",
+    items: [
+      {
+        pola: "まだ　動詞（ません-けい）。",
+        romaji: "Mada + V-masen.",
+        arti: "Belum [V].",
+        catatan: "まだ digabung kata kerja NEGATIF (ません) artinya aksinya BELUM kejadian sama sekali — tapi masih ada rencana/kemungkinan bakal dilakuin nanti.",
+        contoh: [
+          {jp:"まだ　ひるごはんを　たべません。", id:"Belum makan siang."}
+        ]
+      },
+      {
+        pola: "まだ　動詞（てけい）＋います。",
+        romaji: "Mada + V-te imasu.",
+        arti: "Masih [sedang] [V].",
+        catatan: "まだ digabung kata kerja POSITIF bentuk てform+います (penanda aksi sedang berlangsung, Hari 18) artinya aksinya MASIH berlangsung sampai sekarang, belum kelar-kelar. Beda sama まだ+ません: yang ini aksinya UDAH dimulai tapi belum selesai, sedangkan まだ+ません aksinya malah BELUM dimulai sama sekali.",
+        contoh: [
+          {jp:"まだ　しごとを　しています。", id:"Masih kerja (belum selesai-selesai)."}
+        ]
+      },
+      {
+        pola: "もう　動詞（ました）。",
+        romaji: "Mou + V-mashita.",
+        arti: "Sudah [V].",
+        catatan: "Ini pola yang udah dipelajari di Hari 16 — もう+ました nekanin aksinya UDAH SELESAI dikerjain (beda dari ~ました polos yang cuma netral nyeritain masa lalu). Ditaruh lagi di sini biar gampang dibandingin sama 3 pola lain di sekitarnya.",
+        contoh: [
+          {jp:"もう　ばんごはんを　たべました。", id:"Sudah makan malam."}
+        ]
+      },
+      {
+        pola: "もう　動詞（ません）。",
+        romaji: "Mou + V-masen.",
+        arti: "Sudah tidak [V] (lagi).",
+        catatan: "PENTING: beda sama まだ+ません! もう+ません artinya aksinya DULU pernah/sempat dilakuin, tapi SEKARANG udah berhenti dan ke depannya juga gak akan dilakuin lagi. まだ+ません artinya aksinya emang dari awal belum pernah kejadian, tapi masih ada kemungkinan terjadi nanti. Jadi まだ = masa depan masih terbuka, もう = ceritanya udah ditutup/kelar.",
+        contoh: [
+          {jp:"もう　たばこを　すいません。", id:"Sudah tidak merokok (lagi)."},
+          {jp:"A: まだ　あの　みせで　はたらいていますか。 B: いいえ、もう　はたらいません。", id:"A: Masih kerja di toko itu? B: Tidak, sudah tidak kerja (di situ lagi)."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 20 (Bab 8)",
+    judul: "Sは　Oが　〜 (が sebagai Penanda Keterampilan/Ciri Khusus)",
+    sub: "が di sini BUKAN buat mempertegas subjek kayak Hari 19, tapi jadi partikel OBJEK khusus buat kata-kata yang nyatain keterampilan, kemampuan, atau kondisi (bukan aksi transitif biasa yang pake を). Pola dasarnya: 〔S〕は　〔O〕が　〔keterangan〕。",
+    items: [
+      {
+        pola: "Sは　Oが　じょうずです／へたです。",
+        romaji: "S wa O ga jouzu/heta desu.",
+        arti: "S jago/gak jago dalam O.",
+        catatan: "じょうず (mahir) dan へた (gak jago) masuk pola yang sama kayak すきです／きらいです (Hari 15-an) — Objek keterampilan/perasaannya ditandain が, bukan を, karena bukan aksi yang langsung dikerjain ke objek itu, tapi lebih ke KONDISI/KEMAMPUAN.",
+        contoh: [
+          {jp:"わたしは にほんごが じょうずです。", id:"Saya jago bahasa Jepang."},
+          {jp:"いもうとは すうがくが へたです。", id:"Adik saya gak jago matematika."}
+        ]
+      },
+      {
+        pola: "Sは　Oが　わかります／できます。",
+        romaji: "S wa O ga wakarimasu/dekimasu.",
+        arti: "S mengerti/bisa melakukan O.",
+        catatan: "わかります (mengerti) dan できます (bisa) juga pakai が buat objeknya, meski keduanya kata kerja (bukan kata sifat kayak じょうず). Ini beda dari kata kerja transitif biasa (たべます、かいます, dll) yang objeknya pakai を.",
+        contoh: [
+          {jp:"あには えいごが わかります。", id:"Kakak laki-laki saya paham bahasa Inggris."},
+          {jp:"ちょうじょは りょうりが できます。", id:"Anak perempuan sulung itu bisa masak."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 20 (Bab 8)",
+    judul: "〜くて (い-keiyoushi) ／ 〜で (な-keiyoushi) — Menghubungkan 2 Kata Sifat Setara",
+    sub: "Pola buat gabungin 2 kata sifat yang levelnya SETARA (bukan sebab-akibat kayak pola どうして／から sebelumnya) — dipakai buat gambarin karakteristik seseorang atau benda dengan lebih dari 1 sifat sekaligus.",
+    items: [
+      {
+        pola: "い-けいようし（〜い→〜くて）＋　けいようし２。",
+        romaji: "[i-adj, ~i→~kute] + kata sifat 2.",
+        arti: "[sifat 1] dan [sifat 2].",
+        catatan: "Cara ubah い-keiyoushi jadi くて: buang い di akhir, ganti くて. Contoh: かわいい→かわいくて.",
+        contoh: [
+          {jp:"ちょうじょは かわいくて、あたまが いいです。", id:"Anak perempuan sulung itu cantik/imut dan pintar."}
+        ]
+      },
+      {
+        pola: "な-けいようし（〜な→〜で）＋　けいようし２。",
+        romaji: "[na-adj, ~na→~de] + kata sifat 2.",
+        arti: "[sifat 1] dan [sifat 2].",
+        catatan: "Cara ubah な-keiyoushi jadi で: tinggal ganti な jadi で. Contoh: きれい(な)→きれいで.",
+        contoh: [
+          {jp:"じじょは きれいで、しんせつです。", id:"Anak perempuan kedua itu cantik dan baik hati."}
+        ]
+      },
+      {
+        pola: "い-けいようし（くて）＋な-けいようし（です）／な-けいようし（で）＋い-けいようし（です）。",
+        romaji: "campuran i-adj + na-adj (urutan bebas).",
+        arti: "[sifat 1] dan [sifat 2] (campuran jenis).",
+        catatan: "い-keiyoushi dan な-keiyoushi bisa dicampur bebas, urutannya gak masalah — yang penting masing-masing diubah sesuai jenisnya sendiri (い→くて, な→で), terus kata sifat terakhir tetep pakai です di ujung kalimat.",
+        contoh: [
+          {jp:"あにいは やさしくて、まじめです。", id:"Kakak laki-laki saya baik hati dan rajin/serius. (i-adj + na-adj)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 20 (Bab 8)",
+    judul: "〔ばしょ〕に　動詞（て）＋います (Kegiatan/Kondisi yang Berlangsung Lama)",
+    sub: "Beda sama てform+います di Hari 18 (たべています = lagi makan, aksi sesaat yang lagi kejadian SEKARANG) — pola ini pakai kata kerja tertentu (すみます、つとめます, dll) buat nyatain KONDISI/KEBIASAAN yang berlangsung LAMA/menetap, bukan cuma sesaat.",
+    items: [
+      {
+        pola: "〔ばしょ〕に　すんでいます。",
+        romaji: "[tempat] ni sunde imasu.",
+        arti: "Tinggal di [tempat].",
+        catatan: "すんでいます nunjukin STATUS tempat tinggal yang berlangsung lama/menetap, bukan aksi 'lagi tinggal' sesaat kayak たべています (lagi makan, yang beberapa menit lagi selesai).",
+        contoh: [
+          {jp:"わたしは じゃかるたに すんでいます。", id:"Saya tinggal di Jakarta."}
+        ]
+      },
+      {
+        pola: "〔かいしゃ〕に　つとめています。",
+        romaji: "[perusahaan] ni tsutomete imasu.",
+        arti: "Bekerja di [perusahaan].",
+        catatan: "つとめています juga nyatain status pekerjaan yang berlaku terus, bukan sesaat. けっこんしています (sudah menikah, yang udah dipelajari sebagai kotoba) masuk pola yang sama — status yang berlaku terus-menerus sampai sekarang.",
+        contoh: [
+          {jp:"ちちは ぎんこうに つとめています。", id:"Ayah saya bekerja di bank."},
+          {jp:"あには もう けっこんしています。", id:"Kakak laki-laki saya sudah menikah."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 20 (Bab 8)",
+    judul: "〔ひと〕と　〔にんずう〕で　〜 (Melakukan Sesuatu Bersama, dengan Jumlah Orang)",
+    sub: "Lanjutan dari ひとりで (kotoba) dan pola 〔ひと〕と〔aktivitas〕 (Hari sebelumnya) — sekarang digabung buat nyebutin BERAPA ORANG yang ngelakuin bareng, termasuk diri sendiri.",
+    items: [
+      {
+        pola: "〔ひと〕と　〔にんずう〕で　〔動詞〕。",
+        romaji: "[orang] to [jumlah orang] de [kata kerja].",
+        arti: "[Melakukan sesuatu] bersama [orang], sebanyak [jumlah] orang.",
+        catatan: "ひとりで (sendirian) adalah kasus khusus buat 1 orang — begitu lebih dari 1 orang, tetep pakai partikel で yang nempel di counter orangnya (ふたりで、さんにんで、よにんで, dst), digabung sama と buat nyebutin siapa temennya.",
+        contoh: [
+          {jp:"かぞくと よにんで すんでいます。", id:"Tinggal berempat bersama keluarga."},
+          {jp:"ともだちと さんにんで りょこうしました。", id:"Jalan-jalan bertiga bersama teman."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 20 (Bab 8)",
+    judul: "〔KB：orang〕が　〔にんずう〕　います (Menyatakan Jumlah Anggota Keluarga)",
+    sub: "Versi lebih spesifik dari pola 〔KB〕が〔jumlah〕あります／います yang udah dipelajari — sekarang fokus ke orang/anggota keluarga, sering dipakai pas awal かぞくの しょうかい (perkenalan keluarga).",
+    items: [
+      {
+        pola: "〔きょうだい／いもうと／あに, dst〕が　〔にんずう〕　います。",
+        romaji: "[anggota keluarga] ga [jumlah] imasu.",
+        arti: "Punya [jumlah] [anggota keluarga].",
+        catatan: "Sama persis konsepnya kayak pola umum が+jumlah+います (utk makhluk hidup), tapi di sini biasa dipakai spesifik pas cerita soal keluarga sendiri.",
+        contoh: [
+          {jp:"いもうとが ふたり います。", id:"Saya punya dua adik perempuan."},
+          {jp:"あにが ひとり います。", id:"Saya punya satu kakak laki-laki."}
         ]
       }
     ]
