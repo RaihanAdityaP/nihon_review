@@ -2523,6 +2523,78 @@ bab8: {
     {k:"おかね",r:"okane",a:"Uang",kj:"お金"},
     {k:"くつした",r:"kutsushita",a:"Kaos kaki",kj:"靴下"}
   ]}
+},
+bab9: {
+  "Hobi & Hiburan": { rows: [
+    {k:"とくに",r:"tokuni",a:"Khususnya, terutama",kj:"特に"},
+    {k:"クラシック",r:"kurashikku",a:"Klasik"},
+    {k:"しょうせつ",r:"shousetsu",a:"Novel",kj:"小説"},
+    {k:"ポップス",r:"poppusu",a:"Pop"},
+    {k:"ダイビング",r:"daibingu",a:"Penyelaman"},
+    {k:"ダンス",r:"dansu",a:"Tarian, dansa"},
+    {k:"ドラマ",r:"dorama",a:"Drama"},
+    {k:"プール",r:"puuru",a:"Kolam renang"},
+    {k:"まんが",r:"manga",a:"Komik, manga",kj:"漫画"},
+    {k:"きって",r:"kitte",a:"Perangko",kj:"切手"},
+    {k:"おかし",r:"okashi",a:"Camilan manis, kue",kj:"お菓子"},
+    {k:"つり",r:"tsuri",a:"Pancing, memancing",kj:"釣り"}
+  ]},
+  "Kegiatan & Klub": { rows: [
+    {k:"できます",r:"dekimasu",a:"Bisa, dapat"},
+    {k:"イベント",r:"ibento",a:"Acara, event"},
+    {k:"～クラブ",r:"~kurabu",a:"Klub~"},
+    {k:"はいります",r:"hairimasu",a:"Masuk",kj:"入ります"},
+    {k:"さんかします",r:"sanka shimasu",a:"Berpartisipasi, turut serta",kj:"参加します"},
+    {k:"すごい",r:"sugoi",a:"Hebat, luar biasa"},
+    {k:"いろいろ",r:"iroiro",a:"Bermacam-macam",kj:"いろいろ【な】"},
+    {k:"けいじばん",r:"keijiban",a:"Papan pengumuman",kj:"掲示板"},
+    {k:"しょどう",r:"shodou",a:"Seni kaligrafi",kj:"書道"},
+    {k:"きょうしつ",r:"kyoushitsu",a:"Kelas, ruang kelas",kj:"教室"},
+    {k:"ならいます",r:"naraimasu",a:"Belajar dari",kj:"習います"},
+    {k:"のります",r:"norimasu",a:"Naik (kendaraan)",kj:"乗ります"},
+    {k:"もうしこみます",r:"moushikomimasu",a:"Mendaftar, melamar",kj:"申し込みます"},
+    {k:"じょうずに",r:"jouzu ni",a:"Dengan mahir",kj:"上手に"}
+  ]},
+  "Administrasi & Pendaftaran": { rows: [
+    {k:"うけつけ",r:"uketsuke",a:"Resepsionis",kj:"受付"},
+    {k:"がいこくじんとうろく",r:"gaikokujin touroku",a:"Pendaftaran warga asing",kj:"外国人登録"},
+    {k:"でんわばんごう",r:"denwa bangou",a:"Nomor telepon",kj:"電話番号"},
+    {k:"～ばん",r:"~ban",a:"Nomor~",kj:"～番"},
+    {k:"じゅうしょ",r:"juusho",a:"Alamat",kj:"住所"},
+    {k:"どうやって",r:"douyatte",a:"Dengan cara bagaimana"},
+    {k:"いいます",r:"iimasu",a:"Mengatakan",kj:"言います"},
+    {k:"はらいます",r:"haraimasu",a:"Membayar",kj:"払います"},
+    {k:"おります",r:"orimasu",a:"Turun (kendaraan)",kj:"降ります"},
+    {k:"みせます",r:"misemasu",a:"Memperlihatkan, menunjukkan",kj:"見せます"},
+    {k:"よやくします",r:"yoyaku shimasu",a:"Memesan, mereservasi",kj:"予約します"}
+  ]},
+  "Komunitas & Aktivitas": { rows: [
+    {k:"ちいき",r:"chiiki",a:"Wilayah",kj:"地域"},
+    {k:"こうりゅうかい",r:"kouryuukai",a:"Pertukaran budaya",kj:"交流会"},
+    {k:"うんてんします",r:"unten shimasu",a:"Mengendarai, menyetir",kj:"運転します"},
+    {k:"あつめます",r:"atsumemasu",a:"Mengumpulkan",kj:"集めます"},
+    {k:"およぎます",r:"oyogimasu",a:"Berenang",kj:"泳ぎます"},
+    {k:"かきます",r:"kakimasu",a:"Menulis",kj:"書きます"}
+  ]},
+  "Frekuensi & Waktu": { rows: [
+    {k:"いつも",r:"itsumo",a:"Selalu"},
+    {k:"よく",r:"yoku",a:"Sering, dengan baik"},
+    {k:"ときどき",r:"tokidoki",a:"Kadang-kadang",kj:"時々"},
+    {k:"あまり",r:"amari",a:"Tidak begitu (diikuti bentuk negatif)"},
+    {k:"ぜんぜん",r:"zenzen",a:"Sama sekali tidak (diikuti bentuk negatif)",kj:"全然"},
+    {k:"さいきん",r:"saikin",a:"Akhir-akhir ini",kj:"最近"},
+    {k:"でも",r:"demo",a:"Tetapi, namun"}
+  ]},
+  "Counter (Satuan Hitung)": { rows: [
+    {k:"～にち",r:"~nichi",a:"Tanggal~",kj:"～日"},
+    {k:"～しゅうかん",r:"~shuukan",a:"~minggu",kj:"～週間"},
+    {k:"～がつ",r:"~gatsu",a:"Bulan~",kj:"～月"},
+    {k:"～ねん",r:"~nen",a:"Tahun~, ~tahun",kj:"～年"},
+    {k:"～かい",r:"~kai",a:"~kali",kj:"～回"},
+    {k:"～さつ",r:"~satsu",a:"~buah (buku, benda dijilid)",kj:"～冊"},
+    {k:"～ほん",r:"~hon/pon/bon",a:"~buah (benda silindris/panjang)",kj:"～本"},
+    {k:"～はい",r:"~hai/pai/bai",a:"~gelas, mangkuk",kj:"～杯"}
+  ]}
 }
 
 }; // end BUKU
@@ -2971,6 +3043,95 @@ const KANJI = [
       { w: "国", furi: "くに", a: "negara" },
       { w: "外国", furi: "がいこく", a: "asing, luar negeri" },
       { w: "国旗", furi: "こっき", a: "bendera negara" }
+    ]
+  },
+  {
+    tema: "Hari 6", char: "全", onyomi: ["ゼン"], kunyomi: ["すべ.て"], arti: "semua",
+    kotoba: [
+      { w: "全て", furi: "すべて", a: "semuanya, segalanya" },
+      { w: "全然", furi: "ぜんぜん", a: "sama sekali" },
+      { w: "全員", furi: "ぜんいん", a: "semua orang" },
+      { w: "全部", furi: "ぜんぶ", a: "semuanya (benda)" }
+    ]
+  },
+  {
+    tema: "Hari 6", char: "金", onyomi: ["キン"], kunyomi: ["かね"], arti: "uang, emas, logam",
+    kotoba: [
+      { w: "お金", furi: "おかね", a: "uang" },
+      { w: "お金持ち", furi: "おかねもち", a: "orang kaya" },
+      { w: "金曜日", furi: "きんようび", a: "hari Jumat" },
+      { w: "金", furi: "きん", a: "emas" }
+    ]
+  },
+  {
+    tema: "Hari 6", char: "工", onyomi: ["コウ", "ク"], kunyomi: [], arti: "kerja, pertukangan",
+    kotoba: [
+      { w: "大工", furi: "だいく", a: "tukang kayu" },
+      { w: "工場", furi: "こうじょう", a: "pabrik" },
+      { w: "工業", furi: "こうぎょう", a: "industri" },
+      { w: "人工の〜", furi: "じんこうの〜", a: "buatan 〜" }
+    ]
+  },
+  {
+    tema: "Hari 6", char: "左", onyomi: ["サ"], kunyomi: ["ひだり"], arti: "kiri",
+    kotoba: [
+      { w: "左", furi: "ひだり", a: "kiri" },
+      { w: "左折する", furi: "させつする", a: "belok kiri" },
+      { w: "左側", furi: "ひだりがわ", a: "sisi kiri" }
+    ]
+  },
+  {
+    tema: "Hari 6", char: "右", onyomi: ["ユウ"], kunyomi: ["みぎ"], arti: "kanan",
+    kotoba: [
+      { w: "右", furi: "みぎ", a: "kanan" },
+      { w: "右折する", furi: "うせつする", a: "belok kanan" },
+      { w: "右側", furi: "みぎがわ", a: "sisi kanan" },
+      { w: "左右", furi: "さゆう", a: "kiri-kanan" }
+    ]
+  },
+  {
+    tema: "Hari 6", char: "友", onyomi: ["ユウ"], kunyomi: ["とも"], arti: "teman",
+    kotoba: [
+      { w: "友達", furi: "ともだち", a: "teman" },
+      { w: "友人", furi: "ゆうじん", a: "sahabat" },
+      { w: "親友", furi: "しんゆう", a: "teman dekat" }
+    ]
+  },
+  {
+    tema: "Hari 6", char: "何", onyomi: [], kunyomi: ["なに", "なん"], arti: "apa",
+    kotoba: [
+      { w: "何", furi: "なに", a: "apa" },
+      { w: "何人", furi: "なんにん", a: "berapa orang" },
+      { w: "何人", furi: "なにじん", a: "bangsa mana" },
+      { w: "何時", furi: "なんじ", a: "jam berapa" }
+    ]
+  },
+  {
+    tema: "Hari 6", char: "手", onyomi: ["シュ"], kunyomi: ["て"], arti: "tangan",
+    kotoba: [
+      { w: "手", furi: "て", a: "tangan" },
+      { w: "手紙", furi: "てがみ", a: "surat" },
+      { w: "手伝う", furi: "てつだう", a: "membantu" },
+      { w: "運転手", furi: "うんてんしゅ", a: "sopir" }
+    ]
+  },
+  {
+    tema: "Hari 6", char: "切", onyomi: ["セツ"], kunyomi: ["き.る"], arti: "memotong",
+    kotoba: [
+      { w: "切る", furi: "きる", a: "memotong" },
+      { w: "切符", furi: "きっぷ", a: "karcis" },
+      { w: "大切", furi: "たいせつ", a: "penting, berharga" },
+      { w: "親切", furi: "しんせつ", a: "ramah, baik hati" }
+    ]
+  },
+  {
+    tema: "Hari 6", char: "分", onyomi: ["フン", "ブン", "プン"], kunyomi: ["わ.ける", "わ.かる"], arti: "bagi, menit",
+    kotoba: [
+      { w: "分かる", furi: "わかる", a: "mengerti" },
+      { w: "分ける", furi: "わける", a: "membagi" },
+      { w: "五分", furi: "ごふん", a: "lima menit" },
+      { w: "十分", furi: "じゅっぷん", a: "10 menit" },
+      { w: "半分", furi: "はんぶん", a: "separuh, sebagian" }
     ]
   }
 ]; // end KANJI
@@ -5570,6 +5731,74 @@ const BUNPOU = [
         contoh: [
           {jp:"いもうとが ふたり います。", id:"Saya punya dua adik perempuan."},
           {jp:"あにが ひとり います。", id:"Saya punya satu kakak laki-laki."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 21 (Bab 8)",
+    judul: "Kata Benda ＋ で (Menghubungkan 2 Predikat Kata Benda, Setara)",
+    sub: "Kata benda + で berfungsi PERSIS sama kayak な-keiyoushi+で di Hari 20 — nunjukin 2 hal yang setara/sejajar dalam 1 kalimat. Bedanya cuma di sini yang disambung itu 2 STATUS/IDENTITAS (kata benda), bukan 2 sifat.",
+    items: [
+      {
+        pola: "KB1（で）、KB2です。",
+        romaji: "KB1 de, KB2 desu.",
+        arti: "[Status 1], dan [status 2].",
+        catatan: "Cara ubahnya sama kayak な-keiyoushi: buang です, ganti で. Contoh: いしゃです→いしゃで. Pola ini sering dipakai buat ngenalin beberapa orang sekaligus dalam 1 kalimat, kayak pas cerita keluarga.",
+        contoh: [
+          {jp:"ちちは いしゃで、ははは かんごしです。", id:"Ayah saya dokter, ibu saya perawat."},
+          {jp:"あには だいがくせいで、いもうとは こうこうせいです。", id:"Kakak laki-laki saya mahasiswa, adik perempuan saya anak SMA."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 21 (Bab 8)",
+    judul: "〔pemberi〕は　〔penerima〕に　〔KB〕を　あげます (Memberikan Sesuatu)",
+    sub: "Pola dasar buat nyatain 'A ngasih X ke B' — dipakai kalau pembicara (atau orang lain) MEMBERIKAN sesuatu langsung ke orang lain.",
+    items: [
+      {
+        pola: "〔pemberi〕は　〔penerima〕に　〔KB〕を　あげます。",
+        romaji: "[pemberi] wa [penerima] ni [KB] wo agemasu.",
+        arti: "[Pemberi] memberikan [KB] ke [penerima].",
+        catatan: "Partikel に di sini nunjukin TUJUAN pemberian (siapa yang nerima), beda dari に penanda tempat tinggal lama di Hari 20 (すんでいます).",
+        contoh: [
+          {jp:"わたしは いもうとに プレゼントを あげます。", id:"Saya memberikan hadiah ke adik perempuan saya."},
+          {jp:"ちちは ははに ネックレスを あげます。", id:"Ayah memberikan kalung ke ibu."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 21 (Bab 8)",
+    judul: "〔pengirim〕は　〔penerima〕に　〔KB〕を　おくります (Mengirimkan Sesuatu)",
+    sub: "Mirip pola あげます tapi khusus buat aksi MENGIRIM (biasanya lewat pos/paket/surat/email), bukan ngasih langsung dari tangan ke tangan.",
+    items: [
+      {
+        pola: "〔pengirim〕は　〔penerima〕に　〔KB〕を　おくります。",
+        romaji: "[pengirim] wa [penerima] ni [KB] wo okurimasu.",
+        arti: "[Pengirim] mengirimkan [KB] ke [penerima].",
+        catatan: "Beda dari あげます: あげます nekanin aksi MEMBERI (bisa langsung dikasihkan di tempat), おくります nekanin aksi MENGIRIM (lewat jasa pengiriman/pos/email, gak harus ketemu langsung).",
+        contoh: [
+          {jp:"わたしは かぞくに てがみを おくります。", id:"Saya mengirim surat ke keluarga saya."},
+          {jp:"あには いもうとに メールを おくります。", id:"Kakak laki-laki mengirim email ke adik perempuan."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 21 (Bab 8)",
+    judul: "〔penerima〕は　〔pemberi〕に　〔KB〕を　もらいます (Menerima Sesuatu)",
+    sub: "Kebalikan sudut pandang dari あげます — kalau あげます itu dari sisi yang NGASIH, もらいます itu dari sisi yang NERIMA.",
+    items: [
+      {
+        pola: "〔penerima〕は　〔pemberi〕に　〔KB〕を　もらいます。",
+        romaji: "[penerima] wa [pemberi] ni [KB] wo moraimasu.",
+        arti: "[Penerima] menerima [KB] dari [pemberi].",
+        catatan: "Partikel penunjuk 'dari siapa' tetep pakai に (bukan から), meskipun artinya mirip 'dari'. Jangan ketuker sama から yang biasa dipakai buat alasan (Hari 13) atau titik awal jarak/waktu (Hari 6 & 8).",
+        contoh: [
+          {jp:"わたしは あにに プレゼントを もらいます。", id:"Saya menerima hadiah dari kakak laki-laki saya."},
+          {jp:"ははは ちちに ネックレスを もらいます。", id:"Ibu menerima kalung dari ayah."}
         ]
       }
     ]
