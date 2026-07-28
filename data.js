@@ -5803,6 +5803,150 @@ const BUNPOU = [
       }
     ]
   },
+  {
+    tema: "Hari 22 (Bab 9)",
+    judul: "動詞の辞書形 (Bentuk Kamus / Jishokei)",
+    sub: "Bentuk paling dasar kata kerja, kayak yang tertulis di kamus — dipakai buat banyak pola grammar lanjutan (salah satunya こと di poin 2). Cara ubahnya beda tiap kelompok, jadi harus hafal per kelompok.",
+    items: [
+      {
+        pola: "Kelompok I: ubah bunyi い-dan (sebelum ます) jadi bunyi う-dan.",
+        romaji: "Golongan I, ~imasu → ~u.",
+        arti: "Bentuk kamus Kelompok I.",
+        catatan: "Konsonan terakhirnya tetep, cuma vokal い berubah jadi う. Contoh: かいます→かう(membeli), のみます→のむ(minum), かきます→かく(menulis), はなします→はなす(bicara), まちます→まつ(menunggu), あそびます→あそぶ(bermain), しにます→しぬ(mati).",
+        contoh: [
+          {jp:"わたしは まいにち にほんごを はなします。→　はなす", id:"Saya bicara bahasa Jepang tiap hari. → (bentuk kamus) はなす"},
+          {jp:"ともだちと あそびます。→　あそぶ", id:"Bermain bersama teman. → (bentuk kamus) あそぶ"}
+        ]
+      },
+      {
+        pola: "Kelompok II: buang ます, tambah る。",
+        romaji: "Golongan II, ~masu → ~ru.",
+        arti: "Bentuk kamus Kelompok II.",
+        catatan: "Paling gampang — tinggal ganti ます jadi る. Contoh: たべます→たべる(makan), ねます→ねる(tidur), みます→みる(melihat), おきます→おきる(bangun, meski konjugasinya golongan II bukan I — cek daftar KATA_KERJA kalau ragu).",
+        contoh: [
+          {jp:"あさごはんを たべます。→　たべる", id:"Makan sarapan. → (bentuk kamus) たべる"}
+        ]
+      },
+      {
+        pola: "Kelompok III: します→する、きます→くる。",
+        romaji: "Golongan III (tidak beraturan).",
+        arti: "Bentuk kamus Kelompok III.",
+        catatan: "Cuma 2 kata kerja ini yang golongan III, harus dihafal langsung gak ada pola: します(melakukan)→する, きます(datang)→くる. Hati-hati: きます bisa berarti 'datang' (来ます, golongan III→くる) ATAU 'memakai baju' (着ます, golongan II→きる) — beda kanji, beda golongan, beda bentuk kamus!",
+        contoh: [
+          {jp:"にほんごを べんきょうします。→　べんきょうする", id:"Belajar bahasa Jepang. → (bentuk kamus) べんきょうする"}
+        ]
+      },
+      {
+        pola: "Bentuk ない (negatif) dari bentuk kamus, buat semua kelompok.",
+        romaji: "~nai form.",
+        arti: "Tidak [V] (bentuk kamus/santai).",
+        catatan: "Kelompok I: ubah bunyi う-dan jadi あ-dan + ない (かう→かわない perhatikan う→わ, khusus kata yang akhirannya う; のむ→のまない; かく→かかない). Kelompok II: buang る, tambah ない (たべる→たべない). Kelompok III: irregular total — する→しない, くる→こない.",
+        contoh: [
+          {jp:"あさごはんを たべません。→　たべない", id:"Tidak makan sarapan. → (bentuk santai negatif) たべない"},
+          {jp:"きょうは がっこうに いきません。→　いかない", id:"Hari ini tidak pergi ke sekolah. → いかない"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 22 (Bab 9)",
+    judul: "動詞（辞書形）＋こと (Menjadikan Kata Kerja sebagai Kata Benda)",
+    sub: "こと mengubah klausa kata kerja jadi frasa kata benda ('hal/kegiatan melakukan X') — dipakai bareng pola yang objeknya harus kata benda, kayak すきです／とくいです (Hari 20) atau できます.",
+    items: [
+      {
+        pola: "動詞（じしょけい）＋ことが　すきです／とくいです／できます。",
+        romaji: "[V-jisho] + koto ga suki/tokui/dekimasu desu.",
+        arti: "Suka/jago/bisa [hal melakukan V].",
+        catatan: "こと nempel di belakang kata kerja BENTUK KAMUS (bukan ます-form), terus seluruh frasanya diperlakukan kayak kata benda biasa — makanya bisa dipasangin sama が (Hari 20, Sは Oが〜).",
+        contoh: [
+          {jp:"およぐことが すきです。", id:"Suka berenang. (hal berenang itu disukai)"},
+          {jp:"りょうりを する ことが とくいです。", id:"Jago masak. (pakai とくい, Hari 20)"},
+          {jp:"うんてんする ことが できます。", id:"Bisa nyetir."}
+        ]
+      },
+      {
+        pola: "動詞（ないけい）＋ことが　たいせつです／だいじょうぶです, dst.",
+        romaji: "[V-nai] + koto ga taisetsu desu, dst.",
+        arti: "[Hal] TIDAK melakukan V itu penting/dll.",
+        catatan: "Versi negatifnya tinggal pakai bentuk ない (dari poin sebelumnya) sebelum こと, bukan bentuk kamus biasa.",
+        contoh: [
+          {jp:"たばこを すわないことが たいせつです。", id:"Penting untuk tidak merokok."},
+          {jp:"よる おそく ねないことが からだに いいです。", id:"Tidak tidur terlalu malam itu baik untuk tubuh."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 22 (Bab 9)",
+    judul: "とくに／よく／でも (Penegasan, Frekuensi, dan Kontras)",
+    sub: "Tiga kata keterangan yang sering dipakai bareng: とくに buat negesin 1 hal dari beberapa pilihan, よく buat frekuensi/kualitas, でも buat nyambungin 2 kalimat yang isinya berlawanan.",
+    items: [
+      {
+        pola: "〔beberapa hal〕の　なかで、とくに　〔KB〕が　すきです。",
+        romaji: "~ no naka de, tokuni ~ ga suki desu.",
+        arti: "Dari [beberapa hal], yang paling/terutama [disukai] adalah [KB].",
+        catatan: "とくに dipakai buat nunjuk 1 hal yang PALING menonjol di antara beberapa pilihan. Versi negatifnya jadi ungkapan tetap: とくに ありません = 'gak ada yang spesifik/khusus'.",
+        contoh: [
+          {jp:"スポーツの なかで、とくに サッカーが すきです。", id:"Dari olahraga, saya paling suka sepak bola."},
+          {jp:"A：すきな たべものは なんですか。 B：とくに ありません。なんでも たべます。", id:"A: Makanan favoritmu apa? B: Gak ada yang spesifik. Saya makan apa aja."}
+        ]
+      },
+      {
+        pola: "よく　〔動詞〕。 (2 arti: frekuensi ATAU kualitas)",
+        romaji: "yoku + [kata kerja].",
+        arti: "Sering [V]. / [V] dengan baik/rajin.",
+        catatan: "よく punya 2 nuansa tergantung konteks: (1) frekuensi — 'sering' (よく えいがを みます = sering nonton film), (2) kualitas — 'dengan baik/rajin' (よく べんきょうします = belajar dengan rajin/sungguh-sungguh). Kalau versi negatif frekuensinya, JANGAN pakai よく — pakai あまり／ぜんぜん＋ません (Hari 11) buat 'jarang/gak pernah'.",
+        contoh: [
+          {jp:"まいしゅう、ともだちと よく あそびます。", id:"Tiap minggu, sering main bareng teman."},
+          {jp:"あまり あそびません。（よく あそびませんは つかいません）", id:"Jarang main. (よくあそびません TIDAK dipakai — harus あまり)"}
+        ]
+      },
+      {
+        pola: "〔かんたん〕です。でも、〔むずかしい〕です。",
+        romaji: "~desu. Demo, ~desu.",
+        arti: "[Kalimat 1]. Tapi, [kalimat 2 yang berlawanan].",
+        catatan: "でも menyambung 2 KALIMAT terpisah (bukan 2 kata sifat kayak くて/で di Hari 20), isinya harus berlawanan/kontras. Bisa diikuti kalimat positif maupun negatif di belakangnya.",
+        contoh: [
+          {jp:"にほんごは むずかしいです。でも、たのしいです。", id:"Bahasa Jepang susah. Tapi, menyenangkan."},
+          {jp:"にほんごが すきです。でも、じょうずでは ありません。", id:"Saya suka bahasa Jepang. Tapi, saya tidak mahir."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 22 (Bab 9)",
+    judul: "〔きかん〕に　〔かいすう〕（ぐらい）　動詞 (Frekuensi dalam Suatu Periode)",
+    sub: "Pola buat nyatain SEBERAPA SERING ngelakuin sesuatu dalam rentang waktu tertentu — gabungan durasi (Hari 9) + counter kali (～回, kotoba Bab 9) + ぐらい (kira-kira, opsional, Hari 9).",
+    items: [
+      {
+        pola: "〔きかん〕に　〔かいすう〕（ぐらい）　〔動詞〕。",
+        romaji: "[periode] ni [jumlah kali] (gurai) [kata kerja].",
+        arti: "Dalam [periode], (sekitar) [jumlah] kali [V].",
+        catatan: "に di sini fungsinya kayak 'per' — nunjukin rentang waktu yang jadi patokan hitungan. ぐらい boleh dihilangin kalau jumlahnya emang pasti/gak butuh perkiraan (bandingin sama どのぐらい／くらい di Hari 9 yang nanya perkiraan jarak/waktu).",
+        contoh: [
+          {jp:"いっしゅうかんに さんかい うんどうします。", id:"Seminggu (sekitar) 3 kali olahraga."},
+          {jp:"いちねんに いちど りょこうします。", id:"Setahun sekali jalan-jalan."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 22 (Bab 9)",
+    judul: "〔かつどう〕が　できます／できません (Bisa/Tidak Bisa Melakukan Suatu Kegiatan)",
+    sub: "Pola できます yang udah dipelajari di Sは Oが できます (Hari 20), sekarang dipakai TANPA subjek personal — buat nyatain kemungkinan/izin suatu kegiatan secara umum (kayak peraturan tempat atau fasilitas yang tersedia), bukan kemampuan pribadi.",
+    items: [
+      {
+        pola: "〔ばしょ〕で　〔かつどう〕が　できます／できません。",
+        romaji: "[tempat] de [kegiatan] ga dekimasu/dekimasen.",
+        arti: "Di [tempat] bisa/tidak bisa [kegiatan].",
+        catatan: "Beda dari Sは Oが できます (Hari 20) yang fokus ke KEMAMPUAN PRIBADI seseorang (contoh: わたしは りょうりが できます) — pola ini lebih ke KEMUNGKINAN/IZIN yang berlaku umum di suatu tempat/situasi, gak terikat subjek personal tertentu.",
+        contoh: [
+          {jp:"ここで しゃしんさつえいが できません。", id:"Di sini tidak bisa foto-foto."},
+          {jp:"この プールで およぐことが できます。", id:"Di kolam ini bisa berenang. (pakai こと dari poin sebelumnya)"}
+        ]
+      }
+    ]
+  },
   // ═══════════════════════════════════════════════
   // MATERI TAMBAHAN
   // ═══════════════════════════════════════════════
