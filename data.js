@@ -2595,6 +2595,76 @@ bab9: {
     {k:"～ほん",r:"~hon/pon/bon",a:"~buah (benda silindris/panjang)",kj:"～本"},
     {k:"～はい",r:"~hai/pai/bai",a:"~gelas, mangkuk",kj:"～杯"}
   ]}
+},
+bab10: {
+  "Kegiatan Kumpul & Wisata": { rows: [
+    {k:"しゅうごう",r:"shuugou",a:"Pertemuan, perkumpulan",kj:"集合"},
+    {k:"リーダー",r:"riidaa",a:"Pemimpin, ketua"},
+    {k:"てんこ",r:"tenko",a:"Absen (memanggil satu per satu)",kj:"点呼"},
+    {k:"しゅうごうします",r:"shuugou shimasu",a:"Berkumpul",kj:"集合します"},
+    {k:"もってかえります",r:"motte kaerimasu",a:"Membawa pulang",kj:"持って帰ります"},
+    {k:"おみやげ",r:"o-miyage",a:"Oleh-oleh, buah tangan",kj:"【お】土産"}
+  ]},
+  "Jalan & Arah": { rows: [
+    {k:"はし",r:"hashi"},
+    {k:"まがります",r:"magarimasu"},
+    {k:"みち",r:"michi"},
+    {k:"まっすぐ",r:"massugu"},
+    {k:"わたります",r:"watarimasu"},
+    {k:"こうさてん",r:"kousaten",a:"Persimpangan jalan",kj:"交差点"},
+    {k:"しんごう",r:"shingou",a:"Lampu lalu lintas",kj:"信号"},
+    {k:"かど",r:"kado",a:"Belokan, tikungan",kj:"角"},
+    {k:"～つめ",r:"~tsume",a:"Ke~ (kesatu, kedua, dst.)",kj:"～つ目"}
+  ]},
+  "Panca Indera & Pencarian": { rows: [
+    {k:"こえ",r:"koe"},
+    {k:"おと",r:"oto"},
+    {k:"さがします",r:"sagashimasu",a:"Mencari",kj:"探します"},
+    {k:"くすり",r:"kusuri",a:"Obat",kj:"薬"},
+    {k:"みえます",r:"miemasu",a:"Terlihat",kj:"見えます"},
+    {k:"きこえます",r:"kikoemasu",a:"Terdengar",kj:"聞こえます"},
+    {k:"よくわかりません",r:"yoku wakarimasen",a:"Tidak mengerti dengan baik"}
+  ]},
+  "Tata Krama & Barang": { rows: [
+    {k:"カーテン",r:"kaaten",a:"Korden, tirai"},
+    {k:"にもつ",r:"nimotsu"},
+    {k:"すわります",r:"suwarimasu"},
+    {k:"たいせつ",r:"taisetsu"},
+    {k:"おします",r:"oshimasu"},
+    {k:"たちます",r:"tachimasu"},
+    {k:"なくします",r:"nakushimasu"},
+    {k:"ほか",r:"hoka",a:"Yang lainnya",kj:"他"},
+    {k:"みなさん",r:"minasan",a:"Anda sekalian, kalian semua",kj:"皆さん"},
+    {k:"おきゃくさん",r:"o-kyakusan",a:"Tamu, pengunjung",kj:"お客さん"},
+    {k:"めいわく",r:"meiwaku",a:"Merepotkan, menyusahkan",kj:"迷惑"},
+    {k:"おくれます",r:"okuremasu",a:"Terlambat",kj:"遅れます"}
+  ]},
+  "Kebun Binatang": { rows: [
+    {k:"どうぶつえん",r:"doubutsuen"},
+    {k:"とり",r:"tori"},
+    {k:"とびます",r:"tobimasu"},
+    {k:"あるきます",r:"arukimasu"},
+    {k:"いりぐち",r:"iriguchi"},
+    {k:"でぐち",r:"deguchi"},
+    {k:"サル",r:"saru",a:"Monyet, kera"},
+    {k:"コアラ",r:"koara",a:"Koala"},
+    {k:"ゾウ",r:"zou",a:"Gajah"},
+    {k:"ペンギン",r:"pengin",a:"Pinguin"},
+    {k:"クマ",r:"kuma",a:"Beruang"},
+    {k:"えさ",r:"esa",a:"Pakan"},
+    {k:"～たち",r:"~tachi",a:"~sekalian"},
+    {k:"バナナ",r:"banana",a:"Pisang"},
+    {k:"かんらんしゃ",r:"kanransha",a:"Bianglala",kj:"観覧車"},
+    {k:"ボール",r:"booru",a:"Bola"}
+  ]},
+  "Kondisi Tubuh": { rows: [
+    {k:"やすみます",r:"yasumimasu"},
+    {k:"つかれます",r:"tsukaremasu"},
+    {k:"おなか",r:"onaka",a:"Perut"},
+    {k:"おなかがすきます",r:"onaka ga sukimasu",a:"Lapar"},
+    {k:"のどがかわきます",r:"nodo ga kawakimasu",a:"Haus"},
+    {k:"やります",r:"yarimasu",a:"Melakukan, mengerjakan"}
+  ]}
 }
 
 }; // end BUKU
@@ -5943,6 +6013,57 @@ const BUNPOU = [
         contoh: [
           {jp:"ここで しゃしんさつえいが できません。", id:"Di sini tidak bisa foto-foto."},
           {jp:"この プールで およぐことが できます。", id:"Di kolam ini bisa berenang. (pakai こと dari poin sebelumnya)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 23 (Bab 9)",
+    judul: "動詞（てけい）、動詞（てけい）、〜ます (Menceritakan Rangkaian Kegiatan dalam 1 Periode)",
+    sub: "てform (cara ubahnya udah dipelajari di Hari 17) sekarang dipakai buat NYAMBUNGIN beberapa aksi jadi 1 kalimat panjang — biasa dipakai pas nyeritain rutinitas atau kegiatan dalam 1 periode tertentu (1 hari, weekend, dll). Beda dari それから (Hari 12) yang nyambungin 2 KALIMAT TERPISAH, てform ini nyambungin semuanya jadi 1 KALIMAT UTUH.",
+    items: [
+      {
+        pola: "動詞1（て）、動詞2（て）、動詞3ます。",
+        romaji: "V1-te, V2-te, V3-masu.",
+        arti: "[Melakukan V1], [V2], [terus V3].",
+        catatan: "Cuma kata kerja TERAKHIR yang nentuin waktu kalimatnya (ます=sekarang/biasa, ました=lampau) — kata kerja sebelumnya semua tetep pakai bentuk て, gak peduli tensesnya masing-masing.",
+        contoh: [
+          {jp:"あさ おきて、あさごはんを たべて、がっこうに いきます。", id:"Pagi bangun, makan sarapan, terus pergi ke sekolah."}
+        ]
+      },
+      {
+        pola: "〔きかん〕は、動詞1（て）、動詞2（て）、動詞3ます。",
+        romaji: "[periode] wa, V1-te, V2-te, V3-masu.",
+        arti: "Pas [periode], [melakukan V1], [V2], [terus V3].",
+        catatan: "Pola ini lebih ringkas & natural daripada pakai それから berulang-ulang buat cerita rangkaian kegiatan — cocok dipakai buat jawab pertanyaan kayak しゅうまつ、なにを しますか.",
+        contoh: [
+          {jp:"しゅうまつは、あさ ゆっくり ねて、こうえんで さんぽして、いえで えいがを みます。", id:"Pas weekend, pagi tidur santai, jalan-jalan di taman, terus nonton film di rumah."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 23 (Bab 9)",
+    judul: "どうやって　〔動詞〕か。 (Menanyakan Cara Melakukan Sesuatu)",
+    sub: "どうやって dipakai buat nanya METODE/CARA ngelakuin sesuatu — beda dari どう (Hari 16) yang nanya PENDAPAT/KEADAAN suatu hal.",
+    items: [
+      {
+        pola: "どうやって　〔動詞〕か。",
+        romaji: "Douyatte [kata kerja] ka?",
+        arti: "Gimana caranya [V]?",
+        catatan: "Jawabannya sering pakai partikel で (alat/metode, Hari 17), atau kalau caranya lebih kompleks, bisa dijawab pakai rangkaian てform (poin sebelumnya di Hari ini).",
+        contoh: [
+          {jp:"どうやって がっこうに いきますか。", id:"Gimana caranya pergi ke sekolah?"},
+          {jp:"バスで いきます。", id:"(Jawab) Naik bus."}
+        ]
+      },
+      {
+        pola: "どうやって　〔動詞〕ましたか。",
+        romaji: "Douyatte [kata kerja] mashita ka?",
+        arti: "Dulu gimana caranya [V]? (bentuk lampau)",
+        catatan: "Sama pola-nya, tinggal ganti ますか jadi ましたか kalau nanya soal cara yang UDAH dilakuin di masa lalu.",
+        contoh: [
+          {jp:"どうやって この プログラムを つくりましたか。", id:"Gimana caranya kamu bikin program ini?"}
         ]
       }
     ]
