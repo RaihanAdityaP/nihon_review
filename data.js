@@ -2632,7 +2632,7 @@ bab10: {
     {k:"たいせつ",r:"taisetsu"},
     {k:"おします",r:"oshimasu"},
     {k:"たちます",r:"tachimasu"},
-    {k:"なくします",r:"nakushimasu"},
+    {k:"なくします",r:"naku shimasu"},
     {k:"ほか",r:"hoka",a:"Yang lainnya",kj:"他"},
     {k:"みなさん",r:"minasan",a:"Anda sekalian, kalian semua",kj:"皆さん"},
     {k:"おきゃくさん",r:"o-kyakusan",a:"Tamu, pengunjung",kj:"お客さん"},
@@ -6064,6 +6064,134 @@ const BUNPOU = [
         catatan: "Sama pola-nya, tinggal ganti ますか jadi ましたか kalau nanya soal cara yang UDAH dilakuin di masa lalu.",
         contoh: [
           {jp:"どうやって この プログラムを つくりましたか。", id:"Gimana caranya kamu bikin program ini?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 24 (Bab 10)",
+    judul: "まだ　動詞（ていません） (Belum Selesai, tapi Ada Niat Melakukan)",
+    sub: "Beda dari まだ〜ません (Hari 19, netral cuma nyatain fakta belum kejadian) — まだ〜ていません lebih nyiratin ada NIAT/RENCANA buat ngelakuin, cuma belum kesampean sampai sekarang. Sering dipakai buat tugas/kewajiban yang emang harus diselesain.",
+    items: [
+      {
+        pola: "まだ　動詞（ていません）。",
+        romaji: "Mada [V]-te imasen.",
+        arti: "Belum [V] (sampai sekarang), tapi masih ada rencana buat ngelakuinnya.",
+        catatan: "Bentuknya adalah bentuk negatif dari ています (Hari 18 & 20) — jadi secara struktur ini 'belum ada di kondisi sudah melakukan V', bukan sekadar 'gak melakukan V'. Makanya kesannya lebih ke 'masih pending', bukan penolakan/ketidakterjadian biasa.",
+        contoh: [
+          {jp:"まだ しゅくだいを していません。", id:"Belum ngerjain PR (tapi memang berencana ngerjain)."},
+          {jp:"まだ てがみを おくっていません。", id:"Belum ngirim surat (padahal udah niat)."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 24 (Bab 10)",
+    judul: "動詞（てけい）＋来ます (Pergi Melakukan Sesuatu, Lalu Kembali Sebentar)",
+    sub: "Dipakai kalau mau ngelakuin sesuatu SEBENTAR terus balik lagi dalam waktu deket — beda dari cuma 行きます (pergi doang, gak ada implikasi bakal balik).",
+    items: [
+      {
+        pola: "ちょっと　〔ばしょ〕へ　行って来ます。",
+        romaji: "Chotto [tempat] e itte kimasu.",
+        arti: "Mau ke [tempat] sebentar, nanti balik lagi.",
+        catatan: "行って来ます (bentuk てけい dari 行きます + 来ます, Hari 22) khusus dipakai buat aksi SINGKAT yang emang dimaksudkan buat kembali dalam waktu deket. Kalau perginya lama/gak pasti kapan baliknya, cukup pakai 行きます biasa tanpa 来ます di belakangnya.",
+        contoh: [
+          {jp:"ちょっと コンビニへ いってきます。", id:"Mau ke minimarket sebentar, nanti balik lagi."}
+        ]
+      },
+      {
+        pola: "動詞（てけい）＋来ます。 (kata kerja lain, bukan cuma 行きます)",
+        romaji: "[V-te] + kimasu.",
+        arti: "[Melakukan V] dulu, nanti balik.",
+        catatan: "Polanya bisa dipakai sama kata kerja lain juga, bukan cuma 行きます — kata kerja apapun yang dilakuin sebentar sebelum balik ke tempat semula.",
+        contoh: [
+          {jp:"かいものを して きます。", id:"Belanja dulu, nanti balik."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 24 (Bab 10)",
+    judul: "〔KB〕が　聞こえます／見えます (Hal yang Tidak Sengaja Terdengar/Terlihat)",
+    sub: "Pola buat nyatain sesuatu yang TERDENGAR/TERLIHAT dengan sendirinya — bukan aksi sengaja 'melihat/mendengarkan' (見ます/聞きます), tapi lebih ke persepsi yang MUNCUL BEGITU SAJA. Sama kayak できます/わかります (Sは Oが〜, Hari 20), objeknya ditandain が, bukan を.",
+    items: [
+      {
+        pola: "〔おと／こえ〕が　聞こえます。",
+        romaji: "[oto/koe] ga kikoemasu.",
+        arti: "[Bunyi/suara] terdengar.",
+        catatan: "Dipakai kalau bunyinya nyampe ke telinga TANPA sengaja didengerin — beda dari 聞きます (Hari 17) yang aksinya sengaja MENDENGARKAN sesuatu.",
+        contoh: [
+          {jp:"となりの へやから おとが きこえます。", id:"Terdengar suara dari kamar sebelah."}
+        ]
+      },
+      {
+        pola: "〔けしき／もの〕が　見えます。",
+        romaji: "[keshiki/mono] ga miemasu.",
+        arti: "[Pemandangan/benda] kelihatan.",
+        catatan: "見えます juga bisa dipakai kalau dari suatu POSISI/TEMPAT TINGGI, sesuatu jadi kelihatan — misalnya dari atas menara/gunung, bukan cuma hal yang tiba-tiba nongol di depan mata.",
+        contoh: [
+          {jp:"タワーの うえから まちが 見えます。", id:"Dari atas tower, kotanya kelihatan."},
+          {jp:"ここから ふじさんが 見えます。", id:"Dari sini, gunung Fuji kelihatan."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 24 (Bab 10)",
+    judul: "〔ばしょ〕を　動詞 (Menunjukkan Ruang/Jalur yang Dilalui)",
+    sub: "を di sini BUKAN penanda objek aksi (kayak biasanya) — tapi penanda RUANG/JALUR yang dilewati/dilalui pas bergerak. Dipakai bareng kata kerja gerak: 歩く(jalan kaki), まがる(belok), わたる(nyeberang), とおる(lewat), 行く(pergi), とびます(terbang).",
+    items: [
+      {
+        pola: "〔みち〕を　あるきます。",
+        romaji: "[michi] wo arukimasu.",
+        arti: "Berjalan di/melalui [jalan].",
+        catatan: "を di sini beda fungsi dari で (Hari 17, lokasi TEMPAT aksi terjadi secara umum) — を khusus buat gerakan yang punya ARAH/JALUR (melintasi ruang), bukan sekadar 'di suatu tempat'.",
+        contoh: [
+          {jp:"まいあさ、この みちを あるきます。", id:"Setiap pagi, jalan kaki melalui jalan ini."}
+        ]
+      },
+      {
+        pola: "〔かど〕を　まがります。／〔はし〕を　わたります。／〔ばしょ〕を　とおります。",
+        romaji: "[kado] wo magarimasu. / [hashi] wo watarimasu. / [basho] wo toorimasu.",
+        arti: "Belok di [tikungan]. / Menyeberangi [jembatan]. / Melewati [tempat].",
+        catatan: "Semua kata kerja gerak ini (まがります、わたります、とおります、あるきます、いきます、とびます) konsisten pakai を buat jalur yang dilaluinya.",
+        contoh: [
+          {jp:"つぎの かどを みぎに まがります。", id:"Di tikungan berikutnya, belok kanan."},
+          {jp:"はしを わたって、こうえんを とおります。", id:"Menyeberangi jembatan, lalu melewati taman."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 24 (Bab 10)",
+    judul: "みちあんない (Menunjukkan Jalan)",
+    sub: "Gabungan beberapa pola yang udah dipelajari (てform rangkaian Hari 23, を+jalur di atas, てください Hari 17) buat kasih arahan jalan langkah demi langkah.",
+    items: [
+      {
+        pola: "まっすぐ　行って、〔かど〕を　〔みぎ／ひだり〕に　まがってください。",
+        romaji: "Massugu itte, [kado] wo migi/hidari ni magatte kudasai.",
+        arti: "Jalan lurus dulu, terus belok kanan/kiri di [tikungan].",
+        catatan: "Struktur arahan jalan biasanya: (1) jalan lurus dulu (まっすぐ　いって), (2) tandain di mana harus belok (かどを／しんごうを／こうさてんを), (3) arah beloknya (みぎ／ひだりに　まがって), (4) tutup pakai ください kalau bentuknya minta tolong/instruksi.",
+        contoh: [
+          {jp:"まっすぐ 行って、にばんめの しんごうを みぎに まがってください。", id:"Jalan lurus dulu, terus di lampu merah kedua belok kanan."},
+          {jp:"はしを わたって、すぐ ひだりに まがると、みせが あります。", id:"Setelah menyeberangi jembatan, langsung belok kiri, ada tokonya."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 24 (Bab 10)",
+    judul: "動詞（てけい）＋も　いいですか。 (Meminta Izin Melakukan Sesuatu)",
+    sub: "Pola buat minta izin — 'boleh saya〜?'. Pakai bentuk てform (cara ubahnya udah dipelajari di Hari 17) + もいいですか.",
+    items: [
+      {
+        pola: "動詞（てけい）＋も　いいですか。",
+        romaji: "[V-te] mo ii desu ka?",
+        arti: "Boleh saya [V]?",
+        catatan: "Jawaban positifnya: はい、いいですよ (boleh). Jawaban negatifnya biasanya lebih halus, gak langsung bilang だめです — sering pakai ちょっと... (agak...) atau すみませんが、〜 (maaf, tapi〜) biar lebih sopan.",
+        contoh: [
+          {jp:"ここに すわっても いいですか。", id:"Boleh saya duduk di sini?"},
+          {jp:"しゃしんを とっても いいですか。", id:"Boleh saya foto?"}
         ]
       }
     ]

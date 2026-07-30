@@ -493,7 +493,7 @@ function bukuItems(cid) {
   if (!babKey || !BUKU[babKey]) return [];
   let out = [];
   Object.values(BUKU[babKey]).forEach(group => {
-    group.rows.forEach(r => out.push({ kana: r.k, romaji: r.r, arti: r.a, type: 'buku' }));
+    group.rows.forEach(r => out.push({ kana: r.k, romaji: r.r, arti: resolveEntry(r).a, type: 'buku' }));
   });
   return out;
 }
