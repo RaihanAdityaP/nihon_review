@@ -3203,6 +3203,84 @@ const KANJI = [
       { w: "十分", furi: "じゅっぷん", a: "10 menit" },
       { w: "半分", furi: "はんぶん", a: "separuh, sebagian" }
     ]
+  },
+  {
+    tema: "Hari 7", char: "今", onyomi: ["コン"], kunyomi: ["いま"], arti: "sekarang",
+    kotoba: [
+      { w: "今晩", furi: "こんばん", a: "malam ini" },
+      { w: "今日", furi: "きょう", a: "hari ini" }
+    ]
+  },
+  {
+    tema: "Hari 7", char: "止", onyomi: ["シ"], kunyomi: ["と.まる", "と.める"], arti: "berhenti",
+    kotoba: [
+      { w: "止まる", furi: "とまる", a: "berhenti" },
+      { w: "止める", furi: "とめる", a: "memberhentikan" },
+      { w: "中止する", furi: "ちゅうしする", a: "membatalkan" }
+    ]
+  },
+  {
+    tema: "Hari 7", char: "半", onyomi: ["ハン"], kunyomi: [], arti: "setengah",
+    kotoba: [
+      { w: "半分", furi: "はんぶん", a: "setengah bagian" },
+      { w: "半年", furi: "はんとし", a: "setengah tahun" },
+      { w: "後半", furi: "こうはん", a: "bagian kedua" }
+    ]
+  },
+  {
+    tema: "Hari 7", char: "正", onyomi: ["ショウ", "セイ"], kunyomi: ["ただ.しい", "ただ.す"], arti: "benar, betul",
+    kotoba: [
+      { w: "お正月", furi: "おしょうがつ", a: "tahun baru" },
+      { w: "正確な", furi: "せいかくな", a: "tepat, akurat" },
+      { w: "正しい", furi: "ただしい", a: "benar, tepat" },
+      { w: "正す", furi: "ただす", a: "memperbaiki, membetulkan" }
+    ]
+  },
+  {
+    tema: "Hari 7", char: "歩", onyomi: ["ホ", "ボ"], kunyomi: ["ある.く"], arti: "berjalan",
+    kotoba: [
+      { w: "歩道", furi: "ほどう", a: "trotoar" },
+      { w: "歩行者", furi: "ほこうしゃ", a: "pejalan kaki" },
+      { w: "歩く", furi: "あるく", a: "berjalan" }
+    ]
+  },
+  {
+    tema: "Hari 7", char: "足", onyomi: ["ソク"], kunyomi: ["あし", "た.りる", "た.す"], arti: "kaki, cukup",
+    kotoba: [
+      { w: "不足", furi: "ふそく", a: "tidak cukup" },
+      { w: "足りる", furi: "たりる", a: "cukup" },
+      { w: "足す", furi: "たす", a: "menambahkan" }
+    ]
+  },
+  {
+    tema: "Hari 7", char: "走", onyomi: ["ソウ"], kunyomi: ["はし.る"], arti: "berlari",
+    kotoba: [
+      { w: "走者", furi: "そうしゃ", a: "pelari" },
+      { w: "走る", furi: "はしる", a: "berlari" }
+    ]
+  },
+  {
+    tema: "Hari 7", char: "起", onyomi: [], kunyomi: ["お.きる", "お.こす"], arti: "bangun",
+    kotoba: [
+      { w: "起きる", furi: "おきる", a: "bangun" },
+      { w: "起こす", furi: "おこす", a: "membangunkan (orang), menyebabkan" },
+      { w: "早起きする", furi: "はやおきする", a: "bangun cepat" }
+    ]
+  },
+  {
+    tema: "Hari 7", char: "夕", onyomi: [], kunyomi: ["ゆう"], arti: "sore, senja",
+    kotoba: [
+      { w: "夕方", furi: "ゆうがた", a: "sore" },
+      { w: "夕飯", furi: "ゆうはん", a: "makan malam" }
+    ]
+  },
+  {
+    tema: "Hari 7", char: "外", onyomi: ["ガイ"], kunyomi: ["そと", "ほか"], arti: "luar",
+    kotoba: [
+      { w: "外国", furi: "がいこく", a: "negara asing" },
+      { w: "海外", furi: "かいがい", a: "luar negeri" },
+      { w: "〜のほか", furi: "〜のほか", a: "selain 〜" }
+    ]
   }
 ]; // end KANJI
 
@@ -5905,16 +5983,6 @@ const BUNPOU = [
         contoh: [
           {jp:"にほんごを べんきょうします。→　べんきょうする", id:"Belajar bahasa Jepang. → (bentuk kamus) べんきょうする"}
         ]
-      },
-      {
-        pola: "Bentuk ない (negatif) dari bentuk kamus, buat semua kelompok.",
-        romaji: "~nai form.",
-        arti: "Tidak [V] (bentuk kamus/santai).",
-        catatan: "Kelompok I: ubah bunyi う-dan jadi あ-dan + ない (かう→かわない perhatikan う→わ, khusus kata yang akhirannya う; のむ→のまない; かく→かかない). Kelompok II: buang る, tambah ない (たべる→たべない). Kelompok III: irregular total — する→しない, くる→こない.",
-        contoh: [
-          {jp:"あさごはんを たべません。→　たべない", id:"Tidak makan sarapan. → (bentuk santai negatif) たべない"},
-          {jp:"きょうは がっこうに いきません。→　いかない", id:"Hari ini tidak pergi ke sekolah. → いかない"}
-        ]
       }
     ]
   },
@@ -6192,6 +6260,94 @@ const BUNPOU = [
         contoh: [
           {jp:"ここに すわっても いいですか。", id:"Boleh saya duduk di sini?"},
           {jp:"しゃしんを とっても いいですか。", id:"Boleh saya foto?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 25 (Bab 10)",
+    judul: "動詞（ないけい）— Cara Mengubah + Kasus Khusus",
+    sub: "Bentuk ない dipakai buat nyatain 'tidak melakukan V' dalam bentuk santai/kamus (beda dari ~ません yang formal). Cara ubahnya beda tiap kelompok, mirip pola 辞書形 (Hari 22) tapi arahnya ke suara あ-dan, bukan う-dan.",
+    items: [
+      {
+        pola: "Kelompok I: ubah bunyi う-dan jadi あ-dan + ない。",
+        romaji: "Golongan I, ~u → ~anai.",
+        arti: "Tidak [V] (bentuk kamus/santai), Kelompok I.",
+        catatan: "Konsonan terakhirnya tetep, cuma vokal う berubah jadi あ, terus tambahin ない. Contoh: のむ→のまない(gak minum), かく→かかない(gak nulis), はなす→はなさない(gak ngomong), まつ→またない(gak nunggu), あそぶ→あそばない(gak main).",
+        contoh: [
+          {jp:"あさごはんを たべません。→　たべない", id:"Tidak makan sarapan. → (bentuk santai negatif) たべない"},
+          {jp:"きょうは がっこうに いきません。→　いかない", id:"Hari ini tidak pergi ke sekolah. → いかない"}
+        ]
+      },
+      {
+        pola: "Kelompok II: buang る, tambah ない。",
+        romaji: "Golongan II, ~ru → ~nai.",
+        arti: "Tidak [V] (bentuk kamus/santai), Kelompok II.",
+        catatan: "Paling gampang — tinggal ganti る jadi ない. Contoh: たべる→たべない(gak makan), みる→みない(gak lihat), ねる→ねない(gak tidur).",
+        contoh: [
+          {jp:"あさごはんを たべません。→　たべない", id:"Tidak makan sarapan. → たべない"}
+        ]
+      },
+      {
+        pola: "Kelompok III: する→しない、来る→来ない。",
+        romaji: "Golongan III (tidak beraturan).",
+        arti: "Tidak [V] (bentuk kamus/santai), Kelompok III.",
+        catatan: "Sama kayak bentuk kamusnya (Hari 22), cuma 2 kata kerja ini yang golongan III, harus dihafal langsung: します→しない, きます(来ます)→こない.",
+        contoh: [
+          {jp:"べんきょうしません。→　べんきょうしない", id:"Tidak belajar. → べんきょうしない"}
+        ]
+      },
+      {
+        pola: "Kelompok I yang akhirannya う: う→わ (bukan あ) + ない.",
+        romaji: "[V akhiran -u] → -wanai (bukan -anai).",
+        arti: "Pengecualian ejaan buat kata kerja yang berakhiran う.",
+        catatan: "Perlu ditegasin karena SERING salah ditulis. Kalau kata kerja kamusnya berakhiran う (買う、会う、洗う、吸う, dst), bentuk ないnya BUKAN ~あない tapi ~わない. Ini satu-satunya baris di tabel い→あ yang gak lurus ngikutin pola konsonannya sendiri.",
+        contoh: [
+          {jp:"かいます→かう→かわない　（BUKAN かあない）", id:"membeli → (kamus) kau → (nai) kawanai (BUKAN kaanai)"},
+          {jp:"すいます→すう→すわない", id:"menghisap/merokok → (kamus) suu → (nai) suwanai"}
+        ]
+      },
+      {
+        pola: "あります（ある）→ ない　（irregular total, BUKAN あらない）",
+        romaji: "arimasu (aru) → nai (bukan aranai).",
+        arti: "Bentuk ない dari ある (ada, buat benda mati) itu IRREGULAR.",
+        catatan: "ある harusnya masuk Kelompok I (godan, berakhiran る), jadi kalau ngikutin pola biasa harusnya jadi あらない — tapi kenyataannya IRREGULAR, langsung jadi ない begitu aja (bukan bagian dari kata kerjanya, tapi jadi kata sendiri). Ini SATU-SATUNYA pengecualian kayak gini di semua kata kerja golongan I.",
+        contoh: [
+          {jp:"おかねが ありません。→　おかねが ない。", id:"Gak ada uang. (bentuk formal → bentuk santai/kamus)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 25 (Bab 10)",
+    judul: "動詞（ないけい）＋で　ください (Meminta/Melarang Secara Halus)",
+    sub: "Kebalikan dari てください (Hari 17, minta tolong ngelakuin sesuatu) — ないでください dipakai buat minta tolong seseorang TIDAK ngelakuin sesuatu, fungsinya sebagai larangan/peringatan yang tetep sopan.",
+    items: [
+      {
+        pola: "動詞（ないけい）＋で　ください。",
+        romaji: "[V-nai] + de kudasai.",
+        arti: "Tolong jangan [V].",
+        catatan: "Struktur ini nempelin で ke bentuk ない (bukan ke bentuk kamus/masu), terus ditutup ください kayak biasa (Hari 17). Sering dipakai buat peraturan/larangan di tempat umum.",
+        contoh: [
+          {jp:"たばこを すわないで ください。", id:"Tolong jangan merokok."},
+          {jp:"ここに すわらないで ください。", id:"Tolong jangan duduk di sini."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 25 (Bab 10)",
+    judul: "〔もの〕は　動詞てください (は Menggantikan を buat Negesin Objek dalam Permintaan)",
+    sub: "Biasanya objek kata kerja ditandain を (kayak しゃしんを とります) — tapi kalau objeknya mau DITEGASIN/dijadiin fokus utama kalimat (terutama di papan peringatan/permintaan sopan), を diganti は. Konsepnya mirip が vs は di Hari 19-20, cuma sekarang giliran を yang digantiin.",
+    items: [
+      {
+        pola: "〔もの〕は　〔動詞〕（ないで）ください。",
+        romaji: "[benda] wa [V] (naide) kudasai.",
+        arti: "Soal [benda] ini, tolong [jangan] [V].",
+        catatan: "は di sini nunjukin 'KHUSUS soal benda ini' — sering dipakai di tanda/papan larangan biar orang fokus ke benda yang dimaksud. Bandingin: しゃしんを とらないでください (larangan umum, foto apa aja) vs この しゃしんは とらないでください (khusus FOTO INI yang gak boleh diambil, foto lain boleh).",
+        contoh: [
+          {jp:"この ドアは あけないで ください。", id:"Pintu ini, tolong jangan dibuka."},
+          {jp:"この ボタンは おさないで ください。", id:"Tombol ini, tolong jangan ditekan."}
         ]
       }
     ]
