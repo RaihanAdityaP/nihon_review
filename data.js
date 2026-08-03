@@ -3271,7 +3271,8 @@ const KANJI = [
     tema: "Hari 7", char: "夕", onyomi: [], kunyomi: ["ゆう"], arti: "sore, senja",
     kotoba: [
       { w: "夕方", furi: "ゆうがた", a: "sore" },
-      { w: "夕飯", furi: "ゆうはん", a: "makan malam" }
+      { w: "夕飯", furi: "ゆうはん", a: "makan malam" },
+      { w: "夕食", furi: "ゆうしょく", a: "makan malam (lebih formal dari 夕飯)" }
     ]
   },
   {
@@ -3279,7 +3280,87 @@ const KANJI = [
     kotoba: [
       { w: "外国", furi: "がいこく", a: "negara asing" },
       { w: "海外", furi: "かいがい", a: "luar negeri" },
-      { w: "〜のほか", furi: "〜のほか", a: "selain 〜" }
+      { w: "外の〜", furi: "ほかの〜", a: "selain 〜, 〜 yang lain" }
+    ]
+  },
+  {
+    tema: "Hari 8", char: "多", onyomi: ["タ"], kunyomi: ["おお.い"], arti: "banyak",
+    kotoba: [
+      { w: "多い", furi: "おおい", a: "banyak" },
+      { w: "多分", furi: "たぶん", a: "mungkin" },
+      { w: "多数", furi: "たすう", a: "jumlah banyak, mayoritas" }
+    ]
+  },
+  {
+    tema: "Hari 8", char: "名", onyomi: ["メイ"], kunyomi: ["な"], arti: "nama",
+    kotoba: [
+      { w: "名前", furi: "なまえ", a: "nama" },
+      { w: "有名", furi: "ゆうめい", a: "terkenal" }
+    ]
+  },
+  {
+    tema: "Hari 8", char: "夜", onyomi: ["ヤ"], kunyomi: ["よ", "よる"], arti: "malam",
+    kotoba: [
+      { w: "夜", furi: "よる", a: "malam" },
+      { w: "今夜", furi: "こんや", a: "malam ini" }
+    ]
+  },
+  {
+    tema: "Hari 8", char: "先", onyomi: ["セン"], kunyomi: ["さき"], arti: "terdahulu, sebelumnya",
+    kotoba: [
+      { w: "先に", furi: "さきに", a: "duluan" },
+      { w: "先生", furi: "せんせい", a: "guru, dokter, panggilan hormat" },
+      { w: "先月", furi: "せんげつ", a: "bulan lalu" }
+    ]
+  },
+  {
+    tema: "Hari 8", char: "生", onyomi: ["セイ"], kunyomi: ["う.まれる", "い.きる"], arti: "hidup",
+    kotoba: [
+      { w: "生まれる", furi: "うまれる", a: "lahir" },
+      { w: "誕生日", furi: "たんじょうび", a: "hari ulang tahun" },
+      { w: "生きる", furi: "いきる", a: "hidup" },
+      { w: "生活", furi: "せいかつ", a: "kehidupan" }
+    ]
+  },
+  {
+    tema: "Hari 8", char: "見", onyomi: ["ケン"], kunyomi: ["み.る"], arti: "melihat",
+    kotoba: [
+      { w: "見る", furi: "みる", a: "melihat" },
+      { w: "見学", furi: "けんがく", a: "kunjungan studi, observasi" },
+      { w: "見せる", furi: "みせる", a: "memperlihatkan" }
+    ]
+  },
+  {
+    tema: "Hari 8", char: "元", onyomi: ["ゲン", "ガン"], kunyomi: ["もと"], arti: "dasar, awal",
+    kotoba: [
+      { w: "元気", furi: "げんき", a: "sehat, semangat" },
+      { w: "元日", furi: "がんじつ", a: "hari tahun baru" },
+      { w: "元彼", furi: "もとかれ", a: "mantan pacar (laki-laki)" },
+      { w: "元彼女", furi: "もとかのじょ", a: "mantan pacar (perempuan)" }
+    ]
+  },
+  {
+    tema: "Hari 8", char: "天", onyomi: ["テン"], kunyomi: ["あま"], arti: "langit, cuaca",
+    kotoba: [
+      { w: "天気", furi: "てんき", a: "cuaca" },
+      { w: "天気予報", furi: "てんきよほう", a: "ramalan cuaca" },
+      { w: "天国", furi: "てんごく", a: "surga" }
+    ]
+  },
+  {
+    tema: "Hari 8", char: "文", onyomi: ["ブン"], kunyomi: [], arti: "kalimat, tulisan",
+    kotoba: [
+      { w: "文法", furi: "ぶんぽう", a: "tata bahasa" },
+      { w: "作文", furi: "さくぶん", a: "karangan" },
+      { w: "文化", furi: "ぶんか", a: "budaya" }
+    ]
+  },
+  {
+    tema: "Hari 8", char: "父", onyomi: ["フ"], kunyomi: ["ちち", "とう"], arti: "ayah",
+    kotoba: [
+      { w: "お父さん", furi: "おとうさん", a: "ayah (orang lain)" },
+      { w: "父", furi: "ちち", a: "ayah (sendiri)" },
+      { w: "父母", furi: "ふぼ", a: "ayah dan ibu, orang tua" }
     ]
   }
 ]; // end KANJI
@@ -6348,6 +6429,57 @@ const BUNPOU = [
         contoh: [
           {jp:"この ドアは あけないで ください。", id:"Pintu ini, tolong jangan dibuka."},
           {jp:"この ボタンは おさないで ください。", id:"Tombol ini, tolong jangan ditekan."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 26 (Bab 10)",
+    judul: "Review: 動詞（辞書形）ことが　できます／できません",
+    sub: "Latihan tambahan buat pola こと+できます yang udah dipelajari di Hari 22 — sekarang dicoba pakai berbagai konteks kalimat.",
+    items: [
+      {
+        pola: "動詞（じしょけい）＋ことが　できます／できません。",
+        romaji: "[V-jisho] + koto ga dekimasu/dekimasen.",
+        arti: "Bisa/tidak bisa [V].",
+        catatan: "Perhatiin contoh d — ここで／カードで dua-duanya pakai partikel で, tapi fungsinya beda: ここで nunjuk LOKASI (Hari 17), カードで nunjuk ALAT/METODE (Hari 17 juga, tapi makna berbeda tergantung konteks di depan/belakangnya).",
+        contoh: [
+          {jp:"わたしは りょうりする ことが できます。", id:"Saya bisa masak."},
+          {jp:"にほんごを はなす ことが できます。にほんごを かく ことが できます。", id:"Bisa bicara bahasa Jepang. Bisa nulis bahasa Jepang juga."},
+          {jp:"やまださんは ギターを ひく ことが できます。", id:"Yamada bisa main gitar."},
+          {jp:"ここで のみものを かう ことが できますよ。", id:"Di sini bisa beli minuman, lho."},
+          {jp:"この みせで カードで はらう ことが できません。", id:"Di toko ini gak bisa bayar pakai kartu."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 26 (Bab 10)",
+    judul: "形容詞＋なります (Menyatakan Perubahan Kondisi — 'Jadi')",
+    sub: "Pola buat nyatain PERUBAHAN kondisi dari suatu keadaan ke keadaan lain — 'jadi [sifat]'. Ada 2 cara ubah tergantung jenis kata sifatnya.",
+    items: [
+      {
+        pola: "い-けいようし（buang い）＋くなりました。",
+        romaji: "[i-adj, buang i] + ku narimashita.",
+        arti: "Jadi [sifat] (i-keiyoushi).",
+        catatan: "Kasus khusus: いい (bagus) itu IRREGULAR — jadi よくなりました, bukan いくなりました (sama kayak konjugasi いい yang emang selalu nyimpang dari pola biasa).",
+        contoh: [
+          {jp:"きょうの てんきは よくなりました。", id:"Cuaca hari ini jadi bagus. (いい→よく, khusus/irregular)"},
+          {jp:"きょうしつは すずしくなりましたよ。", id:"Ruang kelasnya jadi sejuk, lho."},
+          {jp:"おとうとは せが たかくなりました。", id:"Adik laki-laki saya jadi tinggi."},
+          {jp:"A：この ラーメンは からくなりましたね。 B：そうですね、とうがらしが たくさん ありますから。", id:"A: Ramen ini jadi pedas ya. B: Iya, soalnya cabainya banyak."}
+        ]
+      },
+      {
+        pola: "な-けいようし＋に　なりました。",
+        romaji: "[na-adj] + ni narimashita.",
+        arti: "Jadi [sifat] (na-keiyoushi).",
+        catatan: "な-keiyoushi tinggal tambahin に sebelum なりました, gak perlu diubah bentuknya kayak い-keiyoushi.",
+        contoh: [
+          {jp:"さいきん、この ところは しずかに なりました。", id:"Belakangan ini, tempat ini jadi sepi."},
+          {jp:"ジョコさんは、えいごが じょうずに なりました。", id:"Joko jadi mahir bahasa Inggris."},
+          {jp:"きょうは もう げんきに なりました。きのう、びょうきでしたから。", id:"Hari ini udah jadi sehat. Soalnya kemarin sakit."},
+          {jp:"こうえんは きれいに なりましたね。", id:"Tamannya jadi bersih, ya."}
         ]
       }
     ]
