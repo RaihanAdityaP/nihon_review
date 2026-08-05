@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Cek Sinkron: Buku ⇄ Kotoba/Sifat/Kerja</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 900px; margin: 30px auto; padding: 0 16px; background:#0f1115; color:#e6e6e6; }
+  h1 { font-size: 1.3rem; }
+  .summary { display:flex; gap:12px; flex-wrap:wrap; margin: 16px 0 24px; }
+  .card { background:#1a1d24; border-radius:10px; padding:12px 16px; min-width:140px; }
+  .card b { display:block; font-size:1.6rem; }
+  .ok { color:#4ade80; }
+  .warn { color:#fbbf24; }
+  .bad { color:#f87171; }
+  section { margin-bottom: 28px; }
+  .row { padding:8px 10px; border-bottom:1px solid #262a33; font-size:0.92rem; }
+  .row b { color:#93c5fd; }
+  .tag { display:inline-block; font-size:0.72rem; background:#262a33; padding:2px 6px; border-radius:6px; margin-right:6px; color:#9ca3af; }
+  .empty { color:#4ade80; padding: 10px 0; }
+  code { background:#1a1d24; padding:2px 6px; border-radius:4px; }
+</style>
+</head>
+<body>
+
+<h1>🔎 Cek Sinkronisasi: menu Buku → menu Kotoba / Kata Sifat / Kata Kerja / Counter</h1>
+<p style="color:#9ca3af">Buka file ini langsung di browser (double-click / drag ke tab baru). Pastikan <code>data.js</code> ada di folder yang sama.</p>
+
+<div class="summary" id="summary"></div>
+
+<section>
+  <h2>❌ GAP — kata di Buku yang belum ada di menu kata manapun</h2>
+  <div id="gaps"></div>
+</section>
+
+<section>
+  <h2>⚠️ MISMATCH — kata ketemu, tapi kanji beda dari sumbernya (cek manual, siapa tau typo atau homofon)</h2>
+  <div id="mismatches"></div>
+</section>
+
+<script src="data.js"></script>
+<script>
+function normK(k){ return k.replace(/【な】|（な）|\(na\)/gi,'').replace(/[\s\/／]/g,'').trim(); }
+function normR(r){ return r.toLowerCase().replace(/\(na\)/g,'').replace(/[\s~〜]/g,'').trim(); }
+function keyOf(row){ return normK(row.k) + '|' + normR(row.r); }
+
+function buildIndex(sources){
+  const idx = new Map();
+  sources.forEach(({label, data}) => {
+    Object.entries(data).forEach(([groupName, group]) => {
+      group.rows.forEach(row => {
+        const key = keyOf(row);
+        if(!idx.has(key)) idx.set(key, {source:label, group:groupName, ...row});
+      });
+    });
+  });
+  return idx;
+}
+
+const kotobaIndex = buildIndex([
+  {label:'Kotoba', data: KT},
+  {label:'Kata Bantu Bilangan', data: COUNTER},
+  {label:'Kata Sifat', data: KATA_SIFAT},
+  {label:'Kata Kerja', data: KATA_KERJA},
+]);
+
+const gaps = [];
+const mismatches = [];
+let totalRows = 0;
+
+for (const [babKey, babData] of Object.entries(BUKU)) {
+  for (const [groupName, group] of Object.entries(babData)) {
+    for (const row of group.rows) {
+      totalRows++;
+      const key = keyOf(row);
+      const match = kotobaIndex.get(key);
+      if (!match) {
+        gaps.push({bab: babKey, group: groupName, ...row});
+      } else if (row.kj && match.kj && row.kj !== match.kj) {
+        mismatches.push({
+          bab: babKey, group: groupName, k: row.k, r: row.r,
+          bukuKj: row.kj, sourceKj: match.kj, sourceLabel: match.source,
+        });
+      }
+    }
+  }
+}
+
+document.getElementById('summary').innerHTML = `
+  <div class="card">Total baris Buku<b>${totalRows}</b></div>
+  <div class="card">Sudah sinkron<b class="ok">${totalRows - gaps.length}</b></div>
+  <div class="card">Gap<b class="${gaps.length ? 'bad' : 'ok'}">${gaps.length}</b></div>
+  <div class="card">Mismatch kanji<b class="${mismatches.length ? 'warn' : 'ok'}">${mismatches.length}</b></div>
+`;
+
+const gapsEl = document.getElementById('gaps');
+gapsEl.innerHTML = gaps.length
+  ? gaps.map(g => `<div class="row"><span class="tag">${g.bab}</span><span class="tag">${g.group}</span><b>${g.k}</b> (${g.r}) — "${g.a}"</div>`).join('')
+  : '<div class="empty">✅ Semua kata di Buku sudah ada di menu Kotoba/Sifat/Kerja/Counter.</div>';
+
+const mmEl = document.getElementById('mismatches');
+mmEl.innerHTML = mismatches.length
+  ? mismatches.map(m => `<div class="row"><span class="tag">${m.bab}</span><span class="tag">${m.group}</span><b>${m.k}</b> (${m.r}) — Buku: <b>${m.bukuKj}</b> vs ${m.sourceLabel}: <b>${m.sourceKj}</b></div>`).join('')
+  : '<div class="empty">✅ Tidak ada mismatch kanji.</div>';
+</script>
+
+</body>
+</html>

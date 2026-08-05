@@ -316,6 +316,7 @@ const QCATS_STATIC = [
   { id: 'buku-bab8',   label: 'Buku — Bab 8',          t: 'buku' },
   { id: 'buku-bab9',   label: 'Buku — Bab 9',          t: 'buku' },
   { id: 'buku-bab10',  label: 'Buku — Bab 10',         t: 'buku' },
+  { id: 'buku-bab11',  label: 'Buku — Bab 11',         t: 'buku' },
 ];
 
 // Kategori Bunpou TIDAK di-hardcode di sini — otomatis di-generate dari
@@ -489,7 +490,7 @@ function kerjaItems(cid) {
 }
 
 function bukuItems(cid) {
-  const babKey = cid === 'buku-bab1' ? 'bab1' : cid === 'buku-bab2' ? 'bab2' : cid === 'buku-bab3' ? 'bab3' : cid === 'buku-bab4' ? 'bab4' : cid === 'buku-bab5' ? 'bab5' : cid === 'buku-bab6' ? 'bab6' : cid === 'buku-bab7' ? 'bab7' : cid === 'buku-bab8' ? 'bab8' : cid === 'buku-bab9' ? 'bab9' : cid === 'buku-bab10' ? 'bab10' : null;
+  const babKey = cid === 'buku-bab1' ? 'bab1' : cid === 'buku-bab2' ? 'bab2' : cid === 'buku-bab3' ? 'bab3' : cid === 'buku-bab4' ? 'bab4' : cid === 'buku-bab5' ? 'bab5' : cid === 'buku-bab6' ? 'bab6' : cid === 'buku-bab7' ? 'bab7' : cid === 'buku-bab8' ? 'bab8' : cid === 'buku-bab9' ? 'bab9' : cid === 'buku-bab10' ? 'bab10' : cid === 'buku-bab11' ? 'bab11' : null;
   if (!babKey || !BUKU[babKey]) return [];
   let out = [];
   Object.values(BUKU[babKey]).forEach(group => {
@@ -1306,7 +1307,7 @@ function wKanjiPool() {
   Object.values(COUNTER).forEach(g => scanRows(g.rows));
   Object.values(KATA_SIFAT).forEach(g => scanRows(g.rows));
   Object.values(KATA_KERJA).forEach(g => scanRows(g.rows));
-  ['bab1', 'bab2', 'bab3', 'bab4', 'bab5', 'bab6', 'bab7', 'bab8', 'bab9', 'bab10'].forEach(b => { if (BUKU[b]) Object.values(BUKU[b]).forEach(g => scanRows(g.rows)); });
+  ['bab1', 'bab2', 'bab3', 'bab4', 'bab5', 'bab6', 'bab7', 'bab8', 'bab9', 'bab10', 'bab11'].forEach(b => { if (BUKU[b]) Object.values(BUKU[b]).forEach(g => scanRows(g.rows)); });
   const seen = new Set();
   return out.filter(x => { if (seen.has(x.char)) return false; seen.add(x.char); return true; });
 }
@@ -1666,6 +1667,7 @@ renderBukuBab('bab7', 'bukuBab7');
 renderBukuBab('bab8', 'bukuBab8');
 renderBukuBab('bab9', 'bukuBab9');
 renderBukuBab('bab10', 'bukuBab10');
+renderBukuBab('bab11', 'bukuBab11');
 renderBunpou();
 initQSetup();
 initAISetup();
