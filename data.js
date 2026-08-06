@@ -655,7 +655,9 @@ const KT={
 {k:"〜ごろ",r:"~goro",a:"sekitar jam~",n:"Ditambahkan setelah waktu spesifik: 'shichiji goro' = sekitar jam 7. Beda dari 'gurai/kurai' yang untuk durasi, bukan titik waktu."},
 {k:"しゅうまつ",r:"shuumatsu",a:"akhir pekan",kj:"週末",n:"Shuu (minggu) + Matsu (akhir/ujung)."},
 {k:"こんど",r:"kondo",a:"kali ini, lain kali",kj:"今度",n:"Bisa berarti 'kali ini yang akan datang' ATAU 'lain kali di masa depan' tergantung konteks kalimat."},
-{k:"こんばん",r:"konban",a:"malam ini",kj:"今晩",n:"Kon (sekarang/ini) + Ban (malam)."}
+{k:"こんばん",r:"konban",a:"malam ini",kj:"今晩",n:"Kon (sekarang/ini) + Ban (malam)."},
+{k:"みらい",r:"mirai",a:"masa depan",kj:"未来",n:"Lebih umum/luas, sering dipakai buat konteks besar (masa depan dunia, teknologi, cita-cita jangka panjang). Mirip しょうらい tapi しょうらい lebih ke masa depan pribadi seseorang."},
+{k:"しょうらい",r:"shourai",a:"masa depan",kj:"将来",n:"Lebih spesifik ke masa depan PRIBADI seseorang (karier, cita-cita). 'Shourai no yume' = cita-cita masa depan. Beda nuansa dari みらい yang lebih umum/luas."}
 ]},
 "Durasi":{rows:[
 {k:"きかん",r:"kikan",a:"durasi, jangka waktu",kj:"期間",n:"Istilah umum buat 'rentang/jangka waktu' (mis. periode ujian, masa berlaku). Beda dari どのぐらい yang nanya durasinya, きかん adalah kata bendanya sendiri."},
@@ -957,7 +959,8 @@ const KT={
 {k:"うんてんし",r:"untenshi",a:"pengemudi / sopir",kj:"運転手",n:"Unten (mengemudi) + Shi/Shu (orang). 'Takushii no untenshi' = sopir taksi."},
 {k:"はいたついん",r:"haitatsuin",a:"kurir",kj:"配達員",n:"Haitatsu (mengantar) + In (anggota). Kurir paket/makanan, mis. 'takuhaibin no haitatsuin' = kurir paket."},
 {k:"かんごふ",r:"kangofu",a:"perawat (wanita, istilah lama)",kj:"看護婦",n:"Kini digantikan 'kangoshi' yang netral gender. Masih dipakai dalam percakapan informal."},
-{k:"〜さん",r:"~san",a:"Sdr. / Sdri. / Pak / Bu (gelar sopan)",kj:"〜さん",n:"Ditambahkan setelah nama seseorang sebagai penghormatan, atau setelah profesi (てんいんさん, isha-san dll. dalam percakapan santai). Tidak boleh dipakai untuk diri sendiri!"}
+{k:"〜さん",r:"~san",a:"Sdr. / Sdri. / Pak / Bu (gelar sopan)",kj:"〜さん",n:"Ditambahkan setelah nama seseorang sebagai penghormatan, atau setelah profesi (てんいんさん, isha-san dll. dalam percakapan santai). Tidak boleh dipakai untuk diri sendiri!"},
+{k:"きゅうじん",r:"kyuujin",a:"lowongan kerja",kj:"求人",n:"Kyuu (mencari) + Jin (orang). Dipakai buat konteks perusahaan yang lagi buka lowongan — 'kyuujin kokoku' (求人広告) = iklan lowongan kerja, 'kyuujin site' = website lowongan kerja."}
 ]},
 "Negara & Bangsa":{rows:[
 {k:"がいこく",r:"gaikoku",a:"luar negeri, negara asing",kj:"外国"},
@@ -6800,6 +6803,143 @@ const BUNPOU = [
         contoh: [
           {jp:"この　かんじは　かきにくいです。", id:"Kanji ini susah ditulis."},
           {jp:"それは　ちょっと　はなしにくいです。", id:"Itu agak susah dibicarakan."}
+        ]
+      }
+    ]
+  },
+
+  // ═══════════════════════════════════════════════
+  // HARI 28
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Hari 28 (Bab 11)",
+    judul: "〜とき (Waktu/Saat Terjadinya Sesuatu)",
+    sub: "Dipakai buat nyeritain suatu kejadian terjadi di waktu/saat tertentu — 'waktu [A], [B] terjadi'. Bentuk kata sebelum とき berubah-ubah tergantung jenis katanya (kata kerja, kata benda, kata sifat) dan tergantung apakah kejadiannya sudah/belum terjadi relatif ke kejadian utama.",
+    items: [
+      {
+        pola: "動詞（辞書形）＋とき。",
+        romaji: "[V-dictionary form] + toki.",
+        arti: "Waktu mau [V] (belum terjadi saat itu).",
+        catatan: "Pake bentuk kamus (ます→る) kalau kejadian di klausa とき itu BELUM terjadi pas kejadian utama berlangsung. Contoh: 'gohan wo taberu toki' = waktu (mau) makan — durasinya sebelum/pas mulai makan, belum selesai makan.",
+        contoh: [
+          {jp:"ごはんを　たべるとき、てを　あらいます。", id:"Waktu (mau) makan, saya cuci tangan."},
+          {jp:"にほんへ　いくとき、パスポートが　いります。", id:"Waktu (mau) pergi ke Jepang, perlu paspor."}
+        ]
+      },
+      {
+        pola: "動詞（ています）＋とき。",
+        romaji: "[V-teimasu] + toki.",
+        arti: "Waktu sedang [V] (kejadian sedang berlangsung).",
+        catatan: "Bentuk ています tetap dipakai apa adanya (cuma buang です kalau perlu, tapi biasanya langsung ~ている+とき). Dipakai kalau kejadian di klausa とき sedang berlangsung pas kejadian utama terjadi.",
+        contoh: [
+          {jp:"テレビを　みているとき、でんわが　なりました。", id:"Waktu (lagi) nonton TV, telepon berbunyi."},
+          {jp:"バスを　まっているとき、あめが　ふりました。", id:"Waktu (lagi) nunggu bis, hujan turun."}
+        ]
+      },
+      {
+        pola: "動詞（ません→ない）＋とき。",
+        romaji: "[V-nai] + toki.",
+        arti: "Waktu tidak [V] (belum/gak terjadi).",
+        catatan: "ません dilepas bentuk formalnya, jadi bentuk polos ない. Dipakai buat 'waktu [kondisi negatif] berlaku'.",
+        contoh: [
+          {jp:"おかねが　ないとき、コンビニに　いきません。", id:"Waktu tidak ada uang, saya tidak pergi ke minimarket."},
+          {jp:"じかんが　ないとき、あさごはんを　たべません。", id:"Waktu tidak ada waktu, saya tidak makan sarapan."}
+        ]
+      },
+      {
+        pola: "動詞（ました→た）＋とき。",
+        romaji: "[V-ta] + toki.",
+        arti: "Waktu (sudah) [V] (kejadian sudah terjadi duluan).",
+        catatan: "Pake bentuk た (lampau santai, sama kayak Hari 27) kalau kejadian di klausa とき itu SUDAH SELESAI terjadi sebelum/pas kejadian utama. Beda sama bentuk kamus di atas — 'nihon ni itta toki' = waktu (sudah) pergi ke Jepang (sedang di Jepang / sudah sampai), beda sama 'nihon ni iku toki' (waktu mau berangkat, masih di rumah).",
+        contoh: [
+          {jp:"にほんへ　いったとき、すしを　たべました。", id:"Waktu (sudah) pergi ke Jepang, saya makan sushi."},
+          {jp:"こどものとき、よく　こうえんで　あそびました。", id:"(lihat pola KB di bawah — bandingkan) Waktu masih anak-anak, saya sering main di taman."}
+        ]
+      },
+      {
+        pola: "動詞（ませんでした→なかった）＋とき。",
+        romaji: "[V-nakatta] + toki.",
+        arti: "Waktu (dulu) tidak [V].",
+        catatan: "Bentuk lampau negatif santai (Hari 27 juga). Dipakai buat 'waktu dulu [kondisi negatif] itu berlaku'.",
+        contoh: [
+          {jp:"しゅくだいを　しなかったとき、せんせいが　おこりました。", id:"Waktu (dulu) tidak mengerjakan PR, guru marah."},
+          {jp:"にほんごを　べんきょうしなかったとき、かんじが　ぜんぜん　わかりませんでした。", id:"Waktu (dulu) tidak belajar bahasa Jepang, saya sama sekali tidak paham kanji."}
+        ]
+      },
+      {
+        pola: "〔KB〕＋の＋とき。",
+        romaji: "[Kata Benda] + no + toki.",
+        arti: "Waktu [KB]/waktu masih [KB].",
+        catatan: "Kata benda + の (bukan だ/です) sebelum とき — sama polanya kayak KB+の+です yang biasa.",
+        contoh: [
+          {jp:"こどものとき、よく　こうえんで　あそびました。", id:"Waktu (masih) anak-anak, saya sering main di taman."},
+          {jp:"がくせいのとき、あまり　おかねが　ありませんでした。", id:"Waktu (masih) jadi mahasiswa, saya tidak begitu punya uang."}
+        ]
+      },
+      {
+        pola: "〔KS-い〕＋とき。",
+        romaji: "[i-adjective] + toki (bentuk kamus, tanpa perubahan).",
+        arti: "Waktu [sifat-i].",
+        catatan: "Kata sifat-い gak berubah bentuk, langsung tempel とき di belakangnya.",
+        contoh: [
+          {jp:"いそがしいとき、でんわしないでください。", id:"Waktu (lagi) sibuk, tolong jangan telepon."},
+          {jp:"さむいとき、コートを　きます。", id:"Waktu (lagi) dingin, saya pakai jaket."}
+        ]
+      },
+      {
+        pola: "〔KS-な〕＋な＋とき。",
+        romaji: "[na-adjective] + na + toki.",
+        arti: "Waktu [sifat-na].",
+        catatan: "Kata sifat-な wajib pake な dulu sebelum とき (sama kayak な+KB biasa).",
+        contoh: [
+          {jp:"ひまなとき、えいがを　みます。", id:"Waktu (lagi) senggang, saya nonton film."},
+          {jp:"げんきなとき、うんどうします。", id:"Waktu (lagi) sehat/semangat, saya olahraga."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 28 (Bab 11)",
+    judul: "〜どうしますか (Menanyakan Cara/Tindakan)",
+    sub: "どうしますか dipakai buat nanya BAGAIMANA seseorang akan BERTINDAK/MELAKUKAN sesuatu di suatu situasi — beda sama どうですか (Hari-hari awal) yang nanya KESAN/PENDAPAT tentang sesuatu.",
+    items: [
+      {
+        pola: "〔じょうきょう〕、どうしますか。",
+        romaji: "~, dou shimasu ka?",
+        arti: "~, (kamu) mau bagaimana/gimana tindakannya?",
+        catatan: "Nanya soal RENCANA/TINDAKAN kedepannya di suatu situasi/andaian. Jawabannya berupa aksi yang akan dilakukan, bukan opini.",
+        contoh: [
+          {jp:"あした、あめですよ。どうしますか。", id:"Besok hujan lho. Mau gimana (rencananya)?"},
+          {jp:"インドネシアの　だいとうりょうに　なりました。どうしますか。", id:"(Misalnya) kamu jadi presiden Indonesia. Apa yang akan kamu lakukan?"},
+          {jp:"かぎを　なくしました。どうしますか。", id:"Kunci hilang. Mau diapain (langkah apa yang diambil)?"}
+        ]
+      },
+      {
+        pola: "〔たいしょう〕は　どうですか。 ← perbandingan",
+        romaji: "~ wa dou desu ka? (perbandingan)",
+        arti: "~ nya gimana? (menanyakan kesan/pendapat)",
+        catatan: "PERBEDAAN UTAMA: どうですか nanya KESAN/PENDAPAT tentang sesuatu yang sudah ada/dialami — bukan rencana tindakan. Jangan tertukar sama どうしますか di atas.",
+        contoh: [
+          {jp:"あたらしい　しごとは　どうですか。", id:"Pekerjaan barunya gimana (kesannya)?"},
+          {jp:"この　えいがは　どうでしたか。", id:"Film ini gimana (kesannya, tadi)?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 28 (Bab 11)",
+    judul: "なかなか〜ない (Sulit/Tak Kunjung [Terjadi])",
+    sub: "なかなか dipakai bareng bentuk negatif buat nunjukin sesuatu SUSAH terjadi / TAK KUNJUNG terjadi walau sudah diusahakan/ditunggu — beda tingkat kekuatan negasinya sama ぜんぜん dan あまり.",
+    items: [
+      {
+        pola: "なかなか＋〔V-ません／ない〕。",
+        romaji: "nakanaka + [V-negative].",
+        arti: "Susah/tak kunjung [V].",
+        catatan: "Posisi kekuatannya ADA DI ANTARA あまり dan ぜんぜん kalau diurutkan dari 'agak enggak' ke 'sama sekali enggak': あまり〜ない (kurang begitu / tidak begitu) → なかなか〜ない (susah/tak kunjung, walau diusahakan) → ぜんぜん〜ない (sama sekali enggak, tegas 0%). Jadi なかなか itu di ATAS ぜんぜん (gak se-mutlak ぜんぜん) tapi di BAWAH あまり (lebih kuat/lebih 'susah banget' daripada あまり).",
+        contoh: [
+          {jp:"にほんごが　じょうずに　なりたいですが、なかなか　はなせません。", id:"Pengen jago bahasa Jepang, tapi susah banget buat bisa ngomong (tak kunjung bisa)."},
+          {jp:"かれは　なかなか　きません。", id:"Dia tak kunjung datang."},
+          {jp:"この　もんだいは　なかなか　わかりません。", id:"Soal ini susah dimengerti (tak kunjung paham)."}
         ]
       }
     ]
