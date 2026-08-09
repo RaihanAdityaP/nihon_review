@@ -861,6 +861,9 @@ function renderBunpou() {
     if (!byTema[t]) { byTema[t] = []; temaOrder.push(t); }
     byTema[t].push(group);
   });
+  // "Materi Tambahan" selalu ditaruh paling akhir, di luar urutan alami array
+  const tambahanIdx = temaOrder.indexOf('Materi Tambahan');
+  if (tambahanIdx > -1) temaOrder.push(temaOrder.splice(tambahanIdx, 1)[0]);
 
   let html = '';
   temaOrder.forEach(tema => {
@@ -1646,28 +1649,393 @@ function backWSetup() {
 }
 
 // ─────────────────────────────────────────────────────
+// KAMUS TERPADU (Materi) — search lintas semua kategori
+// ─────────────────────────────────────────────────────
+const KAMUS_CATS = [
+  { key: 'Semua', label: 'Semua' },
+  { key: 'Hiragana', label: 'Hiragana' },
+  { key: 'Katakana', label: 'Katakana' },
+  { key: 'Kotoba', label: 'Kotoba (Kata Benda)' },
+  { key: 'Kanji', label: 'Kanji' },
+  { key: 'Kata Kerja', label: 'Kata Kerja' },
+  { key: 'Kata Sifat', label: 'Kata Sifat' },
+  { key: 'Counter', label: 'Kata Bantu Bilangan' },
+];
+let kamusActiveCat = 'Semua';
+let KAMUS_ALL = null;
+let KAMUS_HOMOFON = null;
+
+function kamusNormK(k) { return (k || '').replace(/【な】|（な）|\(na\)/gi, '').replace(/[\s\/／]/g, '').trim(); }
+function kamusNormR(r) { return (r || '').toLowerCase().replace(/\(na\)/g, '').replace(/[\s~〜]/g, '').trim(); }
+
+const GODAN_I2U = { 'い': 'う', 'き': 'く', 'ぎ': 'ぐ', 'し': 'す', 'ち': 'つ', 'に': 'ぬ', 'び': 'ぶ', 'み': 'む', 'り': 'る' };
+
+function toJishokei(kana, kanji, group) {
+  if (!kana || !kana.endsWith('ます')) return null;
+  if (group && group.includes('Kelompok III')) {
+    if (kana === 'きます' && kanji === '来ます') return { kana: 'くる', kanji: '来る' };
+    if (kana.endsWith('します')) return { kana: kana.slice(0, -3) + 'する', kanji: kanji ? kanji.slice(0, -3) + 'する' : '' };
+    return null;
+  }
+  if (group && group.includes('Kelompok II')) {
+    return { kana: kana.slice(0, -2) + 'る', kanji: kanji ? kanji.slice(0, -2) + 'る' : '' };
+  }
+  if (group && group.includes('Kelompok I')) {
+    const stem = kana.slice(0, -2);
+    const lastMora = stem.slice(-1);
+    const u = GODAN_I2U[lastMora];
+    if (!u) return null;
+    const newKana = stem.slice(0, -1) + u;
+    const newKanji = kanji ? kanji.slice(0, -2).slice(0, -1) + u : '';
+    return { kana: newKana, kanji: newKanji };
+  }
+  return null;
+}
+
+function buildKamusIndex() {
+  if (KAMUS_ALL) return;
+  KAMUS_ALL = [];
+  Object.entries(H).forEach(([group, arr]) => {
+    arr.forEach(x => {
+      KAMUS_ALL.push({ source: 'Hiragana', group, kana: x.c, romaji: x.r, kanji: '', arti: x.r, note: x.n || '' });
+    });
+  });
+  Object.entries(K).forEach(([group, arr]) => {
+    arr.forEach(x => {
+      KAMUS_ALL.push({ source: 'Katakana', group, kana: x.c, romaji: x.r, kanji: '', arti: x.r, note: x.n || '' });
+    });
+  });
+  [{ l: 'Kotoba', d: KT }, { l: 'Kata Kerja', d: KATA_KERJA }, { l: 'Kata Sifat', d: KATA_SIFAT }, { l: 'Counter', d: COUNTER }].forEach(src => {
+    Object.entries(src.d).forEach(([group, g]) => {
+      g.rows.forEach(r => {
+        const jishokei = src.l === 'Kata Kerja' ? toJishokei(r.k, r.kj, group) : null;
+        KAMUS_ALL.push({ source: src.l, group, kana: r.k, romaji: r.r, kanji: r.kj || '', arti: r.a, note: r.n || '', jishokei });
+      });
+    });
+  });
+  KANJI.forEach(k => {
+    KAMUS_ALL.push({ source: 'Kanji', group: k.tema, kana: (k.kunyomi && k.kunyomi[0]) || (k.onyomi && k.onyomi[0]) || '', romaji: '', kanji: k.char, arti: k.arti, note: k.n || '', onyomi: k.onyomi || [], kunyomi: k.kunyomi || [], kotoba: k.kotoba || [] });
+  });
+  KAMUS_HOMOFON = new Map();
+  KAMUS_ALL.forEach(w => {
+    if (!w.kanji) return;
+    const key = kamusNormK(w.kana) + '|' + kamusNormR(w.romaji);
+    if (!KAMUS_HOMOFON.has(key)) KAMUS_HOMOFON.set(key, []);
+    const list = KAMUS_HOMOFON.get(key);
+    if (!list.some(x => x.kanji === w.kanji)) list.push(w);
+  });
+}
+
+function kamusGoPage(p) {
+  kamusPage = p;
+  renderKamusResults();
+  document.getElementById('kamusResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// klik "…" → berubah jadi input kecil buat lompat langsung ke halaman tertentu
+function kamusToggleJump(el, totalPages) {
+  if (el.dataset.open === '1') return;
+  el.dataset.open = '1';
+  el.classList.add('kamus-page-ellipsis-open');
+  el.innerHTML = `<input type="number" class="kamus-page-jump-input" min="1" max="${totalPages}">`;
+  const input = el.querySelector('input');
+  input.focus();
+  const revert = () => { el.dataset.open = ''; renderKamusResults(); };
+  const commit = () => {
+    let p = parseInt(input.value, 10);
+    if (isNaN(p)) { revert(); return; }
+    p = Math.max(1, Math.min(totalPages, p));
+    kamusGoPage(p);
+  };
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') commit();
+    if (e.key === 'Escape') revert();
+  });
+  input.addEventListener('blur', () => setTimeout(() => { if (el.dataset.open === '1') revert(); }, 150));
+}
+
+// bikin daftar nomor halaman: selalu tampilkan awal, akhir, sekitar halaman aktif, sisanya "…"
+function kamusPageNumbers(current, total) {
+  if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+  const pages = new Set([1, 2, total - 1, total, current - 1, current, current + 1]);
+  const sorted = [...pages].filter(p => p >= 1 && p <= total).sort((a, b) => a - b);
+  const result = [];
+  sorted.forEach((p, i) => {
+    if (i > 0 && p - sorted[i - 1] > 1) result.push('…');
+    result.push(p);
+  });
+  return result;
+}
+
+function renderKamusChips() {
+  const el = document.getElementById('kamusChips');
+  if (!el) return;
+  el.innerHTML = KAMUS_CATS.map(c => `<div class="kamus-chip ${c.key === kamusActiveCat ? 'active' : ''}" data-c="${c.key}">${c.label}</div>`).join('');
+  el.querySelectorAll('.kamus-chip').forEach(c => c.onclick = () => { kamusActiveCat = c.dataset.c; renderKamusChips(); renderKamusResults(true); });
+}
+
+let kamusPage = 1;
+const KAMUS_PAGE_SIZE = 40;
+
+function renderKamusResults(resetPage) {
+  buildKamusIndex();
+  if (resetPage) kamusPage = 1;
+  const qEl = document.getElementById('kamusSearchInput');
+  const q = qEl ? qEl.value.trim().toLowerCase() : '';
+  const filtered = KAMUS_ALL.filter(w => {
+    const matchCat = kamusActiveCat === 'Semua' || w.source === kamusActiveCat;
+    if (!matchCat) return false;
+    if (!q) return true;
+    return (w.kana || '').toLowerCase().includes(q) || (w.romaji || '').toLowerCase().includes(q) || (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q) || (w.group || '').toLowerCase().includes(q);
+  });
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / KAMUS_PAGE_SIZE));
+  if (kamusPage > totalPages) kamusPage = totalPages;
+  const start = (kamusPage - 1) * KAMUS_PAGE_SIZE;
+  const pageItems = filtered.slice(start, start + KAMUS_PAGE_SIZE);
+
+  const countEl = document.getElementById('kamusCount');
+  if (countEl) countEl.innerHTML = `<span>HASIL</span><span>${filtered.length} entri</span>`;
+
+  const el = document.getElementById('kamusResults');
+  if (!el) return;
+  if (!filtered.length) { el.innerHTML = `<div class="kamus-empty">Gak ketemu. Coba kata kunci lain.</div>`; return; }
+
+  let lastGroup = null;
+  let html = '';
+  pageItems.forEach(w => {
+    const idx = KAMUS_ALL.indexOf(w);
+    const key = kamusNormK(w.kana) + '|' + kamusNormR(w.romaji);
+    const hasMirip = KAMUS_HOMOFON.has(key) && KAMUS_HOMOFON.get(key).length > 1;
+    const boxSrc = w.jishokei ? (w.jishokei.kanji || w.jishokei.kana) : w.kanji;
+    const boxText = boxSrc ? (boxSrc.length > 2 ? boxSrc.slice(0, 2) : boxSrc) : w.kana.slice(0, 2);
+    // tampilkan header grup (mis. "Kata Kerja - Kelompok I") tiap kali grupnya beda dari item sebelumnya
+    if (w.group && w.group !== lastGroup) {
+      html += `<div class="sec-header-bunpou">${w.group}</div>`;
+      lastGroup = w.group;
+    }
+    html += `<div class="kamus-item" data-i="${idx}">
+      <div class="kbox">${boxText}</div>
+      <div class="kinfo">
+        <div class="ktag"><span class="kcat">${w.source.toUpperCase()}</span></div>
+        <div class="ktitle">${w.arti}</div>
+        <div class="ksub">${w.jishokei ? (w.jishokei.kanji || w.jishokei.kana) + ' ・ ' : ''}${w.kana}${w.romaji && w.source !== 'Hiragana' && w.source !== 'Katakana' ? ' • ' + w.romaji : ''}</div>
+      </div>
+      ${hasMirip ? '<div class="kamus-mirip">MIRIP</div>' : ''}
+    </div>`;
+  });
+
+  if (totalPages > 1) {
+    html += `<div class="kamus-pagination">
+      <button class="kamus-page-btn" ${kamusPage <= 1 ? 'disabled' : ''} onclick="kamusGoPage(${kamusPage - 1})">←</button>
+      ${kamusPageNumbers(kamusPage, totalPages).map(p =>
+        p === '…'
+          ? `<button class="kamus-page-ellipsis" onclick="kamusToggleJump(this, ${totalPages})">…</button>`
+          : `<button class="kamus-page-num ${p === kamusPage ? 'active' : ''}" onclick="kamusGoPage(${p})">${p}</button>`
+      ).join('')}
+      <button class="kamus-page-btn" ${kamusPage >= totalPages ? 'disabled' : ''} onclick="kamusGoPage(${kamusPage + 1})">→</button>
+    </div>`;
+  }
+
+  el.innerHTML = html;
+  el.querySelectorAll('.kamus-item').forEach(r => r.onclick = () => openKamusSheet(KAMUS_ALL[parseInt(r.dataset.i)]));
+}
+
+function openKamusSheet(w) {
+  let ov = document.getElementById('kamusOverlay');
+  if (!ov) {
+    ov = document.createElement('div');
+    ov.id = 'kamusOverlay';
+    ov.className = 'kamus-overlay';
+    ov.innerHTML = `<div class="kamus-sheet">
+      <div class="kamus-sheet-close"><button onclick="closeKamusSheet()">✕</button></div>
+      <div class="kamus-genko"><div class="kchar" id="kamusSheetChar">?</div></div>
+      <div class="kamus-sheet-body">
+        <div class="kamus-sheet-tags" id="kamusSheetTags"></div>
+        <div class="kamus-sheet-arti" id="kamusSheetArti"></div>
+        <div id="kamusSheetNuance"></div>
+        <div id="kamusSheetNote"></div>
+      </div>
+    </div>`;
+    document.body.appendChild(ov);
+    ov.addEventListener('click', e => { if (e.target === ov) closeKamusSheet(); });
+  }
+  const bigText = w.jishokei ? (w.jishokei.kanji || w.jishokei.kana) : (w.kanji || w.kana);
+  const charEl = document.getElementById('kamusSheetChar');
+  charEl.textContent = bigText;
+  charEl.style.fontSize = bigText.length <= 2 ? '4.2rem' : bigText.length <= 4 ? '2.4rem' : '1.5rem';
+  const jishoTag = w.jishokei ? `<span class="kamus-sheet-tag">辞書形: ${w.jishokei.kana}</span>` : '';
+  document.getElementById('kamusSheetTags').innerHTML = `<span class="kamus-sheet-tag">${w.kana}${w.romaji ? ' • ' + w.romaji : ''}</span>${jishoTag}`;
+  document.getElementById('kamusSheetArti').textContent = w.arti;
+
+  const key = kamusNormK(w.kana) + '|' + kamusNormR(w.romaji);
+  const group = KAMUS_HOMOFON.get(key);
+  const nuanceEl = document.getElementById('kamusSheetNuance');
+  nuanceEl.innerHTML = (group && group.length > 1) ? `<div class="kamus-nuance">
+      <div class="kamus-nuance-head">⚠ CATATAN NUANSA — mirip bunyi, beda kanji</div>
+      <div class="kamus-nuance-grid">${group.map(g => `<div class="kamus-nuance-item"><div class="nk">${g.kanji}</div><div class="na">${g.arti}</div></div>`).join('')}</div>
+    </div>` : '';
+
+  const noteEl = document.getElementById('kamusSheetNote');
+  let noteHtml = w.note ? `<div class="kamus-note-box">${w.note}</div>` : '';
+  if (w.source === 'Kanji') {
+    const yomiParts = [];
+    if (w.onyomi && w.onyomi.length) yomiParts.push(`<span class="kamus-sheet-tag">音: ${w.onyomi.join('、')}</span>`);
+    if (w.kunyomi && w.kunyomi.length) yomiParts.push(`<span class="kamus-sheet-tag">訓: ${w.kunyomi.join('、')}</span>`);
+    if (yomiParts.length) noteHtml = `<div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.6rem">${yomiParts.join('')}</div>` + noteHtml;
+    if (w.kotoba && w.kotoba.length) {
+      noteHtml += `<div class="kamus-kanji-words">
+        <div class="kamus-kanji-words-head">KOSAKATA DENGAN KANJI INI</div>
+        ${w.kotoba.map(kw => `<div class="kamus-kanji-word"><span class="kw-w">${kw.w}</span><span class="kw-f">${kw.furi}</span><span class="kw-a">${kw.a}</span></div>`).join('')}
+      </div>`;
+    }
+  }
+  noteEl.innerHTML = noteHtml;
+  ov.classList.add('show');
+}
+function closeKamusSheet() { const ov = document.getElementById('kamusOverlay'); if (ov) ov.classList.remove('show'); }
+
+// ─────────────────────────────────────────────────────
+// BAB & KUIS (Buku)
+// ─────────────────────────────────────────────────────
+function renderBabList() {
+  const el = document.getElementById('babList');
+  if (!el) return;
+  const babKeys = Object.keys(BUKU);
+  const babs = babKeys.map((key, i) => {
+    const groups = Object.keys(BUKU[key]);
+    const wordCount = Object.values(BUKU[key]).reduce((s, g) => s + g.rows.length, 0);
+    return { key, num: i + 1, title: groups[0], groupCount: groups.length, wordCount };
+  });
+  const totalWords = babs.reduce((s, b) => s + b.wordCount, 0);
+
+  const infoHtml = `<div class="bab-progress-card">
+    <div class="bab-progress-top"><span>TOTAL MATERI</span></div>
+    <div class="bab-progress-foot">${babs.length} BAB • ${totalWords} kata total. Klik bab untuk buka daftar kosakatanya.</div>
+  </div>`;
+
+  const cardsHtml = babs.map((b, i) => `<div class="bab-card">
+      <div class="bab-head" data-toggle="${i}" data-babkey="${b.key}">
+        <div class="bab-num">${String(b.num).padStart(2, '0')}</div>
+        <div class="bab-main">
+          <div class="bab-title">${b.title}</div>
+          <div class="bab-sub">${b.groupCount} topik • ${b.wordCount} kata</div>
+        </div>
+        <span class="acc-arrow" id="babArrow${i}">▶</span>
+      </div>
+      <div class="bab-quiz-panel" id="babBody${i}" style="display:none">
+        <button class="bab-quiz-link" onclick="showPage('quiz')">Buka halaman Quiz, lalu pilih materi bab ini secara manual →</button>
+        <div id="babWords${i}"></div>
+      </div>
+    </div>`).join('');
+
+  el.innerHTML = infoHtml + cardsHtml;
+  el.querySelectorAll('[data-toggle]').forEach(h => {
+    h.onclick = () => {
+      const i = h.dataset.toggle;
+      const panel = document.getElementById('babBody' + i);
+      const arrow = document.getElementById('babArrow' + i);
+      const opening = panel.style.display === 'none';
+      panel.style.display = opening ? 'block' : 'none';
+      arrow.style.transform = opening ? 'rotate(90deg)' : 'rotate(0deg)';
+      if (opening) {
+        const wordsEl = document.getElementById('babWords' + i);
+        if (!wordsEl.dataset.loaded) {
+          renderBukuBab(h.dataset.babkey, 'babWords' + i);
+          wordsEl.dataset.loaded = '1';
+        }
+      }
+    };
+  });
+}
+
+// ─── search kosakata lintas semua bab di halaman Buku ───
+let BUKU_SEARCH_INDEX = null;
+function buildBukuSearchIndex() {
+  if (BUKU_SEARCH_INDEX) return;
+  BUKU_SEARCH_INDEX = [];
+  Object.entries(BUKU).forEach(([babKey, babData], babIdx) => {
+    Object.entries(babData).forEach(([group, g]) => {
+      g.rows.forEach(r => {
+        BUKU_SEARCH_INDEX.push({ babKey, babIdx, babLabel: `Bab ${babIdx + 1}`, group, kana: r.k, romaji: r.r, kanji: r.kj || '', arti: r.a });
+      });
+    });
+  });
+}
+function renderBukuSearch() {
+  buildBukuSearchIndex();
+  const q = (document.getElementById('bukuSearchInput').value || '').trim().toLowerCase();
+  const resEl = document.getElementById('bukuSearchResults');
+  const listEl = document.getElementById('babList');
+  if (!q) { resEl.innerHTML = ''; listEl.style.display = ''; return; }
+  listEl.style.display = 'none';
+  const matches = BUKU_SEARCH_INDEX.filter(w =>
+    (w.kana || '').toLowerCase().includes(q) || (w.romaji || '').toLowerCase().includes(q) ||
+    (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q)
+  ).slice(0, 60);
+  if (!matches.length) { resEl.innerHTML = `<div class="kamus-empty">Gak ketemu di Buku. Coba kata kunci lain.</div>`; return; }
+  resEl.innerHTML = `<div class="kamus-count"><span>HASIL DI BUKU</span><span>${matches.length} entri</span></div>` +
+    matches.map(w => `<div class="kamus-item" onclick="jumpToBab(${w.babIdx})">
+      <div class="kbox">${w.kanji ? w.kanji.slice(0, 2) : w.kana.slice(0, 2)}</div>
+      <div class="kinfo">
+        <div class="ktag"><span class="kcat">${w.babLabel.toUpperCase()}</span><span class="kgrp">${w.group}</span></div>
+        <div class="ktitle">${w.arti}</div>
+        <div class="ksub">${w.kana}${w.romaji ? ' • ' + w.romaji : ''}</div>
+      </div>
+    </div>`).join('');
+}
+function jumpToBab(babIdx) {
+  document.getElementById('bukuSearchInput').value = '';
+  renderBukuSearch();
+  const head = document.querySelector(`.bab-head[data-toggle="${babIdx}"]`);
+  if (head) { head.click(); head.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+}
+
+// ─── search filter untuk grid kategori Quiz ───
+function filterQog() {
+  const q = (document.getElementById('qogSearchInput').value || '').trim().toLowerCase();
+  document.querySelectorAll('#qog .qopt').forEach(opt => {
+    const label = (opt.querySelector('.qol')?.textContent || '').toLowerCase();
+    opt.style.display = !q || label.includes(q) ? '' : 'none';
+  });
+}
+
+// ─── search filter untuk halaman Bunpou (bisa juga cari "hari 5", "bab 3", dst) ───
+function filterBunpou() {
+  const q = (document.getElementById('bunpouSearchInput').value || '').trim().toLowerCase();
+  const container = document.getElementById('bunpouContent');
+  if (!container) return;
+  let currentHeader = null;
+  let currentHeaderText = '';
+  let headerHasMatch = false;
+  const finalizeHeader = () => {
+    if (currentHeader) currentHeader.style.display = headerHasMatch ? '' : 'none';
+  };
+  Array.from(container.children).forEach(child => {
+    if (child.classList.contains('sec-header-bunpou')) {
+      finalizeHeader();
+      currentHeader = child;
+      currentHeaderText = child.textContent.toLowerCase();
+      headerHasMatch = false;
+      return;
+    }
+    if (child.classList.contains('acc-item')) {
+      const text = currentHeaderText + ' ' + child.textContent.toLowerCase();
+      const match = !q || text.includes(q);
+      child.style.display = match ? '' : 'none';
+      if (match) headerHasMatch = true;
+    }
+  });
+  finalizeHeader();
+}
+// ─────────────────────────────────────────────────────
 // INIT
 // ─────────────────────────────────────────────────────
-renderKanaAcc(H, 'matHiragana');
-renderKanaAcc(K, 'matKatakana');
-renderKotobaAcc(KT, 'matKotoba');
-renderKanjiAcc(KANJI, 'matKanji');
-renderKotobaAcc(COUNTER, 'matCounter');
-renderKotobaAcc(KATA_SIFAT, 'matSifat');
-renderKotobaAcc(KATA_KERJA, 'matKerja');
 renderPartikel();
 renderPartikelAdv();
-renderBukuBab('bab1', 'bukuBab1');
-renderBukuBab('bab2', 'bukuBab2');
-renderBukuBab('bab3', 'bukuBab3');
-renderBukuBab('bab4', 'bukuBab4');
-renderBukuBab('bab5', 'bukuBab5');
-renderBukuBab('bab6', 'bukuBab6');
-renderBukuBab('bab7', 'bukuBab7');
-renderBukuBab('bab8', 'bukuBab8');
-renderBukuBab('bab9', 'bukuBab9');
-renderBukuBab('bab10', 'bukuBab10');
-renderBukuBab('bab11', 'bukuBab11');
+renderKamusChips();
+renderKamusResults();
+renderBabList();
 renderBunpou();
 initQSetup();
 initAISetup();
