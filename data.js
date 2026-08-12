@@ -72,10 +72,16 @@ const K={
 // ─── DATA: KOTOBA ───
 const KT={
 "Hewan":{rows:[
+{k:"あひる",r:"ahiru",a:"bebek",kj:"家鴨"},
+{k:"かも",r:"kamo",a:"itik liar, mandarin duck",kj:"鴨"},
+{k:"はくちょう",r:"hakuchou",a:"angsa",kj:"白鳥"},
+{k:"くじら",r:"kujira",a:"paus",kj:"鯨"},
+{k:"おす",r:"osu",a:"jantan",kj:"雄"},
+{k:"めす",r:"mesu",a:"betina",kj:"雌"},
 {k:"うし",r:"ushi",a:"sapi",kj:"牛",n:"牛肉 (gyuuniku, daging sapi), 牛乳 (gyuunyuu, susu sapi), dan 牛丼 (gyuudon) semuanya berasal dari kanji ini, dibaca ギュウ (onyomi) di kata majemuk."},
 {k:"サル",r:"saru",a:"monyet, kera"},
 {k:"コアラ",r:"koara",a:"koala"},
-{k:"ゾウ",r:"zou",a:"gajah"},
+{k:"ゾウ",r:"zou",a:"gajah",kj:"象",n:"Homofon dengan ぞう (patung, 像) — bunyinya sama persis, kanji beda total."},
 {k:"ペンギン",r:"pengin",a:"pinguin"},
 {k:"クマ",r:"kuma",a:"beruang"},
 {k:"えさ",r:"esa",a:"pakan"},
@@ -97,6 +103,11 @@ const KT={
 "Orang & Keluarga":{rows:[
 {k:"おとこのひと",r:"otoko no hito",a:"pria",kj:"男の人"},
 {k:"おんなのひと",r:"onna no hito",a:"wanita",kj:"女の人"},
+{k:"せんしゅ",r:"senshu",a:"atlet",kj:"選手"},
+{k:"じえいぎょうしゃ",r:"jieigyousha",a:"wiraswasta",kj:"自営業者"},
+{k:"びじん",r:"bijin",a:"perempuan cantik",kj:"美人"},
+{k:"おきゃくさま",r:"okyakusama",a:"pelanggan (sopan)",kj:"お客様"},
+{k:"きんじょ",r:"kinjo",a:"lingkungan sekitar, tetangga (area)",kj:"近所",n:"Ini merujuk ke AREA/wilayah sekitar rumah, bukan 'orang tetangga' secara spesifik (kalau orangnya, biasa dibilang お隣さん)."},
 {k:"おんなのこ",r:"onna no ko",a:"anak perempuan",kj:"女の子"},
 {k:"しょうじょ",r:"shoujo",a:"gadis",kj:"少女",n:"Lebih formal/sastra dibanding おんなのこ — sering muncul di judul anime/manga (mis. 'mahou shoujo' = gadis ajaib)."},
 {k:"ぜんいん",r:"zen'in",a:"semua orang, seluruh anggota",kj:"全員",n:"全 (semua) + 員 (anggota) — beda dari みなさん yang lebih ke sapaan langsung, ぜんいん lebih ke jumlah/cakupan orangnya."},
@@ -162,6 +173,14 @@ const KT={
 {k:"ルームメイト",r:"ruumumeito",a:"teman sekamar",n:"Serapan 'roommate'."}
 ]},
 "Tempat":{rows:[
+{k:"りょう",r:"ryou",a:"asrama",kj:"寮"},
+{k:"きゃくま",r:"kyakuma",a:"ruang tamu",kj:"客間"},
+{k:"かんこうち",r:"kankouchi",a:"tempat wisata",kj:"観光地"},
+{k:"みなと",r:"minato",a:"pelabuhan",kj:"港"},
+{k:"ちゅうしん",r:"chuushin",a:"pusat, tengah kota",kj:"中心"},
+{k:"ひろば",r:"hiroba",a:"lapangan, alun-alun",kj:"広場"},
+{k:"ようちえん",r:"youchien",a:"TK (Taman Kanak-kanak)",kj:"幼稚園"},
+{k:"むら",r:"mura",a:"desa",kj:"村"},
 {k:"（お）みせ",r:"(o)mise",a:"toko",kj:"（お）店"},
 {k:"はくぶつかん",r:"hakubutsukan",a:"museum",kj:"博物館"},
 {k:"ゆうえんち",r:"yuuenchi",a:"taman bermain",kj:"遊園地"},
@@ -230,6 +249,11 @@ const KT={
 {k:"（お）しろ",r:"(o)shiro",a:"istana, kastil",kj:"（お）城",n:"Banyak kota di Jepang punya kastil bersejarah peninggalan era samurai, contoh terkenal: Himeji-jou."}
 ]},
 "Hobi & Olahraga":{rows:[
+{k:"たっきゅう",r:"takkyuu",a:"pingpong, tenis meja",kj:"卓球"},
+{k:"つなひき",r:"tsunahiki",a:"tarik tambang",kj:"綱引き"},
+{k:"きょうぎ",r:"kyougi",a:"lomba, kompetisi",kj:"競技"},
+{k:"がっき",r:"gakki",a:"alat musik",kj:"楽器"},
+{k:"たいかい",r:"taikai",a:"turnamen",kj:"大会"},
 {k:"すもう",r:"sumou",a:"sumo, gulat ala Jepang",kj:"相撲"},
 {k:"バスケットボール",r:"basuketto booru",a:"bola basket"},
 {k:"かんらんしゃ",r:"kanransha",a:"bianglala",kj:"観覧車"},
@@ -290,6 +314,9 @@ const KT={
 "Makanan & Minuman":{rows:[
 {k:"ドリアン",r:"dorian",a:"durian"},
 {k:"ぎゅうどん",r:"gyuudon",a:"gyudon (nasi topping daging sapi)",kj:"牛丼"},
+{k:"こな",r:"kona",a:"tepung",kj:"粉"},
+{k:"やたい",r:"yatai",a:"warung kaki lima, food stall",kj:"屋台"},
+{k:"やき",r:"yaki",a:"panggang, bakar (biasa jadi imbuhan: yakizakana=ikan bakar, yakitori=sate ayam)",kj:"焼き"},
 {k:"たまご",r:"tamago",a:"telur",kj:"卵",n:"Dari kata kuno 'tama' (bulat) + 'ko' (anak). Artinya 'anak berbentuk bulat'."},
 {k:"みかん",r:"mikan",a:"jeruk mandarin",kj:"蜜柑",n:"Buah khas musim dingin Jepang. Sering dimakan di bawah kotatsu."},
 {k:"りんご",r:"ringo",a:"apel",kj:"林檎",n:"Apel Aomori terkenal sebagai yang terbaik di Jepang."},
@@ -329,9 +356,19 @@ const KT={
 {k:"ゆうしょく",r:"yuushoku",a:"makan malam (formal)",kj:"夕食",n:"夕 (sore/senja) + 食 (makan) — lebih formal/tertulis dibanding ばんごはん yang lebih umum dipakai sehari-hari."}
 ]},
 "Benda":{rows:[
+{k:"におい",r:"nioi",a:"aroma, bau",kj:"匂い",n:"Bentuk kata benda dari においがします (tercium bau)."},
+{k:"せき",r:"seki",a:"tempat duduk",kj:"席"},
+{k:"ぞう",r:"zou",a:"patung",kj:"像",n:"Homofon dengan ゾウ (gajah, 象) — bunyinya sama persis, kanji beda total."},
+{k:"せっけん",r:"sekken",a:"sabun",kj:"石鹸"},
+{k:"こうすい",r:"kousui",a:"parfum",kj:"香水"},
+{k:"ずぼん",r:"zubon",a:"celana panjang",kj:"ズボン",n:"Serapan dari bahasa Prancis 'jupon'."},
+{k:"そで",r:"sode",a:"lengan baju",kj:"袖"},
+{k:"ねだん",r:"nedan",a:"harga",kj:"値段"},
+{k:"はこ",r:"hako",a:"kotak",kj:"箱"},
 {k:"きん",r:"kin",a:"emas",kj:"金",n:"Kanji yang sama juga dipakai buat 'uang' (お金, okane) — makanya 金曜日 (hari Jumat) harfiah artinya 'hari emas/logam'."},
 {k:"ぎん",r:"gin",a:"perak",kj:"銀",n:"Pasangan dari きん (emas). 銀行 (ginkou, bank) juga dari kanji ini — harfiah 'lembaga perak/uang'."},
 {k:"でんきせいひん",r:"denki seihin",a:"alat-alat elektronik",kj:"電気製品"},
+{k:"じゅうでん",r:"juuden",a:"charging, mengisi daya",kj:"充電"},
 {k:"ざいりょう",r:"zairyou",a:"bahan (material/masakan)",kj:"材料"},
 {k:"かぎ",r:"kagi",a:"kunci",kj:"鍵",n:"'Kagi kakko' = tanda kurung siku [ ]."},
 {k:"とけい",r:"tokei",a:"jam",kj:"時計",n:"Gabungan 時 (waktu) + 計 (mengukur)."},
@@ -454,6 +491,8 @@ const KT={
 {k:"のり",r:"nori",a:"lem",kj:"糊",n:"Lem kertas. Jangan tertukar dengan のり (海苔) yang berarti rumput laut! Beda kanji, beda makna, pengucapan sama."}
 ]},
 "Alam":{rows:[
+{k:"たき",r:"taki",a:"air terjun",kj:"滝"},
+{k:"こうずい",r:"kouzui",a:"banjir",kj:"洪水"},
 {k:"こうよう",r:"kouyou",a:"daun maple yang menguning/memerah",kj:"紅葉",n:"Fenomena pergantian warna daun di musim gugur, salah satu daya tarik wisata musiman Jepang (mirip momiji)."},
 {k:"みず",r:"mizu",a:"air",kj:"水",n:"Khusus air dingin/biasa. Air panas = 'oyu' (お湯)."},
 {k:"はな",r:"hana",a:"bunga",kj:"花",n:"Waspada homofon: 'hana' juga bisa berarti 'hidung' (鼻)!"},
@@ -476,6 +515,7 @@ const KT={
 {k:"きせつ",r:"kisetsu",a:"musim",kj:"季節",n:"Kata umum untuk 'musim' sebagai konsep — beda dari nama musim spesifik (haru/natsu/aki/fuyu)."}
 ]},
 "Cuaca & Suhu":{rows:[
+{k:"おんど",r:"ondo",a:"suhu",kj:"温度",n:"Beda dari ～ど (derajat, satuan angka) — おんど ini kata benda buat konsep 'suhu' itu sendiri."},
 {k:"てんきよほう",r:"tenki yohou",a:"ramalan cuaca",kj:"天気予報",n:"天気 (cuaca) + 予報 (prediksi/ramalan)."},
 {k:"てんきがいい",r:"tenki ga ii",a:"cuacanya bagus",kj:"天気がいい",n:"Ungkapan tetap untuk menyatakan cuaca cerah/bagus secara umum."},
 {k:"てんきがわるい",r:"tenki ga warui",a:"cuacanya buruk",kj:"天気が悪い",n:"Lawan kata dari てんきがいい. Dipakai saat cuaca mendung, hujan, dsb."},
@@ -484,6 +524,28 @@ const KT={
 {k:"いちねんじゅう",r:"ichinenjuu",a:"sepanjang tahun",kj:"一年中",n:"Ichinen (satu tahun) + juu (sepanjang/seluruh). Dipakai untuk cuaca/kondisi yang tidak berubah tiap musim, mis. daerah tropis."}
 ]},
 "Konsep Umum":{rows:[
+{k:"ゆうれい",r:"yuurei",a:"hantu",kj:"幽霊"},
+{k:"りゆう",r:"riyuu",a:"alasan",kj:"理由"},
+{k:"きゅうりょう",r:"kyuuryou",a:"gaji, upah",kj:"給料"},
+{k:"ひみつ",r:"himitsu",a:"rahasia",kj:"秘密"},
+{k:"いっぱんてきに",r:"ippanteki ni",a:"secara umum",kj:"一般的に"},
+{k:"じょうほう",r:"jouhou",a:"informasi",kj:"情報"},
+{k:"どくりつ",r:"dokuritsu",a:"merdeka, mandiri",kj:"独立"},
+{k:"ひっこし",r:"hikkoshi",a:"pindah rumah",kj:"引っ越し",n:"Bentuk kata benda dari ひっこしします. 'Hikkoshi wo shimasu' = pindah rumah."},
+{k:"れきし",r:"rekishi",a:"sejarah",kj:"歴史"},
+{k:"こうぎょう",r:"kougyou",a:"industri",kj:"工業"},
+{k:"じしん",r:"jishin",a:"gempa bumi",kj:"地震"},
+{k:"ひつよう",r:"hitsuyou",a:"perlu, butuh, penting",kj:"必要"},
+{k:"おもいやり",r:"omoiyari",a:"kebaikan hati, empati",kj:"思いやり"},
+{k:"ぶぶん",r:"bubun",a:"bagian",kj:"部分"},
+{k:"うごき",r:"ugoki",a:"gerakan",kj:"動き"},
+{k:"それぞれ",r:"sorezore",a:"masing-masing"},
+{k:"もちろん",r:"mochiron",a:"tentu saja"},
+{k:"ですから",r:"desukara",a:"maka dari itu, oleh karena itu"},
+{k:"ちょくせつ",r:"chokusetsu",a:"langsung",kj:"直接"},
+{k:"じゅうたい",r:"juutai",a:"macet, kemacetan lalu lintas",kj:"渋滞"},
+{k:"チャンス",r:"chansu",a:"kesempatan"},
+{k:"くりかえし",r:"kurikaeshi",a:"pengulangan, mengulangi",kj:"繰り返し"},
 {k:"サービス",r:"saabisu",a:"layanan"},
 {k:"にんき",r:"ninki",a:"populer, kepopuleran",kj:"人気",n:"Biasa dipakai dengan pola 〜に人気がある (populer di kalangan〜) atau langsung sebagai keterangan 'ninki no〜' (yang populer)."},
 {k:"さいこう",r:"saikou",a:"paling hebat, terbaik",kj:"最高",n:"最 (paling) + 高 (tinggi) — harfiah 'paling tinggi', dipakai buat pujian antusias."},
@@ -839,6 +901,7 @@ const KT={
 {k:"かお",r:"kao",a:"wajah",kj:"顔",n:"Kanji ini menggambarkan seluruh bagian depan kepala, dari dahi sampai dagu."},
 {k:"あたま",r:"atama",a:"kepala",kj:"頭",n:"Juga dipakai secara kiasan: 'atama ga ii' = pintar (harfiah: kepalanya bagus)."},
 {k:"かみ / かみのけ",r:"kami / kami no ke",a:"rambut",kj:"髪",n:"Homofon dengan 'kami' = kertas (紙) dan dewa (神)!"},
+{k:"ハゲ",r:"hage",a:"botak",kj:"禿げ",n:"Istilah kasual/informal — hati-hati pakainya ke orang lain, bisa kesannya kasar/ngeledek."},
 {k:"ちぢれげ",r:"chijirege",a:"rambut keriting",kj:"縮れ毛",n:"Chijire (mengerut/keriting) + ge (rambut). Rambut yang bentuknya keriting/ikal."},
 {k:"くせげ",r:"kusege",a:"rambut kribo, rambut bergelombang alami",kj:"癖毛",n:"Kuse (kebiasaan/sifat khas) + ge (rambut). Beda dari ちぢれげ — くせげ lebih ke tekstur rambut yang gak lurus/bandel secara alami (bisa bergelombang ringan sampai kribo), bukan keriting rapi."},
 {k:"め",r:"me",a:"mata",kj:"目",n:"Salah satu kanji paling sederhana dalam bahasa Jepang, menyerupai bentuk mata itu sendiri."},
@@ -858,6 +921,9 @@ const KT={
 {k:"けが",r:"kega",a:"luka, cedera",kj:"怪我",n:"'Kega wo shimasu' = terluka/cedera. Dipakai untuk cedera fisik ringan sampai serius."}
 ]},
 "Kesehatan & Sakit":{rows:[
+{k:"はきけがする",r:"hakike ga suru",a:"merasa mual",kj:"吐き気がする"},
+{k:"けんこう",r:"kenkou",a:"kesehatan",kj:"健康"},
+{k:"きぶん",r:"kibun",a:"mood, perasaan (kondisi badan/hati)",kj:"気分"},
 {k:"たいちょう",r:"taichou",a:"kondisi tubuh",kj:"体調"},
 {k:"しょうじょう",r:"shoujou",a:"gejala penyakit",kj:"症状"},
 {k:"のど",r:"nodo",a:"tenggorokan, kerongkongan"},
@@ -958,6 +1024,8 @@ const KT={
 {k:"あちら",r:"achira",a:"ke sana / itu (sopan)",n:"Versi sopan dari asoko/are."}
 ]},
 "Kata Keterangan Umum":{rows:[
+{k:"むかしから",r:"mukashi kara",a:"dari dulu, sejak lama",kj:"昔から"},
+{k:"あたりまえのこと",r:"atarimae no koto",a:"hal yang wajar",kj:"当たり前のこと"},
 {k:"うまく",r:"umaku",a:"dengan baik, dengan lancar",kj:"上手く",n:"Bentuk keterangan dari うまい (jago/enak). 'Umaku ikimashita' = berjalan lancar/sukses."},
 {k:"なんかいも",r:"nankaimo",a:"berapa kali pun",kj:"何回も"},
 {k:"いっかいも",r:"ikkaimo",a:"sekali pun",kj:"一回も",n:"Biasa dipasangin sama bentuk negatif buat penekanan, mis. 'ikkaimo itta koto ga nai' = belum pernah pergi sama sekali."},
@@ -1047,6 +1115,8 @@ const KT={
 {k:"きゅうじん",r:"kyuujin",a:"lowongan kerja",kj:"求人",n:"Kyuu (mencari) + Jin (orang). Dipakai buat konteks perusahaan yang lagi buka lowongan — 'kyuujin kokoku' (求人広告) = iklan lowongan kerja, 'kyuujin site' = website lowongan kerja."}
 ]},
 "Negara & Bangsa":{rows:[
+{k:"けん",r:"ken",a:"prefektur, wilayah",kj:"県",n:"Setingkat provinsi di Jepang, mis. 千葉県 (Chiba-ken). Beda dari ちゅうぶ (Chuubu, nama region besar berisi banyak ken) — けん lebih ke unit administratif spesifik."},
+{k:"ちゅうぶ",r:"chuubu",a:"wilayah Chuubu (Jepang bagian tengah)",kj:"中部"},
 {k:"がいこく",r:"gaikoku",a:"luar negeri, negara asing",kj:"外国"},
 {k:"はた",r:"hata",a:"bendera",kj:"旗",n:"Kata umum untuk bendera apa pun (bendera negara, bendera acara, dll)."},
 {k:"こっき",r:"kokki",a:"bendera negara",kj:"国旗",n:"Koku (negara) + Ki (bendera) — versi spesifik dari はた, khusus bendera resmi suatu negara."},
@@ -1248,6 +1318,8 @@ const KT={
 {k:"あたまがいい",r:"atama ga ii",a:"pintar",kj:"頭がいい",n:"Atama (kepala) + ga ii (bagus) — harfiah 'kepalanya bagus'. Ungkapan idiom umum buat 'pintar'."}
 ]},
 "Hiburan & Acara":{rows:[
+{k:"おみこし",r:"omikoshi",a:"kuil portabel (diarak saat festival)",kj:"お神輿"},
+{k:"ぶたい",r:"butai",a:"panggung, stage",kj:"舞台"},
 {k:"おばけやしき",r:"obake yashiki",a:"rumah hantu",kj:"お化け屋敷"},
 {k:"ジェットコースター",r:"jetto koosutaa",a:"jet coaster, roller coaster"},
 {k:"のみかい",r:"nomikai",a:"pesta minum-minum",kj:"飲み会"},
@@ -1298,6 +1370,8 @@ const KT={
 
 const KATA_SIFAT = {
 "Kata Sifat - い (i-keiyoushi)":{rows:[
+{k:"うすい",r:"usui",a:"tipis, hambar (rasa)",kj:"薄い"},
+{k:"だるい",r:"darui",a:"pegal, lesu, males gerak"},
 {k:"ただしい",r:"tadashii",a:"benar, tepat",kj:"正しい",n:"Buat jawaban/tindakan yang 'benar secara fakta/moral'. Beda dari 合っている (attemasu, cocok/sesuai) yang lebih ke 'pas dengan sesuatu'."},
 {k:"すごい",r:"sugoi",a:"hebat, luar biasa",n:"Dipakai buat ngungkapin kekaguman, bisa juga informal jadi penguat (すごく〜, kayak 'totemo')."},
 {k:"たのしい",r:"tanoshii",a:"menyenangkan",kj:"楽しい"},
@@ -1386,6 +1460,8 @@ const KATA_SIFAT = {
 {k:"くさい",r:"kusai",a:"bau (tidak sedap)",kj:"臭い",n:"Beda kanji dengan 'nioi' (匂い, bau netral). 'Kusai' cenderung untuk bau yang tidak enak."}
 ]},
 "Kata Sifat - な (na-keiyoushi)":{rows:[
+{k:"かわいそう",r:"kawaisou",a:"kasihan, malang",kj:"可哀想",n:"Walau berakhiran う, ini na-keiyoushi, bukan i-keiyoushi — jangan tertukar."},
+{k:"とくべつ",r:"tokubetsu",a:"spesial, istimewa",kj:"特別"},
 {k:"しんせん",r:"shinsen",a:"segar (fresh)",kj:"新鮮"},
 {k:"いろいろ",r:"iroiro",a:"bermacam-macam",kj:"色々"},
 {k:"きれい",r:"kirei",a:"cantik / indah / bersih",n:"Na-adjective, walau berakhiran い — jangan tertukar sebagai i-adjective! Bisa berarti 'cantik' ATAU 'bersih' tergantung konteks."},
@@ -1447,6 +1523,9 @@ const KATA_SIFAT = {
 
 const KATA_KERJA = {
 "Kata Kerja - Kelompok I":{rows:[
+{k:"もどります",r:"modorimasu",a:"kembali lagi",kj:"戻ります"},
+{k:"くもります",r:"kumorimasu",a:"jadi buram/tidak jernih (kaca, cermin, dsb)",kj:"曇ります",n:"Beda dari くもり (kata benda cuaca mendung) — kata kerja ini lebih ke permukaan benda yang jadi buram/berkabut."},
+{k:"にごります",r:"nigorimasu",a:"jadi keruh",kj:"濁ります"},
 {k:"まよいます",r:"mayoimasu",a:"tersesat",kj:"迷います",n:"Juga bisa berarti 'bimbang/ragu-ragu' (mayotte imasu = lagi bingung mutusin)."},
 {k:"たたかいます",r:"tatakaimasu",a:"bertarung, berperang",kj:"戦います"},
 {k:"まにあいます",r:"maniaimasu",a:"tepat waktu",kj:"間に合います",n:"'Densha ni maniaimasu' = keburu naik kereta (tepat waktu). Sering dipakai bentuk negatif: maniaimasen = gak keburu/gak tepat waktu."},
@@ -1549,6 +1628,8 @@ const KATA_KERJA = {
 ]},
 "Kata Kerja - Kelompok II":{rows:[
 {k:"こわれます",r:"kowaremasu",a:"rusak (fisik/benda)",kj:"壊れます",n:"Buat benda yang rusak secara fisik (patah, gak bisa jalan, dsb). 'Pasokon ga kowaremashita' = laptop rusak."},
+{k:"われます",r:"waremasu",a:"pecah, retak, patah",kj:"割れます",n:"Khusus buat benda yang PECAH jadi beberapa bagian (kaca, piring, telur) — beda dari こわれます yang lebih umum buat 'rusak' apa aja."},
+{k:"まぜます",r:"mazemasu",a:"mencampur, mengaduk",kj:"混ぜます"},
 {k:"おくれます",r:"okuremasu",a:"terlambat",kj:"遅れます"},
 {k:"なれます",r:"naremasu",a:"terbiasa, betah",kj:"慣れます"},
 {k:"わかれます",r:"wakaremasu",a:"berpisah, putus (hubungan)",kj:"別れます"},
@@ -6609,6 +6690,23 @@ const BUNPOU = [
   },
   {
     tema: "Hari 21 (Bab 8)",
+    judul: "〔pemberi〕は　〔saya〕に　〔KB〕を　くれます (Memberikan Sesuatu ke Saya)",
+    sub: "Pasangan dari あげます, tapi sudut pandangnya WAJIB dari sisi 'saya' (atau kelompok saya — keluarga, tim, dsb) sebagai penerima. Kalau あげます bisa dipakai buat 'A ngasih ke B' (siapa pun A dan B-nya), くれます CUMA dipakai kalau penerimanya itu SAYA — gak bisa dipakai buat 'A ngasih ke B' kalau B bukan saya.",
+    items: [
+      {
+        pola: "〔pemberi〕は　（わたしに）　〔KB〕を　くれます。",
+        romaji: "[pemberi] wa (watashi ni) [KB] wo kuremasu.",
+        arti: "[Pemberi] memberikan [KB] ke saya.",
+        catatan: "Kalau penerimanya jelas 'saya' dari konteks, （わたしに） sering DIHILANGKAN. Hati-hati: gak boleh bilang 'わたしはKBをくれます' — くれます subjeknya harus ORANG LAIN yang ngasih ke saya, bukan sebaliknya. Kalau saya yang ngasih ke orang lain, tetep pakai あげます.",
+        contoh: [
+          {jp:"あには わたしに プレゼントを くれます。", id:"Kakak laki-laki memberikan hadiah ke saya."},
+          {jp:"せんせいは（わたしに）ほんを くれました。", id:"Guru memberikan buku ke saya."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Hari 21 (Bab 8)",
     judul: "〔penerima〕は　〔pemberi〕に　〔KB〕を　もらいます (Menerima Sesuatu)",
     sub: "Kebalikan sudut pandang dari あげます — kalau あげます itu dari sisi yang NGASIH, もらいます itu dari sisi yang NERIMA.",
     items: [
@@ -7625,6 +7723,126 @@ const BUNPOU = [
         contoh: [
           {jp:"しょくじのまえに、てをあらいます。", id:"Sebelum makan, (saya) cuci tangan."},
           {jp:"テストのまえに、べんきょうします。", id:"Sebelum ujian, (saya) belajar."}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 32 (Bab 13)",
+    judul: "名詞修飾 (Meishi Shuushoku — Menerangkan Kata Benda)",
+    sub: "Di bahasa Jepang, kata/frasa yang MENERANGKAN kata benda selalu diletakkan LANGSUNG DI DEPAN kata benda itu (kebalikan dari bahasa Indonesia yang naruh keterangan di belakang). Ada 4 pola tergantung jenis kata yang menerangkan.",
+    items: [
+      {
+        pola: "〔KB〕＋の＋〔KB〕",
+        romaji: "[KB1] + no + [KB2]",
+        arti: "KB2 milik/terkait KB1",
+        catatan: "Dua kata benda digabung pakai の — KB1 menerangkan KB2. Pola paling dasar, sama kayak yang udah dipelajari dari awal (Hari 1-2).",
+        contoh: [
+          {jp:"にほんごの　せんせい", id:"guru bahasa Jepang"},
+          {jp:"だいがくの　ともだち", id:"teman kuliah"}
+        ]
+      },
+      {
+        pola: "〔KS-い（普通形）〕＋〔KB〕",
+        romaji: "[KS-i futsuukei] + [KB]",
+        arti: "KB yang [sifat]",
+        catatan: "Kata sifat-い nempel LANGSUNG ke kata benda, gak perlu partikel penghubung apa pun — persis kayak makenya sendirian, cuma tinggal taruh di depan KB.",
+        contoh: [
+          {jp:"たかい　やま", id:"gunung yang tinggi"},
+          {jp:"おいしくない　りょうり", id:"masakan yang tidak enak"}
+        ]
+      },
+      {
+        pola: "〔KS-な（普通形）〕＋な＋〔KB〕",
+        romaji: "[KS-na futsuukei] + na + [KB]",
+        arti: "KB yang [sifat]",
+        catatan: "Kata sifat-な WAJIB pakai な sebelum kata bendanya (kalau bentuk positif biasa) — beda dari KS-い yang gak perlu tambahan apa-apa.",
+        contoh: [
+          {jp:"きれいな　ひと", id:"orang yang cantik"},
+          {jp:"しずかな　まち", id:"kota yang sepi"}
+        ]
+      },
+      {
+        pola: "〔動詞普通形〕＋〔KB〕",
+        romaji: "[KK futsuukei] + [KB]",
+        arti: "KB yang [aksi]",
+        catatan: "Kata kerja bentuk biasa (present/lampau, positif/negatif — SEMUA bentuk futsuukei bisa) langsung nempel di depan kata benda, berfungsi kayak klausa relatif ('yang ...') dalam bahasa Indonesia.",
+        contoh: [
+          {jp:"はしっている　ひと", id:"orang yang sedang berlari"},
+          {jp:"きのう　かった　ほん", id:"buku yang dibeli kemarin"}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 32 (Bab 13)",
+    judul: "AはBが〔動詞普通形〕KBです (Pola Deskripsi dengan Klausa Relatif)",
+    sub: "Gabungan antara pola topik あなたは〜 dan meishi shuushoku (poin sebelumnya) — dipakai buat ngejelasin A itu 'KB yang seperti apa', dengan B sebagai pelaku/subjek di dalam klausa penjelas.",
+    items: [
+      {
+        pola: "A は　B が　〔動詞普通形〕　KB です。",
+        romaji: "A wa B ga [KK futsuukei] KB desu.",
+        arti: "A adalah KB yang [B melakukan aksi tersebut].",
+        catatan: "A = topik utama yang lagi dibahas. B = pelaku/subjek DI DALAM klausa penjelas (ditandain が, bukan は — karena B bukan topik utama kalimat). Klausa 'B ga [KK]' berfungsi menerangkan KB, persis kayak pola meishi shuushoku sebelumnya, cuma di sini KB-nya sekaligus jadi predikat buat A.",
+        contoh: [
+          {jp:"これは　ゆうめいなさっかが　かいた　しょうせつです。", id:"Ini adalah novel yang ditulis oleh penulis terkenal."},
+          {jp:"あれは　こどもたちが　あそぶ　こうえんです。", id:"Itu adalah taman tempat anak-anak bermain."}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 32 (Bab 13)",
+    judul: "KBを〔動詞ている〕人です (Orang yang Sedang Memakai/Melakukan ~)",
+    sub: "Pola spesifik buat NUNJUKIN/NGENALIN seseorang berdasarkan apa yang lagi dia pakai atau lakukan — cocok banget buat deskripsiin orang di keramaian atau foto.",
+    items: [
+      {
+        pola: "〔KB〕を　〔動詞ている〕　人です。",
+        romaji: "[KB] wo [KK-teiru] hito desu.",
+        arti: "Orang yang sedang memakai/melakukan [KB].",
+        catatan: "動詞ている di sini nunjukin kondisi/aksi yang SEDANG berlangsung, dipakai berbarengan sama meishi shuushoku pola KK futsuukei (ている itu sendiri termasuk futsuukei).",
+        contoh: [
+          {jp:"めがねを　かけている　ひとです。", id:"Orang yang sedang memakai kacamata."},
+          {jp:"ぼうしを　かぶっている　ひとです。", id:"Orang yang sedang memakai topi."}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 32 (Bab 13)",
+    judul: "〜たことがあります (Pernah ~)",
+    sub: "Dipakai buat nyeritain PENGALAMAN — sesuatu yang pernah dilakukan/dialami di masa lalu, terlepas dari kapan persisnya.",
+    items: [
+      {
+        pola: "〔動詞た形〕＋ことがあります",
+        romaji: "[V-ta] + koto ga arimasu",
+        arti: "Pernah melakukan ~",
+        catatan: "Beda dari bentuk lampau biasa (〜ました) yang cuma nyatain sesuatu TERJADI di masa lalu — 〜たことがあります lebih ke 'PENGALAMAN', nekenin bahwa hal itu PERNAH kejadian minimal sekali dalam hidup, gak peduli kapan. Bentuk negatif: 〜たことがありません (belum pernah).",
+        contoh: [
+          {jp:"にほんへ　いったことがあります。", id:"(Saya) pernah pergi ke Jepang."},
+          {jp:"すしを　たべたことがありません。", id:"(Saya) belum pernah makan sushi."}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 32 (Bab 13)",
+    judul: "X という Y (Y yang Disebut/Bernama X)",
+    sub: "Dipakai buat NGENALIN nama/istilah yang belum tentu familiar ke lawan bicara, dengan cara nempelin penjelas yang lebih umum. X という Y itu SATU FRASA KATA BENDA UTUH (bukan pola kalimat) — jadi frasa ini bisa ditaruh di posisi MANAPUN yang biasa ditempatin kata benda biasa (jadi topik, objek, subjek, dst), gak ada aturan posisi khusus.",
+    items: [
+      {
+        pola: "「X」という　Y",
+        romaji: "\"X\" to iu Y",
+        arti: "Y yang disebut/bernama X",
+        catatan: "X = nama/istilah yang KEMUNGKINAN gak familiar/asing buat lawan bicara (nama unik, istilah khusus, kata jarang). Y = kategori/penjelas yang UMUM dan gampang dipahami. Cara ceknya: kalau kalimat masih masuk akal dibaca tanpa という (cuma pakai Y aja), berarti という cuma nempelin nama X ke Y — posisinya di kalimat ikut posisi Y itu sendiri, gak berubah.",
+        contoh: [
+          {jp:"「すきやき」という　りょうりを　しっていますか。", id:"Tahu masakan yang namanya \"sukiyaki\"? — (という Y jadi OBJEK, karena Y='りょうり' aslinya juga objek)"},
+          {jp:"「さくら」という　はなは　きれいです。", id:"Bunga yang namanya \"sakura\" itu indah. — (という Y jadi TOPIK, karena Y='はな' aslinya juga topik)"}
         ]
       }
     ]
