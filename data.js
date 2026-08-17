@@ -79,6 +79,7 @@ const KT={
 {k:"あひる",r:"ahiru",a:"bebek",kj:"家鴨"},
 {k:"かも",r:"kamo",a:"itik liar, mandarin duck",kj:"鴨"},
 {k:"はくちょう",r:"hakuchou",a:"angsa",kj:"白鳥"},
+{k:"はくば",r:"hakuba",a:"kuda putih",kj:"白馬"},
 {k:"くじら",r:"kujira",a:"paus",kj:"鯨"},
 {k:"おす",r:"osu",a:"jantan",kj:"雄"},
 {k:"めす",r:"mesu",a:"betina",kj:"雌"},
@@ -105,6 +106,7 @@ const KT={
 {k:"さめ",r:"same",a:"hiu",kj:"鮫",n:"Hiu jarang jadi topik sehari-hari di Jepang, tapi sering muncul di anime/manga sebagai karakter (mis. maskot Fuji TV, Same-chan)."}
 ]},
 "Orang & Keluarga":{rows:[
+{k:"あかちゃん",r:"akachan",a:"bayi",kj:"赤ちゃん"},
 {k:"じょうし",r:"joushi",a:"atasan",kj:"上司"},
 {k:"せんぱい",r:"senpai",a:"senior",kj:"先輩"},
 {k:"こうはい",r:"kouhai",a:"junior, adik kelas",kj:"後輩"},
@@ -183,6 +185,8 @@ const KT={
 {k:"ルームメイト",r:"ruumumeito",a:"teman sekamar",n:"Serapan 'roommate'."}
 ]},
 "Tempat":{rows:[
+{k:"うりば",r:"uriba",a:"aisle, area penjualan",kj:"売り場"},
+{k:"ばいてん",r:"baiten",a:"toko penjualan (khusus, mis. di stasiun/kampus)",kj:"売店"},
 {k:"りょう",r:"ryou",a:"asrama",kj:"寮"},
 {k:"きゃくま",r:"kyakuma",a:"ruang tamu",kj:"客間"},
 {k:"シェアハウス",r:"shea hausu",a:"kos-kosan bersama, rumah share"},
@@ -323,6 +327,7 @@ const KT={
 {k:"ちかてつ",r:"chikatetsu",a:"kereta bawah tanah",kj:"地下鉄",n:"Chika (bawah tanah) + Tetsu (besi/rel). Sistem subway, umum di kota besar seperti Tokyo dan Osaka."}
 ]},
 "Makanan & Minuman":{rows:[
+{k:"いんりょうすい",r:"inryousui",a:"air konsumsi",kj:"飲料水"},
 {k:"ねぎ",r:"negi",a:"daun bawang",kj:"葱"},
 {k:"きゅうり",r:"kyuuri",a:"timun",kj:"胡瓜"},
 {k:"かぼちゃ",r:"kabocha",a:"labu",kj:"南瓜"},
@@ -544,6 +549,11 @@ const KT={
 {k:"いちねんじゅう",r:"ichinenjuu",a:"sepanjang tahun",kj:"一年中",n:"Ichinen (satu tahun) + juu (sepanjang/seluruh). Dipakai untuk cuaca/kondisi yang tidak berubah tiap musim, mis. daerah tropis."}
 ]},
 "Konsep Umum":{rows:[
+{k:"あかじ",r:"akaji",a:"rugi, defisit",kj:"赤字",n:"Aka (merah) + Ji (huruf/angka) — dari kebiasaan nulis angka minus/kerugian pakai tinta merah di pembukuan."},
+{k:"せきがいせん",r:"sekigaisen",a:"garis infra merah",kj:"赤外線"},
+{k:"せいしゅん",r:"seishun",a:"masa muda",kj:"青春"},
+{k:"げんご",r:"gengo",a:"bahasa (istilah umum/akademis)",kj:"言語"},
+{k:"ことば",r:"kotoba",a:"kata, kosa kata",kj:"言葉"},
 {k:"ユーモア",r:"yuumoa",a:"humor"},
 {k:"よわいところ",r:"yowai tokoro",a:"titik lemah, kelemahan",kj:"弱いところ"},
 {k:"こんいん",r:"kon'in",a:"pernikahan (istilah formal/hukum)",kj:"婚姻",n:"Lebih formal/legal dibanding 結婚 (kekkon) yang lebih umum dipakai sehari-hari."},
@@ -1185,6 +1195,8 @@ const KT={
 {k:"〜じん",r:"~jin",a:"orang ~ / warga negara ~",kj:"〜人",n:"Ditambahkan setelah nama negara. にほんじん = orang Jepang, インドネシアじん = orang Indonesia."},
 {k:"〜ご",r:"~go",a:"bahasa ~",kj:"〜語",n:"Ditambahkan setelah nama negara/bangsa. にほんご = bahasa Jepang, えいご = bahasa Inggris."},
 {k:"えいご",r:"eigo",a:"bahasa Inggris",kj:"英語",n:"Ei (Inggris/Eropa) + Go (bahasa). Pelajaran wajib di sekolah Jepang."},
+{k:"ちゅうごくご",r:"chuugokugo",a:"bahasa Mandarin",kj:"中国語"},
+{k:"こくご",r:"kokugo",a:"bahasa ibu, pelajaran Bahasa Jepang (di sekolah)",kj:"国語",n:"Koku (negara) + Go (bahasa) — beda dari にほんご: こくご dipakai khusus buat NAMA MATA PELAJARAN bahasa Jepang di sekolah Jepang sendiri (buat native), sementara にほんご dipakai buat bahasa Jepang sebagai bahasa asing."},
 {k:"ペキン",r:"pekin",a:"Beijing (ibu kota China)",n:"Serapan nama kota 'Peking/Beijing'. Ibu kota Republik Rakyat China."},
 {k:"プサン",r:"pusan",a:"Busan (kota di Korea Selatan)",n:"Serapan nama kota 'Busan'. Kota pelabuhan terbesar kedua di Korea Selatan setelah Seoul."}
 ]},
@@ -1197,6 +1209,7 @@ const KT={
 "Arah & Posisi":{rows:[
 {k:"こうさてん",r:"kousaten",a:"persimpangan jalan",kj:"交差点"},
 {k:"しんごう",r:"shingou",a:"lampu lalu lintas",kj:"信号"},
+{k:"あおしんごう",r:"aoshingou",a:"lampu hijau",kj:"青信号",n:"Meski warnanya hijau, disebut 'ao' (biru) — sisa kebiasaan lama saat 'ao' masih mencakup hijau juga."},
 {k:"かど",r:"kado",a:"belokan, tikungan",kj:"角"},
 {k:"～つめ",r:"~tsume",a:"ke~ (kesatu, kedua, dst.)",kj:"～つ目"},
 {k:"みぎ",r:"migi",a:"kanan",kj:"右",n:"Arah kanan. Di Jepang, orang berjalan/berdiri di sisi kiri eskalator (kecuali di Osaka yang sebaliknya)."},
@@ -1591,6 +1604,7 @@ const KATA_KERJA = {
 {k:"あいます",r:"aimasu",a:"bertemu, berjumpa",kj:"会います"},
 {k:"なきます",r:"nakimasu",a:"menangis",kj:"泣きます",n:"'Akachan ga nakimasu' = bayinya menangis."},
 {k:"かわります",r:"kawarimasu",a:"berubah",kj:"変わります",n:"Beda dari なります (Hari 26, 'menjadi' — hasil akhirnya) — かわります lebih fokus ke PROSES/PERUBAHANNYA sendiri, tanpa nunjuk hasil akhir spesifik."},
+{k:"かたります",r:"katarimasu",a:"bercerita, menuturkan",kj:"語ります",n:"Dari 'kataru' — kelihatannya berakhiran る kayak kata kerja Kelompok II, tapi 語る itu GODAN (Kelompok I): bentuk kamusnya 語る, negatifnya 語らない (bukan 語ない)."},
 {k:"たのしみます",r:"tanoshimimasu",a:"menikmati, menantikan dengan senang",kj:"楽しみます",n:"Kalau dipakai bentuk ています (たのしみにしています), artinya 'menantikan sesuatu dengan gak sabar' — mirip 'looking forward to' dalam bahasa Inggris."},
 {k:"くらします",r:"kurashimasu",a:"hidup, tinggal (menjalani kehidupan)",kj:"暮らします",n:"Beda dari すみます (Hari 20, sekadar 'tinggal di suatu tempat') — くらします lebih ke MENJALANI kehidupan sehari-hari (rutinitas, cara hidup), bukan cuma soal alamat tinggal."},
 {k:"あそびます",r:"asobimasu",a:"bermain",kj:"遊びます",n:"Dari 'asobu'. Orang dewasa juga pakai kata ini untuk bersenang-senang."},
@@ -4158,6 +4172,87 @@ const KANJI = [
       { w: "食べ物", furi: "たべもの", a: "makanan" },
       { w: "食事する", furi: "しょくじする", a: "makan" },
       { w: "食欲", furi: "しょくよく", a: "nafsu makan" }
+    ]
+  },
+  {
+    tema: "Hari 11", char: "飯", onyomi: ["ハン"], kunyomi: ["めし"], arti: "nasi, makanan",
+    kotoba: [
+      { w: "ご飯", furi: "ごはん", a: "makanan, nasi" },
+      { w: "朝ご飯", furi: "あさごはん", a: "makan pagi" },
+      { w: "昼ご飯", furi: "ひるごはん", a: "makan siang" }
+    ]
+  },
+  {
+    tema: "Hari 11", char: "飲", onyomi: ["イン"], kunyomi: ["の.む", "の.み"], arti: "minum",
+    kotoba: [
+      { w: "飲料水", furi: "いんりょうすい", a: "air konsumsi" },
+      { w: "飲み物", furi: "のみもの", a: "minuman" },
+      { w: "飲む", furi: "のむ", a: "minum" }
+    ]
+  },
+  {
+    tema: "Hari 11", char: "白", onyomi: ["ハク"], kunyomi: ["しろ", "しろ.い"], arti: "putih",
+    kotoba: [
+      { w: "白馬", furi: "はくば", a: "kuda putih" },
+      { w: "白鳥", furi: "はくちょう", a: "angsa" },
+      { w: "面白い", furi: "おもしろい", a: "menarik" }
+    ]
+  },
+  {
+    tema: "Hari 11", char: "赤", onyomi: ["セキ"], kunyomi: ["あか", "あか.い"], arti: "merah",
+    kotoba: [
+      { w: "赤ちゃん", furi: "あかちゃん", a: "bayi" },
+      { w: "赤字", furi: "あかじ", a: "rugi, defisit" },
+      { w: "赤外線", furi: "せきがいせん", a: "garis infra merah" }
+    ]
+  },
+  {
+    tema: "Hari 11", char: "青", onyomi: ["セイ"], kunyomi: ["あお", "あお.い"], arti: "biru, hijau",
+    kotoba: [
+      { w: "青信号", furi: "あおしんごう", a: "lampu hijau" },
+      { w: "青春", furi: "せいしゅん", a: "masa muda" }
+    ]
+  },
+  {
+    tema: "Hari 11", char: "言", onyomi: ["ゲン", "ゴン"], kunyomi: ["い.う"], arti: "mengatakan",
+    kotoba: [
+      { w: "言語", furi: "げんご", a: "bahasa" },
+      { w: "言う", furi: "いう", a: "mengatakan" },
+      { w: "言葉", furi: "ことば", a: "kosa kata" }
+    ]
+  },
+  {
+    tema: "Hari 11", char: "話", onyomi: ["ワ"], kunyomi: ["はな.す", "はなし"], arti: "berbicara, cerita",
+    kotoba: [
+      { w: "電話", furi: "でんわ", a: "telepon" },
+      { w: "会話", furi: "かいわ", a: "percakapan" },
+      { w: "話す", furi: "はなす", a: "berbicara" },
+      { w: "話", furi: "はなし", a: "cerita" }
+    ]
+  },
+  {
+    tema: "Hari 11", char: "語", onyomi: ["ゴ"], kunyomi: ["かた.る"], arti: "bahasa, bercerita",
+    kotoba: [
+      { w: "語る", furi: "かたる", a: "bercerita" },
+      { w: "中国語", furi: "ちゅうごくご", a: "bahasa mandarin" },
+      { w: "国語", furi: "こくご", a: "bahasa ibu" }
+    ]
+  },
+  {
+    tema: "Hari 11", char: "売", onyomi: ["バイ"], kunyomi: ["う.る"], arti: "menjual",
+    kotoba: [
+      { w: "売る", furi: "うる", a: "menjual" },
+      { w: "売り場", furi: "うりば", a: "aisle (area penjualan)" },
+      { w: "売店", furi: "ばいてん", a: "toko penjualan (khusus)" },
+      { w: "自動販売機", furi: "じどうはんばいき", a: "vending machine" }
+    ]
+  },
+  {
+    tema: "Hari 11", char: "読", onyomi: ["ドク"], kunyomi: ["よ.む"], arti: "membaca",
+    kotoba: [
+      { w: "読書", furi: "どくしょ", a: "baca buku" },
+      { w: "読者", furi: "どくしゃ", a: "pembaca" },
+      { w: "読む", furi: "よむ", a: "membaca" }
     ]
   }
 ]; // end KANJI
@@ -8011,6 +8106,96 @@ const BUNPOU = [
         catatan: "Pakai が kalau predikat kalimat utama nyeritain KEJADIAN yang MENIMPA/melibatkan si KB (bukan penjelasan tentang si KB itu sendiri) — sering dipasangin sama kata kerja eksistensi/kemunculan (います、あらわれます、きます). Cara ceknya: kalau predikatnya jawab 'apa yang TERJADI', pakai が.",
         contoh: [
           {jp:"ミラが　きのう　みた　ゆうれいが、へやに　あらわれました。", id:"Hantu yang dilihat Mira kemarin muncul di kamar. (predikat 'muncul' = kejadian yang melibatkan si hantu → pakai が)"}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 34 (Bab 14)",
+    judul: "動詞（辞書形）＋と (Syarat Otomatis \"Kalau\")",
+    sub: "Nunjukin syarat/penyebab (X) yang OTOMATIS bikin akibat (Y) kejadian — kayak hukum alam, kebiasaan, atau mekanisme, bukan pilihan orang.",
+    items: [
+      {
+        pola: "動詞（辞書形）＋と＋述語",
+        romaji: "doushi (jisho-kei) + to + jutsugo",
+        arti: "Kalau X (terjadi), maka Y (otomatis terjadi)",
+        catatan: "Pola と ini beda sama と yang buat ngutip kalimat (lihat poin 2 di bawah) — di sini と nempel ke kata kerja BENTUK KAMUS (jisho-kei) buat nunjukin SYARAT OTOMATIS: kalau X kejadian, Y PASTI ikut kejadian, kayak hukum alam/kebiasaan (bukan hasil pilihan siapa-siapa). Makanya PANTANG dipakai kalau Y-nya berupa ajakan/perintah/keinginan (〜ましょう、〜てください、〜たいです GAK BOLEH muncul setelah と) — kalau mau nyatain syarat buat ajakan/perintah, pakainya pola lain (belum diajarin). Cara ceknya: kalau kalimatnya bisa dibaca 'tiap kali X, otomatis Y', pakai と.",
+        contoh: [
+          {jp:"はるに　なると、さくらが　さきます。", id:"Kalau musim semi tiba, sakura mekar. (X = musim semi tiba → Y = sakura mekar, otomatis/alami, bukan ajakan)"},
+          {jp:"「さくら」という　はなが　さくと、みんな　はなみに　いきます。", id:"Kalau bunga yang namanya \"sakura\" itu mekar, semua orang pergi hanami. (nyambungin という dari Hari 33 buat nyebut nama bunganya dulu, baru ditempelin と buat syaratnya)"}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 34 (Bab 14)",
+    judul: "「せりふ」＋と言います (Mengutip Perkataan Orang)",
+    sub: "Cara ngutip kalimat orang lain secara LANGSUNG (apa adanya, gak diubah bentuknya) sebelum ditutup と言います/と言いました.",
+    items: [
+      {
+        pola: "「せりふ」＋と言います／言いました",
+        romaji: "\"serifu\" + to iimasu / to iimashita",
+        arti: "Katanya \"...\" / (dia) bilang \"...\"",
+        catatan: "と di sini FUNGSINYA BEDA sama と di poin 1 (bukan syarat 'kalau', tapi PENANDA KUTIPAN — persis kayak tanda kutip \"...\" di bahasa Indonesia). Kalimat yang dikutip ditaruh APA ADANYA (bentuk biasa/futsuukei), baru abis itu と言います/言いました. Kalau yang dikutip cuma SATU KATA/NAMA doang (bukan kalimat penuh), fungsinya jadi mirip という (Hari 33) — 'X と言います' bisa berarti 'namanya/disebut X', cuma urutannya KEBALIK: [Y] という [X] (Hari 33, X duluan nempel ke Y) vs [X] と言います (X duluan, lalu と言います).",
+        contoh: [
+          {jp:"てんきよほうは　「あした　あめが　ふります」と　いいました。", id:"Ramalan cuaca bilang, \"Besok akan hujan.\" (kutipan langsung, kalimat aslinya gak diubah bentuknya)"},
+          {jp:"きのう　あった　ひとは、たなかと　いいます。", id:"Orang yang (saya) temui kemarin itu, namanya Tanaka. (きのうあったひと = meishishuushoku dari Hari 32 buat nerangin 'orang'-nya, baru と言います buat nyebut namanya — bandingin sama という di Hari 33)"}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 34 (Bab 14)",
+    judul: "動詞（て形）＋はいけません (Larangan \"Tidak Boleh\")",
+    sub: "Bentuk sopan buat ngelarang — nunjukin sesuatu yang GAK BOLEH dilakuin.",
+    items: [
+      {
+        pola: "動詞（て形）＋はいけません",
+        romaji: "doushi (te-kei) + wa ikemasen",
+        arti: "Gak boleh [kata kerja]",
+        catatan: "Nempel ke kata kerja bentuk て (て形), predikatnya berarti 'gak boleh ngelakuin itu' — LARANGAN TEGAS, beda sama なくてもいいです ('gak perlu, tapi boleh aja kalau mau') yang sifatnya cuma opsional. Rumus: [kata kerja て形] + はいけません.",
+        contoh: [
+          {jp:"ここで　たばこを　すっては　いけません。", id:"Gak boleh merokok di sini."},
+          {jp:"せんせいが　きんしした　ばしょに　はいっては　いけません。", id:"Gak boleh masuk ke tempat yang dilarang oleh guru. (せんせいがきんししたばしょ = meishishuushoku dari Hari 32, nerangin 'tempat'-nya)"}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 34 (Bab 14)",
+    judul: "動詞（ない形）＋ければなりません (Kewajiban \"Harus\")",
+    sub: "Nunjukin kewajiban yang GAK BISA dihindarin — pasangan/kebalikan dari てはいけません.",
+    items: [
+      {
+        pola: "動詞（ない形、いを取る）＋ければなりません",
+        romaji: "doushi (nai-kei, buang i) + kereba narimasen",
+        arti: "Harus [kata kerja]",
+        catatan: "Dibentuk dari kata kerja BENTUK NAI, terus huruf い di paling akhir dibuang, baru ditambah ければなりません. Bandingin sama てはいけません (poin 3 di atas): てはいけません = DILARANG ngelakuin, なければなりません = WAJIB ngelakuin — dua sisi mata uang buat ngomongin aturan.",
+        contoh: [
+          {jp:"まいにち　くすりを　のまなければ　なりません。", id:"Harus minum obat setiap hari. (のむ→のまない→のまなければ)"},
+          {jp:"あした　だす　しゅくだいを　きょう　おわらせなければ　なりません。", id:"Harus menyelesaikan PR yang dikumpulkan besok, hari ini. (あしただすしゅくだい = meishishuushoku dari Hari 32, nerangin 'PR'-nya; おわらせる→おわらせない→おわらせなければ)"}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 34 (Bab 14)",
+    judul: "動詞（ない形）＋くてもいいです (Gak Perlu \"Tidak Perlu\")",
+    sub: "Nunjukin sesuatu OPSIONAL — boleh dilakuin, boleh juga enggak, gak wajib. Pelengkap terakhir dari 'segitiga aturan' bareng てはいけません dan なければなりません.",
+    items: [
+      {
+        pola: "動詞（ない形、いを取る）＋くてもいいです",
+        romaji: "doushi (nai-kei, buang i) + kutemo ii desu",
+        arti: "Gak perlu [kata kerja] (tapi boleh aja kalau mau)",
+        catatan: "Dibentuk sama persis kayak なければなりません (poin 4): dari kata kerja BENTUK NAI, buang huruf い di paling akhir — tapi lanjutannya beda: くてもいいです (bukan ければなりません). Sekarang bandingin TIGA pola sekaligus buat satu kata kerja, misal 'pergi' (いく): いっては いけません (gak boleh pergi, dilarang) vs いかなければ なりません (harus pergi, wajib) vs いかなくても いいです (gak perlu pergi, opsional — boleh pergi boleh enggak). Cara ceknya: kalau kalimatnya jawab 'boleh diskip gak, gak masalah kalau enggak', pakai なくてもいいです.",
+        contoh: [
+          {jp:"きょうは　しゅくだいを　しなくても　いいです。", id:"Hari ini gak perlu ngerjain PR. (opsional, beda sama しなければなりません = wajib ngerjain)"},
+          {jp:"せんせいが　だした　しゅくだいは　あしたまでだから、きょう　おわらせなくても　いいです。", id:"PR yang dikasih guru itu batasnya besok, jadi hari ini gak perlu diselesaiin. (せんせいがだしたしゅくだい = meishishuushoku dari Hari 32, nerangin 'PR'-nya — bandingin sama contoh おわらせなければなりません di poin 4, kata kerjanya sama tapi maknanya kebalikan)"}
         ]
       }
     ]
