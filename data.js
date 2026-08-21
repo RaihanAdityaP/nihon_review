@@ -1712,11 +1712,16 @@ const KATA_KERJA = {
 {k:"あつまります",r:"atsumarimasu",a:"terkumpul, berkumpul",kj:"集まります",n:"Verba INTRANSITIF (orang/bendanya berkumpul dengan sendirinya) — beda dari 集めます (mengumpulkan, transitif, Hari 9)."},
 {k:"しまります",r:"shimarimasu",a:"tertutup",kj:"閉まります",n:"Verba INTRANSITIF (pintu/tokonya tertutup dengan sendirinya) — beda dari 閉めます (menutup, transitif, Hari 7)."},
 {k:"すきます",r:"sukimasu",a:"menjadi lengang, kosong (tempat)",kj:"空きます",n:"Sama akar kata sama おなかがすきます (lapar, harfiah 'perutnya jadi kosong') — di sini dipakai buat TEMPAT yang jadi lengang/gak penuh, kebalikan dari こみます (ramai/padat)."},
-{k:"やみます",r:"yamimasu",a:"berhenti (hujan)",kj:"止みます",n:"Khusus buat hujan/salju yang berhenti turun — 'ame ga yamimashita' = hujannya udah berhenti. Beda dari とまります (止まります, berhenti secara umum untuk benda/kendaraan)."}
+{k:"やみます",r:"yamimasu",a:"berhenti (hujan)",kj:"止みます",n:"Khusus buat hujan/salju yang berhenti turun — 'ame ga yamimashita' = hujannya udah berhenti. Beda dari とまります (止まります, berhenti secara umum untuk benda/kendaraan)."},
+{k:"はじまります",r:"hajimarimasu",a:"dimulai",kj:"始まります",n:"Verba INTRANSITIF (kejadiannya mulai dengan sendirinya, mis. jam pelajaran) — pasangannya: 始めます (memulai, transitif, ada pelakunya yang sengaja mulai)."},
+{k:"みつかります",r:"mitsukarimasu",a:"ditemukan, ketemu",kj:"見つかります",n:"Verba INTRANSITIF (bendanya 'ketemu dengan sendirinya', fokusnya ke si benda) — pasangannya: 見つけます (menemukan, transitif, ada pelaku yang nyari & nemuin)."},
+{k:"わります",r:"warimasu",a:"memecahkan",kj:"割ります",n:"Verba TRANSITIF, butuh objek + を (mis. 'まどを割ります' = memecahkan jendela) — pasangannya: 割れます (pecah dengan sendirinya, intransitif)."}
 ]},
 "Kata Kerja - Kelompok II":{rows:[
 {k:"こわれます",r:"kowaremasu",a:"rusak (fisik/benda)",kj:"壊れます",n:"Buat benda yang rusak secara fisik (patah, gak bisa jalan, dsb). 'Pasokon ga kowaremashita' = laptop rusak."},
 {k:"われます",r:"waremasu",a:"pecah, retak, patah",kj:"割れます",n:"Khusus buat benda yang PECAH jadi beberapa bagian (kaca, piring, telur) — beda dari こわれます yang lebih umum buat 'rusak' apa aja."},
+{k:"みつけます",r:"mitsukemasu",a:"menemukan",kj:"見つけます",n:"Verba TRANSITIF, butuh objek + を (mis. 'おかねを見つけます' = menemukan uang) — pasangannya: 見つかります (ketemu, intransitif, Kelompok I)."},
+{k:"とれます",r:"toremasu",a:"terambil, lepas",kj:"取れます",n:"Verba INTRANSITIF — bendanya 'kepungut/lepas dengan sendirinya' tanpa pelaku yang disebut — pasangannya: 取ります (mengambil, transitif, Kelompok I)."},
 {k:"まぜます",r:"mazemasu",a:"mencampur, mengaduk",kj:"混ぜます"},
 {k:"おくれます",r:"okuremasu",a:"terlambat",kj:"遅れます"},
 {k:"なれます",r:"naremasu",a:"terbiasa, betah",kj:"慣れます"},
@@ -4423,6 +4428,88 @@ const KANJI = [
       { w: "病気", furi: "びょうき", a: "sakit, penyakit" },
       { w: "気持ち", furi: "きもち", a: "perasaan" }
     ]
+  },
+  {
+    tema: "Hari 13", char: "車", onyomi: ["シャ"], kunyomi: ["くるま"], arti: "kendaraan, mobil",
+    kotoba: [
+      { w: "車", furi: "くるま", a: "mobil" },
+      { w: "電車", furi: "でんしゃ", a: "kereta" },
+      { w: "駐車場", furi: "ちゅうしゃじょう", a: "tempat parkir" }
+    ]
+  },
+  {
+    tema: "Hari 13", char: "内", onyomi: ["ナイ"], kunyomi: ["うち"], arti: "dalam",
+    kotoba: [
+      { w: "内田さん", furi: "うちださん", a: "(nama) Uchida-san" },
+      { w: "以内", furi: "いない", a: "dalam (batas)" },
+      { w: "国内", furi: "こくない", a: "dalam negeri" }
+    ]
+  },
+  {
+    tema: "Hari 13", char: "長", onyomi: ["チョウ"], kunyomi: ["なが.い"], arti: "panjang, pemimpin",
+    kotoba: [
+      { w: "長い", furi: "ながい", a: "panjang" },
+      { w: "校長", furi: "こうちょう", a: "kepala sekolah" },
+      { w: "長男", furi: "ちょうなん", a: "anak laki-laki pertama" },
+      { w: "長女", furi: "ちょうじょ", a: "anak perempuan pertama" }
+    ]
+  },
+  {
+    tema: "Hari 13", char: "寺", onyomi: ["ジ"], kunyomi: ["てら"], arti: "kuil (Buddha)",
+    kotoba: [
+      { w: "お寺", furi: "おてら", a: "kuil" },
+      { w: "東大寺", furi: "とうだいじ", a: "kuil Todaiji" }
+    ]
+  },
+  {
+    tema: "Hari 13", char: "空", onyomi: ["クウ"], kunyomi: ["そら", "あ.く"], arti: "langit, kosong",
+    kotoba: [
+      { w: "空", furi: "そら", a: "langit" },
+      { w: "空気", furi: "くうき", a: "udara" },
+      { w: "空港", furi: "くうこう", a: "bandara" },
+      { w: "空く", furi: "あく", a: "kosong" }
+    ]
+  },
+  {
+    tema: "Hari 13", char: "校", onyomi: ["コウ"], kunyomi: [], arti: "sekolah",
+    kotoba: [
+      { w: "学校", furi: "がっこう", a: "sekolah" },
+      { w: "中学校", furi: "ちゅうがっこう", a: "SMP" },
+      { w: "高校生", furi: "こうこうせい", a: "murid SMA" }
+    ]
+  },
+  {
+    tema: "Hari 13", char: "待", onyomi: ["タイ"], kunyomi: ["ま.つ"], arti: "menunggu",
+    kotoba: [
+      { w: "待つ", furi: "まつ", a: "menunggu" },
+      { w: "招待する", furi: "しょうたいする", a: "mengundang" },
+      { w: "待合室", furi: "まちあいしつ", a: "ruang tunggu" }
+    ]
+  },
+  {
+    tema: "Hari 13", char: "社", onyomi: ["シャ", "ジャ"], kunyomi: [], arti: "perusahaan, masyarakat, kuil Shinto",
+    kotoba: [
+      { w: "会社", furi: "かいしゃ", a: "perusahaan" },
+      { w: "社長", furi: "しゃちょう", a: "direktur (CEO)" },
+      { w: "神社", furi: "じんじゃ", a: "kuil Shinto" }
+    ]
+  },
+  {
+    tema: "Hari 13", char: "会", onyomi: ["カイ"], kunyomi: ["あ.う"], arti: "bertemu, rapat, perkumpulan",
+    kotoba: [
+      { w: "会う", furi: "あう", a: "bertemu" },
+      { w: "会社", furi: "かいしゃ", a: "perusahaan" },
+      { w: "会話", furi: "かいわ", a: "percakapan" },
+      { w: "飲み会", furi: "のみかい", a: "pesta minum-minum" }
+    ]
+  },
+  {
+    tema: "Hari 13", char: "時", onyomi: ["ジ"], kunyomi: ["とき"], arti: "waktu",
+    kotoba: [
+      { w: "時計", furi: "とけい", a: "jam" },
+      { w: "四時", furi: "よじ", a: "jam 4" },
+      { w: "時間", furi: "じかん", a: "waktu" }
+    ]
   }
 ]; // end KANJI
 
@@ -4989,7 +5076,7 @@ const BUNPOU = [
         catatan: "どちら dipakai untuk: (1) memilih dari 2 pilihan secara sopan, (2) menanyakan tempat/asal secara halus (lebih sopan dari どこ), (3) menanyakan siapa secara sopan di telepon. BEDA dengan どこ: どこ = netral/santai untuk lokasi sehari-hari ('toire wa doko?'), どちら = sopan, dan JUGA bisa untuk memilih 2 opsi (どこ tidak bisa dipakai untuk ini).",
         contoh: [
           {jp:"おくには　どちらですか？", id:"Anda berasal dari negara mana? (sopan)"},
-          {jp:"コーヒーと　おちゃ、どちらが　いいですか？", id:"Kopi atau teh, yang mana yang lebih baik?"},
+          {jp:"コーヒーと　おちゃと、どちらが　いいですか？", id:"Kopi atau teh, yang mana yang lebih baik?"},
           {jp:"もしもし、どちらさまですか？", id:"Halo, ini siapa ya? (sopan, di telepon)"}
         ]
       }
@@ -6510,16 +6597,16 @@ const BUNPOU = [
   },
   {
     tema: "Hari 15 (Bab 6)",
-    judul: "〔KB1〕と　〔KB2〕、どちら〜／〜のほうが〜／どちらも〜 (Membandingkan dua hal)",
+    judul: "〔KB1〕と　〔KB2〕と、どちら〜／〜のほうが〜／どちらも〜 (Membandingkan dua hal)",
     sub: "Tiga pola buat bandingin dua pilihan: nanya mana yang lebih X, jawab salah satu lebih X, atau jawab dua-duanya sama-sama X.",
     items: [
       {
-        pola: "〔KB1〕と　〔KB2〕、どちらが　〔KS〕ですか。",
-        romaji: "[KB1] to [KB2], dochira ga [KS] desu ka?",
+        pola: "〔KB1〕と　〔KB2〕と、どちらが　〔KS〕ですか。",
+        romaji: "[KB1] to [KB2] to, dochira ga [KS] desu ka?",
         arti: "[KB1] dan [KB2], mana yang lebih [KS]?",
-        catatan: "どちら khusus buat MEMBANDINGKAN DUA hal (beda dari どれ/どの yang buat milih dari banyak pilihan).",
+        catatan: "どちら khusus buat MEMBANDINGKAN DUA hal (beda dari どれ/どの yang buat milih dari banyak pilihan). PENTING: と muncul DUA KALI — sekali nempel di KB1, sekali lagi nempel di KB2 (bukan cuma sekali di antara keduanya) — [KB1]と[KB2]と, baru koma, baru どちらが.",
         contoh: [
-          {jp:"にほんと　インドネシア、どちらが　あついですか。", id:"Jepang dan Indonesia, mana yang lebih panas?"}
+          {jp:"にほんと　インドネシアと、どちらが　あついですか。", id:"Jepang dan Indonesia, mana yang lebih panas?"}
         ]
       },
       {
@@ -8494,6 +8581,48 @@ const BUNPOU = [
         contoh: [
           {jp:"あれは　ゆうめいな　トラックの　グループだと　おもいます。", id:"Saya rasa itu kelompok trucker yang terkenal. (KS-な + だ + と思います, meishishuushoku dari Hari 32 juga kepake di 'ゆうめいなトラックのグループ')"},
           {jp:"このまちの　おまつりは　にぎやかだと　おもいます。", id:"Saya rasa festival di kota ini itu ramai. (KS-な + だ + と思います)"}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 37 (Bab 15)",
+    judul: "〜ても (Walaupun, Meskipun)",
+    sub: "Nunjukin ASUMSI PARADOKS — walaupun X terjadi, Y TETAP kejadian, gak peduli gimana pun situasinya.",
+    items: [
+      {
+        pola: "動詞て形／い形容詞（いを取る）くて／な形容詞・名詞＋で　＋も",
+        romaji: "doushi te-kei / i-keiyoushi (buang i) kute / na-keiyoushi・meishi + de + mo",
+        arti: "Walaupun/meskipun ... (tetap) ...",
+        catatan: "ても beda banget sama と (Hari 34, syarat otomatis: kalau X kejadian, PASTI Y ikut kejadian) atau たら (Hari 36, pengandaian: kalau X, Y MUNGKIN kejadian) — kalau ても, X-nya itu kondisi yang BIASANYA bikin Y GAK kejadian, tapi di sini Y-nya TETEP kejadian juga (paradoks/pengecualian). Rumusnya beda tergantung jenis kata: 動詞 → て形+も (positif) atau 動詞ない形（いを取る）+くて+も (negatif, jadi なくても); い形容詞 → （いを取る）+くて+も (positif, jadi くても) atau +くなくて+も (negatif, jadi くなくても); な形容詞/名詞 → +で+も (positif, jadi でも) atau +じゃなくて+も (negatif, jadi じゃなくても).",
+        contoh: [
+          {jp:"あめが　ふっても、かのじょの　いえに　いきます。", id:"Walaupun hujan turun, saya tetap pergi ke rumahnya (pacarnya). (動詞て形+も)"},
+          {jp:"なつでも、エアコンを　つけません。でんきだいが　たかいですから。", id:"Walaupun musim panas, saya gak nyalain AC. Soalnya biaya listrik mahal. (名詞+でも)"},
+          {jp:"オウォさんが　やさしくても、わたしは　しんじません。", id:"Walaupun Owo-san baik, saya tetap gak percaya. (い形容詞+くても)"},
+          {jp:"あの　レストランは　にんきでも、じぶらんさん　てんちょうから、いきません。", id:"Restoran itu populer, tapi karena kata Jibran-san si manajer toko, saya gak pergi. (な形容詞/名詞+でも)"}
+        ]
+      }
+    ]
+  },
+
+  {
+    tema: "Hari 37 (Bab 15)",
+    judul: "自動詞（じどうし）と他動詞（たどうし） (Verba Intransitif vs Transitif)",
+    sub: "Sepasang kata kerja yang artinya MIRIP tapi beda STRUKTUR — じどうし gak butuh objek (kejadiannya 'terjadi sendiri'), たどうし butuh objek yang ditandain partikel を (ada pelaku yang sengaja ngelakuin).",
+    items: [
+      {
+        pola: "〔KB〕が＋自動詞　⇔　〔pelaku〕は〔KB〕を＋他動詞",
+        romaji: "[KB] ga [jidoushi]  ⇔  [pelaku] wa [KB] wo [tadoushi]",
+        arti: "[KB]-nya (terjadi sendiri) ⇔ [pelaku] sengaja (melakukan) ke [KB]",
+        catatan: "自動詞 (kata kerja INTRANSITIF) itu kata kerja yang BISA BERDIRI SENDIRI — ciri khasnya, benda alam atau benda mati sering jadi SUBJEK-nya (ditandain が), dan kata kerja ini GAK BUTUH OBJEK karena kejadiannya dianggap 'terjadi dengan sendirinya', gak ada pelaku yang disebut. 他動詞 (kata kerja TRANSITIF) itu kata kerja yang BUTUH OBJEK — selalu didampingin partikel を sebagai PENANDA OBJEK, dan ada PELAKU (biasanya orang) yang SENGAJA ngelakuin aksi itu ke objeknya. Banyak kata kerja punya PASANGAN じどうし/たどうし yang artinya mirip tapi strukturnya beda — kalau ketemu satu pasang, hafalin BARENGAN biar gak ketuker.",
+        contoh: [
+          {jp:"ひが　きえます。／いすまさんは　ひを　けします。", id:"Apinya padam. / Isma-san mematikan api. (きえる=じどうし, けす=たどうし)"},
+          {jp:"でんきが　つきます。／らいはんさんは　でんきを　つけます。", id:"Listriknya nyala. / Raihan-san menyalakan listrik. (つく=じどうし, つける=たどうし)"},
+          {jp:"まどが　われます。／さとりあさんは　まどを　わります。", id:"Jendelanya pecah. / Satria-san memecahkan jendela. (われる=じどうし, わる=たどうし)"},
+          {jp:"クラスが　はじまります。／せんせいは　クラスを　はじめます。", id:"Kelasnya dimulai. / Sensei memulai kelas. (はじまる=じどうし, はじめる=たどうし)"},
+          {jp:"みちで　おかねが　みつかります。／ばーりるさんは　みちで　おかねを　みつけます。", id:"Uangnya ketemu di jalan. / Baariru-san menemukan uang di jalan. (みつかる=じどうし, みつける=たどうし)"},
+          {jp:"いりぐちの　おかねが　とれました。／ばーりるさんは　いりぐちの　おかねを　とりました。", id:"Uang di pintu masuk kepungut. / Baariru-san mengambil uang di pintu masuk. (とれる=じどうし, とる=たどうし)"}
         ]
       }
     ]
