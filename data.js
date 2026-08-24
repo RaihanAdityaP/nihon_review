@@ -7784,6 +7784,78 @@ const BUNPOU = [
       }
     ]
   },
+  {
+    tema: "Materi Tambahan",
+    judul: "動詞（ます-stem）＋なさい (Perintah Halus)",
+    sub: "Bentuk PERINTAH yang agak halus/lembut — biasa dipake orang tua ke anak, guru ke murid. Lebih tegas dari ~てください, tapi gak sekasar bentuk perintah kasar.",
+    items: [
+      {
+        pola: "動詞（ます-stem）＋なさい",
+        romaji: "doushi (masu-stem) + nasai",
+        arti: "Lakukanlah [kata kerja]!",
+        catatan: "Dibentuk dari kata kerja bentuk ます, buang ますnya, tinggal tambahin なさい. Beda konteks pemakaian dari ~てください (yang lebih ke PERMINTAAN sopan ke siapa aja) — なさい punya nuansa hubungan HIERARKIS/otoritas (orang tua-anak, guru-murid, atasan-bawahan), gak dipake ke orang yang lebih tinggi posisinya atau orang asing. Sering muncul di soal-soal ujian/instruksi tertulis (mis. '正しい答えを選びなさい' = pilihlah jawaban yang benar).",
+        contoh: [
+          {jp:"はやく　ねなさい。", id:"Cepat tidur! (orang tua ke anak)"},
+          {jp:"さむいから　マフラーを　つけて　いきなさい。", id:"Karena dingin, pakai syal dulu baru pergi. (つけて＝てform + いきなさい, dua aksi berurutan)"},
+          {jp:"ただしい　こたえを　えらびなさい。", id:"Pilihlah jawaban yang benar. (instruksi soal ujian, bentuk yang paling sering ketemu di tes)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Materi Tambahan",
+    judul: "〜ので (Karena — Versi Lebih Objektif/Sopan)",
+    sub: "Sama-sama artinya 'karena' kayak から (Hari 13), tapi ので kesannya lebih OBJEKTIF/halus, sering dipake buat alasan yang FAKTUAL atau di situasi FORMAL/sopan.",
+    items: [
+      {
+        pola: "〔普通形〕＋ので",
+        romaji: "futsuukei + node",
+        arti: "Karena ..., (maka) ...",
+        catatan: "ので nempel ke bentuk BIASA (futsuukei) — KECUALI KB dan KS-な, yang butuh な dulu sebelum ので (persis kayak aturan な di んです, BUKAN だ kayak di pola lain) — jadi びょうきなので (bukan びょうきだので). Beda nuansa sama から: から lebih SUBJEKTIF/personal (alasan menurut pembicara, bisa dipake buat nolak ajakan, ngasih alasan yang agak maksa), ので lebih OBJEKTIF/netral (kesannya alasannya emang FAKTA yang masuk akal, lebih sopan, cocok buat situasi formal atau ke atasan/orang gak dikenal). Cara gampang milih: kalau lagi formal/sopan atau ngejelasin fakta, pakai ので; kalau lagi santai/personal, から juga oke.",
+        contoh: [
+          {jp:"あめが　ふっているので、かさを　もって　いきます。", id:"Karena sedang hujan, saya bawa payung. (fakta objektif, netral)"},
+          {jp:"びょうきなので、かいしゃを　やすみます。", id:"Karena sedang sakit, saya izin gak masuk kerja. (KS-な/KB butuh な dulu — sopan, cocok buat lapor ke atasan)"},
+          {jp:"じかんが　ないので、はやく　しなければ　なりません。", id:"Karena gak ada waktu, harus cepet-cepet. (ので + なければなりません・Hari 34, gabungan bunpou)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Materi Tambahan",
+    judul: "〜くありません (Variasi Formal dari 〜くないです)",
+    sub: "ありません itu versi LEBIH FORMAL dari negatif です — dua-duanya artinya SAMA PERSIS, cuma beda level kesopanan/gaya penulisan. Sering bikin bingung karena kelihatan kayak bentuk baru padahal cuma variasi.",
+    items: [
+      {
+        pola: "〔KS-い（いを取る）〕＋くありません　＝　〔KS-い（いを取る）〕＋くないです",
+        romaji: "[KS-i (buang i)] + kuarimasen  =  [KS-i (buang i)] + kunai desu",
+        arti: "tidak ~ (dua bentuk ini SAMA ARTINYA)",
+        catatan: "くないです dan くありません itu DUA CARA NULIS hal yang SAMA — くない (bentuk biasa/futsuukei dari negatif) + です (penghalus) VS くありません (bentuk sopan langsung, dari ある yang dinegatifin). くありません kesannya SEDIKIT lebih formal/baku (sering muncul di soal tertulis, buku pelajaran, atau tulisan resmi), sementara くないです lebih umum dipakai di percakapan sehari-hari — tapi keduanya BOLEH DIPAKAI BEBAS, gak ada aturan ketat kapan harus pakai yang mana. Pola ini juga NEMPEL ke たい (Hari 14, 'ingin') karena たい juga konjugasinya kayak い-keiyoushi: たくないです ＝ たくありません.",
+        contoh: [
+          {jp:"きょうは　あつくありません。", id:"Hari ini tidak panas. (＝あつくないです)"},
+          {jp:"つかれたから、もう　あるきたくありません。", id:"Karena capek, saya udah gak mau jalan lagi. (＝あるきたくないです — たい形 + くありません)"},
+          {jp:"この　もんだいは　むずかしくありません。", id:"Soal ini tidak sulit. (＝むずかしくないです)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Materi Tambahan",
+    judul: "〔KS-な〕＋な＋の (KS-な Nempel ke の)",
+    sub: "の di sini berfungsi kayak 'kata benda pengganti' (artinya 'yang...') — dan karena statusnya masih KATA BENDA, KS-な yang mau nerangin dia tetap butuh な di depannya, PERSIS kayak aturan 名詞修飾 (Hari 32) waktu KS-な nerangin kata benda biasa.",
+    items: [
+      {
+        pola: "〔KS-な〕＋な＋の",
+        romaji: "[KS-na] + na + no",
+        arti: "yang [KS-な] (menggantikan kata benda yang udah jelas dari konteks)",
+        catatan: "の di sini FUNGSINYA beda dari の kepemilikan ('watashi no hon') — di sini の berperan sebagai PENGGANTI kata benda yang udah jelas dari konteks (biar gak perlu diulang), mirip 'yang mana/yang itu' di Indonesia. Karena の berfungsi kayak kata benda, KS-な yang nempel di depannya WAJIB pakai な — kalau KS-い, gak perlu tambahan apa pun (langsung nempel, misal たかいの = 'yang mahal'). JANGAN KETUKER sama だ yang kepake sebelum と思います/そうです/たら — だ itu buat NUTUP kalimat, sementara な di sini buat NERANGIN kata benda/の di depannya.",
+        contoh: [
+          {jp:"いちばん　すきなのは　おでんです。", id:"Yang paling disukai adalah oden. (すき=KS-な, jadi すき+な+の)"},
+          {jp:"しずかなのが　いいです。", id:"Yang tenang itu bagus. (しずか=KS-な)"},
+          {jp:"たかいのより、やすいのが　いいです。", id:"Dibanding yang mahal, yang murah lebih bagus. (たかい・やすい=KS-い, langsung nempel tanpa な)"}
+        ]
+      }
+    ]
+  },
 
   // ═══════════════════════════════════════════════
   // HARI 28
