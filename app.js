@@ -317,6 +317,7 @@ const QCATS_STATIC = [
   { id: 'buku-bab9',   label: 'Buku — Bab 9',          t: 'buku' },
   { id: 'buku-bab10',  label: 'Buku — Bab 10',         t: 'buku' },
   { id: 'buku-bab11',  label: 'Buku — Bab 11',         t: 'buku' },
+  { id: 'buku-irodori-bab1', label: 'Irodori — Bab 1', t: 'buku' },
 ];
 
 // Kategori Bunpou TIDAK di-hardcode di sini — otomatis di-generate dari
@@ -490,11 +491,15 @@ function kerjaItems(cid) {
 }
 
 function bukuItems(cid) {
-  const m = /^buku-(bab\d+)$/.exec(cid || '');
+  // Format lama: "buku-bab1" (buku utama). Format baru: "buku-irodori-bab1" (buku lain).
+  const mIrodori = /^buku-irodori-(bab\d+)$/.exec(cid || '');
+  const bookKey = mIrodori ? 'irodori' : 'minna';
+  const m = mIrodori || /^buku-(bab\d+)$/.exec(cid || '');
   const babKey = m ? m[1] : null;
-  if (!babKey || !BUKU[babKey]) return [];
+  const source = BOOKS[bookKey] && BOOKS[bookKey].data;
+  if (!babKey || !source || !source[babKey]) return [];
   let out = [];
-  Object.values(BUKU[babKey]).forEach(group => {
+  Object.values(source[babKey]).forEach(group => {
     group.rows.forEach(r => out.push({ kana: r.k, romaji: r.r, arti: resolveEntry(r).a, type: 'buku' }));
   });
   return out;
@@ -770,6 +775,26 @@ function switchBukuTab(tab, btn) {
   btn.classList.add('active');
 }
 
+// ─── pilih buku aktif di halaman Buku (BOOKS didefinisikan di data.js) ───
+let currentBookKey = 'minna';
+function switchBukuBook(bookKey, btn) {
+  if (!BOOKS[bookKey]) return;
+  currentBookKey = bookKey;
+  document.querySelectorAll('#bukuBookTabs .cat-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  document.getElementById('bukuSearchInput').value = '';
+  BUKU_SEARCH_INDEX = null; // rebuild index sesuai buku yang aktif
+  document.getElementById('bukuSearchResults').innerHTML = '';
+  renderBabList();
+}
+function renderBukuBookTabs() {
+  const el = document.getElementById('bukuBookTabs');
+  if (!el) return;
+  el.innerHTML = Object.entries(BOOKS).map(([key, b]) => `
+    <button class="cat-btn${key === currentBookKey ? ' active' : ''}" onclick="switchBukuBook('${key}', this)">${b.label}</button>
+  `).join('');
+}
+
 // ─────────────────────────────────────────────────────
 // SHARED NOTES LOOKUP
 // Satu sumber kebenaran untuk penjelasan kata: dicari dari Materi (KT),
@@ -806,12 +831,12 @@ function resolveEntry(row) {
 }
 
 function renderBukuBab(babKey, elId) {
-  const data = BUKU[babKey];
+  const data = (BOOKS[currentBookKey] && BOOKS[currentBookKey].data[babKey]) || null;
   if (!data) return;
   const el = document.getElementById(elId);
   let html = '';
   for (const [group, content] of Object.entries(data)) {
-    const id = 'buku_' + babKey + '_' + group.replace(/[^a-z0-9]/gi, '_');
+    const id = 'buku_' + currentBookKey + '_' + babKey + '_' + group.replace(/[^a-z0-9]/gi, '_');
     const resolved = content.rows.map(r => ({ ...r, ...resolveEntry(r) }));
     const hasNote = resolved.some(r => r.n);
     const hasKanji = resolved.some(r => r.kj);
@@ -1311,7 +1336,9 @@ function wKanjiPool() {
   Object.values(COUNTER).forEach(g => scanRows(g.rows));
   Object.values(KATA_SIFAT).forEach(g => scanRows(g.rows));
   Object.values(KATA_KERJA).forEach(g => scanRows(g.rows));
-  Object.keys(BUKU).forEach(b => { if (BUKU[b]) Object.values(BUKU[b]).forEach(g => scanRows(g.rows)); });
+  Object.values(BOOKS).forEach(book => {
+    Object.keys(book.data).forEach(b => { if (book.data[b]) Object.values(book.data[b]).forEach(g => scanRows(g.rows)); });
+  });
   const seen = new Set();
   return out.filter(x => { if (seen.has(x.char)) return false; seen.add(x.char); return true; });
 }
@@ -1714,6 +1741,25 @@ function buildKamusIndex() {
       });
     });
   });
+  // Kosakata dari semua buku (BOOKS, data.js) ikut masuk chip "Kotoba" secara
+  // otomatis — TIDAK ditulis ulang di sini. Kalau sebuah kata sudah ada di KT,
+  // yang dipakai tetap versi KT (biar gak dobel tampil).
+  const kotobaSeen = new Set(
+    Object.values(KT).flatMap(g => g.rows.map(r => kamusNormK(r.k) + '|' + kamusNormR(r.r)))
+  );
+  Object.values(BOOKS).forEach(book => {
+    Object.entries(book.data).forEach(([babKey, babData], babIdx) => {
+      Object.entries(babData).forEach(([group, g]) => {
+        g.rows.forEach(r => {
+          const dedupeKey = kamusNormK(r.k) + '|' + kamusNormR(r.r);
+          if (kotobaSeen.has(dedupeKey)) return;
+          kotobaSeen.add(dedupeKey);
+          const resolved = resolveEntry(r);
+          KAMUS_ALL.push({ source: 'Kotoba', group: `${book.label} · Bab ${babIdx + 1} · ${group}`, kana: r.k, romaji: r.r, kanji: resolved.kj, arti: resolved.a, note: resolved.n });
+        });
+      });
+    });
+  });
   KANJI.forEach(k => {
     KAMUS_ALL.push({ source: 'Kanji', group: k.tema, kana: (k.kunyomi && k.kunyomi[0]) || (k.onyomi && k.onyomi[0]) || '', romaji: '', kanji: k.char, arti: k.arti, note: k.n || '', onyomi: k.onyomi || [], kunyomi: k.kunyomi || [], kotoba: k.kotoba || [] });
   });
@@ -1900,18 +1946,20 @@ function closeKamusSheet() { const ov = document.getElementById('kamusOverlay');
 // BAB & KUIS (Buku)
 // ─────────────────────────────────────────────────────
 function renderBabList() {
+  renderBukuBookTabs();
   const el = document.getElementById('babList');
   if (!el) return;
-  const babKeys = Object.keys(BUKU);
+  const bukuData = (BOOKS[currentBookKey] && BOOKS[currentBookKey].data) || {};
+  const babKeys = Object.keys(bukuData);
   const babs = babKeys.map((key, i) => {
-    const groups = Object.keys(BUKU[key]);
-    const wordCount = Object.values(BUKU[key]).reduce((s, g) => s + g.rows.length, 0);
+    const groups = Object.keys(bukuData[key]);
+    const wordCount = Object.values(bukuData[key]).reduce((s, g) => s + g.rows.length, 0);
     return { key, num: i + 1, title: groups[0], groupCount: groups.length, wordCount };
   });
   const totalWords = babs.reduce((s, b) => s + b.wordCount, 0);
 
   const infoHtml = `<div class="bab-progress-card">
-    <div class="bab-progress-top"><span>TOTAL MATERI</span></div>
+    <div class="bab-progress-top"><span>TOTAL MATERI — ${BOOKS[currentBookKey] ? BOOKS[currentBookKey].label : ''}</span></div>
     <div class="bab-progress-foot">${babs.length} BAB • ${totalWords} kata total. Klik bab untuk buka daftar kosakatanya.</div>
   </div>`;
 
@@ -1955,7 +2003,8 @@ let BUKU_SEARCH_INDEX = null;
 function buildBukuSearchIndex() {
   if (BUKU_SEARCH_INDEX) return;
   BUKU_SEARCH_INDEX = [];
-  Object.entries(BUKU).forEach(([babKey, babData], babIdx) => {
+  const bukuData = (BOOKS[currentBookKey] && BOOKS[currentBookKey].data) || {};
+  Object.entries(bukuData).forEach(([babKey, babData], babIdx) => {
     Object.entries(babData).forEach(([group, g]) => {
       g.rows.forEach(r => {
         BUKU_SEARCH_INDEX.push({ babKey, babIdx, babLabel: `Bab ${babIdx + 1}`, group, kana: r.k, romaji: r.r, kanji: r.kj || '', arti: r.a });

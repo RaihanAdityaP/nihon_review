@@ -3392,6 +3392,98 @@ bab15: {
 }; // end BUKU
 
 // ─────────────────────────────────────────────────────
+// DATA: BUKU_IRODORI — kosakata dari buku Irodori 初級1,
+// terpisah dari BUKU (buku sebelumnya). Baru diisi Bab 1.
+// ─────────────────────────────────────────────────────
+const BUKU_IRODORI = {
+
+bab1: {
+  "Sapaan & Basa-basi (お久しぶりです)": { rows: [
+    {k:"せんぱい",r:"senpai",a:"kakak tingkat; senior",kj:"先輩"},
+    {k:"こうはい",r:"kouhai",a:"adik tingkat; junior",kj:"後輩"},
+    {k:"しりあい",r:"shiriai",a:"kenalan",kj:"知り合い"},
+    {k:"ひさしぶり",r:"hisashiburi",a:"sudah lama tidak berjumpa",kj:"久しぶり"},
+    {k:"げんき（な）",r:"genki (na)",a:"sehat",kj:"元気（な）"},
+    {k:"おかげさまで",r:"okagesamade",a:"Terima kasih."}
+  ]},
+  "Lama Waktu — Bulan & Tahun (日本に来てどのぐらいですか？)": { rows: [
+    {k:"はんとし",r:"hantoshi",a:"setengah tahun",kj:"半年"},
+    {k:"いちねん",r:"ichinen",a:"satu tahun",kj:"1年"},
+    {k:"せんげつ",r:"sengetsu",a:"bulan lalu",kj:"先月"},
+    {k:"きょねん",r:"kyonen",a:"tahun lalu",kj:"去年"},
+    {k:"せいかつ",r:"seikatsu",a:"kehidupan",kj:"生活"},
+    {k:"もう",r:"mou",a:"sudah"},
+    {k:"なれる",r:"nareru",a:"terbiasa; betah [2]",kj:"慣れる"},
+    {k:"ちょうど",r:"choudo",a:"pas; tepat"},
+    {k:"なんとか",r:"nantoka",a:"lumayan"},
+    {k:"まだ",r:"mada",a:"belum"},
+    {k:"～になる",r:"~ni naru",a:"sudah ~tahun/bulan (contoh: いちねんになる = sudah setahun)"},
+    {k:"～かげつ",r:"~kagetsu",a:"~bulan",kj:"～か月"},
+    {k:"いっかげつ",r:"ikkagetsu",a:"satu bulan",kj:"1か月"},
+    {k:"にかげつ",r:"nikagetsu",a:"dua bulan",kj:"2か月"},
+    {k:"さんかげつ",r:"sankagetsu",a:"tiga bulan",kj:"3か月"},
+    {k:"よんかげつ",r:"yonkagetsu",a:"empat bulan",kj:"4か月"},
+    {k:"ごかげつ",r:"gokagetsu",a:"lima bulan",kj:"5か月"},
+    {k:"ろっかげつ",r:"rokkagetsu",a:"enam bulan",kj:"6か月"},
+    {k:"ななかげつ",r:"nanakagetsu",a:"tujuh bulan",kj:"7か月"},
+    {k:"はちかげつ",r:"hachikagetsu",a:"delapan bulan",kj:"8か月"},
+    {k:"きゅうかげつ",r:"kyuukagetsu",a:"sembilan bulan",kj:"9か月"},
+    {k:"じゅっかげつ",r:"jukkagetsu",a:"sepuluh bulan",kj:"10か月"},
+    {k:"じゅういっかげつ",r:"juuikkagetsu",a:"sebelas bulan",kj:"11か月"},
+    {k:"じゅうにかげつ",r:"juunikagetsu",a:"dua belas bulan",kj:"12か月"},
+    {k:"～ねん",r:"~nen",a:"~tahun",kj:"～年"},
+    {k:"にねん",r:"ninen",a:"dua tahun",kj:"2年"},
+    {k:"さんねん",r:"sannen",a:"tiga tahun",kj:"3年"},
+    {k:"よねん",r:"yonen",a:"empat tahun",kj:"4年"},
+    {k:"ごねん",r:"gonen",a:"lima tahun",kj:"5年"},
+    {k:"ろくねん",r:"rokunen",a:"enam tahun",kj:"6年"},
+    {k:"ななねん／しちねん",r:"nananen / shichinen",a:"tujuh tahun",kj:"7年"},
+    {k:"はちねん",r:"hachinen",a:"delapan tahun",kj:"8年"},
+    {k:"きゅうねん",r:"kyuunen",a:"sembilan tahun",kj:"9年"},
+    {k:"じゅうねん",r:"juunen",a:"sepuluh tahun",kj:"10年"},
+    {k:"せんしゅう",r:"senshuu",a:"minggu lalu",kj:"先週"}
+  ]},
+  "Pekerjaan & Aktivitas di Jepang (日本では何をしていますか？)": { rows: [
+    {k:"しごと",r:"shigoto",a:"pekerjaan",kj:"仕事"},
+    {k:"レストラン",r:"resutoran",a:"restoran"},
+    {k:"はたらく",r:"hataraku",a:"bekerja [1]",kj:"働く"},
+    {k:"ホテル",r:"hoteru",a:"hotel"},
+    {k:"こうじょう",r:"koujou",a:"pabrik",kj:"工場"},
+    {k:"かいご",r:"kaigo",a:"pengasuhan; perawatan (lansia)",kj:"介護"},
+    {k:"しごとをする",r:"shigoto wo suru",a:"bekerja [3]",kj:"仕事をする"},
+    {k:"けんせつ",r:"kensetsu",a:"konstruksi",kj:"建設"},
+    {k:"やさい",r:"yasai",a:"sayur",kj:"野菜"},
+    {k:"つくる",r:"tsukuru",a:"menanam (sayur); membuat [1]",kj:"作る"},
+    {k:"にほんごがっこう",r:"nihongo gakkou",a:"Sekolah Bahasa Jepang",kj:"日本語学校"},
+    {k:"べんきょうする",r:"benkyou suru",a:"belajar [3]",kj:"勉強する"},
+    {k:"せんもんがっこう",r:"senmon gakkou",a:"sekolah kejuruan",kj:"専門学校"},
+    {k:"かよう",r:"kayou",a:"pergi; menjalani pendidikan (sekolah) [1]",kj:"通う"},
+    {k:"しゅふ",r:"shufu",a:"ibu rumah tangga",kj:"主婦"},
+    {k:"しゅふ",r:"shufu",a:"bapak rumah tangga",kj:"主夫"},
+    {k:"いそがしい",r:"isogashii",a:"sibuk",kj:"忙しい"},
+    {k:"たいへん（な）",r:"taihen (na)",a:"sulit; berat",kj:"大変（な）"},
+    {k:"つかれる",r:"tsukareru",a:"capek; lelah [2]",kj:"疲れる"},
+    {k:"まあまあ（な）",r:"maamaa (na)",a:"lumayan"},
+    {k:"たのしい",r:"tanoshii",a:"menyenangkan",kj:"楽しい"},
+    {k:"みんな",r:"minna",a:"semua orang"},
+    {k:"しんせつ（な）",r:"shinsetsu (na)",a:"ramah; baik hati",kj:"親切（な）"},
+    {k:"べんきょうになる",r:"benkyou ni naru",a:"belajar banyak hal [1]",kj:"勉強になる"},
+    {k:"まいにち",r:"mainichi",a:"setiap hari",kj:"毎日"},
+    {k:"がくせい",r:"gakusei",a:"siswa",kj:"学生"},
+    {k:"プログラミング",r:"puroguramingu",a:"pemrograman"}
+  ]}
+}
+
+}; // end BUKU_IRODORI
+
+// Daftar buku yang tersedia di menu "Buku" — setiap buku terpisah
+// koleksi bab-nya sendiri, tidak tercampur satu sama lain.
+const BOOKS = {
+  minna:   { label: "Buku Utama",  data: BUKU },
+  irodori: { label: "Irodori",     data: BUKU_IRODORI }
+};
+
+// ─────────────────────────────────────────────────────
 // DATA: KANJI — kanji yang dipelajari, terpisah dari kanji yang
 // numpang lewat di Kotoba/Buku (yang cuma field `kj` di kata).
 // Format tiap item:
@@ -8695,6 +8787,89 @@ const BUNPOU = [
           {jp:"クラスが　はじまります。／せんせいは　クラスを　はじめます。", id:"Kelasnya dimulai. / Sensei memulai kelas. (はじまる=じどうし, はじめる=たどうし)"},
           {jp:"みちで　おかねが　みつかります。／ばーりるさんは　みちで　おかねを　みつけます。", id:"Uangnya ketemu di jalan. / Baariru-san menemukan uang di jalan. (みつかる=じどうし, みつける=たどうし)"},
           {jp:"いりぐちの　おかねが　とれました。／ばーりるさんは　いりぐちの　おかねを　とりました。", id:"Uang di pintu masuk kepungut. / Baariru-san mengambil uang di pintu masuk. (とれる=じどうし, とる=たどうし)"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Materi Tambahan",
+    judul: "もう＋〔動詞た形〕 (Sudah)",
+    sub: "もう nempel di depan kata kerja bentuk lampau buat nunjukin sesuatu udah kejadian/selesai. Lawan katanya まだ (belum) yang dipasangin sama bentuk negatif.",
+    items: [
+      {
+        pola: "もう＋〔動詞（た形）〕。",
+        romaji: "mou + [doushi ta-kei].",
+        arti: "Sudah [kata kerja].",
+        catatan: "もう selalu diikuti kata kerja bentuk た (lampau), bukan bentuk kamus atau ます. Kalau ditanya 'もう〜ましたか' (sudah〜belum?), jawaban positifnya 'はい、もう〜ました', jawaban negatifnya BUKAN 'いいえ、もうません' tapi ganti jadi 'いいえ、まだです' atau 'いいえ、まだ〜ていません'.",
+        contoh: [
+          {jp:"もう　ばんごはんを　たべましたか。", id:"Sudah makan malam belum?"},
+          {jp:"はい、もう　たべました。", id:"Iya, sudah makan."},
+          {jp:"いいえ、まだです。", id:"Belum."}
+        ]
+      },
+      {
+        pola: "もう＋〔動詞（否定形）〕。",
+        romaji: "mou + [doushi hitei-kei].",
+        arti: "Sudah tidak/gak lagi [kata kerja].",
+        catatan: "もう juga bisa dipasangin sama bentuk NEGATIF buat nunjukin sesuatu yang dulu terjadi tapi SEKARANG udah berhenti/gak lagi — beda makna dari もう+た形 (yang artinya 'sudah selesai melakukan').",
+        contoh: [
+          {jp:"もう　あの　みせに　いきません。", id:"Saya udah gak pergi ke toko itu lagi."},
+          {jp:"もう　すきじゃありません。", id:"Udah gak suka lagi."}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Materi Tambahan",
+    judul: "動詞（意向形）＋か (Bentuk Ajakan Informal)",
+    sub: "Versi informal/akrab dari 〜ましょう — dipake ke teman sebaya atau orang yang udah deket, bukan ke atasan/orang yang lebih tua. Cara bikinnya beda-beda tergantung golongan kata kerja.",
+    items: [
+      {
+        pola: "動詞（Golongan I：u→ou）",
+        romaji: "[doushi Gol. I, u → ou]",
+        arti: "Ayo [kata kerja]! (informal)",
+        catatan: "Golongan I: ganti huruf akhir u-dan jadi o-dan lalu tambah う. 行く→行こう, 飲む→飲もう, 話す→話そう, 買う→買おう. Sama persis pola perubahan ke bentuk kamus tapi baris terakhirnya digeser satu ke bunyi 'o'.",
+        contoh: [
+          {jp:"いっしょに　いこうか。", id:"Ayo pergi bareng, yuk?"},
+          {jp:"なにか　のもうか。", id:"Ayo minum sesuatu, yuk?"}
+        ]
+      },
+      {
+        pola: "動詞（Golongan II：る→よう）",
+        romaji: "[doushi Gol. II, ru → you]",
+        arti: "Ayo [kata kerja]! (informal)",
+        catatan: "Golongan II: buang る, tambah よう. たべる→たべよう, みる→みよう, ねる→ねよう.",
+        contoh: [
+          {jp:"いっしょに　たべようか。", id:"Ayo makan bareng, yuk?"},
+          {jp:"えいがを　みようか。", id:"Ayo nonton film, yuk?"}
+        ]
+      },
+      {
+        pola: "動詞（Golongan III：khusus）",
+        romaji: "[doushi Gol. III, khusus]",
+        arti: "Ayo [kata kerja]! (informal)",
+        catatan: "Golongan III gak ngikutin pola, dihafal langsung: する→しよう, くる→こよう.",
+        contoh: [
+          {jp:"べんきょうしようか。", id:"Ayo belajar, yuk?"},
+          {jp:"うちに　こようか。", id:"Ayo ke rumah (aku), yuk?"}
+        ]
+      }
+    ]
+  },
+  {
+    tema: "Materi Tambahan",
+    judul: "動詞（ます-stem）＋ながら (Sambil)",
+    sub: "Nunjukin dua aksi yang dilakukan BERSAMAAN sama satu pelaku yang sama — aksi utama ada di kata kerja terakhir (di akhir kalimat), ながら nempel ke aksi sampingannya.",
+    items: [
+      {
+        pola: "動詞（ます-stem）＋ながら、〔動詞〕。",
+        romaji: "[V-stem] + nagara, [doushi].",
+        arti: "Sambil [V1], [V2] (aksi utama).",
+        catatan: "Buang ます, tambah ながら di kata kerja yang jadi aksi SAMPINGAN, lalu kata kerja aksi UTAMA taruh di akhir kalimat. たべます→たべながら, ききます→ききながら. Pelakunya harus SAMA untuk kedua aksi — beda dari ながら yang berarti 'meskipun' (jarang, biasanya di bahasa formal/tulisan).",
+        contoh: [
+          {jp:"おんがくを　ききながら、べんきょうします。", id:"Belajar sambil dengerin musik."},
+          {jp:"あるきながら、はなしましょう。", id:"Ayo ngobrol sambil jalan."},
+          {jp:"テレビを　みながら、ごはんを　たべます。", id:"Makan sambil nonton TV."}
         ]
       }
     ]
