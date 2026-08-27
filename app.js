@@ -875,14 +875,35 @@ function renderBukuBab(babKey, elId) {
 // ─────────────────────────────────────────────────────
 // BUNPOU
 // ─────────────────────────────────────────────────────
+// ─── pilih buku aktif di halaman Bunpou (dipakai buat filter tema; label
+// buku diambil dari BOOKS yang sama dengan menu Buku, data.js) ───
+let currentBunpouBook = 'minna';
+function switchBunpouBook(bookKey, btn) {
+  if (!BOOKS[bookKey]) return;
+  currentBunpouBook = bookKey;
+  document.querySelectorAll('#bunpouBookTabs .cat-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  document.getElementById('bunpouSearchInput').value = '';
+  renderBunpou();
+}
+function renderBunpouBookTabs() {
+  const el = document.getElementById('bunpouBookTabs');
+  if (!el) return;
+  el.innerHTML = Object.entries(BOOKS).map(([key, b]) => `
+    <button class="cat-btn${key === currentBunpouBook ? ' active' : ''}" onclick="switchBunpouBook('${key}', this)">${b.label}</button>
+  `).join('');
+}
+
 function renderBunpou() {
+  renderBunpouBookTabs();
   const el = document.getElementById('bunpouContent');
   if (!el || !Array.isArray(BUNPOU)) return;
 
-  // Kelompokkan array flat BUNPOU berdasarkan field `tema`
+  // Kelompokkan array flat BUNPOU berdasarkan field `tema`, tapi cuma yang
+  // `buku`-nya cocok sama tab aktif. Entri lama tanpa field `buku` dianggap 'minna'.
   const byTema = {};
   const temaOrder = [];
-  BUNPOU.forEach(group => {
+  BUNPOU.filter(g => (g.buku || 'minna') === currentBunpouBook).forEach(group => {
     const t = group.tema || 'Lainnya';
     if (!byTema[t]) { byTema[t] = []; temaOrder.push(t); }
     byTema[t].push(group);
