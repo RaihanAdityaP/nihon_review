@@ -1758,7 +1758,7 @@ function buildKamusIndex() {
     Object.entries(src.d).forEach(([group, g]) => {
       g.rows.forEach(r => {
         const jishokei = src.l === 'Kata Kerja' ? toJishokei(r.k, r.kj, group) : null;
-        KAMUS_ALL.push({ source: src.l, group, kana: r.k, romaji: r.r, kanji: r.kj || '', arti: r.a, note: r.n || '', jishokei });
+        KAMUS_ALL.push({ source: src.l, group, kana: r.k, romaji: r.r, kanji: r.kj || '', arti: r.a, note: r.n || '', jishokei, type: r.type || null });
       });
     });
   });
@@ -1839,7 +1839,31 @@ function renderKamusChips() {
   const el = document.getElementById('kamusChips');
   if (!el) return;
   el.innerHTML = KAMUS_CATS.map(c => `<div class="kamus-chip ${c.key === kamusActiveCat ? 'active' : ''}" data-c="${c.key}">${c.label}</div>`).join('');
-  el.querySelectorAll('.kamus-chip').forEach(c => c.onclick = () => { kamusActiveCat = c.dataset.c; renderKamusChips(); renderKamusResults(true); });
+  el.querySelectorAll('.kamus-chip').forEach(c => c.onclick = () => { kamusActiveCat = c.dataset.c; renderKamusChips(); renderKerjaSubFilter(); renderKamusResults(true); });
+  renderKerjaSubFilter();
+}
+
+// ─── Sub-filter khusus chip "Kata Kerja": Kelompok (default) vs Jidoushi vs Tadoushi.
+// Field `type` ("jidoushi"/"tadoushi") sudah nempel di tiap baris KATA_KERJA (data.js) —
+// jadi kata kerja baru otomatis kesortir begitu ditambahin ke sana, gak perlu update di sini.
+let kerjaSubView = 'semua';
+const KERJA_SUBVIEWS = [
+  { key: 'semua', label: 'Semua (per Kelompok)' },
+  { key: 'jidoushi', label: '自動詞 Jidoushi' },
+  { key: 'tadoushi', label: '他動詞 Tadoushi' }
+];
+function renderKerjaSubFilter() {
+  const el = document.getElementById('kerjaSubFilter');
+  if (!el) return;
+  if (kamusActiveCat !== 'Kata Kerja') { el.style.display = 'none'; return; }
+  el.style.display = 'flex';
+  el.innerHTML = KERJA_SUBVIEWS.map(v => `<button class="cat-btn${v.key === kerjaSubView ? ' active' : ''}" onclick="switchKerjaSubView('${v.key}', this)">${v.label}</button>`).join('');
+}
+function switchKerjaSubView(key, btn) {
+  kerjaSubView = key;
+  document.querySelectorAll('#kerjaSubFilter .cat-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderKamusResults(true);
 }
 
 let kamusPage = 1;
@@ -1853,6 +1877,7 @@ function renderKamusResults(resetPage) {
   const filtered = KAMUS_ALL.filter(w => {
     const matchCat = kamusActiveCat === 'Semua' || w.source === kamusActiveCat;
     if (!matchCat) return false;
+    if (kamusActiveCat === 'Kata Kerja' && (kerjaSubView === 'jidoushi' || kerjaSubView === 'tadoushi') && w.type !== kerjaSubView) return false;
     if (!q) return true;
     return (w.kana || '').toLowerCase().includes(q) || (w.romaji || '').toLowerCase().includes(q) || (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q) || (w.group || '').toLowerCase().includes(q);
   });
@@ -1933,7 +1958,8 @@ function openKamusSheet(w) {
   charEl.textContent = bigText;
   charEl.style.fontSize = bigText.length <= 2 ? '4.2rem' : bigText.length <= 4 ? '2.4rem' : '1.5rem';
   const jishoTag = w.jishokei ? `<span class="kamus-sheet-tag">辞書形: ${w.jishokei.kana}</span>` : '';
-  document.getElementById('kamusSheetTags').innerHTML = `<span class="kamus-sheet-tag">${w.kana}${w.romaji ? ' • ' + w.romaji : ''}</span>${jishoTag}`;
+  const typeTag = w.type ? `<span class="kamus-sheet-tag">${w.type === 'jidoushi' ? '自動詞 (Jidoushi)' : w.type === 'tadoushi' ? '他動詞 (Tadoushi)' : '自動詞/他動詞 (dua-duanya)'}</span>` : '';
+  document.getElementById('kamusSheetTags').innerHTML = `<span class="kamus-sheet-tag">${w.kana}${w.romaji ? ' • ' + w.romaji : ''}</span>${jishoTag}${typeTag}`;
   document.getElementById('kamusSheetArti').textContent = w.arti;
 
   const key = kamusNormK(w.kana) + '|' + kamusNormR(w.romaji);
