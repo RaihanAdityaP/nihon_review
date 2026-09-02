@@ -3776,6 +3776,110 @@ bab5: {
     {k:"ビーチ",r:"biichi",a:"pantai"},
     {k:"てんぼうだい",r:"tenboudai",a:"observatorium",kj:"展望台"}
   ]}
+},
+
+bab6: {
+  "Petunjuk Arah Dasar (バス停はどこですか？)": { rows: [
+    {k:"ある",r:"aru",a:"ada (contoh: 町にあるもの = hal/sesuatu yang ada di kota) [1]"},
+    {k:"もの",r:"mono",a:"hal/sesuatu; benda"},
+    {k:"しんごう",r:"shingou",a:"lampu lalu lintas",kj:"信号"},
+    {k:"おうだんほどう",r:"oudan hodou",a:"penyeberangan pejalan kaki; zebra cross",kj:"横断歩道"},
+    {k:"かど",r:"kado",a:"sudut",kj:"角"},
+    {k:"こうさてん",r:"kousaten",a:"persimpangan",kj:"交差点"},
+    {k:"みち",r:"michi",a:"jalan",kj:"道"},
+    {k:"はし",r:"hashi",a:"jembatan",kj:"橋"},
+    {k:"みちあんない",r:"michi annai",a:"petunjuk arah",kj:"道案内"},
+    {k:"まっすぐ",r:"massugu",a:"lurus"},
+    {k:"ひだり",r:"hidari",a:"kiri",kj:"左"},
+    {k:"まがる",r:"magaru",a:"belok; berbelok [1]",kj:"曲がる"},
+    {k:"みぎ",r:"migi",a:"kanan",kj:"右"},
+    {k:"わたる",r:"wataru",a:"menyeberang [1]",kj:"渡る"},
+    {k:"～つめ",r:"~tsume",a:"yang~ (menyatakan urutan; angka)",kj:"～つ目"},
+    {k:"ひとつめ",r:"hitotsume",a:"pertama",kj:"1つ目"},
+    {k:"ふたつめ",r:"futatsume",a:"kedua",kj:"2つ目"},
+    {k:"ばすてい",r:"basutei",a:"pemberhentian bus; halte bus",kj:"バス停"},
+    {k:"ゆうびんきょく",r:"yuubinkyoku",a:"kantor pos",kj:"郵便局"},
+    {k:"デパート",r:"depaato",a:"toserba; pasaraya; department store"},
+    {k:"かがく",r:"kagaku",a:"ilmu pengetahuan",kj:"科学"},
+    {k:"はくぶつかん",r:"hakubutsukan",a:"museum",kj:"博物館"},
+    {k:"ずっと",r:"zutto",a:"(lurus) terus"},
+    {k:"しりつ",r:"shiritsu",a:"(milik) kota",kj:"市立"},
+    {k:"すぐ",r:"sugu",a:"langsung; tepat"},
+    {k:"まがったところ",r:"magatta tokoro",a:"setelah berbelok",kj:"曲がったところ"}
+  ]},
+  "Nanya Lokasi Bangunan (そちらに行きたいんですが…)": { rows: [
+    {k:"ぎんこう",r:"ginkou",a:"bank",kj:"銀行"},
+    {k:"じんじゃ",r:"jinja",a:"kuil Shinto",kj:"神社"},
+    {k:"ちゅうしゃじょう",r:"chuushajou",a:"tempat parkir",kj:"駐車場"},
+    {k:"こうばん",r:"kouban",a:"pos polisi",kj:"交番"},
+    {k:"びょういん",r:"byouin",a:"rumah sakit",kj:"病院"},
+    {k:"くろい",r:"kuroi",a:"hitam",kj:"黒い"},
+    {k:"しろい",r:"shiroi",a:"putih",kj:"白い"},
+    {k:"あおい",r:"aoi",a:"biru",kj:"青い"},
+    {k:"ビル",r:"biru",a:"bangunan"},
+    {k:"アジアしょくざい",r:"ajia shokuzai",a:"bahan makanan khas Asia",kj:"アジア食材"},
+    {k:"そちら",r:"sochira",a:"di situ"},
+    {k:"きたぐち",r:"kitaguchi",a:"pintu utara",kj:"北口"},
+    {k:"あいだ",r:"aida",a:"di antara ～ dan ～ (contoh: ～と～の間)",kj:"間"},
+    {k:"そうすると",r:"sou suru to",a:"setelah itu"},
+    {k:"みえる",r:"mieru",a:"terlihat [2]",kj:"見える"},
+    {k:"おまちしております",r:"omachi shite orimasu",a:"kami menantikan kedatangan Anda.",kj:"お待ちしております"}
+  ]},
+  "Deskripsi Rumah & Daerah (この先に白くて大きな家があります)": { rows: [
+    {k:"かえる",r:"kaeru",a:"pulang [1]",kj:"帰る"},
+    {k:"～ちょう",r:"~chou",a:"Kota~ (pembagian geografis, contoh: 小島町 = Kota Kojima)",kj:"～町"},
+    {k:"こうこう",r:"koukou",a:"SMA",kj:"高校"},
+    {k:"おくる",r:"okuru",a:"mengantar (orang) [1]",kj:"送る"},
+    {k:"おおきな",r:"ookina",a:"besar",kj:"大きな"},
+    {k:"はいる",r:"hairu",a:"masuk; berbelok [1]",kj:"入る"},
+    {k:"どのへん？",r:"dono hen?",a:"Di daerah mana?",kj:"どの辺？"},
+    {k:"ここでいいです",r:"koko de ii desu",a:"Di sini saja."}
+  ]}
+},
+
+bab7: {
+  "Rapat & Janji Ketemu (何時にどこですか？)": { rows: [
+    {k:"えき",r:"eki",a:"stasiun",kj:"駅"},
+    {k:"うけつけ",r:"uketsuke",a:"resepsionis; meja informasi",kj:"受付"},
+    {k:"ホール",r:"hooru",a:"aula"},
+    {k:"かいしゃ",r:"kaisha",a:"perusahaan",kj:"会社"},
+    {k:"もん",r:"mon",a:"gerbang",kj:"門"},
+    {k:"しゅうごう（する）",r:"shuugou (suru)",a:"berkumpul [3]",kj:"集合（する）"},
+    {k:"では",r:"de wa",a:"jadi"},
+    {k:"あんないする",r:"annai suru",a:"memandu [3]",kj:"案内する"},
+    {k:"まちあわせ",r:"machiawase",a:"janjian bertemu",kj:"待ち合わせ"},
+    {k:"イベント",r:"ibento",a:"acara"},
+    {k:"はじまる",r:"hajimaru",a:"mulai [1]",kj:"始まる"},
+    {k:"スタッフ",r:"sutaffu",a:"staf"},
+    {k:"～まえ",r:"~mae",a:"~sebelum (contoh: 30分前 = 30 menit sebelum)",kj:"～前"}
+  ]},
+  "Konfirmasi Waktu (明日、何時にしますか？)": { rows: [
+    {k:"まちあわせする",r:"machiawase suru",a:"bertemu (satu sama lain) [3]",kj:"待ち合わせする"},
+    {k:"へいわ",r:"heiwa",a:"perdamaian",kj:"平和"},
+    {k:"とり",r:"tori",a:"burung",kj:"鳥"},
+    {k:"ぞう",r:"zou",a:"patung",kj:"像"},
+    {k:"それ、なんですか？",r:"sore, nan desu ka?",a:"Apa itu? (ungkapan konfirmasi balik kalau gak paham omongan lawan bicara)",kj:"それ、何ですか？"}
+  ]},
+  "Kereta Berhenti — Insiden & Buru-buru (電車が止まりました①②)": { rows: [
+    {k:"じこ",r:"jiko",a:"kecelakaan",kj:"事故"},
+    {k:"とまる",r:"tomaru",a:"berhenti [1]",kj:"止まる"},
+    {k:"れんらくする",r:"renraku suru",a:"menghubungi [3]",kj:"連絡する"},
+    {k:"ねぼうする",r:"neboo suru",a:"terlambat bangun; kesiangan [3]"},
+    {k:"いまから",r:"ima kara",a:"dari sekarang",kj:"今から"},
+    {k:"いそぐ",r:"isogu",a:"bergegas [1]",kj:"急ぐ"},
+    {k:"さきに",r:"saki ni",a:"lebih dulu",kj:"先に"},
+    {k:"はじめる",r:"hajimeru",a:"mulai; memulai [2]",kj:"始める"}
+  ]},
+  "Kereta Berhenti — Tersesat & Menunggu (電車が止まりました③④)": { rows: [
+    {k:"みちにまよう",r:"michi ni mayou",a:"tersesat di jalan; salah jalan [1]",kj:"道に迷う"},
+    {k:"おくれる",r:"okureru",a:"terlambat [2]",kj:"遅れる"},
+    {k:"つく",r:"tsuku",a:"tiba [1]",kj:"着く"},
+    {k:"だいじょうぶ（な）",r:"daijoubu (na)",a:"tidak apa-apa; tidak masalah",kj:"大丈夫（な）"},
+    {k:"じかん",r:"jikan",a:"waktu",kj:"時間"},
+    {k:"まちがえる",r:"machigaeru",a:"salah (salah paham) [2]"},
+    {k:"まつ",r:"matsu",a:"menunggu [1]",kj:"待つ"},
+    {k:"カフェ",r:"kafe",a:"kafe"}
+  ]}
 }
 
 }; // end BUKU_IRODORI
@@ -9648,6 +9752,113 @@ const BUNPOU = [
         catatan: "Nada NAIK di akhir kalimat — fungsinya mirip ね tapi kesannya lebih sopan/formal. Lihat penjelasan lengkap beda nada ini di kartu Materi Tambahan yang udah disebut di atas.",
         contoh: [
           {jp:"この景色（けしき）、きれいでしょう？", id:"Pemandangan ini indah, kan?"}
+        ]
+      }
+    ]
+  },
+
+  // ═══ IRODORI — BAB 5 ═══
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 5",
+    judul: "い/な-けいようし・KB＋くて／で — Gabungan Sifat Setara (Pengulangan dari Hari 20, Bab 8)",
+    sub: "Pola dasarnya (い→くて, な→で) udah lengkap dibahas di Hari 20 (Bab 8), tab Buku Utama. Tambahan di Irodori: KATA BENDA juga bisa disambung pakai で dengan cara yang sama.",
+    items: [
+      {
+        pola: "〔KB〕＋で、〔kalimat 2〕。",
+        romaji: "[KB] + de, [kalimat 2].",
+        arti: "[KB], dan [kalimat 2]. (kata benda disambung dengan で)",
+        catatan: "Sama caranya kayak な-keiyoushi (な→で), tapi ini buat KATA BENDA — biasa dipakai buat ngenalin identitas + sifat sekaligus dalam 1 kalimat.",
+        contoh: [
+          {jp:"ここは　ゆうめいな　スポーツセンターで、いつも　にぎやかです。", id:"Di sini pusat olahraga terkenal, dan selalu ramai."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 5",
+    judul: "〜けど — Pertentangan 2 Kalimat (Pengulangan dari Hari 29, Bab 11)",
+    sub: "Pola ini udah lengkap dibahas di Hari 29 (Bab 11), tab Buku Utama — cara nempel けど ke tiap jenis kata (kata kerja, い-keiyoushi, な-keiyoushi, KB) sama persis.",
+    items: [
+      {
+        pola: "〔kalimat positif〕けど、〔kalimat negatif〕。 (atau sebaliknya)",
+        romaji: "[kalimat 1] kedo, [kalimat 2].",
+        arti: "..., tapi ~ (kontras 1 positif 1 negatif).",
+        catatan: "Lihat lagi detail cara nempel per jenis kata di Hari 29 (Bab 11) — gak diulang di sini biar gak dobel.",
+        contoh: []
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 5",
+    judul: "動詞（辞書形）＋ことができます／できません — Kemampuan (Pengulangan dari Hari 22/26, Bab 10)",
+    sub: "Ini versi KATA KERJA dari pola できます yang sebelumnya cuma dipakai buat kata benda langsung (〔KB〕ができます). Sama persis kayak yang udah lengkap di Hari 22 & Hari 26 (Bab 10), tab Buku Utama — pakai こと buat nominalisasi kata kerjanya dulu sebelum ditempel ができます.",
+    items: [
+      {
+        pola: "〔動詞じしょけい〕ことが　できます／できません。",
+        romaji: "[V-jisho] koto ga dekimasu / dekimasen.",
+        arti: "Bisa/gak bisa melakukan [V].",
+        catatan: "Bedanya sama 〔KB〕ができます: kalau langsung KATA BENDA (料理ができます), gak perlu こと. Tapi kalau mau pake KATA KERJA UTUH (bukan cuma kata bendanya), wajib nominalisasi dulu pake こと (料理をすることができます). Detail lengkap ada di Hari 22/26.",
+        contoh: [
+          {jp:"日本語（にほんご）を　話（はな）すことが　できます。", id:"Bisa berbicara bahasa Jepang."},
+          {jp:"漢字（かんじ）を　読（よ）むことが　できません。", id:"Tidak bisa membaca kanji."}
+        ]
+      }
+    ]
+  },
+
+  // ═══ IRODORI — BAB 6 ═══
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 6",
+    judul: "動詞（ます-stem）＋たいんですが… — Menyatakan Keinginan Sambil Minta Bantuan",
+    sub: "Ini gabungan 2 hal yang udah dipelajari: たい (Hari?, ingin melakukan sesuatu) + んですが (menjelaskan latar belakang/situasi, lalu 'menggantung' di が biar lawan bicara nanggepin/bantuin). Fungsinya BUKAN buat nyuruh langsung, tapi cara SOPAN buka obrolan buat minta tolong/petunjuk, biasa dipakai pas nanya ke orang asing/staf (misal minta diarahin jalan).",
+    items: [
+      {
+        pola: "〔動詞ますstem〕たいんですが…",
+        romaji: "[V-stem]tai n desu ga...",
+        arti: "Saya mau [V]... (nada menggantung, mengundang bantuan)",
+        catatan: "Cara bacanya: たい (ingin) + んです (nambahin nuansa 'jadi gini ceritanya...', ngasih konteks) + が (tapi.../menggantung, BUKAN berarti 'tapi' beneran, cuma bikin kalimat gak keliatan maksa/то-the-point). Efeknya: lawan bicara ngerti kamu butuh respon/bantuan, walau kamu gak minta secara eksplisit. Beda dari 〜たいです biasa yang cuma nyatain keinginan doang tanpa ngundang respon.",
+        contoh: [
+          {jp:"すみません、駅（えき）に　行（い）きたいんですが…", id:"Permisi, saya mau ke stasiun... (mengundang orang buat nunjukin jalan)"},
+          {jp:"この町（まち）について　知（し）りたいんですが…", id:"Saya mau tau soal kota ini... (mengundang orang buat cerita/kasih rekomendasi)"}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 6",
+    judul: "動詞1（て形）、動詞2 — Rangkaian Petunjuk Arah (Pengulangan dari Hari 17 & 23)",
+    sub: "Pola te-form buat nyambungin kata kerja berurutan ini udah dipelajari di Hari 17 (cara ubah ke て形) dan Hari 23/Bab 9 (nyambungin jadi rangkaian kegiatan), tab Buku Utama. Di Irodori bab ini, dipakai khusus buat michiannai (kasih petunjuk arah) — nyambungin gerakan-gerakan berurutan kayak まがって、まっすぐ行って dst (kosakata arah ada di Hari 16/Bab 6).",
+    items: [
+      {
+        pola: "動詞1（てけい）、動詞2（てけい）、〜動詞3。",
+        romaji: "[V1-te], [V2-te], [V3].",
+        arti: "[V1], lalu [V2], lalu [V3].",
+        catatan: "Sama persis polanya kayak Hari 23, cuma di sini isinya kata kerja gerak (まがります、わたります、とおります dari Hari 16) buat jelasin rute jalan.",
+        contoh: [
+          {jp:"この道（みち）を　まっすぐ行（い）って、かどを　まがって、駅（えき）に　着（つ）きます。", id:"Jalan lurus di jalan ini, belok di sudut, sampai di stasiun."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 6",
+    judul: "〔KB1〕じゃなくて、〔KB2〕 — Bukan KB1, tapi KB2",
+    sub: "Buat mengoreksi/menegaskan bahwa yang benar itu KB2, bukan KB1 yang mungkin disangka/disebut sebelumnya. じゃなくて itu bentuk te-nya じゃない (negatif kata benda), dipakai buat nyambung ke bagian koreksinya.",
+    items: [
+      {
+        pola: "〔KB1〕じゃなくて、〔KB2〕です。",
+        romaji: "[KB1] janakute, [KB2] desu.",
+        arti: "Bukan [KB1], tapi [KB2].",
+        catatan: "Beda dari けど (Hari 29) yang buat 2 kalimat BERTENTANGAN (masing-masing punya predikat sendiri) — じゃなくて ini buat NGOREKSI 1 hal doang di posisi yang sama (misal salah nyebut nama orang, salah nyebut hari, dst), bukan buat gabungin 2 kalimat lengkap.",
+        contoh: [
+          {jp:"今日（きょう）は　月曜日（げつようび）じゃなくて、火曜日（かようび）です。", id:"Hari ini bukan hari Senin, tapi hari Selasa."},
+          {jp:"私（わたし）が　好（す）きなのは　ねこじゃなくて、犬（いぬ）です。", id:"Yang aku suka bukan kucing, tapi anjing."}
         ]
       }
     ]
