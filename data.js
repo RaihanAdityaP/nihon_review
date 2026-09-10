@@ -10589,6 +10589,74 @@ const BUNPOU = [
     items: []
   },
 
+  // ═══ IRODORI — BAB 11 ═══
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 11",
+    judul: "〔動詞て形〕行きます／〔動詞て形〕来ます — Arah Gerakan Dijauhkan/Didekatkan dari Pembicara",
+    sub: "Nempel ke kata kerja lain (て形) buat nunjukin ARAH aksinya relatif ke posisi PEMBICARA. て行きます = aksinya menjauh dari pembicara (pergi dulu, baru ngelakuin, atau abis ngelakuin baru pergi). て来ます = aksinya mendekat ke pembicara (dateng dulu/pulang bawa hasilnya). Bentuk lampau て来ました bisa juga berarti 'udah pergi dan kembali lagi'.",
+    items: [
+      {
+        pola: "〔動詞てけい〕行（い）きます。",
+        romaji: "[V-te] ikimasu.",
+        arti: "Pergi buat [V] (menjauh dari pembicara).",
+        catatan: "Dipakai kalau aksinya bakal dilakuin di tempat LAIN, menjauh dari posisi pembicara sekarang.",
+        contoh: [
+          {jp:"肉（にく）と　やさいは、私（わたし）が　買（か）って　行（い）きます。", id:"Daging dan sayur, saya yang beli lalu bawa pergi (ke lokasi acara)."},
+          {jp:"明日（あした）の　パーティー、私（わたし）は　デザートを　持（も）って　行（い）きます。", id:"Pesta besok, saya bakal bawa dessert (ke sana)."}
+        ]
+      },
+      {
+        pola: "〔動詞てけい〕来（き）ます。",
+        romaji: "[V-te] kimasu.",
+        arti: "Datang buat [V] / udah [V] terus balik (mendekat ke pembicara).",
+        catatan: "Dipakai kalau aksinya BALIK/MENDEKAT ke posisi pembicara. て来ました (lampau) sering berarti 'udah pergi ngelakuin sesuatu, terus balik lagi'.",
+        contoh: [
+          {jp:"レストランで　食（た）べて　来（き）ました。", id:"Saya udah makan di restoran (lalu balik ke sini)."},
+          {jp:"国（くに）の　料理（りょうり）を　作（つく）って　来（き）ます。", id:"Saya bakal masak masakan negara saya (lalu bawa ke sini)."},
+          {jp:"雨（あめ）が　降（ふ）って　来（き）ます。", id:"Hujan bakal turun (mendekat/menuju sini)."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 11",
+    judul: "どっち／どれ・のほうがいいです — Membandingkan Pilihan (Pengulangan dari Hari 15, Bab 6)",
+    sub: "Pola どちら（どっち）／のほうが buat bandingin 2 pilihan, dan どれ buat milih dari 3+ pilihan, udah lengkap di Hari 15 (Bab 6), tab Buku Utama — item di bawah DIPANGGIL LANGSUNG dari sana.",
+    refFrom: { tema: "Hari 15 (Bab 6)", judul: "〔KB1〕と　〔KB2〕と、どちら〜／〜のほうが〜／どちらも〜 (Membandingkan dua hal)" },
+    items: [
+      {
+        pola: "〔KB1〕と〔KB2〕と〔KB3〕（と）どれが　いいですか。 (contoh tambahan, 3+ pilihan)",
+        romaji: "[KB1] to [KB2] to [KB3] (to) dore ga ii desu ka?",
+        arti: "Dari [KB1], [KB2], [KB3], yang mana yang bagus?",
+        catatan: "どれ dipakai kalau pilihannya ADA 3 ATAU LEBIH — beda dari どっち/どちら yang khusus buat 2 pilihan doang.",
+        contoh: [
+          {jp:"A：エアコンと　せんぷうきと　どっちが　安（やす）いですか。\nB：せんぷうき（の方（ほう）が）安（やす）いです。／どっちも　安（やす）いです。／りょうほうが　安（やす）いです。", id:"A: AC sama kipas angin, mana yang lebih murah? — B: Kipas anginnya (yang) lebih murah. / Dua-duanya murah. / Keduanya murah."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 11",
+    judul: "〔KB〕でもいいです — \"[KB] Aja Juga Boleh\" (Perluasan dari Irodori Bab 7)",
+    sub: "Versi PERNYATAAN dari pola でもいいですか yang udah dicatet di Irodori Bab 7 (versi PERTANYAAN, nawarin alternatif) — item di bawah DIPANGGIL LANGSUNG dari sana. Di sini dipakai buat JAWAB kalau apapun/di manapun/siapapun gapapa ('terserah').",
+    refFrom: { tema: "Irodori Bab 7", judul: "〜でもいいですか — Mengusulkan Alternatif Lain" },
+    items: [
+      {
+        pola: "〔なに・だれ・どこ〕でも　いいです。 (contoh tambahan, versi pernyataan)",
+        romaji: "[nani/dare/doko] demo ii desu.",
+        arti: "Apa/siapa/di mana aja boleh. (terserah)",
+        catatan: "Gabungan なに／だれ／どこ (kata tanya) + でもいいです = jadi berarti 'APAPUN/SIAPAPUN/DI MANAPUN gapapa', mirip kata 'terserah' di Indonesia.",
+        contoh: [
+          {jp:"A：何（なに）が　食（た）べたいですか。\nB：何（なに）でも　いいです。", id:"A: Mau makan apa? — B: Apa aja boleh."},
+          {jp:"A：どこが　バーベキュー場（じょう）に　しますか。\nB：どこでも　いいです。", id:"A: Mau jadiin tempat mana buat area BBQ? — B: Di mana aja boleh."}
+        ]
+      }
+    ]
+  },
+
   // ═══ IRODORI — BAB 12 ═══
   {
     buku: "irodori",
