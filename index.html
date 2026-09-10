@@ -22,6 +22,8 @@
   <!-- desktop nav -->
   <nav id="desktopNav">
     <button class="active" onclick="showPage('materi',this)">教材</button>
+    <button onclick="showPage('kanji',this)">漢字</button>
+    <button onclick="showPage('katakerja',this)">動詞</button>
     <button onclick="showPage('partikel',this)">助詞</button>
     <button onclick="showPage('buku',this)">教科書</button>
     <button onclick="showPage('bunpou',this)">文法</button>
@@ -47,6 +49,8 @@
   <div class="drawer-logo">日本語復習<small>· review</small></div>
   <nav class="drawer-nav">
     <button class="active" onclick="showPage('materi',this,true)">教材</button>
+    <button onclick="showPage('kanji',this,true)">漢字</button>
+    <button onclick="showPage('katakerja',this,true)">動詞</button>
     <button onclick="showPage('partikel',this,true)">助詞</button>
     <button onclick="showPage('buku',this,true)">教科書</button>
     <button onclick="showPage('bunpou',this,true)">文法</button>
@@ -66,17 +70,39 @@
 
 <main>
 
-  <!-- MATERI (Kamus Terpadu) -->
+  <!-- MATERI (Kamus Terpadu — Hiragana/Katakana/Kotoba/Kata Sifat/Counter) -->
   <div id="pageMateri" class="page active">
     <div class="sec-title">Materi</div>
-    <div class="sec-sub">Cari kana, romaji, kanji, atau arti — lintas semua kategori.</div>
+    <div class="sec-sub">Cari kana, romaji, kanji, atau arti — lintas semua kategori. (Kanji &amp; Kata Kerja ada menu sendiri, lihat tab 漢字 dan 動詞)</div>
     <div class="kamus-search-wrap">
       <input type="text" id="kamusSearchInput" class="kamus-search" placeholder="Cari kana, romaji, kanji, atau arti..." oninput="renderKamusResults(true)">
     </div>
     <div class="kamus-chips" id="kamusChips"></div>
-    <div class="cat-tabs" id="kerjaSubFilter" style="display:none"></div>
     <div class="kamus-count" id="kamusCount"></div>
     <div id="kamusResults"></div>
+  </div>
+
+  <!-- KANJI (halaman sendiri) -->
+  <div id="pageKanji" class="page">
+    <div class="sec-title">Kanji</div>
+    <div class="sec-sub">Cari kanji, cara baca (onyomi/kunyomi), atau arti.</div>
+    <div class="kamus-search-wrap">
+      <input type="text" id="kanjiSearchInput" class="kamus-search" placeholder="Cari kanji, cara baca, atau arti..." oninput="renderKanjiPage(true)">
+    </div>
+    <div class="kamus-count" id="kanjiCount"></div>
+    <div id="kanjiResults"></div>
+  </div>
+
+  <!-- KATA KERJA (halaman sendiri) -->
+  <div id="pageKatakerja" class="page">
+    <div class="sec-title">Kata Kerja</div>
+    <div class="sec-sub">Per kelompok (I/II/III), atau per jenis 自動詞 (jidoushi) &amp; 他動詞 (tadoushi).</div>
+    <div class="cat-tabs" id="kkTabs"></div>
+    <div class="kamus-search-wrap">
+      <input type="text" id="kkSearchInput" class="kamus-search" placeholder="Cari kata kerja, romaji, kanji, atau arti..." oninput="renderKataKerjaResults(true)">
+    </div>
+    <div class="kamus-count" id="kkCount"></div>
+    <div id="kkResults"></div>
   </div>
 
   <!-- PARTIKEL -->

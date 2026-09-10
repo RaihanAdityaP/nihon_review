@@ -894,6 +894,17 @@ function renderBunpouBookTabs() {
   `).join('');
 }
 
+function resolveBunpouItems(group) {
+  // Kartu "Pengulangan dari Hari X" bisa punya refFrom: {tema, judul} yang manggil
+  // langsung item dari kartu aslinya (data.js) — jadi gak perlu ditulis ulang manual.
+  // Kalau kartu ini juga punya items sendiri (contoh tambahan yang unik), itu digabung
+  // di belakang item hasil panggilan tadi.
+  const own = group.items || [];
+  if (!group.refFrom) return own;
+  const source = BUNPOU.find(g => g.tema === group.refFrom.tema && g.judul === group.refFrom.judul);
+  return source ? source.items.concat(own) : own;
+}
+
 function renderBunpou() {
   renderBunpouBookTabs();
   const el = document.getElementById('bunpouContent');
@@ -917,18 +928,19 @@ function renderBunpou() {
     html += `<div class="sec-header-bunpou">${tema}</div>`;
     byTema[tema].forEach((group, gi) => {
       const id = 'bunpou_' + tema.replace(/[^a-z0-9]/gi, '_') + '_' + gi;
+      const resolvedItems = resolveBunpouItems(group);
       html += `<div class="acc-item">
         <div class="acc-head" onclick="togAcc('${id}',this)">
           <div class="acc-left">
             <span class="acc-title">${group.judul}</span>
-            <span class="acc-cnt">${group.items.length}</span>
+            <span class="acc-cnt">${resolvedItems.length}</span>
           </div>
           <span class="acc-arrow">▶</span>
         </div>
         <div class="acc-body" id="${id}">
           ${group.sub ? `<div style="font-size:.8rem;color:var(--text3);font-style:italic;margin-bottom:.9rem;line-height:1.6">${group.sub}</div>` : ''}
           <div class="particle-grid">
-            ${group.items.map(it => `
+            ${resolvedItems.map(it => `
               <div class="pcard">
                 <div class="p-sym" style="font-size:1.15rem;font-family:'Noto Serif JP',serif">${it.pola}</div>
                 <div class="p-rom">${it.romaji}</div>
@@ -1700,16 +1712,20 @@ function backWSetup() {
 // ─────────────────────────────────────────────────────
 // KAMUS TERPADU (Materi) — search lintas semua kategori
 // ─────────────────────────────────────────────────────
+// Catatan: Kanji dan Kata Kerja PUNYA HALAMAN SENDIRI (lihat bagian "KANJI —
+// halaman sendiri" dan "KATA KERJA — halaman sendiri" di bawah), jadi gak
+// muncul lagi sebagai chip/kategori di pencarian terpadu Materi ini.
 const KAMUS_CATS = [
   { key: 'Semua', label: 'Semua' },
   { key: 'Hiragana', label: 'Hiragana' },
   { key: 'Katakana', label: 'Katakana' },
   { key: 'Kotoba', label: 'Kotoba (Kata Benda)' },
-  { key: 'Kanji', label: 'Kanji' },
-  { key: 'Kata Kerja', label: 'Kata Kerja' },
   { key: 'Kata Sifat', label: 'Kata Sifat' },
   { key: 'Counter', label: 'Kata Bantu Bilangan' },
 ];
+// Sumber yang masih ikut ke-search di chip "Semua" pada Materi — Kanji &
+// Kata Kerja sengaja dikecualikan karena sudah pindah ke halaman sendiri.
+const KAMUS_VISIBLE_SOURCES = new Set(['Hiragana', 'Katakana', 'Kotoba', 'Kata Sifat', 'Counter']);
 let kamusActiveCat = 'Semua';
 let KAMUS_ALL = null;
 let KAMUS_HOMOFON = null;
@@ -1800,26 +1816,75 @@ function kamusGoPage(p) {
   document.getElementById('kamusResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// klik "…" → berubah jadi input kecil buat lompat langsung ke halaman tertentu
-function kamusToggleJump(el, totalPages) {
+// klik "…" → berubah jadi input kecil buat lompat langsung ke halaman tertentu.
+// Dipakai bareng-bareng oleh Materi/Kanji/Kata Kerja — tinggal kasih tau nama
+// fungsi "goto page" (mis. "kamusGoPage") dan "render ulang" (mis. "renderKamusResults") masing-masing halaman.
+function pagerToggleJump(el, totalPages, gotoFnName, renderFnName) {
   if (el.dataset.open === '1') return;
   el.dataset.open = '1';
   el.classList.add('kamus-page-ellipsis-open');
   el.innerHTML = `<input type="number" class="kamus-page-jump-input" min="1" max="${totalPages}">`;
   const input = el.querySelector('input');
   input.focus();
-  const revert = () => { el.dataset.open = ''; renderKamusResults(); };
+  const revert = () => { el.dataset.open = ''; window[renderFnName](); };
   const commit = () => {
     let p = parseInt(input.value, 10);
     if (isNaN(p)) { revert(); return; }
     p = Math.max(1, Math.min(totalPages, p));
-    kamusGoPage(p);
+    window[gotoFnName](p);
   };
   input.addEventListener('keydown', e => {
     if (e.key === 'Enter') commit();
     if (e.key === 'Escape') revert();
   });
   input.addEventListener('blur', () => setTimeout(() => { if (el.dataset.open === '1') revert(); }, 150));
+}
+function kamusToggleJump(el, totalPages) { pagerToggleJump(el, totalPages, 'kamusGoPage', 'renderKamusResults'); }
+
+// Bikin HTML baris nomor halaman (dipakai Materi/Kanji/Kata Kerja).
+function pagerHtml(page, totalPages, gotoFnName, jumpFnName) {
+  if (totalPages <= 1) return '';
+  return `<div class="kamus-pagination">
+    <button class="kamus-page-btn" ${page <= 1 ? 'disabled' : ''} onclick="${gotoFnName}(${page - 1})">←</button>
+    ${kamusPageNumbers(page, totalPages).map(p =>
+      p === '…'
+        ? `<button class="kamus-page-ellipsis" onclick="${jumpFnName}(this, ${totalPages})">…</button>`
+        : `<button class="kamus-page-num ${p === page ? 'active' : ''}" onclick="${gotoFnName}(${p})">${p}</button>`
+    ).join('')}
+    <button class="kamus-page-btn" ${page >= totalPages ? 'disabled' : ''} onclick="${gotoFnName}(${page + 1})">→</button>
+  </div>`;
+}
+
+// Bikin HTML daftar kata dari array item ala KAMUS_ALL, lengkap header grup
+// dan tombol "MIRIP" homofon (dipakai Materi/Kanji/Kata Kerja).
+function kamusItemsHtml(items) {
+  let lastGroup = null;
+  let html = '';
+  items.forEach(w => {
+    const idx = KAMUS_ALL.indexOf(w);
+    const key = kamusNormK(w.kana) + '|' + kamusNormR(w.romaji);
+    const hasMirip = KAMUS_HOMOFON.has(key) && KAMUS_HOMOFON.get(key).length > 1;
+    const boxSrc = w.jishokei ? (w.jishokei.kanji || w.jishokei.kana) : w.kanji;
+    const boxText = boxSrc ? (boxSrc.length > 2 ? boxSrc.slice(0, 2) : boxSrc) : w.kana.slice(0, 2);
+    if (w.group && w.group !== lastGroup) {
+      html += `<div class="sec-header-bunpou">${w.group}</div>`;
+      lastGroup = w.group;
+    }
+    const typeBadge = w.type ? `<span class="kcat" style="margin-left:.35rem">${w.type === 'jidoushi' ? '自動詞' : '他動詞'}</span>` : '';
+    html += `<div class="kamus-item" data-i="${idx}">
+      <div class="kbox">${boxText}</div>
+      <div class="kinfo">
+        <div class="ktag"><span class="kcat">${w.source.toUpperCase()}</span>${typeBadge}</div>
+        <div class="ktitle">${w.arti}</div>
+        <div class="ksub">${w.jishokei ? (w.jishokei.kanji || w.jishokei.kana) + ' ・ ' : ''}${w.kana}${w.romaji && w.source !== 'Hiragana' && w.source !== 'Katakana' ? ' • ' + w.romaji : ''}</div>
+      </div>
+      ${hasMirip ? '<div class="kamus-mirip">MIRIP</div>' : ''}
+    </div>`;
+  });
+  return html;
+}
+function bindKamusItemClicks(containerEl) {
+  containerEl.querySelectorAll('.kamus-item').forEach(r => r.onclick = () => openKamusSheet(KAMUS_ALL[parseInt(r.dataset.i)]));
 }
 
 // bikin daftar nomor halaman: selalu tampilkan awal, akhir, sekitar halaman aktif, sisanya "…"
@@ -1839,31 +1904,7 @@ function renderKamusChips() {
   const el = document.getElementById('kamusChips');
   if (!el) return;
   el.innerHTML = KAMUS_CATS.map(c => `<div class="kamus-chip ${c.key === kamusActiveCat ? 'active' : ''}" data-c="${c.key}">${c.label}</div>`).join('');
-  el.querySelectorAll('.kamus-chip').forEach(c => c.onclick = () => { kamusActiveCat = c.dataset.c; renderKamusChips(); renderKerjaSubFilter(); renderKamusResults(true); });
-  renderKerjaSubFilter();
-}
-
-// ─── Sub-filter khusus chip "Kata Kerja": Kelompok (default) vs Jidoushi vs Tadoushi.
-// Field `type` ("jidoushi"/"tadoushi") sudah nempel di tiap baris KATA_KERJA (data.js) —
-// jadi kata kerja baru otomatis kesortir begitu ditambahin ke sana, gak perlu update di sini.
-let kerjaSubView = 'semua';
-const KERJA_SUBVIEWS = [
-  { key: 'semua', label: 'Semua (per Kelompok)' },
-  { key: 'jidoushi', label: '自動詞 Jidoushi' },
-  { key: 'tadoushi', label: '他動詞 Tadoushi' }
-];
-function renderKerjaSubFilter() {
-  const el = document.getElementById('kerjaSubFilter');
-  if (!el) return;
-  if (kamusActiveCat !== 'Kata Kerja') { el.style.display = 'none'; return; }
-  el.style.display = 'flex';
-  el.innerHTML = KERJA_SUBVIEWS.map(v => `<button class="cat-btn${v.key === kerjaSubView ? ' active' : ''}" onclick="switchKerjaSubView('${v.key}', this)">${v.label}</button>`).join('');
-}
-function switchKerjaSubView(key, btn) {
-  kerjaSubView = key;
-  document.querySelectorAll('#kerjaSubFilter .cat-btn').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  renderKamusResults(true);
+  el.querySelectorAll('.kamus-chip').forEach(c => c.onclick = () => { kamusActiveCat = c.dataset.c; renderKamusChips(); renderKamusResults(true); });
 }
 
 let kamusPage = 1;
@@ -1875,9 +1916,8 @@ function renderKamusResults(resetPage) {
   const qEl = document.getElementById('kamusSearchInput');
   const q = qEl ? qEl.value.trim().toLowerCase() : '';
   const filtered = KAMUS_ALL.filter(w => {
-    const matchCat = kamusActiveCat === 'Semua' || w.source === kamusActiveCat;
+    const matchCat = kamusActiveCat === 'Semua' ? KAMUS_VISIBLE_SOURCES.has(w.source) : w.source === kamusActiveCat;
     if (!matchCat) return false;
-    if (kamusActiveCat === 'Kata Kerja' && (kerjaSubView === 'jidoushi' || kerjaSubView === 'tadoushi') && w.type !== kerjaSubView) return false;
     if (!q) return true;
     return (w.kana || '').toLowerCase().includes(q) || (w.romaji || '').toLowerCase().includes(q) || (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q) || (w.group || '').toLowerCase().includes(q);
   });
@@ -1894,44 +1934,108 @@ function renderKamusResults(resetPage) {
   if (!el) return;
   if (!filtered.length) { el.innerHTML = `<div class="kamus-empty">Gak ketemu. Coba kata kunci lain.</div>`; return; }
 
-  let lastGroup = null;
-  let html = '';
-  pageItems.forEach(w => {
-    const idx = KAMUS_ALL.indexOf(w);
-    const key = kamusNormK(w.kana) + '|' + kamusNormR(w.romaji);
-    const hasMirip = KAMUS_HOMOFON.has(key) && KAMUS_HOMOFON.get(key).length > 1;
-    const boxSrc = w.jishokei ? (w.jishokei.kanji || w.jishokei.kana) : w.kanji;
-    const boxText = boxSrc ? (boxSrc.length > 2 ? boxSrc.slice(0, 2) : boxSrc) : w.kana.slice(0, 2);
-    // tampilkan header grup (mis. "Kata Kerja - Kelompok I") tiap kali grupnya beda dari item sebelumnya
-    if (w.group && w.group !== lastGroup) {
-      html += `<div class="sec-header-bunpou">${w.group}</div>`;
-      lastGroup = w.group;
-    }
-    html += `<div class="kamus-item" data-i="${idx}">
-      <div class="kbox">${boxText}</div>
-      <div class="kinfo">
-        <div class="ktag"><span class="kcat">${w.source.toUpperCase()}</span></div>
-        <div class="ktitle">${w.arti}</div>
-        <div class="ksub">${w.jishokei ? (w.jishokei.kanji || w.jishokei.kana) + ' ・ ' : ''}${w.kana}${w.romaji && w.source !== 'Hiragana' && w.source !== 'Katakana' ? ' • ' + w.romaji : ''}</div>
-      </div>
-      ${hasMirip ? '<div class="kamus-mirip">MIRIP</div>' : ''}
-    </div>`;
-  });
-
-  if (totalPages > 1) {
-    html += `<div class="kamus-pagination">
-      <button class="kamus-page-btn" ${kamusPage <= 1 ? 'disabled' : ''} onclick="kamusGoPage(${kamusPage - 1})">←</button>
-      ${kamusPageNumbers(kamusPage, totalPages).map(p =>
-        p === '…'
-          ? `<button class="kamus-page-ellipsis" onclick="kamusToggleJump(this, ${totalPages})">…</button>`
-          : `<button class="kamus-page-num ${p === kamusPage ? 'active' : ''}" onclick="kamusGoPage(${p})">${p}</button>`
-      ).join('')}
-      <button class="kamus-page-btn" ${kamusPage >= totalPages ? 'disabled' : ''} onclick="kamusGoPage(${kamusPage + 1})">→</button>
-    </div>`;
-  }
-
+  const html = kamusItemsHtml(pageItems) + pagerHtml(kamusPage, totalPages, 'kamusGoPage', 'kamusToggleJump');
   el.innerHTML = html;
-  el.querySelectorAll('.kamus-item').forEach(r => r.onclick = () => openKamusSheet(KAMUS_ALL[parseInt(r.dataset.i)]));
+  bindKamusItemClicks(el);
+}
+
+// ─────────────────────────────────────────────────────
+// KANJI — halaman sendiri (dipisah dari pencarian terpadu Materi)
+// ─────────────────────────────────────────────────────
+let kanjiPage = 1;
+const KANJI_PAGE_SIZE = 40;
+function kanjiGoPage(p) {
+  kanjiPage = p;
+  renderKanjiPage();
+  document.getElementById('kanjiResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function kanjiToggleJump(el, totalPages) { pagerToggleJump(el, totalPages, 'kanjiGoPage', 'renderKanjiPage'); }
+function renderKanjiPage(resetPage) {
+  buildKamusIndex();
+  if (resetPage) kanjiPage = 1;
+  const qEl = document.getElementById('kanjiSearchInput');
+  const q = qEl ? qEl.value.trim().toLowerCase() : '';
+  const filtered = KAMUS_ALL.filter(w => {
+    if (w.source !== 'Kanji') return false;
+    if (!q) return true;
+    return (w.kana || '').toLowerCase().includes(q) || (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q) || (w.group || '').toLowerCase().includes(q) ||
+      (w.onyomi || []).some(x => x.includes(q)) || (w.kunyomi || []).some(x => x.includes(q));
+  });
+  const totalPages = Math.max(1, Math.ceil(filtered.length / KANJI_PAGE_SIZE));
+  if (kanjiPage > totalPages) kanjiPage = totalPages;
+  const start = (kanjiPage - 1) * KANJI_PAGE_SIZE;
+  const pageItems = filtered.slice(start, start + KANJI_PAGE_SIZE);
+
+  const countEl = document.getElementById('kanjiCount');
+  if (countEl) countEl.innerHTML = `<span>HASIL</span><span>${filtered.length} kanji</span>`;
+  const el = document.getElementById('kanjiResults');
+  if (!el) return;
+  if (!filtered.length) { el.innerHTML = `<div class="kamus-empty">Gak ketemu. Coba kata kunci lain.</div>`; return; }
+  el.innerHTML = kamusItemsHtml(pageItems) + pagerHtml(kanjiPage, totalPages, 'kanjiGoPage', 'kanjiToggleJump');
+  bindKamusItemClicks(el);
+}
+
+// ─────────────────────────────────────────────────────
+// KATA KERJA — halaman sendiri (dipisah dari pencarian terpadu Materi)
+// Tab: Semua, per Kelompok (I/II/III), dan per jenis (Jidoushi/Tadoushi).
+// Field `type` ("jidoushi"/"tadoushi") sudah nempel di tiap baris KATA_KERJA
+// (data.js), jadi kata kerja baru otomatis kesortir begitu ditambahin ke sana.
+// ─────────────────────────────────────────────────────
+const KK_TABS = [
+  { key: 'kelompok1', label: 'Kelompok I' },
+  { key: 'kelompok2', label: 'Kelompok II' },
+  { key: 'kelompok3', label: 'Kelompok III' },
+  { key: 'jidoushi', label: '自動詞 Jidoushi' },
+  { key: 'tadoushi', label: '他動詞 Tadoushi' },
+  { key: 'semua', label: 'Semua' }
+];
+let kkActiveTab = 'kelompok1';
+let kkPage = 1;
+const KK_PAGE_SIZE = 40;
+function renderKataKerjaTabs() {
+  const el = document.getElementById('kkTabs');
+  if (!el) return;
+  el.innerHTML = KK_TABS.map(t => `<button class="cat-btn${t.key === kkActiveTab ? ' active' : ''}" onclick="switchKkTab('${t.key}', this)">${t.label}</button>`).join('');
+}
+function switchKkTab(key, btn) {
+  kkActiveTab = key;
+  document.querySelectorAll('#kkTabs .cat-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderKataKerjaResults(true);
+}
+function kkGoPage(p) {
+  kkPage = p;
+  renderKataKerjaResults();
+  document.getElementById('kkResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function kkToggleJump(el, totalPages) { pagerToggleJump(el, totalPages, 'kkGoPage', 'renderKataKerjaResults'); }
+function renderKataKerjaResults(resetPage) {
+  buildKamusIndex();
+  if (resetPage) kkPage = 1;
+  const qEl = document.getElementById('kkSearchInput');
+  const q = qEl ? qEl.value.trim().toLowerCase() : '';
+  const filtered = KAMUS_ALL.filter(w => {
+    if (w.source !== 'Kata Kerja') return false;
+    if (kkActiveTab === 'kelompok1' && !w.group.endsWith('Kelompok I')) return false;
+    if (kkActiveTab === 'kelompok2' && !w.group.endsWith('Kelompok II')) return false;
+    if (kkActiveTab === 'kelompok3' && !w.group.endsWith('Kelompok III')) return false;
+    if (kkActiveTab === 'jidoushi' && w.type !== 'jidoushi') return false;
+    if (kkActiveTab === 'tadoushi' && w.type !== 'tadoushi') return false;
+    if (!q) return true;
+    return (w.kana || '').toLowerCase().includes(q) || (w.romaji || '').toLowerCase().includes(q) || (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q);
+  });
+  const totalPages = Math.max(1, Math.ceil(filtered.length / KK_PAGE_SIZE));
+  if (kkPage > totalPages) kkPage = totalPages;
+  const start = (kkPage - 1) * KK_PAGE_SIZE;
+  const pageItems = filtered.slice(start, start + KK_PAGE_SIZE);
+
+  const countEl = document.getElementById('kkCount');
+  if (countEl) countEl.innerHTML = `<span>HASIL</span><span>${filtered.length} kata kerja</span>`;
+  const el = document.getElementById('kkResults');
+  if (!el) return;
+  if (!filtered.length) { el.innerHTML = `<div class="kamus-empty">Gak ketemu. Coba kata kunci lain.</div>`; return; }
+  el.innerHTML = kamusItemsHtml(pageItems) + pagerHtml(kkPage, totalPages, 'kkGoPage', 'kkToggleJump');
+  bindKamusItemClicks(el);
 }
 
 function openKamusSheet(w) {
@@ -2132,6 +2236,9 @@ renderPartikel();
 renderPartikelAdv();
 renderKamusChips();
 renderKamusResults();
+renderKanjiPage();
+renderKataKerjaTabs();
+renderKataKerjaResults();
 renderBabList();
 renderBunpou();
 initQSetup();
