@@ -5434,6 +5434,474 @@ const KANJI = [
       { w: "四時", furi: "よじ", a: "jam 4" },
       { w: "時間", furi: "じかん", a: "waktu" }
     ]
+  },
+  // ═══════════════════════════════════════════════
+  // IRODORI — sumber: "irodori" (dipisah dari kanji modul lewat filter di tab Moji)
+  // ═══════════════════════════════════════════════
+  {
+    tema: "Irodori", sumber: "irodori", char: "犬", onyomi: ["ケン"], kunyomi: ["いぬ"], arti: "anjing",
+    kotoba: [
+      { w: "犬", furi: "いぬ", a: "anjing" },
+      { w: "子犬", furi: "こいぬ", a: "anak anjing" },
+      { w: "猛犬", furi: "もうけん", a: "anjing galak" },
+      { w: "愛犬", furi: "あいけん", a: "anjing kesayangan" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "家", onyomi: ["カ", "ケ"], kunyomi: ["いえ", "うち"], arti: "rumah, keluarga",
+    kotoba: [
+      { w: "家", furi: "いえ", a: "rumah" },
+      { w: "作家", furi: "さっか", a: "penulis, pengarang" },
+      { w: "一家", furi: "いっか", a: "satu keluarga" },
+      { w: "家事", furi: "かじ", a: "pekerjaan rumah tangga" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "方", onyomi: ["ホウ"], kunyomi: ["かた"], arti: "arah, cara, orang (sebutan sopan)",
+    kotoba: [
+      { w: "方", furi: "かた", a: "orang (sebutan sopan)" },
+      { w: "夕方", furi: "ゆうがた", a: "sore hari" },
+      { w: "方法", furi: "ほうほう", a: "metode, cara" },
+      { w: "読み方", furi: "よみかた", a: "cara membaca" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "英", onyomi: ["エイ"], kunyomi: [], arti: "Inggris, unggul",
+    kotoba: [
+      { w: "英語", furi: "えいご", a: "bahasa Inggris" },
+      { w: "英会話", furi: "えいかいわ", a: "percakapan bahasa Inggris" },
+      { w: "英国", furi: "えいこく", a: "negara Inggris" },
+      { w: "英雄", furi: "えいゆう", a: "pahlawan" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "楽", onyomi: ["ガク", "ラク"], kunyomi: ["たの.しい"], arti: "senang, musik",
+    kotoba: [
+      { w: "楽しい", furi: "たのしい", a: "menyenangkan" },
+      { w: "楽", furi: "らく", a: "santai, mudah" },
+      { w: "音楽", furi: "おんがく", a: "musik" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "習", onyomi: ["シュウ"], kunyomi: ["なら.う"], arti: "belajar, berlatih",
+    kotoba: [
+      { w: "習う", furi: "ならう", a: "belajar" },
+      { w: "練習", furi: "れんしゅう", a: "latihan" },
+      { w: "復習", furi: "ふくしゅう", a: "pengulangan, review" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "季", onyomi: ["キ"], kunyomi: [], arti: "musim",
+    kotoba: [
+      { w: "季節", furi: "きせつ", a: "musim" },
+      { w: "四季", furi: "しき", a: "empat musim" },
+      { w: "雨季", furi: "うき", a: "musim hujan" },
+      { w: "乾季", furi: "かんき", a: "musim kemarau" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "節", onyomi: ["セツ", "セキ"], kunyomi: ["ふし"], arti: "ruas, musim, hemat",
+    kotoba: [
+      { w: "季節", furi: "きせつ", a: "musim" },
+      { w: "節分", furi: "せつぶん", a: "Setsubun (hari pergantian musim)" },
+      { w: "節約", furi: "せつやく", a: "penghematan" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "春", onyomi: ["シュン"], kunyomi: ["はる"], arti: "musim semi",
+    kotoba: [
+      { w: "春分", furi: "しゅんぶん", a: "ekuinoks musim semi" },
+      { w: "春", furi: "はる", a: "musim semi" },
+      { w: "青春", furi: "せいしゅん", a: "masa muda" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "夏", onyomi: ["カ", "ガ"], kunyomi: ["なつ"], arti: "musim panas",
+    kotoba: [
+      { w: "夏", furi: "なつ", a: "musim panas" },
+      { w: "夏休み", furi: "なつやすみ", a: "libur musim panas" },
+      { w: "夏季", furi: "かき", a: "musim panas (formal)" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "秋", onyomi: ["シュウ"], kunyomi: ["あき"], arti: "musim gugur",
+    kotoba: [
+      { w: "秋分", furi: "しゅうぶん", a: "ekuinoks musim gugur" },
+      { w: "秋", furi: "あき", a: "musim gugur" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "冬", onyomi: ["トウ"], kunyomi: ["ふゆ"], arti: "musim dingin",
+    kotoba: [
+      { w: "冬", furi: "ふゆ", a: "musim dingin" },
+      { w: "冬至", furi: "とうじ", a: "titik balik matahari musim dingin (winter solstice)" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "花", onyomi: ["カ"], kunyomi: ["はな"], arti: "bunga",
+    kotoba: [
+      { w: "花瓶", furi: "かびん", a: "vas bunga" },
+      { w: "花", furi: "はな", a: "bunga" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "同", onyomi: ["ドウ"], kunyomi: ["おな.じ"], arti: "sama",
+    kotoba: [
+      { w: "同日", furi: "どうじつ", a: "hari yang sama" },
+      { w: "同じ", furi: "おなじ", a: "sama" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "暑", onyomi: ["ショ"], kunyomi: ["あつ.い"], arti: "panas (cuaca)",
+    kotoba: [
+      { w: "暑い", furi: "あつい", a: "panas" },
+      { w: "蒸し暑い", furi: "むしあつい", a: "panas dan lembap" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "寒", onyomi: ["カン"], kunyomi: ["さむ.い"], arti: "dingin (cuaca)",
+    kotoba: [
+      { w: "寒い", furi: "さむい", a: "dingin" },
+      { w: "寒天", furi: "かんてん", a: "agar-agar (kanten)" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "晴", onyomi: ["セイ"], kunyomi: ["は.れ", "は.れる"], arti: "cerah",
+    kotoba: [
+      { w: "晴れ", furi: "はれ", a: "cerah" },
+      { w: "晴れる", furi: "はれる", a: "menjadi cerah" },
+      { w: "晴れ着", furi: "はれぎ", a: "pakaian formal" },
+      { w: "快晴", furi: "かいせい", a: "sangat cerah" },
+      { w: "秋晴れ", furi: "あきばれ", a: "cuaca cerah di musim gugur" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "雪", onyomi: ["セツ"], kunyomi: ["ゆき"], arti: "salju",
+    kotoba: [
+      { w: "雪", furi: "ゆき", a: "salju" },
+      { w: "初雪", furi: "はつゆき", a: "salju pertama" },
+      { w: "新雪", furi: "しんせつ", a: "salju baru, segar" },
+      { w: "雪達磨", furi: "ゆきだるま", a: "boneka salju" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "風", onyomi: ["フウ", "フ"], kunyomi: ["かぜ"], arti: "angin",
+    kotoba: [
+      { w: "風", furi: "かぜ", a: "angin" },
+      { w: "台風", furi: "たいふう", a: "topan" },
+      { w: "風邪", furi: "かぜ", a: "flu" },
+      { w: "和風", furi: "わふう", a: "gaya Jepang" },
+      { w: "洋風", furi: "ようふう", a: "gaya barat" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "昨", onyomi: ["サク"], kunyomi: [], arti: "sebelumnya, yang lalu",
+    kotoba: [
+      { w: "昨日", furi: "きのう", a: "kemarin" },
+      { w: "一昨日", furi: "おととい", a: "kemarin lusa" },
+      { w: "昨年", furi: "さくねん", a: "tahun lalu (formal)" },
+      { w: "昨夜", furi: "さくや", a: "malam kemarin (formal)" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "強", onyomi: ["キョウ", "ゴウ"], kunyomi: ["つよ.い"], arti: "kuat",
+    kotoba: [
+      { w: "強い", furi: "つよい", a: "kuat" },
+      { w: "勉強する", furi: "べんきょうする", a: "belajar" },
+      { w: "強風", furi: "きょうふう", a: "angin kencang" },
+      { w: "強力", furi: "きょうりょく", a: "ampuh, kuat" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "和", onyomi: ["ワ"], kunyomi: ["やわ.らぐ"], arti: "damai, Jepang (gaya)",
+    kotoba: [
+      { w: "平和", furi: "へいわ", a: "perdamaian" },
+      { w: "和食", furi: "わしょく", a: "masakan Jepang" },
+      { w: "和室", furi: "わしつ", a: "ruangan bergaya Jepang" },
+      { w: "令和", furi: "れいわ", a: "era Reiwa" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "事", onyomi: ["ジ", "シ"], kunyomi: ["こと"], arti: "hal, perkara",
+    kotoba: [
+      { w: "事", furi: "こと", a: "hal" },
+      { w: "食事", furi: "しょくじ", a: "makan" },
+      { w: "火事", furi: "かじ", a: "kebakaran" },
+      { w: "仕事", furi: "しごと", a: "pekerjaan" },
+      { w: "大事", furi: "だいじ", a: "penting" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "店", onyomi: ["テン"], kunyomi: ["みせ"], arti: "toko",
+    kotoba: [
+      { w: "店", furi: "みせ", a: "toko" },
+      { w: "店員", furi: "てんいん", a: "pegawai toko" },
+      { w: "喫茶店", furi: "きっさてん", a: "kafe" },
+      { w: "本店", furi: "ほんてん", a: "toko pusat" },
+      { w: "書店", furi: "しょてん", a: "toko buku" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "物", onyomi: ["ブツ", "モツ"], kunyomi: ["もの"], arti: "barang, benda",
+    kotoba: [
+      { w: "物", furi: "もの", a: "barang, benda" },
+      { w: "食べ物", furi: "たべもの", a: "makanan" },
+      { w: "飲み物", furi: "のみもの", a: "minuman" },
+      { w: "荷物", furi: "にもつ", a: "barang bawaan" },
+      { w: "本物", furi: "ほんもの", a: "barang asli" },
+      { w: "買い物", furi: "かいもの", a: "belanja" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "館", onyomi: ["カン"], kunyomi: ["やかた"], arti: "gedung, aula",
+    kotoba: [
+      { w: "博物館", furi: "はくぶつかん", a: "museum" },
+      { w: "体育館", furi: "たいいくかん", a: "gedung olahraga" },
+      { w: "大使館", furi: "たいしかん", a: "kedutaan besar" },
+      { w: "水族館", furi: "すいぞくかん", a: "akuarium" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "動", onyomi: ["ドウ"], kunyomi: ["うご.く", "うご.かす"], arti: "bergerak",
+    kotoba: [
+      { w: "動く", furi: "うごく", a: "bergerak" },
+      { w: "動かす", furi: "うごかす", a: "menggerakkan" },
+      { w: "運動", furi: "うんどう", a: "olahraga" },
+      { w: "活動", furi: "かつどう", a: "kegiatan" },
+      { w: "動物", furi: "どうぶつ", a: "binatang" },
+      { w: "動画", furi: "どうが", a: "video" },
+      { w: "自動", furi: "じどう", a: "otomatis" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "試", onyomi: ["シ"], kunyomi: ["ため.す", "こころ.みる"], arti: "mencoba, menguji",
+    kotoba: [
+      { w: "試食", furi: "ししょく", a: "mencoba makan" },
+      { w: "試着", furi: "しちゃく", a: "mencoba baju" },
+      { w: "試す", furi: "ためす", a: "menguji" },
+      { w: "試験", furi: "しけん", a: "ujian" },
+      { w: "試合", furi: "しあい", a: "pertandingan" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "合", onyomi: ["ゴウ"], kunyomi: ["あ.う", "あ.い"], arti: "cocok, gabung",
+    kotoba: [
+      { w: "合う", furi: "あう", a: "cocok, pas" },
+      { w: "間に合う", furi: "まにあう", a: "tepat waktu" },
+      { w: "知り合い", furi: "しりあい", a: "kenalan" },
+      { w: "合格", furi: "ごうかく", a: "lulus, lulus ujian" },
+      { w: "話し合う", furi: "はなしあう", a: "berdiskusi" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "難", onyomi: ["ナン"], kunyomi: ["むずか.しい"], arti: "sulit",
+    kotoba: [
+      { w: "難しい", furi: "むずかしい", a: "sulit" },
+      { w: "困難", furi: "こんなん", a: "kesulitan" },
+      { w: "難問", furi: "なんもん", a: "soal sulit" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "登", onyomi: ["ト", "トウ"], kunyomi: ["のぼ.る"], arti: "mendaki, naik",
+    kotoba: [
+      { w: "登る", furi: "のぼる", a: "mendaki, naik" },
+      { w: "登山", furi: "とざん", a: "pendakian gunung" },
+      { w: "登録", furi: "とうろく", a: "pendaftaran" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "茶", onyomi: ["サ"], kunyomi: ["ちゃ"], arti: "teh",
+    kotoba: [
+      { w: "茶", furi: "ちゃ", a: "teh" },
+      { w: "茶道", furi: "さどう", a: "upacara minum teh" },
+      { w: "紅茶", furi: "こうちゃ", a: "teh hitam" },
+      { w: "抹茶", furi: "まっちゃ", a: "matcha, teh pekat" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "酒", onyomi: ["シュ"], kunyomi: ["さけ", "さか"], arti: "minuman beralkohol",
+    kotoba: [
+      { w: "酒", furi: "さけ", a: "minuman beralkohol" },
+      { w: "日本酒", furi: "にほんしゅ", a: "sake Jepang" },
+      { w: "居酒屋", furi: "いざかや", a: "izakaya" },
+      { w: "飲酒運転", furi: "いんしゅうんてん", a: "mengemudi dalam keadaan mabuk" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "材", onyomi: ["ザイ"], kunyomi: [], arti: "bahan",
+    kotoba: [
+      { w: "人材", furi: "じんざい", a: "SDM" },
+      { w: "材料", furi: "ざいりょう", a: "bahan, material" },
+      { w: "木材", furi: "もくざい", a: "perkayuan (bahan bangunan)" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "料", onyomi: ["リョウ"], kunyomi: [], arti: "biaya, bahan",
+    kotoba: [
+      { w: "無料", furi: "むりょう", a: "gratis" },
+      { w: "有料", furi: "ゆうりょう", a: "berbayar" },
+      { w: "料理", furi: "りょうり", a: "masakan" },
+      { w: "料金", furi: "りょうきん", a: "tarif, biaya" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "野", onyomi: ["ヤ"], kunyomi: ["の"], arti: "ladang, liar",
+    kotoba: [
+      { w: "野生", furi: "やせい", a: "liar (hewan/tumbuhan)" },
+      { w: "野球", furi: "やきゅう", a: "bisbol" },
+      { w: "分野", furi: "ぶんや", a: "bidang, keahlian" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "菜", onyomi: ["サイ"], kunyomi: ["な"], arti: "sayuran",
+    kotoba: [
+      { w: "野菜", furi: "やさい", a: "sayuran" },
+      { w: "白菜", furi: "はくさい", a: "sawi putih" },
+      { w: "青菜", furi: "あおな", a: "sayuran hijau" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "肉", onyomi: ["ニク"], kunyomi: [], arti: "daging",
+    kotoba: [
+      { w: "牛肉", furi: "ぎゅうにく", a: "daging sapi" },
+      { w: "肉体", furi: "にくたい", a: "tubuh fisik" },
+      { w: "筋肉", furi: "きんにく", a: "otot" },
+      { w: "生肉", furi: "なまにく", a: "daging mentah" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "豚", onyomi: ["トン"], kunyomi: ["ぶた"], arti: "babi",
+    kotoba: [
+      { w: "豚肉", furi: "ぶたにく", a: "daging babi" },
+      { w: "豚汁", furi: "とんじる", a: "sup miso daging babi" },
+      { w: "子豚", furi: "こぶた", a: "anak babi" },
+      { w: "豚カツ", furi: "とんかつ", a: "katsu babi" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "皿", onyomi: ["ベイ"], kunyomi: ["さら", "ざら"], arti: "piring",
+    kotoba: [
+      { w: "お皿", furi: "おさら", a: "piring" },
+      { w: "小皿", furi: "こざら", a: "piring kecil" },
+      { w: "大皿", furi: "おおざら", a: "piring besar" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "持", onyomi: ["ジ"], kunyomi: ["も.つ"], arti: "membawa, memegang",
+    kotoba: [
+      { w: "持つ", furi: "もつ", a: "membawa" },
+      { w: "お金持ち", furi: "おかねもち", a: "orang kaya" },
+      { w: "持ち物", furi: "もちもの", a: "bawaan" },
+      { w: "気持ち", furi: "きもち", a: "perasaan" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "卵", onyomi: ["ラン"], kunyomi: ["たまご"], arti: "telur",
+    kotoba: [
+      { w: "生卵", furi: "なまたまご", a: "telur mentah" },
+      { w: "卵子", furi: "らんし", a: "sel telur" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "湯", onyomi: ["トウ"], kunyomi: ["ゆ"], arti: "air panas",
+    kotoba: [
+      { w: "銭湯", furi: "せんとう", a: "pemandian umum (dalam ruang)" },
+      { w: "湯気", furi: "ゆげ", a: "uap air panas" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "味", onyomi: ["ミ"], kunyomi: ["あじ"], arti: "rasa",
+    kotoba: [
+      { w: "中味", furi: "なかみ", a: "isi, kandungan" },
+      { w: "甘味料", furi: "かんみりょう", a: "pemanis buatan" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "甘", onyomi: ["カン"], kunyomi: ["あま.い", "うま.い"], arti: "manis",
+    kotoba: [
+      { w: "甘口", furi: "あまくち", a: "kata-kata manis" },
+      { w: "甘やかす", furi: "あまやかす", a: "memanjakan" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "辛", onyomi: ["シン"], kunyomi: ["から.い"], arti: "pedas",
+    kotoba: [
+      { w: "辛抱", furi: "しんぼう", a: "kesabaran" },
+      { w: "辛苦", furi: "しんく", a: "kesusahan" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "苦", onyomi: ["ク"], kunyomi: ["にが.い", "くる.しい"], arti: "pahit, menderita",
+    kotoba: [
+      { w: "苦難", furi: "くなん", a: "penderitaan" },
+      { w: "苦手", furi: "にがて", a: "lemah, tidak jago" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "法", onyomi: ["ホウ", "ハッ"], kunyomi: ["のり"], arti: "hukum, cara",
+    kotoba: [
+      { w: "法人", furi: "ほうじん", a: "badan hukum" },
+      { w: "方法", furi: "ほうほう", a: "cara" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "理", onyomi: ["リ"], kunyomi: ["ことわり"], arti: "alasan, prinsip",
+    kotoba: [
+      { w: "理由", furi: "りゆう", a: "alasan" },
+      { w: "無理", furi: "むり", a: "mustahil" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "調", onyomi: ["チョウ"], kunyomi: ["しら.べる", "ととの.う"], arti: "memeriksa, menyiapkan",
+    kotoba: [
+      { w: "体調", furi: "たいちょう", a: "kondisi tubuh" },
+      { w: "口調", furi: "くちょう", a: "nada bicara" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "道", onyomi: ["ドウ", "トウ"], kunyomi: ["みち"], arti: "jalan",
+    kotoba: [
+      { w: "公道", furi: "こうどう", a: "jalan umum, jalan raya" },
+      { w: "鉄道", furi: "てつどう", a: "rel kereta api" },
+      { w: "歩道", furi: "ほどう", a: "trotoar" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "公", onyomi: ["コウ", "ク"], kunyomi: ["おおやけ"], arti: "publik, umum",
+    kotoba: [
+      { w: "公会堂", furi: "こうかいどう", a: "balai kota" },
+      { w: "公平", furi: "こうへい", a: "keadilan, adil" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "園", onyomi: ["エン"], kunyomi: ["その"], arti: "taman, kebun",
+    kotoba: [
+      { w: "学園", furi: "がくえん", a: "akademi, kampus" },
+      { w: "花園", furi: "はなぞの", a: "taman bunga" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "神", onyomi: ["シン", "ジン"], kunyomi: ["かみ"], arti: "dewa, tuhan",
+    kotoba: [
+      { w: "神話", furi: "しんわ", a: "mitos, legenda" },
+      { w: "女神", furi: "めがみ", a: "dewi" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "近", onyomi: ["キン"], kunyomi: ["ちか.い"], arti: "dekat",
+    kotoba: [
+      { w: "側近", furi: "そっきん", a: "ajudan, orang kepercayaan dekat" },
+      { w: "近代", furi: "きんだい", a: "zaman modern" },
+      { w: "最近", furi: "さいきん", a: "akhir-akhir ini" }
+    ]
+  },
+  {
+    tema: "Irodori", sumber: "irodori", char: "送", onyomi: ["ソウ"], kunyomi: ["おく.る"], arti: "mengirim",
+    kotoba: [
+      { w: "送る", furi: "おくる", a: "mengirim, mengantar" },
+      { w: "放送", furi: "ほうそう", a: "siaran" },
+      { w: "送料", furi: "そうりょう", a: "ongkos kirim" }
+    ]
   }
 ]; // end KANJI
 
@@ -9856,8 +10324,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 1",
-    judul: "〜ています (Kegiatan yang Dilakukan sampai Sekarang) — Pengulangan dari Hari 20 (Bab 8)",
-    sub: "Yang muncul di Irodori Bab 1 ini spesifik makna KONDISI/KEGIATAN yang berlangsung terus sampai sekarang (kerjaan, tempat tinggal, dst) — bukan aksi sesaat yang lagi kejadian (itu yang di Hari 18). Ini persis pola 〔ばしょ〕に動詞（て）＋います di tab Buku Utama, Hari 20 (Bab 8) — item pertama di bawah ini DIPANGGIL LANGSUNG dari kartu aslinya, terus ditambah 2 contoh baru pakai kata kerja はたらきます yang makenya で, bukan に.",
+    judul: "〜ています — Kegiatan/Kondisi yang Berlangsung Lama",
+    sub: "Dipakai buat nyatain KONDISI/KEGIATAN yang berlangsung terus sampai sekarang (kerjaan, tempat tinggal, dst) — beda dari aksi sesaat yang lagi kejadian sekarang ini juga.",
     refFrom: { tema: "Hari 20 (Bab 8)", judul: "〔ばしょ〕に　動詞（て）＋います (Kegiatan/Kondisi yang Berlangsung Lama)" },
     items: [
       {
@@ -9892,7 +10360,7 @@ const BUNPOU = [
         pola: "趣味（しゅみ）は、〔動詞じしょけい〕ことです。",
         romaji: "shumi wa, [V-jisho] koto desu.",
         arti: "Hobiku adalah [V].",
-        catatan: "こと di sini fungsinya sama kayak yang dipakai di 「動詞（辞書形）ことができます」 (Hari 22/26, Bab 10, tab Buku Utama) — sama-sama nominalisasi kata kerja jadi konsep abstrak, cuma di sini dipasangin です buat definisi, bukan できます buat kemampuan.",
+        catatan: "こと di sini fungsinya sama kayak yang dipakai di 「動詞（辞書形）ことができます」 (Hari 22/26, Bab 10) — sama-sama nominalisasi kata kerja jadi konsep abstrak, cuma di sini dipasangin です buat definisi, bukan できます buat kemampuan.",
         contoh: [
           {jp:"趣味（しゅみ）は　料理（りょうり）を　することです。", id:"Hobiku adalah masak."},
           {jp:"趣味（しゅみ）は　音楽（おんがく）を　聞（き）くことです。", id:"Hobiku adalah dengerin musik."},
@@ -9925,7 +10393,7 @@ const BUNPOU = [
     buku: "irodori",
     tema: "Irodori Bab 2",
     judul: "〔人〕と〔場所〕で〔動詞〕 — Cerita Bareng Siapa, di Mana, Ngapain",
-    sub: "Gabungan 3 partikel buat cerita satu kegiatan lengkap: と (bareng siapa), で (di tempat mana aksinya terjadi — Hari 17, tab Buku Utama), lalu kata kerjanya di akhir.",
+    sub: "Gabungan 3 partikel buat cerita satu kegiatan lengkap: と (bareng siapa), で (di tempat mana aksinya terjadi — Hari 17), lalu kata kerjanya di akhir.",
     items: [
       {
         pola: "〔人〕と　〔場所〕で　〔動詞〕。",
@@ -9942,24 +10410,24 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 2",
-    judul: "動詞（て形）、動詞 — Menggabungkan 2 Kegiatan Berurutan (Pengulangan dari Hari 23, Bab 9)",
-    sub: "Pola ini udah lengkap dibahas di Hari 23 (Bab 9), tab Buku Utama — nyambungin 2+ kata kerja jadi satu kalimat, kegiatan berurutan sesuai urutan waktunya.",
+    judul: "動詞（て形）、動詞 — Menggabungkan 2 Kegiatan Berurutan",
+    sub: "Nyambungin 2+ kata kerja jadi satu kalimat, kegiatan berurutan sesuai urutan waktunya.",
     refFrom: { tema: "Hari 23 (Bab 9)", judul: "動詞（てけい）、動詞（てけい）、〜ます (Menceritakan Rangkaian Kegiatan dalam 1 Periode)" },
     items: []
   },
   {
     buku: "irodori",
     tema: "Irodori Bab 2",
-    judul: "動詞（て形）＋います (Kebiasaan) — Pengulangan dari Hari 27 (Bab 11)",
-    sub: "Nuansa 'kebiasaan/rutinitas yang diulang terus' ini persis Hari 27 (Bab 11), tab Buku Utama — beda dari Hari 18 (aksi lagi berlangsung sesaat) dan Hari 20 (status/kondisi lama kayak tempat tinggal/kerjaan).",
+    judul: "動詞（て形）＋います — Kebiasaan/Rutinitas",
+    sub: "Nuansa 'kebiasaan/rutinitas yang diulang terus' — beda dari aksi yang lagi berlangsung sesaat, dan beda juga dari status/kondisi lama kayak tempat tinggal/kerjaan.",
     refFrom: { tema: "Hari 27 (Bab 11)", judul: "動詞ています (Rutinitas Harian yang Dilakukan sampai Sekarang)" },
     items: []
   },
   {
     buku: "irodori",
     tema: "Irodori Bab 2",
-    judul: "〔KB〕が　〔動詞〕できます — Kemampuan (Pengulangan dari Hari 22/26)",
-    sub: "Versi KB langsung (KBができます) udah lengkap di Hari 22 (Bab 9), tab Buku Utama. Versi kata kerja pakai こと (〜ことができます) ada di Hari 26 (Bab 10) — juga dicatet ulang lengkap di Irodori Bab 5.",
+    judul: "〔KB〕が　〔動詞〕できます — Kemampuan",
+    sub: "Versi kata benda langsung (KBができます). Versi kata kerja pakai こと (〜ことができます) ada di Irodori Bab 5.",
     refFrom: { tema: "Hari 22 (Bab 9)", judul: "〔かつどう〕が　できます／できません (Bisa/Tidak Bisa Melakukan Suatu Kegiatan)" },
     items: []
   },
@@ -9968,8 +10436,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 3",
-    judul: "形容詞＋なります — Perubahan Kondisi (Pengulangan dari Hari 26, Bab 10)",
-    sub: "Pola い-keiyoushi→くなります dan な-keiyoushi／KB→になります ini udah lengkap dibahas di Hari 26 (Bab 10), tab Buku Utama, contohnya juga sama persis.",
+    judul: "形容詞＋なります — Perubahan Kondisi",
+    sub: "い-keiyoushi→くなります dan な-keiyoushi／KB→になります, buat nyatain sesuatu 'jadi' berubah kondisi.",
     refFrom: { tema: "Hari 26 (Bab 10)", judul: "形容詞＋なります (Menyatakan Perubahan Kondisi — 'Jadi')" },
     items: []
   },
@@ -10013,7 +10481,7 @@ const BUNPOU = [
     buku: "irodori",
     tema: "Irodori Bab 3",
     judul: "〜から — Alasan, di Tengah atau di Akhir Kalimat",
-    sub: "から (alasan) udah dipelajari di Hari 13 (Bab 5), tab Buku Utama, lewat pola どうして〜／〜から. Di Irodori bab ini dipraktekin lagi dalam 2 posisi: から nyambungin 2 kalimat jadi 1 (di tengah), ATAU から ditaruh sendirian di akhir kalimat (jawaban alasan, motong kalimat).",
+    sub: "から (alasan) dipraktekin di sini dalam 2 posisi: nyambungin 2 kalimat jadi 1 (di tengah), ATAU ditaruh sendirian di akhir kalimat (jawaban alasan, motong kalimat).",
     items: [
       {
         pola: "〔alasan〕から、〔akibat／ajakan〕。",
@@ -10101,7 +10569,7 @@ const BUNPOU = [
         pola: "でした／ました＋ね。　　だった／た（普通体）＋ね。",
         romaji: "deshita/mashita + ne. / datta/[ta-kei] + ne.",
         arti: "~ya (dulu/tadi).",
-        catatan: "Bentuk lampau だった／た ini udah dipelajari di Hari 27 (Bab 11), tab Buku Utama — tinggal tempelin ね di belakangnya.",
+        catatan: "Bentuk lampau だった／た (Hari 27, Bab 11) — tinggal tempelin ね di belakangnya.",
         contoh: [
           {jp:"昨日（きのう）は　寒（さむ）かったですね。", id:"Kemarin dingin ya."},
           {jp:"あの　映画（えいが）は　おもしろかったね。", id:"Film itu seru ya. (casual)"}
@@ -10112,8 +10580,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 4",
-    judul: "〜ています (Cerita Cuaca yang Sedang Terjadi) — Pengulangan dari Hari 18 (Bab 7)",
-    sub: "Nuansa di bab ini beda dari Irodori Bab 1/2 (yang soal kebiasaan/kerjaan, Hari 20/27) — di sini ています dipakai buat aksi yang LAGI KEJADIAN SEKARANG, persis makna aslinya di Hari 18 (Bab 7), tab Buku Utama. Item pertama di bawah DIPANGGIL LANGSUNG dari kartu aslinya, ditambah 1 contoh baru soal angin.",
+    judul: "〜ています — Cerita Cuaca yang Sedang Terjadi",
+    sub: "Beda dari nuansa kebiasaan/kerjaan — di sini ています dipakai buat aksi yang LAGI KEJADIAN SEKARANG.",
     refFrom: { tema: "Hari 18 (Bab 7)", judul: "動詞（て）＋　います (Menyatakan kegiatan yang sedang berlangsung)" },
     items: [
       {
@@ -10131,7 +10599,7 @@ const BUNPOU = [
     buku: "irodori",
     tema: "Irodori Bab 4",
     judul: "〜でしょう — Menebak (\"Mungkin\") atau Minta Persetujuan (\"Ya Kan?\")",
-    sub: "でしょう punya 2 fungsi tergantung INTONASI pas diucapin — penjelasan lengkap soal beda bunyinya ada di kartu \"Kata yang Artinya Beda Tergantung Cara Ngomong (Aksen & Intonasi)\", tema Materi Tambahan, tab Buku Utama.",
+    sub: "でしょう punya 2 fungsi tergantung INTONASI pas diucapin — penjelasan lengkap soal beda bunyinya ada di kartu \"Kata yang Artinya Beda Tergantung Cara Ngomong (Aksen & Intonasi)\", tema Materi Tambahan.",
     items: [
       {
         pola: "普通形＋でしょう。 (nada turun)",
@@ -10158,8 +10626,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 5",
-    judul: "い/な-けいようし・KB＋くて／で — Gabungan Sifat Setara (Pengulangan dari Hari 20, Bab 8)",
-    sub: "Pola dasarnya (い→くて, な→で) udah lengkap dibahas di Hari 20 (Bab 8), tab Buku Utama — item pertama di bawah DIPANGGIL LANGSUNG dari sana. Tambahan di Irodori: KATA BENDA juga bisa disambung pakai で dengan cara yang sama.",
+    judul: "い/な-けいようし・KB＋くて／で — Gabungan Sifat Setara",
+    sub: "い→くて, な→で buat gabungin 2 sifat yang levelnya setara. KATA BENDA juga bisa disambung pakai で dengan cara yang sama.",
     refFrom: { tema: "Hari 20 (Bab 8)", judul: "〜くて (い-keiyoushi) ／ 〜で (な-keiyoushi) — Menghubungkan 2 Kata Sifat Setara" },
     items: [
       {
@@ -10176,16 +10644,16 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 5",
-    judul: "〜けど — Pertentangan 2 Kalimat (Pengulangan dari Hari 29, Bab 11)",
-    sub: "Pola ini udah lengkap dibahas di Hari 29 (Bab 11), tab Buku Utama — cara nempel けど ke tiap jenis kata (kata kerja, い-keiyoushi, な-keiyoushi, KB) sama persis.",
+    judul: "〜けど — Pertentangan 2 Kalimat",
+    sub: "けど nempel ke tiap jenis kata (kata kerja, い-keiyoushi, な-keiyoushi, KB) buat nunjukin pertentangan antara 2 kalimat.",
     refFrom: { tema: "Hari 29 (Bab 11)", judul: "けど (..., tapi ~ — Ragam Akrab)" },
     items: []
   },
   {
     buku: "irodori",
     tema: "Irodori Bab 5",
-    judul: "動詞（辞書形）＋ことができます／できません — Kemampuan (Pengulangan dari Hari 26, Bab 10)",
-    sub: "Ini versi KATA KERJA dari pola できます yang sebelumnya cuma dipakai buat kata benda langsung (〔KB〕ができます). Sama persis kayak yang udah lengkap di Hari 26 (Bab 10), tab Buku Utama — item pertama di bawah DIPANGGIL LANGSUNG dari sana.",
+    judul: "動詞（辞書形）＋ことができます／できません — Kemampuan",
+    sub: "Versi KATA KERJA dari pola できます yang sebelumnya cuma dipakai buat kata benda langsung (〔KB〕ができます).",
     refFrom: { tema: "Hari 26 (Bab 10)", judul: "Review: 動詞（辞書形）ことが　できます／できません" },
     items: [
       {
@@ -10206,7 +10674,7 @@ const BUNPOU = [
     buku: "irodori",
     tema: "Irodori Bab 6",
     judul: "動詞（ます-stem）＋たいんですが… — Menyatakan Keinginan Sambil Minta Bantuan",
-    sub: "Ini gabungan 2 hal yang udah dipelajari: たい (Hari?, ingin melakukan sesuatu) + んですが (menjelaskan latar belakang/situasi, lalu 'menggantung' di が biar lawan bicara nanggepin/bantuin). Fungsinya BUKAN buat nyuruh langsung, tapi cara SOPAN buka obrolan buat minta tolong/petunjuk, biasa dipakai pas nanya ke orang asing/staf (misal minta diarahin jalan).",
+    sub: "Gabungan たい (ingin melakukan sesuatu) + んですが (menjelaskan latar belakang/situasi, lalu 'menggantung' di が biar lawan bicara nanggepin/bantuin). Fungsinya BUKAN buat nyuruh langsung, tapi cara SOPAN buka obrolan buat minta tolong/petunjuk, biasa dipakai pas nanya ke orang asing/staf (misal minta diarahin jalan).",
     items: [
       {
         pola: "〔動詞ますstem〕たいんですが…",
@@ -10223,8 +10691,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 6",
-    judul: "動詞1（て形）、動詞2 — Rangkaian Petunjuk Arah (Pengulangan dari Hari 23, Bab 9)",
-    sub: "Pola te-form buat nyambungin kata kerja berurutan ini udah dipelajari lengkap di Hari 23 (Bab 9), tab Buku Utama — item pertama di bawah DIPANGGIL LANGSUNG dari sana. Di Irodori bab ini, dipakai khusus buat michiannai (kasih petunjuk arah), nyambungin gerakan-gerakan berurutan kayak まがって、まっすぐ行って dst (kosakata arah ada di Hari 16/Bab 6).",
+    judul: "動詞1（て形）、動詞2 — Rangkaian Petunjuk Arah",
+    sub: "Pola te-form buat nyambungin kata kerja berurutan, dipakai khusus buat michiannai (kasih petunjuk arah) — nyambungin gerakan-gerakan berurutan kayak まがって、まっすぐ行って dst.",
     refFrom: { tema: "Hari 23 (Bab 9)", judul: "動詞（てけい）、動詞（てけい）、〜ます (Menceritakan Rangkaian Kegiatan dalam 1 Periode)" },
     items: [
       {
@@ -10261,8 +10729,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 7",
-    judul: "〜はどうですか — Memberi Saran (Pengulangan dari Hari 16, Bab 6)",
-    sub: "Fungsi 'ngusulin pilihan/saran' ini udah lengkap di Hari 16 (Bab 6), tab Buku Utama, bareng partikel よ yang sering dipasangin bareng — item di bawah DIPANGGIL LANGSUNG dari sana. PENTING: beda dari 〜はどうですか di Hari 11 yang fungsinya nanya KESAN/PENDAPAT (bukan ngusulin).",
+    judul: "〜はどうですか — Memberi Saran",
+    sub: "'Ngusulin pilihan/saran' ke lawan bicara, sering dipasangin bareng partikel よ. PENTING: beda dari 〜はどうですか yang fungsinya nanya KESAN/PENDAPAT (bukan ngusulin).",
     refFrom: { tema: "Hari 16 (Bab 6)", judul: "partikel よ ＋ 〜はどうですか (Menegaskan info baru & mengajukan usulan)" },
     items: []
   },
@@ -10316,24 +10784,24 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 8",
-    judul: "もう＋〔動詞た形〕 — \"Sudah ~\" (Pengulangan dari Materi Tambahan)",
-    sub: "Pola ini udah lengkap di tema Materi Tambahan, tab Buku Utama — item di bawah DIPANGGIL LANGSUNG dari sana, udah termasuk contoh jawaban 'sudah' (もうしました) dan 'belum' (まだです).",
+    judul: "もう＋〔動詞た形〕 — \"Sudah ~\"",
+    sub: "Nyatain kegiatan yang udah selesai. Jawaban positifnya もうしました (sudah), jawaban negatifnya まだです (belum).",
     refFrom: { tema: "Materi Tambahan", judul: "もう＋〔動詞た形〕 (Sudah)" },
     items: []
   },
   {
     buku: "irodori",
     tema: "Irodori Bab 8",
-    judul: "動詞（た形）＋ことがあります — \"Pernah ~\" (Pengulangan dari Hari 32, Bab 13)",
-    sub: "Pola ini udah lengkap dibahas di Hari 32 (Bab 13), tab Buku Utama, buat nyeritain pengalaman yang pernah dilakukan — item di bawah DIPANGGIL LANGSUNG dari sana.",
+    judul: "動詞（た形）＋ことがあります — \"Pernah ~\"",
+    sub: "Nyeritain pengalaman yang pernah dilakukan, terlepas dari kapan persisnya.",
     refFrom: { tema: "Hari 32 (Bab 13)", judul: "〜たことがあります (Pernah ~)" },
     items: []
   },
   {
     buku: "irodori",
     tema: "Irodori Bab 8",
-    judul: "動詞（ます-stem）＋に行きませんか — Mengajak Pergi Melakukan Sesuatu (Pengulangan dari Hari 15, Bab 6)",
-    sub: "Bentuk dasar ajakan sopan ～ませんか ini udah lengkap di Hari 15 (Bab 6), tab Buku Utama — item di bawah DIPANGGIL LANGSUNG dari sana. Tambahan di Irodori: nempelin に行きませんか biar jelas ngajak PERGI ke suatu tempat buat NGELAKUIN aktivitas tertentu.",
+    judul: "動詞（ます-stem）＋に行きませんか — Mengajak Pergi Melakukan Sesuatu",
+    sub: "Bentuk dasar ajakan sopan ～ませんか, ditempelin に行きませんか biar jelas ngajak PERGI ke suatu tempat buat NGELAKUIN aktivitas tertentu.",
     refFrom: { tema: "Hari 15 (Bab 6)", judul: "動詞ます-stem＋ませんか (Mengajak secara sopan)" },
     items: [
       {
@@ -10376,8 +10844,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 8",
-    judul: "動詞（ます-stem）＋たいんですが… — Menyatakan Keinginan (Pengulangan dari Irodori Bab 6)",
-    sub: "Pola ini persis sama yang udah dicatet di Irodori Bab 6 — kombinasi たい (ingin) + んですが (ngasih konteks, 'menggantung' biar lawan bicara nanggepin). Item di bawah DIPANGGIL LANGSUNG dari sana.",
+    judul: "動詞（ます-stem）＋たいんですが… — Menyatakan Keinginan",
+    sub: "Kombinasi たい (ingin) + んですが (ngasih konteks, 'menggantung' biar lawan bicara nanggepin) — cara sopan buka obrolan buat minta tolong/petunjuk.",
     refFrom: { tema: "Irodori Bab 6", judul: "動詞（ます-stem）＋たいんですが… — Menyatakan Keinginan Sambil Minta Bantuan" },
     items: []
   },
@@ -10386,8 +10854,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 9",
-    judul: "〔KB〕で — Alat/Cara yang Dipakai (Pengulangan dari Hari 9, Bab 4)",
-    sub: "Fungsi で sebagai penanda ALAT/CARA ini udah lengkap di Hari 9 (Bab 4), tab Buku Utama, meski contohnya di situ fokus ke kendaraan (naik apa) — item di bawah DIPANGGIL LANGSUNG dari sana. Di Irodori, cakupannya lebih luas: alat/cara APAPUN, gak cuma kendaraan.",
+    judul: "〔KB〕で — Alat/Cara yang Dipakai",
+    sub: "で sebagai penanda ALAT/CARA — cakupannya luas, alat/cara APAPUN, gak cuma kendaraan.",
     refFrom: { tema: "Hari 9 (Bab 4)", judul: "〔のりもの〕で　〔動詞〕 (Naik apa — partikel で cara/alat)" },
     items: [
       {
@@ -10525,16 +10993,16 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 10",
-    judul: "〔期間〕に〔回数〕 — Frekuensi dalam Suatu Periode (Pengulangan dari Hari 22, Bab 9)",
-    sub: "Pola ini udah lengkap dibahas di Hari 22 (Bab 9), tab Buku Utama, buat nyatain seberapa sering suatu kegiatan dilakukan dalam periode tertentu — item di bawah DIPANGGIL LANGSUNG dari sana.",
+    judul: "〔期間〕に〔回数〕 — Frekuensi dalam Suatu Periode",
+    sub: "Nyatain seberapa sering suatu kegiatan dilakukan dalam periode tertentu.",
     refFrom: { tema: "Hari 22 (Bab 9)", judul: "〔きかん〕に　〔かいすう〕（ぐらい）　動詞 (Frekuensi dalam Suatu Periode)" },
     items: []
   },
   {
     buku: "irodori",
     tema: "Irodori Bab 10",
-    judul: "〔動詞ます-stem〕ましょうか — \"Maukah Saya...\" (Pengulangan dari Hari 19, Bab 8)",
-    sub: "Pola ini udah lengkap dibahas di Hari 19 (Bab 8), tab Buku Utama — item di bawah DIPANGGIL LANGSUNG dari sana. Inget: ましょうか beda dari ませんか (ngajak bareng) — ini lebih ke NAWARIN BANTUAN atau ngajak dengan lebih halus.",
+    judul: "〔動詞ます-stem〕ましょうか — \"Maukah Saya...\"",
+    sub: "ましょうか beda dari ませんか (ngajak bareng) — ini lebih ke NAWARIN BANTUAN atau ngajak dengan lebih halus.",
     refFrom: { tema: "Hari 19 (Bab 8)", judul: "〜ましょうか (Mengajak atau Menawarkan Bantuan)" },
     items: []
   },
@@ -10583,8 +11051,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 10",
-    judul: "〜とき — Waktu Terjadinya Sesuatu, per Jenis Kata (Pengulangan dari Hari 28, Bab 11)",
-    sub: "Pola とき (KB+の, KS-い langsung, KS-な+な, kata kerja 4 bentuk) ini udah LENGKAP BANGET dibahas di Hari 28 (Bab 11), tab Buku Utama — item di bawah DIPANGGIL LANGSUNG dari sana, udah termasuk semua 4 jenis kata yang kamu sebutin (KB, KS-な, KS-い, kata kerja bentuk biasa).",
+    judul: "〜とき — Waktu Terjadinya Sesuatu, per Jenis Kata",
+    sub: "Pola とき (KB+の, KS-い langsung, KS-な+な, kata kerja 4 bentuk) buat nunjuk waktu/saat terjadinya sesuatu.",
     refFrom: { tema: "Hari 28 (Bab 11)", judul: "〜とき (Waktu/Saat Terjadinya Sesuatu)" },
     items: []
   },
@@ -10622,8 +11090,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 11",
-    judul: "どっち／どれ・のほうがいいです — Membandingkan Pilihan (Pengulangan dari Hari 15, Bab 6)",
-    sub: "Pola どちら（どっち）／のほうが buat bandingin 2 pilihan, dan どれ buat milih dari 3+ pilihan, udah lengkap di Hari 15 (Bab 6), tab Buku Utama — item di bawah DIPANGGIL LANGSUNG dari sana.",
+    judul: "どっち／どれ・のほうがいいです — Membandingkan Pilihan",
+    sub: "どちら（どっち）／のほうが buat bandingin 2 pilihan, どれ buat milih dari 3+ pilihan.",
     refFrom: { tema: "Hari 15 (Bab 6)", judul: "〔KB1〕と　〔KB2〕と、どちら〜／〜のほうが〜／どちらも〜 (Membandingkan dua hal)" },
     items: [
       {
@@ -10640,8 +11108,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 11",
-    judul: "〔KB〕でもいいです — \"[KB] Aja Juga Boleh\" (Perluasan dari Irodori Bab 7)",
-    sub: "Versi PERNYATAAN dari pola でもいいですか yang udah dicatet di Irodori Bab 7 (versi PERTANYAAN, nawarin alternatif) — item di bawah DIPANGGIL LANGSUNG dari sana. Di sini dipakai buat JAWAB kalau apapun/di manapun/siapapun gapapa ('terserah').",
+    judul: "〔KB〕でもいいです — \"[KB] Aja Juga Boleh\"",
+    sub: "Versi PERNYATAAN dari pola でもいいですか (versi PERTANYAAN, nawarin alternatif). Di sini dipakai buat JAWAB kalau apapun/di manapun/siapapun gapapa ('terserah').",
     refFrom: { tema: "Irodori Bab 7", judul: "〜でもいいですか — Mengusulkan Alternatif Lain" },
     items: [
       {
@@ -10706,8 +11174,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 12",
-    judul: "い/な-けいようし＋くて／で〜 — Alasan/Perasaan (Perluasan dari Irodori Bab 7)",
-    sub: "Prinsip で／て buat sebab-akibat ini udah dibahas di Irodori Bab 7 (pakai KB+で dan kata kerja+て) — item di bawah DIPANGGIL LANGSUNG dari sana. Di bab ini, dipraktekin lagi khusus pakai KATA SIFAT sebagai sebabnya: い-keiyoushi buang い + くて, な-keiyoushi langsung + で.",
+    judul: "い/な-けいようし＋くて／で〜 — Alasan/Perasaan",
+    sub: "で／て buat sebab-akibat, dipraktekin pakai KATA SIFAT sebagai sebabnya: い-keiyoushi buang い + くて, な-keiyoushi langsung + で.",
     refFrom: { tema: "Irodori Bab 7", judul: "〔KB〕で／〔動詞て形〕、〔akibat〕 — Sebab-Akibat (Beda dari から／ので)" },
     items: [
       {
@@ -10725,8 +11193,8 @@ const BUNPOU = [
   {
     buku: "irodori",
     tema: "Irodori Bab 12",
-    judul: "〔動詞て形〕みます — Mencoba (Pengulangan dari Irodori Bab 10)",
-    sub: "Ini pola yang SAMA PERSIS kayak yang udah dicatet di Irodori Bab 10 (poin てみる) — item di bawah DIPANGGIL LANGSUNG dari sana, ditambah beberapa contoh baru.",
+    judul: "〔動詞て形〕みます — Mencoba",
+    sub: "Nyatain nyoba ngelakuin sesuatu, buat tau hasilnya gimana.",
     refFrom: { tema: "Irodori Bab 10", judul: "〔動詞て形〕みる — Mencoba Melakukan Sesuatu" },
     items: [
       {

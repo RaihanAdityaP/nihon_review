@@ -22,7 +22,7 @@
   <!-- desktop nav -->
   <nav id="desktopNav">
     <button class="active" onclick="showPage('materi',this)">教材</button>
-    <button onclick="showPage('kanji',this)">漢字</button>
+    <button onclick="showPage('moji',this)">文字</button>
     <button onclick="showPage('katakerja',this)">動詞</button>
     <button onclick="showPage('partikel',this)">助詞</button>
     <button onclick="showPage('buku',this)">教科書</button>
@@ -49,7 +49,7 @@
   <div class="drawer-logo">日本語復習<small>· review</small></div>
   <nav class="drawer-nav">
     <button class="active" onclick="showPage('materi',this,true)">教材</button>
-    <button onclick="showPage('kanji',this,true)">漢字</button>
+    <button onclick="showPage('moji',this,true)">文字</button>
     <button onclick="showPage('katakerja',this,true)">動詞</button>
     <button onclick="showPage('partikel',this,true)">助詞</button>
     <button onclick="showPage('buku',this,true)">教科書</button>
@@ -70,10 +70,10 @@
 
 <main>
 
-  <!-- MATERI (Kamus Terpadu — Hiragana/Katakana/Kotoba/Kata Sifat/Counter) -->
+  <!-- MATERI (Kamus Terpadu — Kotoba/Kata Sifat/Counter) -->
   <div id="pageMateri" class="page active">
     <div class="sec-title">Materi</div>
-    <div class="sec-sub">Cari kana, romaji, kanji, atau arti — lintas semua kategori. (Kanji &amp; Kata Kerja ada menu sendiri, lihat tab 漢字 dan 動詞)</div>
+    <div class="sec-sub">Cari kana, romaji, kanji, atau arti — lintas semua kategori. (Hiragana/Katakana/Kanji &amp; Kata Kerja ada menu sendiri, lihat tab 文字 dan 動詞)</div>
     <div class="kamus-search-wrap">
       <input type="text" id="kamusSearchInput" class="kamus-search" placeholder="Cari kana, romaji, kanji, atau arti..." oninput="renderKamusResults(true)">
     </div>
@@ -82,15 +82,17 @@
     <div id="kamusResults"></div>
   </div>
 
-  <!-- KANJI (halaman sendiri) -->
-  <div id="pageKanji" class="page">
-    <div class="sec-title">Kanji</div>
-    <div class="sec-sub">Cari kanji, cara baca (onyomi/kunyomi), atau arti.</div>
+  <!-- MOJI (halaman sendiri — Hiragana/Katakana/Kanji digabung lewat tab) -->
+  <div id="pageMoji" class="page">
+    <div class="sec-title">Moji</div>
+    <div class="sec-sub">Hiragana, katakana, dan kanji dalam satu tempat. Cari karakter, cara baca, atau arti.</div>
+    <div class="cat-tabs" id="mojiTabs"></div>
+    <div class="kamus-chips" id="mojiKanjiChips" style="display:none"></div>
     <div class="kamus-search-wrap">
-      <input type="text" id="kanjiSearchInput" class="kamus-search" placeholder="Cari kanji, cara baca, atau arti..." oninput="renderKanjiPage(true)">
+      <input type="text" id="mojiSearchInput" class="kamus-search" placeholder="Cari karakter, cara baca, atau arti..." oninput="renderMojiResults(true)">
     </div>
-    <div class="kamus-count" id="kanjiCount"></div>
-    <div id="kanjiResults"></div>
+    <div class="kamus-count" id="mojiCount"></div>
+    <div id="mojiResults"></div>
   </div>
 
   <!-- KATA KERJA (halaman sendiri) -->

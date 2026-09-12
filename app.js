@@ -1717,15 +1717,14 @@ function backWSetup() {
 // muncul lagi sebagai chip/kategori di pencarian terpadu Materi ini.
 const KAMUS_CATS = [
   { key: 'Semua', label: 'Semua' },
-  { key: 'Hiragana', label: 'Hiragana' },
-  { key: 'Katakana', label: 'Katakana' },
   { key: 'Kotoba', label: 'Kotoba (Kata Benda)' },
   { key: 'Kata Sifat', label: 'Kata Sifat' },
   { key: 'Counter', label: 'Kata Bantu Bilangan' },
 ];
-// Sumber yang masih ikut ke-search di chip "Semua" pada Materi — Kanji &
-// Kata Kerja sengaja dikecualikan karena sudah pindah ke halaman sendiri.
-const KAMUS_VISIBLE_SOURCES = new Set(['Hiragana', 'Katakana', 'Kotoba', 'Kata Sifat', 'Counter']);
+// Sumber yang masih ikut ke-search di chip "Semua" pada Materi — Hiragana,
+// Katakana, Kanji & Kata Kerja sengaja dikecualikan karena sudah pindah ke
+// halaman sendiri (Hiragana/Katakana/Kanji digabung jadi tab 文字 Moji).
+const KAMUS_VISIBLE_SOURCES = new Set(['Kotoba', 'Kata Sifat', 'Counter']);
 let kamusActiveCat = 'Semua';
 let KAMUS_ALL = null;
 let KAMUS_HOMOFON = null;
@@ -1798,7 +1797,7 @@ function buildKamusIndex() {
     });
   });
   KANJI.forEach(k => {
-    KAMUS_ALL.push({ source: 'Kanji', group: k.tema, kana: (k.kunyomi && k.kunyomi[0]) || (k.onyomi && k.onyomi[0]) || '', romaji: '', kanji: k.char, arti: k.arti, note: k.n || '', onyomi: k.onyomi || [], kunyomi: k.kunyomi || [], kotoba: k.kotoba || [] });
+    KAMUS_ALL.push({ source: 'Kanji', group: k.tema, kana: (k.kunyomi && k.kunyomi[0]) || (k.onyomi && k.onyomi[0]) || '', romaji: '', kanji: k.char, arti: k.arti, note: k.n || '', onyomi: k.onyomi || [], kunyomi: k.kunyomi || [], kotoba: k.kotoba || [], sumber: k.sumber || 'modul' });
   });
   KAMUS_HOMOFON = new Map();
   KAMUS_ALL.forEach(w => {
@@ -1942,36 +1941,77 @@ function renderKamusResults(resetPage) {
 // ─────────────────────────────────────────────────────
 // KANJI — halaman sendiri (dipisah dari pencarian terpadu Materi)
 // ─────────────────────────────────────────────────────
-let kanjiPage = 1;
-const KANJI_PAGE_SIZE = 40;
-function kanjiGoPage(p) {
-  kanjiPage = p;
-  renderKanjiPage();
-  document.getElementById('kanjiResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+// ─────────────────────────────────────────────────────
+// MOJI — halaman sendiri (Hiragana / Katakana / Kanji digabung jadi satu,
+// dipisah lewat tab, dipisahkan dari pencarian terpadu Materi).
+// ─────────────────────────────────────────────────────
+const MOJI_TABS = [
+  { key: 'hiragana', label: 'Hiragana' },
+  { key: 'katakana', label: 'Katakana' },
+  { key: 'kanji',    label: 'Kanji' }
+];
+const MOJI_SOURCE = { hiragana: 'Hiragana', katakana: 'Katakana', kanji: 'Kanji' };
+let mojiActiveTab = 'hiragana';
+let mojiPage = 1;
+const MOJI_PAGE_SIZE = 40;
+// Sub-filter khusus tab Kanji: bedain kanji dari modul (Hari X) vs dari buku Irodori.
+const MOJI_KANJI_SRC = [
+  { key: 'semua', label: 'Semua' },
+  { key: 'modul', label: 'Modul' },
+  { key: 'irodori', label: 'Irodori' }
+];
+let mojiKanjiSrc = 'semua';
+function renderMojiKanjiChips() {
+  const el = document.getElementById('mojiKanjiChips');
+  if (!el) return;
+  if (mojiActiveTab !== 'kanji') { el.style.display = 'none'; return; }
+  el.style.display = 'flex';
+  el.innerHTML = MOJI_KANJI_SRC.map(c => `<div class="kamus-chip ${c.key === mojiKanjiSrc ? 'active' : ''}" data-c="${c.key}">${c.label}</div>`).join('');
+  el.querySelectorAll('.kamus-chip').forEach(c => c.onclick = () => { mojiKanjiSrc = c.dataset.c; renderMojiKanjiChips(); renderMojiResults(true); });
 }
-function kanjiToggleJump(el, totalPages) { pagerToggleJump(el, totalPages, 'kanjiGoPage', 'renderKanjiPage'); }
-function renderKanjiPage(resetPage) {
+function renderMojiTabs() {
+  const el = document.getElementById('mojiTabs');
+  if (!el) return;
+  el.innerHTML = MOJI_TABS.map(t => `<button class="cat-btn${t.key === mojiActiveTab ? ' active' : ''}" onclick="switchMojiTab('${t.key}', this)">${t.label}</button>`).join('');
+  renderMojiKanjiChips();
+}
+function switchMojiTab(key, btn) {
+  mojiActiveTab = key;
+  document.querySelectorAll('#mojiTabs .cat-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderMojiKanjiChips();
+  renderMojiResults(true);
+}
+function mojiGoPage(p) {
+  mojiPage = p;
+  renderMojiResults();
+  document.getElementById('mojiResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function mojiToggleJump(el, totalPages) { pagerToggleJump(el, totalPages, 'mojiGoPage', 'renderMojiResults'); }
+function renderMojiResults(resetPage) {
   buildKamusIndex();
-  if (resetPage) kanjiPage = 1;
-  const qEl = document.getElementById('kanjiSearchInput');
+  if (resetPage) mojiPage = 1;
+  const src = MOJI_SOURCE[mojiActiveTab];
+  const qEl = document.getElementById('mojiSearchInput');
   const q = qEl ? qEl.value.trim().toLowerCase() : '';
   const filtered = KAMUS_ALL.filter(w => {
-    if (w.source !== 'Kanji') return false;
+    if (w.source !== src) return false;
+    if (mojiActiveTab === 'kanji' && mojiKanjiSrc !== 'semua' && w.sumber !== mojiKanjiSrc) return false;
     if (!q) return true;
     return (w.kana || '').toLowerCase().includes(q) || (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q) || (w.group || '').toLowerCase().includes(q) ||
       (w.onyomi || []).some(x => x.includes(q)) || (w.kunyomi || []).some(x => x.includes(q));
   });
-  const totalPages = Math.max(1, Math.ceil(filtered.length / KANJI_PAGE_SIZE));
-  if (kanjiPage > totalPages) kanjiPage = totalPages;
-  const start = (kanjiPage - 1) * KANJI_PAGE_SIZE;
-  const pageItems = filtered.slice(start, start + KANJI_PAGE_SIZE);
+  const totalPages = Math.max(1, Math.ceil(filtered.length / MOJI_PAGE_SIZE));
+  if (mojiPage > totalPages) mojiPage = totalPages;
+  const start = (mojiPage - 1) * MOJI_PAGE_SIZE;
+  const pageItems = filtered.slice(start, start + MOJI_PAGE_SIZE);
 
-  const countEl = document.getElementById('kanjiCount');
-  if (countEl) countEl.innerHTML = `<span>HASIL</span><span>${filtered.length} kanji</span>`;
-  const el = document.getElementById('kanjiResults');
+  const countEl = document.getElementById('mojiCount');
+  if (countEl) countEl.innerHTML = `<span>HASIL</span><span>${filtered.length} ${mojiActiveTab}</span>`;
+  const el = document.getElementById('mojiResults');
   if (!el) return;
   if (!filtered.length) { el.innerHTML = `<div class="kamus-empty">Gak ketemu. Coba kata kunci lain.</div>`; return; }
-  el.innerHTML = kamusItemsHtml(pageItems) + pagerHtml(kanjiPage, totalPages, 'kanjiGoPage', 'kanjiToggleJump');
+  el.innerHTML = kamusItemsHtml(pageItems) + pagerHtml(mojiPage, totalPages, 'mojiGoPage', 'mojiToggleJump');
   bindKamusItemClicks(el);
 }
 
@@ -2236,7 +2276,8 @@ renderPartikel();
 renderPartikelAdv();
 renderKamusChips();
 renderKamusResults();
-renderKanjiPage();
+renderMojiTabs();
+renderMojiResults();
 renderKataKerjaTabs();
 renderKataKerjaResults();
 renderBabList();
