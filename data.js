@@ -5439,7 +5439,7 @@ const KANJI = [
   // IRODORI — sumber: "irodori" (dipisah dari kanji modul lewat filter di tab Moji)
   // ═══════════════════════════════════════════════
   {
-    tema: "Irodori", sumber: "irodori", char: "犬", onyomi: ["ケン"], kunyomi: ["いぬ"], arti: "anjing",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "犬", onyomi: ["ケン"], kunyomi: ["いぬ"], arti: "anjing",
     kotoba: [
       { w: "犬", furi: "いぬ", a: "anjing" },
       { w: "子犬", furi: "こいぬ", a: "anak anjing" },
@@ -5448,7 +5448,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "家", onyomi: ["カ", "ケ"], kunyomi: ["いえ", "うち"], arti: "rumah, keluarga",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "家", onyomi: ["カ", "ケ"], kunyomi: ["いえ", "うち"], arti: "rumah, keluarga",
     kotoba: [
       { w: "家", furi: "いえ", a: "rumah" },
       { w: "作家", furi: "さっか", a: "penulis, pengarang" },
@@ -5457,7 +5457,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "方", onyomi: ["ホウ"], kunyomi: ["かた"], arti: "arah, cara, orang (sebutan sopan)",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "方", onyomi: ["ホウ"], kunyomi: ["かた"], arti: "arah, cara, orang (sebutan sopan)",
     kotoba: [
       { w: "方", furi: "かた", a: "orang (sebutan sopan)" },
       { w: "夕方", furi: "ゆうがた", a: "sore hari" },
@@ -5466,7 +5466,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "英", onyomi: ["エイ"], kunyomi: [], arti: "Inggris, unggul",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "英", onyomi: ["エイ"], kunyomi: [], arti: "Inggris, unggul",
     kotoba: [
       { w: "英語", furi: "えいご", a: "bahasa Inggris" },
       { w: "英会話", furi: "えいかいわ", a: "percakapan bahasa Inggris" },
@@ -5475,7 +5475,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "楽", onyomi: ["ガク", "ラク"], kunyomi: ["たの.しい"], arti: "senang, musik",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "楽", onyomi: ["ガク", "ラク"], kunyomi: ["たの.しい"], arti: "senang, musik",
     kotoba: [
       { w: "楽しい", furi: "たのしい", a: "menyenangkan" },
       { w: "楽", furi: "らく", a: "santai, mudah" },
@@ -5483,7 +5483,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "習", onyomi: ["シュウ"], kunyomi: ["なら.う"], arti: "belajar, berlatih",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "習", onyomi: ["シュウ"], kunyomi: ["なら.う"], arti: "belajar, berlatih",
     kotoba: [
       { w: "習う", furi: "ならう", a: "belajar" },
       { w: "練習", furi: "れんしゅう", a: "latihan" },
@@ -5491,7 +5491,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "季", onyomi: ["キ"], kunyomi: [], arti: "musim",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "季", onyomi: ["キ"], kunyomi: [], arti: "musim",
     kotoba: [
       { w: "季節", furi: "きせつ", a: "musim" },
       { w: "四季", furi: "しき", a: "empat musim" },
@@ -5500,7 +5500,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "節", onyomi: ["セツ", "セキ"], kunyomi: ["ふし"], arti: "ruas, musim, hemat",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "節", onyomi: ["セツ", "セキ"], kunyomi: ["ふし"], arti: "ruas, musim, hemat",
     kotoba: [
       { w: "季節", furi: "きせつ", a: "musim" },
       { w: "節分", furi: "せつぶん", a: "Setsubun (hari pergantian musim)" },
@@ -5508,7 +5508,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "春", onyomi: ["シュン"], kunyomi: ["はる"], arti: "musim semi",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "春", onyomi: ["シュン"], kunyomi: ["はる"], arti: "musim semi",
     kotoba: [
       { w: "春分", furi: "しゅんぶん", a: "ekuinoks musim semi" },
       { w: "春", furi: "はる", a: "musim semi" },
@@ -5516,7 +5516,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "夏", onyomi: ["カ", "ガ"], kunyomi: ["なつ"], arti: "musim panas",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "夏", onyomi: ["カ", "ガ"], kunyomi: ["なつ"], arti: "musim panas",
     kotoba: [
       { w: "夏", furi: "なつ", a: "musim panas" },
       { w: "夏休み", furi: "なつやすみ", a: "libur musim panas" },
@@ -5524,49 +5524,49 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "秋", onyomi: ["シュウ"], kunyomi: ["あき"], arti: "musim gugur",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "秋", onyomi: ["シュウ"], kunyomi: ["あき"], arti: "musim gugur",
     kotoba: [
       { w: "秋分", furi: "しゅうぶん", a: "ekuinoks musim gugur" },
       { w: "秋", furi: "あき", a: "musim gugur" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "冬", onyomi: ["トウ"], kunyomi: ["ふゆ"], arti: "musim dingin",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "冬", onyomi: ["トウ"], kunyomi: ["ふゆ"], arti: "musim dingin",
     kotoba: [
       { w: "冬", furi: "ふゆ", a: "musim dingin" },
       { w: "冬至", furi: "とうじ", a: "titik balik matahari musim dingin (winter solstice)" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "花", onyomi: ["カ"], kunyomi: ["はな"], arti: "bunga",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "花", onyomi: ["カ"], kunyomi: ["はな"], arti: "bunga",
     kotoba: [
       { w: "花瓶", furi: "かびん", a: "vas bunga" },
       { w: "花", furi: "はな", a: "bunga" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "同", onyomi: ["ドウ"], kunyomi: ["おな.じ"], arti: "sama",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "同", onyomi: ["ドウ"], kunyomi: ["おな.じ"], arti: "sama",
     kotoba: [
       { w: "同日", furi: "どうじつ", a: "hari yang sama" },
       { w: "同じ", furi: "おなじ", a: "sama" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "暑", onyomi: ["ショ"], kunyomi: ["あつ.い"], arti: "panas (cuaca)",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "暑", onyomi: ["ショ"], kunyomi: ["あつ.い"], arti: "panas (cuaca)",
     kotoba: [
       { w: "暑い", furi: "あつい", a: "panas" },
       { w: "蒸し暑い", furi: "むしあつい", a: "panas dan lembap" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "寒", onyomi: ["カン"], kunyomi: ["さむ.い"], arti: "dingin (cuaca)",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "寒", onyomi: ["カン"], kunyomi: ["さむ.い"], arti: "dingin (cuaca)",
     kotoba: [
       { w: "寒い", furi: "さむい", a: "dingin" },
       { w: "寒天", furi: "かんてん", a: "agar-agar (kanten)" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "晴", onyomi: ["セイ"], kunyomi: ["は.れ", "は.れる"], arti: "cerah",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "晴", onyomi: ["セイ"], kunyomi: ["は.れ", "は.れる"], arti: "cerah",
     kotoba: [
       { w: "晴れ", furi: "はれ", a: "cerah" },
       { w: "晴れる", furi: "はれる", a: "menjadi cerah" },
@@ -5576,7 +5576,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "雪", onyomi: ["セツ"], kunyomi: ["ゆき"], arti: "salju",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "雪", onyomi: ["セツ"], kunyomi: ["ゆき"], arti: "salju",
     kotoba: [
       { w: "雪", furi: "ゆき", a: "salju" },
       { w: "初雪", furi: "はつゆき", a: "salju pertama" },
@@ -5585,7 +5585,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "風", onyomi: ["フウ", "フ"], kunyomi: ["かぜ"], arti: "angin",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "風", onyomi: ["フウ", "フ"], kunyomi: ["かぜ"], arti: "angin",
     kotoba: [
       { w: "風", furi: "かぜ", a: "angin" },
       { w: "台風", furi: "たいふう", a: "topan" },
@@ -5595,7 +5595,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "昨", onyomi: ["サク"], kunyomi: [], arti: "sebelumnya, yang lalu",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "昨", onyomi: ["サク"], kunyomi: [], arti: "sebelumnya, yang lalu",
     kotoba: [
       { w: "昨日", furi: "きのう", a: "kemarin" },
       { w: "一昨日", furi: "おととい", a: "kemarin lusa" },
@@ -5604,7 +5604,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "強", onyomi: ["キョウ", "ゴウ"], kunyomi: ["つよ.い"], arti: "kuat",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "強", onyomi: ["キョウ", "ゴウ"], kunyomi: ["つよ.い"], arti: "kuat",
     kotoba: [
       { w: "強い", furi: "つよい", a: "kuat" },
       { w: "勉強する", furi: "べんきょうする", a: "belajar" },
@@ -5613,7 +5613,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "和", onyomi: ["ワ"], kunyomi: ["やわ.らぐ"], arti: "damai, Jepang (gaya)",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "和", onyomi: ["ワ"], kunyomi: ["やわ.らぐ"], arti: "damai, Jepang (gaya)",
     kotoba: [
       { w: "平和", furi: "へいわ", a: "perdamaian" },
       { w: "和食", furi: "わしょく", a: "masakan Jepang" },
@@ -5622,7 +5622,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "事", onyomi: ["ジ", "シ"], kunyomi: ["こと"], arti: "hal, perkara",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "事", onyomi: ["ジ", "シ"], kunyomi: ["こと"], arti: "hal, perkara",
     kotoba: [
       { w: "事", furi: "こと", a: "hal" },
       { w: "食事", furi: "しょくじ", a: "makan" },
@@ -5632,7 +5632,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "店", onyomi: ["テン"], kunyomi: ["みせ"], arti: "toko",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "店", onyomi: ["テン"], kunyomi: ["みせ"], arti: "toko",
     kotoba: [
       { w: "店", furi: "みせ", a: "toko" },
       { w: "店員", furi: "てんいん", a: "pegawai toko" },
@@ -5642,7 +5642,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "物", onyomi: ["ブツ", "モツ"], kunyomi: ["もの"], arti: "barang, benda",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "物", onyomi: ["ブツ", "モツ"], kunyomi: ["もの"], arti: "barang, benda",
     kotoba: [
       { w: "物", furi: "もの", a: "barang, benda" },
       { w: "食べ物", furi: "たべもの", a: "makanan" },
@@ -5653,7 +5653,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "館", onyomi: ["カン"], kunyomi: ["やかた"], arti: "gedung, aula",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "館", onyomi: ["カン"], kunyomi: ["やかた"], arti: "gedung, aula",
     kotoba: [
       { w: "博物館", furi: "はくぶつかん", a: "museum" },
       { w: "体育館", furi: "たいいくかん", a: "gedung olahraga" },
@@ -5662,7 +5662,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "動", onyomi: ["ドウ"], kunyomi: ["うご.く", "うご.かす"], arti: "bergerak",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "動", onyomi: ["ドウ"], kunyomi: ["うご.く", "うご.かす"], arti: "bergerak",
     kotoba: [
       { w: "動く", furi: "うごく", a: "bergerak" },
       { w: "動かす", furi: "うごかす", a: "menggerakkan" },
@@ -5674,7 +5674,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "試", onyomi: ["シ"], kunyomi: ["ため.す", "こころ.みる"], arti: "mencoba, menguji",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "試", onyomi: ["シ"], kunyomi: ["ため.す", "こころ.みる"], arti: "mencoba, menguji",
     kotoba: [
       { w: "試食", furi: "ししょく", a: "mencoba makan" },
       { w: "試着", furi: "しちゃく", a: "mencoba baju" },
@@ -5684,7 +5684,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "合", onyomi: ["ゴウ"], kunyomi: ["あ.う", "あ.い"], arti: "cocok, gabung",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "合", onyomi: ["ゴウ"], kunyomi: ["あ.う", "あ.い"], arti: "cocok, gabung",
     kotoba: [
       { w: "合う", furi: "あう", a: "cocok, pas" },
       { w: "間に合う", furi: "まにあう", a: "tepat waktu" },
@@ -5694,7 +5694,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "難", onyomi: ["ナン"], kunyomi: ["むずか.しい"], arti: "sulit",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "難", onyomi: ["ナン"], kunyomi: ["むずか.しい"], arti: "sulit",
     kotoba: [
       { w: "難しい", furi: "むずかしい", a: "sulit" },
       { w: "困難", furi: "こんなん", a: "kesulitan" },
@@ -5702,7 +5702,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "登", onyomi: ["ト", "トウ"], kunyomi: ["のぼ.る"], arti: "mendaki, naik",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "登", onyomi: ["ト", "トウ"], kunyomi: ["のぼ.る"], arti: "mendaki, naik",
     kotoba: [
       { w: "登る", furi: "のぼる", a: "mendaki, naik" },
       { w: "登山", furi: "とざん", a: "pendakian gunung" },
@@ -5710,7 +5710,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "茶", onyomi: ["サ"], kunyomi: ["ちゃ"], arti: "teh",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "茶", onyomi: ["サ"], kunyomi: ["ちゃ"], arti: "teh",
     kotoba: [
       { w: "茶", furi: "ちゃ", a: "teh" },
       { w: "茶道", furi: "さどう", a: "upacara minum teh" },
@@ -5719,7 +5719,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "酒", onyomi: ["シュ"], kunyomi: ["さけ", "さか"], arti: "minuman beralkohol",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "酒", onyomi: ["シュ"], kunyomi: ["さけ", "さか"], arti: "minuman beralkohol",
     kotoba: [
       { w: "酒", furi: "さけ", a: "minuman beralkohol" },
       { w: "日本酒", furi: "にほんしゅ", a: "sake Jepang" },
@@ -5728,7 +5728,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "材", onyomi: ["ザイ"], kunyomi: [], arti: "bahan",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "材", onyomi: ["ザイ"], kunyomi: [], arti: "bahan",
     kotoba: [
       { w: "人材", furi: "じんざい", a: "SDM" },
       { w: "材料", furi: "ざいりょう", a: "bahan, material" },
@@ -5736,7 +5736,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "料", onyomi: ["リョウ"], kunyomi: [], arti: "biaya, bahan",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "料", onyomi: ["リョウ"], kunyomi: [], arti: "biaya, bahan",
     kotoba: [
       { w: "無料", furi: "むりょう", a: "gratis" },
       { w: "有料", furi: "ゆうりょう", a: "berbayar" },
@@ -5745,7 +5745,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "野", onyomi: ["ヤ"], kunyomi: ["の"], arti: "ladang, liar",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "野", onyomi: ["ヤ"], kunyomi: ["の"], arti: "ladang, liar",
     kotoba: [
       { w: "野生", furi: "やせい", a: "liar (hewan/tumbuhan)" },
       { w: "野球", furi: "やきゅう", a: "bisbol" },
@@ -5753,7 +5753,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "菜", onyomi: ["サイ"], kunyomi: ["な"], arti: "sayuran",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "菜", onyomi: ["サイ"], kunyomi: ["な"], arti: "sayuran",
     kotoba: [
       { w: "野菜", furi: "やさい", a: "sayuran" },
       { w: "白菜", furi: "はくさい", a: "sawi putih" },
@@ -5761,7 +5761,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "肉", onyomi: ["ニク"], kunyomi: [], arti: "daging",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "肉", onyomi: ["ニク"], kunyomi: [], arti: "daging",
     kotoba: [
       { w: "牛肉", furi: "ぎゅうにく", a: "daging sapi" },
       { w: "肉体", furi: "にくたい", a: "tubuh fisik" },
@@ -5770,7 +5770,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "豚", onyomi: ["トン"], kunyomi: ["ぶた"], arti: "babi",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "豚", onyomi: ["トン"], kunyomi: ["ぶた"], arti: "babi",
     kotoba: [
       { w: "豚肉", furi: "ぶたにく", a: "daging babi" },
       { w: "豚汁", furi: "とんじる", a: "sup miso daging babi" },
@@ -5779,7 +5779,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "皿", onyomi: ["ベイ"], kunyomi: ["さら", "ざら"], arti: "piring",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "皿", onyomi: ["ベイ"], kunyomi: ["さら", "ざら"], arti: "piring",
     kotoba: [
       { w: "お皿", furi: "おさら", a: "piring" },
       { w: "小皿", furi: "こざら", a: "piring kecil" },
@@ -5787,7 +5787,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "持", onyomi: ["ジ"], kunyomi: ["も.つ"], arti: "membawa, memegang",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "持", onyomi: ["ジ"], kunyomi: ["も.つ"], arti: "membawa, memegang",
     kotoba: [
       { w: "持つ", furi: "もつ", a: "membawa" },
       { w: "お金持ち", furi: "おかねもち", a: "orang kaya" },
@@ -5796,70 +5796,70 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "卵", onyomi: ["ラン"], kunyomi: ["たまご"], arti: "telur",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "卵", onyomi: ["ラン"], kunyomi: ["たまご"], arti: "telur",
     kotoba: [
       { w: "生卵", furi: "なまたまご", a: "telur mentah" },
       { w: "卵子", furi: "らんし", a: "sel telur" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "湯", onyomi: ["トウ"], kunyomi: ["ゆ"], arti: "air panas",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "湯", onyomi: ["トウ"], kunyomi: ["ゆ"], arti: "air panas",
     kotoba: [
       { w: "銭湯", furi: "せんとう", a: "pemandian umum (dalam ruang)" },
       { w: "湯気", furi: "ゆげ", a: "uap air panas" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "味", onyomi: ["ミ"], kunyomi: ["あじ"], arti: "rasa",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "味", onyomi: ["ミ"], kunyomi: ["あじ"], arti: "rasa",
     kotoba: [
       { w: "中味", furi: "なかみ", a: "isi, kandungan" },
       { w: "甘味料", furi: "かんみりょう", a: "pemanis buatan" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "甘", onyomi: ["カン"], kunyomi: ["あま.い", "うま.い"], arti: "manis",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "甘", onyomi: ["カン"], kunyomi: ["あま.い", "うま.い"], arti: "manis",
     kotoba: [
       { w: "甘口", furi: "あまくち", a: "kata-kata manis" },
       { w: "甘やかす", furi: "あまやかす", a: "memanjakan" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "辛", onyomi: ["シン"], kunyomi: ["から.い"], arti: "pedas",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "辛", onyomi: ["シン"], kunyomi: ["から.い"], arti: "pedas",
     kotoba: [
       { w: "辛抱", furi: "しんぼう", a: "kesabaran" },
       { w: "辛苦", furi: "しんく", a: "kesusahan" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "苦", onyomi: ["ク"], kunyomi: ["にが.い", "くる.しい"], arti: "pahit, menderita",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "苦", onyomi: ["ク"], kunyomi: ["にが.い", "くる.しい"], arti: "pahit, menderita",
     kotoba: [
       { w: "苦難", furi: "くなん", a: "penderitaan" },
       { w: "苦手", furi: "にがて", a: "lemah, tidak jago" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "法", onyomi: ["ホウ", "ハッ"], kunyomi: ["のり"], arti: "hukum, cara",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "法", onyomi: ["ホウ", "ハッ"], kunyomi: ["のり"], arti: "hukum, cara",
     kotoba: [
       { w: "法人", furi: "ほうじん", a: "badan hukum" },
       { w: "方法", furi: "ほうほう", a: "cara" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "理", onyomi: ["リ"], kunyomi: ["ことわり"], arti: "alasan, prinsip",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "理", onyomi: ["リ"], kunyomi: ["ことわり"], arti: "alasan, prinsip",
     kotoba: [
       { w: "理由", furi: "りゆう", a: "alasan" },
       { w: "無理", furi: "むり", a: "mustahil" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "調", onyomi: ["チョウ"], kunyomi: ["しら.べる", "ととの.う"], arti: "memeriksa, menyiapkan",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "調", onyomi: ["チョウ"], kunyomi: ["しら.べる", "ととの.う"], arti: "memeriksa, menyiapkan",
     kotoba: [
       { w: "体調", furi: "たいちょう", a: "kondisi tubuh" },
       { w: "口調", furi: "くちょう", a: "nada bicara" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "道", onyomi: ["ドウ", "トウ"], kunyomi: ["みち"], arti: "jalan",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "道", onyomi: ["ドウ", "トウ"], kunyomi: ["みち"], arti: "jalan",
     kotoba: [
       { w: "公道", furi: "こうどう", a: "jalan umum, jalan raya" },
       { w: "鉄道", furi: "てつどう", a: "rel kereta api" },
@@ -5867,28 +5867,28 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "公", onyomi: ["コウ", "ク"], kunyomi: ["おおやけ"], arti: "publik, umum",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "公", onyomi: ["コウ", "ク"], kunyomi: ["おおやけ"], arti: "publik, umum",
     kotoba: [
       { w: "公会堂", furi: "こうかいどう", a: "balai kota" },
       { w: "公平", furi: "こうへい", a: "keadilan, adil" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "園", onyomi: ["エン"], kunyomi: ["その"], arti: "taman, kebun",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "園", onyomi: ["エン"], kunyomi: ["その"], arti: "taman, kebun",
     kotoba: [
       { w: "学園", furi: "がくえん", a: "akademi, kampus" },
       { w: "花園", furi: "はなぞの", a: "taman bunga" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "神", onyomi: ["シン", "ジン"], kunyomi: ["かみ"], arti: "dewa, tuhan",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "神", onyomi: ["シン", "ジン"], kunyomi: ["かみ"], arti: "dewa, tuhan",
     kotoba: [
       { w: "神話", furi: "しんわ", a: "mitos, legenda" },
       { w: "女神", furi: "めがみ", a: "dewi" }
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "近", onyomi: ["キン"], kunyomi: ["ちか.い"], arti: "dekat",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "近", onyomi: ["キン"], kunyomi: ["ちか.い"], arti: "dekat",
     kotoba: [
       { w: "側近", furi: "そっきん", a: "ajudan, orang kepercayaan dekat" },
       { w: "近代", furi: "きんだい", a: "zaman modern" },
@@ -5896,7 +5896,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori", sumber: "irodori", char: "送", onyomi: ["ソウ"], kunyomi: ["おく.る"], arti: "mengirim",
+    tema: "Irodori Bab 13", sumber: "irodori", char: "送", onyomi: ["ソウ"], kunyomi: ["おく.る"], arti: "mengirim",
     kotoba: [
       { w: "送る", furi: "おくる", a: "mengirim, mengantar" },
       { w: "放送", furi: "ほうそう", a: "siaran" },
