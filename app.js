@@ -2145,7 +2145,8 @@ function renderBabList() {
   const babs = babKeys.map((key, i) => {
     const groups = Object.keys(bukuData[key]);
     const wordCount = Object.values(bukuData[key]).reduce((s, g) => s + g.rows.length, 0);
-    return { key, num: i + 1, title: groups[0], groupCount: groups.length, wordCount };
+    const parsedNum = parseInt(String(key).replace(/^bab/i, ''), 10);
+    return { key, num: Number.isFinite(parsedNum) ? parsedNum : i + 1, title: groups[0], groupCount: groups.length, wordCount };
   });
   const totalWords = babs.reduce((s, b) => s + b.wordCount, 0);
 

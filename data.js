@@ -105,7 +105,8 @@ const KT={
 {k:"とり",r:"tori",a:"burung",kj:"鳥",n:"Kata umum/payung untuk semua jenis burung. Beda dari にわとり (ayam) yang lebih spesifik — にわとり secara harfiah artinya 'burung halaman rumah'."},
 {k:"さめ",r:"same",a:"hiu",kj:"鮫",n:"Hiu jarang jadi topik sehari-hari di Jepang, tapi sering muncul di anime/manga sebagai karakter (mis. maskot Fuji TV, Same-chan)."},
 {k:"か",r:"ka",a:"nyamuk",kj:"蚊",n:"'蚊に刺されます' (ka ni sasaremasu) = digigit nyamuk — ungkapan yang sering dipakai pas musim panas."},
-{k:"きょうりゅう",r:"kyouryuu",a:"dinosaurus",kj:"恐竜"}
+{k:"きょうりゅう",r:"kyouryuu",a:"dinosaurus",kj:"恐竜"},
+{k:"しっぽ",r:"shippo",a:"ekor",kj:"尻尾",n:"Bagian tubuh hewan yang ada di belakang. '尻尾を振ります' = mengibaskan ekor (tanda senang, biasanya anjing)."}
 ]},
 "Orang & Keluarga":{rows:[
 {k:"あかちゃん",r:"akachan",a:"bayi",kj:"赤ちゃん"},
@@ -1036,6 +1037,8 @@ const KT={
 ]},
 "Kesehatan & Sakit":{rows:[
 {k:"どく",r:"doku",a:"racun",kj:"毒"},
+{k:"しょくちゅうどく",r:"shokuchuudoku",a:"keracunan makanan",kj:"食中毒",n:"Shoku (makanan) + chuudoku (keracunan). '食中毒になります' = keracunan makanan."},
+{k:"きおく",r:"kioku",a:"ingatan, memori",kj:"記憶",n:"'記憶をなくします' = kehilangan ingatan. Beda dari 覚えます (menghafal, aktif) — 記憶 adalah kata bendanya."},
 {k:"はきけ",r:"hakike",a:"mual (kata benda)",kj:"吐き気",n:"Bentuk kata benda — biasa dipakai bareng がする jadi はきけがする (merasa mual)."},
 {k:"しゅじゅつ",r:"shujutsu",a:"operasi (medis)",kj:"手術"},
 {k:"はきけがする",r:"hakike ga suru",a:"merasa mual",kj:"吐き気がする"},
@@ -1787,7 +1790,11 @@ const KATA_KERJA = {
 {k:"のこります",r:"nokorimasu",a:"tersisa, dibiarkan (tinggal)",kj:"残ります",n:"Verba INTRANSITIF (sesuatu tersisa dengan sendirinya) — pasangan transitifnya 残します (menyisakan, sengaja).",type:"jidoushi"},
 {k:"のこします",r:"nokoshimasu",a:"menyisakan, meninggalkan (makanan/barang)",kj:"残します",n:"Verba TRANSITIF — pasangan dari 残ります (jidoushi). 'やさいを残します' = menyisakan sayur (gak dihabisin).",type:"tadoushi"},
 {k:"ころびます",r:"korobimasu",a:"jatuh, tersandung",kj:"転びます",n:"Beda dari 落ちます (jatuh dari atas/ketinggian, Kelompok II) — 転びます khusus buat jatuh ke tanah karena tersandung/kepeleset saat jalan/lari.",type:"jidoushi"},
-{k:"ぬいます",r:"nuimasu",a:"menjahit",kj:"縫います",n:"'傷を縫います' = menjahit luka (di rumah sakit). Bisa juga dipakai untuk menjahit baju.",type:"tadoushi"}
+{k:"ぬいます",r:"nuimasu",a:"menjahit",kj:"縫います",n:"'傷を縫います' = menjahit luka (di rumah sakit). Bisa juga dipakai untuk menjahit baju.",type:"tadoushi"},
+{k:"はなせます",r:"hanasemasu",a:"bisa berbicara",kj:"話せます",n:"Bentuk POTENSIAL (kanoukei) dari 話します — nunjukin KEMAMPUAN, bukan cuma 'ngomong' biasa. 'もし動物と話せたら' = kalau seandainya bisa ngobrol sama hewan.",type:"jidoushi"},
+{k:"ふります",r:"furimasu",a:"mengibaskan, menggoyangkan",kj:"振ります",n:"'しっぽを振ります' = mengibaskan ekor. Beda kanji & arti dari 降ります (furimasu, turun hujan/salju) meski bacaannya sama persis.",type:"tadoushi"},
+{k:"かみます",r:"kamimasu",a:"menggigit",kj:"噛みます",n:"Dipakai buat hewan yang menggigit (beda dari 刺します yang khusus serangga menyengat/menusuk).",type:"tadoushi"},
+{k:"だまります",r:"damarimasu",a:"diam, terdiam",kj:"黙ります",n:"'黙ってください' = tolong diam. Beda dari 静かにします (jadi tenang/gak berisik) — 黙ります lebih ke berhenti ngomong sama sekali.",type:"jidoushi"}
 ]},
 "Kata Kerja - Kelompok II":{rows:[
 {k:"こわれます",r:"kowaremasu",a:"rusak (fisik/benda)",kj:"壊れます",n:"Buat benda yang rusak secara fisik (patah, gak bisa jalan, dsb). 'Pasokon ga kowaremashita' = laptop rusak.",type:"jidoushi"},
@@ -4304,6 +4311,416 @@ bab12: {
     {k:"ゆきりぐち",r:"yukiriguchi",a:"lubang untuk membuang air panas",kj:"湯切り口"},
     {k:"できあがり",r:"dekiagari",a:"selesai; siap untuk disantap"}
   ]}
+},
+
+bab13: {
+  "Masalah PC (パソコンが動かないんですが…)": { rows: [
+    {k:"でんき",r:"denki",a:"lampu; listrik",kj:"電気"},
+    {k:"つく",r:"tsuku",a:"menyala, contoh: 電気がつく [1]"},
+    {k:"へん（な）",r:"hen (na)",a:"aneh",kj:"変（な）"},
+    {k:"おと",r:"oto",a:"bunyi",kj:"音"},
+    {k:"おとがする",r:"oto ga suru",a:"berbunyi [3]",kj:"音がする"},
+    {k:"うごく",r:"ugoku",a:"bergerak; beroperasi [1]",kj:"動く"},
+    {k:"トイレットペーパー",r:"toiretto peepaa",a:"tisu toilet"},
+    {k:"なくなる",r:"nakunaru",a:"habis [1]"},
+    {k:"ぎょうしゃ",r:"gyousha",a:"dealer; vendor",kj:"業者"},
+    {k:"でんわする",r:"denwa suru",a:"menelepon [3]",kj:"電話する"},
+    {k:"さいきどうする",r:"saikidou suru",a:"to restart; memulai ulang [3]",kj:"再起動する"},
+    {k:"かんりしつ",r:"kanrishitsu",a:"ruang manajemen; ruang kontrol",kj:"管理室"},
+    {k:"れんらくする",r:"renraku suru",a:"menghubungi [3]",kj:"連絡する"},
+    {k:"そうこ",r:"souko",a:"gudang",kj:"倉庫"},
+    {k:"とってくる",r:"totte kuru",a:"mengambil (lalu kembali ke tempat semula) [3]",kj:"取って来る"},
+    {k:"コーヒーマシーン",r:"koohii mashiin",a:"mesin pembuat kopi"},
+    {k:"パソコン",r:"pasokon",a:"PC; komputer"},
+    {k:"とりあえず",r:"toriaezu",a:"untuk saat ini; sementara ini"}
+  ]},
+  "Perkiraan Waktu (どのぐらいかかりそうですか？)": { rows: [
+    {k:"やりかた",r:"yarikata",a:"cara melakukan (sesuatu)",kj:"やり方"},
+    {k:"おわる",r:"owaru",a:"selesai [1]",kj:"終わる"},
+    {k:"もうすぐ",r:"mou sugu",a:"segera; sebentar lagi; hampir"},
+    {k:"できる",r:"dekiru",a:"selesai; rampung [2]"}
+  ]},
+  "Mesin Fotokopi (コピー機の使い方を教えてもらえませんか？)": { rows: [
+    {k:"コピーき",r:"kopii ki",a:"mesin fotokopi",kj:"コピー機"},
+    {k:"げんこう",r:"genkou",a:"naskah; dokumen",kj:"原稿"},
+    {k:"セットする",r:"setto suru",a:"mengeset [3]"},
+    {k:"まいすう",r:"maisuu",a:"jumlah lembar",kj:"枚数"},
+    {k:"すうじ",r:"suuji",a:"bilangan; angka",kj:"数字"},
+    {k:"いれる",r:"ireru",a:"memasukkan [2]",kj:"入れる"},
+    {k:"スタート",r:"sutaato",a:"mulai"},
+    {k:"ボタン",r:"botan",a:"tombol"},
+    {k:"おす",r:"osu",a:"menekan [1]",kj:"押す"},
+    {k:"りょうめん",r:"ryoumen",a:"dua sisi",kj:"両面"},
+    {k:"かためん",r:"katamen",a:"satu sisi",kj:"片面"},
+    {k:"カラー",r:"karaa",a:"berwarna"},
+    {k:"できるだけ",r:"dekiru dake",a:"sedapat mungkin"},
+    {k:"しろくろ",r:"shirokuro",a:"hitam putih",kj:"白黒"},
+    {k:"スキャナ",r:"sukyana",a:"pemindai"},
+    {k:"ファックス",r:"fakkusu",a:"faks; faksimile"},
+    {k:"じどうせんたく",r:"jidou sentaku",a:"pemilihan otomatis",kj:"自動選択"},
+    {k:"フルカラー",r:"furu karaa",a:"full color; penuh warna"},
+    {k:"にしょく",r:"nishoku",a:"dua warna",kj:"2色"},
+    {k:"たんしょく",r:"tanshoku",a:"monokrom; warna tunggal",kj:"単色"},
+    {k:"じどうのうど",r:"jidou noudo",a:"tingkat saturasi warna otomatis",kj:"自動濃度"},
+    {k:"ようし",r:"youshi",a:"kertas",kj:"用紙"},
+    {k:"てざし",r:"tezashi",a:"memasukkan (kertas) secara manual",kj:"手差し"},
+    {k:"ばいりつ",r:"bairitsu",a:"pengaturan skala (ukuran dokumen)",kj:"倍率"},
+    {k:"とうばい",r:"toubai",a:"ukuran sama",kj:"等倍"},
+    {k:"へんばい",r:"henbai",a:"ukuran berbeda",kj:"変倍"},
+    {k:"かくだい",r:"kakudai",a:"pembesaran",kj:"拡大"},
+    {k:"しゅくしょう",r:"shukushou",a:"pengecilan",kj:"縮小"},
+    {k:"ソート",r:"sooto",a:"susunan, urutan"},
+    {k:"ホチキスどめ",r:"hochikisu dome",a:"staples",kj:"ホチキス止め"}
+  ]},
+  "Persiapan Rapat (会議の準備は、どうしますか？)": { rows: [
+    {k:"しりょう",r:"shiryou",a:"dokumen",kj:"資料"},
+    {k:"キャビネット",r:"kyabinetto",a:"lemari (dengan rak/laci untuk menyimpan dokumen)"},
+    {k:"もどす",r:"modosu",a:"mengembalikan [1]",kj:"戻す"},
+    {k:"とびら",r:"tobira",a:"pintu",kj:"扉"},
+    {k:"あける",r:"akeru",a:"membuka [2]",kj:"開ける"},
+    {k:"たな",r:"tana",a:"rak",kj:"棚"},
+    {k:"ならべる",r:"naraberu",a:"menata; menyusun [2]",kj:"並べる"},
+    {k:"まるい",r:"marui",a:"bundar",kj:"丸い"},
+    {k:"だす",r:"dasu",a:"mengeluarkan [1]",kj:"出す"},
+    {k:"～れつ",r:"~retsu",a:"~ baris, contoh: 3列 = tiga baris",kj:"～列"},
+    {k:"うしろ",r:"ushiro",a:"belakang",kj:"後ろ"},
+    {k:"スペース",r:"supeesu",a:"ruang; jarak"},
+    {k:"あける",r:"akeru",a:"menyediakan (ruang; jarak) [2]"},
+    {k:"いりぐち",r:"iriguchi",a:"pintu masuk",kj:"入口"},
+    {k:"しかくい",r:"shikakui",a:"persegi empat",kj:"四角い"},
+    {k:"おく",r:"oku",a:"meletakkan; menaruh [1]",kj:"置く"},
+    {k:"かいぎ",r:"kaigi",a:"rapat",kj:"会議"},
+    {k:"セッティング",r:"settingu",a:"penataan"},
+    {k:"このじ",r:"ko no ji",a:"berbentuk huruf-U",kj:"コの字"},
+    {k:"じゅんびする",r:"junbi suru",a:"mempersiapkan; menyiapkan [3]",kj:"準備する"},
+    {k:"にんずうぶん",r:"ninzuubun",a:"sebanyak jumlah orang",kj:"人数分"},
+    {k:"～ぶ",r:"~bu",a:"~ bundel fotokopi, contoh: 1部 = 1 berkas/bundel fotokopi",kj:"～部"},
+    {k:"たのむ",r:"tanomu",a:"meminta; memesan [1]",kj:"頼む"},
+    {k:"いいです",r:"ii desu",a:"tidak usah; tidak perlu"}
+  ]},
+  "Email Pemberitahuan (お知らせのメール)": { rows: [
+    {k:"けんめい",r:"kenmei",a:"perihal",kj:"件名"},
+    {k:"へんこう",r:"henkou",a:"perubahan",kj:"変更"},
+    {k:"おしらせ",r:"oshirase",a:"pemberitahuan; notifikasi",kj:"お知らせ"},
+    {k:"つごうがわるい",r:"tsugou ga warui",a:"berhalangan",kj:"都合が悪い"},
+    {k:"ちゅうい（する）",r:"chuui (suru)",a:"memperhatikan [3]",kj:"注意（する）"},
+    {k:"しゃないメール",r:"shanai meeru",a:"surel internal perusahaan",kj:"社内メール"},
+    {k:"うちあわせ",r:"uchiawase",a:"pertemuan; rapat",kj:"打ち合わせ"},
+    {k:"にってい",r:"nittei",a:"jadwal",kj:"日程"},
+    {k:"さしだしにん",r:"sashidashinin",a:"pengirim",kj:"差出人"},
+    {k:"ひづけ",r:"hizuke",a:"tanggal",kj:"日付"},
+    {k:"みなさま",r:"minasama",a:"(salam sejahtera untuk) Anda sekalian (bentuk sopan)",kj:"皆様"},
+    {k:"なお",r:"nao",a:"untuk itu; oleh karena itu"},
+    {k:"おしらせします",r:"oshirase shimasu",a:"menyampaikan pemberitahuan (bentuk sopan)"},
+    {k:"ごれんらくください",r:"go-renraku kudasai",a:"Mohon hubungi~ . (bentuk sopan)"},
+    {k:"ごちゅういください",r:"go-chuui kudasai",a:"Mohon perhatikan~. (bentuk sopan)"}
+  ]}
+},
+
+bab14: {
+  "Terlambat Masuk (少し遅くなります)": { rows: [
+    {k:"こんでいる",r:"konde iru",a:"macet"},
+    {k:"せき",r:"seki",a:"batuk"},
+    {k:"ひどい",r:"hidoi",a:"parah"},
+    {k:"ねつ",r:"netsu",a:"demam",kj:"熱"},
+    {k:"ねつがある",r:"netsu ga aru",a:"demam [1]",kj:"熱がある"},
+    {k:"さいふ",r:"saifu",a:"dompet",kj:"財布"},
+    {k:"わすれる",r:"wasureru",a:"lupa [2]",kj:"忘れる"},
+    {k:"びょういん",r:"byouin",a:"rumah sakit",kj:"病院"},
+    {k:"いえ",r:"ie",a:"rumah",kj:"家"},
+    {k:"かえる",r:"kaeru",a:"pulang [1]",kj:"帰る"},
+    {k:"これから",r:"kore kara",a:"sekarang; setelah ini"},
+    {k:"とる",r:"toru",a:"mengambil [1]",kj:"取る"},
+    {k:"それで",r:"sore de",a:"oleh karena itu"},
+    {k:"おそくなる",r:"osoku naru",a:"terlambat [1]",kj:"遅くなる"},
+    {k:"みなさん",r:"minasan",a:"semua orang"},
+    {k:"つたえる",r:"tsutaeru",a:"menyampaikan [2]",kj:"伝える"},
+    {k:"ちこくする",r:"chikoku suru",a:"terlambat [3]",kj:"遅刻する"},
+    {k:"あとで",r:"ato de",a:"nanti"},
+    {k:"やすむ",r:"yasumu",a:"cuti; tidak masuk kerja; libur [1]",kj:"休む"},
+    {k:"もうしわけありません",r:"moushiwake arimasen",a:"Saya mohon maaf."},
+    {k:"ぐあいがわるい",r:"guai ga warui",a:"(kondisi tubuh) kurang fit; tidak enak badan",kj:"具合が悪い"}
+  ]},
+  "Izin ke Toilet (トイレに行って来てもいいですか？)": { rows: [
+    {k:"おいのり",r:"oinori",a:"sembahyang; doa",kj:"お祈り"},
+    {k:"たばこ",r:"tabako",a:"rokok"},
+    {k:"すう",r:"suu",a:"merokok; mengisap (rokok), contoh: たばこを吸う [1]",kj:"吸う"},
+    {k:"いってくる",r:"itte kuru",a:"pergi (dan kembali lagi ke tempat tersebut setelahnya) [3]",kj:"行って来る"},
+    {k:"きゅうけい（する）",r:"kyuukei (suru)",a:"rehat; istirahat sejenak [3]",kj:"休憩（する）"},
+    {k:"もどる",r:"modoru",a:"kembali [1]",kj:"戻る"}
+  ]},
+  "Izin Pulang Cepat (明日の午後、早退してもいいでしょうか？)": { rows: [
+    {k:"そうたいする",r:"soutai suru",a:"pulang lebih awal [3]",kj:"早退する"},
+    {k:"やすみをとる",r:"yasumi wo toru",a:"mengambil cuti [1]",kj:"休みを取る"},
+    {k:"しゃちょう",r:"shachou",a:"direktur utama",kj:"社長"},
+    {k:"やくしょ",r:"yakusho",a:"balai kota",kj:"役所"},
+    {k:"はやく",r:"hayaku",a:"lebih awal",kj:"早く"},
+    {k:"ようじ",r:"youji",a:"urusan",kj:"用事"},
+    {k:"すむ",r:"sumu",a:"selesai [1]",kj:"済む"},
+    {k:"しゅにん",r:"shunin",a:"kepala; ketua (staf)",kj:"主任"},
+    {k:"らいげつ",r:"raigetsu",a:"bulan depan",kj:"来月"},
+    {k:"できたら",r:"dekitara",a:"kalau memungkinkan; kalau bisa"},
+    {k:"ちょっと、いいでしょうか？",r:"chotto, ii deshou ka?",a:"Maaf, bisa minta waktunya sebentar?"},
+    {k:"べつにかまいません",r:"betsu ni kamaimasen",a:"Tidak masalah."}
+  ]},
+  "Formulir Cuti (休暇届を出してください)": { rows: [
+    {k:"きゅうかとどけ",r:"kyuuka todoke",a:"formulir cuti",kj:"休暇届"},
+    {k:"だす",r:"dasu",a:"mengumpulkan; menyerahkan [1]",kj:"出す"},
+    {k:"フォーム",r:"foomu",a:"formulir"},
+    {k:"しょぞく",r:"shozoku",a:"tempat kerja; bagian; divisi",kj:"所属"},
+    {k:"チーム",r:"chiimu",a:"tim"},
+    {k:"そうむ",r:"soumu",a:"bagian umum",kj:"総務"},
+    {k:"しめい",r:"shimei",a:"nama lengkap",kj:"氏名"},
+    {k:"ハンコ",r:"hanko",a:"stempel"},
+    {k:"もっている",r:"motte iru",a:"memiliki"},
+    {k:"もつ",r:"motsu",a:"memiliki [1]",kj:"持つ"},
+    {k:"で",r:"de",a:"maka; jadi; oleh karena itu (bentuk informal dari それで)"},
+    {k:"きかん",r:"kikan",a:"durasi waktu",kj:"期間"},
+    {k:"りゆう",r:"riyuu",a:"alasan",kj:"理由"},
+    {k:"ふつう",r:"futsuu",a:"biasa",kj:"普通"},
+    {k:"しよう",r:"shiyou",a:"urusan pribadi",kj:"私用"},
+    {k:"～ちゅう",r:"~chuu",a:"sedang ~, contoh: 休み中 = sedang cuti",kj:"～中"},
+    {k:"れんらくさき",r:"renrakusaki",a:"alamat yang dapat dihubungi",kj:"連絡先"},
+    {k:"びこう",r:"bikou",a:"catatan",kj:"備考"},
+    {k:"いる",r:"iru",a:"perlu [1]"},
+    {k:"しょうにんいん",r:"shouninin",a:"stempel konfirmasi",kj:"承認印"},
+    {k:"じぜんに",r:"jizen ni",a:"sebelumnya",kj:"事前に"},
+    {k:"ていしゅつする",r:"teishutsu suru",a:"menyerahkan [3]",kj:"提出する"}
+  ]}
+},
+
+bab15: {
+  "Gejala Sakit (今日はどうしましたか？)": { rows: [
+    {k:"しょうじょう",r:"shoujou",a:"gejala penyakit",kj:"症状"},
+    {k:"のど",r:"nodo",a:"tenggorokan"},
+    {k:"いたい",r:"itai",a:"sakit",kj:"痛い"},
+    {k:"おなか",r:"onaka",a:"perut",kj:"お腹"},
+    {k:"ねつ",r:"netsu",a:"demam",kj:"熱"},
+    {k:"せき",r:"seki",a:"batuk"},
+    {k:"でる",r:"deru",a:"keluar; sedang mengalami (batuk/pilek), contoh: せき／鼻水が出る [2]",kj:"出る"},
+    {k:"はなみず",r:"hanamizu",a:"ingus (pada saat pilek)",kj:"鼻水"},
+    {k:"はきけ",r:"hakike",a:"mual; rasa ingin muntah",kj:"吐き気"},
+    {k:"はきけがする",r:"hakike ga suru",a:"merasa mual [3]",kj:"吐き気がする"},
+    {k:"しょくよく",r:"shokuyoku",a:"nafsu makan",kj:"食欲"},
+    {k:"め",r:"me",a:"mata",kj:"目"},
+    {k:"かゆい",r:"kayui",a:"gatal"},
+    {k:"あし",r:"ashi",a:"kaki",kj:"足"},
+    {k:"くじく",r:"kujiku",a:"keseleo [1]"},
+    {k:"あたま",r:"atama",a:"kepala",kj:"頭"},
+    {k:"ぶつける",r:"butsukeru",a:"terantuk; terbentur; menabrak [2]"},
+    {k:"おととい",r:"ototoi",a:"kemarin lusa; 2 hari lalu"},
+    {k:"ころぶ",r:"korobu",a:"jatuh [1]",kj:"転ぶ"},
+    {k:"こう",r:"kou",a:"begini; seperti ini"},
+    {k:"レントゲン",r:"rentogen",a:"rontgen"},
+    {k:"～しゅうかん",r:"~shuukan",a:"~ minggu/pekan, contoh: 1週間 = seminggu/sepekan",kj:"～週間"},
+    {k:"かふんしょう",r:"kafunshou",a:"alergi polen (serbuk sari)",kj:"花粉症"},
+    {k:"どうしましたか？",r:"dou shimashita ka?",a:"Kenapa? ; Ada masalah apa?"},
+    {k:"どうされましたか？",r:"dou saremashita ka?",a:"Kenapa? ; Ada masalah apa? (bentuk sopan)"}
+  ]},
+  "Di Klinik: Influenza (インフルエンザですね)": { rows: [
+    {k:"ほけんしょう",r:"hokenshou",a:"kartu asuransi kesehatan",kj:"保険証"},
+    {k:"もんしんひょう",r:"monshinhyou",a:"kuesioner; daftar pertanyaan (seputar pemeriksaan)",kj:"問診票"},
+    {k:"くすり",r:"kusuri",a:"obat",kj:"薬"},
+    {k:"のむ",r:"nomu",a:"minum (minum obat), contoh: 薬を飲む [1]",kj:"飲む"},
+    {k:"あう",r:"au",a:"bertemu [1]",kj:"会う"},
+    {k:"やわらかい",r:"yawarakai",a:"empuk; lunak"},
+    {k:"からい",r:"karai",a:"pedas",kj:"辛い"},
+    {k:"しんさつけん",r:"shinsatsuken",a:"kartu registrasi pasien (klinik/rumah sakit)",kj:"診察券"},
+    {k:"しょほうせん",r:"shohousen",a:"resep obat",kj:"処方せん"},
+    {k:"きにゅうする",r:"kinyuu suru",a:"mengisi [3]",kj:"記入する"},
+    {k:"いしゃ",r:"isha",a:"dokter",kj:"医者"},
+    {k:"～ど～ぶ",r:"~do ~bu",a:"~ derajat, contoh: 38度5分 = 38,5 derajat",kj:"～度～分"},
+    {k:"くち",r:"kuchi",a:"mulut",kj:"口"},
+    {k:"インフルエンザ",r:"infuruenza",a:"influenza"},
+    {k:"けんさする",r:"kensa suru",a:"memeriksa [3]",kj:"検査する"},
+    {k:"えーがた",r:"ee-gata",a:"tipe A",kj:"A型"},
+    {k:"さがる",r:"sagaru",a:"turun (demam turun), contoh: 熱が下がる [1]",kj:"下がる"},
+    {k:"おかゆ",r:"okayu",a:"bubur nasi"},
+    {k:"やっきょく",r:"yakkyoku",a:"apotek",kj:"薬局"},
+    {k:"もらう",r:"morau",a:"menerima [1]"},
+    {k:"おだいじに",r:"odaiji ni",a:"Semoga lekas sembuh."},
+    {k:"おもちですか？",r:"omochi desu ka?",a:"Apakah Anda membawa; mempunyai; memiliki~ ? (bentuk sopan dari 持っていますか？)"}
+  ]},
+  "Formulir Pemeriksaan (問診票)": { rows: [
+    {k:"フリガナ",r:"furigana",a:"cara baca dalam huruf Hiragana/Katakana"},
+    {k:"せいべつ",r:"seibetsu",a:"jenis kelamin",kj:"性別"},
+    {k:"びょうきにかかる",r:"byouki ni kakaru",a:"menderita penyakit [1]",kj:"病気にかかる"},
+    {k:"げんざい",r:"genzai",a:"saat ini",kj:"現在"},
+    {k:"じょせい",r:"josei",a:"wanita",kj:"女性"},
+    {k:"にんしんする",r:"ninshin suru",a:"hamil [3]",kj:"妊娠する"},
+    {k:"きにゅうれい",r:"kinyuurei",a:"contoh pengisian",kj:"記入例"},
+    {k:"きにゅうび",r:"kinyuubi",a:"tanggal pengisian",kj:"記入日"},
+    {k:"たいしょう",r:"taishou",a:"Taisho / T (nama era di Jepang)",kj:"大正／大"},
+    {k:"しょうわ",r:"shouwa",a:"Showa / S (nama era di Jepang)",kj:"昭和／昭"},
+    {k:"へいせい",r:"heisei",a:"Heisei / H (nama era di Jepang)",kj:"平成／平"},
+    {k:"れいわ",r:"reiwa",a:"Reiwa / R (nama era di Jepang)",kj:"令和／令"},
+    {k:"～さい",r:"~sai",a:"~ tahun, contoh: 27才 = umur 27 tahun",kj:"～才"},
+    {k:"いままでに",r:"ima made ni",a:"sejauh ini; sampai saat ini"},
+    {k:"びょうき",r:"byouki",a:"sakit; penyakit",kj:"病気"},
+    {k:"びょうめい",r:"byoumei",a:"nama penyakit",kj:"病名"},
+    {k:"～ほん",r:"~hon/pon/bon",a:"~ botol, contoh: 1本 = 1 botol",kj:"～本"},
+    {k:"～のかた",r:"~no kata",a:"orang (bentuk sopan), contoh: 女性の方 = perempuan/wanita",kj:"～の方"},
+    {k:"こたえる",r:"kotaeru",a:"menjawab [2]",kj:"答える"},
+    {k:"～しゅうめ",r:"~shuume",a:"minggu ke~, contoh: 10週目 = minggu ke-10",kj:"～週目"},
+    {k:"おこたえください",r:"okotae kudasai",a:"Mohon dijawab. (bentuk sopan)"}
+  ]},
+  "Obat Penurun Demam (熱を下げるお薬です)": { rows: [
+    {k:"さげる",r:"sageru",a:"menurunkan, contoh: 熱を下げる [2]",kj:"下げる"},
+    {k:"おさえる",r:"osaeru",a:"meredakan [2]",kj:"抑える"},
+    {k:"いたみどめ",r:"itamidome",a:"obat penghilang rasa sakit",kj:"痛み止め"},
+    {k:"くしゃみ",r:"kushami",a:"bersin"},
+    {k:"つらい",r:"tsurai",a:"merasa berat; payah"},
+    {k:"がまんする",r:"gaman suru",a:"bertahan; menahan diri [3]"},
+    {k:"がまんできない",r:"gaman dekinai",a:"tidak mampu bertahan; menahan diri"},
+    {k:"あいだをあける",r:"aida wo akeru",a:"berselang; memberi jarak antar waktu [2]"},
+    {k:"～いじょう",r:"~ijou",a:"~ atau lebih, contoh: 38度5分以上 = 38,5 derajat atau lebih",kj:"～以上"},
+    {k:"い",r:"i",a:"lambung",kj:"胃"},
+    {k:"まもる",r:"mamoru",a:"melindungi [1]",kj:"守る"},
+    {k:"うんてんする",r:"unten suru",a:"berkendara; mengemudi [3]",kj:"運転する"},
+    {k:"しょくご",r:"shokugo",a:"sesudah makan",kj:"食後"},
+    {k:"ねむい",r:"nemui",a:"mengantuk"},
+    {k:"げねつざい",r:"genetsuzai",a:"obat penurun panas / demam",kj:"解熱剤"},
+    {k:"ねつがたかい",r:"netsu ga takai",a:"demam tinggi",kj:"熱が高い"},
+    {k:"それと",r:"soreto",a:"dan"},
+    {k:"こっち",r:"kocchi",a:"ini; yang ini"}
+  ]},
+  "Penjelasan Cara Minum Obat (薬の説明)": { rows: [
+    {k:"ゆうがた",r:"yuugata",a:"sore; sore hari",kj:"夕方／夕"},
+    {k:"ねるまえ",r:"neru mae",a:"sebelum tidur",kj:"寝る前／寝前"},
+    {k:"ようほう",r:"youhou",a:"cara penggunaan",kj:"用法"},
+    {k:"ようりょう",r:"youryou",a:"dosis",kj:"用量"},
+    {k:"せつめいしょ",r:"setsumeisho",a:"instruksi; deskripsi",kj:"説明書"},
+    {k:"こうのう",r:"kounou",a:"efek",kj:"効能"},
+    {k:"ちゅういじこう",r:"chuui jikou",a:"peringatan; catatan",kj:"注意事項"},
+    {k:"ゆうしょくご",r:"yuushokugo",a:"sesudah makan malam",kj:"夕食後"},
+    {k:"～じょう",r:"~jou",a:"~ butir, contoh: 2錠 = 2 butir obat",kj:"～錠"},
+    {k:"～にちぶん",r:"~nichibun",a:"untuk ~ hari, contoh: 5日分 = untuk 5 hari",kj:"～日分"},
+    {k:"まいしょくご",r:"maishokugo",a:"setiap sehabis makan",kj:"毎食後"}
+  ]}
+},
+
+bab16: {
+  "Bagian Tubuh & Keluhan (具合が悪そうですね)": { rows: [
+    {k:"かお",r:"kao",a:"muka; wajah",kj:"顔"},
+    {k:"からだ",r:"karada",a:"badan",kj:"体"},
+    {k:"あたま",r:"atama",a:"kepala",kj:"頭"},
+    {k:"はな",r:"hana",a:"hidung",kj:"鼻"},
+    {k:"は",r:"ha",a:"gigi",kj:"歯"},
+    {k:"くび",r:"kubi",a:"leher",kj:"首"},
+    {k:"め",r:"me",a:"mata",kj:"目"},
+    {k:"みみ",r:"mimi",a:"telinga",kj:"耳"},
+    {k:"くち",r:"kuchi",a:"mulut",kj:"口"},
+    {k:"かた",r:"kata",a:"bahu",kj:"肩"},
+    {k:"むね",r:"mune",a:"dada",kj:"胸"},
+    {k:"おなか",r:"onaka",a:"perut",kj:"お腹"},
+    {k:"あし",r:"ashi",a:"kaki",kj:"足"},
+    {k:"せなか",r:"senaka",a:"punggung",kj:"背中"},
+    {k:"こし",r:"koshi",a:"pinggang",kj:"腰"},
+    {k:"うで",r:"ude",a:"lengan",kj:"腕"},
+    {k:"て",r:"te",a:"tangan",kj:"手"},
+    {k:"ゆび",r:"yubi",a:"jari",kj:"指"},
+    {k:"かたがこる",r:"kata ga koru",a:"bahu kaku [1]",kj:"肩がこる"},
+    {k:"だるい",r:"darui",a:"lemas; terlalu letih dan lesu"},
+    {k:"いたい",r:"itai",a:"sakit",kj:"痛い"},
+    {k:"い",r:"i",a:"lambung",kj:"胃"},
+    {k:"ちょうしがわるい",r:"choushi ga warui",a:"dalam kondisi tidak baik",kj:"調子が悪い"},
+    {k:"ふつかよい",r:"futsukayoi",a:"keadaan tidak nyaman setelah bangun tidur, akibat terlalu banyak mengonsumsi minuman beralkohol",kj:"二日酔い"},
+    {k:"ねむれない",r:"nemurenai",a:"tidak bisa tidur"},
+    {k:"おふろにはいる",r:"ofuro ni hairu",a:"mandi [1]",kj:"お風呂に入る"},
+    {k:"あたためる",r:"atatameru",a:"menghangatkan [2]",kj:"温める"},
+    {k:"あたたかい",r:"atatakai",a:"hangat",kj:"温かい"},
+    {k:"のむ",r:"nomu",a:"minum [1]",kj:"飲む"},
+    {k:"マッサージする",r:"massaaji suru",a:"memijat [3]"},
+    {k:"くすり",r:"kusuri",a:"obat",kj:"薬"},
+    {k:"さいきん",r:"saikin",a:"akhir-akhir ini",kj:"最近"},
+    {k:"ぬるい",r:"nurui",a:"hangat; suam kuku"},
+    {k:"ためす",r:"tamesu",a:"mencoba [1]",kj:"試す"},
+    {k:"のみすぎる",r:"nomisugiru",a:"terlalu banyak minum; kebanyakan minum [2]",kj:"飲みすぎ"},
+    {k:"けっこう",r:"kekkou",a:"cukup"},
+    {k:"それはいけませんね",r:"sore wa ikemasen ne",a:"Itu tidak baik."},
+    {k:"どうしていますか？",r:"dou shite imasu ka?",a:"Bagaimana menanganinya?"},
+    {k:"つかれている",r:"tsukarete iru",a:"lelah",kj:"疲れている"},
+    {k:"ねぶそく",r:"nebusoku",a:"kurang tidur",kj:"寝不足"}
+  ]},
+  "Kebiasaan Hidup Sehat (夜は早く寝るようにしています)": { rows: [
+    {k:"けんこう",r:"kenkou",a:"kesehatan",kj:"健康"},
+    {k:"うんどう",r:"undou",a:"olahraga",kj:"運動"},
+    {k:"ジム",r:"jimu",a:"gimnasium; pusat latihan kebugaran"},
+    {k:"ジョギングする",r:"jogingu suru",a:"joging [3]"},
+    {k:"はしる",r:"hashiru",a:"lari; berlari [1]",kj:"走る"},
+    {k:"ウォーキングする",r:"wookingu suru",a:"jalan santai; walking [3]"},
+    {k:"あるく",r:"aruku",a:"berjalan [1]",kj:"歩く"},
+    {k:"プール",r:"puuru",a:"kolam renang"},
+    {k:"およぐ",r:"oyogu",a:"berenang [1]",kj:"泳ぐ"},
+    {k:"ヨガ",r:"yoga",a:"yoga"},
+    {k:"しょくせいかつ",r:"shokuseikatsu",a:"kebiasaan dalam mengonsumsi makanan atau minuman",kj:"食生活"},
+    {k:"たべすぎる",r:"tabesugiru",a:"terlalu banyak makan [2]",kj:"食べすぎる"},
+    {k:"すいみん",r:"suimin",a:"tidur",kj:"睡眠"},
+    {k:"はやく",r:"hayaku",a:"cepat; awal",kj:"早く"},
+    {k:"おきる",r:"okiru",a:"bangun [2]",kj:"起きる"},
+    {k:"だいたい",r:"daitai",a:"kira-kira"},
+    {k:"チキンサラダ",r:"chikin sarada",a:"selada ayam"},
+    {k:"トマトジュース",r:"tomato juusu",a:"jus tomat"},
+    {k:"ダイエットする",r:"daietto suru",a:"melakukan diet [3]"},
+    {k:"きをつける",r:"ki wo tsukeru",a:"berhati-hati; memperhatikan [2]",kj:"気をつける"},
+    {k:"なるほど",r:"naruhodo",a:"Oh, begitu"}
+  ]},
+  "Keracunan Makanan (食中毒が増えています)": { rows: [
+    {k:"ノロウイルス",r:"noro uirusu",a:"norovirus"},
+    {k:"しょくちゅうどく",r:"shokuchuudoku",a:"keracunan makanan",kj:"食中毒"},
+    {k:"げんいん",r:"gen-in",a:"penyebab",kj:"原因"},
+    {k:"しょうじょう",r:"shoujou",a:"gejala penyakit",kj:"症状"},
+    {k:"よぼうほう",r:"yobouhou",a:"cara pencegahan",kj:"予防法"},
+    {k:"ふくつう",r:"fukutsuu",a:"sakit perut",kj:"腹痛"},
+    {k:"おうと",r:"outo",a:"muntah",kj:"おう吐"},
+    {k:"げり",r:"geri",a:"diare",kj:"下痢"},
+    {k:"てあらい",r:"tearai",a:"cuci tangan",kj:"手洗い"},
+    {k:"かねつ（する）",r:"kanetsu (suru)",a:"memanaskan [3]",kj:"加熱（する）"},
+    {k:"ふえる",r:"fueru",a:"bertambah [2]",kj:"増える"},
+    {k:"はっせいする",r:"hassei suru",a:"muncul; terjadi [3]",kj:"発生する"},
+    {k:"かい",r:"kai",a:"kerang",kj:"貝"},
+    {k:"かんせんする",r:"kansen suru",a:"terinfeksi; tertular [3]",kj:"感染する"},
+    {k:"ちょうり（する）",r:"chouri (suru)",a:"memasak [3]",kj:"調理（する）"},
+    {k:"よぼうする",r:"yobou suru",a:"mencegah [3]",kj:"予防する"},
+    {k:"きゅうぞう",r:"kyuuzou",a:"bertambah dengan cepat",kj:"急増"},
+    {k:"けんない",r:"kennai",a:"dalam prefektur",kj:"県内"},
+    {k:"わだい",r:"wadai",a:"topik",kj:"話題"},
+    {k:"おせんされた",r:"osen sareta",a:"terkontaminasi",kj:"汚染された"},
+    {k:"カキ",r:"kaki",a:"tiram"},
+    {k:"じゅうぶんに",r:"juubun ni",a:"dengan cukup",kj:"十分に"},
+    {k:"ウイルス",r:"uirusu",a:"virus"},
+    {k:"つく",r:"tsuku",a:"menempel; terkontaminasi (virus), contoh: ウイルスがつく [1]"},
+    {k:"おこす",r:"okosu",a:"menyebabkan [1]",kj:"起こす"},
+    {k:"どうしたら",r:"dou shitara",a:"bagaimana"},
+    {k:"ポイント",r:"pointo",a:"poin; hal-hal penting"},
+    {k:"じゅうぶん（な）",r:"juubun (na)",a:"cukup",kj:"十分（な）"},
+    {k:"しょくじまえ",r:"shokuji mae",a:"sebelum makan",kj:"食事前"},
+    {k:"ぜんご",r:"zengo",a:"sebelum dan sesudah",kj:"前後"},
+    {k:"あらう",r:"arau",a:"mencuci [1]",kj:"洗う"},
+    {k:"ちゅうしんぶ",r:"chuushinbu",a:"bagian dalam; inti; pusat",kj:"中心部"}
+  ]},
+  "Poster Pencegahan Penyakit (病気予防のポスター)": { rows: [
+    {k:"うつす",r:"utsusu",a:"menularkan [1]"},
+    {k:"マスク",r:"masuku",a:"masker"},
+    {k:"うがい",r:"ugai",a:"berkumur; kumur-kumur"},
+    {k:"よぼうせっしゅ",r:"yobou sesshu",a:"vaksinasi",kj:"予防接種"},
+    {k:"はつねつ",r:"hatsunetsu",a:"demam",kj:"発熱"},
+    {k:"ぜんしん",r:"zenshin",a:"seluruh badan",kj:"全身"},
+    {k:"だるさ",r:"darusa",a:"kelelahan"},
+    {k:"かんせつつう",r:"kansetsutsuu",a:"sakit pada persendian; nyeri sendi",kj:"関節痛"},
+    {k:"いたみ",r:"itami",a:"sakit",kj:"痛み"},
+    {k:"きもち",r:"kimochi",a:"sikap; perasaan",kj:"気持ち"},
+    {k:"たいせつ（な）",r:"taisetsu (na)",a:"penting",kj:"大切（な）"},
+    {k:"こまめに",r:"komame ni",a:"sering"},
+    {k:"しっかりと",r:"shikkari to",a:"dengan tepat"},
+    {k:"がいしゅつさき",r:"gaishutsusaki",a:"tempat yang dikunjungi saat keluar rumah",kj:"外出先"},
+    {k:"きたくする",r:"kitaku suru",a:"pulang ke rumah [3]",kj:"帰宅する"},
+    {k:"りゅうこうする",r:"ryuukou suru",a:"mewabah, contoh: mewabahnya influenza [3]",kj:"流行する"},
+    {k:"うける",r:"ukeru",a:"menerima [2]",kj:"受ける"},
+    {k:"よやく",r:"yoyaku",a:"memesan",kj:"予約"},
+    {k:"うけつけちゅう",r:"uketsuke chuu",a:"sedang menerima; melayani",kj:"受付中"},
+    {k:"クリニック",r:"kurinikku",a:"klinik"}
+  ]}
 }
 
 }; // end BUKU_IRODORI
@@ -5439,7 +5856,7 @@ const KANJI = [
   // IRODORI — sumber: "irodori" (dipisah dari kanji modul lewat filter di tab Moji)
   // ═══════════════════════════════════════════════
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "犬", onyomi: ["ケン"], kunyomi: ["いぬ"], arti: "anjing",
+    tema: "Irodori", sumber: "irodori", char: "犬", onyomi: ["ケン"], kunyomi: ["いぬ"], arti: "anjing",
     kotoba: [
       { w: "犬", furi: "いぬ", a: "anjing" },
       { w: "子犬", furi: "こいぬ", a: "anak anjing" },
@@ -5448,7 +5865,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "家", onyomi: ["カ", "ケ"], kunyomi: ["いえ", "うち"], arti: "rumah, keluarga",
+    tema: "Irodori", sumber: "irodori", char: "家", onyomi: ["カ", "ケ"], kunyomi: ["いえ", "うち"], arti: "rumah, keluarga",
     kotoba: [
       { w: "家", furi: "いえ", a: "rumah" },
       { w: "作家", furi: "さっか", a: "penulis, pengarang" },
@@ -5457,7 +5874,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "方", onyomi: ["ホウ"], kunyomi: ["かた"], arti: "arah, cara, orang (sebutan sopan)",
+    tema: "Irodori", sumber: "irodori", char: "方", onyomi: ["ホウ"], kunyomi: ["かた"], arti: "arah, cara, orang (sebutan sopan)",
     kotoba: [
       { w: "方", furi: "かた", a: "orang (sebutan sopan)" },
       { w: "夕方", furi: "ゆうがた", a: "sore hari" },
@@ -5466,7 +5883,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "英", onyomi: ["エイ"], kunyomi: [], arti: "Inggris, unggul",
+    tema: "Irodori", sumber: "irodori", char: "英", onyomi: ["エイ"], kunyomi: [], arti: "Inggris, unggul",
     kotoba: [
       { w: "英語", furi: "えいご", a: "bahasa Inggris" },
       { w: "英会話", furi: "えいかいわ", a: "percakapan bahasa Inggris" },
@@ -5475,7 +5892,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "楽", onyomi: ["ガク", "ラク"], kunyomi: ["たの.しい"], arti: "senang, musik",
+    tema: "Irodori", sumber: "irodori", char: "楽", onyomi: ["ガク", "ラク"], kunyomi: ["たの.しい"], arti: "senang, musik",
     kotoba: [
       { w: "楽しい", furi: "たのしい", a: "menyenangkan" },
       { w: "楽", furi: "らく", a: "santai, mudah" },
@@ -5483,7 +5900,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "習", onyomi: ["シュウ"], kunyomi: ["なら.う"], arti: "belajar, berlatih",
+    tema: "Irodori", sumber: "irodori", char: "習", onyomi: ["シュウ"], kunyomi: ["なら.う"], arti: "belajar, berlatih",
     kotoba: [
       { w: "習う", furi: "ならう", a: "belajar" },
       { w: "練習", furi: "れんしゅう", a: "latihan" },
@@ -5491,7 +5908,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "季", onyomi: ["キ"], kunyomi: [], arti: "musim",
+    tema: "Irodori", sumber: "irodori", char: "季", onyomi: ["キ"], kunyomi: [], arti: "musim",
     kotoba: [
       { w: "季節", furi: "きせつ", a: "musim" },
       { w: "四季", furi: "しき", a: "empat musim" },
@@ -5500,7 +5917,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "節", onyomi: ["セツ", "セキ"], kunyomi: ["ふし"], arti: "ruas, musim, hemat",
+    tema: "Irodori", sumber: "irodori", char: "節", onyomi: ["セツ", "セキ"], kunyomi: ["ふし"], arti: "ruas, musim, hemat",
     kotoba: [
       { w: "季節", furi: "きせつ", a: "musim" },
       { w: "節分", furi: "せつぶん", a: "Setsubun (hari pergantian musim)" },
@@ -5508,7 +5925,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "春", onyomi: ["シュン"], kunyomi: ["はる"], arti: "musim semi",
+    tema: "Irodori", sumber: "irodori", char: "春", onyomi: ["シュン"], kunyomi: ["はる"], arti: "musim semi",
     kotoba: [
       { w: "春分", furi: "しゅんぶん", a: "ekuinoks musim semi" },
       { w: "春", furi: "はる", a: "musim semi" },
@@ -5516,7 +5933,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "夏", onyomi: ["カ", "ガ"], kunyomi: ["なつ"], arti: "musim panas",
+    tema: "Irodori", sumber: "irodori", char: "夏", onyomi: ["カ", "ガ"], kunyomi: ["なつ"], arti: "musim panas",
     kotoba: [
       { w: "夏", furi: "なつ", a: "musim panas" },
       { w: "夏休み", furi: "なつやすみ", a: "libur musim panas" },
@@ -5524,49 +5941,49 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "秋", onyomi: ["シュウ"], kunyomi: ["あき"], arti: "musim gugur",
+    tema: "Irodori", sumber: "irodori", char: "秋", onyomi: ["シュウ"], kunyomi: ["あき"], arti: "musim gugur",
     kotoba: [
       { w: "秋分", furi: "しゅうぶん", a: "ekuinoks musim gugur" },
       { w: "秋", furi: "あき", a: "musim gugur" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "冬", onyomi: ["トウ"], kunyomi: ["ふゆ"], arti: "musim dingin",
+    tema: "Irodori", sumber: "irodori", char: "冬", onyomi: ["トウ"], kunyomi: ["ふゆ"], arti: "musim dingin",
     kotoba: [
       { w: "冬", furi: "ふゆ", a: "musim dingin" },
       { w: "冬至", furi: "とうじ", a: "titik balik matahari musim dingin (winter solstice)" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "花", onyomi: ["カ"], kunyomi: ["はな"], arti: "bunga",
+    tema: "Irodori", sumber: "irodori", char: "花", onyomi: ["カ"], kunyomi: ["はな"], arti: "bunga",
     kotoba: [
       { w: "花瓶", furi: "かびん", a: "vas bunga" },
       { w: "花", furi: "はな", a: "bunga" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "同", onyomi: ["ドウ"], kunyomi: ["おな.じ"], arti: "sama",
+    tema: "Irodori", sumber: "irodori", char: "同", onyomi: ["ドウ"], kunyomi: ["おな.じ"], arti: "sama",
     kotoba: [
       { w: "同日", furi: "どうじつ", a: "hari yang sama" },
       { w: "同じ", furi: "おなじ", a: "sama" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "暑", onyomi: ["ショ"], kunyomi: ["あつ.い"], arti: "panas (cuaca)",
+    tema: "Irodori", sumber: "irodori", char: "暑", onyomi: ["ショ"], kunyomi: ["あつ.い"], arti: "panas (cuaca)",
     kotoba: [
       { w: "暑い", furi: "あつい", a: "panas" },
       { w: "蒸し暑い", furi: "むしあつい", a: "panas dan lembap" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "寒", onyomi: ["カン"], kunyomi: ["さむ.い"], arti: "dingin (cuaca)",
+    tema: "Irodori", sumber: "irodori", char: "寒", onyomi: ["カン"], kunyomi: ["さむ.い"], arti: "dingin (cuaca)",
     kotoba: [
       { w: "寒い", furi: "さむい", a: "dingin" },
       { w: "寒天", furi: "かんてん", a: "agar-agar (kanten)" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "晴", onyomi: ["セイ"], kunyomi: ["は.れ", "は.れる"], arti: "cerah",
+    tema: "Irodori", sumber: "irodori", char: "晴", onyomi: ["セイ"], kunyomi: ["は.れ", "は.れる"], arti: "cerah",
     kotoba: [
       { w: "晴れ", furi: "はれ", a: "cerah" },
       { w: "晴れる", furi: "はれる", a: "menjadi cerah" },
@@ -5576,7 +5993,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "雪", onyomi: ["セツ"], kunyomi: ["ゆき"], arti: "salju",
+    tema: "Irodori", sumber: "irodori", char: "雪", onyomi: ["セツ"], kunyomi: ["ゆき"], arti: "salju",
     kotoba: [
       { w: "雪", furi: "ゆき", a: "salju" },
       { w: "初雪", furi: "はつゆき", a: "salju pertama" },
@@ -5585,7 +6002,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "風", onyomi: ["フウ", "フ"], kunyomi: ["かぜ"], arti: "angin",
+    tema: "Irodori", sumber: "irodori", char: "風", onyomi: ["フウ", "フ"], kunyomi: ["かぜ"], arti: "angin",
     kotoba: [
       { w: "風", furi: "かぜ", a: "angin" },
       { w: "台風", furi: "たいふう", a: "topan" },
@@ -5595,7 +6012,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "昨", onyomi: ["サク"], kunyomi: [], arti: "sebelumnya, yang lalu",
+    tema: "Irodori", sumber: "irodori", char: "昨", onyomi: ["サク"], kunyomi: [], arti: "sebelumnya, yang lalu",
     kotoba: [
       { w: "昨日", furi: "きのう", a: "kemarin" },
       { w: "一昨日", furi: "おととい", a: "kemarin lusa" },
@@ -5604,7 +6021,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "強", onyomi: ["キョウ", "ゴウ"], kunyomi: ["つよ.い"], arti: "kuat",
+    tema: "Irodori", sumber: "irodori", char: "強", onyomi: ["キョウ", "ゴウ"], kunyomi: ["つよ.い"], arti: "kuat",
     kotoba: [
       { w: "強い", furi: "つよい", a: "kuat" },
       { w: "勉強する", furi: "べんきょうする", a: "belajar" },
@@ -5613,7 +6030,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "和", onyomi: ["ワ"], kunyomi: ["やわ.らぐ"], arti: "damai, Jepang (gaya)",
+    tema: "Irodori", sumber: "irodori", char: "和", onyomi: ["ワ"], kunyomi: ["やわ.らぐ"], arti: "damai, Jepang (gaya)",
     kotoba: [
       { w: "平和", furi: "へいわ", a: "perdamaian" },
       { w: "和食", furi: "わしょく", a: "masakan Jepang" },
@@ -5622,7 +6039,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "事", onyomi: ["ジ", "シ"], kunyomi: ["こと"], arti: "hal, perkara",
+    tema: "Irodori", sumber: "irodori", char: "事", onyomi: ["ジ", "シ"], kunyomi: ["こと"], arti: "hal, perkara",
     kotoba: [
       { w: "事", furi: "こと", a: "hal" },
       { w: "食事", furi: "しょくじ", a: "makan" },
@@ -5632,7 +6049,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "店", onyomi: ["テン"], kunyomi: ["みせ"], arti: "toko",
+    tema: "Irodori", sumber: "irodori", char: "店", onyomi: ["テン"], kunyomi: ["みせ"], arti: "toko",
     kotoba: [
       { w: "店", furi: "みせ", a: "toko" },
       { w: "店員", furi: "てんいん", a: "pegawai toko" },
@@ -5642,7 +6059,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "物", onyomi: ["ブツ", "モツ"], kunyomi: ["もの"], arti: "barang, benda",
+    tema: "Irodori", sumber: "irodori", char: "物", onyomi: ["ブツ", "モツ"], kunyomi: ["もの"], arti: "barang, benda",
     kotoba: [
       { w: "物", furi: "もの", a: "barang, benda" },
       { w: "食べ物", furi: "たべもの", a: "makanan" },
@@ -5653,7 +6070,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "館", onyomi: ["カン"], kunyomi: ["やかた"], arti: "gedung, aula",
+    tema: "Irodori", sumber: "irodori", char: "館", onyomi: ["カン"], kunyomi: ["やかた"], arti: "gedung, aula",
     kotoba: [
       { w: "博物館", furi: "はくぶつかん", a: "museum" },
       { w: "体育館", furi: "たいいくかん", a: "gedung olahraga" },
@@ -5662,7 +6079,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "動", onyomi: ["ドウ"], kunyomi: ["うご.く", "うご.かす"], arti: "bergerak",
+    tema: "Irodori", sumber: "irodori", char: "動", onyomi: ["ドウ"], kunyomi: ["うご.く", "うご.かす"], arti: "bergerak",
     kotoba: [
       { w: "動く", furi: "うごく", a: "bergerak" },
       { w: "動かす", furi: "うごかす", a: "menggerakkan" },
@@ -5674,7 +6091,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "試", onyomi: ["シ"], kunyomi: ["ため.す", "こころ.みる"], arti: "mencoba, menguji",
+    tema: "Irodori", sumber: "irodori", char: "試", onyomi: ["シ"], kunyomi: ["ため.す", "こころ.みる"], arti: "mencoba, menguji",
     kotoba: [
       { w: "試食", furi: "ししょく", a: "mencoba makan" },
       { w: "試着", furi: "しちゃく", a: "mencoba baju" },
@@ -5684,7 +6101,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "合", onyomi: ["ゴウ"], kunyomi: ["あ.う", "あ.い"], arti: "cocok, gabung",
+    tema: "Irodori", sumber: "irodori", char: "合", onyomi: ["ゴウ"], kunyomi: ["あ.う", "あ.い"], arti: "cocok, gabung",
     kotoba: [
       { w: "合う", furi: "あう", a: "cocok, pas" },
       { w: "間に合う", furi: "まにあう", a: "tepat waktu" },
@@ -5694,7 +6111,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "難", onyomi: ["ナン"], kunyomi: ["むずか.しい"], arti: "sulit",
+    tema: "Irodori", sumber: "irodori", char: "難", onyomi: ["ナン"], kunyomi: ["むずか.しい"], arti: "sulit",
     kotoba: [
       { w: "難しい", furi: "むずかしい", a: "sulit" },
       { w: "困難", furi: "こんなん", a: "kesulitan" },
@@ -5702,7 +6119,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "登", onyomi: ["ト", "トウ"], kunyomi: ["のぼ.る"], arti: "mendaki, naik",
+    tema: "Irodori", sumber: "irodori", char: "登", onyomi: ["ト", "トウ"], kunyomi: ["のぼ.る"], arti: "mendaki, naik",
     kotoba: [
       { w: "登る", furi: "のぼる", a: "mendaki, naik" },
       { w: "登山", furi: "とざん", a: "pendakian gunung" },
@@ -5710,7 +6127,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "茶", onyomi: ["サ"], kunyomi: ["ちゃ"], arti: "teh",
+    tema: "Irodori", sumber: "irodori", char: "茶", onyomi: ["サ"], kunyomi: ["ちゃ"], arti: "teh",
     kotoba: [
       { w: "茶", furi: "ちゃ", a: "teh" },
       { w: "茶道", furi: "さどう", a: "upacara minum teh" },
@@ -5719,7 +6136,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "酒", onyomi: ["シュ"], kunyomi: ["さけ", "さか"], arti: "minuman beralkohol",
+    tema: "Irodori", sumber: "irodori", char: "酒", onyomi: ["シュ"], kunyomi: ["さけ", "さか"], arti: "minuman beralkohol",
     kotoba: [
       { w: "酒", furi: "さけ", a: "minuman beralkohol" },
       { w: "日本酒", furi: "にほんしゅ", a: "sake Jepang" },
@@ -5728,7 +6145,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "材", onyomi: ["ザイ"], kunyomi: [], arti: "bahan",
+    tema: "Irodori", sumber: "irodori", char: "材", onyomi: ["ザイ"], kunyomi: [], arti: "bahan",
     kotoba: [
       { w: "人材", furi: "じんざい", a: "SDM" },
       { w: "材料", furi: "ざいりょう", a: "bahan, material" },
@@ -5736,7 +6153,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "料", onyomi: ["リョウ"], kunyomi: [], arti: "biaya, bahan",
+    tema: "Irodori", sumber: "irodori", char: "料", onyomi: ["リョウ"], kunyomi: [], arti: "biaya, bahan",
     kotoba: [
       { w: "無料", furi: "むりょう", a: "gratis" },
       { w: "有料", furi: "ゆうりょう", a: "berbayar" },
@@ -5745,7 +6162,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "野", onyomi: ["ヤ"], kunyomi: ["の"], arti: "ladang, liar",
+    tema: "Irodori", sumber: "irodori", char: "野", onyomi: ["ヤ"], kunyomi: ["の"], arti: "ladang, liar",
     kotoba: [
       { w: "野生", furi: "やせい", a: "liar (hewan/tumbuhan)" },
       { w: "野球", furi: "やきゅう", a: "bisbol" },
@@ -5753,7 +6170,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "菜", onyomi: ["サイ"], kunyomi: ["な"], arti: "sayuran",
+    tema: "Irodori", sumber: "irodori", char: "菜", onyomi: ["サイ"], kunyomi: ["な"], arti: "sayuran",
     kotoba: [
       { w: "野菜", furi: "やさい", a: "sayuran" },
       { w: "白菜", furi: "はくさい", a: "sawi putih" },
@@ -5761,7 +6178,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "肉", onyomi: ["ニク"], kunyomi: [], arti: "daging",
+    tema: "Irodori", sumber: "irodori", char: "肉", onyomi: ["ニク"], kunyomi: [], arti: "daging",
     kotoba: [
       { w: "牛肉", furi: "ぎゅうにく", a: "daging sapi" },
       { w: "肉体", furi: "にくたい", a: "tubuh fisik" },
@@ -5770,7 +6187,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "豚", onyomi: ["トン"], kunyomi: ["ぶた"], arti: "babi",
+    tema: "Irodori", sumber: "irodori", char: "豚", onyomi: ["トン"], kunyomi: ["ぶた"], arti: "babi",
     kotoba: [
       { w: "豚肉", furi: "ぶたにく", a: "daging babi" },
       { w: "豚汁", furi: "とんじる", a: "sup miso daging babi" },
@@ -5779,7 +6196,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "皿", onyomi: ["ベイ"], kunyomi: ["さら", "ざら"], arti: "piring",
+    tema: "Irodori", sumber: "irodori", char: "皿", onyomi: ["ベイ"], kunyomi: ["さら", "ざら"], arti: "piring",
     kotoba: [
       { w: "お皿", furi: "おさら", a: "piring" },
       { w: "小皿", furi: "こざら", a: "piring kecil" },
@@ -5787,7 +6204,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "持", onyomi: ["ジ"], kunyomi: ["も.つ"], arti: "membawa, memegang",
+    tema: "Irodori", sumber: "irodori", char: "持", onyomi: ["ジ"], kunyomi: ["も.つ"], arti: "membawa, memegang",
     kotoba: [
       { w: "持つ", furi: "もつ", a: "membawa" },
       { w: "お金持ち", furi: "おかねもち", a: "orang kaya" },
@@ -5796,70 +6213,70 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "卵", onyomi: ["ラン"], kunyomi: ["たまご"], arti: "telur",
+    tema: "Irodori", sumber: "irodori", char: "卵", onyomi: ["ラン"], kunyomi: ["たまご"], arti: "telur",
     kotoba: [
       { w: "生卵", furi: "なまたまご", a: "telur mentah" },
       { w: "卵子", furi: "らんし", a: "sel telur" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "湯", onyomi: ["トウ"], kunyomi: ["ゆ"], arti: "air panas",
+    tema: "Irodori", sumber: "irodori", char: "湯", onyomi: ["トウ"], kunyomi: ["ゆ"], arti: "air panas",
     kotoba: [
       { w: "銭湯", furi: "せんとう", a: "pemandian umum (dalam ruang)" },
       { w: "湯気", furi: "ゆげ", a: "uap air panas" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "味", onyomi: ["ミ"], kunyomi: ["あじ"], arti: "rasa",
+    tema: "Irodori", sumber: "irodori", char: "味", onyomi: ["ミ"], kunyomi: ["あじ"], arti: "rasa",
     kotoba: [
       { w: "中味", furi: "なかみ", a: "isi, kandungan" },
       { w: "甘味料", furi: "かんみりょう", a: "pemanis buatan" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "甘", onyomi: ["カン"], kunyomi: ["あま.い", "うま.い"], arti: "manis",
+    tema: "Irodori", sumber: "irodori", char: "甘", onyomi: ["カン"], kunyomi: ["あま.い", "うま.い"], arti: "manis",
     kotoba: [
       { w: "甘口", furi: "あまくち", a: "kata-kata manis" },
       { w: "甘やかす", furi: "あまやかす", a: "memanjakan" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "辛", onyomi: ["シン"], kunyomi: ["から.い"], arti: "pedas",
+    tema: "Irodori", sumber: "irodori", char: "辛", onyomi: ["シン"], kunyomi: ["から.い"], arti: "pedas",
     kotoba: [
       { w: "辛抱", furi: "しんぼう", a: "kesabaran" },
       { w: "辛苦", furi: "しんく", a: "kesusahan" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "苦", onyomi: ["ク"], kunyomi: ["にが.い", "くる.しい"], arti: "pahit, menderita",
+    tema: "Irodori", sumber: "irodori", char: "苦", onyomi: ["ク"], kunyomi: ["にが.い", "くる.しい"], arti: "pahit, menderita",
     kotoba: [
       { w: "苦難", furi: "くなん", a: "penderitaan" },
       { w: "苦手", furi: "にがて", a: "lemah, tidak jago" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "法", onyomi: ["ホウ", "ハッ"], kunyomi: ["のり"], arti: "hukum, cara",
+    tema: "Irodori", sumber: "irodori", char: "法", onyomi: ["ホウ", "ハッ"], kunyomi: ["のり"], arti: "hukum, cara",
     kotoba: [
       { w: "法人", furi: "ほうじん", a: "badan hukum" },
       { w: "方法", furi: "ほうほう", a: "cara" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "理", onyomi: ["リ"], kunyomi: ["ことわり"], arti: "alasan, prinsip",
+    tema: "Irodori", sumber: "irodori", char: "理", onyomi: ["リ"], kunyomi: ["ことわり"], arti: "alasan, prinsip",
     kotoba: [
       { w: "理由", furi: "りゆう", a: "alasan" },
       { w: "無理", furi: "むり", a: "mustahil" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "調", onyomi: ["チョウ"], kunyomi: ["しら.べる", "ととの.う"], arti: "memeriksa, menyiapkan",
+    tema: "Irodori", sumber: "irodori", char: "調", onyomi: ["チョウ"], kunyomi: ["しら.べる", "ととの.う"], arti: "memeriksa, menyiapkan",
     kotoba: [
       { w: "体調", furi: "たいちょう", a: "kondisi tubuh" },
       { w: "口調", furi: "くちょう", a: "nada bicara" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "道", onyomi: ["ドウ", "トウ"], kunyomi: ["みち"], arti: "jalan",
+    tema: "Irodori", sumber: "irodori", char: "道", onyomi: ["ドウ", "トウ"], kunyomi: ["みち"], arti: "jalan",
     kotoba: [
       { w: "公道", furi: "こうどう", a: "jalan umum, jalan raya" },
       { w: "鉄道", furi: "てつどう", a: "rel kereta api" },
@@ -5867,28 +6284,28 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "公", onyomi: ["コウ", "ク"], kunyomi: ["おおやけ"], arti: "publik, umum",
+    tema: "Irodori", sumber: "irodori", char: "公", onyomi: ["コウ", "ク"], kunyomi: ["おおやけ"], arti: "publik, umum",
     kotoba: [
       { w: "公会堂", furi: "こうかいどう", a: "balai kota" },
       { w: "公平", furi: "こうへい", a: "keadilan, adil" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "園", onyomi: ["エン"], kunyomi: ["その"], arti: "taman, kebun",
+    tema: "Irodori", sumber: "irodori", char: "園", onyomi: ["エン"], kunyomi: ["その"], arti: "taman, kebun",
     kotoba: [
       { w: "学園", furi: "がくえん", a: "akademi, kampus" },
       { w: "花園", furi: "はなぞの", a: "taman bunga" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "神", onyomi: ["シン", "ジン"], kunyomi: ["かみ"], arti: "dewa, tuhan",
+    tema: "Irodori", sumber: "irodori", char: "神", onyomi: ["シン", "ジン"], kunyomi: ["かみ"], arti: "dewa, tuhan",
     kotoba: [
       { w: "神話", furi: "しんわ", a: "mitos, legenda" },
       { w: "女神", furi: "めがみ", a: "dewi" }
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "近", onyomi: ["キン"], kunyomi: ["ちか.い"], arti: "dekat",
+    tema: "Irodori", sumber: "irodori", char: "近", onyomi: ["キン"], kunyomi: ["ちか.い"], arti: "dekat",
     kotoba: [
       { w: "側近", furi: "そっきん", a: "ajudan, orang kepercayaan dekat" },
       { w: "近代", furi: "きんだい", a: "zaman modern" },
@@ -5896,7 +6313,7 @@ const KANJI = [
     ]
   },
   {
-    tema: "Irodori Bab 13", sumber: "irodori", char: "送", onyomi: ["ソウ"], kunyomi: ["おく.る"], arti: "mengirim",
+    tema: "Irodori", sumber: "irodori", char: "送", onyomi: ["ソウ"], kunyomi: ["おく.る"], arti: "mengirim",
     kotoba: [
       { w: "送る", furi: "おくる", a: "mengirim, mengantar" },
       { w: "放送", furi: "ほうそう", a: "siaran" },
@@ -11232,6 +11649,306 @@ const BUNPOU = [
         arti: "[KS], gak/bukan? (versi な-keiyoushi)",
         catatan: "しずか→しずかじゃありませんか (tenang, kan?). Fungsinya sama kayak versi い-keiyoushi, tinggal beda konjugasi negatifnya.",
         contoh: []
+      }
+    ]
+  },
+
+  // ═══ IRODORI — BAB 13 ═══
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 13",
+    judul: "〔動詞ないけい〕んですが… — Ngelaporin Masalah buat Minta Bantuan Gak Langsung",
+    sub: "んですが (dari んです, Hari 30/Bab 12) ditempel ke bentuk NAI — dipakai buat ngelaporin sesuatu yang HARUSNYA jalan tapi gak jalan/gak kejadian, dengan nuansa 'nih ada masalah...' tanpa langsung minta tolong secara eksplisit. Lawan bicara biasanya nangkep sendiri maksudnya dan nawarin bantuan.",
+    refFrom: { tema: "Hari 30 (Bab 12)", judul: "んです (Penegasan & Alasan)" },
+    items: [
+      {
+        pola: "〔動詞ないけい〕んですが…",
+        romaji: "[V-nai] ndesu ga...",
+        arti: "...nih gak [V] (ngelaporin masalah, minta bantuan gak langsung)",
+        catatan: "Beda dari んです yang biasa (nyatain alasan/penegasan), di sini gunanya buat MELAPORKAN PROBLEM ke orang yang bisa bantuin (atasan, teknisi, dsb) — biasanya ditutup pakai が/けど yang digantung (gak lanjut ke kalimat lain), biar lawan bicara yang nawarin solusi.",
+        contoh: [
+          {jp:"パソコンが　うごかないんですが…", id:"PC-nya gak jalan nih... (mengharap dibantu)"},
+          {jp:"トイレットペーパーが　なくなったんですが…", id:"Tisu toiletnya habis nih... (mengharap diganti)"}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 13",
+    judul: "〔動詞ます-stem〕＋そうです — \"Kelihatannya Bakal...\" (Versi Kata Kerja)",
+    sub: "Perluasan そうです (kesan dari penampilan) yang udah dipelajari buat kata sifat (Irodori Bab 12) — sekarang ditempel ke KATA KERJA buat nunjukin dugaan 'kayaknya bakal terjadi/kejadian' berdasarkan situasi sekarang.",
+    refFrom: { tema: "Irodori Bab 12", judul: "い/な-けいようし＋そうです — \"Kelihatannya...\" (Kesan dari Penampilan)" },
+    items: [
+      {
+        pola: "〔動詞ます-stem〕＋そうです",
+        romaji: "[V-masu stem] + sou desu",
+        arti: "Kelihatannya bakal [V].",
+        catatan: "Buang ます, tempel langsung そうです. 終わります→終わりそうです (kelihatannya bakal selesai). かかります→かかりそうです (kelihatannya bakal makan waktu segini).",
+        contoh: [
+          {jp:"あと　10分（ぷん）ぐらいで　終（お）わりそうです。", id:"Kayaknya bakal selesai sekitar 10 menit lagi."}
+        ]
+      },
+      {
+        pola: "〔動詞ないけい、いをのぞく〕＋さそうです",
+        romaji: "[V-nai, buang i] + sasou desu",
+        arti: "Kelihatannya gak bakal [V].",
+        catatan: "Bentuk negatifnya rada beda dari pola biasa: ambil bentuk NAI-nya dulu, buang い di ujung, baru tambahin さそうです (bukan なさそうです langsung ditempel ke ます-stem). 終わらない→終わら（い dibuang）→終わらなさそうです (kelihatannya gak bakal selesai).",
+        contoh: [
+          {jp:"きょうじゅうに　終（お）わらなさそうです。", id:"Kelihatannya gak bakal selesai hari ini."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 13",
+    judul: "〔動詞じしょけい〕と、〔akibat〕 — \"Kalau/Begitu [V], Otomatis [Akibat]\"",
+    sub: "と ditempel langsung ke bentuk KAMUS (jisho-kei) buat nyatain SYARAT yang akibatnya PASTI/OTOMATIS kejadian tiap kali syaratnya terpenuhi — beda dari たら/ば yang lebih ke kondisi umum/andaikan.",
+    items: [
+      {
+        pola: "〔動詞じしょけい〕と、〔akibat〕。",
+        romaji: "[V-kamus] to, [akibat].",
+        arti: "Kalau [V], otomatis [akibat]. (hasil yang pasti/mekanis)",
+        catatan: "Cocok buat instruksi alat/mesin, arah jalan, atau hukum alam — pokoknya hal yang OTOMATIS terjadi tanpa perlu niat/pilihan orangnya. Gak bisa dipakai buat ngajak/nyuruh/minta izin di bagian akibatnya (gak boleh diakhiri ～てください/～ましょう dsb).",
+        contoh: [
+          {jp:"この　ボタンを　おすと、コピーが　はじまります。", id:"Kalau tombol ini ditekan, otomatis fotokopinya mulai."},
+          {jp:"はるに　なると、さくらが　さきます。", id:"Kalau musim semi tiba, sakura otomatis mekar."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 13",
+    judul: "〔動詞ます-stem〕たいときは〜 — \"Kalau Mau [V], ~\"",
+    sub: "Gabungan たい (keinginan) + とき (Irodori Bab 10) — dipakai di instruksi/panduan buat nunjukin apa yang harus dilakukan KALAU seseorang lagi pengen ngelakuin sesuatu.",
+    refFrom: { tema: "Irodori Bab 10", judul: "〜とき — Waktu Terjadinya Sesuatu, per Jenis Kata" },
+    items: [
+      {
+        pola: "〔動詞ます-stem〕たいときは、〔instruksi〕。",
+        romaji: "[V-masu stem]tai toki wa, [instruksi].",
+        arti: "Kalau mau [V], [instruksi].",
+        catatan: "たい di sini dikonjugasi kayak KS-い biasa (langsung + とき, gak perlu の kayak KB). Sering muncul di panduan kantor/instruksi tertulis.",
+        contoh: [
+          {jp:"かいぎしつを　つかいたいときは、しゃないメールで　れんらくしてください。", id:"Kalau mau pakai ruang rapat, tolong hubungi lewat email internal."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 13",
+    judul: "はい／いいえ pada Pertanyaan Bentuk Negatif — Jawaban Ikut Faktanya, Bukan Katanya",
+    sub: "Kalau ditanya pakai kalimat NEGATIF (〜ないですか／〜ませんか), はい/いいえ di bahasa Jepang ngikutin BENAR/SALAHNYA fakta — bukan ngikutin 'setuju/gak setuju' kayak di Indonesia. Ini sering kebalik-balik kalau diterjemahin mentah-mentah ke bahasa Indonesia.",
+    items: [
+      {
+        pola: "〔動詞〕ませんか／ないですか。 — はい、〔negatif〕。／いいえ、〔positif〕。",
+        romaji: "[V]masen ka / nai desu ka? — Hai, [negatif]. / Iie, [positif].",
+        arti: "...gak, ya? — Iya (benar, memang gak). / Bukan (justru iya/ada).",
+        catatan: "はい dipakai kalau JAWABANNYA MEMBENARKAN kalimat negatif tadi (artinya tetep 'gak'/'nggak ada'), いいえ dipakai kalau jawabannya MEMBANTAH (artinya jadi 'iya'/'ada'). Kebalikan dari logika はい=ya/いいえ=tidak di Indonesia.",
+        contoh: [
+          {jp:"たばこを　すったことは　ないですか。 — はい、ないです。", id:"Belum pernah ngerokok, kan? — Iya (benar), belum pernah."},
+          {jp:"たばこを　すったことは　ないですか。 — いいえ、あります。", id:"Belum pernah ngerokok, kan? — Enggak (salah), pernah kok."}
+        ]
+      }
+    ]
+  },
+
+  // ═══ IRODORI — BAB 14 ═══
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 14",
+    judul: "〔KK-てけい／KS-くて・で／KB-で〕、〔akibat〕 — Sebab-Akibat buat Lapor Sakit/Izin",
+    sub: "Pola sebab-akibat pakai てform yang udah dipelajari (Irodori Bab 7, dipraktekin lagi versi kata sifat di Bab 12) — di bab ini dipakai spesifik buat konteks LAPOR SAKIT/MINTA IZIN, nyambungin alasan (gejala/kondisi) ke akibatnya (mau izin/pulang cepat/dsb).",
+    refFrom: { tema: "Irodori Bab 7", judul: "〔KB〕で／〔動詞て形〕、〔akibat〕 — Sebab-Akibat (Beda dari から／ので)" },
+    items: [
+      {
+        pola: "〔KK-てけい／KS-くて・で／KB-で〕、〔akibat〕。 (contoh tambahan, konteks izin sakit)",
+        romaji: "[V-te / i-adj-kute / na-adj・KB-de], [akibat].",
+        arti: "[Alasan], jadi [akibat].",
+        catatan: "Sama persis aturan konjugasinya kayak yang udah dipelajari — cuma di sini dipraktekin buat alasan MEDIS/IZIN: gejala sakit (KS/KK) digandeng ke permintaan izin/cuti/pulang cepat.",
+        contoh: [
+          {jp:"ねつが　あって、きょうは　やすみたいです。", id:"Lagi demam, jadi hari ini mau izin."},
+          {jp:"のどが　いたくて、こえが　でません。", id:"Tenggorokan sakit, jadi suara gak keluar."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 14",
+    judul: "〜。それで、〜 — \"Karena Itu, (Aku Lakuin Aksi Ini)\"",
+    sub: "それで nyambungin dua kalimat: kalimat 1 = sebab/situasi, kalimat 2 (setelah それで) = AKSI/TINDAKAN yang diambil sebagai respons. Beda dari から／ので (nempel di TENGAH kalimat, sebelum akibat) — それで berdiri sebagai kata penghubung di AWAL kalimat baru, dan wajib diikuti tindakan konkret, bukan cuma kondisi.",
+    items: [
+      {
+        pola: "〔situasi／alasan〕。それで、〔tindakan yang diambil〕。",
+        romaji: "[situasi]. Sore de, [tindakan].",
+        arti: "[Situasi]. Karena itu, [aku/dia lakuin tindakan ini].",
+        catatan: "それで dipakai buat NERUSKAN CERITA — kalimat sebelumnya kasih tau situasinya, それで nyambungin ke apa yang akhirnya DILAKUKAN karena situasi itu. Beda dari んです yang cuma ngasih alasan/penegasan tanpa harus ada tindakan susulan.",
+        contoh: [
+          {jp:"でんしゃが　とまりました。それで、タクシーで　きました。", id:"Keretanya berhenti. Karena itu, saya naik taksi ke sini."},
+          {jp:"ねつが　ありました。それで、びょういんに　いきました。", id:"Lagi demam. Karena itu, saya pergi ke rumah sakit."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 14",
+    judul: "〔動詞てけい〕もいいですか／もいいでしょうか — Level Kesopanan Minta Izin",
+    sub: "Dua-duanya buat MINTA IZIN (udah dipelajari dasarnya di Hari 24/Bab 10) — bedanya cuma tingkat kesopanan: でしょうか lebih halus/formal daripada ですか, cocok dipakai ke atasan/orang yang levelnya lebih tinggi.",
+    refFrom: { tema: "Hari 24 (Bab 10)", judul: "動詞（てけい）＋も　いいですか。 (Meminta Izin Melakukan Sesuatu)" },
+    items: [
+      {
+        pola: "〔動詞てけい〕もいいでしょうか。 (versi lebih sopan, contoh tambahan)",
+        romaji: "[V-te] mo ii deshou ka?",
+        arti: "Boleh saya [V]? (lebih sopan/formal daripada もいいですか)",
+        catatan: "でしょうか di sini nurunin nada 'nanya langsung', jadi kesannya lebih hati-hati/merendah — cocok dipakai ke atasan, klien, atau orang yang belum akrab. もいいですか tetep sopan tapi lebih netral/biasa dipakai ke rekan sejawat.",
+        contoh: [
+          {jp:"あしたの　ごご、そうたいしても　いいでしょうか。", id:"Besok sore, boleh saya pulang lebih awal ya? (sopan)"},
+          {jp:"すこし　やすんでも　いいですか。", id:"Boleh saya istirahat sebentar? (netral)"}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 14",
+    judul: "〔動詞ないけい〕ければならないんです — \"Harus [V] Nih\" (Kewajiban + Penegasan)",
+    sub: "なければならない = pola KEWAJIBAN ('harus'), baru di bab ini. Digabung sama んです (Hari 30/Bab 12) di akhir buat nambahin nuansa 'ini alasan kenapa aku minta izin/gak bisa hadir', bukan sekadar nyatain kewajiban doang.",
+    refFrom: { tema: "Hari 30 (Bab 12)", judul: "んです (Penegasan & Alasan)" },
+    items: [
+      {
+        pola: "〔動詞ないけい（いをのぞく）〕ければならないんです。",
+        romaji: "[V-nai, buang i] + kereba naranai ndesu.",
+        arti: "Soalnya harus [V] nih.",
+        catatan: "Ambil bentuk NAI, buang い di ujung, tambah ければならない (harus). Baru tempelin んです di paling akhir buat ngasih nuansa 'ini alasannya'. いく→いかない→いか＋なければならないんです (soalnya harus pergi nih).",
+        contoh: [
+          {jp:"きょう、びょういんに　いかなければならないんです。", id:"Hari ini, soalnya saya harus ke rumah sakit."},
+          {jp:"しりょうを　ていしゅつしなければならないんです。", id:"Soalnya saya harus nyerahin dokumen."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 14",
+    judul: "〜んです — Fungsi Menegaskan & Mempertegas Alasan (Konteks Izin Kerja)",
+    sub: "んです (Hari 30/Bab 12) dipraktekin lagi khusus di konteks KANTOR — dipakai buat mempertegas alasan pas izin/lapor sesuatu ke atasan, biar kesannya 'ini alasan yang jelas/serius', bukan cuma info biasa.",
+    refFrom: { tema: "Hari 30 (Bab 12)", judul: "んです (Penegasan & Alasan)" },
+    items: [
+      {
+        pola: "〔動詞普通形／KS普通形／KBな〕＋（な）んです。 (contoh tambahan, konteks kantor)",
+        romaji: "[futsuukei] + (na) ndesu.",
+        arti: "Soalnya begini... (mempertegas alasan ke atasan/rekan kerja)",
+        catatan: "Sama aturannya kayak sebelumnya (KK/KS-い langsung + んです, KS-な/KB + なんです) — bedanya cuma konteks pemakaian di sini lebih formal/kantor, biasanya dipakai pas lapor ke atasan/HR.",
+        contoh: [
+          {jp:"しつれいします。ちょっと　ようじが　あるんです。", id:"Permisi. Soalnya ada urusan sebentar."},
+          {jp:"すみません、きょうは　むすこの　たんじょうびなんです。", id:"Maaf, soalnya hari ini ulang tahun anak saya."}
+        ]
+      }
+    ]
+  },
+
+  // ═══ IRODORI — BAB 15 ═══
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 15",
+    judul: "〜んです — Buat Jelasin Gejala Sakit ke Dokter",
+    sub: "んです (Hari 30/Bab 12) dipraktekin lagi khusus buat konteks JELASIN GEJALA SAKIT ke dokter/perawat — mempertegas 'ini keluhan yang aku rasain', biasanya jadi jawaban dari どうしましたか.",
+    refFrom: { tema: "Hari 30 (Bab 12)", judul: "んです (Penegasan & Alasan)" },
+    items: [
+      {
+        pola: "〔KS-い／KK普通形〕＋んです。 (contoh tambahan, konteks gejala sakit)",
+        romaji: "[futsuukei] + ndesu.",
+        arti: "Soalnya [gejala] nih. (jawaban ke dokter)",
+        catatan: "Pola sama kayak sebelumnya, cuma isi kalimatnya spesifik ngejelasin gejala/keluhan fisik — biasa dipakai jawab pertanyaan どうしましたか (ada keluhan apa).",
+        contoh: [
+          {jp:"どうしましたか。 — のどが　いたいんです。", id:"Ada keluhan apa? — Soalnya tenggorokan saya sakit."},
+          {jp:"ねつが　あって、せきも　でるんです。", id:"Lagi demam, dan batuk juga keluar nih."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 15",
+    judul: "〔動詞ないけい〕でください — Larangan Halus dari Dokter (Saran Medis)",
+    sub: "ないでください (Hari 25/Bab 10, awalnya buat larangan/minta tolong umum) — di bab ini dipraktekin khusus buat SARAN/LARANGAN MEDIS dari dokter, misal makanan/aktivitas yang sebaiknya dihindari selama sakit.",
+    refFrom: { tema: "Hari 25 (Bab 10)", judul: "動詞（ないけい）＋で　ください (Meminta/Melarang Secara Halus)" },
+    items: [
+      {
+        pola: "〔動詞ないけい〕でください。 (contoh tambahan, saran/larangan medis)",
+        romaji: "[V-nai] de kudasai.",
+        arti: "Tolong jangan [V]. (saran dokter)",
+        catatan: "Pola sama kayak larangan biasa — konteksnya aja yang khusus medis, jadi nuansanya lebih ke 'demi kesehatan kamu, sebaiknya jangan' daripada larangan tegas/aturan.",
+        contoh: [
+          {jp:"からい　ものは　たべないでください。", id:"Tolong jangan makan makanan yang pedas."},
+          {jp:"きょうは　おふろに　はいらないでください。", id:"Hari ini tolong jangan mandi (berendam)."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 15",
+    judul: "〔動詞じしょけい〕＋名詞 — Kata Kerja Bentuk Kamus Langsung Nempel ke Kata Benda",
+    sub: "BARU: kata kerja bentuk BIASA (futsuukei, di sini khususnya bentuk kamus/jisho-kei) bisa langsung nempel di DEPAN kata benda buat NERANGIN kata benda itu (mirip klausa relatif 'yang ~' di Indonesia) — gak perlu partikel penghubung apa-apa.",
+    items: [
+      {
+        pola: "〔動詞じしょけい〕＋〔KB〕",
+        romaji: "[V-kamus] + [KB]",
+        arti: "KB yang [V]",
+        catatan: "Kata kerjanya TETEP bentuk kamus/futsuukei (bukan ます-kei), langsung ditempel ke KB di belakangnya tanpa apa-apa lagi. Beda dari そうな (Bab 12) yang isinya kata sifat + そう, ini murni kata kerja bentuk biasa.",
+        contoh: [
+          {jp:"ねつを　さげる　くすりです。", id:"Ini obat yang menurunkan demam."},
+          {jp:"せきが　でる　びょうきです。", id:"Ini penyakit yang menyebabkan batuk keluar."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 15",
+    judul: "〔動詞じしょけい〕まえに／〔動詞たけい〕あと — Sebelum/Sesudah Melakukan Sesuatu",
+    sub: "Dua pola waktu buat nunjukin urutan aksi: まえに (sebelum) nempel ke bentuk KAMUS, あと (sesudah) nempel ke bentuk LAMPAU (た形) — dua-duanya BARU di bab ini, sering muncul di instruksi minum obat.",
+    items: [
+      {
+        pola: "〔動詞じしょけい〕まえに、〔aksi〕。",
+        romaji: "[V-kamus] mae ni, [aksi].",
+        arti: "Sebelum [V], [aksi].",
+        catatan: "まえに selalu nempel ke bentuk KAMUS walaupun aksinya belum kejadian — kata kerjanya GAK berubah jadi lampau/negatif, tetep bentuk dasar.",
+        contoh: [
+          {jp:"ねる　まえに、この　くすりを　のんでください。", id:"Sebelum tidur, tolong minum obat ini."}
+        ]
+      },
+      {
+        pola: "〔動詞たけい〕あと（で）、〔aksi〕。",
+        romaji: "[V-ta] ato (de), [aksi].",
+        arti: "Sesudah [V], [aksi].",
+        catatan: "あと nempel ke bentuk LAMPAU (た形) — logikanya aksinya udah kejadian dulu baru aksi berikutnya. で di belakang あと OPSIONAL, boleh pakai boleh tidak.",
+        contoh: [
+          {jp:"しょくじを　した　あとで、くすりを　のんでください。", id:"Sesudah makan, tolong minum obat."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 15",
+    judul: "〜時に — Nunjuk Momen/Kondisi Spesifik (Beda dari とき Klausa Biasa)",
+    sub: "〜時に di sini beda pemakaian dari とき yang biasa dipelajari sebagai KLAUSA (Irodori Bab 10, buat nunjuk 'waktu terjadinya sesuatu' dalam kalimat panjang) — di instruksi obat, 時に lebih ke nunjuk MOMEN/KONDISI SPESIFIK yang singkat (kayak nama waktu: 食後/寝る前/発熱時), fungsinya mirip partikel waktu biasa tapi ditempelin ke kondisi, bukan cuma jam/tanggal.",
+    refFrom: { tema: "Irodori Bab 10", judul: "〜とき — Waktu Terjadinya Sesuatu, per Jenis Kata" },
+    items: [
+      {
+        pola: "〔KB／動詞じしょけい〕＋時（とき）に、〔aksi〕。",
+        romaji: "[KB / V-kamus] + toki ni, [aksi].",
+        arti: "Pada saat [kondisi], [aksi].",
+        catatan: "Perhatikan: 時に di sini nempel ke KATA BENDA/KONDISI SINGKAT (kayak 発熱時 = saat demam), beda dari とき versi klausa panjang yang biasanya nyambungin dua kalimat lengkap. Fungsinya lebih deket ke partikel waktu (mirip に biasa) daripada konjungsi klausa.",
+        contoh: [
+          {jp:"ねつが　たかい時（とき）に、この　くすりを　のんでください。", id:"Pada saat demam tinggi, tolong minum obat ini."}
+        ]
       }
     ]
   }
