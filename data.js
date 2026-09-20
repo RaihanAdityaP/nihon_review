@@ -475,7 +475,8 @@ const KT={
 {k:"チョコレート",r:"chokoreeto",a:"cokelat (makanan)",n:"Serapan 'chocolate'. Sering disingkat 'choko' dalam percakapan santai."},
 {k:"ネックレス",r:"nekkuresu",a:"kalung",n:"Serapan 'necklace'."},
 {k:"じしょ",r:"jisho",a:"kamus",kj:"辞書",n:"Ji (kata) + Sho (buku/tulisan)."},
-{k:"ほうき",r:"houki",a:"sapu",n:"Alat kebersihan tradisional. Di sekolah Jepang, siswa sering nyapu kelas sendiri pas soujikanas (jam bersih-bersih)."}
+{k:"ほうき",r:"houki",a:"sapu",n:"Alat kebersihan tradisional. Di sekolah Jepang, siswa sering nyapu kelas sendiri pas soujikanas (jam bersih-bersih)."},
+{k:"はいかん",r:"haikan",a:"pipa, saluran/perpipaan",kj:"配管"}
 ]},
 "Bencana & Kecelakaan":{rows:[
 {k:"かじ",r:"kaji",a:"kebakaran",kj:"火事"},
@@ -483,7 +484,9 @@ const KT={
 {k:"じしん",r:"jishin",a:"gempa bumi",kj:"地震"},
 {k:"つなみ",r:"tsunami",a:"tsunami",kj:"津波",n:"Kata 'tsunami' sudah masuk kosakata Inggris/internasional apa adanya."},
 {k:"じこ",r:"jiko",a:"kecelakaan, insiden",kj:"事故"},
-{k:"あしをひっかけられます",r:"ashi o hikkakeraremasu",a:"dijegal (kena jegal kaki)",kj:"足を引っかけられます",n:"Bentuk PASIF dari 足を引っかけます (menjegal kaki orang). '友達に足を引っかけられました' = dijegal sama teman."}
+{k:"あしをひっかけられます",r:"ashi o hikkakeraremasu",a:"dijegal (kena jegal kaki)",kj:"足を引っかけられます",n:"Bentuk PASIF dari 足を引っかけます (menjegal kaki orang). '友達に足を引っかけられました' = dijegal sama teman."},
+{k:"はんにん",r:"hannin",a:"pelaku (kejahatan)",kj:"犯人"},
+{k:"ひぎしゃ",r:"higisha",a:"tersangka",kj:"被疑者",n:"Beda dari 犯人 (hannin, pelaku yang sudah terbukti) — 被疑者 statusnya masih 'dicurigai', belum tentu terbukti bersalah."}
 ]},
 "Kepercayaan & Takhayul":{rows:[
 {k:"めいしん",r:"meishin",a:"tahayul, mitos",kj:"迷信"},
@@ -591,6 +594,7 @@ const KT={
 {k:"せきがいせん",r:"sekigaisen",a:"garis infra merah",kj:"赤外線"},
 {k:"せいしゅん",r:"seishun",a:"masa muda",kj:"青春"},
 {k:"げんご",r:"gengo",a:"bahasa (istilah umum/akademis)",kj:"言語"},
+{k:"ぎじゅつ",r:"gijutsu",a:"teknologi, teknik, keahlian",kj:"技術"},
 {k:"しゅわ",r:"shuwa",a:"bahasa isyarat",kj:"手話",n:"Shu (tangan) + Wa (bicara) — bahasa yang dipakai komunitas Tuli, pakai gerakan tangan."},
 {k:"ことば",r:"kotoba",a:"kata, kosa kata",kj:"言葉"},
 {k:"ユーモア",r:"yuumoa",a:"humor"},
@@ -1009,6 +1013,7 @@ const KT={
 {k:"なんにち",r:"nannichi",a:"tanggal berapa?",kj:"何日",n:"なん (berapa) + にち. Untuk menanyakan tanggal."}
 ]},
 "Bagian Tubuh":{rows:[
+{k:"しんぞう",r:"shinzou",a:"jantung",kj:"心臓"},
 {k:"ち",r:"chi",a:"darah",kj:"血"},
 {k:"からだ",r:"karada",a:"tubuh",kj:"体",n:"Kata umum untuk keseluruhan tubuh. 'Karada ga tsuyoi' = badannya kuat/sehat."},
 {k:"かお",r:"kao",a:"wajah",kj:"顔",n:"Kanji ini menggambarkan seluruh bagian depan kepala, dari dahi sampai dagu."},
@@ -1605,6 +1610,7 @@ const KATA_SIFAT = {
 {k:"ふしぎ",r:"fushigi",a:"aneh, misterius, ajaib",kj:"不思議"},
 {k:"にがて",r:"nigate",a:"kelemahan spesifik, kurang jago di sesuatu",kj:"苦手",n:"'〜が にがてです' = kurang jago/gak pede di bidang tertentu. Beda dari よわいところ yang lebih umum 'titik lemah'."},
 {k:"かわいそう",r:"kawaisou",a:"kasihan, malang",kj:"可哀想",n:"Walau berakhiran う, ini na-keiyoushi, bukan i-keiyoushi — jangan tertukar."},
+{k:"まんぞく",r:"manzoku",a:"puas",kj:"満足",n:"'まんぞくです' = puas/merasa cukup. Bisa juga dipakai jadi kata kerja 満足します."},
 {k:"とくべつ",r:"tokubetsu",a:"spesial, istimewa",kj:"特別"},
 {k:"しんせん",r:"shinsen",a:"segar (fresh)",kj:"新鮮"},
 {k:"いろいろ",r:"iroiro",a:"bermacam-macam",kj:"色々"},
@@ -1794,7 +1800,9 @@ const KATA_KERJA = {
 {k:"はなせます",r:"hanasemasu",a:"bisa berbicara",kj:"話せます",n:"Bentuk POTENSIAL (kanoukei) dari 話します — nunjukin KEMAMPUAN, bukan cuma 'ngomong' biasa. 'もし動物と話せたら' = kalau seandainya bisa ngobrol sama hewan.",type:"jidoushi"},
 {k:"ふります",r:"furimasu",a:"mengibaskan, menggoyangkan",kj:"振ります",n:"'しっぽを振ります' = mengibaskan ekor. Beda kanji & arti dari 降ります (furimasu, turun hujan/salju) meski bacaannya sama persis.",type:"tadoushi"},
 {k:"かみます",r:"kamimasu",a:"menggigit",kj:"噛みます",n:"Dipakai buat hewan yang menggigit (beda dari 刺します yang khusus serangga menyengat/menusuk).",type:"tadoushi"},
-{k:"だまります",r:"damarimasu",a:"diam, terdiam",kj:"黙ります",n:"'黙ってください' = tolong diam. Beda dari 静かにします (jadi tenang/gak berisik) — 黙ります lebih ke berhenti ngomong sama sekali.",type:"jidoushi"}
+{k:"だまります",r:"damarimasu",a:"diam, terdiam",kj:"黙ります",n:"'黙ってください' = tolong diam. Beda dari 静かにします (jadi tenang/gak berisik) — 黙ります lebih ke berhenti ngomong sama sekali.",type:"jidoushi"},
+{k:"つまずきます",r:"tsumazukimasu",a:"tersandung",kj:"躓きます",type:"jidoushi"},
+{k:"ぶつかります",r:"butsukarimasu",a:"terbentur, menabrak, ketabrak",kj:"ぶつかります",n:"Verba INTRANSITIF — kejadiannya gak sengaja/otomatis (misal '車にぶつかりました' = ketabrak mobil). Pasangan transitifnya: ぶつけます (membenturkan, Kelompok II).",type:"jidoushi"}
 ]},
 "Kata Kerja - Kelompok II":{rows:[
 {k:"こわれます",r:"kowaremasu",a:"rusak (fisik/benda)",kj:"壊れます",n:"Buat benda yang rusak secara fisik (patah, gak bisa jalan, dsb). 'Pasokon ga kowaremashita' = laptop rusak.",type:"jidoushi"},
@@ -1860,7 +1868,8 @@ const KATA_KERJA = {
 {k:"よごれます",r:"yogoremasu",a:"menjadi kotor",kj:"汚れます",n:"Verba INTRANSITIF (bendanya jadi kotor dengan sendirinya) — pasangan transitifnya 汚します (mengotori).",type:"jidoushi"},
 {k:"ぬれます",r:"nuremasu",a:"basah, menjadi basah",kj:"濡れます",n:"Verba INTRANSITIF (bendanya jadi basah dengan sendirinya, mis. kehujanan) — '雨で濡れます' = basah kena hujan.",type:"jidoushi"},
 {k:"のせます",r:"nosemasu",a:"mengunggah, memasang (foto/postingan)",kj:"載せます",n:"'インスタに写真をのせます' = mengunggah foto ke Instagram. Aslinya berarti 'meletakkan/menaruh di atas' — dipakai kiasan buat upload.",type:"tadoushi"},
-{k:"ぶつけます",r:"butsukemasu",a:"terbentur, membenturkan (bagian tubuh)",kj:"ぶつけます",n:"Meski bentuknya transitif (pakai を), sering dipakai buat kejadian gak sengaja: '頭をぶつけました' = kepala kebentur (bukan sengaja dibenturin). Pasangan intransitifnya: ぶつかります (nabrak/ketabrak).",type:"tadoushi"}
+{k:"ぶつけます",r:"butsukemasu",a:"terbentur, membenturkan (bagian tubuh)",kj:"ぶつけます",n:"Meski bentuknya transitif (pakai を), sering dipakai buat kejadian gak sengaja: '頭をぶつけました' = kepala kebentur (bukan sengaja dibenturin). Pasangan intransitifnya: ぶつかります (nabrak/ketabrak).",type:"tadoushi"},
+{k:"ひっかけます",r:"hikkakemasu",a:"menjegal, mengaitkan",kj:"引っ掛けます",n:"'足を引っかけます' = menjegal kaki (orang). Bentuk pasifnya (引っかけられます, 'dijegal') sudah ada di kategori Bencana & Kecelakaan.",type:"tadoushi"}
 ]},
 "Kata Kerja - Kelompok III":{rows:[
 {k:"がっかりします",r:"gakkari shimasu",a:"kecewa",kj:"がっかりします",type:"jidoushi"},
@@ -4720,6 +4729,172 @@ bab16: {
     {k:"よやく",r:"yoyaku",a:"memesan",kj:"予約"},
     {k:"うけつけちゅう",r:"uketsuke chuu",a:"sedang menerima; melayani",kj:"受付中"},
     {k:"クリニック",r:"kurinikku",a:"klinik"}
+  ]}
+},
+
+bab17: {
+  "Bertamu ke Rumah (ごめんください)": { rows: [
+    {k:"あがる",r:"agaru",a:"masuk ke rumah [1]",kj:"上がる"},
+    {k:"うちの",r:"uchi no",a:"~saya"},
+    {k:"おくさん",r:"okusan",a:"istri",kj:"奥さん"},
+    {k:"むすこ",r:"musuko",a:"putra; anak laki-laki",kj:"息子"},
+    {k:"おちゃ",r:"ocha",a:"teh khas Jepang",kj:"お茶"},
+    {k:"あしをくずす",r:"ashi wo kuzusu",a:"duduk lebih rileks dan nyaman [1]",kj:"足をくずす"},
+    {k:"らくにする",r:"raku ni suru",a:"anggap saja seperti di rumah sendiri [3]",kj:"楽にする"},
+    {k:"あそびにくる",r:"asobi ni kuru",a:"datang berkunjung (main) [3]",kj:"遊びに来る"},
+    {k:"ごめんください",r:"gomen kudasai",a:"Permisi."},
+    {k:"いらっしゃい",r:"irasshai",a:"Selamat datang. / Silakan masuk."},
+    {k:"ようこそ",r:"youkoso",a:"Selamat datang."},
+    {k:"おじゃまします",r:"ojama shimasu",a:"Permisi, mohon maaf mengganggu Anda."},
+    {k:"おせわになっています",r:"osewa ni natte imasu",a:"Terima kasih untuk semua bantuannya selama ini.",kj:"お世話になっています"},
+    {k:"こちらこそ",r:"kochira koso",a:"Sama-sama."},
+    {k:"ごちそうさまでした",r:"gochisousama deshita",a:"Terima kasih untuk hidangannya."},
+    {k:"おじゃましました",r:"ojama shimashita",a:"Maaf saya telah mengganggu / merepotkan Anda."}
+  ]},
+  "Buah Tangan (これ、お土産です)": { rows: [
+    {k:"おみやげ",r:"omiyage",a:"oleh-oleh; cendera mata",kj:"お土産"},
+    {k:"コーヒー",r:"koohii",a:"kopi"},
+    {k:"ちょうみりょう",r:"choumiryou",a:"bumbu",kj:"調味料"},
+    {k:"カップ",r:"kappu",a:"cangkir"},
+    {k:"キーホルダー",r:"kii horudaa",a:"gantungan kunci"},
+    {k:"ペン",r:"pen",a:"pena"},
+    {k:"おまもり",r:"omamori",a:"Omamori (Azimat)",kj:"お守り"},
+    {k:"えはがき",r:"ehagaki",a:"kartu pos bergambar",kj:"絵葉書"},
+    {k:"しゃしんしゅう",r:"shashinshuu",a:"album foto; kumpulan foto",kj:"写真集"},
+    {k:"かざり",r:"kazari",a:"dekorasi; hiasan",kj:"飾り"},
+    {k:"にんぎょう",r:"ningyou",a:"boneka",kj:"人形"},
+    {k:"かばん",r:"kaban",a:"tas"},
+    {k:"バッグ",r:"baggu",a:"tas"},
+    {k:"まよけ",r:"mayoke",a:"azimat (benda yang diyakini memiliki kekuatan magis tertentu)",kj:"魔よけ"},
+    {k:"ネパール",r:"nepaaru",a:"Nepal"},
+    {k:"ナンプラー",r:"nanpuraa",a:"nam pla (bumbu khas Thailand)"},
+    {k:"タイ",r:"tai",a:"Thailand"},
+    {k:"トゥロン",r:"tuoron",a:"turon (penganan khas Filipina)"},
+    {k:"フィリピン",r:"firipin",a:"Filipina"},
+    {k:"スラーソー",r:"suraasoo",a:"sra sor (minuman beralkohol khas Kamboja)"},
+    {k:"カンボジア",r:"kanbojia",a:"Kamboja"},
+    {k:"かべ",r:"kabe",a:"dinding",kj:"壁"},
+    {k:"かける",r:"kakeru",a:"menggantung, contoh: 壁にかける [2]",kj:"かける"},
+    {k:"はいってくる",r:"haitte kuru",a:"memasuki [3]",kj:"入って来る"},
+    {k:"わるい",r:"warui",a:"buruk; jahat",kj:"悪い"},
+    {k:"かける",r:"kakeru",a:"menyiram [2]"},
+    {k:"～といいます",r:"~to iimasu",a:"disebut~ ; dinamakan~"},
+    {k:"プレゼント",r:"purezento",a:"hadiah"},
+    {k:"こめ",r:"kome",a:"beras",kj:"米／お米"},
+    {k:"つよい",r:"tsuyoi",a:"kuat",kj:"強い"}
+  ]},
+  "Hadiah dari Teman (誕生日に、友だちにもらったんです)": { rows: [
+    {k:"ピアス",r:"piasu",a:"anting-anting"},
+    {k:"マグカップ",r:"magukappu",a:"cangkir"},
+    {k:"ぼうし",r:"boushi",a:"topi",kj:"帽子"},
+    {k:"おかあさん",r:"okaasan",a:"ibu (orang lain)",kj:"お母さん"},
+    {k:"おにいさん",r:"oniisan",a:"kakak laki-laki (orang lain)",kj:"お兄さん"},
+    {k:"たんじょうび",r:"tanjoubi",a:"hari ulang tahun",kj:"誕生日"},
+    {k:"もらう",r:"morau",a:"mendapatkan; menerima [1]"},
+    {k:"おしゃれ（な）",r:"oshare (na)",a:"keren; stylish"},
+    {k:"すてき（な）",r:"suteki (na)",a:"indah; bagus; cantik"},
+    {k:"くれる",r:"kureru",a:"menerima (diberikan oleh orang lain untuk diri pembicara) [2]"},
+    {k:"りょうしん",r:"ryoushin",a:"orang tua",kj:"両親"},
+    {k:"いいでしょう？",r:"ii deshou?",a:"Bagus / indah, kan?"},
+    {k:"バリ",r:"bari",a:"Bali"},
+    {k:"おとうさん",r:"otousan",a:"ayah (orang lain)",kj:"お父さん"},
+    {k:"おねえさん",r:"oneesan",a:"kakak perempuan (orang lain)",kj:"お姉さん"},
+    {k:"おとうとさん",r:"otoutosan",a:"adik laki-laki (orang lain)",kj:"弟さん"},
+    {k:"いもうとさん",r:"imoutosan",a:"adik perempuan (orang lain)",kj:"妹さん"},
+    {k:"おこさん",r:"okosan",a:"anak (orang lain)",kj:"お子さん"},
+    {k:"むすこさん",r:"musukosan",a:"anak laki-laki (orang lain)",kj:"息子さん"},
+    {k:"むすめさん",r:"musumesan",a:"anak perempuan (orang lain)",kj:"娘さん"}
+  ]},
+  "Email Ucapan Terima Kasih (お礼のメール)": { rows: [
+    {k:"おたく",r:"otaku",a:"rumah; kediaman",kj:"お宅"},
+    {k:"おじゃまする",r:"ojama suru",a:"mengunjungi [3]"},
+    {k:"けいけん",r:"keiken",a:"pengalaman",kj:"経験"},
+    {k:"よろしくおつたえください",r:"yoroshiku otsutae kudasai",a:"Tolong sampaikan salam saya."}
+  ]}
+},
+
+bab18: {
+  "Ucapan Selamat (おめでとうございます)": { rows: [
+    {k:"けっこん（する）",r:"kekkon (suru)",a:"menikah [3]",kj:"結婚（する）"},
+    {k:"しゅっさん",r:"shussan",a:"melahirkan",kj:"出産"},
+    {k:"うまれる",r:"umareru",a:"lahir [2]",kj:"生まれる"},
+    {k:"ごうかく（する）",r:"goukaku (suru)",a:"lulus [3]",kj:"合格（する）"},
+    {k:"おとこのこ",r:"otoko no ko",a:"anak laki-laki",kj:"男の子"},
+    {k:"おんなのこ",r:"onna no ko",a:"anak perempuan",kj:"女の子"},
+    {k:"きめる",r:"kimeru",a:"memutuskan [2]",kj:"決める"},
+    {k:"かんがえる",r:"kangaeru",a:"berpikir [2]",kj:"考える"},
+    {k:"ごけっこん",r:"gokekkon",a:"pernikahan",kj:"ご結婚"},
+    {k:"わたしたち",r:"watashitachi",a:"kami; kita",kj:"私たち"},
+    {k:"うれしい",r:"ureshii",a:"senang"},
+    {k:"あいて",r:"aite",a:"pasangan; suami / istri",kj:"相手"},
+    {k:"おいわい",r:"oiwai",a:"perayaan; hadiah",kj:"お祝い"},
+    {k:"ごちそうする",r:"gochisou suru",a:"menjamu; mentraktir [3]"},
+    {k:"きっと",r:"kitto",a:"pasti"},
+    {k:"あげる",r:"ageru",a:"memberi [2]"},
+    {k:"たのしみですね",r:"tanoshimi desu ne",a:"Wah, menyenangkan, ya."},
+    {k:"おめでとう（ございます）",r:"omedetou (gozaimasu)",a:"Selamat."},
+    {k:"おしあわせに",r:"oshiawase ni",a:"Semoga bahagia.",kj:"お幸せに"},
+    {k:"ジェーエルピーティー",r:"jee-eru-pii-tii",a:"JLPT (Japanese-Language Proficiency Test)"}
+  ]},
+  "Rencana Pesta Perpisahan (送別会をしませんか？)": { rows: [
+    {k:"フォトフレーム",r:"foto fureemu",a:"bingkai foto"},
+    {k:"とけい",r:"tokei",a:"jam",kj:"時計"},
+    {k:"ネクタイ",r:"nekutai",a:"dasi"},
+    {k:"アクセサリー",r:"akusesarii",a:"aksesori"},
+    {k:"ハンカチ",r:"hankachi",a:"saputangan"},
+    {k:"ケーキ",r:"keeki",a:"kue"},
+    {k:"ギフトカード",r:"gifuto kaado",a:"voucer; kartu diskon"},
+    {k:"きこく（する）",r:"kikoku (suru)",a:"pulang ke negara asal [3]",kj:"帰国（する）"},
+    {k:"さびしい",r:"sabishii",a:"sepi (dirindukan)"},
+    {k:"そうべつかい",r:"soubetsukai",a:"pesta perpisahan",kj:"送別会"},
+    {k:"よぶ",r:"yobu",a:"memanggil (mengundang) [1]",kj:"呼ぶ"},
+    {k:"よやくする",r:"yoyaku suru",a:"memesan [3]",kj:"予約する"},
+    {k:"おもいで",r:"omoide",a:"kenangan",kj:"思い出"},
+    {k:"のこる",r:"nokoru",a:"tetap tinggal; tetap ada [1]",kj:"残る"},
+    {k:"おもう",r:"omou",a:"mengira; berpikir [1]",kj:"思う"},
+    {k:"よさん",r:"yosan",a:"anggaran",kj:"予算"},
+    {k:"さんかしゃ",r:"sankasha",a:"peserta",kj:"参加者"},
+    {k:"それなら",r:"sorenara",a:"kalau begitu"},
+    {k:"デジタルフォトフレーム",r:"dejitaru foto fureemu",a:"bingkai foto digital"},
+    {k:"えらぶ",r:"erabu",a:"memilih [1]",kj:"選ぶ"}
+  ]},
+  "Pidato Perpisahan (いろいろお世話になりました)": { rows: [
+    {k:"それでは",r:"sore de wa",a:"sekarang"},
+    {k:"あいさつ",r:"aisatsu",a:"sambutan; salam (perpisahan)"},
+    {k:"はじめ",r:"hajime",a:"pertama-tama"},
+    {k:"ともだちができる",r:"tomodachi ga dekiru",a:"mendapat teman [2]",kj:"友だちができる"},
+    {k:"たいせつにする",r:"taisetsu ni suru",a:"jaga; rawat dengan baik [3]",kj:"大切にする"},
+    {k:"かざる",r:"kazaru",a:"memajang [1]",kj:"飾る"},
+    {k:"～のこと",r:"~no koto",a:"tentang ~, contoh: 私のこと = tentang saya"},
+    {k:"わすれる",r:"wasureru",a:"lupa [2]",kj:"忘れる"},
+    {k:"おげんきで",r:"o-genki de",a:"Jaga diri baik-baik. / Sehat selalu."},
+    {k:"かんぱい",r:"kanpai",a:"Bersulang",kj:"乾杯"},
+    {k:"おせわになりました",r:"osewa ni narimashita",a:"Terima kasih untuk segala bantuannya."},
+    {k:"げんきでいてください",r:"genki de ite kudasai",a:"Semoga sehat selalu."}
+  ]},
+  "Ucapan di Kartu Ulang Tahun (誕生日の書き込み)": { rows: [
+    {k:"メッセージ",r:"messeeji",a:"pesan"},
+    {k:"とうとう",r:"toutou",a:"akhirnya"},
+    {k:"～だい",r:"~dai",a:"~ an, contoh: 30代 = usia 30-an",kj:"～代"},
+    {k:"うたう",r:"utau",a:"menyanyi [1]",kj:"歌う"},
+    {k:"おどる",r:"odoru",a:"menari [1]",kj:"踊る"},
+    {k:"サービス",r:"saabisu",a:"layanan; layanan gratis"},
+    {k:"あたたかい",r:"atatakai",a:"hangat"},
+    {k:"カラオケ",r:"karaoke",a:"karaoke"},
+    {k:"しあわせ（な）",r:"shiawase (na)",a:"bahagia",kj:"幸せ（な）"},
+    {k:"すてき（な）",r:"suteki (na)",a:"istimewa; indah",kj:"素敵（な）"},
+    {k:"～ますように",r:"~masu you ni",a:"Semoga~ . (digunakan untuk mengekspresikan harapan)"}
+  ]},
+  "Pesan Ucapan Selamat & Perpisahan (お祝いのメッセージ)": { rows: [
+    {k:"かてい",r:"katei",a:"rumah tangga; keluarga",kj:"家庭"},
+    {k:"いつまでも",r:"itsu made mo",a:"selamanya"},
+    {k:"きずく",r:"kizuku",a:"membangun [1]",kj:"築く"},
+    {k:"すえながく",r:"suenagaku",a:"selamanya",kj:"末永く"},
+    {k:"いなくなる",r:"inaku naru",a:"pergi meninggalkan [1]"},
+    {k:"がんばってください",r:"ganbatte kudasai",a:"Sukses selalu dan tetap semangat."},
+    {k:"これまで",r:"kore made",a:"sampai saat ini"},
+    {k:"かつやく",r:"katsuyaku",a:"keberhasilan",kj:"活躍"},
+    {k:"きたいする",r:"kitai suru",a:"berharap [3]",kj:"期待する"}
   ]}
 }
 
@@ -11948,6 +12123,146 @@ const BUNPOU = [
         catatan: "Perhatikan: 時に di sini nempel ke KATA BENDA/KONDISI SINGKAT (kayak 発熱時 = saat demam), beda dari とき versi klausa panjang yang biasanya nyambungin dua kalimat lengkap. Fungsinya lebih deket ke partikel waktu (mirip に biasa) daripada konjungsi klausa.",
         contoh: [
           {jp:"ねつが　たかい時（とき）に、この　くすりを　のんでください。", id:"Pada saat demam tinggi, tolong minum obat ini."}
+        ]
+      }
+    ]
+  },
+
+  // ═══ IRODORI — BAB 16 ═══
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 16",
+    judul: "〔動詞じしょけい〕と　いいです — \"Kalau [V], Bagus (Saran)\"",
+    sub: "Pola と (Irodori Bab 13, syarat-akibat otomatis) digabung いいです di belakang buat ngasih SARAN — 'kalau ngelakuin [V], hasilnya bakal bagus/baik'. Beda dari と biasa yang cuma nyatain akibat mekanis, di sini akibatnya spesifik berupa penilaian baik (いい).",
+    refFrom: { tema: "Irodori Bab 13", judul: "〔動詞じしょけい〕と、〔akibat〕 — \"Kalau/Begitu [V], Otomatis [Akibat]\"" },
+    items: [
+      {
+        pola: "〔動詞じしょけい〕と　いいです。",
+        romaji: "[V-kamus] to ii desu.",
+        arti: "Kalau [V], bagus. (saran halus)",
+        catatan: "Dipakai buat ngasih saran dengan nada halus — bukan perintah, lebih ke 'kayaknya bakal bagus kalau kamu ngelakuin ini'. Sering dipakai dokter/senpai/orang yang lebih berpengalaman buat nyaranin sesuatu.",
+        contoh: [
+          {jp:"はやく　ねると　いいです。", id:"Kalau tidur lebih awal, bagus lho. (saran)"},
+          {jp:"びょういんに　いくと　いいですよ。", id:"Kalau pergi ke rumah sakit, bagus lho."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 16",
+    judul: "〔動詞ます-stem〕すぎます — \"Kebanyakan/Terlalu [V]\"",
+    sub: "すぎます (Kelompok II, asalnya dari 過ぎる = melewati batas) ditempel ke ます-stem kata kerja buat nunjukin sesuatu dilakukan MELEBIHI BATAS WAJAR — nuansanya hampir selalu NEGATIF (efek buruk/gak sehat/berlebihan), walaupun secara gramatikal gak selalu wajib negatif.",
+    items: [
+      {
+        pola: "〔動詞ます-stem〕すぎます。",
+        romaji: "[V-masu stem] + sugimasu.",
+        arti: "Kebanyakan/terlalu banyak [V].",
+        catatan: "Buang ます, tempel langsung すぎます (konjugasinya sendiri ikutin Kelompok II: すぎません/すぎました/すぎて dst). たべます→たべすぎます (kebanyakan makan). のみます→のみすぎます (kebanyakan minum). Nuansanya beda dari とても/すごく (yang netral, sekadar 'sangat') — すぎます nyiratin 'ini udah kelewatan/gak baik'.",
+        contoh: [
+          {jp:"きのう、おさけを　のみすぎました。", id:"Kemarin, saya kebanyakan minum alkohol."},
+          {jp:"はたらきすぎると、からだに　よくないです。", id:"Kalau kerja kebanyakan, gak bagus buat badan."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 16",
+    judul: "〔動詞じしょけい／ないけい〕ように　しています — \"Berusaha (Gak) [V] (Kebiasaan yang Diusahakan)\"",
+    sub: "ようにしています nempel ke bentuk KAMUS (buat kebiasaan yang diusahakan dijalanin) atau bentuk NAI (buat kebiasaan yang diusahakan DIHINDARI) — nuansanya lebih ke USAHA/KOMITMEN JANGKA PANJANG, bukan cuma sekali kejadian. Kebanyakan dipakai dalam konteks POSITIF (kebiasaan baik), dan TUJUAN di baliknya boleh gak disebutin sama sekali kalau udah jelas dari konteks.",
+    items: [
+      {
+        pola: "〔動詞じしょけい〕ように　しています。",
+        romaji: "[V-kamus] you ni shite imasu.",
+        arti: "Saya berusaha untuk [V]. (kebiasaan yang diusahakan)",
+        catatan: "Bentuk KAMUS dipakai kalau usahanya ke arah MELAKUKAN sesuatu secara rutin.",
+        contoh: [
+          {jp:"まいにち、うんどうするように　しています。", id:"Saya berusaha olahraga tiap hari."}
+        ]
+      },
+      {
+        pola: "〔動詞ないけい〕ように　しています。",
+        romaji: "[V-nai] you ni shite imasu.",
+        arti: "Saya berusaha untuk tidak [V]. (kebiasaan yang diusahakan dihindari)",
+        catatan: "Bentuk NAI dipakai kalau usahanya ke arah MENGHINDARI sesuatu. Tujuan di belakangnya OPSIONAL — boleh ditambahin (けんこうのために dst) atau dibiarin nggak disebut kalau udah jelas dari konteks obrolan.",
+        contoh: [
+          {jp:"よるは　たべすぎないように　しています。", id:"Saya berusaha untuk tidak kebanyakan makan di malam hari."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 16",
+    judul: "〔動詞たけい〕り、〔動詞たけい〕り　します — Menyebutkan Beberapa Kegiatan Contoh (Gak Berurutan/Gak Lengkap)",
+    sub: "たり～たりします nempel ke bentuk LAMPAU (た形) tiap kata kerja yang disebut, ditutup します di akhir — dipakai buat nyebutin BEBERAPA CONTOH kegiatan dari sekumpulan kegiatan yang lebih banyak (gak harus berurutan waktunya, dan gak harus lengkap semua disebutin, cuma contoh representatif).",
+    items: [
+      {
+        pola: "〔動詞たけい〕り、〔動詞たけい〕り　します。",
+        romaji: "[V1-ta]ri, [V2-ta]ri shimasu.",
+        arti: "Melakukan hal-hal kayak [V1], [V2], dst. (contoh kegiatan, gak berurutan)",
+        catatan: "Beda dari て形 yang nyambungin aksi secara BERURUTAN kronologis — たり～たりします cuma ngasih CONTOH acak dari kegiatan yang dilakukan, gak nyiratin urutan waktu. します di akhir dikonjugasi sesuai waktu (します/しました/しています dst).",
+        contoh: [
+          {jp:"しゅうまつは、うんどうしたり、ほんを　よんだり　します。", id:"Akhir pekan, saya (biasanya) olahraga, baca buku, dan lain-lain."},
+          {jp:"やすみのひは、そうじしたり、りょうりしたり　しました。", id:"Di hari libur, saya beres-beres, masak, dan lain-lain."}
+        ]
+      }
+    ]
+  },
+
+  // ═══ IRODORI — BAB 17 ═══
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 17",
+    judul: "〔動詞普通形（過去）〕＋名詞 — Kata Kerja Bentuk Lampau Nempel ke Kata Benda (Sopan & Biasa)",
+    sub: "Perluasan dari めいししゅうしょく (Irodori Bab 15, waktu itu cuma bentuk kamus/jisho-kei) — sekarang kata kerja BENTUK LAMPAU juga bisa langsung nempel ke kata benda buat nerangin 'KB yang sudah di-V', baik pakai bentuk sopan (ました) maupun bentuk biasa/casual (た形). Bentuk yang nempel ke KB HARUS bentuk futsuukei (biasa), walaupun kalimatnya sendiri sopan.",
+    refFrom: { tema: "Irodori Bab 15", judul: "〔動詞じしょけい〕＋名詞 — Kata Kerja Bentuk Kamus Langsung Nempel ke Kata Benda" },
+    items: [
+      {
+        pola: "〔動詞たけい〕＋〔KB〕",
+        romaji: "[V-ta] + [KB]",
+        arti: "KB yang sudah di-[V].",
+        catatan: "Walaupun kalimat keseluruhannya bisa aja sopan (pakai です di akhir), kata kerja yang NEMPEL ke KB TETEP harus bentuk biasa/futsuukei (た形), BUKAN bentuk ました. あにが　くれた　おまもりです (bentuk kalimatnya sopan lewat です, tapi くれた tetep bentuk biasa, bukan くれました).",
+        contoh: [
+          {jp:"あにが　くれた　おまもりです。", id:"Ini jimat yang diberikan kakak laki-laki saya."},
+          {jp:"たんじょうびに、ともだちに　もらった　プレゼントです。", id:"Ini hadiah yang saya terima dari teman waktu ulang tahun."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 17",
+    judul: "〔ひと〕に　〔もの〕を　もらいます — Menerima Sesuatu dari Orang Lain",
+    sub: "もらいます dipakai buat nyeritain PEMBERIAN dari orang lain — SUBJEKNYA bisa diri sendiri ATAUPUN orang lain (netral, gak terikat cuma ke pembicara), dan biasanya kesannya lebih 'informasional/wajar' — kayak emang udah sewajarnya/masuk akal orang itu ngasih (gak ada nuansa emosional khusus kayak くれます).",
+    items: [
+      {
+        pola: "〔ひと〕に　〔もの〕を　もらいます。",
+        romaji: "[orang] ni [barang] wo moraimasu.",
+        arti: "(Saya/dia) menerima [barang] dari [orang].",
+        catatan: "に di sini nunjuk SUMBER/PEMBERI. Subjek kalimat (yang nerima) bisa pembicara sendiri MAUPUN orang lain — gak dibatasin cuma buat diri sendiri kayak くれます. Nuansanya netral: nyatain fakta ada pemberian, tanpa nyiratin kedekatan emosional khusus dari si pemberi.",
+        contoh: [
+          {jp:"たんじょうびに、ともだちに　プレゼントを　もらいました。", id:"Waktu ulang tahun, saya menerima hadiah dari teman."},
+          {jp:"かのじょは　せんせいに　ほんを　もらいました。", id:"Dia menerima buku dari gurunya."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 17",
+    judul: "〔ひと〕が　〔わたし〕に　〔もの〕を　くれます — Diberi Sesuatu (Kesan Lebih Personal)",
+    sub: "くれます juga berarti 'diberi/menerima', TAPI beda dari もらいます: penerimanya WAJIB pembicara sendiri (atau orang di 'lingkaran dalam' pembicara — keluarga/kelompoknya), gak bisa dipakai buat nyeritain orang ketiga netral nerima sesuatu. Nuansanya juga lebih PERSONAL/berkesan — nyiratin rasa terima kasih/kedekatan ke pemberi, bukan cuma info transaksi biasa.",
+    items: [
+      {
+        pola: "〔ひと〕が　〔わたし〕に　〔もの〕を　くれます。",
+        romaji: "[orang] ga [saya] ni [barang] wo kuremasu.",
+        arti: "[Orang] memberikan [barang] ke saya. (kesan personal/berkesan)",
+        catatan: "SUBJEK di sini adalah SI PEMBERI (bukan penerima kayak もらいます), pakai partikel が. Penerimanya cuma bisa pembicara sendiri atau in-group-nya pembicara (gak bisa buat 'dia menerima dari dia', harus pakai もらいます buat itu). Sering に　わたし-nya dihilangin kalau udah jelas dari konteks kalau penerimanya ya si pembicara.",
+        contoh: [
+          {jp:"あにが　（わたしに）おまもりを　くれました。", id:"Kakak laki-laki saya memberikan jimat (ke saya). (kesan berkesan/personal)"},
+          {jp:"ともだちが　たんじょうびに　ケーキを　くれました。", id:"Teman saya memberikan kue waktu ulang tahun saya."}
         ]
       }
     ]
