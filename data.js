@@ -12266,6 +12266,103 @@ const BUNPOU = [
         ]
       }
     ]
+  },
+
+  // ═══ IRODORI — BAB 18 ═══
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 18",
+    judul: "〔普通形〕＋そうです（伝聞） — \"Katanya...\" (Menyampaikan Kabar dari Sumber Lain)",
+    sub: "そうです versi 伝聞 (denger-denger/katanya) ini BEDA TOTAL cara nempelnya dari そうです versi 様態 (kelihatannya, Irodori Bab 12-13) — walau bentuk akhirannya keliatan sama, konjugasinya dan fungsinya beda. Fungsinya buat NERUSIN INFO yang didengar/dibaca dari sumber lain (berita, orang lain, dsb) ke lawan bicara — bukan opini/dugaan sendiri.",
+    refFrom: { tema: "Irodori Bab 12", judul: "い/な-けいようし＋そうです — \"Kelihatannya...\" (Kesan dari Penampilan)" },
+    items: [
+      {
+        pola: "〔動詞・い形普通形〕＋そうです。／〔な形・KB＋だ〕＋そうです。",
+        romaji: "[futsuukei] + sou desu. (な-adj/KB + da + sou desu)",
+        arti: "Katanya [info yang didengar dari sumber lain].",
+        catatan: "PERBEDAAN UTAMA dari そうです 'kelihatannya' (様態): (1) NEMPELNYA ke bentuk 普通形 UTUH (kamus/た/ない apa adanya, GAK dipotong kayak ます-stem atau い dibuang), (2) な-keiyoushi dan kata benda WAJIB pakai だ dulu sebelum そうです (beda dari 様態 yang langsung nempel tanpa だ). Contoh kontras: やすそうです (様態, 'kelihatannya murah', dari やすい dibuang い+そう) VS やすいそうです (伝聞, 'katanya murah', い-nya TETEP ada + そうです utuh).",
+        contoh: [
+          {jp:"てんきよほうに　よると、あしたは　あめが　ふるそうです。", id:"Menurut ramalan cuaca, katanya besok akan hujan."},
+          {jp:"あのみせは　やすいそうです。", id:"Katanya toko itu murah. (denger dari orang lain — beda dari やすそうです 'kelihatannya murah dari tampilannya')"},
+          {jp:"かれは　げんきだそうです。", id:"Katanya dia sehat-sehat aja. (な-keiyoushi + だ + そうです)"}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 18",
+    judul: "あげます／くれます／もらいます — Arah Pemberian, Siapa Pakai に dan が",
+    sub: "Tiga-tiganya artinya 'memberi/menerima', bedanya cuma ARAH pemberian relatif ke PEMBICARA. Kunci paling gampang: lihat SIAPA YANG JADI SUBJEK kalimat dan ke MANA arah barangnya pindah. Pemberi selalu ditandai が, penerima selalu ditandai に — bedanya cuma SIAPA yang boleh jadi pemberi/penerima di tiap kata kerja.",
+    refFrom: { tema: "Irodori Bab 17", judul: "〔ひと〕が　〔わたし〕に　〔もの〕を　くれます — Diberi Sesuatu (Kesan Lebih Personal)" },
+    items: [
+      {
+        pola: "〔pemberi〕が／は　〔penerima〕に　〔barang〕を　あげます。",
+        romaji: "[pemberi] ga/wa [penerima] ni [barang] wo agemasu.",
+        arti: "[Pemberi] memberikan [barang] ke [penerima].",
+        catatan: "あげます dipakai kalau PENERIMANYA BUKAN pembicara sendiri — bisa 'saya kasih ke orang lain' ATAU 'orang lain kasih ke orang lain lagi' (asal bukan 'ke saya'). Kalau penerimanya balik ke pembicara, WAJIB pakai くれます, bukan あげます — ini yang sering ketuker. Ringkasnya arah panah 'siapa-ke-siapa': あげます = (saya/dia) → orang lain. くれます = orang lain → (saya). もらいます = fokusnya di sisi PENERIMA (siapapun, termasuk saya), 'menerima dari [に]'.",
+        contoh: [
+          {jp:"わたしは　ともだちに　プレゼントを　あげました。", id:"Saya memberikan hadiah ke teman saya. (saya→orang lain, jadi あげます)"},
+          {jp:"あにが　いもうとに　おかしを　あげました。", id:"Kakak laki-laki memberikan kue ke adik perempuan. (orang lain→orang lain, tetep あげます karena penerimanya bukan pembicara)"}
+        ]
+      },
+      {
+        pola: "Kata kerja lain yang ngikutin ARAH あげます (dari saya/orang lain, KE orang lain): 貸します(かします)／送ります(おくります)／伝えます(つたえます)／教えます(おしえます)",
+        romaji: "kashimasu / okurimasu / tsutaemasu / oshiemasu — pola arah sama kayak あげます",
+        arti: "meminjamkan / mengirim / menyampaikan / mengajarkan — ke [penerima]に",
+        catatan: "Kata kerja-kata kerja ini ikutin pola arah yang SAMA kayak あげます (pemberi/pelaku が・penerima に), TAPI beda dari あげます sendiri (yang murni 'memberi'), makna kata kerjanya masing-masing tetep spesifik ('meminjamkan' beda dari 'memberi', dst).",
+        contoh: [
+          {jp:"せんせいが　がくせいに　にほんごを　おしえます。", id:"Guru mengajar bahasa Jepang ke murid."},
+          {jp:"わたしは　ともだちに　ほんを　かしました。", id:"Saya meminjamkan buku ke teman."}
+        ]
+      },
+      {
+        pola: "Kata kerja lain yang ngikutin ARAH もらいます (penerima jadi subjek, sumber ditandai に): 借ります(かります)／習います(ならいます)",
+        romaji: "karimasu / naraimasu — pola arah sama kayak もらいます",
+        arti: "meminjam (dari) / belajar/mempelajari (dari)",
+        catatan: "Di sini SUBJEKNYA adalah yang NERIMA manfaatnya (yang minjem/yang belajar), dan SUMBERNYA (yang punya barang/yang ngajarin) ditandai に — sama persis strukturnya kayak もらいます.",
+        contoh: [
+          {jp:"わたしは　ともだちに　ほんを　かりました。", id:"Saya meminjam buku dari teman. (kebalikan dari かします di atas)"},
+          {jp:"わたしは　せんせいに　にほんごを　ならいました。", id:"Saya belajar bahasa Jepang dari guru."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 18",
+    judul: "〔普通形〕＋と言っていました — Nerusin Pesan/Perkataan Orang Lain ke Orang Ketiga",
+    sub: "と言っていました (bentuk て-imasu lampau) dipakai buat NERUSIN PESAN — 'si A bilang begini (dan saya sekarang nyampein ke kamu)'. Ini BEDA dari と言いました yang cuma laporan lampau BIASA soal apa yang diomongin seseorang (tanpa nuansa 'saya lagi nerusin pesannya ke kamu').",
+    items: [
+      {
+        pola: "〔だれか〕は　〔普通形〕と　言っていました。",
+        romaji: "[orang] wa [futsuukei] to itte imashita.",
+        arti: "[Orang] bilang begini... (dan saya sekarang nyampein ke kamu / titip pesan)",
+        catatan: "と言いました = pernyataan lampau NETRAL soal apa yang dikatakan seseorang (mis. laporan/kutipan langsung dari kejadian yang kamu saksikan sendiri). と言っていました nyiratin fungsi PENYAMPAI PESAN — biasanya dipakai pas kamu ngomong ke orang KETIGA buat nerusin apa yang dibilang orang lain ('titip salam', 'nitip omongan'), efeknya lebih ke 'FYI, katanya dia bilang gini lho'.",
+        contoh: [
+          {jp:"たなかさんは　あした　こられないと　言っていました。", id:"Tanaka bilang katanya besok gak bisa datang. (saya nerusin pesannya ke kamu)"},
+          {jp:"せんせいは　テストが　むずかしいと　言っていました。", id:"Guru bilang katanya ujiannya susah. (nerusin info dari guru)"}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "irodori",
+    tema: "Irodori Bab 18",
+    judul: "〔普通形〕＋と思います — Menyampaikan Pendapat Sendiri Secara Sopan",
+    sub: "と思います nempel ke bentuk 普通形 (sama kayak そうです 伝聞) buat nyampein PENDAPAT/DUGAAN PRIBADI dengan nada lebih sopan dan gak terlalu memaksakan/menyinggung — beda dari と言っていました/そうです yang nyampein INFO dari ORANG LAIN, と思います ini murni OPINI SENDIRI.",
+    items: [
+      {
+        pola: "〔普通形〕と　思います。",
+        romaji: "[futsuukei] to omoimasu.",
+        arti: "Saya rasa/menurut saya, [pendapat].",
+        catatan: "Nempel ke bentuk biasa (kamus/た/ない/な-adj+だ) — sama kayak pola そうです伝聞 dan と言っていました di atas. Fungsinya BEDA: と思います selalu OPINI SENDIRI si pembicara, bukan info yang didenger dari orang lain. Nada kalimat jadi lebih halus/gak maksa dibanding nyatain langsung tanpa と思います.",
+        contoh: [
+          {jp:"わたしは　その　いけんは　いいと　思います。", id:"Menurut saya, pendapat itu bagus."},
+          {jp:"あした、あめが　ふると　思います。", id:"Saya rasa besok akan hujan. (dugaan pribadi, beda dari ふるそうです yang berarti 'katanya bakal hujan, dari ramalan cuaca')"}
+        ]
+      }
+    ]
   }
 
 ]; // end BUNPOU
