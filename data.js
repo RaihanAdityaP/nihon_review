@@ -611,6 +611,7 @@ const KT={
 {k:"こうざん",r:"kouzan",a:"tambang",kj:"鉱山"},
 {k:"ほどほど",r:"hodohodo",a:"secukupnya, dalam batas wajar",kj:"程々"},
 {k:"ゆめがかないます",r:"yume ga kanaimasu",a:"impian jadi kenyataan",kj:"夢が叶います"},
+{k:"さいのう",r:"sainou",a:"bakat, talenta",kj:"才能",n:"'絵の才能があります' = punya bakat menggambar. Dipakai buat kemampuan alami seseorang di suatu bidang."},
 {k:"かたち",r:"katachi",a:"bentuk, wujud",kj:"形"},
 {k:"もんだい",r:"mondai",a:"masalah",kj:"問題"},
 {k:"まがい",r:"magai",a:"tiruan, palsu",kj:"紛い",n:"'まがい物' (magaimono) = barang tiruan/imitasi."},
@@ -1214,6 +1215,8 @@ const KT={
 {k:"だいたい",r:"daitai",a:"kira-kira, pada umumnya, garis besar",kj:"大体",n:"Dipakai untuk perkiraan atau menyimpulkan keadaan secara umum. Contoh perasaan: 'Daitai daijoubu desu.' = Pada umumnya baik-baik saja."}
 ]},
 "Profesi & Pekerjaan":{rows:[
+{k:"がか",r:"gaka",a:"pelukis",kj:"画家",n:"Ga (gambar/lukisan) + ka (orang ahli). '将来、画家になりたいです' = pengen jadi pelukis nanti."},
+{k:"アーティスト",r:"aatisuto",a:"artis, seniman",kj:"",n:"Serapan 'artist' — lebih santai/umum dipakai daripada 画家, cocok buat seniman digital/ilustrator juga, bukan cuma pelukis kanvas."},
 {k:"うんてんしゅ",r:"untenshu",a:"sopir",kj:"運転手",n:"運転 (mengemudi) + 手 (orang yang melakukan). Pola yang sama juga muncul di kata lain, mis. かしゅ (歌手, penyanyi)."},
 {k:"せんもん",r:"senmon",a:"spesialisasi, jurusan",kj:"専門",n:"'Senmon wa nan desu ka?' = jurusanmu apa? Dipakai buat nanya bidang keahlian/studi seseorang."},
 {k:"しょうがくせい",r:"shougakusei",a:"pelajar SD",kj:"小学生"},
@@ -1921,7 +1924,8 @@ const KATA_KERJA = {
 {k:"りょうりします",r:"ryouri shimasu",a:"memasak",kj:"料理します",type:"tadoushi"},
 {k:"にゅうりょくします",r:"nyuuryoku shimasu",a:"menginput, memasukkan data",kj:"入力します",n:"Nyuu (masuk) + Ryoku (tenaga/daya). Dipakai buat konteks ngetik/masukin data ke komputer/HP. Dipindah dari tab Kotoba biar konsisten dikelompokkan dengan kata kerja lain.",type:"tadoushi"},
 {k:"ほぞんします",r:"hozon shimasu",a:"menyimpan (data/file)",kj:"保存します",n:"Khusus buat nyimpen data digital (foto, dokumen), beda dari とっておきます yang lebih umum buat benda fisik.",type:"tadoushi"},
-{k:"こうしんします",r:"koushin shimasu",a:"memperbarui, mengganti (update)",kj:"更新します",n:"Dipakai buat update apa aja yang butuh diperbarui secara berkala — status media sosial, wallpaper HP, aplikasi, dsb.",type:"tadoushi"}
+{k:"こうしんします",r:"koushin shimasu",a:"memperbarui, mengganti (update)",kj:"更新します",n:"Dipakai buat update apa aja yang butuh diperbarui secara berkala — status media sosial, wallpaper HP, aplikasi, dsb.",type:"tadoushi"},
+{k:"いらいします",r:"irai shimasu",a:"memesan jasa, commission (karya)",kj:"依頼します",n:"Kata yang dipakai komunitas seniman buat 'commission' — minta seseorang bikin karya khusus (gambar, dsb) biasanya bayar. '絵を依頼します' = commission/pesan jasa gambar."}
 ]}
 };
 
@@ -4900,11 +4904,171 @@ bab18: {
 
 }; // end BUKU_IRODORI
 
+// DATA: BUKU_IRODORI_A2 — kosakata dari buku Irodori 初級2 (A2),
+// dikelompokkan per bab (Object.keys menentukan urutan di menu Buku & Kotoba).
+const BUKU_IRODORI_A2 = {
+
+bab1: {
+  "Kenalan dengan Rekan Baru (みんなを紹介しますね)": { rows: [
+    {k:"しゅにん",r:"shunin",a:"ketua; kepala",kj:"主任"},
+    {k:"パート",r:"paato",a:"pekerja paruh waktu"},
+    {k:"いちばん",r:"ichiban",a:"paling"},
+    {k:"ながい",r:"nagai",a:"lama; panjang (waktu)",kj:"長い"},
+    {k:"～しゅっしん",r:"~shusshin",a:"berasal dari ~, contoh: 中国出身 = berasal dari Tiongkok",kj:"～出身"},
+    {k:"てつづき",r:"tetsuzuki",a:"prosedur",kj:"手続き"},
+    {k:"せいかつ",r:"seikatsu",a:"kehidupan",kj:"生活"},
+    {k:"いろいろ（な）",r:"iroiro (na)",a:"bermacam-macam; berbagai"},
+    {k:"なんでも",r:"nandemo",a:"apapun",kj:"何でも"},
+    {k:"～でよかったら",r:"~de yokattara",a:"jika~ berkenan / tidak masalah, contoh: 私でよかったら = jika saya diperkenankan"},
+    {k:"いつでも",r:"itsudemo",a:"kapanpun"},
+    {k:"たんとう",r:"tantou",a:"bertanggung jawab; penanggung jawab",kj:"担当"}
+  ]},
+  "Bekerja Keras (一生懸命がんばります)": { rows: [
+    {k:"もうす",r:"mousu",a:"bernama; dipanggil sebagai (nama) [1]",kj:"申す"},
+    {k:"よぶ",r:"yobu",a:"memanggil [1]",kj:"呼ぶ"},
+    {k:"いっしょうけんめい",r:"isshoukenmei",a:"bekerja keras",kj:"一生懸命"},
+    {k:"がんばる",r:"ganbaru",a:"berusaha; bekerja keras [1]"},
+    {k:"ジェーポップ",r:"jee poppu",a:"musik pop Jepang; japanese pop music",kj:"J-POP"},
+    {k:"がんばります",r:"ganbarimasu",a:"Saya akan berusaha / bekerja keras sebaik mungkin"},
+    {k:"パフューム",r:"pafyuumu",a:"Perfume (kelompok musik pop Jepang beraliran techno-pop yang terdiri dari 3 orang penyanyi wanita)",kj:"Perfume"}
+  ]},
+  "Kota yang Besar (とても大きい町です)": { rows: [
+    {k:"ほうがく",r:"hougaku",a:"arah",kj:"方角"},
+    {k:"きた",r:"kita",a:"utara",kj:"北"},
+    {k:"ひがし",r:"higashi",a:"timur",kj:"東"},
+    {k:"みなみ",r:"minami",a:"selatan",kj:"南"},
+    {k:"にし",r:"nishi",a:"barat",kj:"西"},
+    {k:"しぜん",r:"shizen",a:"alam",kj:"自然"},
+    {k:"かわ",r:"kawa",a:"sungai",kj:"川"},
+    {k:"しま",r:"shima",a:"pulau",kj:"島"},
+    {k:"もり",r:"mori",a:"hutan",kj:"森"},
+    {k:"ジャングル",r:"janguru",a:"hutan rimba; hutan belantara"},
+    {k:"そうげん",r:"sougen",a:"padang rumput",kj:"草原"},
+    {k:"さばく",r:"sabaku",a:"padang pasir",kj:"砂漠"},
+    {k:"こうげん",r:"kougen",a:"dataran tinggi",kj:"高原"},
+    {k:"しゅと",r:"shuto",a:"ibu kota",kj:"首都"},
+    {k:"かんこうち",r:"kankouchi",a:"destinasi wisata; tempat wisata",kj:"観光地"},
+    {k:"モンゴル",r:"mongoru",a:"Mongolia"},
+    {k:"のんびりしている",r:"nonbiri shite iru",a:"santai; bersantai"},
+    {k:"とかい",r:"tokai",a:"kota",kj:"都会"},
+    {k:"はたけ",r:"hatake",a:"ladang",kj:"畑"},
+    {k:"かんこうきゃく",r:"kankoukyaku",a:"turis; wisatawan",kj:"観光客"},
+    {k:"おおぜい",r:"oozei",a:"banyak (orang)",kj:"大勢"},
+    {k:"おきゃくさん",r:"okyakusan",a:"tamu; pengunjung",kj:"お客さん"},
+    {k:"テント",r:"tento",a:"tenda"},
+    {k:"ちがいます",r:"chigaimasu",a:"berbeda",kj:"違います"},
+    {k:"セブ",r:"sebu",a:"Cebu (Kota di Filipina)"},
+    {k:"ウランバートル",r:"uranbaatoru",a:"Ulan Bator (Ibu kota Mongolia)"},
+    {k:"ホーチミン",r:"hoochimin",a:"Ho Chi Minh (Kota di Vietnam)"},
+    {k:"ウォノソボ",r:"wonosobo",a:"Wonosobo (Kota di Jawa Tengah)"},
+    {k:"セブとう",r:"sebutou",a:"Pulau Cebu",kj:"セブ島"}
+  ]},
+  "Perkenalan Diri di SNS (SNSの自己紹介)": { rows: [
+    {k:"じこしょうかい",r:"jikoshoukai",a:"perkenalan diri",kj:"自己紹介"},
+    {k:"ねこ",r:"neko",a:"kucing",kj:"猫"},
+    {k:"グループ",r:"guruupu",a:"grup; kelompok"},
+    {k:"コミュニケーションする",r:"komyunikeeshon suru",a:"berkomunikasi [3]"},
+    {k:"インドりょうり",r:"indo ryouri",a:"masakan khas India",kj:"インド料理"},
+    {k:"たべあるき",r:"tabearuki",a:"wisata kuliner (di berbagai daerah & tempat)",kj:"食べ歩き"},
+    {k:"ニックネーム",r:"nikkuneemu",a:"nama panggilan"},
+    {k:"バンコク",r:"bankoku",a:"Bangkok (Ibu kota Thailand)"},
+    {k:"アニソン",r:"anison",a:"ani-son (anime song); lagu film animasi"}
+  ]}
+},
+
+bab2: {
+  "Ciri-ciri Fisik (どの人ですか？)": { rows: [
+    {k:"かみ",r:"kami",a:"rambut",kj:"髪"},
+    {k:"かみがながい",r:"kami ga nagai",a:"rambut panjang",kj:"髪が長い"},
+    {k:"かみがみじかい",r:"kami ga mijikai",a:"rambut pendek",kj:"髪が短い"},
+    {k:"せ",r:"se",a:"tinggi badan",kj:"背"},
+    {k:"せがたかい",r:"se ga takai",a:"(badan) tinggi",kj:"背が高い"},
+    {k:"すわる",r:"suwaru",a:"duduk [1]",kj:"座る"},
+    {k:"たつ",r:"tatsu",a:"berdiri [1]",kj:"立つ"},
+    {k:"かぶる",r:"kaburu",a:"memakai; mengenakan, contoh: 帽子をかぶる [1]"},
+    {k:"ピアス",r:"piasu",a:"anting-anting"},
+    {k:"する",r:"suru",a:"memakai; mengenakan, contoh: ピアスをする [3]"},
+    {k:"ワンピース",r:"wanpiisu",a:"baju terusan"},
+    {k:"きる",r:"kiru",a:"memakai; mengenakan (pakaian) [2]",kj:"着る"},
+    {k:"はく",r:"haku",a:"memakai; mengenakan, contoh: くつをはく [1]"},
+    {k:"めがね",r:"megane",a:"kacamata"},
+    {k:"かける",r:"kakeru",a:"memakai; mengenakan, contoh: めがねをかける [2]"},
+    {k:"ひげ",r:"hige",a:"jenggot"},
+    {k:"はやす",r:"hayasu",a:"menumbuhkan, contoh: ひげをはやす [1]"},
+    {k:"シャツ",r:"shatsu",a:"kemeja"},
+    {k:"ズボン",r:"zubon",a:"celana panjang"},
+    {k:"あかい",r:"akai",a:"merah",kj:"赤い"},
+    {k:"しろい",r:"shiroi",a:"putih",kj:"白い"},
+    {k:"きいろい",r:"kiiroi",a:"kuning",kj:"黄色い"},
+    {k:"あおい",r:"aoi",a:"biru",kj:"青い"},
+    {k:"くろい",r:"kuroi",a:"hitam",kj:"黒い"},
+    {k:"おとこのひと",r:"otoko no hito",a:"pria",kj:"男の人"},
+    {k:"ジャンパー",r:"janpaa",a:"jaket"},
+    {k:"ほら",r:"hora",a:"Lihat (lah).."}
+  ]},
+  "Cerita di Balik Foto (その写真、だれですか？)": { rows: [
+    {k:"やさしい",r:"yasashii",a:"baik hati"},
+    {k:"きびしい",r:"kibishii",a:"tegas"},
+    {k:"こわい",r:"kowai",a:"seram"},
+    {k:"いそがしい",r:"isogashii",a:"sibuk",kj:"忙しい"},
+    {k:"まじめ（な）",r:"majime (na)",a:"rajin"},
+    {k:"げんき（な）",r:"genki (na)",a:"energik; bersemangat",kj:"元気（な）"},
+    {k:"こいびと",r:"koibito",a:"pacar; kekasih",kj:"恋人"},
+    {k:"まご",r:"mago",a:"cucu",kj:"孫"},
+    {k:"このあいだ",r:"kono aida",a:"beberapa waktu lalu",kj:"この間"},
+    {k:"あかちゃん",r:"akachan",a:"bayi",kj:"赤ちゃん"},
+    {k:"なく",r:"naku",a:"menangis [1]",kj:"泣く"},
+    {k:"こんど",r:"kondo",a:"kali ini",kj:"今度"},
+    {k:"みため",r:"mitame",a:"penampilan",kj:"見た目"},
+    {k:"おそくまで",r:"osoku made",a:"sampai larut malam",kj:"遅くまで"},
+    {k:"しんぱい（な）",r:"shinpai (na)",a:"khawatir",kj:"心配（な）"}
+  ]},
+  "Ngobrolin Idola (本当にかっこいいです)": { rows: [
+    {k:"かっこいい",r:"kakkoii",a:"keren"},
+    {k:"うた",r:"uta",a:"menyanyi; lagu",kj:"歌"},
+    {k:"えんぎ",r:"engi",a:"berakting",kj:"演技"},
+    {k:"ダンス",r:"dansu",a:"berdansa; menari"},
+    {k:"じょうず（な）",r:"jouzu (na)",a:"mahir; pandai",kj:"上手（な）"},
+    {k:"かしゅ",r:"kashu",a:"penyanyi",kj:"歌手"},
+    {k:"だれか",r:"dareka",a:"seseorang"},
+    {k:"いんたいする",r:"intai suru",a:"pensiun [3]",kj:"引退する"},
+    {k:"いまでも",r:"ima demo",a:"bahkan sekarang",kj:"今でも"},
+    {k:"はいゆう",r:"haiyuu",a:"aktor",kj:"俳優"},
+    {k:"そんな",r:"sonna",a:"seperti itu"},
+    {k:"きっかけ",r:"kikkake",a:"hal yang memicu / mendorong / membuat jadi (suka)"},
+    {k:"えいがさい",r:"eigasai",a:"festival film",kj:"映画祭"},
+    {k:"せかいじゅう",r:"sekaijuu",a:"seluruh dunia",kj:"世界中"},
+    {k:"ファン",r:"fan",a:"fan; penggemar"},
+    {k:"あむろなみえ",r:"Amuro Namie",a:"Amuro Namie (penyanyi berkebangsaan Jepang)",kj:"安室奈美恵"},
+    {k:"みふねとしろう",r:"Mifune Toshirou",a:"Mifune Toshiro (aktor berkebangsaan Jepang)",kj:"三船敏郎"},
+    {k:"しちにんのさむらい",r:"Shichinin no Samurai",a:"Seven Samurai (sebuah film karya sutradara Kurosawa Akira)",kj:"七人の侍"}
+  ]},
+  "Artikel Wawancara (インタビュー記事)": { rows: [
+    {k:"まず",r:"mazu",a:"mula-mula"},
+    {k:"きんいろ",r:"kin-iro",a:"warna keemasan",kj:"金色"},
+    {k:"おどろく",r:"odoroku",a:"terkejut [1]",kj:"驚く"},
+    {k:"あかるい",r:"akarui",a:"terang",kj:"明るい"},
+    {k:"びっくりする",r:"bikkuri suru",a:"kaget [3]"},
+    {k:"ハイキング",r:"haikingu",a:"hiking"},
+    {k:"できれば",r:"dekireba",a:"bila memungkinkan"},
+    {k:"シリーズ",r:"shiriizu",a:"seri; rangkaian"},
+    {k:"おとなりさん",r:"otonarisan",a:"tetangga"},
+    {k:"かんたんに",r:"kantan ni",a:"dengan mudah",kj:"簡単に"},
+    {k:"ヤンゴン",r:"Yangon",a:"Yangon"},
+    {k:"パゴダ",r:"pagoda",a:"pagoda"},
+    {k:"ふえる",r:"fueru",a:"bertambah [2]",kj:"増える"},
+    {k:"こうりゅうきょうかい",r:"kouryuu kyoukai",a:"asosiasi pertukaran",kj:"交流協会"}
+  ]}
+}
+
+}; // end BUKU_IRODORI_A2
+
 // Daftar buku yang tersedia di menu "Buku" — setiap buku terpisah
 // koleksi bab-nya sendiri, tidak tercampur satu sama lain.
 const BOOKS = {
   minna:   { label: "Buku Utama",  data: BUKU },
-  irodori: { label: "Irodori",     data: BUKU_IRODORI }
+  irodori: { label: "Irodori",     data: BUKU_IRODORI },
+  a2:      { label: "Irodori A2",  data: BUKU_IRODORI_A2 }
 };
 
 // ─────────────────────────────────────────────────────
@@ -12113,8 +12277,7 @@ const BUNPOU = [
     buku: "irodori",
     tema: "Irodori Bab 15",
     judul: "〜時に — Nunjuk Momen/Kondisi Spesifik (Beda dari とき Klausa Biasa)",
-    sub: "〜時に di sini beda pemakaian dari とき yang biasa dipelajari sebagai KLAUSA (Irodori Bab 10, buat nunjuk 'waktu terjadinya sesuatu' dalam kalimat panjang) — di instruksi obat, 時に lebih ke nunjuk MOMEN/KONDISI SPESIFIK yang singkat (kayak nama waktu: 食後/寝る前/発熱時), fungsinya mirip partikel waktu biasa tapi ditempelin ke kondisi, bukan cuma jam/tanggal.",
-    refFrom: { tema: "Irodori Bab 10", judul: "〜とき — Waktu Terjadinya Sesuatu, per Jenis Kata" },
+    sub: "〜時に di sini beda pemakaian dari とき yang biasa dipelajari sebagai KLAUSA (Irodori Bab 10, buat nunjuk 'waktu terjadinya sesuatu' dalam kalimat panjang) — di instruksi obat, 時に lebih ke nunjuk MOMEN/KONDISI SPESIFIK yang singkat (kayak nama waktu: 食後/寝る前/発熱時), fungsinya mirip partikel waktu biasa tapi ditempelin ke kondisi, bukan cuma jam/tanggal. (Bandingkan sendiri sama kartu とき di Irodori Bab 10 — ini pemakaian yang beda, bukan pengulangan grammar yang sama.)",
     items: [
       {
         pola: "〔KB／動詞じしょけい〕＋時（とき）に、〔aksi〕。",
@@ -12273,8 +12436,7 @@ const BUNPOU = [
     buku: "irodori",
     tema: "Irodori Bab 18",
     judul: "〔普通形〕＋そうです（伝聞） — \"Katanya...\" (Menyampaikan Kabar dari Sumber Lain)",
-    sub: "そうです versi 伝聞 (denger-denger/katanya) ini BEDA TOTAL cara nempelnya dari そうです versi 様態 (kelihatannya, Irodori Bab 12-13) — walau bentuk akhirannya keliatan sama, konjugasinya dan fungsinya beda. Fungsinya buat NERUSIN INFO yang didengar/dibaca dari sumber lain (berita, orang lain, dsb) ke lawan bicara — bukan opini/dugaan sendiri.",
-    refFrom: { tema: "Irodori Bab 12", judul: "い/な-けいようし＋そうです — \"Kelihatannya...\" (Kesan dari Penampilan)" },
+    sub: "そうです versi 伝聞 (denger-denger/katanya) ini BEDA TOTAL cara nempelnya dari そうです versi 様態 (kelihatannya, Irodori Bab 12-13) — walau bentuk akhirannya keliatan sama, konjugasinya dan fungsinya beda. Fungsinya buat NERUSIN INFO yang didengar/dibaca dari sumber lain (berita, orang lain, dsb) ke lawan bicara — bukan opini/dugaan sendiri. (Bandingkan sendiri sama kartu 様態 di Irodori Bab 12 — jangan disamain walau bentuknya mirip.)",
     items: [
       {
         pola: "〔動詞・い形普通形〕＋そうです。／〔な形・KB＋だ〕＋そうです。",
@@ -12293,8 +12455,7 @@ const BUNPOU = [
     buku: "irodori",
     tema: "Irodori Bab 18",
     judul: "あげます／くれます／もらいます — Arah Pemberian, Siapa Pakai に dan が",
-    sub: "Tiga-tiganya artinya 'memberi/menerima', bedanya cuma ARAH pemberian relatif ke PEMBICARA. Kunci paling gampang: lihat SIAPA YANG JADI SUBJEK kalimat dan ke MANA arah barangnya pindah. Pemberi selalu ditandai が, penerima selalu ditandai に — bedanya cuma SIAPA yang boleh jadi pemberi/penerima di tiap kata kerja.",
-    refFrom: { tema: "Irodori Bab 17", judul: "〔ひと〕が　〔わたし〕に　〔もの〕を　くれます — Diberi Sesuatu (Kesan Lebih Personal)" },
+    sub: "Tiga-tiganya artinya 'memberi/menerima', bedanya cuma ARAH pemberian relatif ke PEMBICARA. Kunci paling gampang: lihat SIAPA YANG JADI SUBJEK kalimat dan ke MANA arah barangnya pindah. Pemberi selalu ditandai が, penerima selalu ditandai に — bedanya cuma SIAPA yang boleh jadi pemberi/penerima di tiap kata kerja. (Ini nyatuin & ngebandingin ketiganya sekaligus — もらいます dan くれます sendiri udah dipelajari terpisah di Irodori Bab 17.)",
     items: [
       {
         pola: "〔pemberi〕が／は　〔penerima〕に　〔barang〕を　あげます。",
