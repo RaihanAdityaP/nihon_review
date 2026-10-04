@@ -185,10 +185,61 @@
 
   <!-- AI -->
   <div id="pageLatihanai" class="page">
+  <div class="ai-shell">
     <div class="sec-title">AI</div>
-    <div class="sec-sub">Fitur-fitur belajar yang dibantu AI — pilih mode di bawah.</div>
+    <div class="sec-sub">Fitur-fitur belajar yang dibantu AI. Provider, model, dan API key diatur sekali di sini, berlaku untuk semua tab.</div>
 
-    <div id="aiTabBar" style="display:flex;gap:.3rem;margin-bottom:1.2rem;flex-wrap:wrap">
+    <!-- PENGATURAN AI (dipakai bareng Latihan Soal, Chatbot, Menulis) -->
+    <div class="ai-settings" id="aiSettings">
+      <button type="button" class="ai-status" id="aiStatusBtn" onclick="toggleAISettings()" aria-expanded="false" aria-controls="aiSettingsBody">
+        <span class="ai-dot" id="aiDot"></span>
+        <span class="ai-status-main">
+          <b id="aiStatusProv">Groq</b>
+          <small id="aiStatusModel"></small>
+        </span>
+        <span class="ai-status-key" id="aiStatusKey">Key belum diatur</span>
+        <span class="ai-caret" aria-hidden="true">▾</span>
+      </button>
+
+      <div class="ai-settings-body" id="aiSettingsBody">
+        <div class="ai-field">
+          <div class="ai-lbl">Provider</div>
+          <div class="seg" id="aiProviderRow">
+            <button type="button" class="seg-btn sel" data-p="groq" onclick="setAIProvider(this)">Groq</button>
+            <button type="button" class="seg-btn" data-p="openai" onclick="setAIProvider(this)">OpenAI</button>
+            <button type="button" class="seg-btn" data-p="openrouter" onclick="setAIProvider(this)">OpenRouter</button>
+          </div>
+        </div>
+
+        <div class="ai-field">
+          <div class="ai-lbl">API Key <small>tersimpan lokal di browser ini saja, tidak pernah diunggah</small></div>
+          <div class="ai-keyrow">
+            <input type="text" id="aiKeyInput" class="input-ai ai-key-mask" placeholder="Tempel API key di sini..." autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" data-lpignore="true" data-1p-ignore onkeydown="if(event.key==='Enter')saveAIKey()">
+            <button type="button" class="smbtn" id="aiKeyEye" onclick="toggleAIKeyVisible()">Tampilkan</button>
+          </div>
+          <div class="ai-actions">
+            <button type="button" class="smbtn ai-primary" onclick="saveAIKey()">Simpan Key</button>
+            <button type="button" class="smbtn" onclick="clearAIKey()">Hapus Key</button>
+            <span class="ai-hint" id="aiKeyStatus">Belum ada key tersimpan.</span>
+          </div>
+        </div>
+
+        <div class="ai-grid2">
+          <div class="ai-field">
+            <div class="ai-lbl">Model teks <small>Latihan Soal &amp; Chatbot</small></div>
+            <input type="text" id="aiModelInput" class="input-ai" placeholder="kosongkan untuk default" autocomplete="off" oninput="saveAIModel(this)">
+            <div class="ai-hint" id="aiModelStatus"></div>
+          </div>
+          <div class="ai-field">
+            <div class="ai-lbl">Model vision <small>Menulis, harus bisa baca gambar</small></div>
+            <input type="text" id="wModelInput" class="input-ai" placeholder="kosongkan untuk default" autocomplete="off" oninput="wSaveVisionModel(this)">
+            <div class="ai-hint" id="wModelStatus"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="aiTabBar">
       <button class="cat-btn active" onclick="aiSwitchTab('latihan',this)">Latihan Soal</button>
       <button class="cat-btn" onclick="aiSwitchTab('chat',this)">Chatbot</button>
       <button class="cat-btn" onclick="aiSwitchTab('menulis',this)">Menulis</button>
@@ -196,25 +247,6 @@
 
   <div id="aiPanelLatihan">
     <div class="qsetup" id="aiSetup">
-      <div class="qlabel">Provider AI</div>
-      <div class="trow" id="aiProviderRow">
-        <button class="tbtn sel" data-p="groq" onclick="setAIProvider(this)">Groq</button>
-        <button class="tbtn" data-p="openai" onclick="setAIProvider(this)">OpenAI</button>
-        <button class="tbtn" data-p="openrouter" onclick="setAIProvider(this)">OpenRouter</button>
-      </div>
-
-      <div class="qlabel">Model <small>(kosongkan untuk pakai default)</small></div>
-      <input type="text" id="aiModelInput" class="input-ai" placeholder="contoh: openai/gpt-4o-mini, anthropic/claude-3.5-haiku, dst" autocomplete="off" oninput="saveAIModel(this)">
-      <div class="qwarn" id="aiModelStatus" style="display:block;color:var(--text3);font-style:italic"></div>
-
-      <div class="qlabel">API Key <small>(tersimpan lokal di browser ini saja, tidak pernah diunggah)</small></div>
-      <input type="text" id="aiKeyInput" class="input-ai ai-key-mask" placeholder="Tempel API key di sini..." autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" data-lpignore="true" data-1p-ignore>
-      <div class="smrow" style="margin-top:.5rem">
-        <button class="smbtn" onclick="saveAIKey()">Simpan Key</button>
-        <button class="smbtn" onclick="clearAIKey()">Hapus Key</button>
-      </div>
-      <div class="qwarn" id="aiKeyStatus" style="display:block;color:var(--text3);font-style:italic">Belum ada key tersimpan.</div>
-
       <div class="qlabel">Mode Latihan</div>
       <div class="trow" id="aiModeRow">
         <button class="tbtn sel" data-m="vocab" onclick="setAIMode(this)">Latihan Kata (isian)</button>
@@ -284,7 +316,7 @@
 
   <!-- CHATBOT -->
   <div id="aiPanelChat" style="display:none">
-    <div class="sec-sub" style="margin-bottom:1rem">Ngobrol bahasa Jepang sama AI, dibatasi cuma pakai kotoba &amp; bunpou yang kamu pilih di bawah — jadi gak kelewat level. Provider &amp; API key sama kayak di tab Latihan Soal.</div>
+    <div class="sec-sub" style="margin-bottom:1rem">Ngobrol bahasa Jepang sama AI, dibatasi cuma pakai kotoba &amp; bunpou yang kamu pilih di bawah — jadi gak kelewat level. Provider &amp; API key ikut Pengaturan AI di atas.</div>
 
     <div class="qlabel">Pilih Materi yang Boleh Dipakai AI</div>
     <div class="smrow">
@@ -328,9 +360,7 @@
         <button class="tbtn" data-o="urut" onclick="setWOrder(this)">Berurutan</button>
       </div>
 
-      <div class="qwarn" id="wAINote" style="display:block;color:var(--text3);font-style:italic">Coretanmu di kanvas dicek otomatis oleh AI — pakai API key yang sama dengan tab Latihan AI. Fitur ini WAJIB model yang mendukung input gambar (vision) — model teks biasa (mis. default Groq) akan gagal.</div>
-      <input type="text" id="wModelInput" class="input-ai" placeholder="Model vision khusus (opsional, kosongkan utk pakai default)" autocomplete="off" oninput="wSaveVisionModel(this)">
-      <div class="qwarn" id="wModelStatus" style="display:block;color:var(--text3);font-size:.75rem"></div>
+      <div class="qwarn" id="wAINote" style="display:block;color:var(--text3);font-style:italic">Coretanmu di kanvas dicek otomatis oleh AI — pakai Pengaturan AI di atas (API key + model vision). Fitur ini WAJIB model yang mendukung input gambar (vision) — model teks biasa (mis. default Groq) akan gagal.</div>
 
       <div class="qlabel">Jumlah Soal</div>
       <div class="trow" id="wCntRow">
@@ -390,6 +420,7 @@
 
   <!-- /aiPanelMenulis -->
 
+  </div><!-- /ai-shell -->
   </div>
 
   <!-- PROGRESS -->

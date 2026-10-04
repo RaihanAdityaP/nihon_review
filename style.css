@@ -402,3 +402,55 @@ main{position:relative;z-index:1;padding:1.5rem 1.25rem 3rem;max-width:920px;mar
 .qgrp-subh{display:flex;align-items:center;gap:.5rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent3);margin:0 0 .5rem}
 .qgrp-subh span{font-family:var(--font-mono,monospace);font-size:.65rem;color:var(--text3)}
 .qgrp-sub .qog{margin-bottom:0}
+
+/* ── Halaman AI: pengaturan bersama + tab ── */
+.ai-shell{max-width:760px;margin:0 auto}
+
+.ai-settings{background:var(--bg2);border:1px solid var(--border);margin-bottom:1.3rem}
+.ai-status{width:100%;display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;background:none;border:none;cursor:pointer;text-align:left;color:var(--text);font-family:var(--font-body)}
+.ai-status:hover{background:var(--bg3)}
+.ai-dot{width:9px;height:9px;border-radius:50%;background:var(--red);flex-shrink:0;box-shadow:0 0 0 3px color-mix(in srgb, var(--red) 18%, transparent)}
+.ai-dot.on{background:var(--green);box-shadow:0 0 0 3px color-mix(in srgb, var(--green) 20%, transparent)}
+.ai-status-main{display:flex;flex-direction:column;min-width:0;flex:1}
+.ai-status-main b{font-size:.92rem;font-weight:700;line-height:1.2}
+.ai-status-main small{font-family:var(--font-mono);font-size:.68rem;color:var(--text3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ai-status-key{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.04em;text-transform:uppercase;color:var(--red);white-space:nowrap}
+.ai-status-key.ok{color:var(--green)}
+.ai-caret{color:var(--text3);transition:transform .2s;font-size:.9rem}
+.ai-settings.open .ai-caret{transform:rotate(180deg)}
+
+.ai-settings-body{display:none;padding:1rem 1rem 1.1rem;border-top:1px solid var(--border)}
+.ai-settings.open .ai-settings-body{display:block;animation:fi .2s ease}
+.ai-field{margin-bottom:1rem}
+.ai-field:last-child{margin-bottom:0}
+.ai-lbl{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:.45rem}
+.ai-lbl small{text-transform:none;letter-spacing:0;font-size:.62rem;margin-left:.4rem;opacity:.85}
+.ai-settings .input-ai{padding:.65rem .8rem;font-size:.9rem}
+.ai-hint{font-family:var(--font-mono);font-size:.66rem;color:var(--text3);margin-top:.35rem;word-break:break-all}
+.ai-grid2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+
+/* segmented control provider */
+.seg{display:flex;border:1px solid var(--border2);width:100%}
+.seg-btn{flex:1;background:var(--bg2);border:none;border-right:1px solid var(--border2);padding:.6rem .5rem;cursor:pointer;font-family:var(--font-mono);font-size:.76rem;letter-spacing:.04em;color:var(--text2);transition:background .15s,color .15s}
+.seg-btn:last-child{border-right:none}
+.seg-btn:hover{color:var(--accent)}
+.seg-btn.sel{background:color-mix(in srgb, var(--accent) 12%, transparent);color:var(--accent);font-weight:700}
+
+.ai-keyrow{display:flex;gap:.4rem}
+.ai-keyrow .input-ai{flex:1;min-width:0}
+.ai-keyrow .smbtn{white-space:nowrap}
+.ai-actions{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;margin-top:.5rem}
+.ai-actions .ai-hint{margin-top:0;margin-left:.3rem}
+.ai-primary{border-color:var(--accent);color:var(--accent)}
+.ai-primary:hover{background:color-mix(in srgb, var(--accent) 10%, transparent)}
+
+/* tab bar: underline, rata dengan kartu pengaturan */
+#aiTabBar{display:flex;margin:0 0 1.4rem;border-bottom:1px solid var(--border)}
+#aiTabBar .cat-btn{flex:1;background:none;border:none;border-bottom:2px solid transparent;border-radius:0;margin-bottom:-1px;padding:.8rem .5rem;text-align:center;box-shadow:none}
+#aiTabBar .cat-btn:hover{background:none;color:var(--accent)}
+#aiTabBar .cat-btn.active{background:none;border:none;border-bottom:2px solid var(--accent);color:var(--accent);box-shadow:none}
+
+@media(max-width:600px){
+  .ai-grid2{grid-template-columns:1fr}
+  .ai-status-key{display:none}
+}

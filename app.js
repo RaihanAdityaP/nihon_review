@@ -1116,27 +1116,73 @@ function aiVisibleCats() {
 
 function initAISetup() {
   document.getElementById('aiQog').innerHTML = renderCatGrid(aiVisibleCats(), AI_SC, 'togAICat');
-
-  // Muat provider & key tersimpan
-  const savedProvider = localStorage.getItem(AI_PROVIDER_STORE);
-  if (savedProvider && AI_ENDPOINTS[savedProvider]) {
-    AI_PROVIDER = savedProvider;
-    document.querySelectorAll('#aiProviderRow .tbtn').forEach(b => b.classList.toggle('sel', b.dataset.p === savedProvider));
-  }
-  const savedKey = localStorage.getItem(AI_KEY_STORE + '_' + AI_PROVIDER);
-  const statusEl = document.getElementById('aiKeyStatus');
-  if (savedKey) {
-    document.getElementById('aiKeyInput').value = savedKey;
-    statusEl.textContent = 'Key tersimpan untuk ' + AI_PROVIDER + '.';
-    statusEl.style.color = 'var(--green)';
-  } else {
-    statusEl.textContent = 'Belum ada key tersimpan untuk ' + AI_PROVIDER + '.';
-    statusEl.style.color = 'var(--text3)';
-  }
-  const savedModel = localStorage.getItem(AI_MODEL_STORE + '_' + AI_PROVIDER);
-  document.getElementById('aiModelInput').value = savedModel || '';
-  document.getElementById('aiModelStatus').textContent = 'Model aktif: ' + (savedModel || AI_ENDPOINTS[AI_PROVIDER].model + ' (default)');
   checkAIReady();
+}
+
+// ─────────────────────────────────────────────────────
+// PENGATURAN AI BERSAMA — provider, model teks, model vision, API key.
+// Satu panel di atas tab, dipakai Latihan Soal, Chatbot, dan Menulis.
+// ─────────────────────────────────────────────────────
+const AI_PROVIDER_LABELS = { groq: 'Groq', openai: 'OpenAI', openrouter: 'OpenRouter' };
+
+function aiEl(id) { return document.getElementById(id); }
+
+function initAISettings() {
+  const savedProvider = localStorage.getItem(AI_PROVIDER_STORE);
+  if (savedProvider && AI_ENDPOINTS[savedProvider]) AI_PROVIDER = savedProvider;
+  refreshAISettingsUI();
+  // Belum ada key -> panel dibuka otomatis biar langsung kelihatan harus ngapain
+  toggleAISettings(!localStorage.getItem(AI_KEY_STORE + '_' + AI_PROVIDER));
+}
+
+// Isi ulang seluruh field panel dari localStorage sesuai provider aktif
+function refreshAISettingsUI() {
+  const p = AI_PROVIDER, ep = AI_ENDPOINTS[p];
+  document.querySelectorAll('#aiProviderRow .seg-btn').forEach(b => b.classList.toggle('sel', b.dataset.p === p));
+
+  const key = localStorage.getItem(AI_KEY_STORE + '_' + p) || '';
+  aiEl('aiKeyInput').value = key;
+  setAIKeyStatus(key ? 'Key tersimpan untuk ' + AI_PROVIDER_LABELS[p] + '.' : 'Belum ada key untuk ' + AI_PROVIDER_LABELS[p] + '.', !!key);
+
+  const textModel = localStorage.getItem(AI_MODEL_STORE + '_' + p) || '';
+  aiEl('aiModelInput').value = textModel;
+  aiEl('aiModelStatus').textContent = 'Aktif: ' + (textModel || ep.model + ' (default)');
+
+  const visionModel = localStorage.getItem(AI_VISION_MODEL_STORE + '_' + p) || '';
+  aiEl('wModelInput').value = visionModel;
+  aiEl('wModelStatus').textContent = 'Aktif: ' + (visionModel || (AI_VISION_DEFAULTS[p] || ep.model) + ' (default)');
+
+  updateAIStatusBar();
+}
+
+function setAIKeyStatus(text, ok) {
+  const el = aiEl('aiKeyStatus');
+  el.textContent = text;
+  el.style.color = ok ? 'var(--green)' : 'var(--text3)';
+}
+
+// Ringkasan satu baris di header panel (tetap kelihatan waktu panel ditutup)
+function updateAIStatusBar() {
+  const p = AI_PROVIDER, ep = AI_ENDPOINTS[p];
+  const hasKey = !!localStorage.getItem(AI_KEY_STORE + '_' + p);
+  aiEl('aiStatusProv').textContent = AI_PROVIDER_LABELS[p];
+  aiEl('aiStatusModel').textContent = localStorage.getItem(AI_MODEL_STORE + '_' + p) || ep.model;
+  aiEl('aiStatusKey').textContent = hasKey ? 'Key tersimpan' : 'Key belum diatur';
+  aiEl('aiStatusKey').classList.toggle('ok', hasKey);
+  aiEl('aiDot').classList.toggle('on', hasKey);
+}
+
+function toggleAISettings(force) {
+  const box = aiEl('aiSettings');
+  const open = typeof force === 'boolean' ? force : !box.classList.contains('open');
+  box.classList.toggle('open', open);
+  aiEl('aiStatusBtn').setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+function toggleAIKeyVisible() {
+  const inp = aiEl('aiKeyInput');
+  const hidden = inp.classList.toggle('ai-key-mask');
+  aiEl('aiKeyEye').textContent = hidden ? 'Tampilkan' : 'Sembunyikan';
 }
 
 function setAIMode(btn) {
@@ -1152,16 +1198,7 @@ function setAIMode(btn) {
 function setAIProvider(btn) {
   AI_PROVIDER = btn.dataset.p;
   localStorage.setItem(AI_PROVIDER_STORE, AI_PROVIDER);
-  document.querySelectorAll('#aiProviderRow .tbtn').forEach(b => b.classList.remove('sel'));
-  btn.classList.add('sel');
-  const savedKey = localStorage.getItem(AI_KEY_STORE + '_' + AI_PROVIDER);
-  const statusEl = document.getElementById('aiKeyStatus');
-  document.getElementById('aiKeyInput').value = savedKey || '';
-  if (savedKey) { statusEl.textContent = 'Key tersimpan untuk ' + AI_PROVIDER + '.'; statusEl.style.color = 'var(--green)'; }
-  else          { statusEl.textContent = 'Belum ada key tersimpan untuk ' + AI_PROVIDER + '.'; statusEl.style.color = 'var(--text3)'; }
-  const savedModel = localStorage.getItem(AI_MODEL_STORE + '_' + AI_PROVIDER);
-  document.getElementById('aiModelInput').value = savedModel || '';
-  document.getElementById('aiModelStatus').textContent = 'Model aktif: ' + (savedModel || AI_ENDPOINTS[AI_PROVIDER].model + ' (default)');
+  refreshAISettingsUI();
   checkAIReady();
 }
 
@@ -1169,25 +1206,26 @@ function saveAIModel(input) {
   const val = input.value.trim();
   if (val) localStorage.setItem(AI_MODEL_STORE + '_' + AI_PROVIDER, val);
   else      localStorage.removeItem(AI_MODEL_STORE + '_' + AI_PROVIDER);
-  document.getElementById('aiModelStatus').textContent = 'Model aktif: ' + (val || AI_ENDPOINTS[AI_PROVIDER].model + ' (default)');
+  aiEl('aiModelStatus').textContent = 'Aktif: ' + (val || AI_ENDPOINTS[AI_PROVIDER].model + ' (default)');
+  updateAIStatusBar();
 }
 
 function saveAIKey() {
-  const val = document.getElementById('aiKeyInput').value.trim();
+  const val = aiEl('aiKeyInput').value.trim();
   if (!val) return;
   localStorage.setItem(AI_KEY_STORE + '_' + AI_PROVIDER, val);
-  const statusEl = document.getElementById('aiKeyStatus');
-  statusEl.textContent = 'Key tersimpan untuk ' + AI_PROVIDER + '.';
-  statusEl.style.color = 'var(--green)';
+  setAIKeyStatus('Key tersimpan untuk ' + AI_PROVIDER_LABELS[AI_PROVIDER] + '.', true);
+  updateAIStatusBar();
   checkAIReady();
+  // Udah beres -> lipat panel biar halaman langsung fokus ke latihan
+  setTimeout(() => toggleAISettings(false), 700);
 }
 
 function clearAIKey() {
   localStorage.removeItem(AI_KEY_STORE + '_' + AI_PROVIDER);
-  document.getElementById('aiKeyInput').value = '';
-  const statusEl = document.getElementById('aiKeyStatus');
-  statusEl.textContent = 'Key untuk ' + AI_PROVIDER + ' sudah dihapus.';
-  statusEl.style.color = 'var(--text3)';
+  aiEl('aiKeyInput').value = '';
+  setAIKeyStatus('Key untuk ' + AI_PROVIDER_LABELS[AI_PROVIDER] + ' sudah dihapus.', false);
+  updateAIStatusBar();
   checkAIReady();
 }
 
@@ -1232,6 +1270,7 @@ function checkAIReady() {
   else if (!hasTypes) { warn.style.display = 'block'; warn.textContent = 'Pilih minimal satu tipe soal.'; }
   else                { warn.style.display = 'none'; }
   checkChatReady();
+  try { wCheckReady(); } catch {}
 }
 
 async function callAI(messages, modelOverride) {
@@ -1336,7 +1375,7 @@ function checkChatReady() {
   if (btn) btn.disabled = !(hasKey && hasCats);
   const warn = document.getElementById('chatWarn');
   if (!warn) return;
-  if (!hasKey)       { warn.style.display = 'block'; warn.textContent = 'Simpan API key dulu di tab Latihan Soal.'; }
+  if (!hasKey)       { warn.style.display = 'block'; warn.textContent = 'Simpan API key dulu di Pengaturan AI (bagian atas).'; }
   else if (!hasCats) { warn.style.display = 'block'; warn.textContent = 'Pilih minimal satu kategori materi.'; }
   else                { warn.style.display = 'none'; }
 }
@@ -1687,9 +1726,6 @@ function initWSetup() {
       <div class="qcb">${WC.has(c.id) ? '✓' : ''}</div>
       <span class="qol">${c.label}</span>
     </div>`).join('');
-  const savedVisionModel = localStorage.getItem(AI_VISION_MODEL_STORE + '_' + AI_PROVIDER);
-  document.getElementById('wModelInput').value = savedVisionModel || '';
-  document.getElementById('wModelStatus').textContent = 'Model vision aktif: ' + (savedVisionModel || AI_VISION_DEFAULTS[AI_PROVIDER] || AI_ENDPOINTS[AI_PROVIDER].model) + (savedVisionModel ? '' : ' (default)');
   wCheckReady();
 }
 
@@ -1697,7 +1733,7 @@ function wSaveVisionModel(input) {
   const val = input.value.trim();
   if (val) localStorage.setItem(AI_VISION_MODEL_STORE + '_' + AI_PROVIDER, val);
   else      localStorage.removeItem(AI_VISION_MODEL_STORE + '_' + AI_PROVIDER);
-  document.getElementById('wModelStatus').textContent = 'Model vision aktif: ' + (val || AI_VISION_DEFAULTS[AI_PROVIDER] || AI_ENDPOINTS[AI_PROVIDER].model) + (val ? '' : ' (default)');
+  aiEl('wModelStatus').textContent = 'Aktif: ' + (val || (AI_VISION_DEFAULTS[AI_PROVIDER] || AI_ENDPOINTS[AI_PROVIDER].model) + ' (default)');
 }
 
 function wTogCat(id, el) {
@@ -1739,7 +1775,7 @@ function wCheckReady() {
   document.getElementById('wStartBtn').disabled = !(has && aiKeyOk);
   const warn = document.getElementById('wWarn');
   if (!has)          { warn.style.display = 'block'; warn.textContent = 'Pilih minimal satu kategori.'; }
-  else if (!aiKeyOk) { warn.style.display = 'block'; warn.textContent = 'Simpan API key dulu di tab Latihan AI sebelum mulai latihan menulis.'; }
+  else if (!aiKeyOk) { warn.style.display = 'block'; warn.textContent = 'Simpan API key dulu di Pengaturan AI (bagian atas) sebelum mulai latihan menulis.'; }
   else               { warn.style.display = 'none'; }
 }
 
@@ -2552,6 +2588,7 @@ renderKataKerjaResults();
 renderBabList();
 renderBunpou();
 initQSetup();
+initAISettings();
 initAISetup();
 initWSetup();
 wInitCanvasEvents();
