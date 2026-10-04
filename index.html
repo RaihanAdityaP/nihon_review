@@ -27,7 +27,6 @@
     <button onclick="showPage('partikel',this)">助詞</button>
     <button onclick="showPage('buku',this)">教科書</button>
     <button onclick="showPage('bunpou',this)">文法</button>
-    <button onclick="showPage('menulis',this)">書き取り</button>
     <button onclick="showPage('quiz',this)">クイズ</button>
     <button onclick="showPage('latihanai',this)">AI練習</button>
     <button onclick="showPage('progress',this)">進捗</button>
@@ -54,7 +53,6 @@
     <button onclick="showPage('partikel',this,true)">助詞</button>
     <button onclick="showPage('buku',this,true)">教科書</button>
     <button onclick="showPage('bunpou',this,true)">文法</button>
-    <button onclick="showPage('menulis',this,true)">書き取り</button>
     <button onclick="showPage('quiz',this,true)">クイズ</button>
     <button onclick="showPage('latihanai',this,true)">AI練習</button>
     <button onclick="showPage('progress',this,true)">進捗</button>
@@ -185,11 +183,18 @@
     </div>
   </div>
 
-  <!-- LATIHAN AI -->
+  <!-- AI -->
   <div id="pageLatihanai" class="page">
-    <div class="sec-title">Latihan AI</div>
-    <div class="sec-sub">Soal isian (bukan pilihan ganda) dibuat oleh AI dari materi yang kamu pilih — kamu ketik sendiri jawabannya.</div>
+    <div class="sec-title">AI</div>
+    <div class="sec-sub">Fitur-fitur belajar yang dibantu AI — pilih mode di bawah.</div>
 
+    <div id="aiTabBar" style="display:flex;gap:.3rem;margin-bottom:1.2rem;flex-wrap:wrap">
+      <button class="cat-btn active" onclick="aiSwitchTab('latihan',this)">Latihan Soal</button>
+      <button class="cat-btn" onclick="aiSwitchTab('chat',this)">Chatbot</button>
+      <button class="cat-btn" onclick="aiSwitchTab('menulis',this)">Menulis</button>
+    </div>
+
+  <div id="aiPanelLatihan">
     <div class="qsetup" id="aiSetup">
       <div class="qlabel">Provider AI</div>
       <div class="trow" id="aiProviderRow">
@@ -275,45 +280,41 @@
 
     <div id="aiErrorBox" class="qwarn" style="display:none;text-align:center;padding:1rem;max-width:640px;margin:1rem auto"></div>
   </div>
+  <!-- /aiPanelLatihan -->
 
-  <!-- PROGRESS -->
-  <div id="pageProgress" class="page">
-    <div class="sec-title">Progress</div>
-    <div class="sec-sub">Riwayat quiz tersimpan di perangkat ini.</div>
-    <div class="pov-grid" id="povGrid"></div>
-    <div class="prog-hdr">
-      <div class="qlabel" style="margin:0">Riwayat Terakhir</div>
-      <button class="clrbtn" onclick="clearProg()">Hapus Semua</button>
-    </div>
-    <div class="recent-list" id="recentList"></div>
-  </div>
+  <!-- CHATBOT -->
+  <div id="aiPanelChat" style="display:none">
+    <div class="sec-sub" style="margin-bottom:1rem">Ngobrol bahasa Jepang sama AI, dibatasi cuma pakai kotoba &amp; bunpou yang kamu pilih di bawah — jadi gak kelewat level. Provider &amp; API key sama kayak di tab Latihan Soal.</div>
 
-  <!-- BUKU (Bab & Kuis) -->
-  <div id="pageBuku" class="page">
-    <div class="sec-title">Buku</div>
-    <div class="sec-sub">Kosakata dari buku pelajaran, dikelompokkan per bab.</div>
-    <div class="cat-tabs" id="bukuBookTabs"></div>
-    <div class="kamus-search-wrap">
-      <input type="text" id="bukuSearchInput" class="kamus-search" placeholder="Cari kata di semua bab..." oninput="renderBukuSearch()">
+    <div class="qlabel">Pilih Materi yang Boleh Dipakai AI</div>
+    <div class="smrow">
+      <button class="smbtn" onclick="chatSelAll(true)">Pilih Semua</button>
+      <button class="smbtn" onclick="chatSelAll(false)">Hapus Semua</button>
     </div>
-    <div id="bukuSearchResults"></div>
-    <div id="babList"></div>
-  </div>
+    <div class="qog-search-wrap"><input class="qog-search" id="chatQogSearchInput" placeholder="Cari kategori (misal: bab 5, hewan, bunpou)..." autocomplete="off" oninput="filterChatQog()"></div>
+    <div class="qog" id="chatQog"></div>
+    <div class="qwarn" id="chatWarn">Pilih minimal satu kategori materi.</div>
 
-  <!-- BUNPOU -->
-  <div id="pageBunpou" class="page">
-    <div class="sec-title">文法 · Bunpou</div>
-    <div class="sec-sub">Pola kalimat dan tata bahasa, dikelompokkan per tema.</div>
-    <div class="cat-tabs" id="bunpouBookTabs"></div>
-    <div class="kamus-search-wrap">
-      <input type="text" id="bunpouSearchInput" class="kamus-search" placeholder="Cari pola, romaji, atau arti..." oninput="filterBunpou()">
+    <div class="qlabel">Topik / Skenario <small>(opsional — kosongkan biar AI bebas mulai)</small></div>
+    <input type="text" id="chatTopicInput" class="input-ai" placeholder="contoh: di restoran, beli tiket kereta, nanya alamat, dst..." autocomplete="off">
+
+    <button class="start-btn" id="chatStartBtn" onclick="startChat()" disabled style="margin-top:1rem">Mulai Chat</button>
+
+    <div id="chatWindow" style="display:none;max-width:640px;margin:1.2rem auto 0">
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-inputrow">
+        <input type="text" id="chatInput" class="input-ai" placeholder="Ketik balasanmu di sini..." autocomplete="off" onkeydown="if(event.key==='Enter')sendChatMsg()">
+        <button class="smbtn" onclick="sendChatMsg()">Kirim</button>
+      </div>
+      <button class="smbtn" onclick="resetChat()" style="margin-top:.6rem">↺ Chat Baru / Ganti Materi</button>
     </div>
-    <div id="bunpouContent"></div>
+
+    <div id="chatErrorBox" class="qwarn" style="display:none;text-align:center;padding:1rem;max-width:640px;margin:1rem auto"></div>
   </div>
+  <!-- /aiPanelChat -->
 
   <!-- MENULIS -->
-  <div id="pageMenulis" class="page">
-    <div class="sec-title">書き取り · Menulis</div>
+  <div id="aiPanelMenulis" style="display:none">
     <div class="sec-sub">Karakter panduan muncul transparan di kanvas — timpa langsung di atasnya untuk latihan menulis tangan. Hasil coretanmu dicek otomatis oleh AI.</div>
 
     <div class="qsetup" id="wSetup">
@@ -385,6 +386,45 @@
       <button class="rbtn" id="wRetryWrongBtn" onclick="wRetryWrong()">Ulangi yang Perlu Diulang</button>
       <button class="rbtn" onclick="backWSetup()">Pengaturan</button>
     </div>
+  </div>
+
+  <!-- /aiPanelMenulis -->
+
+  </div>
+
+  <!-- PROGRESS -->
+  <div id="pageProgress" class="page">
+    <div class="sec-title">Progress</div>
+    <div class="sec-sub">Riwayat quiz tersimpan di perangkat ini.</div>
+    <div class="pov-grid" id="povGrid"></div>
+    <div class="prog-hdr">
+      <div class="qlabel" style="margin:0">Riwayat Terakhir</div>
+      <button class="clrbtn" onclick="clearProg()">Hapus Semua</button>
+    </div>
+    <div class="recent-list" id="recentList"></div>
+  </div>
+
+  <!-- BUKU (Bab & Kuis) -->
+  <div id="pageBuku" class="page">
+    <div class="sec-title">Buku</div>
+    <div class="sec-sub">Kosakata dari buku pelajaran, dikelompokkan per bab.</div>
+    <div class="cat-tabs" id="bukuBookTabs"></div>
+    <div class="kamus-search-wrap">
+      <input type="text" id="bukuSearchInput" class="kamus-search" placeholder="Cari kata di semua bab..." oninput="renderBukuSearch()">
+    </div>
+    <div id="bukuSearchResults"></div>
+    <div id="babList"></div>
+  </div>
+
+  <!-- BUNPOU -->
+  <div id="pageBunpou" class="page">
+    <div class="sec-title">文法 · Bunpou</div>
+    <div class="sec-sub">Pola kalimat dan tata bahasa, dikelompokkan per tema.</div>
+    <div class="cat-tabs" id="bunpouBookTabs"></div>
+    <div class="kamus-search-wrap">
+      <input type="text" id="bunpouSearchInput" class="kamus-search" placeholder="Cari pola, romaji, atau arti..." oninput="filterBunpou()">
+    </div>
+    <div id="bunpouContent"></div>
   </div>
 
 </main>

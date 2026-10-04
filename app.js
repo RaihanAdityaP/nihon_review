@@ -49,7 +49,11 @@ function toggleTheme() {
 // ─────────────────────────────────────────────────────
 // NAV
 // ─────────────────────────────────────────────────────
+const LAST_PAGE_KEY = 'nihongo_last_page';
+const AI_TAB_KEY = 'nihongo_last_ai_tab';
+
 function showPage(name, btn, fromDrawer) {
+  try { localStorage.setItem(LAST_PAGE_KEY, name); } catch {}
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('#desktopNav button, .drawer-nav button').forEach(b => b.classList.remove('active'));
   document.getElementById('page' + name[0].toUpperCase() + name.slice(1)).classList.add('active');
@@ -58,7 +62,7 @@ function showPage(name, btn, fromDrawer) {
   });
   if (fromDrawer) closeMenu();
   if (name === 'progress') renderProg();
-  if (name === 'menulis') initWSetup();
+
 }
 
 function toggleMenu() {
@@ -299,6 +303,7 @@ const QCATS_STATIC = [
   { id: 'arah',        label: 'Arah & Posisi',         t: 'kotoba' },
   { id: 'kelas-ex',    label: 'Ekspresi di Kelas',     t: 'kotoba' },
   { id: 'sampah',      label: 'Sampah & Lingkungan',   t: 'kotoba' },
+  { id: 'laut-dalam',  label: 'Laut Dalam',            t: 'kotoba' },
   { id: 'counter',     label: 'Kata Bantu Bilangan',   t: 'counter' },
   { id: 'sifat-i',     label: 'Kata Sifat - い',        t: 'sifat' },
   { id: 'sifat-na',    label: 'Kata Sifat - な',        t: 'sifat' },
@@ -317,7 +322,33 @@ const QCATS_STATIC = [
   { id: 'buku-bab9',   label: 'Buku — Bab 9',          t: 'buku' },
   { id: 'buku-bab10',  label: 'Buku — Bab 10',         t: 'buku' },
   { id: 'buku-bab11',  label: 'Buku — Bab 11',         t: 'buku' },
-  { id: 'buku-irodori-bab1', label: 'Irodori — Bab 1', t: 'buku' },
+  { id: 'buku-irodori-bab1',  label: 'Irodori — Bab 1',  t: 'buku' },
+  { id: 'buku-irodori-bab2',  label: 'Irodori — Bab 2',  t: 'buku' },
+  { id: 'buku-irodori-bab3',  label: 'Irodori — Bab 3',  t: 'buku' },
+  { id: 'buku-irodori-bab4',  label: 'Irodori — Bab 4',  t: 'buku' },
+  { id: 'buku-irodori-bab5',  label: 'Irodori — Bab 5',  t: 'buku' },
+  { id: 'buku-irodori-bab6',  label: 'Irodori — Bab 6',  t: 'buku' },
+  { id: 'buku-irodori-bab7',  label: 'Irodori — Bab 7',  t: 'buku' },
+  { id: 'buku-irodori-bab8',  label: 'Irodori — Bab 8',  t: 'buku' },
+  { id: 'buku-irodori-bab9',  label: 'Irodori — Bab 9',  t: 'buku' },
+  { id: 'buku-irodori-bab10', label: 'Irodori — Bab 10', t: 'buku' },
+  { id: 'buku-irodori-bab11', label: 'Irodori — Bab 11', t: 'buku' },
+  { id: 'buku-irodori-bab12', label: 'Irodori — Bab 12', t: 'buku' },
+  { id: 'buku-irodori-bab13', label: 'Irodori — Bab 13', t: 'buku' },
+  { id: 'buku-irodori-bab14', label: 'Irodori — Bab 14', t: 'buku' },
+  { id: 'buku-irodori-bab15', label: 'Irodori — Bab 15', t: 'buku' },
+  { id: 'buku-irodori-bab16', label: 'Irodori — Bab 16', t: 'buku' },
+  { id: 'buku-irodori-bab17', label: 'Irodori — Bab 17', t: 'buku' },
+  { id: 'buku-irodori-bab18', label: 'Irodori — Bab 18', t: 'buku' },
+  { id: 'buku-a2-bab1',       label: 'Irodori A2 — Bab 1', t: 'buku' },
+  { id: 'buku-a2-bab2',       label: 'Irodori A2 — Bab 2', t: 'buku' },
+  { id: 'buku-a2-bab3',       label: 'Irodori A2 — Bab 3', t: 'buku' },
+  { id: 'buku-a2-bab4',       label: 'Irodori A2 — Bab 4', t: 'buku' },
+  { id: 'buku-a2-bab5',       label: 'Irodori A2 — Bab 5', t: 'buku' },
+  { id: 'buku-a2-bab6',       label: 'Irodori A2 — Bab 6', t: 'buku' },
+  { id: 'buku-a2-bab7',       label: 'Irodori A2 — Bab 7', t: 'buku' },
+  { id: 'buku-a2-bab8',       label: 'Irodori A2 — Bab 8', t: 'buku' },
+  { id: 'buku-a2-bab9',       label: 'Irodori A2 — Bab 9', t: 'buku' },
 ];
 
 // Kategori Bunpou TIDAK di-hardcode di sini — otomatis di-generate dari
@@ -452,7 +483,7 @@ function ktItems(cid) {
     penghubung: 'Kata Penghubung (Setsuzokushi)',
     profesi: 'Profesi & Pekerjaan',
     negara: 'Negara & Bangsa', perkenalan: 'Perkenalan Diri', hobi: 'Hobi & Olahraga',
-    arah: 'Arah & Posisi', 'kelas-ex': 'Ekspresi di Kelas', sampah: 'Sampah & Lingkungan'
+    arah: 'Arah & Posisi', 'kelas-ex': 'Ekspresi di Kelas', sampah: 'Sampah & Lingkungan', 'laut-dalam': 'Laut Dalam'
   };
   const keys = Array.isArray(m[cid]) ? m[cid] : [m[cid]];
   let out = [];
@@ -491,11 +522,10 @@ function kerjaItems(cid) {
 }
 
 function bukuItems(cid) {
-  // Format lama: "buku-bab1" (buku utama). Format baru: "buku-irodori-bab1" (buku lain).
-  const mIrodori = /^buku-irodori-(bab\d+)$/.exec(cid || '');
-  const bookKey = mIrodori ? 'irodori' : 'minna';
-  const m = mIrodori || /^buku-(bab\d+)$/.exec(cid || '');
-  const babKey = m ? m[1] : null;
+  // Format lama: "buku-bab1" (buku utama/minna). Format baru: "buku-<bookKey>-bab1" (buku lain, mis. irodori/a2).
+  const mOther = /^buku-([a-z0-9]+)-(bab\d+)$/.exec(cid || '');
+  const bookKey = mOther ? mOther[1] : 'minna';
+  const babKey = mOther ? mOther[2] : (/^buku-(bab\d+)$/.exec(cid || '') || [])[1];
   const source = BOOKS[bookKey] && BOOKS[bookKey].data;
   if (!babKey || !source || !source[babKey]) return [];
   let out = [];
@@ -1131,6 +1161,7 @@ function checkAIReady() {
   else if (!hasItems) { warn.style.display = 'block'; warn.textContent = 'Pilih minimal satu kategori materi.'; }
   else if (!hasTypes) { warn.style.display = 'block'; warn.textContent = 'Pilih minimal satu tipe soal.'; }
   else                { warn.style.display = 'none'; }
+  checkChatReady();
 }
 
 async function callAI(messages, modelOverride) {
@@ -1163,6 +1194,184 @@ async function callAI(messages, modelOverride) {
   // buang blok itu biar sisanya bisa di-JSON.parse dengan aman.
   content = content.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
   return content;
+}
+
+// ─────────────────────────────────────────────────────
+// AI HUB TABS (Latihan Soal / Chatbot / dst ke depannya)
+// ─────────────────────────────────────────────────────
+function aiSwitchTab(tab, btn) {
+  document.getElementById('aiPanelLatihan').style.display = tab === 'latihan' ? 'block' : 'none';
+  document.getElementById('aiPanelChat').style.display    = tab === 'chat'    ? 'block' : 'none';
+  document.getElementById('aiPanelMenulis').style.display = tab === 'menulis' ? 'block' : 'none';
+  document.querySelectorAll('#aiTabBar .cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  try { localStorage.setItem(AI_TAB_KEY, tab); } catch {}
+  if (tab === 'chat') initChatSetup();
+  if (tab === 'menulis') initWSetup();
+}
+
+// ─────────────────────────────────────────────────────
+// CHATBOT — latihan kaiwa bebas, dibatasi kotoba+bunpou terpilih
+// ─────────────────────────────────────────────────────
+const CHAT_SC_KEY = 'nihongo_chat_cats';
+const CHAT_TOPIC_KEY = 'nihongo_chat_topic';
+
+let CHAT_SC = new Set();
+try {
+  const savedCats = JSON.parse(localStorage.getItem(CHAT_SC_KEY) || '[]');
+  if (Array.isArray(savedCats)) savedCats.forEach(id => CHAT_SC.add(id));
+} catch {}
+let CHAT_HISTORY = [];
+
+function saveChatCats() {
+  try { localStorage.setItem(CHAT_SC_KEY, JSON.stringify([...CHAT_SC])); } catch {}
+}
+
+function initChatSetup() {
+  const savedTopic = localStorage.getItem(CHAT_TOPIC_KEY);
+  const topicInput = document.getElementById('chatTopicInput');
+  if (savedTopic && topicInput && !topicInput.value) topicInput.value = savedTopic;
+  if (topicInput && !topicInput.dataset.bound) {
+    topicInput.dataset.bound = '1';
+    topicInput.addEventListener('input', () => {
+      try { localStorage.setItem(CHAT_TOPIC_KEY, topicInput.value); } catch {}
+    });
+  }
+  document.getElementById('chatQog').innerHTML = QCATS.map(c => `
+    <div class="qopt${CHAT_SC.has(c.id) ? ' sel' : ''}" onclick="togChatCat('${c.id}',this)">
+      <div class="qcb">${CHAT_SC.has(c.id) ? '✓' : ''}</div>
+      <span class="qol">${c.label}</span>
+    </div>`).join('');
+  checkChatReady();
+}
+
+function togChatCat(id, el) {
+  CHAT_SC.has(id)
+    ? (CHAT_SC.delete(id), el.classList.remove('sel'), el.querySelector('.qcb').textContent = '')
+    : (CHAT_SC.add(id),    el.classList.add('sel'),    el.querySelector('.qcb').textContent = '✓');
+  saveChatCats();
+  checkChatReady();
+}
+
+function chatSelAll(v) {
+  v ? QCATS.forEach(c => CHAT_SC.add(c.id)) : CHAT_SC.clear();
+  saveChatCats();
+  initChatSetup();
+}
+
+function filterChatQog() {
+  const q = (document.getElementById('chatQogSearchInput').value || '').trim().toLowerCase();
+  document.querySelectorAll('#chatQog .qopt').forEach(opt => {
+    const label = (opt.querySelector('.qol')?.textContent || '').toLowerCase();
+    opt.style.display = !q || label.includes(q) ? '' : 'none';
+  });
+}
+
+function checkChatReady() {
+  const hasKey  = !!localStorage.getItem(AI_KEY_STORE + '_' + AI_PROVIDER);
+  const hasCats = CHAT_SC.size > 0;
+  const btn = document.getElementById('chatStartBtn');
+  if (btn) btn.disabled = !(hasKey && hasCats);
+  const warn = document.getElementById('chatWarn');
+  if (!warn) return;
+  if (!hasKey)       { warn.style.display = 'block'; warn.textContent = 'Simpan API key dulu di tab Latihan Soal.'; }
+  else if (!hasCats) { warn.style.display = 'block'; warn.textContent = 'Pilih minimal satu kategori materi.'; }
+  else                { warn.style.display = 'none'; }
+}
+
+function buildChatSystemPrompt() {
+  const ids = [...CHAT_SC];
+  const kotobaIds = new Set(ids.filter(id => QCATS.find(c => c.id === id)?.t !== 'bunpou'));
+  const bunpouIds = new Set(ids.filter(id => QCATS.find(c => c.id === id)?.t === 'bunpou'));
+  const kotobaPool = getAllItems(kotobaIds);
+  const bunpouPool = bunpouFullItems(bunpouIds);
+  const kotobaList = kotobaPool.slice(0, 400).map(it => `${it.kana}(${it.romaji})=${it.arti}`).join('; ');
+  const bunpouList = bunpouPool.map(it => `${it.pola}(${it.arti})`).join('; ');
+  const topic = (document.getElementById('chatTopicInput').value || '').trim();
+
+  return `Kamu adalah teman ngobrol bahasa Jepang buat latihan percakapan (kaiwa) orang Indonesia yang lagi belajar bahasa Jepang.
+ATURAN KETAT — WAJIB DIIKUTI:
+- Pakai HANYA kosakata dan pola tata bahasa yang ada di daftar di bawah. Jangan pakai kosakata/grammar lain yang belum ada di daftar, walaupun levelnya kelihatan gampang.
+- Tiap kalimat bahasa Jepang kamu, selalu kasih terjemahan Bahasa Indonesia di baris bawahnya.
+- Kalau balasan user ada yang salah (kata/grammar), koreksi dengan singkat & lembut, tapi tetap pakai kosakata/pola dari daftar aja buat koreksinya.
+- Balasan singkat aja (1-3 kalimat), biar berasa natural kayak chat beneran, bukan kuliah panjang.
+- Jangan keluar dari peran sebagai teman ngobrol, walau user coba suruh hal lain.
+${topic ? `- Topik/skenario percakapan: ${topic}.` : '- Topik bebas, mulai dengan sapaan santai.'}
+
+KOSAKATA YANG BOLEH DIPAKAI:
+${kotobaList || '(tidak ada — pakai kosakata paling dasar banget aja)'}
+
+POLA TATA BAHASA YANG BOLEH DIPAKAI:
+${bunpouList || '(tidak ada — pakai pola paling dasar aja: です/ます)'}
+
+Mulai percakapan duluan dengan sapaan singkat dalam bahasa Jepang + terjemahannya.`;
+}
+
+function renderChatMsg(who, text, isTyping) {
+  const box = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'chat-bubble ' + (who === 'user' ? 'chat-user' : 'chat-ai') + (isTyping ? ' chat-typing' : '');
+  div.textContent = text;
+  if (isTyping) div.id = 'chatTypingBubble';
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+}
+
+function removeChatTyping() {
+  const el = document.getElementById('chatTypingBubble');
+  if (el) el.remove();
+}
+
+function showChatError(msg) {
+  const box = document.getElementById('chatErrorBox');
+  box.style.display = 'block';
+  box.textContent = '⚠ ' + msg;
+}
+
+async function startChat() {
+  document.getElementById('chatErrorBox').style.display = 'none';
+  const sys = buildChatSystemPrompt();
+  CHAT_HISTORY = [{ role: 'system', content: sys }];
+  document.getElementById('chatWindow').style.display = 'block';
+  document.getElementById('chatMessages').innerHTML = '';
+  document.getElementById('chatStartBtn').disabled = true;
+  renderChatMsg('ai', 'Sedang mengetik...', true);
+  try {
+    const reply = await callAI(CHAT_HISTORY);
+    removeChatTyping();
+    CHAT_HISTORY.push({ role: 'assistant', content: reply });
+    renderChatMsg('ai', reply);
+  } catch (e) {
+    removeChatTyping();
+    showChatError('Gagal mulai chat: ' + e.message);
+  }
+  checkChatReady();
+}
+
+async function sendChatMsg() {
+  const input = document.getElementById('chatInput');
+  const val = input.value.trim();
+  if (!val) return;
+  input.value = '';
+  renderChatMsg('user', val);
+  CHAT_HISTORY.push({ role: 'user', content: val });
+  renderChatMsg('ai', 'Sedang mengetik...', true);
+  try {
+    const reply = await callAI(CHAT_HISTORY);
+    removeChatTyping();
+    CHAT_HISTORY.push({ role: 'assistant', content: reply });
+    renderChatMsg('ai', reply);
+  } catch (e) {
+    removeChatTyping();
+    showChatError('Gagal kirim pesan: ' + e.message);
+  }
+}
+
+function resetChat() {
+  CHAT_HISTORY = [];
+  document.getElementById('chatWindow').style.display = 'none';
+  document.getElementById('chatMessages').innerHTML = '';
+  document.getElementById('chatErrorBox').style.display = 'none';
 }
 
 function showAIError(msg) {
@@ -1593,7 +1802,8 @@ function wInitCanvasEvents() {
   window.addEventListener('resize', () => {
     clearTimeout(resizeT);
     resizeT = setTimeout(() => {
-      const active = document.getElementById('pageMenulis').classList.contains('active');
+      const active = document.getElementById('pageLatihanai').classList.contains('active')
+        && document.getElementById('aiPanelMenulis').style.display !== 'none';
       const showing = document.getElementById('wActive').style.display === 'block';
       if (active && showing && WCUR) wSetupCanvases(WCUR.char);
     }, 200);
@@ -2288,3 +2498,16 @@ initAISetup();
 initWSetup();
 wInitCanvasEvents();
 applyThemeUI(document.documentElement.getAttribute('data-theme') || 'dark');
+
+// Balikin ke halaman terakhir yang dibuka sebelum reload (kalau ada & valid)
+try {
+  const lastPage = localStorage.getItem(LAST_PAGE_KEY);
+  if (lastPage && document.getElementById('page' + lastPage[0].toUpperCase() + lastPage.slice(1))) {
+    showPage(lastPage);
+  }
+  const lastAiTab = localStorage.getItem(AI_TAB_KEY);
+  if (lastAiTab && lastAiTab !== 'latihan') {
+    const tabBtn = document.querySelector(`#aiTabBar .cat-btn[onclick*="'${lastAiTab}'"]`);
+    if (tabBtn) aiSwitchTab(lastAiTab, tabBtn);
+  }
+} catch {}

@@ -1517,6 +1517,42 @@ const KT={
 {k:"リサイクル / しげんごみ",r:"risaikuru / shigen gomi",a:"sampah daur ulang",kj:"資源ゴミ",n:"Sampah yang bisa didaur ulang (botol, kaleng, kertas, dll), dipisah dari sampah biasa."},
 {k:"そだいごみ",r:"sodai gomi",a:"sampah besar / berukuran besar",kj:"粗大ゴミ",n:"Untuk barang besar (perabot, elektronik, dll) biasanya harus menelepon dulu (denwa) ke pihak terkait untuk menjadwalkan pengambilan, tidak bisa ditaruh sembarangan seperti sampah biasa."}
 ]},
+"Laut Dalam":{rows:[
+{k:"しんかい",r:"shinkai",a:"laut dalam",kj:"深海",n:"深 (dalam) + 海 (laut). Umumnya dipakai untuk kedalaman di bawah ±200 m, tempat cahaya matahari hampir tidak sampai."},
+{k:"しんかいぎょ",r:"shinkaigyo",a:"ikan laut dalam",kj:"深海魚",n:"深海 (laut dalam) + 魚 (ikan)."},
+{k:"いきもの",r:"ikimono",a:"makhluk hidup",kj:"生き物",n:"Bentuk nomina dari 生きる (hidup) + もの (benda). Mencakup hewan dan tumbuhan, tapi dalam percakapan lebih sering berarti hewan."},
+{k:"さんぶんの に",r:"sanbun no ni",a:"dua pertiga (2/3)",kj:"3分の2",n:"Pola pecahan: 〔penyebut〕分の〔pembilang〕. Contoh: 地球の3分の2は海です = dua pertiga Bumi adalah laut."},
+{k:"ゾーン",r:"zoon",a:"zona",n:"Serapan 'zone'. Dipakai untuk nama zona laut: サンライトゾーン, トワイライトゾーン, ミッドナイトゾーン."},
+{k:"ミッドナイトゾーン",r:"middonaito zoon",a:"midnight zone (zona tengah malam)",n:"Zona ±1000-4000 m, gelap total. Versi istilah ilmiah Jepang: 漸深層 (zenshinsou)."},
+{k:"ゆうこうそう",r:"yuukousou",a:"zona cahaya (sunlight zone, 0-200 m)",kj:"有光層",n:"有 (ada) + 光 (cahaya) + 層 (lapisan). Istilah ilmiah; dalam percakapan biasanya pakai サンライトゾーン."},
+{k:"はっこうそう",r:"hakkousou",a:"zona remang (twilight zone, 200-1000 m)",kj:"薄光層",n:"薄 (tipis) + 光 (cahaya) + 層 (lapisan). Istilah ilmiah; dalam percakapan biasanya pakai トワイライトゾーン."},
+{k:"ぜんしんそう",r:"zenshinsou",a:"zona tengah malam (midnight zone, ±1000-4000 m)",kj:"漸深層",n:"Istilah ilmiah untuk ミッドナイトゾーン."},
+{k:"しんかいそう",r:"shinkaisou",a:"zona jurang (abyss, ±4000-6000 m)",kj:"深海層",n:"Istilah ilmiah. Di dasar laut sangat dingin dengan tekanan sangat tinggi."},
+{k:"ちょうしんかいそう",r:"choushinkaisou",a:"zona hadal (6000 m ke bawah)",kj:"超深海層",n:"超 (super/melampaui) + 深海層. Mencakup palung terdalam seperti Palung Mariana."},
+{k:"かいこう",r:"kaikou",a:"palung laut",kj:"海溝",n:"海 (laut) + 溝 (parit). Contoh: マリアナ海溝 (Palung Mariana), bagian laut terdalam di dunia."},
+{k:"あつりょく",r:"atsuryoku",a:"tekanan",kj:"圧力",n:"圧 (tekan) + 力 (tenaga). Makin dalam di laut, makin besar tekanannya."},
+{k:"メートル",r:"meetoru",a:"meter",n:"Serapan 'meter'. Contoh: 1000メートル (seribu meter). Sering ditulis m."},
+{k:"ダイオウイカ",r:"daiou ika",a:"cumi raksasa (giant squid)",kj:"大王イカ",n:"大王 (raja besar) + イカ (cumi). Bisa mencapai belasan meter, hidup di laut dalam."},
+{k:"チョウチンアンコウ",r:"chouchin ankou",a:"ikan pancing laut dalam (anglerfish)",kj:"提灯鮟鱇",n:"提灯 (lampion) + アンコウ (ikan pancing). Disebut begitu karena ada 'lampu' bercahaya di kepalanya untuk menarik mangsa."},
+{k:"ダイオウグソクムシ",r:"daiou gusokumushi",a:"isopoda raksasa (giant isopod)",n:"Kerabat kutu kayu raksasa yang hidup di laut dalam. Populer di Jepang karena sering ada di akuarium."},
+{k:"リュウグウノツカイ",r:"ryuuguu no tsukai",a:"ikan dayung (oarfish)",kj:"竜宮の使い",n:"Artinya 'utusan istana naga laut'. Ikan pipih sangat panjang, bisa lebih dari 5 meter."},
+{k:"メンダコ",r:"mendako",a:"gurita telinga (flapjack octopus)",n:"Gurita kecil, pipih, dengan sirip mirip telinga. Terkenal karena bentuknya yang imut."},
+{k:"ホタルイカ",r:"hotaru ika",a:"cumi kunang-kunang",kj:"蛍イカ",n:"蛍 (kunang-kunang) + イカ (cumi). Tubuhnya bisa menyala biru; terkenal di Teluk Toyama."},
+{k:"ラブカ",r:"rabuka",a:"hiu cambuk (frilled shark)",n:"Hiu laut dalam berbentuk mirip belut dengan gigi banyak dan tajam. Sering disebut 'fosil hidup'."},
+{k:"ミツクリザメ",r:"mitsukurizame",a:"hiu goblin (goblin shark)",kj:"ミツクリ鮫",n:"Hiu laut dalam dengan moncong panjang menonjol dan rahang yang bisa menjulur ke depan. Nama lainnya テングザメ."},
+{k:"ホウライエソ",r:"hourai eso",a:"ikan viper (viperfish)",n:"Ikan laut dalam bergigi sangat panjang dan tajam, punya organ cahaya di tubuhnya."},
+{k:"オニキンメ",r:"oni kinme",a:"ikan taring (fangtooth)",n:"Ikan laut dalam berwajah seram dengan gigi taring besar. Nama 'oni' berarti iblis/raksasa."},
+{k:"フクロウナギ",r:"fukurou unagi",a:"belut kantung (gulper eel)",n:"Belut laut dalam dengan mulut sangat besar seperti kantung."},
+{k:"デメニギス",r:"demenigisu",a:"ikan mata-tong (barreleye fish)",n:"Ikan dengan kepala transparan; matanya ada di dalam kepala dan bisa menghadap ke atas."},
+{k:"ジュウモンジダコ",r:"juumonji dako",a:"gurita dumbo (dumbo octopus)",n:"Gurita laut dalam berbadan lembut dengan sirip mirip telinga, mirip karakter Dumbo."},
+{k:"ダイオウホオズキイカ",r:"daiou hoozuki ika",a:"cumi kolosal (colossal squid)",n:"Kerabat ダイオウイカ yang lebih berat dan berbadan lebih besar."},
+{k:"シーラカンス",r:"shiirakansu",a:"ikan coelacanth",n:"Serapan 'coelacanth'. Ikan purba yang dulu dikira sudah punah."},
+{k:"オウムガイ",r:"oumugai",a:"nautilus",kj:"鸚鵡貝",n:"Kerabat cumi dan gurita yang punya cangkang spiral. Namanya berarti 'kerang beo' karena bentuk cangkangnya mirip paruh beo."},
+{k:"ヨコヅナイワシ",r:"yokozuna iwashi",a:"ikan yokozuna (giant deep-sea fish)",n:"Ikan laut dalam berukuran besar; 横綱 (yokozuna) adalah gelar tertinggi sumo."},
+{k:"マッコウクジラ",r:"makkou kujira",a:"paus sperma",kj:"抹香鯨",n:"Paus bergigi yang menyelam sangat dalam, dikenal memburu cumi raksasa."},
+{k:"ユメナマコ",r:"yume namako",a:"teripang mimpi (dream sea cucumber)",kj:"夢ナマコ",n:"Teripang laut dalam yang bisa berenang di dekat dasar laut."},
+{k:"クラゲ",r:"kurage",a:"ubur-ubur",kj:"海月",n:"Kanjinya 海月 (bulan laut). Banyak jenis ubur-ubur laut dalam yang bisa menyala."},
+]},
 "Istilah Tata Bahasa":{rows:[
 {k:"どうし",r:"doushi",a:"kata kerja (verba)",kj:"動詞",n:"Dou (gerak) + Shi (kata). Istilah gramatikal untuk kata kerja, mis. たべます、いきます."},
 {k:"けいようし",r:"keiyoushi",a:"kata sifat (adjektiva)",kj:"形容詞",n:"Kei (bentuk) + You (rupa) + Shi (kata). Mencakup i-keiyoushi (むずかしい) dan na-keiyoushi (しずか)."},
@@ -1895,6 +1931,7 @@ const KATA_KERJA = {
 {k:"ひっかけます",r:"hikkakemasu",a:"menjegal, mengaitkan",kj:"引っ掛けます",n:"'足を引っかけます' = menjegal kaki (orang). Bentuk pasifnya (引っかけられます, 'dijegal') sudah ada di kategori Bencana & Kecelakaan.",type:"tadoushi"}
 ]},
 "Kata Kerja - Kelompok III":{rows:[
+{k:"たんけんします",r:"tanken shimasu",a:"menjelajah",kj:"探検します",type:"tadoushi"},
 {k:"がっかりします",r:"gakkari shimasu",a:"kecewa",kj:"がっかりします",type:"jidoushi"},
 {k:"ちょきんします",r:"chokin shimasu",a:"menabung",kj:"貯金します",type:"tadoushi"},
 {k:"へんかします",r:"henka shimasu",a:"berubah",kj:"変化します",type:"jidoushi"},
@@ -13909,6 +13946,88 @@ const BUNPOU = [
         catatan: "Dipake kalau aksi di klausa utama terjadi PAS BARENGAN sama V lagi berlangsung.",
         contoh: [
           {jp:"日本にいる時、ずっと日本語を話していました。", id:"Saat sedang berada di Jepang, saya terus berbicara bahasa Jepang."}
+        ]
+      }
+    ]
+  },
+
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 7",
+    judul: "〜たら、〜 — Pengandaian/Kondisi (Kalau...)",
+    sub: "Dipake buat 2 situasi: ① hal yang BELUM TENTU kejadian (pengandaian, kadang dikasih もし di depan), ② hal yang UDAH PASTI bakal kejadian (dipake buat nyebutin apa yang dilakuin SETELAH itu kejadian). Dibentuk dari bentuk lampau (た形) + ら, nempel ke N/ナA/イA/V.",
+    items: [
+      {
+        pola: "Nだったら／Nじゃなかったら",
+        romaji: "N dattara / N janakattara",
+        arti: "Kalau (bukan) N, ~",
+        catatan: "Nomina + だったら (positif) / じゃなかったら (negatif).",
+        contoh: [
+          {jp:"明日、休みだったら、どこか行きませんか。", id:"Kalau besok libur, mau pergi ke suatu tempat gak?"}
+        ]
+      },
+      {
+        pola: "ナA-だったら／ナA-じゃなかったら",
+        romaji: "naA-dattara / naA-janakattara",
+        arti: "Kalau (tidak) ~, ~",
+        catatan: "Adjektiva-na + だったら (positif) / じゃなかったら (negatif).",
+        contoh: [
+          {jp:"ひまだったら、ちょっと手伝ってください。", id:"Kalau senggang, tolong bantu sebentar."}
+        ]
+      },
+      {
+        pola: "イA-かったら／イA-くなかったら",
+        romaji: "iA-kattara / iA-kunakattara",
+        arti: "Kalau (tidak) ~, ~",
+        catatan: "Adjektiva-i: ganti い jadi かったら (positif) / くなかったら (negatif).",
+        contoh: [
+          {jp:"疲れたら、休んでくださいね。", id:"Kalau capek, istirahat ya."}
+        ]
+      },
+      {
+        pola: "V-たら／V-なかったら",
+        romaji: "V-tara / V-nakattara",
+        arti: "Kalau (tidak) [V], ~",
+        catatan: "Verba bentuk た + ら (positif) / verba bentuk ない diubah jadi なかったら (negatif).",
+        contoh: [
+          {jp:"時間があったら、手伝ってください。", id:"Kalau ada waktu, tolong bantu."},
+          {jp:"宿題が終わらなかったら、遊びに行けません。", id:"Kalau PR-nya belum selesai, saya tidak bisa pergi main."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 7",
+    judul: "V-（ら）れます — Pasif①: Pengumuman Acara/Event",
+    sub: "Dipake di pengumuman resmi/formal soal acara (konser, festival, dsb), di mana yang jadi SUBJEK itu ACARANYA sendiri (bukan penyelenggaranya) — karena yang penting buat didengar itu APA yang diadakan, bukan SIAPA yang ngadain. Kel.1: akhiran れる, Kel.2: akhiran られる.",
+    items: [
+      {
+        pola: "〔N：acara〕が〔V-（ら）れます〕。",
+        romaji: "[N:acara] ga [V-(ra)remasu].",
+        arti: "[Acara] akan diadakan/diselenggarakan.",
+        catatan: "Verba yang sering dipake di pola ini: 開催される(diadakan), 行われる(diselenggarakan), 開かれる(dibuka) — di percakapan sehari-hari biasanya cukup bilang 「〜があります」 aja, gak perlu bentuk pasif.",
+        contoh: [
+          {jp:"来月、新しい図書館が開かれます。", id:"Bulan depan, perpustakaan baru akan dibuka."},
+          {jp:"毎年、この公園でお祭りが行われます。", id:"Setiap tahun, festival diadakan di taman ini."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 7",
+    judul: "V-（ら）れます — Bentuk Potensial②: Kemampuan Orang sebagai Subjek",
+    sub: "Masih bentuk potensial yang sama kayak Bab5, tapi penggunaannya beda: di Bab5 dipake buat 'di suatu TEMPAT bisa ngapain aja' (tempat jadi fokus), di sini dipake buat 'SESEORANG bisa ngapain' (orangnya jadi subjek, nunjukin kemampuan pribadi).",
+    items: [
+      {
+        pola: "〔Orang〕は、〔N〕が〔V-（ら）れます〕。",
+        romaji: "[Orang] wa, [N] ga [V-(ra)remasu].",
+        arti: "[Orang] bisa [V] [N].",
+        catatan: "Bedain dari Bab5: 「北海道では、カニが食べられます」(di Hokkaido, bisa makan kepiting — tempat yang jadi fokus) vs 「田中さんは、ギターが弾けます」(Tanaka bisa main gitar — ORANGnya yang jadi fokus kemampuannya).",
+        contoh: [
+          {jp:"田中さんは、何か国語も話せます。", id:"Tanaka bisa bicara beberapa bahasa."},
+          {jp:"子どものころから、自転車に乗れます。", id:"Sejak kecil, saya bisa naik sepeda."}
         ]
       }
     ]
