@@ -388,3 +388,17 @@ main{position:relative;z-index:1;padding:1.5rem 1.25rem 3rem;max-width:920px;mar
 .chat-bubble.chat-typing{opacity:.55;font-style:italic}
 .chat-inputrow{display:flex;gap:.5rem}
 .chat-inputrow .input-ai{flex:1}
+
+/* ── Pengelompokan kategori: Moji / Kotoba / Bunpou ── */
+/* wadah luar jangan jadi grid — grid-nya ada di .qog di dalam tiap subgrup */
+#qog.qog,#aiQog.qog,#chatQog.qog{display:block}
+.qgrp{margin-bottom:1.8rem}
+.qgrp-h{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;padding-bottom:.5rem;margin-bottom:.9rem;border-bottom:2px solid var(--border2)}
+.qgrp-h b{font-size:1.05rem;color:var(--text);letter-spacing:.02em;white-space:nowrap}
+.qgrp-h small{font-size:.76rem;color:var(--text3)}
+.qgrp-h span{margin-left:auto;font-family:var(--font-mono,monospace);font-size:.72rem;color:var(--text3);white-space:nowrap}
+.qgrp-h span::after{content:' kategori'}
+.qgrp-sub{margin-bottom:1rem}
+.qgrp-subh{display:flex;align-items:center;gap:.5rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent3);margin:0 0 .5rem}
+.qgrp-subh span{font-family:var(--font-mono,monospace);font-size:.65rem;color:var(--text3)}
+.qgrp-sub .qog{margin-bottom:0}

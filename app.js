@@ -322,6 +322,10 @@ const QCATS_STATIC = [
   { id: 'buku-bab9',   label: 'Buku — Bab 9',          t: 'buku' },
   { id: 'buku-bab10',  label: 'Buku — Bab 10',         t: 'buku' },
   { id: 'buku-bab11',  label: 'Buku — Bab 11',         t: 'buku' },
+  { id: 'buku-bab12',  label: 'Buku — Bab 12',         t: 'buku' },
+  { id: 'buku-bab13',  label: 'Buku — Bab 13',         t: 'buku' },
+  { id: 'buku-bab14',  label: 'Buku — Bab 14',         t: 'buku' },
+  { id: 'buku-bab15',  label: 'Buku — Bab 15',         t: 'buku' },
   { id: 'buku-irodori-bab1',  label: 'Irodori — Bab 1',  t: 'buku' },
   { id: 'buku-irodori-bab2',  label: 'Irodori — Bab 2',  t: 'buku' },
   { id: 'buku-irodori-bab3',  label: 'Irodori — Bab 3',  t: 'buku' },
@@ -391,14 +395,84 @@ function buildKanjiCats() {
 
 const QCATS = QCATS_STATIC.concat(buildBunpouCats()).concat(buildKanjiCats());
 
+// ─────────────────────────────────────────────────────
+// PENGELOMPOKAN KATEGORI: Moji / Kotoba / Bunpou
+// Dipakai bareng oleh Quiz, Latihan AI, dan Chatbot. Nambah kategori baru
+// di QCATS_STATIC cukup lewat field `t` — grup-nya otomatis ngikut di sini.
+// ─────────────────────────────────────────────────────
+const QGROUP_ORDER = [
+  { key: 'moji',   label: '文字 · Moji',   hint: 'Huruf: kana & kanji' },
+  { key: 'kotoba', label: '語彙 · Kotoba', hint: 'Kosakata' },
+  { key: 'bunpou', label: '文法 · Bunpou', hint: 'Tata bahasa: partikel & pola kalimat' }
+];
+
+function catGroup(c) {
+  if (c.t === 'kana')  return { g: 'moji', sub: 'Kana (Hiragana & Katakana)' };
+  if (c.t === 'kanji') return { g: 'moji', sub: 'Kanji' };
+  if (c.t === 'particle' || c.t === 'particle-adv') return { g: 'bunpou', sub: 'Partikel' };
+  if (c.t === 'bunpou') return { g: 'bunpou', sub: 'Pola Kalimat' };
+  if (c.t === 'buku') {
+    if (c.id.startsWith('buku-irodori-')) return { g: 'kotoba', sub: 'Kyoukasho — Irodori' };
+    if (c.id.startsWith('buku-a2-'))      return { g: 'kotoba', sub: 'Kyoukasho — Irodori A2' };
+    return { g: 'kotoba', sub: 'Kyoukasho — Buku Utama' };
+  }
+  if (c.t === 'counter' || c.t === 'sifat' || c.t === 'kerja') return { g: 'kotoba', sub: 'Kata Bilangan, Sifat & Kerja' };
+  return { g: 'kotoba', sub: 'Kotoba Tematik' };
+}
+
+// Render grid kategori berkelompok. `handler` = nama fungsi toggle (string).
+function renderCatGrid(cats, selSet, handler) {
+  const groups = {};
+  cats.forEach(c => {
+    const { g, sub } = catGroup(c);
+    (groups[g] = groups[g] || { subs: [], map: {} });
+    if (!groups[g].map[sub]) { groups[g].map[sub] = []; groups[g].subs.push(sub); }
+    groups[g].map[sub].push(c);
+  });
+  return QGROUP_ORDER.filter(G => groups[G.key]).map(G => {
+    const grp = groups[G.key];
+    const total = grp.subs.reduce((n, sb) => n + grp.map[sb].length, 0);
+    const subsHtml = grp.subs.map(sb => `
+      <div class="qgrp-sub">
+        <div class="qgrp-subh">${sb}<span>${grp.map[sb].length}</span></div>
+        <div class="qog">${grp.map[sb].map(c => `
+          <div class="qopt${selSet.has(c.id) ? ' sel' : ''}" onclick="${handler}('${c.id}',this)">
+            <div class="qcb">${selSet.has(c.id) ? '✓' : ''}</div>
+            <span class="qol">${c.label}</span>
+          </div>`).join('')}
+        </div>
+      </div>`).join('');
+    return `
+    <div class="qgrp">
+      <div class="qgrp-h"><b>${G.label}</b><small>${G.hint}</small><span>${total}</span></div>
+      ${subsHtml}
+    </div>`;
+  }).join('');
+}
+
+// Filter pencarian yang ikut nyembunyiin header grup kalau isinya kosong.
+function filterCatGrid(rootId, q) {
+  q = (q || '').trim().toLowerCase();
+  const root = document.getElementById(rootId);
+  if (!root) return;
+  root.querySelectorAll('.qopt').forEach(opt => {
+    const label = (opt.querySelector('.qol')?.textContent || '').toLowerCase();
+    opt.style.display = !q || label.includes(q) ? '' : 'none';
+  });
+  root.querySelectorAll('.qgrp-sub').forEach(sub => {
+    const any = Array.from(sub.querySelectorAll('.qopt')).some(o => o.style.display !== 'none');
+    sub.style.display = any ? '' : 'none';
+  });
+  root.querySelectorAll('.qgrp').forEach(g => {
+    const any = Array.from(g.querySelectorAll('.qgrp-sub')).some(sb => sb.style.display !== 'none');
+    g.style.display = any ? '' : 'none';
+  });
+}
+
 let SC = new Set(), ST = new Set(['kana-to-romaji']), QN = 10;
 
 function initQSetup() {
-  document.getElementById('qog').innerHTML = QCATS.map(c => `
-    <div class="qopt${SC.has(c.id) ? ' sel' : ''}" onclick="togCat('${c.id}',this)">
-      <div class="qcb">${SC.has(c.id) ? '✓' : ''}</div>
-      <span class="qol">${c.label}</span>
-    </div>`).join('');
+  document.getElementById('qog').innerHTML = renderCatGrid(QCATS, SC, 'togCat');
   checkReady();
 }
 
@@ -1041,11 +1115,7 @@ function aiVisibleCats() {
 }
 
 function initAISetup() {
-  document.getElementById('aiQog').innerHTML = aiVisibleCats().map(c => `
-    <div class="qopt${AI_SC.has(c.id) ? ' sel' : ''}" onclick="togAICat('${c.id}',this)">
-      <div class="qcb">${AI_SC.has(c.id) ? '✓' : ''}</div>
-      <span class="qol">${c.label}</span>
-    </div>`).join('');
+  document.getElementById('aiQog').innerHTML = renderCatGrid(aiVisibleCats(), AI_SC, 'togAICat');
 
   // Muat provider & key tersimpan
   const savedProvider = localStorage.getItem(AI_PROVIDER_STORE);
@@ -1237,11 +1307,7 @@ function initChatSetup() {
       try { localStorage.setItem(CHAT_TOPIC_KEY, topicInput.value); } catch {}
     });
   }
-  document.getElementById('chatQog').innerHTML = QCATS.map(c => `
-    <div class="qopt${CHAT_SC.has(c.id) ? ' sel' : ''}" onclick="togChatCat('${c.id}',this)">
-      <div class="qcb">${CHAT_SC.has(c.id) ? '✓' : ''}</div>
-      <span class="qol">${c.label}</span>
-    </div>`).join('');
+  document.getElementById('chatQog').innerHTML = renderCatGrid(QCATS, CHAT_SC, 'togChatCat');
   checkChatReady();
 }
 
@@ -1260,11 +1326,7 @@ function chatSelAll(v) {
 }
 
 function filterChatQog() {
-  const q = (document.getElementById('chatQogSearchInput').value || '').trim().toLowerCase();
-  document.querySelectorAll('#chatQog .qopt').forEach(opt => {
-    const label = (opt.querySelector('.qol')?.textContent || '').toLowerCase();
-    opt.style.display = !q || label.includes(q) ? '' : 'none';
-  });
+  filterCatGrid('chatQog', document.getElementById('chatQogSearchInput').value);
 }
 
 function checkChatReady() {
@@ -2445,11 +2507,7 @@ function jumpToBab(babIdx) {
 
 // ─── search filter untuk grid kategori Quiz ───
 function filterQog() {
-  const q = (document.getElementById('qogSearchInput').value || '').trim().toLowerCase();
-  document.querySelectorAll('#qog .qopt').forEach(opt => {
-    const label = (opt.querySelector('.qol')?.textContent || '').toLowerCase();
-    opt.style.display = !q || label.includes(q) ? '' : 'none';
-  });
+  filterCatGrid('qog', document.getElementById('qogSearchInput').value);
 }
 
 // ─── search filter untuk halaman Bunpou (bisa juga cari "hari 5", "bab 3", dst) ───
