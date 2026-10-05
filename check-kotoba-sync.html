@@ -23,7 +23,7 @@
 <body>
 
 <h1>🔎 Cek Sinkronisasi: menu Buku → menu Kotoba / Kata Sifat / Kata Kerja / Counter</h1>
-<p style="color:#9ca3af">Buka file ini langsung di browser (double-click / drag ke tab baru). Pastikan <code>data.js</code> ada di folder yang sama.</p>
+<p style="color:#9ca3af">Buka file ini langsung di browser (double-click / drag ke tab baru). Pastikan folder <code>assets/</code> (berisi <code>data.js</code>) ada di sebelah file ini.</p>
 
 <div class="summary" id="summary"></div>
 
@@ -37,7 +37,7 @@
   <div id="mismatches"></div>
 </section>
 
-<script src="data.js"></script>
+<script src="assets/data.js"></script>
 <script>
 function normK(k){ return k.replace(/【な】|（な）|\(na\)/gi,'').replace(/[\s\/／]/g,'').trim(); }
 function normR(r){ return r.toLowerCase().replace(/\(na\)/g,'').replace(/[\s~〜]/g,'').trim(); }

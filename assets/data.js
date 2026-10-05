@@ -1564,6 +1564,34 @@ const KT={
 "Simbol & Tanda":{rows:[
 {k:"まる",r:"maru",a:"tanda benar (○)",kj:"丸",n:"Simbol lingkaran ○, dipakai buat menandai jawaban benar — kebalikan dari 'batsu'."},
 {k:"ばつ",r:"batsu",a:"tanda salah (✕)",n:"Simbol silang ✕, dipakai buat menandai jawaban salah — kebalikan dari 'maru'. Biasa ditulis simbol saja, jarang pakai kanji."}
+]},
+"AI & Teknologi":{rows:[
+{k:"じんこうちのう",r:"jinkouchinou",a:"kecerdasan buatan (AI)",kj:"人工知能"},
+{k:"にんげん",r:"ningen",a:"manusia",kj:"人間"},
+{k:"ロボット",r:"robotto",a:"robot"},
+{k:"きかい",r:"kikai",a:"mesin",kj:"機械"},
+{k:"かんじょう",r:"kanjou",a:"perasaan / emosi",kj:"感情"},
+{k:"ほんやく",r:"honyaku",a:"terjemahan",kj:"翻訳"},
+{k:"しゃかい",r:"shakai",a:"masyarakat",kj:"社会"},
+{k:"じどううんてん",r:"jidouunten",a:"mengemudi otomatis",kj:"自動運転"},
+{k:"そうぞうりょく",r:"souzouryoku",a:"daya kreativitas",kj:"創造力"},
+{k:"かんじゃ",r:"kanja",a:"pasien",kj:"患者"},
+{k:"せきにん",r:"sekinin",a:"tanggung jawab",kj:"責任"},
+{k:"やくに たちます",r:"yaku ni tachimasu",a:"berguna / membantu",kj:"役に立ちます"}
+]},
+"AI & Pemakaian":{rows:[
+{k:"せいせいします",r:"seiseishimasu",a:"generate / menghasilkan",kj:"生成します"},
+{k:"がぞうせいせい",r:"gazouseisei",a:"generate image",kj:"画像生成"},
+{k:"さぎょう",r:"sagyou",a:"pekerjaan / tugas",kj:"作業"},
+{k:"じゅうろうどう",r:"juuroudou",a:"pekerjaan berat",kj:"重労働"},
+{k:"はりつけ, ペースト",r:"haritsuke, peesuto",a:"paste / tempel",kj:"貼り付け"},
+{k:"うわがき",r:"uwagaki",a:"menimpa (overwrite)",kj:"上書き"},
+{k:"ちょさくけん",r:"chosakuken",a:"hak cipta",kj:"著作権"},
+{k:"まもります, ほごします",r:"mamorimasu, hogoshimasu",a:"melindungi",kj:"守ります, 保護します"},
+{k:"まもられます",r:"mamoraremasu",a:"dilindungi",kj:"守られます"},
+{k:"きのう",r:"kinou",a:"fungsi / fitur",kj:"機能"},
+{k:"あくようします",r:"akuyoushimasu",a:"menyalahgunakan",kj:"悪用します"},
+{k:"あくようされます",r:"akuyousaremasu",a:"disalahgunakan",kj:"悪用されます"}
 ]}
 };
 
@@ -14028,6 +14056,79 @@ const BUNPOU = [
         contoh: [
           {jp:"田中さんは、何か国語も話せます。", id:"Tanaka bisa bicara beberapa bahasa."},
           {jp:"子どものころから、自転車に乗れます。", id:"Sejak kecil, saya bisa naik sepeda."}
+        ]
+      }
+    ]
+  },
+
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 8",
+    judul: "もう〜ました／まだ〜ていません／まだ〜ます — Sudah, Belum, Masih",
+    sub: "Buat nanyain & jawab apakah suatu hal UDAH dilakuin atau BELUM. Pertanyaannya pakai もう〜ましたか, jawabannya tergantung kondisi: udah (もう〜ました), belum sama sekali (まだ〜ていません), atau masih proses/belum selesai (まだ〜ます).",
+    items: [
+      {
+        pola: "もう〜ました",
+        romaji: "mou ~mashita",
+        arti: "Sudah ~",
+        catatan: "Dipakai buat bilang suatu hal sudah selesai dilakukan. Dalam pertanyaan: もう〜ましたか (\"Sudah ~ belum?\").",
+        contoh: [
+          {jp:"レポートはもうやりましたか。", id:"Apakah laporannya sudah dikerjakan?"},
+          {jp:"ケーキはもう食べましたか。", id:"Apakah kuenya sudah dimakan?"},
+          {jp:"Simpang 5で行われるコンサートをもう見てみましたか。", id:"Apakah konser yang diadakan di Simpang 5 sudah kamu coba tonton?"}
+        ]
+      },
+      {
+        pola: "まだ〜ていません",
+        romaji: "mada ~te imasen",
+        arti: "Belum ~",
+        catatan: "Jawaban negatif untuk もう〜ましたか: aksinya belum dilakukan sama sekali. Bisa juga dijawab singkat 「まだです」.",
+        contoh: [
+          {jp:"いいえ、まだです。／まだやっていません。", id:"Belum. / Belum saya kerjakan."},
+          {jp:"いいえ、まだ食べていません。", id:"Belum, belum saya makan."}
+        ]
+      },
+      {
+        pola: "まだ〜ます",
+        romaji: "mada ~masu",
+        arti: "Masih (sedang) ~ / belum selesai",
+        catatan: "Dipakai buat nunjukin aksinya masih berlangsung atau belum selesai, jadi masih akan dilanjutin/dikerjain. Beda dari まだ〜ていません yang artinya belum dimulai/dilakukan.",
+        contoh: [
+          {jp:"レポートはもうやりましたか。　いいえ、まだやります。", id:"Apakah laporannya sudah dikerjakan? Belum, masih akan saya kerjakan."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 8",
+    judul: "〔疑問詞〕〜〔普通形〕か — Kalimat Tanya di Dalam Kalimat",
+    sub: "Kalimat tanya (pakai kata tanya: いつ, 何, どこ, どの, だれ, どうやって, 何回, dst) dijadiin BAGIAN dari kalimat yang lebih besar. Bagian pertanyaannya pakai bentuk biasa (普通形) + か, lalu diikuti kata kerja seperti 知っていますか／分かりますか／聞きましたか／覚えていますか／決まりましたか／困っています. Bedanya sama pertanyaan langsung: 「いつ日本へ行きますか」 = nanya langsung, anggap lawan bicara tau jawabannya; 「いつ日本へ行くか、知っていますか」 = nanyain apakah dia tau, anggap lawan bicara mungkin gak tau.",
+    items: [
+      {
+        pola: "〔疑問詞〕〜〔普通形〕か、〜（知っています／分かります／聞きました／覚えています…）か",
+        romaji: "[gimonshi] ~ [futsuukei] ka, ~ (shitte imasu / wakarimasu / kikimashita / oboete imasu…) ka",
+        arti: "Apakah kamu tahu/paham/dengar/ingat [kata tanya] ~?",
+        catatan: "Bagian sebelum か pakai bentuk biasa (行く, 食べたい, ある, 選んだ, 結婚した, 着た, 行っていた). Kalau kalimatnya berakhir です (nomina/adj-na), です dibuang dan langsung disambung か (mis. 「だれか」).",
+        contoh: [
+          {jp:"明日、何時に試験があるか、知っていますか。", id:"Apakah kamu tahu besok jam berapa ujiannya?"},
+          {jp:"明日、何を食べたいか、分かりますか。", id:"Apakah kamu tahu besok mau makan apa?"},
+          {jp:"先生の家はどこにあるか、分かりませんか。", id:"Apakah kamu tidak tahu di mana rumah sensei?"},
+          {jp:"どの服を選んだか、決まりましたか。", id:"Apakah sudah diputuskan baju mana yang dipilih?"},
+          {jp:"Aさんはだれと結婚したか、聞きましたか。", id:"Apakah kamu sudah dengar A menikah dengan siapa?"},
+          {jp:"きたよの駅へ行く時、どうやって行くか、困っています。", id:"Saya bingung bagaimana caranya pergi ke stasiun Kitayono."},
+          {jp:"Jesさんはどの服を着たか、見ましたか。", id:"Apakah kamu lihat Jes memakai baju yang mana?"},
+          {jp:"子どもの時、何回ようちえんへ行っていたか、覚えていますか。", id:"Apakah kamu ingat berapa kali pergi ke TK waktu kecil?"}
+        ]
+      },
+      {
+        pola: "いつ日本へ行きますか ／ いつ日本へ行くか、知っていますか",
+        romaji: "itsu nihon e ikimasu ka / itsu nihon e iku ka, shitte imasu ka",
+        arti: "Kapan pergi ke Jepang? ／ Tahukah kamu kapan (dia) pergi ke Jepang?",
+        catatan: "Perbandingan dua bentuk: ① pertanyaan langsung (ます+か), nanya ke orang yang dianggap tau; ② pertanyaan tertanam (普通形+か、〜ていますか), nanya apakah lawan bicara tau jawabannya.",
+        contoh: [
+          {jp:"いつ日本へ行きますか。", id:"Kapan (kamu) pergi ke Jepang?"},
+          {jp:"いつ日本へ行くか、知っていますか。", id:"Tahukah kamu kapan (dia) pergi ke Jepang?"}
         ]
       }
     ]

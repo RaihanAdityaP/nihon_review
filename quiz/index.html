@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz · 日本語復習</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Space+Mono:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261006">
+<script>
+  // Terapkan tema tersimpan sebelum render, biar tidak ada "flash" warna salah
+  (function(){
+    var saved = localStorage.getItem('nihongo_theme');
+    var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body>
+<script src="../assets/js/layout.js?v=20261006"></script>
+<main>
+
+<div id="pageQuiz" class="page active">
+    <div class="sec-title">Quiz</div>
+    <div class="sec-sub">Pilih materi dan tipe soal, lalu mulai.</div>
+
+    <div class="qsetup" id="quizSetup">
+      <div class="qlabel">Pilih Materi</div>
+      <div class="smrow">
+        <button class="smbtn" onclick="selAll(true)">Pilih Semua</button>
+        <button class="smbtn" onclick="selAll(false)">Hapus Semua</button>
+      </div>
+      <div class="qog-search-wrap">
+        <input type="text" id="qogSearchInput" class="qog-search" placeholder="Cari kategori..." oninput="filterQog()">
+      </div>
+      <div class="qog" id="qog"></div>
+      <div class="qwarn" id="qwarn">Pilih minimal satu kategori (butuh 4+ item).</div>
+
+      <div class="qlabel">Tipe Quiz <small>(bisa pilih lebih dari satu)</small></div>
+      <div class="trow" id="typeRow">
+        <button class="tbtn sel" data-t="kana-to-romaji" onclick="toggleType(this)">Kana → Romaji</button>
+        <button class="tbtn" data-t="romaji-to-kana" onclick="toggleType(this)">Romaji → Kana</button>
+        <button class="tbtn" data-t="jp-to-id" onclick="toggleType(this)">Jepang → Indo</button>
+        <button class="tbtn" data-t="id-to-jp" onclick="toggleType(this)">Indo → Jepang</button>
+      </div>
+
+      <div class="qlabel">Jumlah Soal</div>
+      <div class="trow" id="cntRow">
+        <button class="tbtn sel" data-c="10" onclick="setCount(this)">10</button>
+        <button class="tbtn" data-c="20" onclick="setCount(this)">20</button>
+        <button class="tbtn" data-c="30" onclick="setCount(this)">30</button>
+        <button class="tbtn" data-c="999" onclick="setCount(this)">Semua</button>
+        <input type="number" id="qCntCustom" class="input-ai" min="1" max="500" placeholder="Custom..." style="width:110px;flex:0 0 auto" oninput="setQCountCustom(this)">
+      </div>
+      <button class="start-btn" id="startBtn" onclick="startQuiz()" disabled>Mulai Quiz</button>
+    </div>
+
+    <div id="quizActive">
+      <div class="qpb"><div class="qpf" id="qpf"></div></div>
+      <div class="qmeta"><span id="qctr">1 / 10</span><span id="qsc">✓ 0  ✗ 0</span></div>
+      <div class="qcard">
+        <div class="qtag" id="qtag"></div>
+        <div class="qprompt" id="qprompt"></div>
+        <div class="qsub" id="qsub"></div>
+      </div>
+      <div class="choices" id="choicesEl"></div>
+      <div class="qfb" id="qfb"></div>
+      <button class="nxtbtn" id="nxtBtn" onclick="nextQ()">Lanjut →</button>
+    </div>
+
+    <div id="quizResult">
+      <div class="sec-title" style="text-align:center">Selesai！</div>
+      <div class="rscore" id="rScore"></div>
+      <div class="rsub" id="rSub"></div>
+      <div class="rgrid">
+        <div class="rstat"><div class="rv g" id="rC"></div><div class="rl">Benar</div></div>
+        <div class="rstat"><div class="rv r" id="rW"></div><div class="rl">Salah</div></div>
+      </div>
+      <button class="rbtn" onclick="retryQuiz()">Ulangi</button>
+      <button class="rbtn" onclick="backSetup()">Pengaturan</button>
+    </div>
+  </div>
+
+</main>
+<script src="../assets/data.js?v=20261006"></script>
+<script src="../assets/js/core.js?v=20261006"></script>
+<script src="../assets/js/notes.js?v=20261006"></script>
+<script src="../assets/js/cats.js?v=20261006"></script>
+<script src="../assets/js/catpicker.js?v=20261006"></script>
+<script src="../assets/js/items.js?v=20261006"></script>
+<script src="../assets/js/page-quiz.js?v=20261006"></script>
+<script>
+initQSetup();
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home · 日本語復習</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Space+Mono:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261006">
+<script>
+  // Terapkan tema tersimpan sebelum render, biar tidak ada "flash" warna salah
+  (function(){
+    var saved = localStorage.getItem('nihongo_theme');
+    var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body>
+<script src="../assets/js/layout.js?v=20261006"></script>
+<main>
+
+<div id="pageHome" class="page active home">
+
+  <section class="home-hero">
+    <div class="home-hero-main">
+      <div class="home-eyebrow">復習 · Review harian</div>
+      <h1 class="home-h1">Halo! Mau belajar apa hari ini?</h1>
+      <p class="home-lead">Ulas kotoba, moji, dan bunpou, lalu uji dirimu lewat quiz dan latihan bareng AI.</p>
+      <div class="home-cta">
+        <a class="home-btn primary" id="homeContinue" href="../materi/">Lanjutkan belajar →</a>
+        <a class="home-btn" href="../materi/">Mulai dari 教材</a>
+      </div>
+    </div>
+    <a class="home-resume" id="homeResume" href="../materi/">
+      <div class="home-eyebrow">Terakhir dibuka</div>
+      <div>
+        <div class="home-k" id="homeResumeK">教材</div>
+        <div class="home-resume-d" id="homeResumeD">Kamus terpadu: kotoba, kata sifat, dan counter.</div>
+      </div>
+      <div class="home-more">Lanjutkan →</div>
+    </a>
+  </section>
+
+  <section class="home-stats" aria-label="Ringkasan progress">
+    <div class="home-stat"><b id="homeStat1">—</b><span>Sesi quiz</span></div>
+    <div class="home-stat"><b id="homeStat2">—</b><span>Jawaban benar</span></div>
+    <div class="home-stat"><b id="homeStat3">—</b><span>Akurasi</span></div>
+    <div class="home-stat"><b id="homeStat4">—</b><span>Terakhir latihan</span></div>
+  </section>
+
+  <section class="home-sec">
+    <div class="home-sec-h"><h2>Materi</h2><span>baca &amp; ulas</span></div>
+    <div class="home-grid" id="homeGridMateri"></div>
+  </section>
+
+  <section class="home-sec">
+    <div class="home-sec-h"><h2>Latihan</h2><span>uji &amp; pantau</span></div>
+    <div class="home-grid" id="homeGridLatihan"></div>
+  </section>
+
+  <footer class="home-foot"><span>日本語復習 · review</span><span>Progress dan API key tersimpan lokal di browser ini.</span></footer>
+</div>
+
+</main>
+<script src="../assets/js/core.js?v=20261006"></script>
+<script>
+(function () {
+  var by = {}; NIHON_PAGES.forEach(function (p) { by[p.slug] = p; });
+  var LEGACY = { latihanai: 'ai', katakerja: 'kata-kerja' };
+  var last = null; try { last = localStorage.getItem(LAST_PAGE_KEY); } catch (e) {}
+  last = LEGACY[last] || last;
+  if (!by[last] || last === 'home') last = 'materi';
+  var lp = by[last], href = NIHON_ROOT + last + '/';
+  document.getElementById('homeContinue').href = href;
+  document.getElementById('homeResume').href = href;
+  document.getElementById('homeResumeK').textContent = lp.label;
+  document.getElementById('homeResumeD').textContent = lp.desc;
+
+  var pr = loadProg(), n = pr.sessions.length, tc = pr.tc || 0, tw = pr.tw || 0;
+  function set(id, v) { document.getElementById(id).textContent = v; }
+  set('homeStat1', n ? String(n) : '—');
+  set('homeStat2', tc ? String(tc) : '—');
+  set('homeStat3', tc + tw ? Math.round(tc / (tc + tw) * 100) + '%' : '—');
+  if (n) {
+    var days = Math.floor((Date.now() - new Date(pr.sessions[0].date).getTime()) / 86400000);
+    set('homeStat4', days <= 0 ? 'Hari ini' : days === 1 ? 'Kemarin' : days + ' hari lalu');
+  }
+
+  function card(p) {
+    return '<a class="home-card" href="' + NIHON_ROOT + p.slug + '/"><div class="home-card-top"><span class="home-card-k">' + p.label +
+      '</span><span class="home-card-url">/' + p.slug + '/</span></div><b>' + p.title + '</b><p>' + p.desc + '</p></a>';
+  }
+  ['materi', 'latihan'].forEach(function (g) {
+    document.getElementById('homeGrid' + g[0].toUpperCase() + g.slice(1)).innerHTML =
+      NIHON_PAGES.filter(function (p) { return p.group === g; }).map(card).join('');
+  });
+})();
+</script>
+</body>
+</html>
