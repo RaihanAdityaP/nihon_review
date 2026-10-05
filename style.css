@@ -454,3 +454,11 @@ main{position:relative;z-index:1;padding:1.5rem 1.25rem 3rem;max-width:920px;mar
   .ai-grid2{grid-template-columns:1fr}
   .ai-status-key{display:none}
 }
+
+/* ── Tombol Pilih semua / Hapus semua per grup & subgrup ── */
+.qgrp-bulk{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.03em;background:none;border:1px solid var(--border2);color:var(--text3);padding:.22rem .6rem;cursor:pointer;white-space:nowrap;text-transform:none;transition:all .15s}
+.qgrp-bulk:hover{border-color:var(--accent3);color:var(--accent3)}
+.qgrp-h .qgrp-bulk{align-self:center}
+.qgrp-h span{margin-left:auto}
+.qgrp-subh .qgrp-bulk{margin-left:auto}
+.qgrp-h span + .qgrp-bulk{margin-left:.2rem}

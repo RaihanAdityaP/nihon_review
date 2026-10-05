@@ -421,6 +421,7 @@ function catGroup(c) {
 }
 
 // Render grid kategori berkelompok. `handler` = nama fungsi toggle (string).
+// Tiap grup & subgrup punya tombol "Pilih semua / Hapus semua" (lihat bulkToggle).
 function renderCatGrid(cats, selSet, handler) {
   const groups = {};
   cats.forEach(c => {
@@ -429,14 +430,18 @@ function renderCatGrid(cats, selSet, handler) {
     if (!groups[g].map[sub]) { groups[g].map[sub] = []; groups[g].subs.push(sub); }
     groups[g].map[sub].push(c);
   });
+  const bulkBtn = (scope, list) => {
+    const all = list.length > 0 && list.every(c => selSet.has(c.id));
+    return `<button type="button" class="qgrp-bulk" data-scope="${scope}" onclick="bulkToggle(this)">${all ? 'Hapus semua' : 'Pilih semua'}</button>`;
+  };
   return QGROUP_ORDER.filter(G => groups[G.key]).map(G => {
     const grp = groups[G.key];
-    const total = grp.subs.reduce((n, sb) => n + grp.map[sb].length, 0);
+    const allInGroup = grp.subs.reduce((arr, sb) => arr.concat(grp.map[sb]), []);
     const subsHtml = grp.subs.map(sb => `
       <div class="qgrp-sub">
-        <div class="qgrp-subh">${sb}<span>${grp.map[sb].length}</span></div>
+        <div class="qgrp-subh">${sb}<span>${grp.map[sb].length}</span>${bulkBtn('sub', grp.map[sb])}</div>
         <div class="qog">${grp.map[sb].map(c => `
-          <div class="qopt${selSet.has(c.id) ? ' sel' : ''}" onclick="${handler}('${c.id}',this)">
+          <div class="qopt${selSet.has(c.id) ? ' sel' : ''}" data-id="${c.id}" onclick="${handler}('${c.id}',this)">
             <div class="qcb">${selSet.has(c.id) ? '✓' : ''}</div>
             <span class="qol">${c.label}</span>
           </div>`).join('')}
@@ -444,10 +449,50 @@ function renderCatGrid(cats, selSet, handler) {
       </div>`).join('');
     return `
     <div class="qgrp">
-      <div class="qgrp-h"><b>${G.label}</b><small>${G.hint}</small><span>${total}</span></div>
+      <div class="qgrp-h"><b>${G.label}</b><small>${G.hint}</small><span>${allInGroup.length}</span>${bulkBtn('grp', allInGroup)}</div>
       ${subsHtml}
     </div>`;
   }).join('');
+}
+
+// ── Pilih semua / Hapus semua per grup atau subgrup ──
+// Hanya menyentuh item yang sedang tampil (jadi aman dipakai bareng kotak pencarian).
+const CAT_CTX = {
+  qog:     () => ({ set: SC,      after: () => checkReady() }),
+  aiQog:   () => ({ set: AI_SC,   after: () => checkAIReady() }),
+  chatQog: () => ({ set: CHAT_SC, after: () => { saveChatCats(); checkChatReady(); } })
+};
+
+function visibleOpts(scopeEl) {
+  return Array.from(scopeEl.querySelectorAll('.qopt')).filter(o => o.style.display !== 'none');
+}
+
+function bulkToggle(btn) {
+  const root = btn.closest('#qog,#aiQog,#chatQog');
+  if (!root) return;
+  const ctx = CAT_CTX[root.id]();
+  const scopeEl = btn.closest(btn.dataset.scope === 'grp' ? '.qgrp' : '.qgrp-sub');
+  const opts = visibleOpts(scopeEl);
+  if (!opts.length) return;
+  const allSel = opts.every(o => o.classList.contains('sel'));
+  opts.forEach(o => {
+    const id = o.dataset.id;
+    if (allSel) { ctx.set.delete(id); o.classList.remove('sel'); o.querySelector('.qcb').textContent = ''; }
+    else        { ctx.set.add(id);    o.classList.add('sel');    o.querySelector('.qcb').textContent = '✓'; }
+  });
+  refreshBulkLabels(root);
+  ctx.after();
+}
+
+// Sinkronkan teks semua tombol bulk dengan kondisi centang sekarang
+function refreshBulkLabels(root) {
+  if (!root) return;
+  root.querySelectorAll('.qgrp-bulk').forEach(btn => {
+    const scopeEl = btn.closest(btn.dataset.scope === 'grp' ? '.qgrp' : '.qgrp-sub');
+    const opts = visibleOpts(scopeEl);
+    const all = opts.length > 0 && opts.every(o => o.classList.contains('sel'));
+    btn.textContent = all ? 'Hapus semua' : 'Pilih semua';
+  });
 }
 
 // Filter pencarian yang ikut nyembunyiin header grup kalau isinya kosong.
@@ -467,6 +512,7 @@ function filterCatGrid(rootId, q) {
     const any = Array.from(g.querySelectorAll('.qgrp-sub')).some(sb => sb.style.display !== 'none');
     g.style.display = any ? '' : 'none';
   });
+  refreshBulkLabels(root);
 }
 
 let SC = new Set(), ST = new Set(['kana-to-romaji']), QN = 10;
@@ -480,6 +526,7 @@ function togCat(id, el) {
   SC.has(id)
     ? (SC.delete(id), el.classList.remove('sel'), el.querySelector('.qcb').textContent = '')
     : (SC.add(id),    el.classList.add('sel'),    el.querySelector('.qcb').textContent = '✓');
+  refreshBulkLabels(el.closest('#qog'));
   checkReady();
 }
 
@@ -1233,6 +1280,7 @@ function togAICat(id, el) {
   AI_SC.has(id)
     ? (AI_SC.delete(id), el.classList.remove('sel'), el.querySelector('.qcb').textContent = '')
     : (AI_SC.add(id),    el.classList.add('sel'),    el.querySelector('.qcb').textContent = '✓');
+  refreshBulkLabels(el.closest('#aiQog'));
   checkAIReady();
 }
 
@@ -1355,6 +1403,7 @@ function togChatCat(id, el) {
     ? (CHAT_SC.delete(id), el.classList.remove('sel'), el.querySelector('.qcb').textContent = '')
     : (CHAT_SC.add(id),    el.classList.add('sel'),    el.querySelector('.qcb').textContent = '✓');
   saveChatCats();
+  refreshBulkLabels(el.closest('#chatQog'));
   checkChatReady();
 }
 
