@@ -57,6 +57,7 @@ const QCATS_STATIC = [
   { id: 'kelas-ex',    label: 'Ekspresi di Kelas',     t: 'kotoba' },
   { id: 'sampah',      label: 'Sampah & Lingkungan',   t: 'kotoba' },
   { id: 'laut-dalam',  label: 'Laut Dalam',            t: 'kotoba' },
+  { id: 'minecraft',   label: 'Minecraft & Game',      t: 'kotoba' },
   { id: 'counter',     label: 'Kata Bantu Bilangan',   t: 'counter' },
   { id: 'sifat-i',     label: 'Kata Sifat - い',        t: 'sifat' },
   { id: 'sifat-na',    label: 'Kata Sifat - な',        t: 'sifat' },

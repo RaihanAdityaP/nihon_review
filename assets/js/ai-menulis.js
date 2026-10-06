@@ -312,11 +312,23 @@ async function wCheckWithAI() {
   const visionCustom = localStorage.getItem(AI_VISION_MODEL_STORE + '_' + AI_PROVIDER);
   const visionModel = visionCustom || AI_VISION_DEFAULTS[AI_PROVIDER] || AI_ENDPOINTS[AI_PROVIDER].model;
 
+  // Model custom milik user dipakai apa adanya; model default boleh jatuh ke fallback kalau dicabut provider
+  const candidates = visionCustom ? [visionModel] : [visionModel, ...(AI_VISION_FALLBACKS[AI_PROVIDER] || [])];
+  const modelGone = /decommission|deprecat|no longer|not found|does not exist|model_not_found|unknown model/i;
   try {
-    const raw = await callAI([
-      { role: 'system', content: sysPrompt },
-      { role: 'user', content: userContent }
-    ], visionModel);
+    let raw = '';
+    for (let i = 0; i < candidates.length; i++) {
+      try {
+        raw = await callAI([
+          { role: 'system', content: sysPrompt },
+          { role: 'user', content: userContent }
+        ], candidates[i]);
+        break;
+      } catch (e) {
+        if (i < candidates.length - 1 && modelGone.test(e.message)) continue;
+        throw e;
+      }
+    }
     const cleaned = raw.replace(/```json|```/g, '').trim();
     const parsed = JSON.parse(cleaned);
     const ok = !!parsed.correct;
@@ -328,8 +340,9 @@ async function wCheckWithAI() {
     btn.style.display = 'none';
     document.getElementById('wAINxtBtn').style.display = 'block';
   } catch (err) {
-    const msg = /content must be a string|invalid_request_error|does not support image|image.*not supported/i.test(err.message)
-      ? `Model "${visionModel}" sepertinya tidak mendukung input gambar. Isi kolom "Model vision khusus" di setup dengan model vision lain (mis. qwen/qwen3.6-27b untuk Groq, atau gpt-4o-mini untuk OpenAI/OpenRouter).`
+    // Pesan "tidak mendukung gambar" hanya muncul kalau memang itu isi errornya; selain itu tampilkan error asli
+    const msg = /content must be a string|does not support image|image.*not supported|not.*multimodal/i.test(err.message)
+      ? `Model "${visionModel}" tidak mendukung input gambar. Isi kolom "Model vision" di Pengaturan AI dengan model vision lain (mis. qwen/qwen3.8-27b untuk Groq, atau gpt-4o-mini untuk OpenAI/OpenRouter).`
       : err.message;
     fb.style.display = 'block';
     fb.className = 'qfb ng';

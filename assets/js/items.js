@@ -40,7 +40,7 @@ function ktItems(cid) {
     profesi: 'Profesi & Pekerjaan',
     'ai-tek': 'AI & Teknologi', 'ai-pakai': 'AI & Pemakaian',
     negara: 'Negara & Bangsa', perkenalan: 'Perkenalan Diri', hobi: 'Hobi & Olahraga',
-    arah: 'Arah & Posisi', 'kelas-ex': 'Ekspresi di Kelas', sampah: 'Sampah & Lingkungan', 'laut-dalam': 'Laut Dalam'
+    arah: 'Arah & Posisi', 'kelas-ex': 'Ekspresi di Kelas', sampah: 'Sampah & Lingkungan', 'laut-dalam': 'Laut Dalam', 'minecraft': 'Minecraft & Game'
   };
   const keys = Array.isArray(m[cid]) ? m[cid] : [m[cid]];
   let out = [];

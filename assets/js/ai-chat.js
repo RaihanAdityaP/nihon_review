@@ -64,14 +64,40 @@ function checkChatReady() {
   else                { warn.style.display = 'none'; }
 }
 
+// Batas ukuran prompt: tier gratis Groq cuma 8000 token/menit (request + balasan),
+// jadi daftar materi dipangkas. Kalau materi terpilih kebanyakan, diambil acak sesuai budget.
+const CHAT_KOTOBA_BUDGET = 3000;  // karakter
+const CHAT_BUNPOU_BUDGET = 1400;  // karakter
+
+function chatPackList(items, fmt, budget) {
+  const pool = items.slice();
+  const strs = pool.map(fmt);
+  const total = strs.reduce((n, t) => n + [...t].length + 2, 0);
+  if (total > budget) {
+    for (let i = strs.length - 1; i > 0; i--) {           // acak biar tiap chat dapat variasi
+      const j = Math.floor(Math.random() * (i + 1));
+      [strs[i], strs[j]] = [strs[j], strs[i]];
+    }
+  }
+  const out = [];
+  let used = 0;
+  for (const t of strs) {
+    const len = [...t].length + 2;
+    if (used + len > budget) continue;
+    out.push(t);
+    used += len;
+  }
+  return out.join('; ');
+}
+
 function buildChatSystemPrompt() {
   const ids = [...CHAT_SC];
   const kotobaIds = new Set(ids.filter(id => QCATS.find(c => c.id === id)?.t !== 'bunpou'));
   const bunpouIds = new Set(ids.filter(id => QCATS.find(c => c.id === id)?.t === 'bunpou'));
   const kotobaPool = getAllItems(kotobaIds);
   const bunpouPool = bunpouFullItems(bunpouIds);
-  const kotobaList = kotobaPool.slice(0, 400).map(it => `${it.kana}(${it.romaji})=${it.arti}`).join('; ');
-  const bunpouList = bunpouPool.map(it => `${it.pola}(${it.arti})`).join('; ');
+  const kotobaList = chatPackList(kotobaPool, it => `${it.kana}=${it.arti}`, CHAT_KOTOBA_BUDGET);
+  const bunpouList = chatPackList(bunpouPool, it => `${it.pola}(${it.arti})`, CHAT_BUNPOU_BUDGET);
   const topic = (document.getElementById('chatTopicInput').value || '').trim();
 
   return `Kamu adalah teman ngobrol bahasa Jepang buat latihan percakapan (kaiwa) orang Indonesia yang lagi belajar bahasa Jepang.
@@ -135,6 +161,7 @@ function friendlyChatError(err) {
   const raw = String((err && err.message) || err || '');
   let text = 'Gagal menghubungi AI.';
   if (/ 401|invalid_api_key|incorrect api key/i.test(raw))      text = 'API key ditolak. Cek lagi key-nya di Pengaturan AI.';
+  else if (/ 413|too large|request too large/i.test(raw))     text = 'Permintaan kebesaran buat batas provider. Klik "Chat baru" (atau pilih materi lebih sedikit).';
   else if (/ 429|rate.?limit/i.test(raw))                        text = 'Kena batas pemakaian. Tunggu sebentar lalu coba lagi.';
   else if (/failed to fetch|networkerror|load failed/i.test(raw)) text = 'Tidak bisa terhubung. Cek koneksi internetmu.';
   else if (/ 400/.test(raw))                                     text = 'Permintaan ditolak provider. Coba ganti model di Pengaturan AI.';
@@ -216,7 +243,30 @@ function restoreChatSession() {
   } catch {}
 }
 
+// Mode latihan: sembunyikan terjemahan Indonesia, tap balasan AI buat ngintip
+const CHAT_TR_KEY = 'nihon_chat_hide_tr';
+function chatApplyTr() {
+  let hide = false;
+  try { hide = localStorage.getItem(CHAT_TR_KEY) === '1'; } catch {}
+  chatEl('chatMessages').classList.toggle('hide-tr', hide);
+  const b = chatEl('chatTrBtn');
+  b.classList.toggle('on', hide);
+  b.setAttribute('aria-pressed', hide ? 'true' : 'false');
+  b.title = hide ? 'Tampilkan terjemahan' : 'Sembunyikan terjemahan (tap balasan buat ngintip)';
+}
+
+function chatToggleTr() {
+  let hide = false;
+  try { hide = localStorage.getItem(CHAT_TR_KEY) === '1'; localStorage.setItem(CHAT_TR_KEY, hide ? '0' : '1'); } catch {}
+  chatApplyTr();
+}
+
 function initChatPage() {
+  chatApplyTr();
+  chatEl('chatMessages').addEventListener('click', e => {
+    const row = e.target.closest('.msg-ai');
+    if (row && chatEl('chatMessages').classList.contains('hide-tr')) row.classList.toggle('show-tr');
+  });
   initChatSetup();
   restoreChatSession();
   chatUpdateSend();
@@ -228,7 +278,8 @@ async function requestChatReply(kind) {
   hideChatError();
   showChatTyping();
   try {
-    const reply = await callAI(CHAT_HISTORY);
+    const msgs = [CHAT_HISTORY[0], ...CHAT_HISTORY.slice(1).slice(-10)];
+    const reply = await callAI(msgs);
     if (!reply) throw new Error('Balasan kosong dari AI');
     removeChatTyping();
     CHAT_HISTORY.push({ role: 'assistant', content: reply });

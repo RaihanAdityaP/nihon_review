@@ -11,12 +11,16 @@ const AI_VISION_MODEL_STORE = 'nihongo_ai_vision_model';
 // Groq misalnya default-nya openai/gpt-oss-120b — model teks-only, akan gagal (error 400)
 // kalau dipaksa terima gambar. Ini daftar model vision-capable yang aman dipakai
 // khusus untuk fitur Menulis (cek tulisan tangan), dipakai kalau user belum isi custom vision model sendiri.
-// CATATAN: Groq deprecate meta-llama/llama-4-scout-17b-16e-instruct per 17 Juni 2026.
-// Diganti ke qwen/qwen3.6-27b (model vision resmi pengganti versi Groq saat ini).
+// CATATAN: Groq sering ganti model vision. llama-4-scout (deprecated Juni 2026) -> qwen3.6-27b
+// -> sekarang qwen/qwen3.8-27b (satu-satunya model vision di docs Groq per Okt 2026).
+// AI_VISION_FALLBACKS dicoba berurutan kalau model default ditolak karena sudah dicabut/tidak ada.
 const AI_VISION_DEFAULTS = {
-  groq:       'qwen/qwen3.6-27b',
+  groq:       'qwen/qwen3.8-27b',
   openai:     'gpt-4o-mini',
   openrouter: 'openai/gpt-4o-mini'
+};
+const AI_VISION_FALLBACKS = {
+  groq: ['qwen/qwen3.6-27b']
 };
 let AI_PROVIDER = 'groq';
 
