@@ -333,7 +333,8 @@ const KT={
 {k:"バスコース",r:"basu koosu",a:"rute bus, jalur bus",kj:"バスコース",n:"Gabungan バス (bus) + コース (rute) — sama pola gabungannya kayak サイクリングコース (jalur sepeda)."},
 {k:"ゆきさき",r:"yukisaki",a:"jurusan, tujuan (bus/kereta)",kj:"行き先",n:"Yuki (pergi) + saki (tujuan/ujung). Ditulis di papan depan bus/kereta buat nunjukin mau ke mana. Beda dari 専門 yang artinya 'jurusan' dalam konteks studi/bidang keahlian."},
 {k:"フィーダーバス",r:"fiidaa basu",a:"bus feeder (bus pengumpan)",kj:"フィーダーバス",n:"Serapan 'feeder bus' — bus kecil yang nganter penumpang dari area sekitar ke terminal utama, sebelum lanjut naik bus/kereta besar."},
-{k:"バスターミナル",r:"basu taaminaru",a:"terminal bus",kj:"バスターミナル",n:"Serapan 'bus terminal' — tempat pemberhentian utama tempat banyak jalur bus berkumpul."}
+{k:"バスターミナル",r:"basu taaminaru",a:"terminal bus",kj:"バスターミナル",n:"Serapan 'bus terminal' — tempat pemberhentian utama tempat banyak jalur bus berkumpul."},
+{k:"でんきバス",r:"denki basu",a:"bus listrik",kj:"電気バス"}
 ]},
 "Makanan & Minuman":{rows:[
 {k:"いんりょうすい",r:"inryousui",a:"air konsumsi",kj:"飲料水"},
@@ -1256,7 +1257,9 @@ const KT={
 {k:"はいたついん",r:"haitatsuin",a:"kurir",kj:"配達員",n:"Haitatsu (mengantar) + In (anggota). Kurir paket/makanan, mis. 'takuhaibin no haitatsuin' = kurir paket."},
 {k:"かんごふ",r:"kangofu",a:"perawat (wanita, istilah lama)",kj:"看護婦",n:"Kini digantikan 'kangoshi' yang netral gender. Masih dipakai dalam percakapan informal."},
 {k:"〜さん",r:"~san",a:"Sdr. / Sdri. / Pak / Bu (gelar sopan)",kj:"〜さん",n:"Ditambahkan setelah nama seseorang sebagai penghormatan, atau setelah profesi (てんいんさん, isha-san dll. dalam percakapan santai). Tidak boleh dipakai untuk diri sendiri!"},
-{k:"きゅうじん",r:"kyuujin",a:"lowongan kerja",kj:"求人",n:"Kyuu (mencari) + Jin (orang). Dipakai buat konteks perusahaan yang lagi buka lowongan — 'kyuujin kokoku' (求人広告) = iklan lowongan kerja, 'kyuujin site' = website lowongan kerja."}
+{k:"きゅうじん",r:"kyuujin",a:"lowongan kerja",kj:"求人",n:"Kyuu (mencari) + Jin (orang). Dipakai buat konteks perusahaan yang lagi buka lowongan — 'kyuujin kokoku' (求人広告) = iklan lowongan kerja, 'kyuujin site' = website lowongan kerja."},
+{k:"きしゃ",r:"kisha",a:"wartawan / reporter",kj:"記者"},
+{k:"しゅざい",r:"shuzai",a:"liputan",kj:"取材"}
 ]},
 "Negara & Bangsa":{rows:[
 {k:"けん",r:"ken",a:"prefektur, wilayah",kj:"県",n:"Setingkat provinsi di Jepang, mis. 千葉県 (Chiba-ken). Beda dari ちゅうぶ (Chuubu, nama region besar berisi banyak ken) — けん lebih ke unit administratif spesifik."},
@@ -1508,7 +1511,9 @@ const KT={
 {k:"おばけ",r:"obake",a:"hantu",kj:"お化け",n:"O (prefiks) + bake (dari 'bakeru' = berubah wujud). Istilah umum untuk sosok hantu/makhluk gaib dalam cerita horor Jepang."},
 {k:"フリーマーケット",r:"furii maaketto",a:"pasar loak, bazar barang bekas",n:"Serapan 'flea market'. Sering disingkat フリマ (furima) dalam percakapan sehari-hari."},
 {k:"バレンタインデー",r:"barentain dee",a:"Hari Valentine",n:"Serapan 'Valentine's Day'. Di Jepang, tradisinya PEREMPUAN yang ngasih cokelat ke laki-laki (kebalikan tradisi barat)."},
-{k:"クリスマス",r:"kurisumasu",a:"Hari Natal",n:"Serapan 'Christmas'. Di Jepang lebih dirayakan sebagai perayaan romantis/keluarga santai, bukan hari libur keagamaan resmi."}
+{k:"クリスマス",r:"kurisumasu",a:"Hari Natal",n:"Serapan 'Christmas'. Di Jepang lebih dirayakan sebagai perayaan romantis/keluarga santai, bukan hari libur keagamaan resmi."},
+{k:"インタビュー",r:"intabyuu",a:"wawancara"},
+{k:"テレビきょく",r:"terebi kyoku",a:"stasiun TV",kj:"テレビ局"}
 ]},
 "Sampah & Lingkungan":{rows:[
 {k:"ごみ",r:"gomi",a:"sampah",kj:"ゴミ",n:"Kata umum untuk sampah/limbah rumah tangga."},
@@ -1713,7 +1718,8 @@ const KATA_SIFAT = {
 {k:"かっこいい",r:"kakkoii",a:"keren, ganteng"},
 {k:"みにくい",r:"minikui",a:"jelek",kj:"醜い"},
 {k:"するどい",r:"surudoi",a:"tajam",kj:"鋭い"},
-{k:"くさい",r:"kusai",a:"bau (tidak sedap)",kj:"臭い",n:"Beda kanji dengan 'nioi' (匂い, bau netral). 'Kusai' cenderung untuk bau yang tidak enak."}
+{k:"くさい",r:"kusai",a:"bau (tidak sedap)",kj:"臭い",n:"Beda kanji dengan 'nioi' (匂い, bau netral). 'Kusai' cenderung untuk bau yang tidak enak."},
+{k:"はずかしい",r:"hazukashii",a:"malu",kj:"恥ずかしい"}
 ]},
 "Kata Sifat - な (na-keiyoushi)":{rows:[
 {k:"ないこうてき",r:"naikouteki",a:"introvert",kj:"内向的"},
@@ -2039,7 +2045,10 @@ const KATA_KERJA = {
 {k:"にゅうりょくします",r:"nyuuryoku shimasu",a:"menginput, memasukkan data",kj:"入力します",n:"Nyuu (masuk) + Ryoku (tenaga/daya). Dipakai buat konteks ngetik/masukin data ke komputer/HP. Dipindah dari tab Kotoba biar konsisten dikelompokkan dengan kata kerja lain.",type:"tadoushi"},
 {k:"ほぞんします",r:"hozon shimasu",a:"menyimpan (data/file)",kj:"保存します",n:"Khusus buat nyimpen data digital (foto, dokumen), beda dari とっておきます yang lebih umum buat benda fisik.",type:"tadoushi"},
 {k:"こうしんします",r:"koushin shimasu",a:"memperbarui, mengganti (update)",kj:"更新します",n:"Dipakai buat update apa aja yang butuh diperbarui secara berkala — status media sosial, wallpaper HP, aplikasi, dsb.",type:"tadoushi"},
-{k:"いらいします",r:"irai shimasu",a:"memesan jasa, commission (karya)",kj:"依頼します",n:"Kata yang dipakai komunitas seniman buat 'commission' — minta seseorang bikin karya khusus (gambar, dsb) biasanya bayar. '絵を依頼します' = commission/pesan jasa gambar."}
+{k:"いらいします",r:"irai shimasu",a:"memesan jasa, commission (karya)",kj:"依頼します",n:"Kata yang dipakai komunitas seniman buat 'commission' — minta seseorang bikin karya khusus (gambar, dsb) biasanya bayar. '絵を依頼します' = commission/pesan jasa gambar."},
+{k:"インタビューします",r:"intabyuu shimasu",a:"mewawancarai",type:"tadoushi"},
+{k:"きんちょうします",r:"kinchou shimasu",a:"gugup / tegang",kj:"緊張します",type:"jidoushi"},
+{k:"どきどきします",r:"dokidoki shimasu",a:"berdebar-debar",type:"jidoushi"}
 ]}
 };
 
@@ -6200,6 +6209,141 @@ bab11: {
     {k:"さっぽろ",r:"sapporo",a:"Sapporo (ibu kota Prefektur Hokkaido, Jepang)",kj:"札幌"},
     {k:"きかい",r:"kikai",a:"kesempatan",kj:"機会"},
     {k:"ごらいじょうをこころからおまちしております",r:"goraijou wo kokoro kara omachi shite orimasu",a:"Kami tunggu kedatangan Anda sekalian. (ungkapan bentuk sopan)",kj:"ご来場を心からお待ちしております"}
+  ]}
+},
+
+bab12: {
+  "Sebaiknya Beli di Mana? (どこで買ったらいいですか？)": { rows: [
+    {k:"でんきせいひん",r:"denki seihin",a:"alat elektronik; peralatan elektronik",kj:"電気製品"},
+    {k:"れいぞうこ",r:"reizouko",a:"kulkas; lemari pendingin",kj:"冷蔵庫"},
+    {k:"せんたくき",r:"sentakuki",a:"mesin cuci",kj:"洗濯機"},
+    {k:"でんしレンジ",r:"denshi renji",a:"oven gelombang mikro; microwave",kj:"電子レンジ"},
+    {k:"そうじき",r:"soujiki",a:"vacuum cleaner; penyedot debu",kj:"掃除機"},
+    {k:"ポット",r:"potto",a:"dispenser air panas"},
+    {k:"パソコン",r:"pasokon",a:"personal computer (PC)"},
+    {k:"タブレット",r:"taburetto",a:"tablet"},
+    {k:"イヤホン",r:"iyahon",a:"earphone; penyuara telinga"},
+    {k:"せんぷうき",r:"senpuuki",a:"kipas angin",kj:"扇風機"},
+    {k:"ストーブ",r:"sutoobu",a:"penghangat ruangan; pemanas (stove)"},
+    {k:"ヒーター",r:"hiitaa",a:"pemanas (heater)"},
+    {k:"ドライヤー",r:"doraiyaa",a:"hair-dryer; pengering rambut"},
+    {k:"アイロン",r:"airon",a:"setrika"},
+    {k:"モデル",r:"moderu",a:"model; tipe"},
+    {k:"おと",r:"oto",a:"bunyi",kj:"音"},
+    {k:"デザイン",r:"dezain",a:"desain"},
+    {k:"しょうひん",r:"shouhin",a:"produk",kj:"商品"},
+    {k:"そうりょう",r:"souryou",a:"ongkir (ongkos kirim)",kj:"送料"},
+    {k:"むりょう",r:"muryou",a:"gratis; bebas biaya",kj:"無料"},
+    {k:"おみせのひと",r:"omise no hito",a:"staf toko",kj:"お店の人"},
+    {k:"そうだん（する）",r:"soudan (suru)",a:"berkonsultasi [3]",kj:"相談（する）"},
+    {k:"とどく",r:"todoku",a:"dikirimkan [1]",kj:"届く"},
+    {k:"てんいん",r:"tenin",a:"staf toko",kj:"店員"},
+    {k:"べんり（な）",r:"benri (na)",a:"praktis",kj:"便利（な）"},
+    {k:"すぐ",r:"sugu",a:"langsung; segera"},
+    {k:"みつかる",r:"mitsukaru",a:"menemukan [1]",kj:"見つかる"},
+    {k:"たかく",r:"takaku",a:"harga tinggi",kj:"高く"},
+    {k:"うれる",r:"ureru",a:"bisa / dapat menjual [2]",kj:"売れる"},
+    {k:"てつづき",r:"tetsuzuki",a:"prosedur",kj:"手続き"},
+    {k:"かんたん（な）",r:"kantan (na)",a:"mudah / sederhana",kj:"簡単（な）"},
+    {k:"メーカー",r:"meekaa",a:"produsen"},
+    {k:"ワイヤレス",r:"waiyaresu",a:"wireless; nirkabel"},
+    {k:"てもと",r:"temoto",a:"(sampai ke) padaku",kj:"手元"},
+    {k:"でんきや",r:"denkiya",a:"toko elektronik",kj:"電気屋"},
+    {k:"こくどうぞい",r:"kokudou zoi",a:"di sepanjang jalur nasional",kj:"国道沿い"},
+    {k:"かいてん",r:"kaiten",a:"pembukaan toko (obral saat pembukaan toko)",kj:"開店（開店セール）"},
+    {k:"くるまをだす",r:"kuruma wo dasu",a:"memberi tumpangan [1]",kj:"車を出す"},
+    {k:"フリマサイト",r:"furima saito",a:"situs flea market"}
+  ]},
+  "Aplikasi Flea Market (フリマアプリ)": { rows: [
+    {k:"かでん",r:"kaden",a:"perlengkapan rumah tangga",kj:"家電"},
+    {k:"カテゴリー",r:"kategorii",a:"kategori"},
+    {k:"ブランド",r:"burando",a:"merek"},
+    {k:"ホーム",r:"hoomu",a:"homepage; laman"},
+    {k:"しゅっぴん",r:"shuppin",a:"submit; kirim",kj:"出品"},
+    {k:"マイページ",r:"mai peeji",a:"my page; halaman saya (halaman pribadi pengguna)"},
+    {k:"すまい",r:"sumai",a:"(untuk) rumah",kj:"住まい"},
+    {k:"しぼりこみ",r:"shibori komi",a:"filter pencarian (mempersempit lingkup pencarian produk)",kj:"絞り込み"},
+    {k:"はんばいちゅう",r:"hanbai chuu",a:"dijual; dalam masa penjualan",kj:"販売中"},
+    {k:"ひょうじ",r:"hyouji",a:"tampilan",kj:"表示"},
+    {k:"～じゅん",r:"~jun",a:"urutan ~ (cth : urutan dari harga terendah ke yang tertinggi)",kj:"～順（安い順）"},
+    {k:"かかく",r:"kakaku",a:"harga",kj:"価格"},
+    {k:"じょうたい",r:"joutai",a:"kondisi",kj:"状態"},
+    {k:"はいそうりょう",r:"haisouryou",a:"ongkir (ongkos kirim)",kj:"配送料"},
+    {k:"はんばいじょうきょう",r:"hanbai joukyou",a:"status penjualan",kj:"販売状況"},
+    {k:"していする",r:"shitei suru",a:"menentukan; menetapkan [3]",kj:"指定する"},
+    {k:"とりけし",r:"torikeshi",a:"batal; pembatalan",kj:"取り消し"},
+    {k:"かんりょう",r:"kanryou",a:"konfirmasi",kj:"完了"},
+    {k:"こうにゅう（する）",r:"kounyuu (suru)",a:"membeli [3]",kj:"購入（する）"},
+    {k:"きず",r:"kizu",a:"goresan",kj:"傷"},
+    {k:"よごれ",r:"yogore",a:"bercak; noda",kj:"汚れ"},
+    {k:"～こみ",r:"~komi",a:"termasuk ~ (cth : termasuk ongkos kirim)",kj:"～込み（送料込み）"},
+    {k:"～ごう",r:"~gou",a:"~ go (satuan volume nasi di Jepang, sekitar 180 ml) (cth : 5,5 go = 990ml)",kj:"～合（5.5合）"},
+    {k:"しゅっぴんする",r:"shuppin suru",a:"melakukan submit barang untuk dijual [3]",kj:"出品する"},
+    {k:"もんだいなく",r:"mondai naku",a:"tanpa masalah",kj:"問題なく"},
+    {k:"たける",r:"takeru",a:"menanak; memasak (cth : menanak nasi) [2]",kj:"炊ける（ご飯が炊ける）"},
+    {k:"しょうさい",r:"shousai",a:"detail; rincian",kj:"詳細"},
+    {k:"～せい",r:"~sei",a:"buatan ~ (cth : buatan tahun 2018)",kj:"～製（2018製）"},
+    {k:"はば",r:"haba",a:"lebar",kj:"幅"},
+    {k:"おくゆき",r:"okuyuki",a:"kedalaman",kj:"奥行"},
+    {k:"たかさ",r:"takasa",a:"tinggi",kj:"高さ"},
+    {k:"おもさ",r:"omosa",a:"berat",kj:"重さ"},
+    {k:"せつめいしょ",r:"setsumeisho",a:"buku petunjuk penggunaan; buku panduan",kj:"説明書"},
+    {k:"～つき",r:"~tsuki",a:"dilengkapi (dengan) ~ (cth : dilengkapi (dengan) buku panduan)",kj:"～つき（説明書つき）"},
+    {k:"こうにゅうてつづき",r:"kounyuu tetsuzuki",a:"prosedur pembelian",kj:"購入手続き"}
+  ]},
+  "Tabel Perbandingan Produk (商品の比較表)": { rows: [
+    {k:"おもさ",r:"omosa",a:"berat",kj:"重さ"},
+    {k:"れんぞく",r:"renzoku",a:"terus menerus; tanpa henti",kj:"連続"},
+    {k:"じゅうでん",r:"juuden",a:"pengecasan; isi ulang daya",kj:"充電"},
+    {k:"しっかり",r:"shikkari",a:"sepenuhnya; sampai tuntas; secara menyeluruh"},
+    {k:"しようじかん",r:"shiyou jikan",a:"waktu penggunaan",kj:"使用時間"},
+    {k:"こんな",r:"konna",a:"ini / seperti ini (cth : orang (yang) seperti ini)",kj:"こんな（こんな人）"},
+    {k:"モード",r:"moodo",a:"mode (cth : mode kuat)",kj:"モード（強モード）"},
+    {k:"たきのう",r:"takinou",a:"multifungsi",kj:"多機能"},
+    {k:"ながもち",r:"nagamochi",a:"tahan lama; jangka panjang",kj:"長持ち"},
+    {k:"ちょうけいりょう",r:"chou keiryou",a:"sangat ringan",kj:"超軽量"},
+    {k:"おていれ",r:"oteire",a:"pemeliharaan; perawatan",kj:"お手入れ"},
+    {k:"きゅういん（する）",r:"kyuuin (suru)",a:"menghisap; menyedot [3]",kj:"吸引（する）"},
+    {k:"きゅういんりょく",r:"kyuuinryoku",a:"daya hisap; daya sedot",kj:"吸引力"},
+    {k:"コンパクト（な）",r:"konpakuto (na)",a:"terpadu; menyatu dan praktis"},
+    {k:"もちはこぶ",r:"mochi hakobu",a:"membawa [1]",kj:"持ち運ぶ"},
+    {k:"じゅうしする",r:"juushi suru",a:"memprioritaskan [3]",kj:"重視する"},
+    {k:"すみずみ",r:"sumizumi",a:"(sampai) sudut ke sudut (ruangan)"},
+    {k:"ぜいべつ",r:"zeibetsu",a:"harga belum termasuk pajak",kj:"税別"},
+    {k:"こうこくのしな",r:"koukoku no shina",a:"barang yang diiklankan",kj:"広告の品"},
+    {k:"とくべつかかく",r:"tokubetsu kakaku",a:"harga spesial",kj:"特別価格"},
+    {k:"コードレス",r:"koodoresu",a:"tanpa kabel; cordless"},
+    {k:"きぼうこうりかかく",r:"kibou kouri kakaku",a:"harga eceran resmi; harga retail yang disarankan",kj:"希望小売価格"}
+  ]},
+  "Ini, Bisa Lebih Murah? (これ、安くなりますか？)": { rows: [
+    {k:"かるい",r:"karui",a:"ringan",kj:"軽い"},
+    {k:"うごかす",r:"ugokasu",a:"memindahkan; menggerakkan [1]",kj:"動かす"},
+    {k:"もつ",r:"motsu",a:"membawa [1]",kj:"持つ"},
+    {k:"くらべる",r:"kuraberu",a:"membandingkan [2]",kj:"比べる"},
+    {k:"パワフル（な）",r:"pawafuru (na)",a:"powerful; kuat"},
+    {k:"きのう",r:"kinou",a:"fitur; fungsi",kj:"機能"},
+    {k:"つく",r:"tsuku",a:"memiliki; menyertakan; termasuk (cth : fungsi yang disertakan / memiliki fungsi) [1]",kj:"つく（機能がつく）"},
+    {k:"カーペット",r:"kaapetto",a:"karpet"},
+    {k:"たたみ",r:"tatami",a:"tatami",kj:"畳"},
+    {k:"エコモード",r:"eko moodo",a:"eco mode; mode hemat daya"},
+    {k:"ですから",r:"desu kara",a:"karena itu"},
+    {k:"～にあわせて",r:"~ni awasete",a:"menyesuaikan ~ (cth: menyesuaikan dengan ruangan)",kj:"～に合わせて（部屋に合わせて）"},
+    {k:"ふくざつ（な）",r:"fukuzatsu (na)",a:"rumit",kj:"複雑（な）"},
+    {k:"おもい",r:"omoi",a:"berat",kj:"重い"},
+    {k:"よさんオーバー",r:"yosan oobaa",a:"melebihi anggaran",kj:"予算オーバー"},
+    {k:"シンプル（な）",r:"shinpuru (na)",a:"simpel; sederhana"},
+    {k:"しょうひぜい",r:"shouhizei",a:"pajak konsumen; pajak konsumsi",kj:"消費税"},
+    {k:"～ぬき",r:"~nuki",a:"tanpa ~ (cth : tanpa pajak konsumen)",kj:"～抜き（消費税抜き）"},
+    {k:"～びき",r:"~biki",a:"diskon ~ (cth : diskon sebesar 2.000 yen)",kj:"～引き（2000円引き）"},
+    {k:"はいそう",r:"haisou",a:"pengiriman",kj:"配送"},
+    {k:"あわせて",r:"awasete",a:"digabungkan",kj:"合わせて"},
+    {k:"ポイント",r:"pointo",a:"poin"},
+    {k:"たまる",r:"tamaru",a:"terakumulasi; terkumpul [1]",kj:"貯まる"},
+    {k:"かわる",r:"kawaru",a:"berubah [1]",kj:"変わる"},
+    {k:"やすくなりますか？",r:"yasuku narimasu ka?",a:"Bisakah Anda menurunkan harganya?",kj:"安くなりますか？"},
+    {k:"おいくらぐらいでおさがしですか？",r:"oikura gurai de osagashi desu ka?",a:"Berapakah anggaran Anda? (ungkapan bentuk sopan)",kj:"おいくらぐらいでお探しですか？"},
+    {k:"どちらにおすまいですか？",r:"dochira ni osumai desu ka?",a:"Di manakah Anda tinggal? (ungkapan bentuk sopan)",kj:"どちらにお住まいですか？"},
+    {k:"ごりようになりますか？",r:"goriyou ni narimasu ka?",a:"Apakah Anda akan menggunakan ~? (ungkapan bentuk sopan)",kj:"ご利用になりますか？"}
   ]}
 }
 
@@ -14585,6 +14729,234 @@ const BUNPOU = [
           {jp:"お正月のお祝いの仕方は、国によっていろいろあります。", id:"Cara merayakan tahun baru bermacam-macam tergantung negaranya."},
           {jp:"日本のファッションは、季節によって変わります。", id:"Fashion di Jepang berubah tergantung musimnya."},
           {jp:"人の性格は、人によって違います。", id:"Sifat orang berbeda-beda tergantung orangnya."}
+        ]
+      }
+    ]
+  }
+,
+
+  // ═══ IRODORI A2 — BAB 10 ═══
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 10",
+    judul: "【疑問詞】V-ばいいですか？ — Sebaiknya Bagaimana / Apa yang Harus ~",
+    sub: "Dipakai buat minta penjelasan dari lawan bicara soal aturan atau tata cara melakukan sesuatu. Di bab ini dipakai untuk nanya pakaian & bawaan, serta etika/kebiasaan saat menghadiri pernikahan atau pemakaman. Kalau 〜たらいいですか？ (Bab 5) lebih ke minta saran PERSONAL (misal tempat menginap), 〜ばいいですか？ lebih sering buat nanya hal yang sudah ADA KETENTUANNYA.",
+    items: [
+      {
+        pola: "疑問詞（何／どこ／どう…）＋ V-ば形 ＋ いいですか？",
+        romaji: "gimonshi + V-bakei + ii desu ka?",
+        arti: "Sebaiknya (apa/di mana/bagaimana) ~?",
+        catatan: "Dibuat dengan menambah 「いいですか？」 setelah verba bentuk ば. Bentuk ば = konjugasi verba yang berakhir 「ば」 dan fungsinya menyatakan SYARAT. Bisa dijawab dengan 〜ばいいと思いますよ (menurut saya sebaiknya ~).",
+        contoh: [
+          {jp:"お葬式には、何を持って行けばいいですか？", id:"Apa yang sebaiknya saya bawa saat menghadiri upacara pemakaman?"},
+          {jp:"友だちの結婚式には、何を着て行けばいいですか？", id:"Apa yang sebaiknya saya kenakan ketika menghadiri pernikahan teman?"},
+          {jp:"ワンピースとか、ちょっときれいな服を着て行けばいいと思いますよ。", id:"Saya rasa sebaiknya mengenakan baju terusan, atau pakaian yang agak formal."}
+        ]
+      },
+      {
+        pola: "◆ Cara membuat bentuk ば（positif）",
+        romaji: "ba-kei no tsukurikata",
+        arti: "Bentuk ば untuk tiap kelompok verba",
+        catatan: "Kelompok 1: akhiran -u → -e + ば (買う → 買えば). Kelompok 2: buang る → れば (着る → 着れば). Kelompok 3: する → すれば, 来る → 来れば. Kata sifat-い: buang い → ければ. Kata sifat-な dan kata benda: pakai なら.",
+        contoh: [
+          {jp:"［1］買う → 買えば　　持って行く → 持って行けば", id:"membeli → kalau beli　　membawa pergi → kalau dibawa"},
+          {jp:"［1］寄る → 寄れば　　持つ → 持てば　　遊ぶ → 遊べば", id:"mampir → kalau mampir　　memegang → kalau dipegang　　bermain → kalau main"},
+          {jp:"［1］死ぬ → 死ねば　　聞く → 聞けば　　探す → 探せば", id:"mati → kalau mati　　bertanya/mendengar → kalau tanya　　mencari → kalau cari"},
+          {jp:"［1］飲む → 飲めば　　泳ぐ → 泳げば", id:"minum → kalau minum　　berenang → kalau berenang"},
+          {jp:"［2］着る → 着れば　　食べる → 食べれば　　降りる → 降りれば　　借りる → 借りれば", id:"memakai → kalau pakai　　makan → kalau makan　　turun → kalau turun　　meminjam → kalau pinjam"},
+          {jp:"［3］する → すれば　　来る → 来れば", id:"melakukan → kalau lakukan　　datang → kalau datang"}
+        ]
+      },
+      {
+        pola: "◆ Bentuk ば negatif",
+        romaji: "~nakereba",
+        arti: "Kalau tidak ~",
+        catatan: "Verba: ない → なければ (行かない → 行かなければ). KS-い: くなければ. KS-な dan KB: じゃなければ. Inilah dasar dari 〜なければならない / 〜なくちゃ / 〜なきゃ yang kamu pelajari.",
+        contoh: [
+          {jp:"お金があれば、新しい車を買いたいんです。", id:"Kalau ada uang, saya ingin membeli mobil baru."},
+          {jp:"お葬式に行けば、黒い服を着て、香典も持たなくちゃならないんです。", id:"Kalau pergi ke upacara pemakaman, saya harus memakai baju hitam dan membawa uang duka juga."},
+          {jp:"日本語をまじめに勉強すれば、日本で働けます。", id:"Kalau belajar bahasa Jepang dengan serius, saya bisa bekerja di Jepang."}
+        ]
+      },
+      {
+        pola: "◆ Beda と ／ ば ／ たら（catatan sensei）",
+        romaji: "to / ba / tara no chigai",
+        arti: "Perbandingan tiga pola kondisional",
+        catatan: "Tanda: ◎ = paling tepat, ○ = bisa, △ = jarang, × = tidak bisa. Kolom: (a) konstan / kebiasaan, (b) syarat umum, (c) pengandaian, (d) fakta berlawanan. と: ◎ △ × × ／ ば: ○ ◎ △ ○ ／ たら: ○ ○ ◎ ○. Kesimpulan: と = runtutan yang terjadi secara LANGSUNG, ば = BERSYARAT (jika syarat dipenuhi, hal itu pasti terjadi secara umum dan logis), たら = PENGANDAIAN.",
+        contoh: [
+          {jp:"春になると、桜が咲きます。（と：konstan）", id:"Kalau musim semi tiba, sakura mekar."},
+          {jp:"安ければ、買います。（ば：syarat）", id:"Kalau murah, saya beli."},
+          {jp:"もし宝くじが当たったら、世界一周旅行をしたいです。（たら：pengandaian）", id:"Seandainya menang lotre, saya ingin keliling dunia."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 10",
+    judul: "V-ては いけません／V-ちゃ だめです — Dilarang",
+    sub: "Menyampaikan larangan atau hal yang tidak boleh dilakukan. 〜てはいけません dipasang pada verba bentuk て dan dipakai untuk menjelaskan ATURAN. 〜ちゃだめ adalah bentuk singkat (縮約形) yang kasual, banyak dipakai buat peringatan ringan ke teman.",
+    items: [
+      {
+        pola: "V-て形＋は　いけません／だめです",
+        romaji: "V-te wa ikemasen / dame desu",
+        arti: "Dilarang ~ / tidak boleh ~",
+        catatan: "Dipakai untuk menjelaskan aturan, misalnya 「ここでは、写真を撮ってはいけません」 (dilarang mengambil foto di sini).",
+        contoh: [
+          {jp:"信号が赤のときは、横断歩道を渡ってはいけませんよ。", id:"Kita dilarang menyeberangi zebra cross saat lampu lalu lintasnya merah, lho."},
+          {jp:"館内は禁煙です。たばこを吸ってはいけません。", id:"Gedung ini bebas asap rokok. Dilarang merokok di sini."},
+          {jp:"すみません。", id:"Maaf."}
+        ]
+      },
+      {
+        pola: "V-て形（て→ちゃ／で→じゃ）＋だめ（だよ）",
+        romaji: "V-cha dame",
+        arti: "Jangan ~ (kasual)",
+        catatan: "Singkatan: 〜ては → 〜ちゃ, 〜では → 〜じゃ. Ragam lisan, biasanya antar teman. Contoh: 見ては → 見ちゃ, 触っては → 触っちゃ.",
+        contoh: [
+          {jp:"バスの中では、話しちゃだめだよね。", id:"Kita tidak boleh mengobrol di dalam bus kan, ya."},
+          {jp:"わあ、この人形かわいい！　― 触っちゃだめ。壊れるから。", id:"Waaahh.. boneka ini imut! ― Jangan pegang-pegang! Nanti rusak!"},
+          {jp:"この写真を見ちゃだめ。", id:"Jangan lihat foto ini."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 10",
+    judul: "V-なくちゃ — Harus ~ (Santai)",
+    sub: "Dipakai buat menyampaikan hal yang HARUS dilakukan. Bisa ditujukan ke lawan bicara, bisa juga buat diri sendiri. 〜なくちゃ berasal dari 〜なくちゃならない (Bab 9) yang bagian belakangnya (ならない) dihilangkan, sering dipakai di ragam lisan informal.",
+    items: [
+      {
+        pola: "V-ない形（い→）＋くちゃ",
+        romaji: "V-nakucha",
+        arti: "Harus ~ / mesti ~",
+        catatan: "Contoh pembentukan: 片付けない → 片付けなくちゃ, 帰らない → 帰らなくちゃ. Lengkapnya: 〜なくちゃならない / 〜なくちゃいけない.",
+        contoh: [
+          {jp:"食器は自分で片付けなくちゃ。", id:"Kamu harus membereskan sendiri peralatan makanmu."},
+          {jp:"もうこんな時間！　私、そろそろ帰らなくちゃ。", id:"Wah, sudah jam segini! Sudah saatnya aku pulang."},
+          {jp:"気をつけてね。", id:"Hati-hati, ya."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 10",
+    judul: "V-る／V-ない ように、〜 — Agar / Supaya",
+    sub: "Menyatakan TUJUAN. Bagian di depan 「ように」 adalah kondisi yang diharapkan tercapai setelah melakukan aksi di belakangnya. Pada contoh buku: 食器を片付ける dilakukan agar 次の人がすぐに席に座れる; 紙をごみ箱に捨てる dilakukan agar トイレがつまらない.",
+    items: [
+      {
+        pola: "V-辞書形／V-ない形＋ように、〜",
+        romaji: "V-jishokei / V-nai + you ni, ~",
+        arti: "Agar ~ / supaya (tidak) ~",
+        catatan: "Verba yang cocok di depan ように: verba keadaan (わかる, できる) dan verba bentuk potensial (座れる, 働ける). Verba yang menyatakan NIAT/KEHENDAK seperti 働く tidak bisa dipakai langsung. Benar: 日本の会社で働けるように、〜. Salah: 日本の会社で働くように、〜.",
+        contoh: [
+          {jp:"次の人がすぐに席に座れるように、食器を片付けます。", id:"Orang-orang membereskan peralatan makan mereka agar orang selanjutnya bisa langsung duduk."},
+          {jp:"トイレがつまらないように、紙はごみ箱に捨てます。", id:"Orang-orang membuang kertas (tisu) di tempat sampah agar toilet tidak tersumbat."},
+          {jp:"日本の会社で働けるように、日本語を勉強しています。", id:"Saya belajar bahasa Jepang agar dapat bekerja di perusahaan Jepang."},
+          {jp:"だれでもわかるように、簡単な日本語で説明してください。", id:"Jelaskanlah dengan menggunakan bahasa Jepang yang mudah agar semua orang paham."},
+          {jp:"交通事故にあわないように、横断歩道を渡ったほうがいいですよ。", id:"Sebaiknya menyeberanglah di zebra cross agar tidak terjadi kecelakaan lalu lintas."},
+          {jp:"他の人に迷惑をかけないように、食事のあと、ちゃんと片付けなくちゃいけません。", id:"Supaya tidak merepotkan orang lain, kita harus membereskan semuanya dengan baik setelah makan."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 10",
+    judul: "V-(ら)れます ＜Bentuk Pasif ②＞ — Menerima Tindakan dari Orang Lain",
+    sub: "Menyatakan bahwa pembicara MENERIMA suatu tindakan langsung dari orang lain, seperti diberi peringatan, dimarahi, dan sebagainya (biasanya ada perasaan 「いやになる」 / tidak enak). Penerima aksi dijadikan SUBJEK. Beda dengan Bab 7 (acara sebagai subjek, misalnya コンサートが開かれます), di bab ini cirinya adalah ORANG sebagai subjek.",
+    items: [
+      {
+        pola: "人（korban）は　人（pelaku）に　V-受身形",
+        romaji: "hito (higaisha) wa hito (kōisha) ni V-ukemikei",
+        arti: "(Korban) di-V oleh (pelaku)",
+        catatan: "Kalimat asli: 店長が、私に、「今度から気をつけて」と注意しました。 → Kalimat pasif: 私は、店長に、「今度から気をつけて」と注意されました。 Pada kalimat pasif, partikel 「に」 menunjukkan PELAKU aksi (artinya sama dengan 「から」). Verba pasif yang sering muncul: 〜と言われる (dikatakan), 呼ばれる (dipanggil), しかられる (dimarahi).",
+        contoh: [
+          {jp:"お店の店長さんに、「今度から気をつけて」と注意されました。", id:"Saya diberi peringatan \"lain kali hati-hati\" oleh manajer toko."},
+          {jp:"うれしそうですね。　― はい。先生に、よくがんばったと言われました。", id:"Anda kelihatannya sedang gembira. ― Ya. Saya diberitahu guru bahwa kerja saya bagus."},
+          {jp:"子どものとき、よく母にしかられました。", id:"Waktu kecil saya sering dimarahi oleh ibu."},
+          {jp:"私は母にしかられました。", id:"Saya dimarahi oleh ibu."},
+          {jp:"バガスさんのサンダルは、イスヌさんに盗まれました。", id:"Sandal Bagas dicuri oleh Isnu."},
+          {jp:"私の足は、犬にかまれました。", id:"Kaki saya digigit anjing."}
+        ]
+      },
+      {
+        pola: "◆ Cara membuat bentuk pasif ②",
+        romaji: "ukemikei no tsukurikata",
+        arti: "Bentuk pasif tiap kelompok verba",
+        catatan: "Kelompok 1: -u → -a + れる (言う → 言われる, しかる → しかられる, 呼ぶ → 呼ばれる). Kelompok 2: -る → -られる (ほめる → ほめられる). Kelompok 3: する → される (注意する → 注意される). Catatan: bentuk pasif dan potensial kelompok 2 SAMA (〜られる); membedakannya dari konteks.",
+        contoh: [
+          {jp:"［1］言う → 言われる　しかる → しかられる　呼ぶ → 呼ばれる", id:"mengatakan → dikatakan　memarahi → dimarahi　memanggil → dipanggil"},
+          {jp:"［2］ほめる → ほめられる", id:"memuji → dipuji"},
+          {jp:"［3］注意する → 注意される", id:"memperingatkan → diperingatkan"}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 10",
+    judul: "S（普通形）の？ — Nanya Santai (Bentuk Biasa dari 〜んですか？)",
+    sub: "Dipakai buat minta penjelasan dari lawan bicara soal kondisi atau alasan. 「どうしたの？」 adalah bentuk informal dari 「どうしたんですか？」. Kalau 〜んですか？ diubah ke bentuk biasa, jadinya 〜の？ (naik nadanya di akhir).",
+    items: [
+      {
+        pola: "S（普通形）＋の？",
+        romaji: "S (futsuukei) + no?",
+        arti: "~ ya? / ~ kah? (tanya kasual minta penjelasan)",
+        catatan: "Untuk KS-な dan KB: 〜なの？ (元気なの？). Dipakai antar teman atau keluarga, bukan ke atasan.",
+        contoh: [
+          {jp:"お金を払わないで、ジュース飲んだの？", id:"Kamu minum jus tanpa membayarnya dulu?"},
+          {jp:"どうしたの？　元気ないね。何かあったの？", id:"Kamu kenapa? Kelihatannya gak semangat, apa ada sesuatu?"},
+          {jp:"うん、……", id:"Ya, begitulah…"},
+          {jp:"えー、そうなの！？", id:"Eh, begitu ya!?"}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 10",
+    judul: "V-なきゃ — Harus ~ (Paling Santai)",
+    sub: "Bentuk informal dari 〜なければなりません. Ragam lisan dari 〜なければならない adalah 〜なきゃならない, dan kadang dipersingkat lagi dengan membuang 「ならない」 sehingga tinggal 〜なきゃ saja.",
+    items: [
+      {
+        pola: "V-ない形（い→）＋きゃ",
+        romaji: "V-nakya",
+        arti: "Harus ~ (kasual)",
+        catatan: "なきゃ dan なくちゃ sama-sama bentuk kasual dari なければ / なくては. Hanya dipakai di percakapan santai.",
+        contoh: [
+          {jp:"ちゃんとお金を払ってから飲まなきゃ。", id:"Kamu harus membayar dulu sebelum meminumnya."},
+          {jp:"だめ。電車に乗るときは、ちゃんと列に並ばなきゃ。", id:"Jangan! Semestinya kamu harus mengantre untuk masuk ke dalam kereta."}
+        ]
+      },
+      {
+        pola: "◆ Beda 〜なきゃ vs 〜なくちゃ（catatan sensei）",
+        romaji: "nakya to nakucha no chigai",
+        arti: "Beda formalitas dan tingkat kelembutan",
+        catatan: "Dua-duanya sama-sama bentuk kasual dari 〜なければ／〜なくては, bedanya di KESAN-nya. 〜なきゃ: terkesan lugas dan ceplas-ceplos, serta memberi kesan harus SEGERA dilakukan. 〜なくちゃ: terkesan lebih lembut dan feminin.",
+        contoh: [
+          {jp:"もうこんな時間！　帰らなきゃ。", id:"Wah sudah jam segini! Harus pulang (lugas, mendesak)."},
+          {jp:"もうこんな時間！　帰らなくちゃ。", id:"Wah sudah jam segini! Aku harus pulang (lebih lembut)."}
+        ]
+      },
+      {
+        pola: "◆ Ringkasan: ungkapan hal yang HARUS dilakukan",
+        romaji: "shinakereba naranai koto",
+        arti: "Bentuk asli vs informal ragam lisan",
+        catatan: "Asli: 行かなければ／行かなくては ＋ なりません／ならない, いけません／いけない, だめです／だめ. Informal lisan: 行かなきゃ／行かなくちゃ ＋ なりません／ならない, いけません／いけない, だめです／だめ — atau TANPA tambahan apa-apa (行かなきゃ, 行かなくちゃ).",
+        contoh: [
+          {jp:"行かなければなりません。→ 行かなきゃならない。→ 行かなきゃ。", id:"Saya harus pergi. → (kasual) → (paling singkat)"}
+        ]
+      },
+      {
+        pola: "◆ Ringkasan: ungkapan hal yang DILARANG",
+        romaji: "shite wa ikenai koto",
+        arti: "Bentuk asli vs informal ragam lisan",
+        catatan: "Asli: 行っては ＋ いけません／いけない, だめです／だめ. Informal lisan: 行っちゃ ＋ いけません／いけない, だめです／だめ.",
+        contoh: [
+          {jp:"行ってはいけません。→ 行っちゃだめ。", id:"Dilarang pergi. → Jangan pergi (kasual)."}
         ]
       }
     ]

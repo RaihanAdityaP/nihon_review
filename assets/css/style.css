@@ -547,3 +547,18 @@ a.logo{color:inherit;text-decoration:none}
   .msg{max-width:92%}
   .chat-room{margin:0 -1.25rem;border-left:none;border-right:none;border-radius:0;box-shadow:none;height:calc(100dvh - 62px - 1.2rem)}
 }
+
+
+/* ═══ Chat mobile fix: keyboard, scroll lock, lag, zoom ═══ */
+body.chat-open{overflow:hidden;overscroll-behavior:none}
+body.chat-open::before{display:none}                     /* noise fixed fullscreen = berat saat ngetik/scroll */
+body.chat-open header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--bg)}
+.ai-shell.chat-on .chat-room{height:calc(var(--vvh,100dvh) - 62px - 1.5rem)}
+.chat-messages{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y}
+.chat-composer{touch-action:manipulation}
+.chat-composer textarea{font-size:16px;overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none}
+.chat-composer textarea::-webkit-scrollbar{display:none}
+@media(max-width:700px){
+  body.chat-open main{padding-top:0;padding-bottom:0}
+  .ai-shell.chat-on .chat-room{margin:0 -1.25rem;height:calc(var(--vvh,100dvh) - 62px)}
+}

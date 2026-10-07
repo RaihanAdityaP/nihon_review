@@ -107,6 +107,9 @@ const QCATS_STATIC = [
   { id: 'buku-a2-bab7',       label: 'Irodori A2 — Bab 7', t: 'buku' },
   { id: 'buku-a2-bab8',       label: 'Irodori A2 — Bab 8', t: 'buku' },
   { id: 'buku-a2-bab9',       label: 'Irodori A2 — Bab 9', t: 'buku' },
+  { id: 'buku-a2-bab10',    label: 'Irodori A2 — Bab 10', t: 'buku' },
+  { id: 'buku-a2-bab11',    label: 'Irodori A2 — Bab 11', t: 'buku' },
+  { id: 'buku-a2-bab12',    label: 'Irodori A2 — Bab 12', t: 'buku' },
 ];
 
 // Kategori Bunpou TIDAK di-hardcode di sini — otomatis di-generate dari

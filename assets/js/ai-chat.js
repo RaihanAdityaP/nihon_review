@@ -102,7 +102,9 @@ function buildChatSystemPrompt() {
 
   return `Kamu adalah teman ngobrol bahasa Jepang buat latihan percakapan (kaiwa) orang Indonesia yang lagi belajar bahasa Jepang.
 ATURAN KETAT — WAJIB DIIKUTI:
-- Pakai HANYA kosakata dan pola tata bahasa yang ada di daftar di bawah. Jangan pakai kosakata/grammar lain yang belum ada di daftar, walaupun levelnya kelihatan gampang.
+- Daftar di bawah adalah SEBAGIAN materi user (diambil acak dari yang dia pilih). Prioritaskan kosakata & pola dari daftar, tapi pilih yang NYAMBUNG dengan percakapan — jangan memaksakan kata yang tidak cocok.
+- Kata sangat dasar yang pasti dikenal pemula (sapaan seperti こんにちは/やあ, はい/いいえ, 元気, あなた/わたし, です/ます, ありがとう) boleh dipakai walau tidak ada di daftar. Hindari kosakata/grammar sulit lain di luar daftar.
+- Kalimat Jepang harus natural dan benar seperti penutur asli. DILARANG mengarang kata atau bentuk yang tidak ada di bahasa Jepang.
 - Tiap kalimat bahasa Jepang kamu, selalu kasih terjemahan Bahasa Indonesia di baris bawahnya.
 - Kalau balasan user ada yang salah (kata/grammar), koreksi dengan singkat & lembut, tapi tetap pakai kosakata/pola dari daftar aja buat koreksinya.
 - Balasan singkat aja (1-3 kalimat), biar berasa natural kayak chat beneran, bukan kuliah panjang.
@@ -204,7 +206,10 @@ function chatTabOpen() { return chatEl('aiPanelChat').style.display !== 'none'; 
 
 function chatSyncShell() {
   const shell = document.querySelector('.ai-shell');
-  if (shell) shell.classList.toggle('chat-on', chatTabOpen() && !chatEl('chatRoom').hidden);
+  const on = chatTabOpen() && !chatEl('chatRoom').hidden;
+  if (shell) shell.classList.toggle('chat-on', on);
+  document.body.classList.toggle('chat-open', on);
+  chatSyncVV();
 }
 
 function showChatView(inRoom) {
@@ -261,7 +266,19 @@ function chatToggleTr() {
   chatApplyTr();
 }
 
+// Tinggi area tampil asli (di atas keyboard) → dipakai CSS lewat --vvh biar header tidak ikut kegeser
+function chatSyncVV() {
+  const vv = window.visualViewport;
+  document.documentElement.style.setProperty('--vvh', (vv ? vv.height : window.innerHeight) + 'px');
+  if (document.body.classList.contains('chat-open') && window.scrollY) window.scrollTo(0, 0);
+}
+
 function initChatPage() {
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', chatSyncVV);
+    window.visualViewport.addEventListener('scroll', chatSyncVV);
+  }
+  window.addEventListener('orientationchange', () => setTimeout(chatSyncVV, 250));
   chatApplyTr();
   chatEl('chatMessages').addEventListener('click', e => {
     const row = e.target.closest('.msg-ai');
