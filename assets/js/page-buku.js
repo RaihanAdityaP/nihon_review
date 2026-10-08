@@ -10,9 +10,28 @@ function switchBukuTab(tab, btn) {
 }
 
 // ─── pilih buku aktif di halaman Buku (BOOKS didefinisikan di data.js) ───
-let currentBookKey = 'minna';
+// 'all' = tab "Semua": gabungan semua buku, seperti chip "Semua" di menu Materi.
+let currentBookKey = 'all';
+
+function bukuSources() {
+  if (currentBookKey === 'all') return Object.entries(BOOKS);
+  return BOOKS[currentBookKey] ? [[currentBookKey, BOOKS[currentBookKey]]] : [];
+}
+// daftar bab datar dari buku yang lagi aktif (dipakai bareng oleh list bab, search, dan jumpToBab)
+function bukuBabList() {
+  const out = [];
+  bukuSources().forEach(([bookKey, book]) => {
+    Object.keys(book.data).forEach((babKey, i) => {
+      const groups = Object.keys(book.data[babKey]);
+      const wordCount = Object.values(book.data[babKey]).reduce((s, g) => s + g.rows.length, 0);
+      const parsedNum = parseInt(String(babKey).replace(/^bab/i, ''), 10);
+      out.push({ bookKey, bookLabel: book.label, babKey, num: Number.isFinite(parsedNum) ? parsedNum : i + 1, title: groups[0], groupCount: groups.length, wordCount });
+    });
+  });
+  return out;
+}
 function switchBukuBook(bookKey, btn) {
-  if (!BOOKS[bookKey]) return;
+  if (bookKey !== 'all' && !BOOKS[bookKey]) return;
   currentBookKey = bookKey;
   document.querySelectorAll('#bukuBookTabs .cat-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
@@ -24,18 +43,19 @@ function switchBukuBook(bookKey, btn) {
 function renderBukuBookTabs() {
   const el = document.getElementById('bukuBookTabs');
   if (!el) return;
-  el.innerHTML = Object.entries(BOOKS).map(([key, b]) => `
-    <button class="cat-btn${key === currentBookKey ? ' active' : ''}" onclick="switchBukuBook('${key}', this)">${b.label}</button>
+  const tabs = [['all', 'Semua'], ...Object.entries(BOOKS).map(([key, b]) => [key, b.label])];
+  el.innerHTML = tabs.map(([key, label]) => `
+    <button class="cat-btn${key === currentBookKey ? ' active' : ''}" onclick="switchBukuBook('${key}', this)">${label}</button>
   `).join('');
 }
-
-function renderBukuBab(babKey, elId) {
-  const data = (BOOKS[currentBookKey] && BOOKS[currentBookKey].data[babKey]) || null;
+function renderBukuBab(babKey, elId, bookKey) {
+  bookKey = bookKey || currentBookKey;
+  const data = (BOOKS[bookKey] && BOOKS[bookKey].data[babKey]) || null;
   if (!data) return;
   const el = document.getElementById(elId);
   let html = '';
   for (const [group, content] of Object.entries(data)) {
-    const id = 'buku_' + currentBookKey + '_' + babKey + '_' + group.replace(/[^a-z0-9]/gi, '_');
+    const id = 'buku_' + bookKey + '_' + babKey + '_' + group.replace(/[^a-z0-9]/gi, '_');
     const resolved = content.rows.map(r => ({ ...r, ...resolveEntry(r) }));
     const hasNote = resolved.some(r => r.n);
     const hasKanji = resolved.some(r => r.kj);
@@ -55,6 +75,7 @@ function renderBukuBab(babKey, elId) {
             <th style="min-width:140px">Kana / Pola</th>
             <th style="min-width:160px">Romaji</th>
             <th style="min-width:120px">Arti</th>
+            <th style="width:56px">JLPT</th>
             ${hasNote ? '<th>Penjelasan</th>' : ''}
           </tr></thead>
           <tbody>${resolved.map(row => `<tr>
@@ -62,6 +83,7 @@ function renderBukuBab(babKey, elId) {
             <td class="td-kana" style="font-size:.9rem">${row.k}</td>
             <td class="td-roma">${row.r}</td>
             <td class="td-arti">${row.a}</td>
+            <td>${lvBadge(jlptLevelOf(row))}</td>
             ${hasNote ? `<td class="td-note">${row.n || ''}</td>` : ''}
           </tr>`).join('')}</tbody>
         </table></div>
@@ -78,23 +100,22 @@ function renderBabList() {
   renderBukuBookTabs();
   const el = document.getElementById('babList');
   if (!el) return;
-  const bukuData = (BOOKS[currentBookKey] && BOOKS[currentBookKey].data) || {};
-  const babKeys = Object.keys(bukuData);
-  const babs = babKeys.map((key, i) => {
-    const groups = Object.keys(bukuData[key]);
-    const wordCount = Object.values(bukuData[key]).reduce((s, g) => s + g.rows.length, 0);
-    const parsedNum = parseInt(String(key).replace(/^bab/i, ''), 10);
-    return { key, num: Number.isFinite(parsedNum) ? parsedNum : i + 1, title: groups[0], groupCount: groups.length, wordCount };
-  });
+  const babs = bukuBabList();
   const totalWords = babs.reduce((s, b) => s + b.wordCount, 0);
+  const isAll = currentBookKey === 'all';
+  const bookLabel = isAll ? 'SEMUA BUKU' : (BOOKS[currentBookKey] ? BOOKS[currentBookKey].label : '');
 
   const infoHtml = `<div class="bab-progress-card">
-    <div class="bab-progress-top"><span>TOTAL MATERI — ${BOOKS[currentBookKey] ? BOOKS[currentBookKey].label : ''}</span></div>
+    <div class="bab-progress-top"><span>TOTAL MATERI — ${bookLabel}</span></div>
     <div class="bab-progress-foot">${babs.length} BAB • ${totalWords} kata total. Klik bab untuk buka daftar kosakatanya.</div>
   </div>`;
 
-  const cardsHtml = babs.map((b, i) => `<div class="bab-card">
-      <div class="bab-head" data-toggle="${i}" data-babkey="${b.key}">
+  let lastBook = null;
+  const cardsHtml = babs.map((b, i) => {
+    const header = (isAll && b.bookKey !== lastBook) ? `<div class="sec-header-bunpou">${b.bookLabel}</div>` : '';
+    lastBook = b.bookKey;
+    return header + `<div class="bab-card">
+      <div class="bab-head" data-toggle="${i}" data-babkey="${b.babKey}" data-bookkey="${b.bookKey}">
         <div class="bab-num">${String(b.num).padStart(2, '0')}</div>
         <div class="bab-main">
           <div class="bab-title">${b.title}</div>
@@ -106,7 +127,8 @@ function renderBabList() {
         <button class="bab-quiz-link" onclick="location.href=NIHON_ROOT+'quiz/'">Buka halaman Quiz, lalu pilih materi bab ini secara manual →</button>
         <div id="babWords${i}"></div>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 
   el.innerHTML = infoHtml + cardsHtml;
   el.querySelectorAll('[data-toggle]').forEach(h => {
@@ -120,7 +142,7 @@ function renderBabList() {
       if (opening) {
         const wordsEl = document.getElementById('babWords' + i);
         if (!wordsEl.dataset.loaded) {
-          renderBukuBab(h.dataset.babkey, 'babWords' + i);
+          renderBukuBab(h.dataset.babkey, 'babWords' + i, h.dataset.bookkey);
           wordsEl.dataset.loaded = '1';
         }
       }
@@ -128,16 +150,20 @@ function renderBabList() {
   });
 }
 
-// ─── search kosakata lintas semua bab di halaman Buku ───
+// ─── search kosakata lintas semua bab di halaman Buku (+ filter level JLPT) ───
 let BUKU_SEARCH_INDEX = null;
 function buildBukuSearchIndex() {
   if (BUKU_SEARCH_INDEX) return;
   BUKU_SEARCH_INDEX = [];
-  const bukuData = (BOOKS[currentBookKey] && BOOKS[currentBookKey].data) || {};
-  Object.entries(bukuData).forEach(([babKey, babData], babIdx) => {
-    Object.entries(babData).forEach(([group, g]) => {
+  const isAll = currentBookKey === 'all';
+  bukuBabList().forEach((b, babIdx) => {
+    Object.entries(BOOKS[b.bookKey].data[b.babKey]).forEach(([group, g]) => {
       g.rows.forEach(r => {
-        BUKU_SEARCH_INDEX.push({ babKey, babIdx, babLabel: `Bab ${babIdx + 1}`, group, kana: r.k, romaji: r.r, kanji: r.kj || '', arti: r.a });
+        const res = resolveEntry(r);
+        BUKU_SEARCH_INDEX.push({
+          babIdx, babLabel: (isAll ? b.bookLabel + ' · ' : '') + `Bab ${b.num}`, group,
+          kana: r.k, romaji: r.r, kanji: res.kj || '', arti: res.a || r.a || '', lv: jlptLevelOf(r)
+        });
       });
     });
   });
@@ -158,7 +184,7 @@ function renderBukuSearch() {
     matches.map(w => `<div class="kamus-item" onclick="jumpToBab(${w.babIdx})">
       <div class="kbox">${w.kanji ? w.kanji.slice(0, 2) : w.kana.slice(0, 2)}</div>
       <div class="kinfo">
-        <div class="ktag"><span class="kcat">${w.babLabel.toUpperCase()}</span><span class="kgrp">${w.group}</span></div>
+        <div class="ktag"><span class="kcat">${w.babLabel.toUpperCase()}</span><span class="kgrp">${w.group}</span>${lvBadge(w.lv)}</div>
         <div class="ktitle">${w.arti}</div>
         <div class="ksub">${w.kana}${w.romaji ? ' • ' + w.romaji : ''}</div>
       </div>

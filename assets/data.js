@@ -5260,7 +5260,7 @@ bab3: {
     {k:"ごいっしょ",r:"go-issho",a:"bersama-sama (ungkapan bentuk sopan)"},
     {k:"よろしいですか？",r:"yoroshii desu ka?",a:"Apakah sudah benar? (ungkapan bentuk sopan)"},
     {k:"～がございます",r:"~ga gozaimasu",a:"Ada / tersedia ~ (ungkapan bentuk sopan)"},
-    {k:"おきまりですか？",r:"okimari desu ka?",a:"Apakah Anda sudah memutuskan? (ungkapan bentuk sopan)"},
+    {k:"おきまりですか？",r:"okimari desu ka?",a:"Apakah Anda sudah memutuskan? (ungkapan bentuk sopan)",kj:"お決まりですか？"},
     {k:"いかがですか？",r:"ikaga desu ka?",a:"Apakah Anda ingin~? / Bagaimana dengan ~? (ungkapan bentuk sopan)"},
     {k:"どうなさいますか？",r:"dou nasaimasu ka?",a:"Bagaimana? / Berapa banyak yang Anda inginkan? (ungkapan bentuk sopan)"},
     {k:"いじょうでよろしいですか？",r:"ijou de yoroshii desu ka?",a:"Apakah (pesanannya) sudah semuanya? (ungkapan bentuk sopan)",kj:"以上でよろしいですか？"},
@@ -5271,7 +5271,7 @@ bab3: {
   "Reservasi Restoran (予約をしたいんですけど…)": { rows: [
     {k:"ひにち",r:"hinichi",a:"tanggal",kj:"日にち／お日にち"},
     {k:"まちがい",r:"machigai",a:"kesalahan"},
-    {k:"しつれいしました",r:"shitsurei shimashita",a:"Saya mohon maaf."},
+    {k:"しつれいしました",r:"shitsurei shimashita",a:"Saya mohon maaf.",kj:"失礼しました"},
     {k:"おでんわ",r:"odenwa",a:"telepon (ungkapan bentuk sopan)",kj:"お電話"},
     {k:"ごよやく",r:"go-yoyaku",a:"reservasi (ungkapan bentuk sopan)",kj:"ご予約"},
     {k:"おじかん",r:"ojikan",a:"jam; waktu (ungkapan bentuk sopan)",kj:"お時間"},
@@ -14957,6 +14957,196 @@ const BUNPOU = [
         catatan: "Asli: 行っては ＋ いけません／いけない, だめです／だめ. Informal lisan: 行っちゃ ＋ いけません／いけない, だめです／だめ.",
         contoh: [
           {jp:"行ってはいけません。→ 行っちゃだめ。", id:"Dilarang pergi. → Jangan pergi (kasual)."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 11",
+    judul: "V-てみてもいいですか？ — Minta Izin Mencoba Sesuatu",
+    sub: "Dipakai untuk MINTA IZIN kepada lawan bicara ketika ingin mencoba sesuatu, misalnya mencoba baju di toko atau pusat perbelanjaan. Gabungan dari V-てみます (V-てみる, dipelajari di Irodori 初級1 Bab 12) yang diubah jadi bentuk 〜てもいいですか？.",
+    items: [
+      {
+        pola: "V-て形＋みてもいいですか？",
+        romaji: "V-te + mite mo ii desu ka?",
+        arti: "Bolehkah saya mencoba ~?",
+        catatan: "Saat belanja, ungkapan ini sering dipakai untuk benda yang bisa dicoba: 着てみる (mencoba pakai baju), はいてみる (mencoba pakai sepatu/celana), かぶってみる (mencoba pakai topi), 使ってみる (mencoba pakai). Jawaban untuk mengizinkan: どうぞ。",
+        contoh: [
+          {jp:"このセーター、着てみてもいいですか？", id:"Bolehkah saya mencoba sweater ini?"},
+          {jp:"このくつ、はいてみてもいいですか？", id:"Bolehkah saya mencoba sepatu ini?"},
+          {jp:"この帽子、かぶってみてもいいですか？", id:"Bolehkah saya mencoba topi ini?"},
+          {jp:"すみません。このペン、使ってみてもいいですか？　― どうぞ。", id:"Maaf... Bolehkah saya mencoba menggunakan pena ini? ― Silakan."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 11",
+    judul: "イA-／ナA- すぎます — Terlalu ~ (Berlebihan)",
+    sub: "Menyatakan sesuatu yang tingkatnya BERLEBIHAN (terlalu ~). Di Irodori 初級1 Bab 16 pola 〜すぎます sudah dipelajari bersama verba (食べすぎました = terlalu banyak makan). Di bab ini pola yang sama disambungkan ke ADJEKTIVA.",
+    items: [
+      {
+        pola: "イA-（い→）＋すぎます",
+        romaji: "iA- (i→) + sugimasu",
+        arti: "Terlalu ~",
+        catatan: "Adjektiva-i: huruf 「い」 di belakang dihilangkan. 大きい → 大きすぎます (terlalu besar).",
+        contoh: [
+          {jp:"スマランは最近暑すぎますね。", id:"Semarang akhir-akhir ini terlalu panas ya."},
+          {jp:"ご飯は多すぎるので、食べのこしました。", id:"Karena nasinya terlalu banyak, saya menyisakan makanan."},
+          {jp:"外のさわぎは大きすぎるので、先生の話は聞こえません。", id:"Karena keributan di luar terlalu besar, saya tidak bisa mendengar pembicaraan guru."}
+        ]
+      },
+      {
+        pola: "ナA-（な→）＋すぎます",
+        romaji: "naA- (na→) + sugimasu",
+        arti: "Terlalu ~",
+        catatan: "Adjektiva-na: huruf 「な」 di belakang dihilangkan. 派手な → 派手すぎます (terlalu mencolok).",
+        contoh: [
+          {jp:"この色はちょっと派手すぎます。", id:"Warna ini terlalu mencolok."},
+          {jp:"辛すぎる料理は食べられないので、タイ料理はあまり食べません。", id:"Karena tidak bisa makan masakan yang terlalu pedas, saya jarang makan masakan Thailand."}
+        ]
+      },
+      {
+        pola: "すぎる ＋ し／ので",
+        romaji: "sugiru + shi / node",
+        arti: "Terlalu ~, dan ~ / Karena terlalu ~, ~",
+        catatan: "Bentuk biasa すぎる bisa disambung ので (alasan) atau し (menumpuk beberapa alasan).",
+        contoh: [
+          {jp:"このパソコンは高すぎるし、小さいし、それに普通すぎるし。", id:"Laptop ini terlalu mahal, kecil, dan lagi pula terlalu biasa."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 11",
+    judul: "イA-い／ナA-な の — の sebagai Pengganti Nomina",
+    sub: "「の」 di sini menggantikan nomina yang sudah disebutkan sebelumnya. Pada contoh buku, pembicara memegang sweater lalu bertanya もうちょっと大きいの、ありますか？ — 「の」 menunjuk ke sweater tersebut, jadi tidak perlu mengulang nomina.",
+    items: [
+      {
+        pola: "イA-い＋の／ナA-な＋の",
+        romaji: "iA-i + no / naA-na + no",
+        arti: "Yang ~ (menggantikan benda yang sudah disebut)",
+        catatan: "Adjektiva-i: tinggal tambah 「の」 (大きいの). Adjektiva-na: bentuknya 「〜なの」 (きれいなの = yang cantik/bersih).",
+        contoh: [
+          {jp:"もうちょっと大きいの、ありますか？", id:"Apakah ada yang ukurannya sedikit lebih besar?"},
+          {jp:"どのセーターが好きですか？　― 私は、赤いのがいいです。", id:"Sweater mana yang Anda sukai? ― Saya suka yang merah."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 11",
+    judul: "N を V-(ら)れます ＜Bentuk Pasif ③＞ — Barang/Bagian Tubuh Milik Kita Dikenai Tindakan Orang",
+    sub: "Menyatakan bahwa BARANG MILIK pembicara rusak atau mengalami sesuatu karena tindakan orang lain (perasaan tidak nyaman/dirugikan). Lanjutan dari Pasif ② Bab 10: di sana pembicara menerima tindakan langsung dari orang (dimarahi, diperingatkan), di sini yang kena adalah BARANG/BAGIAN TUBUH milik pembicara, tapi pembicara tetap dijadikan SUBJEK kalimat.",
+    items: [
+      {
+        pola: "〔pemilik〕は〔pelaku〕に〔barang milik〕を V-受身形",
+        romaji: "[shoyuusha] wa [kōisha] ni [mochimono] o V-ukemikei",
+        arti: "(Pemilik) mengalami barangnya di-V (oleh seseorang)",
+        catatan: "Kalimat asli ①: （だれかが）私の財布を盗みました。(Seseorang mencuri dompet saya.) → Kalimat pasif ②: 私は、財布を（だれかに）盗まれました。(Dompet saya dicuri seseorang.) Subjek kalimat ② adalah 「私」, BUKAN barangnya — barang tetap ditandai 「を」. 盗まれる adalah pasif dari 盗む. Pasif lain: とられる (とる, diambil), 壊される (壊す, dirusak).",
+        contoh: [
+          {jp:"（私は）自転車を盗まれました。", id:"Sepeda saya dicuri."},
+          {jp:"私は、財布を（だれかに）盗まれました。", id:"Dompet saya dicuri (seseorang)."},
+          {jp:"何かあったんですか？　― バスの中で、携帯をとられました。", id:"Apa yang terjadi? ― Ponsel saya dicuri sewaktu di bus."},
+          {jp:"もしかしたら、バッグをとられたかもしれません。", id:"Mungkin tas saya dicuri."}
+        ]
+      },
+      {
+        pola: "〔pemilik〕は〔pelaku〕に〔bagian tubuh〕を V-受身形",
+        romaji: "[shoyuusha] wa [kōisha] ni [karada no bubun] o V-ukemikei",
+        arti: "Bagian tubuh (pemilik) dikenai tindakan seseorang",
+        catatan: "Tidak hanya untuk barang milik, tapi juga bagian tubuh yang terkena imbas dari suatu aksi: 足を踏まれる (kaki terinjak), 腕を引っ張られる (lengan ditarik).",
+        contoh: [
+          {jp:"くつ、汚れていますよ。　― 電車の中で、足を踏まれたんです。", id:"Sepatumu kotor, lho. ― Kaki saya terinjak sewaktu di kereta."}
+        ]
+      },
+      {
+        pola: "Pasif ③ — perasaan tidak nyaman",
+        romaji: "fukai na kimochi",
+        arti: "Perasaan tidak nyaman karena barang/tubuh dikenai tindakan orang",
+        catatan: "Fungsinya menunjukkan perasaan TIDAK NYAMAN yang dialami pemilik karena benda miliknya dikenai perlakuan oleh seseorang (pelaku ditandai に).",
+        contoh: [
+          {jp:"えさをやる時、猫に手をかまれました。", id:"Saat memberi makan, tangan saya digigit kucing."},
+          {jp:"昨日の晩、父はどろぼうにお金を盗まれました。", id:"Kemarin malam, uang ayah saya dicuri pencuri."},
+          {jp:"試験の時、となりの友だちに答えを見られて、いやになったよ。", id:"Waktu ujian, jawaban saya dilihat teman sebelah, jadi kesal."},
+          {jp:"バスの中で、娘は知らない人に足を踏まれて泣きました。", id:"Di dalam bus, karena kaki putri saya diinjak oleh orang yang tidak dikenal, dia menangis."},
+          {jp:"兄に友だちにもらったケーキを食べられました。", id:"Kue yang saya dapat dari teman dimakan oleh kakak."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 11",
+    judul: "S（普通形）かもしれません — Mungkin ~",
+    sub: "Menyatakan DUGAAN. Dipakai ketika ada kemungkinan, tapi kemungkinannya tidak terlalu besar/tinggi (sekitar 30%) — pembicara tidak begitu yakin dengan dugaannya. Sering diawali もしかしたら.",
+    items: [
+      {
+        pola: "S（普通形）＋かもしれません",
+        romaji: "S (futsuukei) + kamoshiremasen",
+        arti: "Mungkin ~ / bisa jadi ~",
+        catatan: "Disambung ke bentuk biasa. TAPI kalau nomina atau adjektiva-na, JANGAN pakai 「だ」: 休みかもしれません (mungkin tutup/libur), 暇かもしれません (mungkin ada waktu luang).",
+        contoh: [
+          {jp:"もしかしたら、バッグをとられたかもしれません。", id:"Mungkin tas saya dicuri."},
+          {jp:"あ、スマホがないです。さっきの店に忘れたかもしれません。", id:"Ah, ponsel saya tidak ada. Mungkin tertinggal di toko tadi."},
+          {jp:"田中さんは最近よく笑いますね。彼氏ができたかもしれません。", id:"Tanaka akhir-akhir ini sering tertawa ya. Mungkin dia punya pacar."},
+          {jp:"どうしてあの人は雨が降らなくても傘を持って行きましたか。　― 暑いかもね。", id:"Kenapa orang itu bawa payung padahal tidak hujan? ― Mungkin karena panas ya."},
+          {jp:"昨日、夜遅くまでサッカーの試合を見たから、竹田さんは学校に来ないかもしれない。", id:"Kemarin dia nonton pertandingan sepak bola sampai larut malam, jadi Takeda mungkin tidak datang ke sekolah."},
+          {jp:"今朝から渡辺さんは全然話していませんね。もしかしたら問題があるかもしれません。", id:"Dari tadi pagi Watanabe tidak berbicara sama sekali ya. Mungkin dia ada masalah."},
+          {jp:"ロールケーキはまだありますか？　― まだあるかもしれません。", id:"Apakah kue gulungnya masih ada? ― Mungkin masih ada."}
+        ]
+      },
+      {
+        pola: "〜かも（ragam lisan informal）",
+        romaji: "~ kamo",
+        arti: "Mungkin ~ (kasual)",
+        catatan: "Pada percakapan informal, bagian belakang dihilangkan sehingga tinggal 「〜かも」 (bisa ditambah ね/よ).",
+        contoh: [
+          {jp:"忘れたかも。", id:"Mungkin lupa."},
+          {jp:"落としたかも。", id:"Mungkin saya menjatuhkannya."},
+          {jp:"店に電話したけど、だれも出ないよ。　― 今日は、休みかもね。", id:"Aku sudah coba telepon ke toko itu, tapi tidak ada yang menerima. ― Hari ini mungkin tutup, kali ya."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 11",
+    judul: "V-てしまいました — Menyesal / Sudah Selesai",
+    sub: "Disambungkan ke verba bentuk て. Punya dua fungsi: ① kegiatan yang akan/sudah SELESAI, ② perasaan KECEWA, SEDIH, atau MENYESAL atas sesuatu yang dilakukan/terjadi. Pada contoh utama, dipakai untuk menyatakan penyesalan karena lupa membawa kartu poin.",
+    items: [
+      {
+        pola: "V-て形＋しまいました／しまいます",
+        romaji: "V-te + shimaimashita / shimaimasu",
+        arti: "② Telah (tanpa sengaja) ~ — menyesal/kecewa",
+        catatan: "Dipakai untuk menyesali perbuatan sendiri atau menyayangkan hal yang terjadi. Ungkapan yang sering muncul saat belanja: なくしてしまいました (なくす, menghilangkan; hilang), 落としてしまいました (落とす, menjatuhkan; jatuh), 壊れてしまいました (壊れる, rusak).",
+        contoh: [
+          {jp:"ポイントカードを忘れてしまいました。", id:"Saya lupa membawa kartu poinnya."},
+          {jp:"2か月前に買った掃除機が、もう壊れてしまいました。", id:"Alat penghisap debu yang saya beli 2 bulan lalu sudah rusak."},
+          {jp:"先生、すみません。宿題を忘れてしまったんですが…。", id:"Pak/Bu guru, maaf. Saya lupa mengerjakan PR..."}
+        ]
+      },
+      {
+        pola: "V-て形＋しまいます（fungsi ①：selesai）",
+        romaji: "V-te + shimaimasu",
+        arti: "① Akan/sudah menyelesaikan ~ sampai tuntas",
+        catatan: "Selain untuk menyesal, V-てしまう juga menyatakan suatu kegiatan yang akan atau sudah beres/selesai.",
+        contoh: [
+          {jp:"この仕事を終わらせてしまうから、どうぞ、お先に。", id:"Saya akan menyelesaikan pekerjaan ini dulu, jadi silakan duluan."},
+          {jp:"Tere Liyeの「Bumi」という小説はもう読んでしまった？", id:"Novel \"Bumi\" karya Tere Liye, apa sudah kamu baca sampai habis?"}
+        ]
+      },
+      {
+        pola: "〜ちゃった（ragam lisan）",
+        romaji: "~ chatta",
+        arti: "Bentuk kasual dari 〜てしまいました",
+        catatan: "Pada percakapan, 〜てしまいました berubah jadi 〜ちゃった, misalnya 忘れてしまった → 忘れちゃった.",
+        contoh: [
+          {jp:"そのスマホ、どうしたんですか？　― さっき落としちゃったんです。", id:"Ada apa dengan ponselmu? ― Tadi saya tidak sengaja menjatuhkannya."}
         ]
       }
     ]

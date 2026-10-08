@@ -16,6 +16,15 @@ const KAMUS_CATS = [
 // halaman sendiri (Hiragana/Katakana/Kanji digabung jadi tab 文字 Moji).
 const KAMUS_VISIBLE_SOURCES = new Set(['Kotoba', 'Kata Sifat', 'Counter']);
 let kamusActiveCat = 'Semua';
+// Filter level JLPT: '' = semua | '5'..'1' = N5..N1 | 'none' = tanpa level
+let kamusLevel = '';
+const KAMUS_LEVELS = [['', 'Semua level'], ['5', 'N5'], ['4', 'N4'], ['3', 'N3'], ['2', 'N2'], ['1', 'N1'], ['none', 'Tanpa level']];
+function renderKamusLevelChips() {
+  const el = document.getElementById('kamusLevelChips');
+  if (!el) return;
+  el.innerHTML = KAMUS_LEVELS.map(([v, label]) => `<div class="kamus-chip ${v === kamusLevel ? 'active' : ''}" data-l="${v}">${label}</div>`).join('');
+  el.querySelectorAll('.kamus-chip').forEach(c => c.onclick = () => { kamusLevel = c.dataset.l; renderKamusLevelChips(); renderKamusResults(true); });
+}
 
 function kamusGoPage(p) {
   kamusPage = p;
@@ -38,10 +47,16 @@ function renderKamusResults(resetPage) {
   buildKamusIndex();
   if (resetPage) kamusPage = 1;
   const qEl = document.getElementById('kamusSearchInput');
-  const q = qEl ? qEl.value.trim().toLowerCase() : '';
+  let q = qEl ? qEl.value.trim().toLowerCase() : '';
+  // ketik "n5" / "n4" / ... di kolom cari = pintasan buat filter level
+  let lvF = kamusLevel;
+  const lvQuery = q.match(/^n([1-5])$/);
+  if (lvQuery) { lvF = lvQuery[1]; q = ''; }
   const filtered = KAMUS_ALL.filter(w => {
     const matchCat = kamusActiveCat === 'Semua' ? KAMUS_VISIBLE_SOURCES.has(w.source) : w.source === kamusActiveCat;
     if (!matchCat) return false;
+    if (lvF === 'none' && w.lv) return false;
+    if (lvF && lvF !== 'none' && String(w.lv) !== lvF) return false;
     if (!q) return true;
     return (w.kana || '').toLowerCase().includes(q) || (w.romaji || '').toLowerCase().includes(q) || (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q) || (w.group || '').toLowerCase().includes(q);
   });

@@ -24,22 +24,25 @@
     <div class="sec-title">Materi</div>
     <div class="sec-sub">Cari kana, romaji, kanji, atau arti — lintas semua kategori. (Hiragana/Katakana/Kanji &amp; Kata Kerja ada menu sendiri, lihat tab 文字 dan 動詞)</div>
     <div class="kamus-search-wrap">
-      <input type="text" id="kamusSearchInput" class="kamus-search" placeholder="Cari kana, romaji, kanji, atau arti..." oninput="renderKamusResults(true)">
+      <input type="text" id="kamusSearchInput" class="kamus-search" placeholder="Cari kana, romaji, kanji, arti, atau ketik n5 / n4..." oninput="renderKamusResults(true)">
     </div>
     <div class="kamus-chips" id="kamusChips"></div>
+    <div class="kamus-chips" id="kamusLevelChips"></div>
     <div class="kamus-count" id="kamusCount"></div>
     <div id="kamusResults"></div>
   </div>
 
 </main>
 <script src="../assets/data.js?v=20261006"></script>
+<script src="../assets/jlpt-levels.js?v=20261008"></script>
 <script src="../assets/js/pager.js?v=20261006"></script>
 <script src="../assets/js/notes.js?v=20261006"></script>
 <script src="../assets/js/kamus-sheet.js?v=20261006"></script>
-<script src="../assets/js/kamus-core.js?v=20261006"></script>
-<script src="../assets/js/page-materi.js?v=20261006"></script>
+<script src="../assets/js/kamus-core.js?v=20261008"></script>
+<script src="../assets/js/page-materi.js?v=20261008"></script>
 <script>
 renderKamusChips();
+renderKamusLevelChips();
 renderKamusResults();
 </script>
 </body>

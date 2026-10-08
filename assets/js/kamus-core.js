@@ -72,6 +72,14 @@ function buildKamusIndex() {
   KANJI.forEach(k => {
     KAMUS_ALL.push({ source: 'Kanji', group: k.tema, kana: (k.kunyomi && k.kunyomi[0]) || (k.onyomi && k.onyomi[0]) || '', romaji: '', kanji: k.char, arti: k.arti, note: k.n || '', onyomi: k.onyomi || [], kunyomi: k.kunyomi || [], kotoba: k.kotoba || [], sumber: k.sumber || 'modul' });
   });
+  // Level JLPT (jlpt-levels.js) cuma buat sumber kata; Hiragana/Katakana/Kanji tidak punya.
+  if (typeof jlptLevelOf === 'function') {
+    KAMUS_ALL.forEach(w => {
+      if (w.source === 'Kotoba' || w.source === 'Kata Kerja' || w.source === 'Kata Sifat' || w.source === 'Counter') {
+        w.lv = jlptLevelOf({ k: w.kana, r: w.romaji });
+      }
+    });
+  }
   KAMUS_HOMOFON = new Map();
   KAMUS_ALL.forEach(w => {
     if (!w.kanji) return;
@@ -101,7 +109,7 @@ function kamusItemsHtml(items) {
     html += `<div class="kamus-item" data-i="${idx}">
       <div class="kbox">${boxText}</div>
       <div class="kinfo">
-        <div class="ktag"><span class="kcat">${w.source.toUpperCase()}</span>${typeBadge}</div>
+        <div class="ktag"><span class="kcat">${w.source.toUpperCase()}</span>${typeBadge}${w.lv !== undefined && typeof lvBadge === 'function' ? lvBadge(w.lv) : ''}</div>
         <div class="ktitle">${w.arti}</div>
         <div class="ksub">${w.jishokei ? (w.jishokei.kanji || w.jishokei.kana) + ' ・ ' : ''}${w.kana}${w.romaji && w.source !== 'Hiragana' && w.source !== 'Katakana' ? ' • ' + w.romaji : ''}</div>
       </div>
