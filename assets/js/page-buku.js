@@ -69,7 +69,7 @@ function renderBukuBab(babKey, elId, bookKey) {
         <span class="acc-arrow">▶</span>
       </div>
       <div class="acc-body" id="${id}">
-        <div class="tbl-wrap"><table class="ktable">
+        <div class="tbl-wrap"><table class="ktable ktable-stack">
           <thead><tr>
             ${hasKanji ? '<th style="width:70px">Kanji</th>' : ''}
             <th style="min-width:140px">Kana / Pola</th>
@@ -83,7 +83,7 @@ function renderBukuBab(babKey, elId, bookKey) {
             <td class="td-kana" style="font-size:.9rem">${row.k}</td>
             <td class="td-roma">${row.r}</td>
             <td class="td-arti">${row.a}</td>
-            <td>${lvBadge(jlptLevelOf(row))}</td>
+            <td class="td-lv">${lvBadge(jlptLevelOf(row))}</td>
             ${hasNote ? `<td class="td-note">${row.n || ''}</td>` : ''}
           </tr>`).join('')}</tbody>
         </table></div>
@@ -125,6 +125,8 @@ function renderBabList() {
       </div>
       <div class="bab-quiz-panel" id="babBody${i}" style="display:none">
         <button class="bab-quiz-link" onclick="location.href=NIHON_ROOT+'quiz/'">Buka halaman Quiz, lalu pilih materi bab ini secara manual →</button>
+        <input type="text" class="kamus-search bab-search" id="babSearch${i}" placeholder="Cari kata di bab ini..." oninput="filterBabWords(${i})">
+        <div class="bab-search-info" id="babSearchInfo${i}"></div>
         <div id="babWords${i}"></div>
       </div>
     </div>`;
@@ -195,4 +197,39 @@ function jumpToBab(babIdx) {
   renderBukuSearch();
   const head = document.querySelector(`.bab-head[data-toggle="${babIdx}"]`);
   if (head) { head.click(); head.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+}
+
+
+// ─── search di dalam SATU bab (kotak "Cari kata di bab ini...") ───
+// Filter baris per kata (kanji / kana / romaji / arti / penjelasan), topik yang kosong disembunyikan,
+// topik yang ada hasilnya dibuka otomatis. Kalau kotak dikosongkan, semua balik seperti semula.
+function filterBabWords(i) {
+  const head = document.querySelector(`.bab-head[data-toggle="${i}"]`);
+  const wordsEl = document.getElementById('babWords' + i);
+  const info = document.getElementById('babSearchInfo' + i);
+  if (!head || !wordsEl) return;
+  const q = (document.getElementById('babSearch' + i).value || '').trim().toLowerCase();
+  if (!wordsEl.dataset.loaded) {
+    renderBukuBab(head.dataset.babkey, 'babWords' + i, head.dataset.bookkey);
+    wordsEl.dataset.loaded = '1';
+  }
+  let total = 0, shown = 0;
+  wordsEl.querySelectorAll('.acc-item').forEach(item => {
+    const rows = item.querySelectorAll('tbody tr');
+    const body = item.querySelector('.acc-body');
+    const headEl = item.querySelector('.acc-head');
+    const cnt = item.querySelector('.acc-cnt');
+    if (!cnt.dataset.orig) cnt.dataset.orig = cnt.textContent;
+    let hit = 0;
+    rows.forEach(tr => {
+      const ok = !q || tr.textContent.toLowerCase().includes(q);
+      tr.style.display = ok ? '' : 'none';
+      if (ok) hit++;
+    });
+    total += rows.length; shown += hit;
+    item.style.display = hit ? '' : 'none';
+    cnt.textContent = q ? hit + '/' + rows.length : cnt.dataset.orig;
+    if (q && hit) { body.classList.add('open'); headEl.classList.add('open'); }
+  });
+  info.textContent = q ? (shown ? shown + ' dari ' + total + ' kata cocok' : 'Gak ada yang cocok di bab ini.') : '';
 }

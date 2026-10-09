@@ -1,5 +1,6 @@
 // page-quiz.js — bagian dari NihonReview (dipecah dari app.js)
 let SC = new Set(), ST = new Set(['kana-to-romaji']), QN = 10;
+let QM = 'acak'; // urutan soal: 'acak' (diacak) atau 'urut' (sesuai urutan kategori/bab)
 
 function initQSetup() {
   document.getElementById('qog').innerHTML = renderCatGrid(QCATS, SC, 'togCat');
@@ -21,6 +22,12 @@ function toggleType(btn) {
   if (ST.has(t)) { ST.delete(t); btn.classList.remove('sel'); }
   else           { ST.add(t);    btn.classList.add('sel'); }
   checkReady();
+}
+
+function setOrder(btn) {
+  document.querySelectorAll('#ordRow .tbtn').forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+  QM = btn.dataset.m;
 }
 
 function setCount(btn) {
@@ -135,9 +142,12 @@ function buildQ(item, pool) {
 }
 
 function startQuiz() {
-  const all = getAllItems(SC);
+  const ordered = QM === 'urut';
+  // mode urut: kategori diurutkan sesuai daftar (bukan urutan klik), soal diambil dari awal ke akhir
+  const all = getAllItems(ordered ? new Set(QCATS.filter(c => SC.has(c.id)).map(c => c.id)) : SC);
   if (all.length < 4) return;
-  const picked = shuf(all).slice(0, QN === 999 ? all.length : Math.min(QN, all.length));
+  const n = QN === 999 ? all.length : Math.min(QN, all.length);
+  const picked = ordered ? all.slice(0, n) : shuf(all).slice(0, n);
   QS = picked.map(x => buildQ(x, all)).filter(Boolean);
   if (!QS.length) return;
   CQ = 0; CC = 0; CW = 0; distractorCount = {};

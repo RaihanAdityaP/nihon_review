@@ -39,7 +39,7 @@ function renderKotobaAcc(data, cid) {
         <span class="acc-arrow">▶</span>
       </div>
       <div class="acc-body" id="${id}">
-        <div class="tbl-wrap"><table class="ktable">
+        <div class="tbl-wrap"><table class="ktable ktable-stack">
           <thead><tr>
             ${hasKanji ? '<th style="width:70px">Kanji</th>' : ''}
             <th style="width:90px">Kana</th>
@@ -97,7 +97,7 @@ function renderKanjiAcc(data, cid) {
             <div><div class="p-name" style="margin-bottom:.3rem">Onyomi (音読み)</div><div class="p-rom">${(k.onyomi || []).join('、') || '—'}</div></div>
             <div><div class="p-name" style="margin-bottom:.3rem">Kunyomi (訓読み)</div><div class="p-rom">${(k.kunyomi || []).join('、') || '—'}</div></div>
           </div>
-          <div class="tbl-wrap"><table class="ktable">
+          <div class="tbl-wrap"><table class="ktable ktable-stack">
             <thead><tr>
               <th style="width:90px">Kotoba</th>
               <th style="width:100px">Furigana</th>

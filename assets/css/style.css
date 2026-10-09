@@ -571,3 +571,28 @@ body.chat-open header{backdrop-filter:none;-webkit-backdrop-filter:none;backgrou
 .lv-badge.lv2{color:var(--accent);border-color:var(--accent)}
 .lv-badge.lv1{color:var(--bg);background:var(--accent);border-color:var(--accent)}
 .lv-badge.lv0{opacity:.55}
+
+
+/* ── search di dalam bab (halaman Buku) ── */
+.bab-search{margin:.6rem 0 .3rem;padding:.7rem .9rem;font-size:.95rem}
+.bab-search-info{font-family:var(--font-mono);font-size:.68rem;color:var(--text3);margin:0 0 .6rem;min-height:.9rem}
+
+/* ── tabel kosakata di HP: tiap baris jadi kartu, jadi gak perlu geser kiri-kanan ── */
+@media(max-width:640px){
+  .acc-body{padding:.65rem}
+  .tbl-wrap:has(.ktable-stack){overflow-x:visible;border:none}
+  .ktable.ktable-stack{display:block;min-width:0;width:100%}
+  .ktable.ktable-stack thead{display:none}
+  .ktable.ktable-stack tbody{display:block}
+  .ktable.ktable-stack tr{display:flex;flex-wrap:wrap;align-items:baseline;gap:.15rem .75rem;position:relative;padding:.7rem 3.4rem .7rem .85rem;margin-bottom:.5rem;border:1px solid var(--border);background:var(--bg2)}
+  .ktable.ktable-stack tr:last-child{margin-bottom:0}
+  .ktable.ktable-stack td{display:block;padding:0;border:none;white-space:normal;min-width:0;max-width:none;background:none}
+  .ktable.ktable-stack tr:hover td{background:none}
+  .ktable.ktable-stack td:empty{display:none}
+  .ktable.ktable-stack .td-kanji{font-size:1.2rem}
+  .ktable.ktable-stack .td-kana{font-size:1.05rem}
+  .ktable.ktable-stack .td-roma,
+  .ktable.ktable-stack .td-arti{flex-basis:100%}
+  .ktable.ktable-stack .td-lv{position:absolute;top:.7rem;right:.75rem}
+  .ktable.ktable-stack .td-note{flex-basis:100%;margin-top:.35rem;padding-top:.4rem;border-top:1px dashed var(--border)}
+}
