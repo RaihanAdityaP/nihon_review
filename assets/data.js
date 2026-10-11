@@ -15150,6 +15150,96 @@ const BUNPOU = [
         ]
       }
     ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 12",
+    judul: "V-る まで、〜 — Sampai ~",
+    sub: "Biasanya partikel 「まで」 disambung ke nomina untuk jangka waktu, seperti 「2時から4時まで」. Di bab ini 「まで」 disambung ke VERBA untuk menjelaskan aksi yang berlangsung terus sampai suatu aksi/kejadian selesai atau terjadi. Penanda waktunya tidak berupa jam atau tanggal yang jelas, melainkan kejadian lain.",
+    items: [
+      {
+        pola: "V-辞書形＋まで、〜",
+        romaji: "V-jishokei + made, ~",
+        arti: "Sampai (aksi) ~, ~",
+        catatan: "Partikel mengikuti verba bentuk kamus. Pada contoh buku dipakai untuk menyatakan jangka waktu pengiriman barang.",
+        contoh: [
+          {jp:"手元に届くまで、2日しかかかりませんでした。", id:"Hanya butuh waktu 2 hari sampai barangnya tiba di tangan."},
+          {jp:"パソコンが直るまで、どのぐらいかかりますか？　― 1週間ぐらいだと思います。", id:"Perlu waktu berapa lama sampai komputer ini kembali pulih? ― Saya rasa sekitar 1 minggu."},
+          {jp:"店の人が来るまで、ここで待っていてください。", id:"Silakan tunggu di sini sampai pegawai tokonya datang."},
+          {jp:"日本に着くまで、あきらめない。", id:"Sampai tiba di Jepang, saya tidak akan menyerah."},
+          {jp:"贈り物がアメリカに届くまで、一ヶ月かかります。", id:"Sampai hadiahnya tiba di Amerika, butuh waktu sebulan."},
+          {jp:"全部終わるまで、待っててよ。", id:"Tunggu ya sampai semuanya selesai."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 12",
+    judul: "V-やすいです／V-にくいです — Mudah / Sulit Dilakukan",
+    sub: "Menyatakan kemudahan atau kesulitan dalam melakukan suatu aksi. Disambungkan ke verba bentuk ます yang 「ます」-nya dihilangkan (bentuk stem). 「〜やすい」 = mudah dilakukan, 「〜にくい」 = sulit dilakukan.",
+    items: [
+      {
+        pola: "V-ます形（ますを取る）＋やすいです",
+        romaji: "V-masu (masu dihilangkan) + yasui desu",
+        arti: "Mudah di-V",
+        catatan: "Contoh bentuk yang sering dipakai: わかりやすい (mudah dipahami), 見やすい (mudah dilihat), 書きやすい (mudah ditulis), 使いやすい (mudah digunakan).",
+        contoh: [
+          {jp:"この説明書は、説明がとてもわかりやすいですね。", id:"Penjelasan pada buku petunjuk ini sangat mudah dipahami, ya."},
+          {jp:"この言葉は覚えやすいです。", id:"Kata ini mudah diingat."}
+        ]
+      },
+      {
+        pola: "V-ます形（ますを取る）＋にくいです",
+        romaji: "V-masu (masu dihilangkan) + nikui desu",
+        arti: "Sulit di-V",
+        catatan: "Contoh bentuk yang sering dipakai: わかりにくい (sulit dipahami), 見にくい (sulit dilihat), 書きにくい (sulit ditulis), 使いにくい (sulit digunakan), 壊れにくい (tidak mudah rusak).",
+        contoh: [
+          {jp:"この掃除機は、重くて、使いにくいですね。", id:"Vacuum cleaner ini berat dan sulit digunakan, ya."},
+          {jp:"この掃除機は、じょうぶで壊れにくいですよ。", id:"Vacuum cleaner ini kuat dan tidak mudah rusak, lho."},
+          {jp:"カニという料理は食べにくいよ。", id:"Masakan yang namanya kepiting itu sulit dimakan."}
+        ]
+      }
+    ]
+  },
+  {
+    buku: "a2",
+    tema: "Irodori A2 Bab 12",
+    judul: "N1とN2(と)、どちら／どっちが〜か？ (N1より)N2のほうが、〜 — Perbandingan Dua Benda",
+    sub: "Pola untuk membandingkan 2 benda. Di bab ini dipakai untuk membandingkan fitur, fungsi, maupun harga suatu produk. 「のほう」 pada 「N2のほうが〜」 mempertegas perbandingan. 「N1より」 menunjukkan objek pembandingnya, tapi bisa dilesapkan kalau dari konteks sudah jelas. Di Irodori 初級1 Bab 11 sudah dipelajari 「Nのほうがいい」; setelah 「ほうが」 bisa dipakai berbagai ungkapan lain.",
+    items: [
+      {
+        pola: "N1とN2(と)、どちら／どっちが〜か？",
+        romaji: "N1 to N2 (to), dochira / docchi ga ~ ka?",
+        arti: "Mana yang lebih ~, N1 atau N2?",
+        catatan: "「どっち」 lebih kasual daripada 「どちら」. Ungkapan berguna saat belanja: 使いやすい (mudah digunakan), 軽い (ringan), デザインがいい (modelnya bagus), 機能が多い (fitur/fungsinya banyak), 手入れが簡単 (perawatannya mudah), 壊れにくい (tidak mudah rusak).",
+        contoh: [
+          {jp:"どっちが使いやすいですか？", id:"Yang mana yang lebih mudah digunakan?"},
+          {jp:"冷蔵庫の色は、白とシルバーと、どっちが人気ですか？", id:"Untuk warna lemari es, warna manakah yang lebih populer? Warna putih atau silver?"},
+          {jp:"男性と女性と、どっちが話しやすいと思いますか。", id:"Menurutmu, laki-laki atau perempuan, mana yang lebih mudah diajak bicara?"}
+        ]
+      },
+      {
+        pola: "(N1より)N2のほうが、〜。",
+        romaji: "(N1 yori) N2 no hō ga, ~.",
+        arti: "N2 lebih ~ (daripada N1)",
+        catatan: "N2 adalah benda yang dipilih/lebih unggul, N1 adalah pembandingnya. 「N1より」 boleh dihilangkan kalau sudah jelas.",
+        contoh: [
+          {jp:"セーシバの掃除機のほうがスギシタより軽くて、動かしやすいですよ。", id:"Vacuum cleaner merek Seshiba lebih ringan dan lebih mudah digerakkan daripada vacuum cleaner merek Sugishita."},
+          {jp:"白のほうがよく売れています。でも、若い人には、白よりシルバーのほうが人気があります。", id:"Warna putih lebih banyak terjual. Tetapi, untuk kalangan anak muda, warna silver lebih populer daripada warna putih."},
+          {jp:"女性より男性のほうが話しやすいです。", id:"Laki-laki lebih mudah diajak bicara daripada perempuan."}
+        ]
+      },
+      {
+        pola: "どちらも／どっちも〜",
+        romaji: "dochira mo / docchi mo ~",
+        arti: "Keduanya ~",
+        catatan: "Dipakai untuk menjawab pertanyaan perbandingan kalau kedua benda sama saja.",
+        contoh: [
+          {jp:"MBGとKopdes、どちらが役に立たないと思いますか。　― どちらも役に立たないと思います。", id:"Menurutmu, mana yang lebih tidak berguna, MBG atau Kopdes? ― Menurut saya keduanya sama-sama tidak berguna."}
+        ]
+      }
+    ]
   }
 
 
