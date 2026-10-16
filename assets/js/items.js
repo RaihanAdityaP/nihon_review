@@ -40,7 +40,7 @@ function ktItems(cid) {
     profesi: 'Profesi & Pekerjaan',
     'ai-tek': 'AI & Teknologi', 'ai-pakai': 'AI & Pemakaian',
     negara: 'Negara & Bangsa', perkenalan: 'Perkenalan Diri', hobi: 'Hobi & Olahraga',
-    arah: 'Arah & Posisi', 'kelas-ex': 'Ekspresi di Kelas', sampah: 'Sampah & Lingkungan', 'laut-dalam': 'Laut Dalam', 'minecraft': 'Minecraft & Game'
+    arah: 'Arah & Posisi', 'kelas-ex': 'Ekspresi di Kelas', sampah: 'Sampah & Lingkungan', keigo: 'Bahasa Sopan & Kata Referensi (敬語・参考語彙)', 'laut-dalam': 'Laut Dalam', 'minecraft': 'Minecraft & Game'
   };
   const keys = Array.isArray(m[cid]) ? m[cid] : [m[cid]];
   let out = [];
@@ -92,12 +92,18 @@ function bukuItems(cid) {
   return out;
 }
 
+// peta teks pola -> bacaan furigana (diisi bunpouItems, dipakai quiz untuk menampilkan <ruby>)
+const FU_MAP = {};
+function rubyFromFu(fu) {
+  const esc = fu.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return esc.replace(/([\u4e00-\u9fff々ヶ]+(?:か[\u4e00-\u9fff]+)?)\[([^\]]+)\]/g, '<ruby>$1<rt>$2</rt></ruby>');
+}
 function bunpouItems(cid) {
   const tema = QCATS.find(c => c.id === cid && c.t === 'bunpou')?.tema;
   if (!tema || !Array.isArray(BUNPOU)) return [];
   let out = [];
   BUNPOU.filter(g => g.tema === tema).forEach(group => {
-    group.items.forEach(it => out.push({ kana: it.pola, romaji: it.romaji, arti: it.arti, type: 'bunpou' }));
+    group.items.forEach(it => { if (it.polaFu) FU_MAP[cleanKana(it.pola)] = it.polaFu; out.push({ kana: it.pola, romaji: it.romaji, arti: it.arti, type: 'bunpou' }); });
   });
   return out;
 }

@@ -56,6 +56,7 @@ const QCATS_STATIC = [
   { id: 'arah',        label: 'Arah & Posisi',         t: 'kotoba' },
   { id: 'kelas-ex',    label: 'Ekspresi di Kelas',     t: 'kotoba' },
   { id: 'sampah',      label: 'Sampah & Lingkungan',   t: 'kotoba' },
+  { id: 'keigo',       label: 'Bahasa Sopan & Referensi', t: 'kotoba' },
   { id: 'laut-dalam',  label: 'Laut Dalam',            t: 'kotoba' },
   { id: 'minecraft',   label: 'Minecraft & Game',      t: 'kotoba' },
   { id: 'counter',     label: 'Kata Bantu Bilangan',   t: 'counter' },
@@ -110,6 +111,12 @@ const QCATS_STATIC = [
   { id: 'buku-a2-bab10',    label: 'Irodori A2 — Bab 10', t: 'buku' },
   { id: 'buku-a2-bab11',    label: 'Irodori A2 — Bab 11', t: 'buku' },
   { id: 'buku-a2-bab12',    label: 'Irodori A2 — Bab 12', t: 'buku' },
+  { id: 'buku-a2-bab13',    label: 'Irodori A2 — Bab 13', t: 'buku' },
+  { id: 'buku-a2-bab14',    label: 'Irodori A2 — Bab 14', t: 'buku' },
+  { id: 'buku-a2-bab15',    label: 'Irodori A2 — Bab 15', t: 'buku' },
+  { id: 'buku-a2-bab16',    label: 'Irodori A2 — Bab 16', t: 'buku' },
+  { id: 'buku-a2-bab17',    label: 'Irodori A2 — Bab 17', t: 'buku' },
+  { id: 'buku-a2-bab18',    label: 'Irodori A2 — Bab 18', t: 'buku' },
 ];
 
 // Kategori Bunpou TIDAK di-hardcode di sini — otomatis di-generate dari

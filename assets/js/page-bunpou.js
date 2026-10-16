@@ -84,11 +84,11 @@ function renderBunpou() {
           <div class="particle-grid">
             ${resolvedItems.map(it => `
               <div class="pcard">
-                <div class="p-sym" style="font-size:1.15rem;font-family:'Noto Serif JP',serif">${it.pola}</div>
+                <div class="p-sym" style="font-size:1.15rem;font-family:'Noto Serif JP',serif">${it.polaFu ? it.polaFu.replace(FURI_RE, '<ruby>$1<rt>$2</rt></ruby>') : it.pola}</div>
                 <div class="p-rom">${it.romaji}</div>
                 <div class="p-name">${it.arti}</div>
                 ${it.catatan ? `<div class="p-desc">${it.catatan}</div>` : ''}
-                <div class="p-exs">${(it.contoh || []).map(e => `<div class="p-ex"><div class="p-ex-jp">${e.jp}</div><div class="p-ex-id">${e.id}</div></div>`).join('')}</div>
+                <div class="p-exs">${(it.contoh || []).map(e => `<div class="p-ex"><div class="p-ex-jp">${exJp(e)}</div><div class="p-ex-id">${e.id}</div></div>`).join('')}</div>
               </div>`).join('')}
           </div>
         </div>
@@ -126,3 +126,29 @@ function filterBunpou() {
   });
   finalizeHeader();
 }
+
+
+// ─── furigana ───
+// Kalimat contoh yang punya kanji menyimpan bacaan di field `fu`, formatnya 漢字[よみ].
+// Di sini diubah jadi <ruby>. Tombol ON/OFF cuma menyembunyikan <rt> lewat CSS (class furi-off),
+// jadi instan dan pilihannya disimpan di browser.
+const FURI_RE = /([\u4e00-\u9fff々ヶ]+(?:か[\u4e00-\u9fff]+)?)\[([^\]]+)\]/g;
+function exJp(e) {
+  return e.fu ? e.fu.replace(FURI_RE, '<ruby>$1<rt>$2</rt></ruby>') : e.jp;
+}
+function applyFuri(on) {
+  const c = document.getElementById('bunpouContent');
+  if (c) c.classList.toggle('furi-off', !on);
+  const b = document.getElementById('furiBtn');
+  if (b) { b.textContent = 'ふりがな ' + (on ? 'ON' : 'OFF'); b.classList.toggle('sel', on); }
+}
+function toggleFuri() {
+  const on = document.getElementById('bunpouContent').classList.contains('furi-off'); // sekarang OFF -> jadi ON
+  try { localStorage.setItem('nihon_furi', on ? '1' : '0'); } catch (e) {}
+  applyFuri(on);
+}
+(function initFuri() {
+  let on = true;
+  try { on = localStorage.getItem('nihon_furi') !== '0'; } catch (e) {}
+  applyFuri(on);
+})();

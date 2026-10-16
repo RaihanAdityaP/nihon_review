@@ -247,7 +247,7 @@ function renderQ() {
   document.getElementById('qtag').textContent  = q.tag;
 
   const pe = document.getElementById('qprompt');
-  pe.textContent = q.prompt;
+  if (typeof FU_MAP !== 'undefined' && FU_MAP[q.prompt]) pe.innerHTML = rubyFromFu(FU_MAP[q.prompt]); else pe.textContent = q.prompt;
   const l = q.prompt.length;
   pe.className = 'qprompt' + (l > 8 ? ' sm' : l > 4 ? ' md' : '');
 
@@ -276,7 +276,7 @@ function renderQ() {
   grid.style.gridTemplateColumns = maxL > 14 ? '1fr' : '1fr 1fr';
   grid.innerHTML = q.choices.map((c, i) => `
     <button class="choice" onclick="pickAns(${i})">
-      ${q.isKA ? `<span class="ck">${c}</span>` : c}
+      ${q.isKA ? `<span class="ck">${c}</span>` : (typeof FU_MAP !== 'undefined' && FU_MAP[c] ? rubyFromFu(FU_MAP[c]) : c)}
     </button>`).join('');
 }
 
@@ -382,4 +382,22 @@ CAT_CTX.qog = () => ({ set: SC, after: () => checkReady() });
     e.preventDefault();
     ANS ? nextQ() : submitTyped();
   });
+})();
+
+
+// tombol furigana (pilihan dibagi dengan halaman Bunpou lewat localStorage 'nihon_furi')
+function applyFuriQ(on) {
+  document.body.classList.toggle('furi-off', !on);
+  const b = document.getElementById('furiQBtn');
+  if (b) { b.textContent = 'ふりがな ' + (on ? 'ON' : 'OFF'); b.classList.toggle('sel', on); }
+}
+function toggleFuriQ() {
+  const on = document.body.classList.contains('furi-off');
+  try { localStorage.setItem('nihon_furi', on ? '1' : '0'); } catch (e) {}
+  applyFuriQ(on);
+}
+(function () {
+  let on = true;
+  try { on = localStorage.getItem('nihon_furi') !== '0'; } catch (e) {}
+  applyFuriQ(on);
 })();
