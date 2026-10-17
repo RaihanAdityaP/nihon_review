@@ -79,7 +79,7 @@ function kerjaItems(cid) {
 }
 
 function bukuItems(cid) {
-  // Format lama: "buku-bab1" (buku utama/minna). Format baru: "buku-<bookKey>-bab1" (buku lain, mis. irodori/a2).
+  // Format lama: "buku-bab1" (buku modul/minna). Format baru: "buku-<bookKey>-bab1" (buku lain, mis. irodori/a2).
   const mOther = /^buku-([a-z0-9]+)-(bab\d+)$/.exec(cid || '');
   const bookKey = mOther ? mOther[1] : 'minna';
   const babKey = mOther ? mOther[2] : (/^buku-(bab\d+)$/.exec(cid || '') || [])[1];

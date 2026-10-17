@@ -6,8 +6,14 @@
 // buku diambil dari BOOKS yang sama dengan menu Buku, data.js) ───
 // 'all' = tab "Semua": gabungan semua buku, tiap tema diberi awalan nama bukunya.
 let currentBunpouBook = 'all';
+// Tab "Bunpou Tambahan": menu sendiri di luar buku modul & Irodori (bukan entri BOOKS).
+const BUNPOU_TAMBAHAN = { key: 'tambahan', label: 'Bunpou Tambahan' };
+function bunpouBookLabel(key) {
+  if (key === BUNPOU_TAMBAHAN.key) return BUNPOU_TAMBAHAN.label;
+  return BOOKS[key] ? BOOKS[key].label : key;
+}
 function switchBunpouBook(bookKey, btn) {
-  if (bookKey !== 'all' && !BOOKS[bookKey]) return;
+  if (bookKey !== 'all' && bookKey !== BUNPOU_TAMBAHAN.key && !BOOKS[bookKey]) return;
   currentBunpouBook = bookKey;
   document.querySelectorAll('#bunpouBookTabs .cat-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
@@ -17,7 +23,7 @@ function switchBunpouBook(bookKey, btn) {
 function renderBunpouBookTabs() {
   const el = document.getElementById('bunpouBookTabs');
   if (!el) return;
-  const tabs = [['all', 'Semua'], ...Object.entries(BOOKS).map(([key, b]) => [key, b.label])];
+  const tabs = [['all', 'Semua'], ...Object.entries(BOOKS).map(([key, b]) => [key, b.label]), [BUNPOU_TAMBAHAN.key, BUNPOU_TAMBAHAN.label]];
   el.innerHTML = tabs.map(([key, label]) => `
     <button class="cat-btn${key === currentBunpouBook ? ' active' : ''}" onclick="switchBunpouBook('${key}', this)">${label}</button>
   `).join('');
@@ -43,7 +49,7 @@ function renderBunpou() {
   // `buku`-nya cocok sama tab aktif (atau semuanya kalau tab "Semua"). Entri lama
   // tanpa field `buku` dianggap 'minna'.
   const isAll = currentBunpouBook === 'all';
-  const bookKeys = Object.keys(BOOKS);
+  const bookKeys = [...Object.keys(BOOKS), BUNPOU_TAMBAHAN.key];
   const bookOf = g => g.buku || 'minna';
   const byTema = {};
   const temaOrder = [];
@@ -55,15 +61,15 @@ function renderBunpou() {
     const key = isAll ? bookOf(group) + '||' + t : t;
     if (!byTema[key]) {
       byTema[key] = []; temaOrder.push(key);
-      const bookLabel = BOOKS[bookOf(group)] ? BOOKS[bookOf(group)].label : bookOf(group);
+      const bookLabel = bunpouBookLabel(bookOf(group));
       meta[key] = { bookIdx, tema: t, label: (isAll && !t.startsWith(bookLabel)) ? bookLabel + ' · ' + t : t };
     }
     byTema[key].push(group);
   });
-  // Urutan: per buku (sesuai urutan tab), dan "Materi Tambahan" selalu paling akhir di tiap buku.
+  // Urutan: per buku (sesuai urutan tab); "Bunpou Tambahan" punya tab sendiri di paling akhir.
   // sort() di JS stabil, jadi urutan alami array tetap terjaga di antara tema lain.
   temaOrder.sort((a, b) => (meta[a].bookIdx - meta[b].bookIdx) ||
-    ((meta[a].tema === 'Materi Tambahan') - (meta[b].tema === 'Materi Tambahan')));
+    0);
 
   let html = '';
   temaOrder.forEach(tema => {

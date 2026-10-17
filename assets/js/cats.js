@@ -126,7 +126,7 @@ function slugifyTema(tema) {
   const t = String(tema).trim();
   const mHari = /^Hari\s+(\d+)$/i.exec(t);
   if (mHari) return 'hari' + mHari[1];
-  if (/^Materi Tambahan$/i.test(t)) return 'tambahan';
+  if (/^(Materi|Bunpou) Tambahan$/i.test(t)) return 'tambahan';
   const s = t.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '');
   return s || 'x';
 }

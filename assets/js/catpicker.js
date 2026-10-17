@@ -18,7 +18,7 @@ function catGroup(c) {
   if (c.t === 'buku') {
     if (c.id.startsWith('buku-irodori-')) return { g: 'kotoba', sub: 'Kyoukasho — Irodori' };
     if (c.id.startsWith('buku-a2-'))      return { g: 'kotoba', sub: 'Kyoukasho — Irodori A2' };
-    return { g: 'kotoba', sub: 'Kyoukasho — Buku Utama' };
+    return { g: 'kotoba', sub: 'Kyoukasho — Buku Modul' };
   }
   if (c.t === 'counter' || c.t === 'sifat' || c.t === 'kerja') return { g: 'kotoba', sub: 'Kata Bilangan, Sifat & Kerja' };
   return { g: 'kotoba', sub: 'Kotoba Tematik' };

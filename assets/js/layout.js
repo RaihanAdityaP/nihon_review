@@ -39,7 +39,7 @@ var PAGES = [
   "slug": "buku",
   "label": "教科書",
   "title": "Buku",
-  "desc": "Kotoba per bab dari buku utama dan Irodori.",
+  "desc": "Kotoba per bab dari buku modul dan Irodori.",
   "group": "materi"
  },
  {

@@ -210,7 +210,7 @@ main{position:relative;z-index:1;padding:1.5rem 1.25rem 3rem;max-width:920px;mar
 .qpb{height:3px;background:var(--bg4);margin-bottom:1.5rem;overflow:hidden}
 .qpf{height:100%;background:var(--accent);transition:width .35s ease}
 .qmeta{display:flex;justify-content:space-between;margin-bottom:1.3rem;font-family:var(--font-mono);font-size:.72rem;color:var(--text3)}
-.qcard{position:relative;background-color:var(--bg2);background-image:repeating-linear-gradient(var(--border) 0 1px, transparent 1px 32px),repeating-linear-gradient(90deg, var(--border) 0 1px, transparent 1px 32px);background-size:32px 32px;background-position:center;border:1.5px solid var(--border2);padding:2.2rem 1.6rem;text-align:center;margin-bottom:1.2rem}
+.qcard{position:relative;background-color:var(--bg2);background-image:none;border:1.5px solid var(--border2);padding:2.2rem 1.6rem;text-align:center;margin-bottom:1.2rem}
 .qtag{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin-bottom:1rem}
 .qprompt{font-family:var(--font-display);font-weight:700;font-size:clamp(1.85rem,3.2vw,2.3rem);color:var(--text);line-height:1.35;margin-bottom:.3rem}
 .qprompt.sm{font-size:clamp(1rem,1.6vw,1.2rem);font-family:var(--font-body);font-weight:400}
@@ -607,3 +607,39 @@ body.chat-open header{backdrop-filter:none;-webkit-backdrop-filter:none;backgrou
 .p-ex-jp{line-height:1.9}
 .furi-off rt{display:none}
 .furi-off .p-ex-jp{line-height:1.5}
+
+
+/* ── quiz: tampilan lebih hidup ── */
+.qcard::before{content:'';position:absolute;left:0;top:0;width:100%;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.qcard.qin{animation:qIn .32s ease both}
+.choices.qin .choice{animation:qRise .3s ease both}
+.choices.qin .choice:nth-child(2){animation-delay:.05s}
+.choices.qin .choice:nth-child(3){animation-delay:.1s}
+.choices.qin .choice:nth-child(4){animation-delay:.15s}
+.choices{counter-reset:ch}
+.choice::before{counter-increment:ch;content:counter(ch,upper-alpha);position:absolute;top:.4rem;right:.6rem;font-family:var(--font-mono);font-size:.58rem;color:var(--text3);opacity:.7}
+.choice:active:not(:disabled){transform:scale(.97)}
+.choice.correct{animation:qPulse .4s ease}
+.choice.wrong{animation:qShake .38s ease}
+.qfb.qfbin{animation:qRise .25s ease both}
+.qhud{display:flex;justify-content:space-between;align-items:center;min-height:1.9rem;margin:-.7rem 0 .9rem}
+.qstreak{display:none;align-items:baseline;gap:.35rem;padding:.22rem .75rem;border-radius:999px;font-family:var(--font-mono);font-size:.82rem;font-weight:700;color:#fff;background:var(--accent2)}
+.qstreak b{font-family:var(--font-display);letter-spacing:.04em}
+.qstreak small{font-size:.54rem;opacity:.85;letter-spacing:.1em;text-transform:uppercase}
+.qstreak.l2{background:var(--accent4)}
+.qstreak.l3{background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
+.qstreak.pop{animation:qPop .45s ease}
+.qlives{display:none;gap:.2rem;margin-left:auto}
+.heart{color:var(--red);font-size:1.1rem;line-height:1;display:inline-block}
+.heart.lost{color:var(--text3);opacity:.6}
+.heart.break{animation:qBreak .55s ease}
+#quizResult{position:relative;overflow:hidden}
+.cf{position:absolute;top:-14px;width:7px;height:11px;opacity:.95;animation:cFall 1.9s ease-in forwards;pointer-events:none}
+@keyframes qIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes qRise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes qShake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(3px)}}
+@keyframes qPulse{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
+@keyframes qPop{0%{transform:scale(.6)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
+@keyframes qBreak{0%{transform:scale(1.5);color:var(--text3)}100%{transform:scale(1)}}
+@keyframes cFall{to{transform:translate(var(--dx),430px) rotate(560deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){.qcard.qin,.choices.qin .choice,.choice.correct,.choice.wrong,.qfb.qfbin,.qstreak.pop,.heart.break,.cf{animation:none!important}}

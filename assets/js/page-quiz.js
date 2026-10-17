@@ -69,13 +69,25 @@ function setQCountCustom(input) {
   QN = Math.min(v, 500);
 }
 
+// Kategori kecil (mis. satu bab bunpou hanya 2-3 pola) tetap bisa dimainkan: kalau item terpilih sedikit,
+// pilihan jawaban pengecoh diambil dari semua kategori lain dengan jenis yang sama.
+function poolFor(base) {
+  if (base.length >= 12) return base;
+  const types = new Set(QCATS.filter(c => SC.has(c.id)).map(c => c.t));
+  const seen = new Set(base.map(x => x.type + '|' + x.kana));
+  const extra = getAllItems(new Set(QCATS.filter(c => types.has(c.t)).map(c => c.id)))
+    .filter(x => !seen.has(x.type + '|' + x.kana));
+  return base.concat(extra);
+}
+
 function checkReady() {
-  const hasItems = getAllItems(SC).length >= 4;
+  const base = getAllItems(SC);
+  const hasItems = base.length >= 1 && poolFor(base).length >= 4;
   const hasTypes = effTypes().length > 0;
   const ok = hasItems && hasTypes;
   document.getElementById('startBtn').disabled = !ok;
   const warn = document.getElementById('qwarn');
-  if (!hasItems)      { warn.style.display = 'block'; warn.textContent = 'Pilih minimal satu kategori (butuh 4+ item).'; }
+  if (!hasItems)      { warn.style.display = 'block'; warn.textContent = 'Pilih minimal satu kategori.'; }
   else if (!hasTypes) { warn.style.display = 'block'; warn.textContent = 'Pilih minimal satu tipe quiz.'; }
   else                { warn.style.display = 'none'; }
 }
@@ -218,10 +230,12 @@ function startQuiz() {
   const ordered = QM === 'urut';
   // mode urut: kategori diurutkan sesuai daftar (bukan urutan klik), soal diambil dari awal ke akhir
   const all = getAllItems(ordered ? new Set(QCATS.filter(c => SC.has(c.id)).map(c => c.id)) : SC);
-  if (all.length < 4) return;
+  if (all.length < 1) return;
+  const pool = poolFor(all);
+  if (pool.length < 4) return;
   const n = QN === 999 ? all.length : Math.min(QN, all.length);
   const picked = ordered ? all.slice(0, n) : shuf(all).slice(0, n);
-  QS = picked.map(x => buildQ(x, all)).filter(Boolean);
+  QS = picked.map(x => buildQ(x, pool)).filter(Boolean);
   if (!QS.length) return;
   CQ = 0; CC = 0; CW = 0; distractorCount = {};
   LIVES = LIVES_CFG; LIVES_ON = LIVES_CFG > 0; STREAK = 0; BEST = 0; GO = false; LASTRES = null;
@@ -231,12 +245,33 @@ function startQuiz() {
   renderQ();
 }
 
-function metaText() {
-  let t = `✓ ${CC}  ✗ ${CW}`;
-  if (LIVES_ON) t += '  ' + '♥'.repeat(Math.max(LIVES, 0)) + '♡'.repeat(LIVES_CFG - Math.max(LIVES, 0));
-  if (STREAK >= 2) t += `  streak ${STREAK}`;
-  return t;
+function metaText() { return `✓ ${CC}  ✗ ${CW}`; }
+
+// HUD: pil streak (berubah warna & "pop" tiap naik) dan deretan nyawa (hati pecah saat salah)
+function updateHud(anim) {
+  const st = document.getElementById('qstreak'), lv = document.getElementById('qlives');
+  if (!st || !lv) return;
+  if (STREAK >= 2) {
+    st.style.display = 'inline-flex';
+    st.className = 'qstreak ' + (STREAK >= 10 ? 'l3' : STREAK >= 5 ? 'l2' : 'l1');
+    st.innerHTML = '<b>連続</b>' + STREAK + '<small>streak</small>';
+    if (anim) { void st.offsetWidth; st.classList.add('pop'); }
+  } else st.style.display = 'none';
+  if (LIVES_ON) {
+    lv.style.display = 'inline-flex';
+    let hs = '';
+    for (let i = 0; i < LIVES_CFG; i++) {
+      const alive = i < LIVES;
+      const brk = anim && LASTRES && LASTRES.lifeLost && i === LIVES;
+      hs += `<span class="heart${alive ? '' : ' lost'}${brk ? ' break' : ''}">${alive ? '♥' : '♡'}</span>`;
+    }
+    lv.innerHTML = hs;
+  } else lv.style.display = 'none';
 }
+function buzz(p) { try { if (navigator.vibrate) navigator.vibrate(p); } catch (e) {} }
+const OK_MSG = ['Benar！', 'Tepat！', 'Mantap！', 'いいね！', 'その調子！'];
+const MILESTONE = { 3: '3連続！ Mulai panas', 5: '5連続！ Hebat banget', 7: '7連続！ Gak ketahan', 10: '10連続！ Luar biasa！', 15: '15連続！ Dewa', 20: '20連続！ Legenda' };
+function replay(el, cls) { if (!el) return; el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
 
 function renderQ() {
   ANS = false;
@@ -244,6 +279,8 @@ function renderQ() {
   document.getElementById('qpf').style.width  = `${(CQ / tot) * 100}%`;
   document.getElementById('qctr').textContent  = `${CQ + 1} / ${tot}`;
   document.getElementById('qsc').textContent   = metaText();
+  updateHud(false);
+  replay(document.querySelector('.qcard'), 'qin');
   document.getElementById('qtag').textContent  = q.tag;
 
   const pe = document.getElementById('qprompt');
@@ -274,6 +311,7 @@ function renderQ() {
   grid.style.display = '';
   const maxL = Math.max(...q.choices.map(c => c.length));
   grid.style.gridTemplateColumns = maxL > 14 ? '1fr' : '1fr 1fr';
+  replay(grid, 'qin');
   grid.innerHTML = q.choices.map((c, i) => `
     <button class="choice" onclick="pickAns(${i})">
       ${q.isKA ? `<span class="ck">${c}</span>` : (typeof FU_MAP !== 'undefined' && FU_MAP[c] ? rubyFromFu(FU_MAP[c]) : c)}
@@ -291,9 +329,12 @@ function applyResult(ok, ansText) {
   }
   const fb = document.getElementById('qfb');
   fb.style.display = 'block';
-  if (ok) { fb.className = 'qfb ok'; fb.textContent = '✓ Benar！' + (STREAK >= 3 ? `  Streak ×${STREAK}` : ''); }
+  if (ok) { fb.className = 'qfb ok'; fb.textContent = '✓ ' + (MILESTONE[STREAK] || OK_MSG[Math.floor(Math.random() * OK_MSG.length)]); }
   else    { fb.className = 'qfb ng'; fb.textContent = `✗ Salah — jawaban: ${ansText}` + (GO ? '  · Nyawa habis' : ''); }
   document.getElementById('qsc').textContent = metaText();
+  updateHud(true);
+  buzz(ok ? 15 : [70, 40, 70]);
+  replay(fb, 'qfbin');
   const nb = document.getElementById('nxtBtn');
   nb.style.display = 'block';
   nb.textContent = (GO || CQ + 1 >= QS.length) ? 'Lihat Hasil →' : 'Lanjut →';
@@ -333,9 +374,10 @@ function overrideCorrect() {
   LASTRES = { ok: true, prevStreak: LASTRES.prevStreak, lifeLost: false };
   const fb = document.getElementById('qfb');
   fb.className = 'qfb ok';
-  fb.textContent = '✓ Dihitung benar' + (STREAK >= 3 ? `  Streak ×${STREAK}` : '');
+  fb.textContent = '✓ Dihitung benar' + (MILESTONE[STREAK] ? '  ' + MILESTONE[STREAK] : '');
   document.getElementById('ovrBtn').style.display = 'none';
   document.getElementById('qsc').textContent = metaText();
+  updateHud(true);
   document.getElementById('nxtBtn').textContent = (CQ + 1 >= QS.length) ? 'Lihat Hasil →' : 'Lanjut →';
 }
 
@@ -351,7 +393,8 @@ function showResult() {
   const answered = Math.max(CC + CW, 1);
   const pct = Math.round((CC / answered) * 100);
   document.getElementById('rTitle').textContent = GO ? 'Nyawa Habis！' : 'Selesai！';
-  document.getElementById('rScore').textContent = pct + '%';
+  countUp(document.getElementById('rScore'), pct);
+  if (pct >= 80) confetti();
   const msgs = ['頑張れ！Terus semangat！','もう少し！Hampir bagus！','いいね！Lumayan！','上手！Bagus banget！','完璧！Sempurna！'];
   document.getElementById('rSub').textContent = msgs[pct === 100 ? 4 : pct >= 80 ? 3 : pct >= 60 ? 2 : pct >= 40 ? 1 : 0];
   document.getElementById('rC').textContent = CC;
@@ -401,3 +444,39 @@ function toggleFuriQ() {
   try { on = localStorage.getItem('nihon_furi') !== '0'; } catch (e) {}
   applyFuriQ(on);
 })();
+
+
+// ── layar hasil: skor naik pelan, konfeti kalau >= 80% ──
+function countUp(el, to) {
+  let t0 = null;
+  (function f(ts) {
+    if (!t0) t0 = ts;
+    const p = Math.min((ts - t0) / 700, 1);
+    el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))) + '%';
+    if (p < 1) requestAnimationFrame(f);
+  })(performance.now());
+}
+function confetti() {
+  const box = document.getElementById('quizResult');
+  const cols = ['var(--accent)', 'var(--accent2)', 'var(--accent3)', 'var(--accent4)'];
+  for (let i = 0; i < 30; i++) {
+    const c = document.createElement('i');
+    c.className = 'cf';
+    c.style.left = (Math.random() * 100) + '%';
+    c.style.background = cols[i % 4];
+    c.style.animationDelay = (Math.random() * 0.5) + 's';
+    c.style.setProperty('--dx', (Math.random() * 140 - 70) + 'px');
+    box.appendChild(c);
+    setTimeout(() => c.remove(), 2600);
+  }
+}
+
+// pintasan keyboard (desktop): 1-4 pilih jawaban, Enter / spasi lanjut
+document.addEventListener('keydown', e => {
+  if (document.getElementById('quizActive').style.display !== 'block') return;
+  if (e.target && e.target.tagName === 'INPUT') return;
+  if (/^[1-4]$/.test(e.key) && !ANS) {
+    const b = document.querySelectorAll('#choicesEl .choice')[+e.key - 1];
+    if (b) b.click();
+  } else if ((e.key === 'Enter' || e.key === ' ') && ANS) { e.preventDefault(); nextQ(); }
+});
