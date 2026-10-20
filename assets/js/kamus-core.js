@@ -45,8 +45,22 @@ function buildKamusIndex() {
   [{ l: 'Kotoba', d: KT }, { l: 'Kata Kerja', d: KATA_KERJA }, { l: 'Kata Sifat', d: KATA_SIFAT }, { l: 'Counter', d: COUNTER }].forEach(src => {
     Object.entries(src.d).forEach(([group, g]) => {
       g.rows.forEach(r => {
-        const jishokei = src.l === 'Kata Kerja' ? toJishokei(r.k, r.kj, group) : null;
-        KAMUS_ALL.push({ source: src.l, group, kana: r.k, romaji: r.r, kanji: r.kj || '', arti: r.a, note: r.n || '', jishokei, type: r.type || null });
+        if (src.l === 'Kata Kerja') {
+          // Kata Kerja SELALU ditampilkan dalam bentuk kamus (辞書形); bentuk ます disimpan di `masu`.
+          const gn = vbEffectiveGroup(r.k, vbGroupNum(group));
+          const kkGroup = gn ? 'Kata Kerja - Kelompok ' + VB_ROMAN[gn] : group;
+          const jisho = vbToJisho(r.k, r.kj, r.r, gn);
+          KAMUS_ALL.push({
+            source: 'Kata Kerja', group: kkGroup, src: 'Materi', kk: gn,
+            kana: jisho ? jisho.kana : r.k, romaji: jisho ? jisho.romaji : r.r, kanji: jisho ? jisho.kanji : (r.kj || ''),
+            arti: r.a, note: r.n || '',
+            masu: jisho ? { kana: r.k.split('／')[0], kanji: (r.kj || '').split('／')[0], romaji: (r.r || '').split('／')[0] } : null,
+            type: vbType(jisho ? jisho.kana : r.k, r.type),
+            lvKeys: [{ k: r.k, r: r.r }].concat(jisho ? [{ k: jisho.kana, r: jisho.romaji }] : [])
+          });
+          return;
+        }
+        KAMUS_ALL.push({ source: src.l, group, src: 'Materi', kana: r.k, romaji: r.r, kanji: r.kj || '', arti: r.a, note: r.n || '', type: null });
       });
     });
   });
@@ -56,15 +70,33 @@ function buildKamusIndex() {
   const kotobaSeen = new Set(
     Object.values(KT).flatMap(g => g.rows.map(r => kamusNormK(r.k) + '|' + kamusNormR(r.r)))
   );
-  Object.values(BOOKS).forEach(book => {
+  // Kata kerja di Buku (tanda [1]/[2]/[3] atau daftar MINNA_VERBS) otomatis masuk ke tab Kata Kerja,
+  // bukan ke Kotoba. Kalau bentuk ます-nya sudah ada di KATA_KERJA, yang dipakai tetap versi KATA_KERJA.
+  Object.entries(BOOKS).forEach(([bookKey, book]) => {
     Object.entries(book.data).forEach(([babKey, babData], babIdx) => {
       Object.entries(babData).forEach(([group, g]) => {
         g.rows.forEach(r => {
+          const bv = bookVerbOf(r, bookKey);
+          if (bv) {
+            if (vbKKSet().has(bv.masu.kana)) return;
+            const vKey = 'kk|' + bv.masu.kana;
+            if (kotobaSeen.has(vKey)) return;
+            kotobaSeen.add(vKey);
+            const rv = resolveEntry(r);
+            KAMUS_ALL.push({
+              source: 'Kata Kerja', group: 'Kata Kerja - Kelompok ' + VB_ROMAN[bv.g], src: book.label, kk: bv.g,
+              kana: bv.jisho.kana, romaji: bv.jisho.romaji, kanji: bv.jisho.kanji || '',
+              arti: bv.arti || rv.a, note: rv.n, masu: bv.masu, type: bv.type,
+              lvKeys: [{ k: r.k, r: r.r }, { k: bv.masu.kana, r: bv.masu.romaji }, { k: bv.jisho.kana, r: bv.jisho.romaji }]
+            });
+            return;
+          }
+          if (/ます$/.test(r.k) && vbKKSet().has(r.k)) return;   // sudah ada di Kata Kerja
           const dedupeKey = kamusNormK(r.k) + '|' + kamusNormR(r.r);
           if (kotobaSeen.has(dedupeKey)) return;
           kotobaSeen.add(dedupeKey);
           const resolved = resolveEntry(r);
-          KAMUS_ALL.push({ source: 'Kotoba', group: `${book.label} · Bab ${babIdx + 1} · ${group}`, kana: r.k, romaji: r.r, kanji: resolved.kj, arti: resolved.a, note: resolved.n });
+          KAMUS_ALL.push({ source: 'Kotoba', src: book.label, group: `${book.label} · Bab ${babIdx + 1} · ${group}`, kana: r.k, romaji: r.r, kanji: resolved.kj, arti: resolved.a, note: resolved.n });
         });
       });
     });
@@ -76,7 +108,7 @@ function buildKamusIndex() {
   if (typeof jlptLevelOf === 'function') {
     KAMUS_ALL.forEach(w => {
       if (w.source === 'Kotoba' || w.source === 'Kata Kerja' || w.source === 'Kata Sifat' || w.source === 'Counter') {
-        w.lv = jlptLevelOf({ k: w.kana, r: w.romaji });
+        w.lv = w.lvKeys ? (w.lvKeys.map(k => jlptLevelOf(k)).find(Boolean) || null) : jlptLevelOf({ k: w.kana, r: w.romaji });
       }
     });
   }
@@ -99,19 +131,21 @@ function kamusItemsHtml(items) {
     const idx = KAMUS_ALL.indexOf(w);
     const key = kamusNormK(w.kana) + '|' + kamusNormR(w.romaji);
     const hasMirip = KAMUS_HOMOFON.has(key) && KAMUS_HOMOFON.get(key).length > 1;
-    const boxSrc = w.jishokei ? (w.jishokei.kanji || w.jishokei.kana) : w.kanji;
+    const boxSrc = w.kanji;
     const boxText = boxSrc ? (boxSrc.length > 2 ? boxSrc.slice(0, 2) : boxSrc) : w.kana.slice(0, 2);
     if (w.group && w.group !== lastGroup) {
       html += `<div class="sec-header-bunpou">${w.group}</div>`;
       lastGroup = w.group;
     }
-    const typeBadge = w.type ? `<span class="kcat" style="margin-left:.35rem">${w.type === 'jidoushi' ? '自動詞' : '他動詞'}</span>` : '';
+    const typeBadge = w.type ? `<span class="kcat" style="margin-left:.35rem">${vbTypeBadge(w.type)}</span>` : '';
+    const srcBadge = (w.src && w.src !== 'Materi') ? `<span class="kcat" style="margin-left:.35rem">${w.src}</span>` : '';
+    const kkBadge = w.kk ? `<span class="kcat" style="margin-left:.35rem">KK ${VB_ROMAN[w.kk]}</span>` : '';
     html += `<div class="kamus-item" data-i="${idx}">
       <div class="kbox">${boxText}</div>
       <div class="kinfo">
-        <div class="ktag"><span class="kcat">${w.source.toUpperCase()}</span>${typeBadge}${w.lv !== undefined && typeof lvBadge === 'function' ? lvBadge(w.lv) : ''}</div>
+        <div class="ktag"><span class="kcat">${w.source.toUpperCase()}</span>${kkBadge}${typeBadge}${srcBadge}${w.lv !== undefined && typeof lvBadge === 'function' ? lvBadge(w.lv) : ''}</div>
         <div class="ktitle">${w.arti}</div>
-        <div class="ksub">${w.jishokei ? (w.jishokei.kanji || w.jishokei.kana) + ' ・ ' : ''}${w.kana}${w.romaji && w.source !== 'Hiragana' && w.source !== 'Katakana' ? ' • ' + w.romaji : ''}</div>
+        <div class="ksub">${w.source === 'Kata Kerja' && w.kanji ? w.kanji + ' ・ ' : ''}${w.kana}${w.romaji && w.source !== 'Hiragana' && w.source !== 'Katakana' ? ' • ' + w.romaji : ''}</div>
       </div>
       ${hasMirip ? '<div class="kamus-mirip">MIRIP</div>' : ''}
     </div>`;

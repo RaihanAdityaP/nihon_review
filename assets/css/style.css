@@ -643,3 +643,29 @@ body.chat-open header{backdrop-filter:none;-webkit-backdrop-filter:none;backgrou
 @keyframes qBreak{0%{transform:scale(1.5);color:var(--text3)}100%{transform:scale(1)}}
 @keyframes cFall{to{transform:translate(var(--dx),430px) rotate(560deg);opacity:0}}
 @media(prefers-reduced-motion:reduce){.qcard.qin,.choices.qin .choice,.choice.correct,.choice.wrong,.qfb.qfbin,.qstreak.pop,.heart.break,.cf{animation:none!important}}
+
+/* ── Filter: tombol burger + panel (Materi, Buku) ── */
+.fbar{display:flex;align-items:center;gap:.5rem;margin:.2rem 0 .8rem}
+.fbar-toggle{flex-shrink:0;display:flex;align-items:center;gap:.5rem;background:var(--bg2);border:1px solid var(--border);color:var(--text);font-family:var(--font-mono);font-size:.74rem;letter-spacing:.04em;padding:.5rem .8rem;border-radius:6px;cursor:pointer}
+.fbar-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.fbar-burger{display:inline-flex;flex-direction:column;gap:3px}
+.fbar-burger i{display:block;width:15px;height:2px;background:currentColor;border-radius:1px}
+.fbar-badge{background:var(--accent);color:#fff;border-radius:99px;font-size:.62rem;min-width:1.15rem;height:1.15rem;display:inline-flex;align-items:center;justify-content:center;padding:0 .3rem}
+.fbar-tags{display:flex;gap:.35rem;overflow-x:auto;scrollbar-width:none;flex:1}
+.fbar-tags::-webkit-scrollbar{display:none}
+.fbar-tag{flex-shrink:0;background:var(--bg3);border:1px solid var(--accent);color:var(--accent);font-family:var(--font-mono);font-size:.68rem;padding:.3rem .6rem;border-radius:99px;cursor:pointer;white-space:nowrap}
+.fsheet-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;display:none;align-items:flex-end;justify-content:center}
+.fsheet-overlay.show{display:flex}
+.fsheet{background:var(--bg);width:100%;max-width:560px;max-height:82vh;display:flex;flex-direction:column;border-radius:16px 16px 0 0;border:1px solid var(--border);border-bottom:none}
+.fsheet-head{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem .6rem;font-family:var(--font-display,inherit);font-size:1.05rem;font-weight:700}
+.fsheet-x{background:none;border:none;color:var(--text3);font-size:1rem;cursor:pointer;padding:.2rem .4rem}
+.fsheet-body{overflow-y:auto;padding:0 1.2rem .6rem}
+.fsheet-group{margin-bottom:.9rem}
+.fsheet-label{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:.4rem}
+.fsheet-chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.fsheet-foot{display:flex;gap:.6rem;padding:.8rem 1.2rem calc(.8rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--border)}
+.fsheet-reset{background:none;border:1px solid var(--border);color:var(--text3);font-family:var(--font-mono);font-size:.74rem;padding:.65rem 1rem;border-radius:6px;cursor:pointer}
+.fsheet-ok{flex:1;background:var(--accent);border:none;color:#fff;font-family:var(--font-mono);font-size:.76rem;padding:.65rem 1rem;border-radius:6px;cursor:pointer}
+
+/* romaji di bawah kalimat contoh (Bunpou) */
+.p-ex-rom{font-family:var(--font-mono);font-size:.74rem;font-style:italic;color:var(--text3);margin:.15rem 0 .1rem;line-height:1.5}

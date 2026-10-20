@@ -40,7 +40,7 @@ function ktItems(cid) {
     profesi: 'Profesi & Pekerjaan',
     'ai-tek': 'AI & Teknologi', 'ai-pakai': 'AI & Pemakaian',
     negara: 'Negara & Bangsa', perkenalan: 'Perkenalan Diri', hobi: 'Hobi & Olahraga',
-    arah: 'Arah & Posisi', 'kelas-ex': 'Ekspresi di Kelas', sampah: 'Sampah & Lingkungan', keigo: 'Bahasa Sopan & Kata Referensi (敬語・参考語彙)', 'laut-dalam': 'Laut Dalam', 'minecraft': 'Minecraft & Game'
+    arah: 'Arah & Posisi', 'kelas-ex': 'Ekspresi di Kelas', sampah: 'Sampah & Lingkungan', keigo: 'Bahasa Sopan & Kata Referensi (敬語・参考語彙)', 'laut-dalam': 'Laut Dalam', 'minecraft': 'Minecraft & Game', 'jam-waktu': 'Jam & Waktu', 'musik-streaming': 'Musik & Streaming', bencana: 'Bencana & Kecelakaan', percaya: 'Kepercayaan & Takhayul', foto: 'Fotografi & Media Sosial', cuaca: 'Cuaca & Suhu', sehat: 'Kesehatan & Sakit', pakaian: 'Pakaian & Aksesoris', agama: 'Agama & Sosial', hiburan: 'Hiburan & Acara', 'tata-bhs': 'Istilah Tata Bahasa', simbol: 'Simbol & Tanda', 'slang': 'Slang & Bahasa Anak Muda'
   };
   const keys = Array.isArray(m[cid]) ? m[cid] : [m[cid]];
   let out = [];

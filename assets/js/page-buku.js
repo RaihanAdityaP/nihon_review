@@ -80,7 +80,7 @@ function renderBukuBab(babKey, elId, bookKey) {
           </tr></thead>
           <tbody>${resolved.map(row => `<tr>
             ${hasKanji ? `<td class="td-kanji">${row.kj || ''}</td>` : ''}
-            <td class="td-kana" style="font-size:.9rem">${row.k}</td>
+            <td class="td-kana" style="font-size:.9rem">${row.k}${(() => { const bv = bookVerbOf(row, bookKey); return bv && bv.type ? ` <span class="kcat" style="margin-left:.3rem">${vbTypeBadge(bv.type)}</span>` : ''; })()}</td>
             <td class="td-roma">${row.r}</td>
             <td class="td-arti">${row.a}</td>
             <td class="td-lv">${lvBadge(jlptLevelOf(row))}</td>
@@ -152,7 +152,30 @@ function renderBabList() {
   });
 }
 
-// ─── search kosakata lintas semua bab di halaman Buku (+ filter level JLPT) ───
+// ─── tombol filter Buku: jenis kata kerja (自動詞/他動詞) + level JLPT ───
+// Dibaca dari verb-types.js; data Buku sendiri tidak diubah. Kata kerja di sini otomatis ikut ke menu Kata Kerja & Materi.
+let bukuFilter = null;
+function initBukuFilters() {
+  bukuFilter = createFilterBar(document.getElementById('bukuFilters'), [
+    { id: 'jenis', label: 'Jenis', options: [['verb', 'Kata kerja'], ['jidoushi', '自動詞 Jidoushi'], ['tadoushi', '他動詞 Tadoushi'], ['untyped', 'Kata kerja belum diberi jenis'], ['nonverb', 'Bukan kata kerja']] },
+    { id: 'lv', label: 'JLPT', options: FILTER_LEVEL_OPTIONS }
+  ], () => renderBukuSearch());
+  bukuFilter.render();
+}
+function bukuEntryMatches(w) {
+  const f = bukuFilter;
+  if (!f) return true;
+  if (!filterLevelMatch(f.state.lv, w.lv)) return false;
+  if (f.any('jenis')) {
+    const ok = (f.has('jenis', 'verb') && w.isVerb) || (f.has('jenis', 'jidoushi') && vbTypeMatches(w.vtype, 'jidoushi')) ||
+      (f.has('jenis', 'tadoushi') && vbTypeMatches(w.vtype, 'tadoushi')) || (f.has('jenis', 'untyped') && w.isVerb && !w.vtype) ||
+      (f.has('jenis', 'nonverb') && !w.isVerb);
+    if (!ok) return false;
+  }
+  return true;
+}
+
+// ─── search kosakata lintas semua bab di halaman Buku (+ filter) ───
 let BUKU_SEARCH_INDEX = null;
 function buildBukuSearchIndex() {
   if (BUKU_SEARCH_INDEX) return;
@@ -162,9 +185,11 @@ function buildBukuSearchIndex() {
     Object.entries(BOOKS[b.bookKey].data[b.babKey]).forEach(([group, g]) => {
       g.rows.forEach(r => {
         const res = resolveEntry(r);
+        const bv = bookVerbOf(r, b.bookKey);
         BUKU_SEARCH_INDEX.push({
           babIdx, babLabel: (isAll ? b.bookLabel + ' · ' : '') + `Bab ${b.num}`, group,
-          kana: r.k, romaji: r.r, kanji: res.kj || '', arti: res.a || r.a || '', lv: jlptLevelOf(r)
+          kana: r.k, romaji: r.r, kanji: res.kj || '', arti: res.a || r.a || '', lv: jlptLevelOf(r),
+          isVerb: !!bv, vtype: bv ? bv.type : null, kk: bv ? bv.g : 0
         });
       });
     });
@@ -175,18 +200,20 @@ function renderBukuSearch() {
   const q = (document.getElementById('bukuSearchInput').value || '').trim().toLowerCase();
   const resEl = document.getElementById('bukuSearchResults');
   const listEl = document.getElementById('babList');
-  if (!q) { resEl.innerHTML = ''; listEl.style.display = ''; return; }
+  const filterOn = !!(bukuFilter && bukuFilter.isActive());
+  if (!q && !filterOn) { resEl.innerHTML = ''; listEl.style.display = ''; return; }
   listEl.style.display = 'none';
-  const matches = BUKU_SEARCH_INDEX.filter(w =>
+  const all = BUKU_SEARCH_INDEX.filter(w => bukuEntryMatches(w) && (!q ||
     (w.kana || '').toLowerCase().includes(q) || (w.romaji || '').toLowerCase().includes(q) ||
-    (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q)
-  ).slice(0, 60);
-  if (!matches.length) { resEl.innerHTML = `<div class="kamus-empty">Gak ketemu di Buku. Coba kata kunci lain.</div>`; return; }
-  resEl.innerHTML = `<div class="kamus-count"><span>HASIL DI BUKU</span><span>${matches.length} entri</span></div>` +
+    (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q)));
+  const LIMIT = 150;
+  const matches = all.slice(0, LIMIT);
+  if (!matches.length) { resEl.innerHTML = `<div class="kamus-empty">Gak ketemu di Buku. Coba kata kunci atau filter lain.</div>`; return; }
+  resEl.innerHTML = `<div class="kamus-count"><span>HASIL DI BUKU</span><span>${all.length > LIMIT ? 'menampilkan ' + LIMIT + ' dari ' + all.length : all.length} entri</span></div>` +
     matches.map(w => `<div class="kamus-item" onclick="jumpToBab(${w.babIdx})">
       <div class="kbox">${w.kanji ? w.kanji.slice(0, 2) : w.kana.slice(0, 2)}</div>
       <div class="kinfo">
-        <div class="ktag"><span class="kcat">${w.babLabel.toUpperCase()}</span><span class="kgrp">${w.group}</span>${lvBadge(w.lv)}</div>
+        <div class="ktag"><span class="kcat">${w.babLabel.toUpperCase()}</span><span class="kgrp">${w.group}</span>${w.isVerb && w.vtype ? `<span class="kcat" style="margin-left:.35rem">${vbTypeBadge(w.vtype)}</span>` : ''}${lvBadge(w.lv)}</div>
         <div class="ktitle">${w.arti}</div>
         <div class="ksub">${w.kana}${w.romaji ? ' • ' + w.romaji : ''}</div>
       </div>

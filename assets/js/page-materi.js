@@ -1,30 +1,33 @@
-// page-materi.js — bagian dari NihonReview (dipecah dari app.js)
+// page-materi.js — bagian dari NihonReview
 // ─────────────────────────────────────────────────────
-// KAMUS TERPADU (Materi) — search lintas semua kategori
+// MATERI (kamus terpadu) — kotoba, kata kerja, kata sifat, counter dalam satu tempat,
+// disaring pakai tombol filter (jenis kata, JLPT, sumber, dan khusus kata kerja: kelompok & 自動詞/他動詞).
+// Kata kerja dari Buku otomatis ikut masuk (lihat kamus-core.js).
 // ─────────────────────────────────────────────────────
-// Catatan: Kanji dan Kata Kerja PUNYA HALAMAN SENDIRI (lihat bagian "KANJI —
-// halaman sendiri" dan "KATA KERJA — halaman sendiri" di bawah), jadi gak
-// muncul lagi sebagai chip/kategori di pencarian terpadu Materi ini.
-const KAMUS_CATS = [
-  { key: 'Semua', label: 'Semua' },
-  { key: 'Kotoba', label: 'Kotoba (Kata Benda)' },
-  { key: 'Kata Sifat', label: 'Kata Sifat' },
-  { key: 'Counter', label: 'Kata Bantu Bilangan' },
-];
-// Sumber yang masih ikut ke-search di chip "Semua" pada Materi — Hiragana,
-// Katakana, Kanji & Kata Kerja sengaja dikecualikan karena sudah pindah ke
-// halaman sendiri (Hiragana/Katakana/Kanji digabung jadi tab 文字 Moji).
-const KAMUS_VISIBLE_SOURCES = new Set(['Kotoba', 'Kata Sifat', 'Counter']);
-let kamusActiveCat = 'Semua';
-// Filter level JLPT: '' = semua | '5'..'1' = N5..N1 | 'none' = tanpa level
-let kamusLevel = '';
-const KAMUS_LEVELS = [['', 'Semua level'], ['5', 'N5'], ['4', 'N4'], ['3', 'N3'], ['2', 'N2'], ['1', 'N1'], ['none', 'Tanpa level']];
-function renderKamusLevelChips() {
-  const el = document.getElementById('kamusLevelChips');
-  if (!el) return;
-  el.innerHTML = KAMUS_LEVELS.map(([v, label]) => `<div class="kamus-chip ${v === kamusLevel ? 'active' : ''}" data-l="${v}">${label}</div>`).join('');
-  el.querySelectorAll('.kamus-chip').forEach(c => c.onclick = () => { kamusLevel = c.dataset.l; renderKamusLevelChips(); renderKamusResults(true); });
+const KAMUS_VISIBLE_SOURCES = new Set(['Kotoba', 'Kata Kerja', 'Kata Sifat', 'Counter']);
+let kamusPage = 1;
+const KAMUS_PAGE_SIZE = 40;
+let kamusFilter = null;
+
+function initKamusFilters() {
+  kamusFilter = createFilterBar(document.getElementById('kamusFilters'), [
+    { id: 'jenis', label: 'Jenis kata', options: [['Kotoba', 'Kotoba'], ['Kata Kerja', 'Kata Kerja'], ['Kata Sifat', 'Kata Sifat'], ['Counter', 'Counter']] },
+    { id: 'kk', label: 'Kelompok', options: [['1', 'I'], ['2', 'II'], ['3', 'III']], show: () => kamusFilter && kamusFilter.has('jenis', 'Kata Kerja') },
+    { id: 'vt', label: 'Jenis kata kerja', options: [['jidoushi', '自動詞 Jidoushi'], ['tadoushi', '他動詞 Tadoushi'], ['none', 'Belum diberi jenis']], show: () => kamusFilter && kamusFilter.has('jenis', 'Kata Kerja') },
+    { id: 'lv', label: 'JLPT', options: FILTER_LEVEL_OPTIONS },
+    { id: 'src', label: 'Sumber', options: [['Materi', 'Materi']].concat(Object.values(BOOKS).map(b => [b.label, b.label])) }
+  ], () => renderKamusResults(true));
+  // tautan lama / pintasan: materi/?jenis=kata-kerja langsung memilih filter Kata Kerja
+  try {
+    const j = new URLSearchParams(location.search).get('jenis');
+    const map = { 'kata-kerja': 'Kata Kerja', kotoba: 'Kotoba', 'kata-sifat': 'Kata Sifat', counter: 'Counter' };
+    if (j && map[j]) kamusFilter.state.jenis.add(map[j]);
+  } catch (e) {}
+  kamusFilter.render();
 }
+// nama lama dipertahankan biar halaman lain tidak patah
+function renderKamusChips() { if (!kamusFilter) initKamusFilters(); }
+function renderKamusLevelChips() {}
 
 function kamusGoPage(p) {
   kamusPage = p;
@@ -33,33 +36,32 @@ function kamusGoPage(p) {
 }
 function kamusToggleJump(el, totalPages) { pagerToggleJump(el, totalPages, 'kamusGoPage', 'renderKamusResults'); }
 
-function renderKamusChips() {
-  const el = document.getElementById('kamusChips');
-  if (!el) return;
-  el.innerHTML = KAMUS_CATS.map(c => `<div class="kamus-chip ${c.key === kamusActiveCat ? 'active' : ''}" data-c="${c.key}">${c.label}</div>`).join('');
-  el.querySelectorAll('.kamus-chip').forEach(c => c.onclick = () => { kamusActiveCat = c.dataset.c; renderKamusChips(); renderKamusResults(true); });
+function kamusMatches(w, f, q, lvQ) {
+  if (f.any('jenis') ? !f.has('jenis', w.source) : !KAMUS_VISIBLE_SOURCES.has(w.source)) return false;
+  if (lvQ) { if (String(w.lv) !== lvQ) return false; } else if (!filterLevelMatch(f.state.lv, w.lv)) return false;
+  if (f.any('src') && !f.has('src', w.src || 'Materi')) return false;
+  if (f.any('kk') && !(w.source === 'Kata Kerja' && f.has('kk', String(w.kk)))) return false;
+  if (f.any('vt')) {
+    if (w.source !== 'Kata Kerja') return false;
+    const ok = (f.has('vt', 'jidoushi') && vbTypeMatches(w.type, 'jidoushi')) || (f.has('vt', 'tadoushi') && vbTypeMatches(w.type, 'tadoushi')) || (f.has('vt', 'none') && !w.type);
+    if (!ok) return false;
+  }
+  if (!q) return true;
+  return (w.kana || '').toLowerCase().includes(q) || (w.romaji || '').toLowerCase().includes(q) || (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q) || (w.group || '').toLowerCase().includes(q) ||
+    (w.masu && ((w.masu.kana || '').includes(q) || (w.masu.romaji || '').toLowerCase().includes(q)));
 }
-
-let kamusPage = 1;
-const KAMUS_PAGE_SIZE = 40;
 
 function renderKamusResults(resetPage) {
   buildKamusIndex();
+  if (!kamusFilter) initKamusFilters();
   if (resetPage) kamusPage = 1;
   const qEl = document.getElementById('kamusSearchInput');
   let q = qEl ? qEl.value.trim().toLowerCase() : '';
   // ketik "n5" / "n4" / ... di kolom cari = pintasan buat filter level
-  let lvF = kamusLevel;
+  let lvQ = '';
   const lvQuery = q.match(/^n([1-5])$/);
-  if (lvQuery) { lvF = lvQuery[1]; q = ''; }
-  const filtered = KAMUS_ALL.filter(w => {
-    const matchCat = kamusActiveCat === 'Semua' ? KAMUS_VISIBLE_SOURCES.has(w.source) : w.source === kamusActiveCat;
-    if (!matchCat) return false;
-    if (lvF === 'none' && w.lv) return false;
-    if (lvF && lvF !== 'none' && String(w.lv) !== lvF) return false;
-    if (!q) return true;
-    return (w.kana || '').toLowerCase().includes(q) || (w.romaji || '').toLowerCase().includes(q) || (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q) || (w.group || '').toLowerCase().includes(q);
-  });
+  if (lvQuery) { lvQ = lvQuery[1]; q = ''; }
+  const filtered = KAMUS_ALL.filter(w => kamusMatches(w, kamusFilter, q, lvQ));
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / KAMUS_PAGE_SIZE));
   if (kamusPage > totalPages) kamusPage = totalPages;
@@ -68,12 +70,9 @@ function renderKamusResults(resetPage) {
 
   const countEl = document.getElementById('kamusCount');
   if (countEl) countEl.innerHTML = `<span>HASIL</span><span>${filtered.length} entri</span>`;
-
   const el = document.getElementById('kamusResults');
   if (!el) return;
-  if (!filtered.length) { el.innerHTML = `<div class="kamus-empty">Gak ketemu. Coba kata kunci lain.</div>`; return; }
-
-  const html = kamusItemsHtml(pageItems) + pagerHtml(kamusPage, totalPages, 'kamusGoPage', 'kamusToggleJump');
-  el.innerHTML = html;
+  if (!filtered.length) { el.innerHTML = `<div class="kamus-empty">Gak ketemu. Coba kata kunci atau filter lain.</div>`; return; }
+  el.innerHTML = kamusItemsHtml(pageItems) + pagerHtml(kamusPage, totalPages, 'kamusGoPage', 'kamusToggleJump');
   bindKamusItemClicks(el);
 }

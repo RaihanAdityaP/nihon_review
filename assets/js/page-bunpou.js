@@ -94,7 +94,7 @@ function renderBunpou() {
                 <div class="p-rom">${it.romaji}</div>
                 <div class="p-name">${it.arti}</div>
                 ${it.catatan ? `<div class="p-desc">${it.catatan}</div>` : ''}
-                <div class="p-exs">${(it.contoh || []).map(e => `<div class="p-ex"><div class="p-ex-jp">${exJp(e)}</div><div class="p-ex-id">${e.id}</div></div>`).join('')}</div>
+                <div class="p-exs">${(it.contoh || []).map(e => `<div class="p-ex"><div class="p-ex-jp">${exJp(e)}</div>${e.r ? `<div class="p-ex-rom">${e.r}</div>` : ''}<div class="p-ex-id">${e.id}</div></div>`).join('')}</div>
               </div>`).join('')}
           </div>
         </div>

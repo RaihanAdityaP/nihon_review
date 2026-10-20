@@ -18,13 +18,16 @@ function openKamusSheet(w) {
     document.body.appendChild(ov);
     ov.addEventListener('click', e => { if (e.target === ov) closeKamusSheet(); });
   }
-  const bigText = w.jishokei ? (w.jishokei.kanji || w.jishokei.kana) : (w.kanji || w.kana);
+  const bigText = w.kanji || w.kana;
   const charEl = document.getElementById('kamusSheetChar');
   charEl.textContent = bigText;
   charEl.style.fontSize = bigText.length <= 2 ? '4.2rem' : bigText.length <= 4 ? '2.4rem' : '1.5rem';
-  const jishoTag = w.jishokei ? `<span class="kamus-sheet-tag">辞書形: ${w.jishokei.kana}</span>` : '';
+  const jishoTag = w.source === 'Kata Kerja' ? `<span class="kamus-sheet-tag">辞書形</span>` : '';
+  const masuTag = w.masu ? `<span class="kamus-sheet-tag">ます形: ${w.masu.kana}</span>` : '';
+  const kkTag = w.kk ? `<span class="kamus-sheet-tag">Kelompok ${VB_ROMAN[w.kk]}</span>` : '';
+  const srcTag = (w.src && w.src !== 'Materi') ? `<span class="kamus-sheet-tag">${w.src}</span>` : '';
   const typeTag = w.type ? `<span class="kamus-sheet-tag">${w.type === 'jidoushi' ? '自動詞 (Jidoushi)' : w.type === 'tadoushi' ? '他動詞 (Tadoushi)' : '自動詞/他動詞 (dua-duanya)'}</span>` : '';
-  document.getElementById('kamusSheetTags').innerHTML = `<span class="kamus-sheet-tag">${w.kana}${w.romaji ? ' • ' + w.romaji : ''}</span>${jishoTag}${typeTag}`;
+  document.getElementById('kamusSheetTags').innerHTML = `<span class="kamus-sheet-tag">${w.kana}${w.romaji ? ' • ' + w.romaji : ''}</span>${jishoTag}${masuTag}${kkTag}${typeTag}${srcTag}`;
   document.getElementById('kamusSheetArti').textContent = w.arti;
 
   const key = kamusNormK(w.kana) + '|' + kamusNormR(w.romaji);

@@ -11,7 +11,7 @@ var PAGES = [
   "slug": "materi",
   "label": "教材",
   "title": "Materi",
-  "desc": "Kamus terpadu: kotoba, kata sifat, dan counter.",
+  "desc": "Kamus terpadu: kotoba, kata kerja, kata sifat, dan counter.",
   "group": "materi"
  },
  {
@@ -19,13 +19,6 @@ var PAGES = [
   "label": "文字",
   "title": "Moji",
   "desc": "Hiragana, katakana, dan kanji dalam satu tempat.",
-  "group": "materi"
- },
- {
-  "slug": "kata-kerja",
-  "label": "動詞",
-  "title": "Kata Kerja",
-  "desc": "Daftar kata kerja per kelompok beserta bentuknya.",
   "group": "materi"
  },
  {
