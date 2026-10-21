@@ -35,10 +35,11 @@ function switchBukuBook(bookKey, btn) {
   currentBookKey = bookKey;
   document.querySelectorAll('#bukuBookTabs .cat-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
-  document.getElementById('bukuSearchInput').value = '';
+  bukuClearQuery();
   BUKU_SEARCH_INDEX = null; // rebuild index sesuai buku yang aktif
   document.getElementById('bukuSearchResults').innerHTML = '';
   renderBabList();
+  renderBukuSearch();   // kalau filter/pencarian sedang aktif, hasilnya ikut ganti buku
 }
 function renderBukuBookTabs() {
   const el = document.getElementById('bukuBookTabs');
@@ -155,11 +156,20 @@ function renderBabList() {
 // ─── tombol filter Buku: jenis kata kerja (自動詞/他動詞) + level JLPT ───
 // Dibaca dari verb-types.js; data Buku sendiri tidak diubah. Kata kerja di sini otomatis ikut ke menu Kata Kerja & Materi.
 let bukuFilter = null;
+let bukuLastCount = 0;
+// kosongkan kolom cari lewat event input supaya tombol ✕ dan riwayat ikut tersinkron
+function bukuClearQuery() {
+  const i = document.getElementById('bukuSearchInput');
+  if (i) { i.value = ''; i.dispatchEvent(new Event('input')); }
+}
 function initBukuFilters() {
   bukuFilter = createFilterBar(document.getElementById('bukuFilters'), [
     { id: 'jenis', label: 'Jenis', options: [['verb', 'Kata kerja'], ['jidoushi', '自動詞 Jidoushi'], ['tadoushi', '他動詞 Tadoushi'], ['untyped', 'Kata kerja belum diberi jenis'], ['nonverb', 'Bukan kata kerja']] },
     { id: 'lv', label: 'JLPT', options: FILTER_LEVEL_OPTIONS }
-  ], () => renderBukuSearch());
+  ], () => renderBukuSearch(), {
+    countFn: () => bukuLastCount,
+    search: { inputId: 'bukuSearchInput', placeholder: 'Cari kata di semua bab…', historyKey: 'buku', onInput: () => renderBukuSearch() }
+  });
   bukuFilter.render();
 }
 function bukuEntryMatches(w) {
@@ -207,6 +217,8 @@ function renderBukuSearch() {
     (w.kana || '').toLowerCase().includes(q) || (w.romaji || '').toLowerCase().includes(q) ||
     (w.kanji || '').includes(q) || (w.arti || '').toLowerCase().includes(q)));
   const LIMIT = 150;
+  bukuLastCount = all.length;
+  if (bukuFilter) bukuFilter.refreshCount();
   const matches = all.slice(0, LIMIT);
   if (!matches.length) { resEl.innerHTML = `<div class="kamus-empty">Gak ketemu di Buku. Coba kata kunci atau filter lain.</div>`; return; }
   resEl.innerHTML = `<div class="kamus-count"><span>HASIL DI BUKU</span><span>${all.length > LIMIT ? 'menampilkan ' + LIMIT + ' dari ' + all.length : all.length} entri</span></div>` +
@@ -220,7 +232,7 @@ function renderBukuSearch() {
     </div>`).join('');
 }
 function jumpToBab(babIdx) {
-  document.getElementById('bukuSearchInput').value = '';
+  bukuClearQuery();
   renderBukuSearch();
   const head = document.querySelector(`.bab-head[data-toggle="${babIdx}"]`);
   if (head) { head.click(); head.scrollIntoView({ behavior: 'smooth', block: 'start' }); }

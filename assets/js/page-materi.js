@@ -9,14 +9,20 @@ let kamusPage = 1;
 const KAMUS_PAGE_SIZE = 40;
 let kamusFilter = null;
 
+let kamusLastCount = 0;
 function initKamusFilters() {
   kamusFilter = createFilterBar(document.getElementById('kamusFilters'), [
-    { id: 'jenis', label: 'Jenis kata', options: [['Kotoba', 'Kotoba'], ['Kata Kerja', 'Kata Kerja'], ['Kata Sifat', 'Kata Sifat'], ['Counter', 'Counter']] },
-    { id: 'kk', label: 'Kelompok', options: [['1', 'I'], ['2', 'II'], ['3', 'III']], show: () => kamusFilter && kamusFilter.has('jenis', 'Kata Kerja') },
+    { id: 'jenis', label: 'Jenis kata', options: [['Kata Kerja', 'Kata Kerja'], ['Kotoba', 'Kotoba'], ['Kata Sifat', 'Kata Sifat'], ['Counter', 'Counter']] },
+    { id: 'kk', label: 'Kelompok', options: [['1', 'Kelompok I'], ['2', 'Kelompok II'], ['3', 'Kelompok III']], show: () => kamusFilter && kamusFilter.has('jenis', 'Kata Kerja'), hiddenHint: 'Pilih “Kata Kerja” di bar atas untuk menyaring per kelompok dan 自動詞 / 他動詞.' },
     { id: 'vt', label: 'Jenis kata kerja', options: [['jidoushi', '自動詞 Jidoushi'], ['tadoushi', '他動詞 Tadoushi'], ['none', 'Belum diberi jenis']], show: () => kamusFilter && kamusFilter.has('jenis', 'Kata Kerja') },
     { id: 'lv', label: 'JLPT', options: FILTER_LEVEL_OPTIONS },
     { id: 'src', label: 'Sumber', options: [['Materi', 'Materi']].concat(Object.values(BOOKS).map(b => [b.label, b.label])) }
-  ], () => renderKamusResults(true));
+  ], () => renderKamusResults(true), {
+    quick: 'jenis',
+    countFn: () => kamusLastCount,
+    search: { inputId: 'kamusSearchInput', placeholder: 'Cari kana, romaji, kanji, arti, atau n5 / n4…', historyKey: 'materi', onInput: () => renderKamusResults(true) }
+  });
+  kamusFilter.render();
   // tautan lama / pintasan: materi/?jenis=kata-kerja langsung memilih filter Kata Kerja
   try {
     const j = new URLSearchParams(location.search).get('jenis');
@@ -62,6 +68,8 @@ function renderKamusResults(resetPage) {
   const lvQuery = q.match(/^n([1-5])$/);
   if (lvQuery) { lvQ = lvQuery[1]; q = ''; }
   const filtered = KAMUS_ALL.filter(w => kamusMatches(w, kamusFilter, q, lvQ));
+  kamusLastCount = filtered.length;
+  kamusFilter.refreshCount();
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / KAMUS_PAGE_SIZE));
   if (kamusPage > totalPages) kamusPage = totalPages;
