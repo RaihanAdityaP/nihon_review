@@ -28,7 +28,8 @@ function createFilterBar(el, groups, onChange, opts) {
   let page = null, input = null;
 
   const isShown = g => !g.show || g.show();
-  const panelGroups = () => groups.filter(g => g.id !== quickId);
+  const isSingle = g => !!g.single || g.id === quickId;          // pilih satu saja (ada opsi "Semua")
+  const panelGroups = () => groups.filter(g => g.id !== quickId); // untuk badge & tag (pill cepat sudah kelihatan di luar)
   const count = () => panelGroups().reduce((n, g) => n + state[g.id].size, 0);
   const api = {
     state,
@@ -42,6 +43,7 @@ function createFilterBar(el, groups, onChange, opts) {
     refreshCount() { const b = page && page.querySelector('.fpage-ok'); if (b && page.classList.contains('show')) b.textContent = okLabel(); },
     render
   };
+  const opts_quickAll = () => opts.quickAllLabel;
   const okLabel = () => opts.countFn ? `Lihat ${opts.countFn()} hasil` : 'Selesai';
 
   function toggle(gid, v, single) {
@@ -77,7 +79,7 @@ function createFilterBar(el, groups, onChange, opts) {
     el.innerHTML = `<div class="fbar2">
       ${cfg ? `<div class="sbar">
         <label class="sbar-field">${FB_ICON.search}<input type="text" id="${cfg.inputId}" placeholder="${_fbEsc(cfg.placeholder || 'Cari...')}" autocomplete="off" enterkeyhint="search"><button type="button" class="sbar-clear" hidden aria-label="Hapus">${FB_ICON.x}</button></label>
-        <button type="button" class="sbar-filter" aria-label="Filter">${FB_ICON.filter}<span class="sbar-badge" hidden></span></button>
+        ${groups.length ? `<button type="button" class="sbar-filter" aria-label="Filter">${FB_ICON.filter}<span class="sbar-badge" hidden></span></button>` : ''}
       </div>` : ''}
       <div class="fquick"></div><div class="ftags"></div><div class="fhist"></div>
     </div>`;
@@ -118,10 +120,12 @@ function createFilterBar(el, groups, onChange, opts) {
       page.id = uid; page.className = 'fpage';
       document.body.appendChild(page);
     }
-    const body = panelGroups().map(g => {
-      if (!isShown(g)) return g.hiddenHint ? `<div class="fpage-hint">${g.hiddenHint}</div>` : '';
+    const body = groups.map(g => {
+      if (!isShown(g)) { const h = typeof g.hiddenHint === 'function' ? g.hiddenHint() : g.hiddenHint; return h ? `<div class="fpage-hint">${h}</div>` : ''; }
+      const opts = isSingle(g) ? [['__all', g.allLabel || (g.id === quickId && opts_quickAll()) || 'Semua']].concat(g.options) : g.options;
+      const on = v => v === '__all' ? state[g.id].size === 0 : state[g.id].has(v);
       return `<div class="fpage-label">${g.label}</div>
-        <div class="fseg">${g.options.map(([v, l]) => `<button type="button" class="fseg-opt${state[g.id].has(v) ? ' active' : ''}" data-g="${g.id}" data-v="${_fbEsc(v)}">${l}</button>`).join('')}</div>`;
+        <div class="fseg">${opts.map(([v, l]) => `<button type="button" class="fseg-opt${on(v) ? ' active' : ''}" data-g="${g.id}" data-v="${_fbEsc(v)}">${l}</button>`).join('')}</div>`;
     }).join('');
     page.innerHTML = `<div class="fpage-head">
         <button type="button" class="fpage-ic fpage-reset" aria-label="Reset filter">${FB_ICON.eraser}</button>
@@ -130,7 +134,11 @@ function createFilterBar(el, groups, onChange, opts) {
       </div>
       <div class="fpage-body">${body}</div>
       <div class="fpage-foot"><button type="button" class="fpage-ok">${okLabel()}</button></div>`;
-    page.querySelectorAll('.fseg-opt').forEach(b => b.onclick = () => toggle(b.dataset.g, b.dataset.v, false));
+    page.querySelectorAll('.fseg-opt').forEach(b => b.onclick = () => {
+      const g = groups.find(x => x.id === b.dataset.g);
+      if (b.dataset.v === '__all') { state[g.id].clear(); groups.forEach(x => { if (!isShown(x)) state[x.id].clear(); }); render(); renderPage(); onChange(); }
+      else toggle(g.id, b.dataset.v, isSingle(g));
+    });
     page.querySelector('.fpage-reset').onclick = () => api.reset();
     page.querySelector('.fpage-x').onclick = () => api.close();
     page.querySelector('.fpage-ok').onclick = () => api.close();

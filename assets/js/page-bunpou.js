@@ -17,13 +17,31 @@ function switchBunpouBook(bookKey, btn) {
   currentBunpouBook = bookKey;
   document.querySelectorAll('#bunpouBookTabs .cat-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
-  document.getElementById('bunpouSearchInput').value = '';
+  // sinkronkan pilihan Buku di halaman filter, lalu kosongkan kolom cari
+  if (bunpouFilter) { bunpouFilter.state.buku.clear(); if (bookKey !== 'all') bunpouFilter.state.buku.add(bookKey); bunpouFilter.render(); }
+  const qi = document.getElementById('bunpouSearchInput');
+  if (qi) { qi.value = ''; qi.dispatchEvent(new Event('input')); }
   renderBunpou();
+}
+// ─── bar cari + filter (pilihan Buku di sini sama dengan tab di atas) ───
+let bunpouFilter = null;
+function initBunpouFilters() {
+  const books = Object.entries(BOOKS).filter(([, b]) => !b.noBunpou).map(([k, b]) => [k, b.label]).concat([[BUNPOU_TAMBAHAN.key, BUNPOU_TAMBAHAN.label]]);
+  bunpouFilter = createFilterBar(document.getElementById('bunpouFilters'), [
+    { id: 'buku', label: 'Buku', options: books, single: true }
+  ], () => {
+    currentBunpouBook = [...bunpouFilter.state.buku][0] || 'all';
+    renderBunpou(); filterBunpou();
+  }, {
+    countFn: () => document.querySelectorAll('#bunpouContent .acc-item:not([style*="display: none"])').length,
+    search: { inputId: 'bunpouSearchInput', placeholder: 'Cari pola, romaji, atau arti…', historyKey: 'bunpou', onInput: () => filterBunpou() }
+  });
+  bunpouFilter.render();
 }
 function renderBunpouBookTabs() {
   const el = document.getElementById('bunpouBookTabs');
   if (!el) return;
-  const tabs = [['all', 'Semua'], ...Object.entries(BOOKS).map(([key, b]) => [key, b.label]), [BUNPOU_TAMBAHAN.key, BUNPOU_TAMBAHAN.label]];
+  const tabs = [['all', 'Semua'], ...Object.entries(BOOKS).filter(([, b]) => !b.noBunpou).map(([key, b]) => [key, b.label]), [BUNPOU_TAMBAHAN.key, BUNPOU_TAMBAHAN.label]];
   el.innerHTML = tabs.map(([key, label]) => `
     <button class="cat-btn${key === currentBunpouBook ? ' active' : ''}" onclick="switchBunpouBook('${key}', this)">${label}</button>
   `).join('');
@@ -49,7 +67,7 @@ function renderBunpou() {
   // `buku`-nya cocok sama tab aktif (atau semuanya kalau tab "Semua"). Entri lama
   // tanpa field `buku` dianggap 'minna'.
   const isAll = currentBunpouBook === 'all';
-  const bookKeys = [...Object.keys(BOOKS), BUNPOU_TAMBAHAN.key];
+  const bookKeys = [...Object.keys(BOOKS).filter(k => !BOOKS[k].noBunpou), BUNPOU_TAMBAHAN.key];
   const bookOf = g => g.buku || 'minna';
   const byTema = {};
   const temaOrder = [];
@@ -131,6 +149,7 @@ function filterBunpou() {
     }
   });
   finalizeHeader();
+  if (bunpouFilter) bunpouFilter.refreshCount();
 }
 
 

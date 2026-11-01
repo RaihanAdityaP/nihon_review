@@ -51,6 +51,10 @@ function chatSelAll(v) {
 function filterChatQog() {
   filterCatGrid('chatQog', document.getElementById('chatQogSearchInput').value);
 }
+// kolom cari kategori: bar yang sama dengan halaman lain (tanpa tombol filter)
+createFilterBar(document.getElementById('chatQogSearchBar'), [], () => {}, {
+  search: { inputId: 'chatQogSearchInput', placeholder: 'Cari kategori (misal: bab 5, hewan, bunpou)…', historyKey: 'chatqog', onInput: filterChatQog }
+}).render();
 
 function checkChatReady() {
   const hasKey  = !!localStorage.getItem(AI_KEY_STORE + '_' + AI_PROVIDER);

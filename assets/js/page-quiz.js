@@ -414,6 +414,10 @@ function filterQog() {
   filterCatGrid('qog', document.getElementById('qogSearchInput').value);
 }
 CAT_CTX.qog = () => ({ set: SC, after: () => checkReady() });
+// kolom cari kategori memakai bar yang sama dengan halaman lain (tanpa tombol filter)
+createFilterBar(document.getElementById('qogSearchBar'), [], () => {}, {
+  search: { inputId: 'qogSearchInput', placeholder: 'Cari kategori…', historyKey: 'qog', onInput: filterQog }
+}).render();
 
 
 // Enter di kotak ketik: cek jawaban, atau lanjut kalau sudah dijawab

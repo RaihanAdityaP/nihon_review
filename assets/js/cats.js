@@ -61,11 +61,19 @@ const QCATS_STATIC = [
   { id: 'minecraft',   label: 'Minecraft & Game',      t: 'kotoba' },
   { id: 'jam-waktu',   label: 'Jam & Waktu',           t: 'kotoba' },
   { id: 'musik-streaming', label: 'Musik & Streaming',  t: 'kotoba' },
+  { id: 'situasi-ekonomi', label: 'Situasi & Ekonomi', t: 'kotoba' },
+  { id: 'seni', label: 'Seni & Keindahan', t: 'kotoba' },
+  { id: 'aman-praktis', label: 'Praktis & Aman', t: 'kotoba' },
+  { id: 'lagu-daerah', label: 'Lagu Daerah & Musik', t: 'kotoba' },
+  { id: 'tv-wawancara', label: 'TV & Wawancara', t: 'kotoba' },
+  { id: 'ai-kerja', label: 'AI & Pekerjaan', t: 'kotoba' },
+  { id: 'kata-unik', label: 'Bahasa & Kata Unik', t: 'kotoba' },
   { id: 'bencana',     label: 'Bencana & Kecelakaan',  t: 'kotoba' },
   { id: 'percaya',     label: 'Kepercayaan & Takhayul', t: 'kotoba' },
   { id: 'foto',        label: 'Fotografi & Media Sosial', t: 'kotoba' },
   { id: 'cuaca',       label: 'Cuaca & Suhu',          t: 'kotoba' },
   { id: 'sehat',       label: 'Kesehatan & Sakit',     t: 'kotoba' },
+  { id: 'apotek-uks',  label: 'Apotek & UKS',          t: 'kotoba' },
   { id: 'pakaian',     label: 'Pakaian & Aksesoris',   t: 'kotoba' },
   { id: 'agama',       label: 'Agama & Sosial',        t: 'kotoba' },
   { id: 'hiburan',     label: 'Hiburan & Acara',       t: 'kotoba' },
@@ -130,6 +138,7 @@ const QCATS_STATIC = [
   { id: 'buku-a2-bab16',    label: 'Irodori A2 — Bab 16', t: 'buku' },
   { id: 'buku-a2-bab17',    label: 'Irodori A2 — Bab 17', t: 'buku' },
   { id: 'buku-a2-bab18',    label: 'Irodori A2 — Bab 18', t: 'buku' },
+  { id: 'buku-ssw-bab1',     label: 'SSW Kensetsu — Bab 1', t: 'buku' },
 ];
 
 // Kategori Bunpou TIDAK di-hardcode di sini — otomatis di-generate dari

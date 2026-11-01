@@ -60,7 +60,7 @@ function buildKamusIndex() {
           });
           return;
         }
-        KAMUS_ALL.push({ source: src.l, group, src: 'Materi', kana: r.k, romaji: r.r, kanji: r.kj || '', arti: r.a, note: r.n || '', type: null });
+        KAMUS_ALL.push({ source: src.l, group, src: 'Materi', ks: src.l === 'Kata Sifat' ? (group.includes('- な') ? 'na' : 'i') : undefined, kana: r.k, romaji: r.r, kanji: r.kj || '', arti: r.a, note: r.n || '', type: null });
       });
     });
   });
@@ -139,11 +139,12 @@ function kamusItemsHtml(items) {
     }
     const typeBadge = w.type ? `<span class="kcat" style="margin-left:.35rem">${vbTypeBadge(w.type)}</span>` : '';
     const srcBadge = (w.src && w.src !== 'Materi') ? `<span class="kcat" style="margin-left:.35rem">${w.src}</span>` : '';
+    const ksBadge = w.ks ? `<span class="kcat" style="margin-left:.35rem">${w.ks === 'i' ? 'い形容詞' : 'な形容詞'}</span>` : '';
     const kkBadge = w.kk ? `<span class="kcat" style="margin-left:.35rem">KK ${VB_ROMAN[w.kk]}</span>` : '';
     html += `<div class="kamus-item" data-i="${idx}">
       <div class="kbox">${boxText}</div>
       <div class="kinfo">
-        <div class="ktag"><span class="kcat">${w.source.toUpperCase()}</span>${kkBadge}${typeBadge}${srcBadge}${w.lv !== undefined && typeof lvBadge === 'function' ? lvBadge(w.lv) : ''}</div>
+        <div class="ktag"><span class="kcat">${w.source.toUpperCase()}</span>${kkBadge}${ksBadge}${typeBadge}${srcBadge}${w.lv !== undefined && typeof lvBadge === 'function' ? lvBadge(w.lv) : ''}</div>
         <div class="ktitle">${w.arti}</div>
         <div class="ksub">${w.source === 'Kata Kerja' && w.kanji ? w.kanji + ' ・ ' : ''}${w.kana}${w.romaji && w.source !== 'Hiragana' && w.source !== 'Katakana' ? ' • ' + w.romaji : ''}</div>
       </div>

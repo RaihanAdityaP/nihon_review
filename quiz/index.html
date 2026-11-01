@@ -30,9 +30,7 @@
         <button class="smbtn" onclick="selAll(true)">Pilih Semua</button>
         <button class="smbtn" onclick="selAll(false)">Hapus Semua</button>
       </div>
-      <div class="qog-search-wrap">
-        <input type="text" id="qogSearchInput" class="qog-search" placeholder="Cari kategori..." oninput="filterQog()">
-      </div>
+      <div id="qogSearchBar"></div>
       <div class="qog" id="qog"></div>
       <div class="qwarn" id="qwarn">Pilih minimal satu kategori (butuh 4+ item).</div>
 
@@ -117,6 +115,7 @@
 <script src="../assets/js/cats.js?v=20261020"></script>
 <script src="../assets/js/catpicker.js?v=20261020"></script>
 <script src="../assets/js/items.js?v=20261020"></script>
+<script src="../assets/js/filters.js?v=20261020"></script>
 <script src="../assets/js/page-quiz.js?v=20261020"></script>
 <script>
 initQSetup();

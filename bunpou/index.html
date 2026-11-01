@@ -24,9 +24,7 @@
     <div class="sec-title">文法 · Bunpou</div>
     <div class="sec-sub">Pola kalimat dan tata bahasa, dikelompokkan per tema.</div>
     <div class="cat-tabs" id="bunpouBookTabs"></div>
-    <div class="kamus-search-wrap">
-      <input type="text" id="bunpouSearchInput" class="kamus-search" placeholder="Cari pola, romaji, atau arti..." oninput="filterBunpou()">
-    </div>
+    <div id="bunpouFilters"></div>
     <div class="furi-bar"><button id="furiBtn" class="furi-chip sel" onclick="toggleFuri()">ふりがな ON</button></div>
     <div id="bunpouContent"></div>
   </div>
@@ -34,8 +32,10 @@
 </main>
 <script src="../assets/data.js?v=20261020"></script>
 <script src="../assets/js/acc.js?v=20261020"></script>
+<script src="../assets/js/filters.js?v=20261020"></script>
 <script src="../assets/js/page-bunpou.js?v=20261020"></script>
 <script>
+initBunpouFilters();
 renderBunpou();
 </script>
 </body>

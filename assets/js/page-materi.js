@@ -13,8 +13,10 @@ let kamusLastCount = 0;
 function initKamusFilters() {
   kamusFilter = createFilterBar(document.getElementById('kamusFilters'), [
     { id: 'jenis', label: 'Jenis kata', options: [['Kata Kerja', 'Kata Kerja'], ['Kotoba', 'Kotoba'], ['Kata Sifat', 'Kata Sifat'], ['Counter', 'Counter']] },
-    { id: 'kk', label: 'Kelompok', options: [['1', 'Kelompok I'], ['2', 'Kelompok II'], ['3', 'Kelompok III']], show: () => kamusFilter && kamusFilter.has('jenis', 'Kata Kerja'), hiddenHint: 'Pilih “Kata Kerja” di bar atas untuk menyaring per kelompok dan 自動詞 / 他動詞.' },
+    { id: 'kk', label: 'Kelompok', options: [['1', 'Kelompok I'], ['2', 'Kelompok II'], ['3', 'Kelompok III']], show: () => kamusFilter && kamusFilter.has('jenis', 'Kata Kerja'),
+      hiddenHint: () => (kamusFilter && !kamusFilter.has('jenis', 'Kata Sifat')) ? 'Pilih “Kata Kerja” atau “Kata Sifat” pada Jenis kata untuk filter lanjutan (kelompok, 自動詞 / 他動詞, い / な).' : '' },
     { id: 'vt', label: 'Jenis kata kerja', options: [['jidoushi', '自動詞 Jidoushi'], ['tadoushi', '他動詞 Tadoushi'], ['none', 'Belum diberi jenis']], show: () => kamusFilter && kamusFilter.has('jenis', 'Kata Kerja') },
+    { id: 'ks', label: 'Jenis kata sifat', options: [['i', 'い (adjektiva-i)'], ['na', 'な (adjektiva-na)']], show: () => kamusFilter && kamusFilter.has('jenis', 'Kata Sifat') },
     { id: 'lv', label: 'JLPT', options: FILTER_LEVEL_OPTIONS },
     { id: 'src', label: 'Sumber', options: [['Materi', 'Materi']].concat(Object.values(BOOKS).map(b => [b.label, b.label])) }
   ], () => renderKamusResults(true), {
@@ -46,6 +48,7 @@ function kamusMatches(w, f, q, lvQ) {
   if (f.any('jenis') ? !f.has('jenis', w.source) : !KAMUS_VISIBLE_SOURCES.has(w.source)) return false;
   if (lvQ) { if (String(w.lv) !== lvQ) return false; } else if (!filterLevelMatch(f.state.lv, w.lv)) return false;
   if (f.any('src') && !f.has('src', w.src || 'Materi')) return false;
+  if (f.any('ks') && !(w.source === 'Kata Sifat' && f.has('ks', w.ks))) return false;
   if (f.any('kk') && !(w.source === 'Kata Kerja' && f.has('kk', String(w.kk)))) return false;
   if (f.any('vt')) {
     if (w.source !== 'Kata Kerja') return false;

@@ -24,10 +24,7 @@
     <div class="sec-title">Moji</div>
     <div class="sec-sub">Hiragana, katakana, dan kanji dalam satu tempat. Cari karakter, cara baca, atau arti.</div>
     <div class="cat-tabs" id="mojiTabs"></div>
-    <div class="kamus-chips" id="mojiKanjiChips" style="display:none"></div>
-    <div class="kamus-search-wrap">
-      <input type="text" id="mojiSearchInput" class="kamus-search" placeholder="Cari karakter, cara baca, atau arti..." oninput="renderMojiResults(true)">
-    </div>
+    <div id="mojiFilters"></div>
     <div class="kamus-count" id="mojiCount"></div>
     <div id="mojiResults"></div>
   </div>
@@ -40,9 +37,11 @@
 <script src="../assets/js/kamus-sheet.js?v=20261020"></script>
 <script src="../assets/verb-types.js?v=20261020"></script>
 <script src="../assets/js/verbs.js?v=20261020"></script>
+<script src="../assets/js/filters.js?v=20261020"></script>
 <script src="../assets/js/kamus-core.js?v=20261020"></script>
 <script src="../assets/js/page-moji.js?v=20261020"></script>
 <script>
+initMojiFilters();
 renderMojiTabs();
 renderMojiResults();
 </script>
