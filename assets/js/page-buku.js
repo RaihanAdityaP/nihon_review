@@ -25,7 +25,7 @@ function bukuBabList() {
       const groups = Object.keys(book.data[babKey]);
       const wordCount = Object.values(book.data[babKey]).reduce((s, g) => s + g.rows.length, 0);
       const parsedNum = parseInt(String(babKey).replace(/^bab/i, ''), 10);
-      out.push({ bookKey, bookLabel: book.label, babKey, num: Number.isFinite(parsedNum) ? parsedNum : i + 1, title: groups[0], groupCount: groups.length, wordCount });
+      out.push({ bookKey, bookLabel: book.label, babKey, num: Number.isFinite(parsedNum) ? parsedNum : i + 1, title: groups[0], groupCount: groups.length, wordCount, code: (book.babCodes && book.babCodes[babKey]) || '' });
     });
   });
   return out;
@@ -120,7 +120,7 @@ function renderBabList() {
         <div class="bab-num">${String(b.num).padStart(2, '0')}</div>
         <div class="bab-main">
           <div class="bab-title">${b.title}</div>
-          <div class="bab-sub">${b.groupCount} topik • ${b.wordCount} kata</div>
+          <div class="bab-sub">${b.code ? 'Kode ' + b.code + ' • ' : ''}${b.groupCount} topik • ${b.wordCount} kata</div>
         </div>
         <span class="acc-arrow" id="babArrow${i}">▶</span>
       </div>

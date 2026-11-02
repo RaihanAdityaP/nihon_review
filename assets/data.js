@@ -354,7 +354,9 @@ const KT={
 {k:"バスターミナル",r:"basu taaminaru",a:"terminal bus",kj:"バスターミナル",n:"Serapan 'bus terminal' — tempat pemberhentian utama tempat banyak jalur bus berkumpul."},
 {k:"でんきバス",r:"denki basu",a:"bus listrik",kj:"電気バス"},
 {k:"ブレーキ",r:"bureeki",a:"rem",n:"Serapan 'brake'. 'ブレーキをかけます' = mengerem. Pasangannya アクセル (gas)."},
-{k:"アクセル",r:"akuseru",a:"gas (pedal/tuas gas)",n:"Serapan 'accelerator'. 'アクセルをふかします' = ngegas (menarik gas sampai mesin meraung), 'アクセルを踏みます' = menginjak gas."}
+{k:"アクセル",r:"akuseru",a:"gas (pedal/tuas gas)",n:"Serapan 'accelerator'. 'アクセルをふかします' = ngegas (menarik gas sampai mesin meraung), 'アクセルを踏みます' = menginjak gas."},
+{k:"レンタカー",r:"rentakaa",a:"mobil sewaan",n:"Serapan dari 'rent-a-car'. Contoh: 空港で レンタカーを かります (kuukou de rentakaa o karimasu) = menyewa mobil di bandara."},
+{k:"ふね",r:"fune",a:"kapal, perahu",kj:"船",n:"Naik kapal: 船に のります (fune ni norimasu). Contoh: ふねが ゆれました (fune ga yuremashita) = kapalnya bergoyang."},
 ]},
 "Makanan & Minuman":{rows:[
 {k:"いんりょうすい",r:"inryousui",a:"air konsumsi",kj:"飲料水"},
@@ -879,7 +881,9 @@ const KT={
 {k:"こうぎ",r:"kougi",a:"protes",kj:"抗議"},
 {k:"しんりがく",r:"shinrigaku",a:"psikologi",kj:"心理学"},
 {k:"くろじ",r:"kuroji",a:"profit; surplus",kj:"黒字",n:"Lawan katanya あかじ (赤字) = rugi / defisit."},
-{k:"とうし",r:"toushi",a:"investasi",kj:"投資"}
+{k:"とうし",r:"toushi",a:"investasi",kj:"投資"},
+{k:"つごう",r:"tsugou",a:"kondisi / kecocokan jadwal",kj:"都合",n:"Dipakai buat nanya atau bilang cocok tidaknya waktu. 'つごうが いいです' (tsugou ga ii desu) = jadwalnya cocok, 'つごうが わるいです' (tsugou ga warui desu) = jadwalnya tidak cocok."},
+{k:"あやまり",r:"ayamari",a:"permintaan maaf",kj:"謝り",n:"Bentuk nomina dari あやまる (minta maaf). Biasa muncul di 謝りの メール (ayamari no meeru) = email permintaan maaf."},
 ]},
 "Kotoba N5":{rows:[
 {k:"あめ",r:"ame",a:"hujan / permen",n:"Kanji: 雨 (hujan) / 飴 (permen). Beda kanji, beda makna! 'Ame ga futte iru' = sedang hujan."},
@@ -1432,7 +1436,11 @@ const KT={
 {k:"かがくしゃ",r:"kagakusha",a:"ilmuwan",kj:"科学者"},
 {k:"うちゅうひこうし",r:"uchuu hikoushi",a:"astronot",kj:"宇宙飛行士"},
 {k:"はいゆう",r:"haiyuu",a:"aktor; aktris",kj:"俳優"},
-{k:"かつどうか",r:"katsudouka",a:"aktivis",kj:"活動家"}
+{k:"かつどうか",r:"katsudouka",a:"aktivis",kj:"活動家"},
+{k:"じょゆう",r:"jo yuu",a:"aktris",kj:"女優",n:"Jo (perempuan) + yuu (aktor/pemeran). Lawan jenisnya 男優 (dan-yuu), tapi 俳優 (haiyuu) lebih umum dipakai untuk aktor secara umum."},
+{k:"おんがくか",r:"ongakuka",a:"musisi",kj:"音楽家",n:"Ongaku (musik) + ka (ahli)."},
+{k:"じつぎょうか",r:"jitsugyouka",a:"pengusaha",kj:"実業家",n:"Orang yang menjalankan bisnis atau perusahaan, biasanya dipakai untuk pengusaha yang sudah sukses."},
+{k:"せいじか",r:"seijika",a:"politikus",kj:"政治家",n:"Seiji (politik) + ka (ahli)."},
 ]},
 "Negara & Bangsa":{rows:[
 {k:"けん",r:"ken",a:"prefektur, wilayah",kj:"県",n:"Setingkat provinsi di Jepang, mis. 千葉県 (Chiba-ken). Beda dari ちゅうぶ (Chuubu, nama region besar berisi banyak ken) — けん lebih ke unit administratif spesifik."},
@@ -2167,6 +2175,7 @@ const KATA_SIFAT = {
 {k:"はずかしい",r:"hazukashii",a:"malu",kj:"恥ずかしい"},
 {k:"くやしい",r:"kuyashii",a:"kesal",kj:"悔しい"},
 {k:"あやしい",r:"ayashii",a:"mencurigakan",kj:"怪しい"},
+{k:"まずしい",r:"mazushii",a:"miskin, serba kekurangan",kj:"貧しい",n:"Lebih formal dan sastrawi dibanding びんぼう (貧乏). Sering muncul di cerita biografi: まずしい 家に うまれました (mazushii ie ni umaremashita) = lahir di keluarga miskin."},
 ]},
 "Kata Sifat - な (na-keiyoushi)":{rows:[
 {k:"ないこうてき",r:"naikouteki",a:"introvert",kj:"内向的"},
@@ -2236,7 +2245,8 @@ const KATA_SIFAT = {
 {k:"しんこく",r:"shinkoku",a:"serius; parah",kj:"深刻"},
 {k:"せかいてき",r:"sekaiteki",a:"bersifat global; mendunia",kj:"世界的"},
 {k:"グローバル",r:"guroobaru",a:"global"},
-{k:"きょうせいてき",r:"kyouseiteki",a:"bersifat paksa; dengan paksa",kj:"強制的",n:"Dipakai juga sebagai keterangan: きょうせいてきに = secara paksa."}
+{k:"きょうせいてき",r:"kyouseiteki",a:"bersifat paksa; dengan paksa",kj:"強制的",n:"Dipakai juga sebagai keterangan: きょうせいてきに = secara paksa."},
+{k:"らく",r:"raku",a:"gampang, santai, nyaman",kj:"楽",n:"Nuansanya enak dan tidak capek dikerjakan, beda dari かんたん yang berarti tidak rumit. Contoh dari materi: 車を かえす ときも らくです (kuruma o kaesu toki mo raku desu) = saat mengembalikan mobil juga gampang."},
 ]}
 };
 
@@ -2424,7 +2434,13 @@ const KATA_KERJA = {
 {k:"つきそいます",r:"tsukisoimasu",a:"menemani; mendampingi",kj:"付き添います",n:"Bentuk kamus: つきそう. Mirip 'そばにいます', tapi lebih ke mendampingi orang yang butuh dijaga (mis. pasien, anak kecil).",type:"jidoushi"},
 {k:"とりはずします",r:"torihazushimasu",a:"melepas (sesuatu yang terpasang)",kj:"取り外します",n:"Bentuk kamus: とりはずす. Lawan dari とりつけます (memasang).",type:"tadoushi"},
 {k:"むきます",r:"mukimasu",a:"mengarah; menghadap; cocok",kj:"向きます",n:"Bentuk kamus: むく. 'むいています' = cocok (untuk). Hati-hati: むく (剥く) = mengupas, bacanya sama tapi artinya beda.",type:"jidoushi"},
-{k:"いうことを ききます",r:"iu koto o kikimasu",a:"menurut (mendengarkan perkataan)",kj:"言うことを聞きます",n:"Bentuk kamus: いうことをきく. 'せんせいのいうことをききます' = menurut pada guru.",type:"tadoushi"}
+{k:"いうことを ききます",r:"iu koto o kikimasu",a:"menurut (mendengarkan perkataan)",kj:"言うことを聞きます",n:"Bentuk kamus: いうことをきく. 'せんせいのいうことをききます' = menurut pada guru.",type:"tadoushi"},
+{k:"すごします",r:"sugoshimasu",a:"menghabiskan / melewati (waktu)",kj:"過ごします",n:"Dari すごす. Contoh: りょうしんと すごせて、よかったです (ryoushin to sugosete, yokatta desu) = senang bisa menghabiskan waktu bersama orang tua.",type:"tadoushi"},
+{k:"ながします",r:"nagashimasu",a:"mengalirkan; membuang lewat air",kj:"流します",n:"Contoh: あぶらを ながします (abura o nagashimasu) = membuang minyak lewat saluran air. Pasangan intransitifnya 流れます (nagaremasu) = mengalir.",type:"tadoushi"},
+{k:"よごします",r:"yogoshimasu",a:"mengotori",kj:"汚します",n:"Verba TRANSITIF — pasangan dari よごれます (jidoushi, menjadi kotor).",type:"tadoushi"},
+{k:"さそいます",r:"sasoimasu",a:"mengajak, mengundang",kj:"誘います",n:"Contoh: ともだちを さそいます (tomodachi o sasoimasu) = mengajak teman. Pasifnya さそわれます = diajak.",type:"tadoushi"},
+{k:"あきます",r:"akimasu",a:"terbuka; berlubang",kj:"開きます",n:"Contoh: あなが あきます (ana ga akimasu) = berlubang (穴が 開きます). Pasangan transitifnya あけます.",type:"jidoushi"},
+{k:"しかります",r:"shikarimasu",a:"memarahi / menegur (supaya sadar)",kj:"叱ります",n:"Biasanya dilakukan orang yang posisinya lebih tinggi (guru, orang tua, atasan) dengan tujuan mendidik. Beda dari おこります (marah karena emosi). Pasif: しかられます (shikararemasu) = dimarahi.",type:"tadoushi"},
 ]},
 "Kata Kerja - Kelompok II":{rows:[
 {k:"たえる",r:"taeru",a:"bertahan / menahan / tahan",kj:"耐える",type:"jidoushi"},
@@ -2519,7 +2535,9 @@ const KATA_KERJA = {
 {k:"とりつけます",r:"toritsukemasu",a:"memasang (menempelkan / memasang alat)",kj:"取り付けます",n:"Bentuk kamus: とりつける. Lawan dari とりはずします (melepas).",type:"tadoushi"},
 {k:"だまらせます",r:"damarasemasu",a:"membungkam; membuat diam",kj:"黙らせます",n:"Bentuk kamus: だまらせる. Bentuk kausatif dari だまる (diam).",type:"tadoushi"},
 {k:"かたむけます",r:"katamukemasu",a:"memiringkan",kj:"傾けます",n:"Bentuk kamus: かたむける.",type:"tadoushi"},
-{k:"めいわくを かけます",r:"meiwaku o kakemasu",a:"merepotkan; mengganggu (orang lain)",kj:"迷惑を掛けます",n:"Bentuk kamus: めいわくを かける. Larangannya: めいわくを かけないで／めいわくしないで = jangan merepotkan orang lain.",type:"tadoushi"}
+{k:"めいわくを かけます",r:"meiwaku o kakemasu",a:"merepotkan; mengganggu (orang lain)",kj:"迷惑を掛けます",n:"Bentuk kamus: めいわくを かける. Larangannya: めいわくを かけないで／めいわくしないで = jangan merepotkan orang lain.",type:"tadoushi"},
+{k:"やぶれます",r:"yaburemasu",a:"robek, sobek",kj:"破れます",n:"Dipakai untuk kertas, kain, atau baju. Beda dari こわれます (rusak, untuk benda keras).",type:"jidoushi"},
+{k:"ゆれます",r:"yuremasu",a:"bergoyang, terguncang",kj:"揺れます",n:"Contoh: ふねが ゆれました (fune ga yuremashita) = kapalnya bergoyang. Bisa juga untuk gempa: じしんで ゆれます.",type:"jidoushi"},
 ]},
 "Kata Kerja - Kelompok III":{rows:[
 {k:"あっかする",r:"akka suru",a:"memburuk",kj:"悪化する",type:"jidoushi"},
@@ -2629,7 +2647,12 @@ const KATA_KERJA = {
 {k:"かんさつします",r:"kansatsu shimasu",a:"mengamati",kj:"観察します",n:"Bentuk kamus: かんさつする.",type:"tadoushi"},
 {k:"すいそくします",r:"suisoku shimasu",a:"menduga; memperkirakan",kj:"推測します",n:"Bentuk kamus: すいそくする.",type:"tadoushi"},
 {k:"はっけんします",r:"hakken shimasu",a:"menemukan (untuk pertama kali)",kj:"発見します",n:"Bentuk kamus: はっけんする.",type:"tadoushi"},
-{k:"しょくみんちかします",r:"shokuminchika shimasu",a:"menjajah; menjadikan koloni",kj:"植民地化します",n:"Bentuk kamus: しょくみんちかする.",type:"tadoushi"}
+{k:"しょくみんちかします",r:"shokuminchika shimasu",a:"menjajah; menjadikan koloni",kj:"植民地化します",n:"Bentuk kamus: しょくみんちかする.",type:"tadoushi"},
+{k:"けんかします",r:"kenka shimasu",a:"bertengkar",kj:"喧嘩します",type:"jidoushi"},
+{k:"おしゃれします",r:"oshare shimasu",a:"berdandan, bergaya",n:"おしゃれ sendiri juga bisa jadi kata sifat 'modis, gaya'.",type:"jidoushi"},
+{k:"しゅうしょくします",r:"shuushoku shimasu",a:"mulai bekerja; mendapat pekerjaan",kj:"就職します",n:"Dipakai untuk kerja pertama setelah lulus.",type:"jidoushi"},
+{k:"てんきんします",r:"tenkin shimasu",a:"dipindahtugaskan (lokasi kerja)",kj:"転勤します",n:"勤 = bekerja, jadi artinya pindah tempat kerja oleh perusahaan, bukan pindah rumah biasa.",type:"jidoushi"},
+{k:"たいしょくします",r:"taishoku shimasu",a:"pensiun; berhenti bekerja",kj:"退職します",n:"Bisa berarti pensiun atau mengundurkan diri, tergantung konteks.",type:"jidoushi"},
 ]}
 };
 
@@ -7585,7 +7608,7 @@ bab18: {
 }; // end BUKU_IRODORI_A2
 
 // ─────────────────────────────────────────────────────
-// BUKU SSW KENSETSU — kosakata SSW Konstruksi (Quizlet: SSW Konstruksi 1.1 - 2.1.3), 57 kata
+// BUKU SSW KENSETSU — kosakata SSW Konstruksi (Quizlet: bab1 = SSW Konstruksi 1.1 - 2.1.3, 57 kata; bab2 = SSW Konstruksi 2.1.4 - 2.17, 69 kata)
 // ─────────────────────────────────────────────────────
 const BUKU_SSW = {
 
@@ -7655,6 +7678,94 @@ bab1: {
     {"k":"けんこうしんだん","r":"kenkou shindan","a":"Pemeriksaan kesehatan","kj":"健康診断"},
     {"k":"さいていちんぎん","r":"saitei chingin","a":"Upah minimum","kj":"最低賃金"}
   ]}
+},
+
+bab2: {
+  "Asuransi & Ketenagakerjaan": { rows: [
+    {"k":"ろうどうさいがいほしょうほけんほう","r":"roudou saigai hoshou hoken hou","a":"UU asuransi ganti rugi kecelakaan kerja","kj":"労働災害補償保険法"},
+    {"k":"ぎょうむじょうさいがい","r":"gyoumujou saigai","a":"Kecelakaan di lingkungan kerja","kj":"業務上災害"},
+    {"k":"つうきんさいがい","r":"tsuukin saigai","a":"Kecelakaan saat menuju tempat kerja","kj":"通勤災害"},
+    {"k":"ろうさいかくし","r":"rousai kakushi","a":"Penyembunyian kecelakaan kerja","kj":"労災隠し"},
+    {"k":"こようほけんほう","r":"koyou hoken hou","a":"UU asuransi ketenagakerjaan","kj":"雇用保険法"},
+    {"k":"こようほけんにじぎょう","r":"koyou hoken niji gyou","a":"2 bisnis asuransi ketenagakerjaan","kj":"雇用保険二事業"},
+    {"k":"しつぎょう","r":"shitsugyou","a":"Kehilangan pekerjaan","kj":"失業"},
+    {"k":"ざいりゅうきかん","r":"zairyuu kikan","a":"Masa izin tinggal","kj":"在留期間"},
+    {"k":"けんせつろうどうしゃこようかいぜんほう","r":"kensetsu roudousha koyou kaizen hou","a":"UU peningkatan perekrutan pekerja konstruksi","kj":"建設労働者雇用改善法"},
+    {"k":"じかんがいろうどうじょうげんきせい","r":"jikangai roudou jougen kisei","a":"Aturan jumlah maksimal lembur","kj":"時間外労働上限規制"},
+    {"k":"ほごぐ","r":"hogogu","a":"Alat pelindung","kj":"保護具"},
+    {"k":"フルハーネスがた","r":"furu haanesu gata","a":"Tipe full harness","kj":"フルハーネス型"}
+  ]},
+  "Pengembangan Kemampuan & Industri Konstruksi": { rows: [
+    {"k":"しょくぎょうのうりょくかいはつそくしんほう","r":"shokugyou nouryoku kaihatsu sokushin hou","a":"UU promosi pengembangan kemampuan profesi","kj":"職業能力開発促進法"},
+    {"k":"しょくぎょうくんれん","r":"shokugyou kunren","a":"Pelatihan profesi","kj":"職業訓練"},
+    {"k":"ぎのうけんてい","r":"ginou kentei","a":"Ujian keterampilan","kj":"技能検定"},
+    {"k":"ぎのうし","r":"ginoushi","a":"Teknisi terampil","kj":"技能士"},
+    {"k":"けんせつぎょうほう","r":"kensetsugyou hou","a":"UU industri konstruksi","kj":"建設業法"}
+  ]},
+  "UU Standar Bangunan": { rows: [
+    {"k":"けんちくきじゅんほう","r":"kenchiku kijun hou","a":"Undang-undang standar bangunan","kj":"建築基準法"},
+    {"k":"たんたいきてい","r":"tantai kitei","a":"Peraturan individu","kj":"単体規定"},
+    {"k":"しゅうだんきてい","r":"shuudan kitei","a":"Peraturan kelompok","kj":"集団規定"},
+    {"k":"あんぜんせい","r":"anzensei","a":"Keamanan","kj":"安全性"},
+    {"k":"たいきゅうせい","r":"taikyuusei","a":"Keawetan","kj":"耐久性"},
+    {"k":"たいしんせい","r":"taishinsei","a":"Ketahanan gempa","kj":"耐震性"},
+    {"k":"ぼうか","r":"bouka","a":"Pencegahan kebakaran","kj":"防火"},
+    {"k":"けんぺいりつ","r":"kenpeiritsu","a":"Rasio cakupan bangunan","kj":"建ぺい率"},
+    {"k":"としけいかくくいきない","r":"toshi keikaku kuiki nai","a":"Dalam wilayah tata kota","kj":"都市計画区域内"},
+    {"k":"じゅんとしけいかくくいきない","r":"jun toshi keikaku kuiki nai","a":"Wilayah tata semi kota","kj":"準都市計画区域内"}
+  ]},
+  "Limbah & Daur Ulang": { rows: [
+    {"k":"はいきぶつしょりほう","r":"haikibutsu shori hou","a":"UU pembuangan limbah","kj":"廃棄物処理法"},
+    {"k":"はいきぶつのしょりおよびせいそうにかんするほうりつ","r":"haikibutsu no shori oyobi seisou ni kansuru houritsu","a":"UU terkait pembuangan limbah dan kebersihan","kj":"廃棄物の処理及び清掃に関する法律"},
+    {"k":"さんぎょうはいきぶつ","r":"sangyou haikibutsu","a":"Limbah industri","kj":"産業廃棄物"},
+    {"k":"じぎょうけいいっぱんはいきぶつ","r":"jigyoukei ippan haikibutsu","a":"Limbah usaha umum","kj":"事業系一般廃棄物"},
+    {"k":"はいきぶつしゅうしゅううんぱんぎょうのきょか","r":"haikibutsu shuushuu unpan gyou no kyoka","a":"Izin usaha pengumpulan dan pengangkutan limbah","kj":"廃棄物の収集運搬業の許可"},
+    {"k":"けんせつリサイクルほう","r":"kensetsu risaikuru hou","a":"UU daur ulang konstruksi","kj":"建設リサイクル法"},
+    {"k":"はいざい","r":"haizai","a":"Bahan limbah","kj":"廃材"}
+  ]},
+  "Polusi Udara, Kebisingan & Air": { rows: [
+    {"k":"たいきおせんぼうしほう","r":"taiki osen boushi hou","a":"Undang-undang pencegahan polusi udara","kj":"大気汚染防止法"},
+    {"k":"アスベスト","r":"asubesuto","a":"Asbestus"},
+    {"k":"とくていふんじん","r":"tokutei funjin","a":"Debu jenis khusus","kj":"特定粉じん"},
+    {"k":"そうおんきせいほう","r":"souon kisei hou","a":"UU regulasi kebisingan","kj":"騒音規制法"},
+    {"k":"しんどうぼうしほう","r":"shindou boushi hou","a":"UU pencegahan getaran","kj":"振動防止法"},
+    {"k":"じどうしゃそうおんのきょようげんど","r":"jidousha souon no kyoyou gendo","a":"Batas toleransi kebisingan kendaraan","kj":"自動車騒音の許容限度"},
+    {"k":"すいしつおだくぼうしほう","r":"suishitsu odaku boushi hou","a":"UU pencegahan polusi air","kj":"水質汚濁防止法"}
+  ]},
+  "Pemadam Kebakaran": { rows: [
+    {"k":"しょうぼうほう","r":"shoubou hou","a":"UU pemadam kebakaran","kj":"消防法"},
+    {"k":"しょうかき","r":"shoukaki","a":"APAR","kj":"消火器"},
+    {"k":"しょうかせつび","r":"shouka setsubi","a":"Peralatan pemadam api","kj":"消火設備"},
+    {"k":"けいほうせつび","r":"keihou setsubi","a":"Peralatan alarm","kj":"警報設備"}
+  ]},
+  "Air, Gas & Listrik": { rows: [
+    {"k":"すいどうほう","r":"suidou hou","a":"UU saluran air","kj":"水道法"},
+    {"k":"じょうすいどうじぎょう","r":"jousuidou jigyou","a":"Usaha pasokan air","kj":"上水道事業"},
+    {"k":"せいじょう","r":"seijou","a":"Bersih","kj":"清浄"},
+    {"k":"ほうふ","r":"houfu","a":"Melimpah","kj":"豊富"},
+    {"k":"あんか","r":"anka","a":"Murah","kj":"安価"},
+    {"k":"げすいどうほう","r":"gesuidou hou","a":"UU selokan air","kj":"下水道法"},
+    {"k":"ゆうどくガス","r":"yuudoku gasu","a":"Gas beracun","kj":"有毒ガス"},
+    {"k":"ガスじぎょうほう","r":"gasu jigyou hou","a":"UU usaha gas","kj":"ガス事業法"},
+    {"k":"でんきじぎょうほう","r":"denki jigyou hou","a":"UU usaha kelistrikan","kj":"電気事業法"},
+    {"k":"じんしんさいがい","r":"jinshin saigai","a":"Cedera pribadi","kj":"人身災害"},
+    {"k":"ろうでん","r":"rouden","a":"Kebocoran listrik","kj":"漏電"},
+    {"k":"かんでん","r":"kanden","a":"Sengatan listrik","kj":"感電"}
+  ]},
+  "Telekomunikasi, Radio & Penerbangan": { rows: [
+    {"k":"でんきつうしんじぎょうほう","r":"denki tsuushin jigyou hou","a":"UU usaha telekomunikasi","kj":"電気通信事業法"},
+    {"k":"かいせん","r":"kaisen","a":"Jaringan","kj":"回線"},
+    {"k":"ゆうせんつうしん","r":"yuusen tsuushin","a":"Komunikasi kabel","kj":"有線通信"},
+    {"k":"むせんつうしん","r":"musen tsuushin","a":"Komunikasi nirkabel","kj":"無線通信"},
+    {"k":"ひかりファイバー","r":"hikari faibaa","a":"Fiber optik","kj":"光ファイバー"},
+    {"k":"こうじたんにんしゃしかく","r":"kouji tanninsha shikaku","a":"Kualifikasi pengawas konstruksi","kj":"工事担任者資格"},
+    {"k":"でんぱほう","r":"denpa hou","a":"UU gelombang radio","kj":"電波法"},
+    {"k":"こうきょうこうじげんば","r":"koukyou kouji genba","a":"Lokasi konstruksi umum","kj":"公共工事現場"},
+    {"k":"だいきぼこうじげんば","r":"daikibo kouji genba","a":"Lokasi konstruksi skala besar","kj":"大規模工事現場"},
+    {"k":"こうくうほう","r":"koukuu hou","a":"UU penerbangan","kj":"航空法"},
+    {"k":"こうくうしょうがいとう","r":"koukuu shougai tou","a":"Lampu penghalang penerbangan","kj":"航空障害灯"},
+    {"k":"ちゅうしゃじょうほう","r":"chuushajou hou","a":"UU parkir","kj":"駐車場法"}
+  ]}
 }
 
 }; // end BUKU_SSW
@@ -7665,7 +7776,7 @@ const BOOKS = {
   minna:   { label: "Buku Modul",  data: BUKU },
   irodori: { label: "Irodori",     data: BUKU_IRODORI },
   a2:      { label: "Irodori A2",  data: BUKU_IRODORI_A2 },
-  ssw:     { label: "SSW Kensetsu", data: BUKU_SSW, noBunpou: true }
+  ssw:     { label: "SSW Kensetsu", data: BUKU_SSW, noBunpou: true, babCodes: { bab1: "1.1 - 2.1.3", bab2: "2.1.4 - 2.17" } }
 };
 
 // ─────────────────────────────────────────────────────
