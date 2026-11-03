@@ -7608,7 +7608,7 @@ bab18: {
 }; // end BUKU_IRODORI_A2
 
 // ─────────────────────────────────────────────────────
-// BUKU SSW KENSETSU — kosakata SSW Konstruksi (Quizlet: bab1 = SSW Konstruksi 1.1 - 2.1.3, 57 kata; bab2 = SSW Konstruksi 2.1.4 - 2.17, 69 kata)
+// BUKU SSW KENSETSU — kosakata SSW Konstruksi (Quizlet: bab1 = SSW Konstruksi 1.1 - 2.1.3, 57 kata; bab2 = SSW Konstruksi 2.1.4 - 2.17, 69 kata; bab3 = SSW Konstruksi 3.1 - 3.2.2, 84 kata; bab4 = SSW Konstruksi 3.2.2 - 3.2.19, 64 kata)
 // ─────────────────────────────────────────────────────
 const BUKU_SSW = {
 
@@ -7766,6 +7766,188 @@ bab2: {
     {"k":"こうくうしょうがいとう","r":"koukuu shougai tou","a":"Lampu penghalang penerbangan","kj":"航空障害灯"},
     {"k":"ちゅうしゃじょうほう","r":"chuushajou hou","a":"UU parkir","kj":"駐車場法"}
   ]}
+},
+
+bab3: {
+  "Bidang Teknik Sipil & Arsitektur": { rows: [
+    {"k":"どぼく","r":"doboku","a":"Teknik sipil","kj":"土木"},
+    {"k":"けんちく","r":"kenchiku","a":"Arsitektur","kj":"建築"},
+    {"k":"ライフライン","r":"raifurain","a":"Lifeline"},
+    {"k":"せつび","r":"setsubi","a":"Peralatan","kj":"設備"},
+    {"k":"けんせつようきかい","r":"kensetsu you kikai","a":"Mesin konstruksi","kj":"建設用機械"},
+    {"k":"ぼうはてい","r":"bouhatei","a":"Pemecah gelombang","kj":"防波堤"},
+    {"k":"ぞうえんこうじ","r":"zouen kouji","a":"Pekerjaan lanskap","kj":"造園工事"},
+    {"k":"れんが","r":"renga","a":"Batu bata","kj":"煉瓦"}
+  ]},
+  "Terowongan": { rows: [
+    {"k":"トンネルこうじ","r":"tonneru kouji","a":"Pekerjaan terowongan","kj":"トンネル工事"},
+    {"k":"さんがくトンネル","r":"sangaku tonneru","a":"Terowongan gunung","kj":"山岳トンネル"},
+    {"k":"ふきつけコンクリート","r":"fukitsuke konkuriito","a":"Shotcrete","kj":"吹付コンクリート"},
+    {"k":"こうせいしほこう","r":"kousei shihokou","a":"Penopang baja","kj":"鋼製支保工"},
+    {"k":"ナトム","r":"natomu","a":"Metode konstruksi NATM"},
+    {"k":"かいさくトンネル","r":"kaisaku tonneru","a":"Terowongan terbuka","kj":"開削トンネル"},
+    {"k":"うめもどすこうほう","r":"umemodosu kouhou","a":"Metode penimbunan kembali","kj":"埋め戻す工法"},
+    {"k":"シールドトンネル","r":"shiirudo tonneru","a":"Terowongan perisai"},
+    {"k":"すいしんトンネル","r":"suishin tonneru","a":"Terowongan propulsi","kj":"推進トンネル"},
+    {"k":"はっしんたてこう","r":"hasshin tatekou","a":"Lubang keberangkatan","kj":"発進立坑"},
+    {"k":"とうたつたてこう","r":"toutatsu tatekou","a":"Lubang kedatangan","kj":"到達立坑"},
+    {"k":"くっしんき","r":"kusshinki","a":"Mesin penggali","kj":"掘進機"},
+    {"k":"ジャッキ","r":"jakki","a":"Dongkrak"},
+    {"k":"でんりょく","r":"denryoku","a":"Tenaga listrik","kj":"電力"},
+    {"k":"つうしん","r":"tsuushin","a":"Komunikasi","kj":"通信"},
+    {"k":"かんろ","r":"kanro","a":"Conduit","kj":"管路"}
+  ]},
+  "Jembatan & Teknik Sipil Lainnya": { rows: [
+    {"k":"きょうりょうこうじ","r":"kyouryou kouji","a":"Pekerjaan jembatan penyebrangan perairan","kj":"橋梁工事"},
+    {"k":"かぶこう","r":"kabukou","a":"Konstruksi bawah","kj":"下部工"},
+    {"k":"じょうぶこう","r":"joubukou","a":"Konstruksi atas","kj":"上部工"},
+    {"k":"きそこうじ","r":"kiso kouji","a":"Pekerjaan fondasi","kj":"基礎工事"},
+    {"k":"ベントこうほう","r":"bento kouhou","a":"Metode penyangga sementara (bent)","kj":"ベント工法"},
+    {"k":"ケーブルエレクションこうほう","r":"keeburu erekushon kouhou","a":"Metode pengangkatan kabel","kj":"ケーブルエレクション工法"},
+    {"k":"おくりだしこうほう","r":"okuridashi kouhou","a":"Metode pengiriman","kj":"送り出し工法"},
+    {"k":"トラベラークレーンベントこうほう","r":"toraberaa kureen bento kouhou","a":"Metode traveller crane","kj":"トラベラークレーンベント工法"},
+    {"k":"フローティングクレーンこうほう","r":"furootingu kureen kouhou","a":"Metode floating crane","kj":"フローティングクレーン工法"},
+    {"k":"かいようどぼくこうじ","r":"kaiyou doboku kouji","a":"Pekerjaan teknik sipil kelautan","kj":"海洋土木工事"},
+    {"k":"てつどうこうじ","r":"tetsudou kouji","a":"Pekerjaan rel kereta","kj":"鉄道工事"},
+    {"k":"じょうげすいどうこうじ","r":"jougesuidou kouji","a":"Pekerjaan suplai air dan drainase","kj":"上下水道工事"},
+    {"k":"すいどうしせつこうじ","r":"suidou shisetsu kouji","a":"Pekerjaan fasilitas air bersih","kj":"水道施設工事"},
+    {"k":"げすいどうはいかんこうじ","r":"gesuidou haikan kouji","a":"Pekerjaan pipa drainase","kj":"下水道配管工事"},
+    {"k":"さいがいふっきゅうこうじ","r":"saigai fukkyuu kouji","a":"Pekerjaan pemulihan bencana","kj":"災害復旧工事"},
+    {"k":"くうこうけんせつこうじ","r":"kuukou kensetsu kouji","a":"Pekerjaan konstruksi bandara","kj":"空港建設工事"},
+    {"k":"とちくかくせいりこうじ","r":"tochi kukaku seiri kouji","a":"Pekerjaan penyesuaian lahan","kj":"土地区画整理工事"},
+    {"k":"のうぎょうどぼくこうじ","r":"nougyou doboku kouji","a":"Pekerjaan teknik sipil pertanian","kj":"農業土木工事"},
+    {"k":"しんりんどぼくこうじ","r":"shinrin doboku kouji","a":"Pekerjaan teknik sipil kehutanan","kj":"森林土木工事"}
+  ]},
+  "Pekerjaan Bangunan Gedung": { rows: [
+    {"k":"じゅんびこうじ","r":"junbi kouji","a":"Pekerjaan persiapan","kj":"準備工事"},
+    {"k":"きゅうはいすいせつびこうじ","r":"kyuuhaisui setsubi kouji","a":"Pekerjaan peralatan suplai dan drainase air","kj":"給排水設備工事"},
+    {"k":"やまどめこうじ","r":"yamadome kouji","a":"Pekerjaan menyangga tanah","kj":"山留工事"},
+    {"k":"くいこうじ","r":"kui kouji","a":"Pekerjaan pemancangan","kj":"杭工事"},
+    {"k":"どこうじ","r":"do kouji","a":"Pekerjaan tanah","kj":"土工事"},
+    {"k":"ちかくたいこうじ","r":"chika kutai kouji","a":"Pekerjaan kerangka bawah tanah","kj":"地下躯体工事"},
+    {"k":"てっきんつぎてこうじ","r":"tekkin tsugite kouji","a":"Pekerjaan sambungan baja bertulang","kj":"鉄筋継ぎ手工事"},
+    {"k":"かたわくこうじ","r":"katawaku kouji","a":"Pekerjaan bekisting","kj":"型枠工事"},
+    {"k":"あっそうこうじ","r":"assou kouji","a":"Pekerjaan pemompaan beton","kj":"圧送工事"},
+    {"k":"ちじょうくたいこうじ","r":"chijou kutai kouji","a":"Pekerjaan kerangka permukaan tanah","kj":"地上躯体工事"},
+    {"k":"てっこつこうじ","r":"tekkotsu kouji","a":"Pekerjaan rangka baja","kj":"鉄骨工事"},
+    {"k":"ないがいそうしあげこうじ","r":"naigaisou shiage kouji","a":"Pekerjaan finishing interior/eksterior","kj":"内外装仕上げ工事"},
+    {"k":"いしこうじ","r":"ishi kouji","a":"Pekerjaan pemasangan batu","kj":"石工事"}
+  ]},
+  "Gempa, Perawatan & AC": { rows: [
+    {"k":"たいしんこうじ","r":"taishin kouji","a":"Pekerjaan resistensi seismik","kj":"耐震工事"},
+    {"k":"しんど","r":"shindo","a":"Skala intensitas gempa (0-7)","kj":"震度"},
+    {"k":"せいしんこうじ","r":"seishin kouji","a":"Pekerjaan redaman seismik","kj":"制振工事"},
+    {"k":"めんしんこうじ","r":"menshin kouji","a":"Pekerjaan isolasi seismik","kj":"免震工事"},
+    {"k":"いじ・ほぜん・かいしゅうこうじ","r":"iji hozen kaishuu kouji","a":"Pekerjaan pemeliharaan/perawatan/renovasi","kj":"維持・保全・改修工事"},
+    {"k":"くうちょうせつび","r":"kuuchou setsubi","a":"Peralatan AC","kj":"空調設備"},
+    {"k":"アンカー","r":"ankaa","a":"Jangkar"}
+  ]},
+  "Listrik & Telekomunikasi": { rows: [
+    {"k":"でんきこうじ","r":"denki kouji","a":"Pekerjaan listrik","kj":"電気工事"},
+    {"k":"かんでんじこ","r":"kanden jiko","a":"Kecelakaan sengatan listrik","kj":"感電事故"},
+    {"k":"つうでん","r":"tsuuden","a":"Aliran listrik","kj":"通電"},
+    {"k":"でんきつうしんこうじ","r":"denki tsuushin kouji","a":"Pekerjaan telekomunikasi","kj":"電気通信工事"},
+    {"k":"でんわこうじ","r":"denwa kouji","a":"Pekerjaan telepon","kj":"電話工事"},
+    {"k":"アクセスせつび","r":"akusesu setsubi","a":"Peralatan akses","kj":"アクセス設備"},
+    {"k":"ゆうせん","r":"yuusen","a":"Sambungan kabel","kj":"有線"},
+    {"k":"むせん","r":"musen","a":"Sambungan nirkabel","kj":"無線"},
+    {"k":"ひかりファイバー","r":"hikari faibaa","a":"Fiber optik","kj":"光ファイバー"},
+    {"k":"つうしんようケーブル","r":"tsuushin you keeburu","a":"Kabel untuk komunikasi","kj":"通信用ケーブル"},
+    {"k":"マンホール","r":"manhooru","a":"Manhole"},
+    {"k":"えいせいつうしん","r":"eisei tsuushin","a":"Komunikasi satelit","kj":"衛星通信"},
+    {"k":"いどうたいつうしん","r":"idoutai tsuushin","a":"Komunikasi mobile","kj":"移動体通信"}
+  ]},
+  "Peralatan Gedung & Pekerjaan Tanah": { rows: [
+    {"k":"くうきちょうわせつび","r":"kuuki chouwa setsubi","a":"Pekerjaan peralatan pengatur udara","kj":"空気調和設備"},
+    {"k":"れいとうくうちょうせつびこうじ","r":"reitou kuuchou setsubi kouji","a":"Pekerjaan peralatan pendingin udara","kj":"冷凍空調設備工事"},
+    {"k":"しょうぼうせつびこうじ","r":"shoubou setsubi kouji","a":"Pekerjaan peralatan pencegahan kebakaran","kj":"消防設備工事"},
+    {"k":"きゅうはいすいえいせいせつびこうじ","r":"kyuuhaisui eisei setsubi kouji","a":"Pekerjaan peralatan kebersihan suplai air dan drainase","kj":"給排水衛生設備工事"},
+    {"k":"ほおんほれいこうじ","r":"hoon horei kouji","a":"Pekerjaan menjaga suhu panas dan dingin","kj":"保温保冷工事"},
+    {"k":"スプリンクラー","r":"supurinkuraa","a":"Alat penyiram"},
+    {"k":"うめもどしさぎょう","r":"umemodoshi sagyou","a":"Pekerjaan penimbunan kembali","kj":"埋め戻し作業"},
+    {"k":"しめかためさぎょう","r":"shimekatame sagyou","a":"Pekerjaan pemadatan","kj":"締固め作業"}
+  ]}
+},
+
+bab4: {
+  "Pekerjaan Air & Kelautan": { rows: [
+    {"k":"かいようどぼくこうじ","r":"kaiyou doboku kouji","a":"Pekerjaan teknik sipil kelautan","kj":"海洋土木工事"},
+    {"k":"しゅんせつせん","r":"shunsetsusen","a":"Kapal pengeruk","kj":"浚渫船"},
+    {"k":"さくせいこうじ","r":"sakusei kouji","a":"Pekerjaan pengeboran sumur","kj":"さく井工事"},
+    {"k":"ウェルポイントこうじ","r":"weru pointo kouji","a":"Pekerjaan titik sumur","kj":"ウェルポイント工事"},
+    {"k":"はいすい","r":"haisui","a":"Drainase","kj":"排水"},
+    {"k":"きゅうすいかん","r":"kyuusuikan","a":"Pipa suplai air","kj":"給水管"},
+    {"k":"ディープウェル","r":"diipu weru","a":"Sumur dalam"}
+  ]},
+  "Pekerjaan Perkerasan Jalan": { rows: [
+    {"k":"ほそうこうじ","r":"hosou kouji","a":"Pekerjaan perkerasan","kj":"舗装工事"},
+    {"k":"アスファルト","r":"asufaruto","a":"Aspal"},
+    {"k":"コンクリート","r":"konkuriito","a":"Beton"},
+    {"k":"ろしょうこうじ","r":"roshou kouji","a":"Pekerjaan tanah dasar","kj":"路床工事"},
+    {"k":"ろばんこうじ","r":"roban kouji","a":"Pekerjaan lapisan fondasi","kj":"路盤工事"},
+    {"k":"きそうこうじ","r":"kisou kouji","a":"Pekerjaan lapisan dasar","kj":"基層工事"},
+    {"k":"ひょうそうこうじ","r":"hyousou kouji","a":"Pekerjaan lapisan permukaan","kj":"表層工事"}
+  ]},
+  "Pekerjaan Tanah & Alat Berat": { rows: [
+    {"k":"きかいどこうじ","r":"kikai do kouji","a":"Pekerjaan tanah dengan mesin","kj":"機械土工事"},
+    {"k":"くっさくこうじ","r":"kussaku kouji","a":"Pekerjaan penggalian","kj":"掘削工事"},
+    {"k":"ブルドーザ","r":"burudoozaa","a":"Bulldozer"},
+    {"k":"ダンプトラック","r":"danpu torakku","a":"Dump truck"},
+    {"k":"ホイールローダ","r":"hoiiru roodaa","a":"Wheel loader"},
+    {"k":"もりど","r":"morido","a":"Penimbunan tanah","kj":"盛り土"},
+    {"k":"しめかため","r":"shimekatame","a":"Pemadatan","kj":"締固め"},
+    {"k":"ゆあつショベル","r":"yuatsu shoberu","a":"Ekskavator hidrolik","kj":"油圧ショベル"}
+  ]},
+  "Pekerjaan Pemancangan": { rows: [
+    {"k":"くいこうじ","r":"kui kouji","a":"Pekerjaan tiang pancang","kj":"杭工事"},
+    {"k":"こうかん","r":"koukan","a":"Pipa baja","kj":"鋼管"},
+    {"k":"きょうりょう","r":"kyouryou","a":"Jembatan perairan","kj":"橋梁"},
+    {"k":"じばん","r":"jiban","a":"Tanah dasar (ground)","kj":"地盤"},
+    {"k":"きせいくいこうほう","r":"kisei kui kouhou","a":"Metode konstruksi tiang pancang jadi","kj":"既成杭工法"},
+    {"k":"ばしょうちくいこうほう","r":"basho uchi kui kouhou","a":"Metode konstruksi tiang pancang di tempat","kj":"場所打ち杭工法"},
+    {"k":"そうおん","r":"souon","a":"Kebisingan","kj":"騒音"},
+    {"k":"しんどう","r":"shindou","a":"Getaran","kj":"振動"}
+  ]},
+  "Perancah & Pengecatan": { rows: [
+    {"k":"とびこうじ・とびしょく","r":"tobi kouji tobi shoku","a":"Pekerjaan perancah","kj":"とび工事・とび職"},
+    {"k":"とび","r":"tobi","a":"Elang paria","kj":"鳶"},
+    {"k":"とそうこうじ","r":"tosou kouji","a":"Pekerjaan pengecatan","kj":"塗装工事"},
+    {"k":"あしばとび","r":"ashiba tobi","a":"Pemasang perancah untuk pijakan","kj":"足場とび"},
+    {"k":"たいしんせい","r":"taishinsei","a":"Ketahanan gempa","kj":"耐震性"},
+    {"k":"たてにげほうしき","r":"tatenige houshiki","a":"Metode pasang-lari (memasang dari belakang ke depan)","kj":"立て逃げ方式"},
+    {"k":"すいへいつみあげほうしき","r":"suihei tsumiage houshiki","a":"Metode susun horizontal (memasang dari bawah ke atas)","kj":"水平積み上げ方式"},
+    {"k":"いどうクレーン","r":"idou kureen","a":"Mobile crane","kj":"移動クレーン"},
+    {"k":"タワークレーン","r":"tawaa kureen","a":"Tower crane"}
+  ]},
+  "Rebar, Sambungan & Las": { rows: [
+    {"k":"てっきんこうじ","r":"tekkin kouji","a":"Pekerjaan rebar (reinforced bar)","kj":"鉄筋工事"},
+    {"k":"てっきんせこう","r":"tekkin sekou","a":"Pekerjaan konstruksi rebar","kj":"鉄筋施工"},
+    {"k":"かたわくこうじ","r":"katawaku kouji","a":"Pekerjaan bekisting","kj":"型枠工事"},
+    {"k":"てっきんつぎてこうじ","r":"tekkin tsugite kouji","a":"Pekerjaan sambungan rebar","kj":"鉄筋継手工事"},
+    {"k":"ガスあっせつつぎて","r":"gasu assetsu tsugite","a":"Penyambungan las tekan gas","kj":"ガス圧接継手"},
+    {"k":"ようせつつぎて","r":"yousetsu tsugite","a":"Penyambungan las","kj":"溶接継手"},
+    {"k":"あっせつ","r":"assetsu","a":"Las tekan","kj":"圧接"},
+    {"k":"ガスようせつ","r":"gasu yousetsu","a":"Las gas","kj":"ガス溶接"},
+    {"k":"レーザーようせつ","r":"reezaa yousetsu","a":"Las laser","kj":"レーザー溶接"},
+    {"k":"ビームようせつ","r":"biimu yousetsu","a":"Las sinar","kj":"ビーム溶接"}
+  ]},
+  "Beton, Lanskap & Finishing": { rows: [
+    {"k":"かたわくこうじ","r":"katawaku kouji","a":"Pekerjaan bekisting","kj":"型枠工事"},
+    {"k":"コンクリートあっそうこうじ","r":"konkuriito assou kouji","a":"Pekerjaan pemompaan beton","kj":"コンクリート圧送工事"},
+    {"k":"ネコ","r":"neko","a":"Gerobak dorong"},
+    {"k":"レディミクスドコンクリート","r":"redi mikusudo konkuriito","a":"Beton siap pakai"},
+    {"k":"なまコン","r":"nama kon","a":"Beton siap pakai","kj":"生コン"},
+    {"k":"とそうこうじ","r":"tosou kouji","a":"Pekerjaan pengecatan","kj":"塗装工事"},
+    {"k":"ぞうえんこうじ","r":"zouen kouji","a":"Pekerjaan lanskap","kj":"造園工事"},
+    {"k":"ていえん","r":"teien","a":"Taman","kj":"庭園"},
+    {"k":"ぞうえん","r":"zouen","a":"Lanskap","kj":"造園"},
+    {"k":"モルタル","r":"morutaru","a":"Mortar"},
+    {"k":"しっくい","r":"shikkui","a":"Stuko","kj":"漆喰"},
+    {"k":"プラスター","r":"purasutaa","a":"Plesteran"},
+    {"k":"けんちくだいくこうじ","r":"kenchiku daiku kouji","a":"Pekerjaan konstruksi pertukangan","kj":"建築大工工事"},
+    {"k":"しょうじ","r":"shouji","a":"Pintu kertas","kj":"障子"},
+    {"k":"ふすま","r":"fusuma","a":"Pintu kertas buram"}
+  ]}
 }
 
 }; // end BUKU_SSW
@@ -7776,7 +7958,7 @@ const BOOKS = {
   minna:   { label: "Buku Modul",  data: BUKU },
   irodori: { label: "Irodori",     data: BUKU_IRODORI },
   a2:      { label: "Irodori A2",  data: BUKU_IRODORI_A2 },
-  ssw:     { label: "SSW Kensetsu", data: BUKU_SSW, noBunpou: true, babCodes: { bab1: "1.1 - 2.1.3", bab2: "2.1.4 - 2.17" } }
+  ssw:     { label: "SSW Kensetsu", data: BUKU_SSW, noBunpou: true, babCodes: { bab1: "1.1 - 2.1.3", bab2: "2.1.4 - 2.17", bab3: "3.1 - 3.2.2", bab4: "3.2.2 - 3.2.19" } }
 };
 
 // ─────────────────────────────────────────────────────
