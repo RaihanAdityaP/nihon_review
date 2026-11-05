@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kensetsu · 日本語復習</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Space+Mono:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=202611052300">
+<script>
+  // Terapkan tema tersimpan sebelum render, biar tidak ada "flash" warna salah
+  (function(){
+    var saved = localStorage.getItem('nihongo_theme');
+    var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body>
+<script src="../assets/js/layout.js?v=202611052300"></script>
+<main>
+
+<div id="pageKensetsu" class="page active">
+  <div id="ksHome">
+    <div class="sec-title">建設 Kensetsu</div>
+    <div class="sec-sub">Buku bacaan SSW Kensetsu. Ketuk kata untuk artinya, cari isi buku, atau minta AI merangkum.</div>
+    <div class="ks-qrow">
+      <input type="search" id="ksQ" class="input-ai ks-q" placeholder="Cari di buku (Jepang / terjemahan)…" oninput="ksOnSearch()" autocomplete="off">
+      <button class="fs-open" id="ksFilterBtn" onclick="KS_FS.open()">Filter</button>
+    </div>
+    <div id="ksResults"></div>
+    <div id="ksList"></div>
+  </div>
+  <div id="ksRead" hidden></div>
+</div>
+
+</main>
+<script src="../assets/data.js?v=202611052300"></script>
+<script src="../assets/kensetsu-data.js?v=202611052300"></script>
+<script src="../assets/jlpt-levels.js?v=202611052300"></script>
+<script src="../assets/js/notes.js?v=202611052300"></script>
+<script src="../assets/js/kamus-sheet.js?v=202611052300"></script>
+<script src="../assets/verb-types.js?v=202611052300"></script>
+<script src="../assets/js/verbs.js?v=202611052300"></script>
+<script src="../assets/js/filters.js?v=202611052300"></script>
+<script src="../assets/js/kamus-core.js?v=202611052300"></script>
+<script src="../assets/js/ai-settings.js?v=202611052300"></script>
+<script src="../assets/js/filter-sheet.js?v=202611052300"></script>
+<script src="../assets/js/page-kensetsu.js?v=202611052300"></script>
+<script>initKensetsu();</script>
+</body>
+</html>

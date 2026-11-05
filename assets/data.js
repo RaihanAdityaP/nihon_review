@@ -7948,6 +7948,141 @@ bab4: {
     {"k":"しょうじ","r":"shouji","a":"Pintu kertas","kj":"障子"},
     {"k":"ふすま","r":"fusuma","a":"Pintu kertas buram"}
   ]}
+},
+
+bab5: {
+  "Atap & Dinding Luar": { rows: [
+    {"k":"やねこうじ","r":"yane kouji","a":"Pekerjaan atap","kj":"屋根工事"},
+    {"k":"かわら","r":"kawara","a":"Genting","kj":"瓦"},
+    {"k":"あまじまい","r":"amajimai","a":"Mencegah masuknya hujan","kj":"雨仕舞"},
+    {"k":"がいへきこうじ","r":"gaiheki kouji","a":"Pekerjaan dinding luar","kj":"外壁工事"},
+    {"k":"なみいた","r":"namiita","a":"Pelat bergelombang","kj":"波板"},
+    {"k":"かんばん","r":"kanban","a":"Reklame","kj":"看板"}
+  ]},
+  "Finishing Interior, Isolasi & Anti-air": { rows: [
+    {"k":"ないそうしあげこうじ","r":"naisou shiage kouji","a":"Pekerjaan finishing interior","kj":"内装仕上げ工事"},
+    {"k":"ボードはり","r":"boodo hari","a":"Pemasangan papan","kj":"ボード貼り"},
+    {"k":"せっこうボード","r":"sekkou boodo","a":"Papan gipsum","kj":"石膏ボード"},
+    {"k":"でこぼこ","r":"dekoboko","a":"Bergelombang (Tidak simetris)","kj":"凸凹"},
+    {"k":"サッシこうじ","r":"sasshi kouji","a":"Pekerjaan sash","kj":"サッシ工事"},
+    {"k":"あみど","r":"amido","a":"Tirai (jendela, pintu kasa)","kj":"網戸"},
+    {"k":"ふきつけウレタンだんねつこうじ","r":"fukitsuke uretan dannetsu kouji","a":"Pekerjaan isolasi uretan semprot (polyurethane)","kj":"吹付けウレタン断熱工事"},
+    {"k":"だんねつ","r":"dannetsu","a":"Isolasi panas","kj":"断熱"},
+    {"k":"ぼうすいこうじ","r":"bousui kouji","a":"Pekerjaan anti-air","kj":"防水工事"}
+  ]},
+  "Pekerjaan Batu": { rows: [
+    {"k":"いしこうじ","r":"ishi kouji","a":"Pekerjaan pemasangan batu","kj":"石工事"},
+    {"k":"だいりせき","r":"dairiseki","a":"Marmer","kj":"大理石"},
+    {"k":"コンクリートブロック","r":"konkuriito burokku","a":"Balok beton"},
+    {"k":"みかげいし","r":"mikageishi","a":"Granit","kj":"御影石"},
+    {"k":"ぎせき","r":"giseki","a":"Batu tiruan","kj":"擬石"}
+  ]},
+  "Peralatan Listrik": { rows: [
+    {"k":"でんきせつびこうじ","r":"denki setsubi kouji","a":"Pekerjaan peralatan listrik","kj":"電気設備工事"},
+    {"k":"でんきこうじし","r":"denki koujishi","a":"Ahli konstruksi listrik","kj":"電気工事士"},
+    {"k":"がいせんこうじ","r":"gaisen kouji","a":"Pekerjaan jalur eksternal","kj":"外線工事"},
+    {"k":"かくうはいせん","r":"kakuu haisen","a":"Pengabelan overhead","kj":"架空配線"},
+    {"k":"ちちゅうはいせん","r":"chichuu haisen","a":"Pengabelan bawah tanah","kj":"地中配線"},
+    {"k":"ぼうし","r":"boushi","a":"Pencegahan","kj":"防止"},
+    {"k":"かんでん","r":"kanden","a":"Sengatan listrik","kj":"感電"},
+    {"k":"ろうでん","r":"rouden","a":"Kebocoran listrik","kj":"漏電"},
+    {"k":"スイッチ","r":"suicchi","a":"Saklar"},
+    {"k":"コンセント","r":"konsento","a":"Stop kontak"}
+  ]},
+  "Telekomunikasi": { rows: [
+    {"k":"でんきつうしんこうじ","r":"denki tsuushin kouji","a":"Pekerjaan telekomunikasi","kj":"電気通信工事"},
+    {"k":"ゆうせんせつび","r":"yuusen setsubi","a":"Peralatan kabel","kj":"有線設備"},
+    {"k":"でんちゅう","r":"denchuu","a":"Tiang listrik","kj":"電柱"},
+    {"k":"ケーブル","r":"keeburu","a":"Kabel"},
+    {"k":"ひかりファイバー","r":"hikari faibaa","a":"Fiber optik","kj":"光ファイバー"},
+    {"k":"むせんせつび","r":"musen setsubi","a":"Peralatan nirkabel","kj":"無線設備"},
+    {"k":"アンテナ","r":"antena","a":"Antena"},
+    {"k":"かんろ","r":"kanro","a":"Konduit","kj":"管路"},
+    {"k":"マンホール","r":"manhooru","a":"Manhole"}
+  ]},
+  "Pemipaan & Pendingin Udara": { rows: [
+    {"k":"はいかんこうじ","r":"haikan kouji","a":"Pekerjaan pemipaan","kj":"配管工事"},
+    {"k":"きゅうすい","r":"kyuusui","a":"Suplai air","kj":"給水"},
+    {"k":"はいすい","r":"haisui","a":"Drainase","kj":"排水"},
+    {"k":"せつだん","r":"setsudan","a":"Pemotongan","kj":"切断"},
+    {"k":"せつごう","r":"setsugou","a":"Penyambungan","kj":"接合"},
+    {"k":"れいとうくうきちょうわききこうじ","r":"reitou kuuki chouwa kiki kouji","a":"Pekerjaan peralatan pendingin dan pengatur udara","kj":"冷凍空気調和機器工事"},
+    {"k":"れいとうこ","r":"reitouko","a":"Freezer","kj":"冷凍庫"},
+    {"k":"れいばい","r":"reibai","a":"Zat pendingin","kj":"冷媒"},
+    {"k":"パッケージがた","r":"pakkeeji gata","a":"(AC) tipe paket","kj":"パッケージ型"},
+    {"k":"セパレートがた","r":"separeeto gata","a":"(AC) tipe terpisah","kj":"セパレート型"},
+    {"k":"かていようエアコン","r":"kateiyou eakon","a":"AC rumah tangga","kj":"家庭用エアコン"}
+  ]},
+  "Isolasi Panas & Tungku": { rows: [
+    {"k":"ほおんほれいこうじ","r":"hoon horei kouji","a":"Pekerjaan menjaga suhu panas dan dingin","kj":"保温保冷工事"},
+    {"k":"あんぜんたいさく","r":"anzen taisaku","a":"Penanggulangan keamanan","kj":"安全対策"},
+    {"k":"ちくろ","r":"chikuro","a":"Pembuatan tungku","kj":"築炉"}
+  ]},
+  "Peralatan Pemadam Kebakaran": { rows: [
+    {"k":"しょうぼうせつびこうじ","r":"shoubou setsubi kouji","a":"Pekerjaan peralatan pemadam kebakaran","kj":"消防設備工事"},
+    {"k":"しょうか","r":"shouka","a":"Pemadaman api","kj":"消火"},
+    {"k":"けいほう","r":"keihou","a":"Peringatan","kj":"警報"},
+    {"k":"しょうぼうようすい","r":"shoubou yousui","a":"Air pemadam kebakaran","kj":"消防揚水"},
+    {"k":"しょうかせつび","r":"shouka setsubi","a":"Peralatan pemadam kebakaran","kj":"消火設備"},
+    {"k":"けいほうせつび","r":"keihou setsubi","a":"Peralatan alarm","kj":"警報設備"},
+    {"k":"ひなんせつび","r":"hinan setsubi","a":"Peralatan evakuasi","kj":"避難設備"}
+  ]},
+  "Pembongkaran": { rows: [
+    {"k":"かいたいこうじ","r":"kaitai kouji","a":"Pekerjaan pembongkaran","kj":"解体工事"},
+    {"k":"そうおん","r":"souon","a":"Kebisingan","kj":"騒音"},
+    {"k":"らっか","r":"rakka","a":"Jatuh","kj":"落下"},
+    {"k":"アスベスト","r":"asubesuto","a":"Asbes"}
+  ]}
+},
+
+bab6: {
+  "Kualifikasi & Izin": { rows: [
+    {"k":"しかく","r":"shikaku","a":"Kualifikasi","kj":"資格"},
+    {"k":"めんきょ","r":"menkyo","a":"Izin","kj":"免許"},
+    {"k":"ぎのうこうしゅう","r":"ginou koushuu","a":"Pelatihan keterampilan","kj":"技能講習"},
+    {"k":"とくべつきょういく","r":"tokubetsu kyouiku","a":"Pendidikan khusus","kj":"特別教育"},
+    {"k":"ぎのうこうしゅうしゅうりょうしょう","r":"ginou koushuu shuuryoushou","a":"Sertifikat penyelesaian pelatihan keterampilan","kj":"技能講習終了証"}
+  ]},
+  "Alat Berat & Peralatan": { rows: [
+    {"k":"クレーン","r":"kureen","a":"Crane"},
+    {"k":"デリック","r":"derikku","a":"Derek"},
+    {"k":"いどうしき","r":"idoushiki","a":"Mobile (dapat bergerak)","kj":"移動式"},
+    {"k":"じゅうき","r":"juuki","a":"Alat berat","kj":"重機"},
+    {"k":"しゃりょう","r":"sharyou","a":"Kendaraan/mobil konstruksi","kj":"車両"},
+    {"k":"まきあげき","r":"makiageki","a":"Mesin penggulung","kj":"巻き上げ機"},
+    {"k":"フォークリフト","r":"fooku rifuto","a":"Forklift"},
+    {"k":"ショベルローダー","r":"shoberu roodaa","a":"Shovel loader"},
+    {"k":"といし","r":"toishi","a":"Batu gerinda","kj":"砥石"}
+  ]},
+  "Las & Peledakan": { rows: [
+    {"k":"アークようせつ","r":"aaku yousetsu","a":"Las busur","kj":"アーク溶接"},
+    {"k":"アセチレンようせつ","r":"asechiren yousetsu","a":"Las asetilena","kj":"アセチレン溶接"},
+    {"k":"じゅうでんでんろ","r":"juuden denro","a":"Sirkuit pengisian daya","kj":"充電電炉"},
+    {"k":"はっぱ","r":"happa","a":"Peledakan","kj":"発破"}
+  ]},
+  "Pekerjaan Berbahaya & Kesehatan": { rows: [
+    {"k":"さんけつさぎょう","r":"sanketsu sagyou","a":"Pekerjaan kekurangan oksigen","kj":"酸欠作業"},
+    {"k":"さんけつぼうしょう","r":"sanketsu boushou","a":"Gejala kekurangan oksigen","kj":"酸欠乏症"},
+    {"k":"りゅうかすいそちゅうどく","r":"ryuuka suiso chuudoku","a":"Keracunan hidrogen sulfida","kj":"硫化水素中毒"},
+    {"k":"ふんじん","r":"funjin","a":"Debu","kj":"粉じん"},
+    {"k":"ゆうがいぶっしつ","r":"yuugai busshitsu","a":"Zat berbahaya","kj":"有害物質"}
+  ]},
+  "Kargo & Kehidupan Bersama": { rows: [
+    {"k":"かもつ","r":"kamotsu","a":"Kargo","kj":"貨物"},
+    {"k":"はい","r":"hai","a":"Tumpukan muatan"},
+    {"k":"きょうどうせいかつ","r":"kyoudou seikatsu","a":"Kehidupan bersama","kj":"共同生活"},
+    {"k":"きんきゅうじ","r":"kinkyuuji","a":"Darurat","kj":"緊急時"},
+    {"k":"あぶない","r":"abunai","a":"Bahaya","kj":"危ない"}
+  ]},
+  "Salam & Tata Krama": { rows: [
+    {"k":"ごあんぜんに","r":"go anzen ni","a":"Semoga selamat","kj":"ご安全に"},
+    {"k":"ごくろうさま","r":"gokurousama","a":"Gokuro-sama (terimakasih atas kerja keras)","kj":"ご苦労様"},
+    {"k":"めうえ","r":"meue","a":"Posisi lebih tinggi","kj":"目上"},
+    {"k":"おつかれさまです","r":"otsukaresama desu","a":"Terimakasih atas kerja kerasnya"},
+    {"k":"おはようございます","r":"ohayou gozaimasu","a":"Selamat pagi"},
+    {"k":"しつれいします","r":"shitsurei shimasu","a":"Permisi","kj":"失礼します"},
+    {"k":"れいぎ","r":"reigi","a":"Adab/tata krama","kj":"礼儀"}
+  ]}
 }
 
 }; // end BUKU_SSW
@@ -7958,7 +8093,7 @@ const BOOKS = {
   minna:   { label: "Buku Modul",  data: BUKU },
   irodori: { label: "Irodori",     data: BUKU_IRODORI },
   a2:      { label: "Irodori A2",  data: BUKU_IRODORI_A2 },
-  ssw:     { label: "SSW Kensetsu", data: BUKU_SSW, noBunpou: true, babCodes: { bab1: "1.1 - 2.1.3", bab2: "2.1.4 - 2.17", bab3: "3.1 - 3.2.2", bab4: "3.2.2 - 3.2.19" } }
+  ssw:     { label: "SSW Kensetsu", data: BUKU_SSW, noBunpou: true, babCodes: { bab1: "1.1 - 2.1.3", bab2: "2.1.4 - 2.17", bab3: "3.1 - 3.2.2", bab4: "3.2.2 - 3.2.19", bab5: "3.2.20 - 3.2.38", bab6: "3.3 - 4.1.6" } }
 };
 
 // ─────────────────────────────────────────────────────

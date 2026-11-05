@@ -36,6 +36,13 @@ var PAGES = [
   "group": "materi"
  },
  {
+  "slug": "kensetsu",
+  "label": "建設",
+  "title": "Kensetsu",
+  "desc": "Buku bacaan SSW Kensetsu: baca, cari, dan rangkum dengan AI.",
+  "group": "materi"
+ },
+ {
   "slug": "bunpou",
   "label": "文法",
   "title": "Bunpou",
