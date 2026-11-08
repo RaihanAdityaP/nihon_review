@@ -80,6 +80,8 @@ const QCATS_STATIC = [
   { id: 'tata-bhs',    label: 'Istilah Tata Bahasa',   t: 'kotoba' },
   { id: 'simbol',      label: 'Simbol & Tanda',        t: 'kotoba' },
   { id: 'slang',       label: 'Slang & Bahasa Anak Muda', t: 'kotoba' },
+  { id: 'lima-s',      label: '5S (Budaya Kerja)',      t: 'kotoba' },
+  { id: 'hourenso',    label: 'Hourenso (Komunikasi Kerja)', t: 'kotoba' },
   { id: 'counter',     label: 'Kata Bantu Bilangan',   t: 'counter' },
   { id: 'sifat-i',     label: 'Kata Sifat - い',        t: 'sifat' },
   { id: 'sifat-na',    label: 'Kata Sifat - な',        t: 'sifat' },
@@ -142,6 +144,10 @@ const QCATS_STATIC = [
   { id: 'buku-ssw-bab2',     label: 'SSW Kensetsu — 2.1.4 - 2.17', t: 'buku' },
   { id: 'buku-ssw-bab3',     label: 'SSW Kensetsu — 3.1 - 3.2.2', t: 'buku' },
   { id: 'buku-ssw-bab4',     label: 'SSW Kensetsu — 3.2.2 - 3.2.19', t: 'buku' },
+  { id: 'buku-ssw-bab5',     label: 'SSW Kensetsu — 3.2.20 - 3.2.38', t: 'buku' },
+  { id: 'buku-ssw-bab6',     label: 'SSW Kensetsu — 3.3 - 4.1.6', t: 'buku' },
+  { id: 'buku-ssw-bab7',     label: 'SSW Kensetsu — 4.2 - 4.2.10', t: 'buku' },
+  { id: 'buku-ssw-bab8',     label: 'SSW Kensetsu — 4.2.11 - Selesai Teori', t: 'buku' },
 ];
 
 // Kategori Bunpou TIDAK di-hardcode di sini — otomatis di-generate dari

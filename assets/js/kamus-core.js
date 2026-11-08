@@ -96,7 +96,7 @@ function buildKamusIndex() {
           if (kotobaSeen.has(dedupeKey)) return;
           kotobaSeen.add(dedupeKey);
           const resolved = resolveEntry(r);
-          KAMUS_ALL.push({ source: 'Kotoba', src: book.label, group: `${book.label} · Bab ${babIdx + 1} · ${group}`, kana: r.k, romaji: r.r, kanji: resolved.kj, arti: resolved.a, note: resolved.n });
+          KAMUS_ALL.push({ source: 'Kotoba', src: book.label, group: `${book.label} · Bab ${babIdx + 1} · ${group}`, kana: r.k, romaji: r.r, kanji: resolved.kj, arti: resolved.a, note: resolved.n, nolv: !!r.nolv });
         });
       });
     });
@@ -108,7 +108,7 @@ function buildKamusIndex() {
   if (typeof jlptLevelOf === 'function') {
     KAMUS_ALL.forEach(w => {
       if (w.source === 'Kotoba' || w.source === 'Kata Kerja' || w.source === 'Kata Sifat' || w.source === 'Counter') {
-        w.lv = w.lvKeys ? (w.lvKeys.map(k => jlptLevelOf(k)).find(Boolean) || null) : jlptLevelOf({ k: w.kana, r: w.romaji });
+        w.lv = w.lvKeys ? (w.lvKeys.map(k => jlptLevelOf(k)).find(Boolean) || null) : (w.nolv ? null : jlptLevelOf({ k: w.kana, r: w.romaji }));
       }
     });
   }

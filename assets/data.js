@@ -2076,6 +2076,20 @@ const KT={
 {k:"やだ",r:"yada",a:"ogah (slang) → いや",n:"Slang dari いや: ogah / nggak mau."},
 {k:"あいつ",r:"aitsu",a:"orang itu (jika tidak mengetahui gender)",n:"Kasar/akrab: orang itu (dipakai kalau tidak tahu atau tidak peduli gender-nya)."},
 {k:"くさ",r:"kusa",a:"ketawa; lol (slang)",kj:"草",n:"Slang internet: ketawa/lol (dari huruf w yang mirip rumput). Arti biasanya: 草 = rumput."}
+]},
+"5S (Budaya Kerja)":{rows:[
+{k:"ごエス",r:"go esu",a:"5S (lima prinsip kerapian kerja)",kj:"5S",n:"Lima kata Jepang yang semuanya berawalan S: 整理・整頓・清掃・清潔・躾. Budaya dasar di tempat kerja Jepang (pabrik, konstruksi, kantor) demi keselamatan dan efisiensi."},
+{k:"せいり",r:"seiri",a:"ringkas",kj:"整理",n:"S pertama. Memilah barang yang perlu dan tidak perlu, lalu menyingkirkan yang tidak perlu."},
+{k:"せいとん",r:"seiton",a:"rapi",kj:"整頓",n:"S kedua. Menata barang yang perlu di tempat yang jelas supaya mudah diambil dan dikembalikan."},
+{k:"せいそう",r:"seisou",a:"resik",kj:"清掃",n:"S ketiga. Membersihkan tempat kerja, alat, dan mesin (sekalian memeriksa kondisinya)."},
+{k:"せいけつ",r:"seiketsu",a:"rawat",kj:"清潔",n:"S keempat. Menjaga kondisi ringkas–rapi–resik tetap terpelihara. Arti harfiah 清潔 = bersih."},
+{k:"しつけ",r:"shitsuke",a:"rajin",kj:"躾",n:"S kelima. Disiplin: terbiasa menaati aturan dan kebiasaan yang sudah ditetapkan. Sering ditulis hiragana しつけ."}
+]},
+"Hourenso (Komunikasi Kerja)":{rows:[
+{k:"ほうれんそう",r:"hourensou",a:"Lapor-Kabari-Konsultasi (hou-ren-sou)",kj:"報連相",n:"Singkatan 報告 + 連絡 + 相談. Dibaca sama dengan bayam (ほうれん草), plesetan supaya mudah diingat. Kebiasaan komunikasi dasar di tempat kerja Jepang."},
+{k:"ほうこく",r:"houkoku",a:"lapor; melaporkan",kj:"報告",n:"Hou. Memberi tahu atasan tentang hasil atau perkembangan pekerjaan."},
+{k:"れんらく",r:"renraku",a:"kabari; menghubungi",kj:"連絡",n:"Ren. Membagikan informasi/fakta kepada orang yang perlu tahu."},
+{k:"そうだん",r:"soudan",a:"konsultasi; berdiskusi",kj:"相談",n:"Sou. Minta pendapat atau saran saat bingung sebelum memutuskan sendiri."}
 ]}
 };
 
@@ -7983,7 +7997,7 @@ bab5: {
     {"k":"がいせんこうじ","r":"gaisen kouji","a":"Pekerjaan jalur eksternal","kj":"外線工事"},
     {"k":"かくうはいせん","r":"kakuu haisen","a":"Pengabelan overhead","kj":"架空配線"},
     {"k":"ちちゅうはいせん","r":"chichuu haisen","a":"Pengabelan bawah tanah","kj":"地中配線"},
-    {"k":"ぼうし","r":"boushi","a":"Pencegahan","kj":"防止"},
+    {"k":"ぼうし","r":"boushi","a":"Pencegahan","kj":"防止","nolv":1},
     {"k":"かんでん","r":"kanden","a":"Sengatan listrik","kj":"感電"},
     {"k":"ろうでん","r":"rouden","a":"Kebocoran listrik","kj":"漏電"},
     {"k":"スイッチ","r":"suicchi","a":"Saklar"},
@@ -8069,7 +8083,7 @@ bab6: {
   ]},
   "Kargo & Kehidupan Bersama": { rows: [
     {"k":"かもつ","r":"kamotsu","a":"Kargo","kj":"貨物"},
-    {"k":"はい","r":"hai","a":"Tumpukan muatan"},
+    {"k":"はい","r":"hai","a":"Tumpukan muatan","nolv":1,"n":"Di konteks bongkar muat, はい = tumpukan muatan (stack), bukan はい yang berarti 'ya'."},
     {"k":"きょうどうせいかつ","r":"kyoudou seikatsu","a":"Kehidupan bersama","kj":"共同生活"},
     {"k":"きんきゅうじ","r":"kinkyuuji","a":"Darurat","kj":"緊急時"},
     {"k":"あぶない","r":"abunai","a":"Bahaya","kj":"危ない"}
@@ -8083,6 +8097,156 @@ bab6: {
     {"k":"しつれいします","r":"shitsurei shimasu","a":"Permisi","kj":"失礼します"},
     {"k":"れいぎ","r":"reigi","a":"Adab/tata krama","kj":"礼儀"}
   ]}
+},
+
+bab7: {
+  "Penandaan & Pengukuran (墨出し)": { rows: [
+    {"k":"すみだし","r":"sumidashi","a":"Penandaan","kj":"墨出し"},
+    {"k":"すみつぼ","r":"sumitsubo","a":"Pot tinta tradisional","kj":"墨ツボ"},
+    {"k":"レーザー","r":"reezaa","a":"Laser"},
+    {"k":"にげずみ","r":"nigezumi","a":"Tinta kabur","kj":"逃げ墨"},
+    {"k":"すいへいずみ","r":"suihei zumi","a":"Tinta horizontal","kj":"水平墨"},
+    {"k":"たてずみ","r":"tate zumi","a":"Tinta vertikal","kj":"立て墨"},
+    {"k":"すみつけ","r":"sumitsuke","a":"Penandaan tinta (pada material kayu)","kj":"墨付け"},
+    {"k":"みずぬき","r":"mizunuki","a":"Papan yang dipukul secara horizontal","kj":"水貫"},
+    {"k":"みずもり","r":"mizumori","a":"Kaleng berisi air yang dipakai untuk menentukan tingkat horizontal","kj":"水盛"},
+    {"k":"かりのかこい","r":"kari no kakoi","a":"Papan sementara","kj":"仮の囲い"},
+    {"k":"じなわばり・じなわはり","r":"jinawabari / jinawahari","a":"Penandaan permukaan tanah untuk menentukan lokasi bangunan","kj":"地縄張り"}
+  ]},
+  "Pekerjaan Tanah": { rows: [
+    {"k":"どこうじ","r":"dokouji","a":"Pekerjaan tanah","kj":"土工事"},
+    {"k":"もりど","r":"morido","a":"Penimbunan tanah","kj":"盛り土"},
+    {"k":"だんきり","r":"dan kiri","a":"Pemotongan undakan","kj":"段切り"},
+    {"k":"しめがため","r":"shime gatame","a":"Pemadatan","kj":"締固め","n":"Di Quizlet tertulis しめがため; bacaan baku 締固め adalah しめかため (lihat baris di kelompok Pengecoran Beton)."},
+    {"k":"みつじつ","r":"mitsujitsu","a":"Densitas tinggi/ditingkatkan","kj":"密実"},
+    {"k":"てんあつ","r":"tenatsu","a":"Pemadatan berguling (dengan mesin)","kj":"転圧"},
+    {"k":"うめもどし","r":"ume modoshi","a":"Penimbunan kembali","kj":"埋め戻し"},
+    {"k":"つきかため","r":"tsuki katame","a":"Penimbunan dengan meningkatkan kepadatan","kj":"突き固め"},
+    {"k":"ろばん","r":"roban","a":"Lapisan fondasi","kj":"路盤"},
+    {"k":"ろしょう","r":"roshou","a":"Tanah dasar","kj":"路床"},
+    {"k":"ひょうそう","r":"hyousou","a":"Lapisan permukaan","kj":"表層"},
+    {"k":"ねきり","r":"nekiri","a":"Menggali sampai dasar fondasi","kj":"根切り"},
+    {"k":"すぼり","r":"subori","a":"Penggalian polos","kj":"素掘り"},
+    {"k":"くっさく","r":"kussaku","a":"Penggalian","kj":"掘削"},
+    {"k":"どどめ","r":"dodome","a":"Penahan tanah","kj":"土留め"},
+    {"k":"のりめん","r":"norimen","a":"Lereng","kj":"法面"}
+  ]},
+  "Fondasi & Pelat": { rows: [
+    {"k":"きそ","r":"kiso","a":"Fondasi","kj":"基礎"},
+    {"k":"すてコンクリート","r":"sute konkuriito","a":"Beton buangan","kj":"捨てコンクリート"},
+    {"k":"ベタきそ","r":"beta kiso","a":"Fondasi alas","kj":"ベタ基礎"},
+    {"k":"スラブ","r":"surabu","a":"Slab (pelat)"},
+    {"k":"こうぞうスラブ","r":"kouzou surabu","a":"Pelat struktural","kj":"構造スラブ"},
+    {"k":"きそスラブ","r":"kiso surabu","a":"Pelat fondasi","kj":"基礎スラブ"},
+    {"k":"フラットスラブ","r":"furatto surabu","a":"Pelat datar"}
+  ]},
+  "Perancah, Rebar & Bekisting": { rows: [
+    {"k":"あしば","r":"ashiba","a":"Perancah","kj":"足場"},
+    {"k":"てっきん","r":"tekkin","a":"Rebar","kj":"鉄筋"},
+    {"k":"かたわく","r":"katawaku","a":"Bekisting","kj":"型枠"},
+    {"k":"ちどりはいきん","r":"chidori haikin","a":"Rebar tersebar","kj":"千鳥配筋"},
+    {"k":"あそび","r":"asobi","a":"Keluangan/kelonggaran"},
+    {"k":"あき","r":"aki","a":"Jarak antar rebar","nolv":1,"n":"Di sini あき = jarak/celah antar rebar (bukan 秋 'musim gugur' yang bunyinya sama)."},
+    {"k":"かんかく","r":"kankaku","a":"Interval","kj":"間隔"},
+    {"k":"けっそく","r":"kessoku","a":"Persatuan","kj":"結束"},
+    {"k":"たすきかけ","r":"tasuki kake","a":"Metode tasuki kake","kj":"たすき掛"},
+    {"k":"かただすき","r":"kata dasuki","a":"Metode katadasuki","kj":"片だすき"},
+    {"k":"かぶりあつさ","r":"kaburi atsusa","a":"Ketebalan penutup","kj":"かぶり厚さ"},
+    {"k":"しほこう","r":"shihokou","a":"Penopang","kj":"支保工"}
+  ]},
+  "Pengecoran Beton": { rows: [
+    {"k":"うつ","r":"utsu","a":"Mengecor","kj":"打つ"},
+    {"k":"ノロ","r":"noro","a":"Semen yang dilarutkan ke air"},
+    {"k":"アンコ","r":"anko","a":"Pasta keras yang menahan semen"},
+    {"k":"パンク","r":"panku","a":"Punk (bekisting pecah)"},
+    {"k":"うちこみ","r":"uchikomi","a":"Pengecoran","kj":"打ち込み"},
+    {"k":"うちつぎ","r":"uchitsugi","a":"Pengecoran sambung","kj":"打ち継ぎ"},
+    {"k":"しめかため","r":"shime katame","a":"Pemadatan","kj":"締固め"}
+  ]},
+  "Penyelesaian & Sambungan (納まり)": { rows: [
+    {"k":"おさまり","r":"osamari","a":"Fitting","kj":"納まり"},
+    {"k":"とりあい","r":"toriai","a":"Antarmuka","kj":"取り合い"},
+    {"k":"みつけ","r":"mitsuke","a":"Permukaan yang terlihat","kj":"見付け"},
+    {"k":"みえがかり","r":"miegakari","a":"Permukaan yang dapat dilihat dari celah/secara diagonal","kj":"見え掛かり"},
+    {"k":"みえかくれ","r":"miekakure","a":"Permukaan tidak terlihat","kj":"見え隠れ"},
+    {"k":"とおり","r":"toori","a":"Jalan","kj":"通り"},
+    {"k":"つら","r":"tsura","a":"Muka","kj":"面"},
+    {"k":"ろく・りく","r":"roku / riku","a":"Datar","kj":"陸"},
+    {"k":"かね","r":"kane","a":"Sudut siku-siku","kj":"矩","n":"Di konteks ini 矩 (かね) = sudut siku-siku (90°), bukan 鐘 (lonceng) yang bunyinya sama."},
+    {"k":"にげ","r":"nige","a":"Kelonggaran dalam fitting","kj":"逃げ"},
+    {"k":"みきる","r":"mikiru","a":"Memproses sambungan antara dua pekerjaan dengan rapi","kj":"見切る"},
+    {"k":"みきりざい","r":"mikiri zai","a":"Material untuk menyambungkan 2 jenis pekerjaan","kj":"見切り材"},
+    {"k":"なじみ","r":"najimi","a":"Sambungan 2 material","kj":"馴染み"},
+    {"k":"ベタ","r":"beta","a":"Seluruh permukaan"},
+    {"k":"ふかし","r":"fukashi","a":"Hasil lebih besar dari desain awal"}
+  ]},
+  "Pengerjaan & Satuan Ukur": { rows: [
+    {"k":"てもどり","r":"temodori","a":"Pengerjaan ulang","kj":"手戻り"},
+    {"k":"だんどり","r":"dandori","a":"Persiapan (agar tidak ada temodori)","kj":"段取り"},
+    {"k":"てなおし","r":"tenaoshi","a":"Pembetulan","kj":"手直し"},
+    {"k":"うわば","r":"uwaba","a":"Ujung atas","kj":"上端"},
+    {"k":"したば","r":"shitaba","a":"Ujung bawah","kj":"下端"},
+    {"k":"すんぽう","r":"sunpou","a":"Panjang","kj":"寸法"},
+    {"k":"いっけん","r":"ikken","a":"1 ken (1818 mm)","kj":"一間","n":"Satuan panjang tradisional: 1 ken = 6 shaku ≈ 1,818 m. Jangan tertukar dengan 一軒 (いっけん, 1 rumah/toko) yang bunyinya sama."},
+    {"k":"いっしゃく","r":"isshaku","a":"1 Shaku (30,3 cm)","kj":"一尺"},
+    {"k":"いっすん","r":"issun","a":"1 sun (3,03 cm)","kj":"一寸"},
+    {"k":"ひとつぼ","r":"hitotsubo","a":"1 Tsubo (1 ken × 1 ken)","kj":"一坪"}
+  ]},
+  "Jenis Konstruksi": { rows: [
+    {"k":"RCぞう","r":"RC zou","a":"Konstruksi RC (reinforced concrete)","kj":"RC造"},
+    {"k":"Sぞう","r":"S zou","a":"Konstruksi S (steel)","kj":"S造"},
+    {"k":"SRCぞう","r":"SRC zou","a":"Konstruksi SRC (steel and reinforced concrete)","kj":"SRC造"},
+    {"k":"もくぞう","r":"mokuzou","a":"Struktur kayu","kj":"木造"},
+    {"k":"コンクリートブロックぞう","r":"konkuriito burokku zou","a":"Struktur balok beton","kj":"コンクリートブロック造"}
+  ]},
+  "Telekomunikasi & Kelistrikan": { rows: [
+    {"k":"でんきつうしんこうじ","r":"denki tsuushin kouji","a":"Pekerjaan telekomunikasi","kj":"電気通信工事"},
+    {"k":"せつぞく","r":"setsuzoku","a":"Koneksi","kj":"接続"},
+    {"k":"かんろ","r":"kanro","a":"Konduit","kj":"管路"},
+    {"k":"ちょくせつまいせつしき","r":"chokusetsu maisetsu shiki","a":"Penanaman langsung","kj":"直接埋設式"},
+    {"k":"とうどう","r":"toudou","a":"Metode terowongan","kj":"とう道"},
+    {"k":"かんでん","r":"kanden","a":"Sengatan listrik","kj":"感電"},
+    {"k":"ひらいしん","r":"hiraishin","a":"Penangkal petir","kj":"避雷針"},
+    {"k":"ひらいき","r":"hiraiki","a":"Alat penangkal petir","kj":"避雷器"},
+    {"k":"ていあつ","r":"teiatsu","a":"Tegangan rendah","kj":"低圧"},
+    {"k":"こうあつ","r":"kouatsu","a":"Tegangan tinggi","kj":"高圧"},
+    {"k":"とくべつこうあつ","r":"tokubetsu kouatsu","a":"Tegangan ekstra tinggi","kj":"特別高圧"},
+    {"k":"あっちゃく","r":"acchaku","a":"Crimping (metode sambungan)","kj":"圧着"},
+    {"k":"ちょくりゅう","r":"chokuryuu","a":"Arus DC","kj":"直流"},
+    {"k":"こうりゅう","r":"kouryuu","a":"Arus AC","kj":"交流"},
+    {"k":"つうでん","r":"tsuuden","a":"Listrik hidup","kj":"通電"},
+    {"k":"とぶ","r":"tobu","a":"Breaker naik","kj":"飛ぶ"},
+    {"k":"おちる","r":"ochiru","a":"Breaker jatuh","kj":"落ちる"}
+  ]}
+},
+
+bab8: {
+  "Pendingin Udara & Ventilasi": { rows: [
+    {"k":"くうちょう","r":"kuuchou","a":"Penyesuaian suhu","kj":"空調"},
+    {"k":"くうきちょうわせつび","r":"kuuki chouwa setsubi","a":"Penyesuaian suhu","kj":"空気調和設備"},
+    {"k":"おんど","r":"ondo","a":"Temperatur/suhu","kj":"温度"},
+    {"k":"しつど","r":"shitsudo","a":"Kelembapan","kj":"湿度"},
+    {"k":"かんき","r":"kanki","a":"Ventilasi","kj":"換気"},
+    {"k":"はいえん","r":"haien","a":"Pembuangan asap","kj":"排煙"}
+  ]},
+  "Pipa & Uji Kebocoran": { rows: [
+    {"k":"しにみず","r":"shinimizu","a":"Air diam/tidak bergerak","kj":"死水"},
+    {"k":"ばりとり","r":"baritori","a":"Deburring (pembersihan burr)","kj":"バリ取り"},
+    {"k":"ろうえいしけん","r":"rouei shiken","a":"Uji kebocoran","kj":"漏洩試験"},
+    {"k":"すいあつしけん","r":"suiatsu shiken","a":"Uji tekanan air","kj":"水圧試験"},
+    {"k":"まんすいしけん","r":"mansui shiken","a":"Uji air penuh","kj":"満水試験"},
+    {"k":"こうばい","r":"koubai","a":"Derajat kemiringan","kj":"勾配"}
+  ]},
+  "5S & Keselamatan": { rows: [
+    {"k":"5Sかつどう","r":"go esu katsudou","a":"Kegiatan 5S","kj":"5S活動"},
+    {"k":"せいり","r":"seiri","a":"Ringkas","kj":"整理"},
+    {"k":"せいとん","r":"seiton","a":"Rapi","kj":"整頓"},
+    {"k":"せいそう","r":"seisou","a":"Resik (pembersihan)","kj":"清掃"},
+    {"k":"せいけつ","r":"seiketsu","a":"Rawat (kebersihan)","kj":"清潔"},
+    {"k":"しつけ","r":"shitsuke","a":"Rajin"},
+    {"k":"ぽいすて","r":"poisute","a":"Buang sampah sembarangan","kj":"ポイ捨て"},
+    {"k":"あんぜんたい","r":"anzentai","a":"Sabuk keselamatan","kj":"安全帯"}
+  ]}
 }
 
 }; // end BUKU_SSW
@@ -8093,7 +8257,7 @@ const BOOKS = {
   minna:   { label: "Buku Modul",  data: BUKU },
   irodori: { label: "Irodori",     data: BUKU_IRODORI },
   a2:      { label: "Irodori A2",  data: BUKU_IRODORI_A2 },
-  ssw:     { label: "SSW Kensetsu", data: BUKU_SSW, noBunpou: true, babCodes: { bab1: "1.1 - 2.1.3", bab2: "2.1.4 - 2.17", bab3: "3.1 - 3.2.2", bab4: "3.2.2 - 3.2.19", bab5: "3.2.20 - 3.2.38", bab6: "3.3 - 4.1.6" } }
+  ssw:     { label: "SSW Kensetsu", data: BUKU_SSW, noBunpou: true, babCodes: { bab1: "1.1 - 2.1.3", bab2: "2.1.4 - 2.17", bab3: "3.1 - 3.2.2", bab4: "3.2.2 - 3.2.19", bab5: "3.2.20 - 3.2.38", bab6: "3.3 - 4.1.6", bab7: "4.2 - 4.2.10", bab8: "4.2.11 - Selesai Teori" } }
 };
 
 // ─────────────────────────────────────────────────────

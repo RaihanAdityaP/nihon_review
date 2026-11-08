@@ -2099,6 +2099,7 @@ const JLPT_LEVELS = {
 };
 
 function jlptLevelOf(row) {
+  if (row && row.nolv) return null;   // baris ditandai nolv: bunyinya sama dengan kata lain, jadi level JLPT-nya tidak dipinjam
   const v = JLPT_LEVELS[row.k + '|' + row.r];
   return v || null;
 }
